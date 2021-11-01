@@ -1,0 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ip/Zed_SPI_processing_system7_0_0/sim/Zed_SPI_processing_system7_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Zed_SPI_processing_system7_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ip/Zed_SPI_auto_pc_0/sim/Zed_SPI_auto_pc_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Zed_SPI_auto_pc_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ipshared/e3f6/src/PL_SPI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PL_SPI
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ipshared/e3f6/hdl/PL_SPI_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PL_SPI_v1_0_S00_AXI
+WARNING: [VRFC 10-3380] identifier 'w_Cnt' is used before its declaration [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ipshared/e3f6/hdl/PL_SPI_v1_0_S00_AXI.v:314]
+WARNING: [VRFC 10-3380] identifier 'w_RxBuffer' is used before its declaration [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ipshared/e3f6/hdl/PL_SPI_v1_0_S00_AXI.v:315]
+WARNING: [VRFC 10-3380] identifier 'w_Statusreg' is used before its declaration [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ipshared/e3f6/hdl/PL_SPI_v1_0_S00_AXI.v:316]
+WARNING: [VRFC 10-3380] identifier 'w_Statusreg' is used before its declaration [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ipshared/e3f6/hdl/PL_SPI_v1_0_S00_AXI.v:317]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ipshared/e3f6/hdl/PL_SPI_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PL_SPI_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_v1_0_0_0/sim/Zed_SPI_PL_SPI_v1_0_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Zed_SPI_PL_SPI_v1_0_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/sim/Zed_SPI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Zed_SPI
+INFO: [VRFC 10-311] analyzing module Zed_SPI_ps7_0_axi_periph_0
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_L5RQYP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/hdl/Zed_SPI_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Zed_SPI_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/ec67/hdl" --include "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/f42d/hdl" --include "C:/Xilinx/Vivado/2021.1/data/xilinx_vip/include" \
+"../../../../SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ip/Zed_SPI_processing_system7_0_0/sim/Zed_SPI_processing_system7_0_0.v" \
+"../../../../SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ip/Zed_SPI_auto_pc_0/sim/Zed_SPI_auto_pc_0.v" \
+"../../../../SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ipshared/e3f6/src/PL_SPI.v" \
+"../../../../SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ipshared/e3f6/hdl/PL_SPI_v1_0_S00_AXI.v" \
+"../../../../SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ipshared/e3f6/hdl/PL_SPI_v1_0.v" \
+"../../../../SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_v1_0_0_0/sim/Zed_SPI_PL_SPI_v1_0_0_0.v" \
+"../../../../SKL_Zed_PS_SPI.ip_user_files/bd/Zed_SPI/sim/Zed_SPI.v" \
+"../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/hdl/Zed_SPI_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
