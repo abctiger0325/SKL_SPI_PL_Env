@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1635414333">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1638783192">
   <File Type="PA-TCL" Name="Zed_SPI_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Zed_SPI_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Zed_SPI_wrapper_reports.tcl"/>
@@ -54,7 +54,9 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_PL_SPI_DDS_v1_0_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_xbar_2"/>
   <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_PL_SPI_ADAR_v1_0_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_PL_SPI_v1_0_0_0"/>
 </GenRun>

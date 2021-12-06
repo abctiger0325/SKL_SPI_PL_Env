@@ -37,14 +37,11 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_0/sim/Zed_SPI_rst_ps7_0_100M_0.vhd" \
 -endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/Zed_SPI/ipshared/dca1/src/PL_SPI.v" \
-  "../../../bd/Zed_SPI/ipshared/dca1/hdl/PL_SPI_v1_0_S00_AXI.v" \
-  "../../../bd/Zed_SPI/ipshared/dca1/hdl/PL_SPI_v1_0.v" \
-  "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_v1_0_0_0/sim/Zed_SPI_PL_SPI_v1_0_0_0.v" \
--endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
   "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_register_slice_v2_1_24 \
+  "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/fifo_generator_v13_2_5 \
   "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/276e/simulation/fifo_generator_vlog_beh.v" \
@@ -58,8 +55,19 @@
 -makelib xcelium_lib/axi_data_fifo_v2_1_23 \
   "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/94ec/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
 -endlib
--makelib xcelium_lib/axi_register_slice_v2_1_24 \
-  "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/8f68/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-makelib xcelium_lib/axi_crossbar_v2_1_25 \
+  "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_xbar_2/sim/Zed_SPI_xbar_2.v" \
+  "../../../bd/Zed_SPI/ipshared/6db3/src/PL_SPI.v" \
+  "../../../bd/Zed_SPI/ipshared/6db3/hdl/PL_SPI_ADAR_v1_0_S00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/6db3/hdl/PL_SPI_ADAR_v1_0.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/sim/Zed_SPI_PL_SPI_ADAR_v1_0_0_0.v" \
+  "../../../bd/Zed_SPI/ipshared/28df/src/PL_SPI_9910.v" \
+  "../../../bd/Zed_SPI/ipshared/28df/hdl/PL_SPI_DDS_v1_0_S00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/28df/hdl/PL_SPI_DDS_v1_0.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/sim/Zed_SPI_PL_SPI_DDS_v1_0_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_24 \
   "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

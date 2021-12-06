@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Thu Oct 28 17:49:18 2021
+| Date             : Mon Dec  6 17:36:38 2021
 | Host             : AELAB-RG1OCO4RM running 64-bit major release  (build 9200)
 | Command          : report_power -file Zed_SPI_wrapper_power_routed.rpt -pb Zed_SPI_wrapper_power_summary_routed.pb -rpx Zed_SPI_wrapper_power_routed.rpx
 | Design           : Zed_SPI_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.688        |
+| Total On-Chip Power (W)  | 1.697        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.544        |
+| Dynamic (W)              | 1.552        |
 | Device Static (W)        | 0.145        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 65.5         |
-| Junction Temperature (C) | 44.5         |
+| Max Ambient (C)          | 65.4         |
+| Junction Temperature (C) | 44.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.007 |        3 |       --- |             --- |
-| Slice Logic             |     0.003 |     3168 |       --- |             --- |
-|   LUT as Logic          |     0.003 |     1340 |     53200 |            2.52 |
-|   Register              |    <0.001 |     1185 |    106400 |            1.11 |
-|   CARRY4                |    <0.001 |       15 |     13300 |            0.11 |
-|   F7/F8 Muxes           |    <0.001 |       48 |     53200 |            0.09 |
-|   LUT as Shift Register |    <0.001 |       60 |     17400 |            0.34 |
-|   Others                |     0.000 |      185 |       --- |             --- |
-| Signals                 |     0.003 |     2264 |       --- |             --- |
-| I/O                     |    <0.001 |       12 |       200 |            6.00 |
+| Clocks                  |     0.010 |        3 |       --- |             --- |
+| Slice Logic             |     0.004 |     5523 |       --- |             --- |
+|   LUT as Logic          |     0.004 |     2286 |     53200 |            4.30 |
+|   Register              |    <0.001 |     2101 |    106400 |            1.97 |
+|   F7/F8 Muxes           |    <0.001 |      248 |     53200 |            0.47 |
+|   CARRY4                |    <0.001 |       31 |     13300 |            0.23 |
+|   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
+|   Others                |     0.000 |      201 |       --- |             --- |
+| Signals                 |     0.005 |     3775 |       --- |             --- |
+| I/O                     |     0.004 |       22 |       200 |           11.00 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
 | Static Power            |     0.145 |          |           |                 |
-| Total                   |     1.688 |          |           |                 |
+| Total                   |     1.697 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.028 |       0.014 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.034 |       0.019 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -150,14 +150,16 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| Zed_SPI_wrapper          |     1.544 |
-|   Zed_SPI_i              |     1.543 |
-|     PL_SPI_v1_0_0        |     0.008 |
-|       inst               |     0.008 |
+| Zed_SPI_wrapper          |     1.552 |
+|   Zed_SPI_i              |     1.548 |
+|     PL_SPI_ADAR_v1_0_0   |     0.006 |
+|       inst               |     0.006 |
+|     PL_SPI_DDS_v1_0_0    |     0.007 |
+|       inst               |     0.007 |
 |     processing_system7_0 |     1.530 |
 |       inst               |     1.530 |
 |     ps7_0_axi_periph     |     0.005 |
-|       s00_couplers       |     0.005 |
+|       s00_couplers       |     0.004 |
 +--------------------------+-----------+
 
 

@@ -9,14 +9,20 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI || 
 # IP: bd/Zed_SPI/ip/Zed_SPI_processing_system7_0_0/Zed_SPI_processing_system7_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_processing_system7_0_0 || ORIG_REF_NAME==Zed_SPI_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/Zed_SPI/ip/Zed_SPI_ps7_0_axi_periph_0/Zed_SPI_ps7_0_axi_periph_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_ps7_0_axi_periph_0 || ORIG_REF_NAME==Zed_SPI_ps7_0_axi_periph_0} -quiet] -quiet
-
 # IP: bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_rst_ps7_0_100M_0 || ORIG_REF_NAME==Zed_SPI_rst_ps7_0_100M_0} -quiet] -quiet
 
-# IP: bd/Zed_SPI/ip/Zed_SPI_PL_SPI_v1_0_0_0/Zed_SPI_PL_SPI_v1_0_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_PL_SPI_v1_0_0_0 || ORIG_REF_NAME==Zed_SPI_PL_SPI_v1_0_0_0} -quiet] -quiet
+# IP: bd/Zed_SPI/ip/Zed_SPI_xbar_2/Zed_SPI_xbar_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_xbar_2 || ORIG_REF_NAME==Zed_SPI_xbar_2} -quiet] -quiet
+
+# IP: bd/Zed_SPI/ip/Zed_SPI_ps7_0_axi_periph_2/Zed_SPI_ps7_0_axi_periph_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_ps7_0_axi_periph_2 || ORIG_REF_NAME==Zed_SPI_ps7_0_axi_periph_2} -quiet] -quiet
+
+# IP: bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/Zed_SPI_PL_SPI_ADAR_v1_0_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_PL_SPI_ADAR_v1_0_0_0 || ORIG_REF_NAME==Zed_SPI_PL_SPI_ADAR_v1_0_0_0} -quiet] -quiet
+
+# IP: bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/Zed_SPI_PL_SPI_DDS_v1_0_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_PL_SPI_DDS_v1_0_0_0 || ORIG_REF_NAME==Zed_SPI_PL_SPI_DDS_v1_0_0_0} -quiet] -quiet
 
 # IP: bd/Zed_SPI/ip/Zed_SPI_auto_pc_0/Zed_SPI_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_auto_pc_0 || ORIG_REF_NAME==Zed_SPI_auto_pc_0} -quiet] -quiet

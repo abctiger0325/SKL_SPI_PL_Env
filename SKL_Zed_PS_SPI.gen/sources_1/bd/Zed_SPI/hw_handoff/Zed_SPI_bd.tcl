@@ -162,14 +162,23 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
+  set i_Over_GPIO_0 [ create_bd_port -dir I i_Over_GPIO_0 ]
   set i_SPI_MISO_0 [ create_bd_port -dir I i_SPI_MISO_0 ]
+  set i_SPI_MISO_1 [ create_bd_port -dir I i_SPI_MISO_1 ]
+  set o_GPIO_0 [ create_bd_port -dir O -from 4 -to 0 o_GPIO_0 ]
   set o_LED_0 [ create_bd_port -dir O -from 7 -to 0 o_LED_0 ]
   set o_SPI_CLK_0 [ create_bd_port -dir O -type clk o_SPI_CLK_0 ]
+  set o_SPI_CLK_1 [ create_bd_port -dir O -type clk o_SPI_CLK_1 ]
   set o_SPI_CS_0 [ create_bd_port -dir O o_SPI_CS_0 ]
+  set o_SPI_CS_1 [ create_bd_port -dir O o_SPI_CS_1 ]
   set o_SPI_MOSI_0 [ create_bd_port -dir O o_SPI_MOSI_0 ]
+  set o_SPI_MOSI_1 [ create_bd_port -dir O o_SPI_MOSI_1 ]
 
-  # Create instance: PL_SPI_v1_0_0, and set properties
-  set PL_SPI_v1_0_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:PL_SPI_v1_0:1.0 PL_SPI_v1_0_0 ]
+  # Create instance: PL_SPI_ADAR_v1_0_0, and set properties
+  set PL_SPI_ADAR_v1_0_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:PL_SPI_ADAR_v1_0:1.0 PL_SPI_ADAR_v1_0_0 ]
+
+  # Create instance: PL_SPI_DDS_v1_0_0, and set properties
+  set PL_SPI_DDS_v1_0_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:PL_SPI_DDS_v1_0:1.0 PL_SPI_DDS_v1_0_0 ]
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -573,7 +582,7 @@ Flash#Quad SPI Flash#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#Enet 0#Enet\
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {1} \
+   CONFIG.NUM_MI {2} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_100M, and set properties
@@ -583,20 +592,28 @@ Flash#Quad SPI Flash#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#Enet 0#Enet\
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins PL_SPI_v1_0_0/s00_axi] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins PL_SPI_ADAR_v1_0_0/s00_axi] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins PL_SPI_DDS_v1_0_0/s00_axi] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
 
   # Create port connections
-  connect_bd_net -net PL_SPI_v1_0_0_o_LED [get_bd_ports o_LED_0] [get_bd_pins PL_SPI_v1_0_0/o_LED]
-  connect_bd_net -net PL_SPI_v1_0_0_o_SPI_CLK [get_bd_ports o_SPI_CLK_0] [get_bd_pins PL_SPI_v1_0_0/o_SPI_CLK]
-  connect_bd_net -net PL_SPI_v1_0_0_o_SPI_CS [get_bd_ports o_SPI_CS_0] [get_bd_pins PL_SPI_v1_0_0/o_SPI_CS]
-  connect_bd_net -net PL_SPI_v1_0_0_o_SPI_MOSI [get_bd_ports o_SPI_MOSI_0] [get_bd_pins PL_SPI_v1_0_0/o_SPI_MOSI]
-  connect_bd_net -net i_SPI_MISO_0_1 [get_bd_ports i_SPI_MISO_0] [get_bd_pins PL_SPI_v1_0_0/i_SPI_MISO]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins PL_SPI_v1_0_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+  connect_bd_net -net PL_SPI_ADAR_v1_0_0_o_SPI_CS [get_bd_ports o_SPI_CS_0] [get_bd_pins PL_SPI_ADAR_v1_0_0/o_SPI_CS]
+  connect_bd_net -net PL_SPI_ADAR_v1_0_0_o_SPI_Clk [get_bd_ports o_SPI_CLK_0] [get_bd_pins PL_SPI_ADAR_v1_0_0/o_SPI_Clk]
+  connect_bd_net -net PL_SPI_ADAR_v1_0_0_o_SPI_MOSI [get_bd_ports o_SPI_MOSI_0] [get_bd_pins PL_SPI_ADAR_v1_0_0/o_SPI_MOSI]
+  connect_bd_net -net PL_SPI_DDS_v1_0_0_o_GPIO [get_bd_ports o_GPIO_0] [get_bd_pins PL_SPI_DDS_v1_0_0/o_GPIO]
+  connect_bd_net -net PL_SPI_DDS_v1_0_0_o_LED [get_bd_ports o_LED_0] [get_bd_pins PL_SPI_DDS_v1_0_0/o_LED]
+  connect_bd_net -net PL_SPI_DDS_v1_0_0_o_SPI_CS [get_bd_ports o_SPI_CS_1] [get_bd_pins PL_SPI_DDS_v1_0_0/o_SPI_CS]
+  connect_bd_net -net PL_SPI_DDS_v1_0_0_o_SPI_Clk [get_bd_ports o_SPI_CLK_1] [get_bd_pins PL_SPI_DDS_v1_0_0/o_SPI_Clk]
+  connect_bd_net -net PL_SPI_DDS_v1_0_0_o_SPI_MOSI [get_bd_ports o_SPI_MOSI_1] [get_bd_pins PL_SPI_DDS_v1_0_0/o_SPI_MOSI]
+  connect_bd_net -net i_Over_GPIO_0_1 [get_bd_ports i_Over_GPIO_0] [get_bd_pins PL_SPI_DDS_v1_0_0/i_Over_GPIO]
+  connect_bd_net -net i_SPI_MISO_0_1 [get_bd_ports i_SPI_MISO_0] [get_bd_pins PL_SPI_ADAR_v1_0_0/i_SPI_MISO]
+  connect_bd_net -net i_SPI_MISO_1_1 [get_bd_ports i_SPI_MISO_1] [get_bd_pins PL_SPI_DDS_v1_0_0/i_SPI_MISO]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins PL_SPI_ADAR_v1_0_0/s00_axi_aclk] [get_bd_pins PL_SPI_DDS_v1_0_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins PL_SPI_v1_0_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins PL_SPI_ADAR_v1_0_0/s00_axi_aresetn] [get_bd_pins PL_SPI_DDS_v1_0_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
 
   # Create address segments
-  assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PL_SPI_v1_0_0/s00_axi/reg0] -force
+  assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PL_SPI_ADAR_v1_0_0/s00_axi/reg0] -force
+  assign_bd_address -offset 0x43C10000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs PL_SPI_DDS_v1_0_0/s00_axi/reg0] -force
 
 
   # Restore current instance
