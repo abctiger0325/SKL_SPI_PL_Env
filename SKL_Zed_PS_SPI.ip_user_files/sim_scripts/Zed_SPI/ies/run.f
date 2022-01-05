@@ -27,6 +27,14 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/Zed_SPI/ip/Zed_SPI_processing_system7_0_0/sim/Zed_SPI_processing_system7_0_0.v" \
+  "../../../bd/Zed_SPI/ipshared/bb0e/src/PL_SPI.v" \
+  "../../../bd/Zed_SPI/ipshared/bb0e/hdl/PL_SPI_ADAR_v1_0_S00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/bb0e/hdl/PL_SPI_ADAR_v1_0.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/sim/Zed_SPI_PL_SPI_ADAR_v1_0_0_0.v" \
+  "../../../bd/Zed_SPI/ipshared/28af/src/PL_SPI.v" \
+  "../../../bd/Zed_SPI/ipshared/28af/hdl/PL_SPI_ADF4159_v1_0_S00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/28af/hdl/PL_SPI_ADF4159_v1_0.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/sim/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0.v" \
 -endlib
 -makelib ies_lib/lib_cdc_v1_0_2 \
   "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
@@ -59,15 +67,19 @@
   "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/3917/hdl/axi_crossbar_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/Zed_SPI/ip/Zed_SPI_xbar_2/sim/Zed_SPI_xbar_2.v" \
-  "../../../bd/Zed_SPI/ipshared/6db3/src/PL_SPI.v" \
-  "../../../bd/Zed_SPI/ipshared/6db3/hdl/PL_SPI_ADAR_v1_0_S00_AXI.v" \
-  "../../../bd/Zed_SPI/ipshared/6db3/hdl/PL_SPI_ADAR_v1_0.v" \
-  "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/sim/Zed_SPI_PL_SPI_ADAR_v1_0_0_0.v" \
-  "../../../bd/Zed_SPI/ipshared/28df/src/PL_SPI_9910.v" \
-  "../../../bd/Zed_SPI/ipshared/28df/hdl/PL_SPI_DDS_v1_0_S00_AXI.v" \
-  "../../../bd/Zed_SPI/ipshared/28df/hdl/PL_SPI_DDS_v1_0.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_xbar_1/sim/Zed_SPI_xbar_1.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0_clk_wiz.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0.v" \
+  "../../../bd/Zed_SPI/ipshared/6867/src/PL_SPI_9910.v" \
+  "../../../bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0_S00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0.v" \
   "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/sim/Zed_SPI_PL_SPI_DDS_v1_0_0_0.v" \
+  "../../../bd/Zed_SPI/ipshared/1508/src/PL_SPI_41B29.v" \
+  "../../../bd/Zed_SPI/ipshared/1508/hdl/PL_SPI_Parallel_41B29_v1_0_S00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/1508/hdl/PL_SPI_Parallel_41B29_v1_0.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_Parallel_41B2_0_0/sim/Zed_SPI_PL_SPI_Parallel_41B2_0_0.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0_clk_wiz.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0.v" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_24 \
   "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6e0d/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

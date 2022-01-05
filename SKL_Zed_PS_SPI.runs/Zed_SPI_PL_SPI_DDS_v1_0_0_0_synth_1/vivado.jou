@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Mon Dec  6 17:31:25 2021
-# Process ID: 144972
+# Start of session at: Mon Jan  3 18:28:56 2022
+# Process ID: 141472
 # Current directory: C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1
 # Command line: vivado.exe -log Zed_SPI_PL_SPI_DDS_v1_0_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zed_SPI_PL_SPI_DDS_v1_0_0_0.tcl
 # Log file: C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1/Zed_SPI_PL_SPI_DDS_v1_0_0_0.vds

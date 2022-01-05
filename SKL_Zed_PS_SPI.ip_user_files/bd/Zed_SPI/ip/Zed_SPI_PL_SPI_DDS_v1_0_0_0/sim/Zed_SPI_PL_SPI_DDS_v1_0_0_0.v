@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2021 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:PL_SPI_DDS_v1_0:1.0
-// IP Revision: 69
+// IP Revision: 71
 
 `timescale 1ns/1ps
 
@@ -60,7 +60,6 @@ module Zed_SPI_PL_SPI_DDS_v1_0_0_0 (
   o_SPI_MOSI,
   o_SPI_CS,
   o_GPIO,
-  o_LED,
   i_Over_GPIO,
   s00_axi_aclk,
   s00_axi_aresetn,
@@ -92,7 +91,6 @@ input wire i_SPI_MISO;
 output wire o_SPI_MOSI;
 output wire o_SPI_CS;
 output wire [4 : 0] o_GPIO;
-output wire [7 : 0] o_LED;
 input wire i_Over_GPIO;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_aclk, ASSOCIATED_BUSIF s00_axi, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s00_axi_aclk CLK" *)
@@ -150,7 +148,6 @@ input wire s00_axi_rready;
     .o_SPI_MOSI(o_SPI_MOSI),
     .o_SPI_CS(o_SPI_CS),
     .o_GPIO(o_GPIO),
-    .o_LED(o_LED),
     .i_Over_GPIO(i_Over_GPIO),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn),

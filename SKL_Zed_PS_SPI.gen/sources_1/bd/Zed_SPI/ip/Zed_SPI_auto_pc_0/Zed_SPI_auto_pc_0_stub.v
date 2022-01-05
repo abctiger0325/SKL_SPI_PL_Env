@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Mon Nov 15 15:18:16 2021
+// Date        : Wed Dec 15 15:55:34 2021
 // Host        : AELAB-RG1OCO4RM running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top Zed_SPI_auto_pc_0 -prefix
 //               Zed_SPI_auto_pc_0_ Zed_SPI_auto_pc_0_stub.v

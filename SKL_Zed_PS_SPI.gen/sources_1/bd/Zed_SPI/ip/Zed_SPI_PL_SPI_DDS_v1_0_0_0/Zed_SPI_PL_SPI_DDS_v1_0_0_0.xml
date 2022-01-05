@@ -187,7 +187,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.FREQ_HZ">1e+08</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -586,7 +586,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_ACLK.FREQ_HZ">1e+08</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_ACLK.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -657,11 +657,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Dec 06 09:31:03 UTC 2021</spirit:value>
+            <spirit:value>Mon Jan 03 10:27:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7632ea9d</spirit:value>
+            <spirit:value>9:5b28fa68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -672,7 +672,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7632ea9d</spirit:value>
+            <spirit:value>9:5b28fa68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -688,11 +688,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Dec 06 09:31:03 UTC 2021</spirit:value>
+            <spirit:value>Mon Jan 03 10:27:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7632ea9d</spirit:value>
+            <spirit:value>9:5b28fa68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -707,11 +707,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Dec 06 09:31:03 UTC 2021</spirit:value>
+            <spirit:value>Mon Jan 03 10:27:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b9559c71</spirit:value>
+            <spirit:value>9:264bdcff</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -727,11 +727,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Dec 06 09:31:03 UTC 2021</spirit:value>
+            <spirit:value>Mon Jan 03 10:27:26 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b9559c71</spirit:value>
+            <spirit:value>9:264bdcff</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -745,11 +745,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Dec 06 09:32:56 UTC 2021</spirit:value>
+            <spirit:value>Mon Jan 03 10:30:15 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7632ea9d</spirit:value>
+            <spirit:value>9:5b28fa68</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -813,23 +813,6 @@
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
             <spirit:left spirit:format="long">4</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>o_LED</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1221,15 +1204,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/28df/src/PL_SPI_9910.v</spirit:name>
+        <spirit:name>../../ipshared/6867/src/PL_SPI_9910.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/28df/hdl/PL_SPI_DDS_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/6867/hdl/PL_SPI_DDS_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/28df/hdl/PL_SPI_DDS_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/6867/hdl/PL_SPI_DDS_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1244,15 +1227,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/28df/src/PL_SPI_9910.v</spirit:name>
+        <spirit:name>../../ipshared/6867/src/PL_SPI_9910.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/28df/hdl/PL_SPI_DDS_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/6867/hdl/PL_SPI_DDS_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/28df/hdl/PL_SPI_DDS_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/6867/hdl/PL_SPI_DDS_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1322,7 +1305,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>PL_SPI_DDS_v1_0_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>69</xilinx:coreRevision>
+      <xilinx:coreRevision>71</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@401cf864_ARCHIVE_LOCATION">c:/users/0/midget/skl/ip_repo/pl_spi_dds_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@57f34de0_ARCHIVE_LOCATION">c:/users/0/midget/skl/ip_repo/pl_spi_dds_1.0</xilinx:tag>
@@ -2069,6 +2052,28 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@371a98e_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@1f5b198d_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@c78558_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a444f16_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@28847912_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c265d08_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@194427b1_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5699fe1e_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5cf2a672_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@26d64528_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@b5bf68c_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@328c5bdd_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7713580f_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7b0c9678_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@19fd6b0a_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5c782823_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3f971d0_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@70cf8e5f_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@26435c66_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7832f5fc_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@56307b13_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@52127ffe_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@544b91a0_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@201c7f8f_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e659491_ARCHIVE_LOCATION">c:/Users/0/Midget/SKL/ip_repo/PL_SPI_DDS_1.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.O_SPI_CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
@@ -2120,8 +2125,8 @@
       <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="c1c9180c"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="871c369d"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fb00213d"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="9acf5189"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="16e5e5c9"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="f8ed7bd8"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="20f50d64"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="7689e7ef"/>
     </xilinx:packagingInfo>

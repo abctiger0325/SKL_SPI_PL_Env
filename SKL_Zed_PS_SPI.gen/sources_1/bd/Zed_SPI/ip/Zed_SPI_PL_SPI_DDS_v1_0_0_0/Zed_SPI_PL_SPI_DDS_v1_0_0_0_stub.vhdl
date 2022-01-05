@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Mon Dec  6 17:32:55 2021
+-- Date        : Mon Jan  3 18:30:15 2022
 -- Host        : AELAB-RG1OCO4RM running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/Zed_SPI_PL_SPI_DDS_v1_0_0_0_stub.vhdl
@@ -19,7 +19,6 @@ entity Zed_SPI_PL_SPI_DDS_v1_0_0_0 is
     o_SPI_MOSI : out STD_LOGIC;
     o_SPI_CS : out STD_LOGIC;
     o_GPIO : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    o_LED : out STD_LOGIC_VECTOR ( 7 downto 0 );
     i_Over_GPIO : in STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
@@ -50,7 +49,7 @@ architecture stub of Zed_SPI_PL_SPI_DDS_v1_0_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "o_SPI_Clk,i_SPI_MISO,o_SPI_MOSI,o_SPI_CS,o_GPIO[4:0],o_LED[7:0],i_Over_GPIO,s00_axi_aclk,s00_axi_aresetn,s00_axi_awaddr[4:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[4:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready";
+attribute black_box_pad_pin of stub : architecture is "o_SPI_Clk,i_SPI_MISO,o_SPI_MOSI,o_SPI_CS,o_GPIO[4:0],i_Over_GPIO,s00_axi_aclk,s00_axi_aresetn,s00_axi_awaddr[4:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[4:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "PL_SPI_DDS_v1_0,Vivado 2021.1";
 begin

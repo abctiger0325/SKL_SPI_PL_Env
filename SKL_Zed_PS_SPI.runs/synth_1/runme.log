@@ -20,74 +20,96 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 120492
+INFO: [Synth 8-7075] Helper process launched with PID 104164
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1243.402 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_wrapper' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/hdl/Zed_SPI_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Zed_SPI' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:13]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_ADAR_v1_0_0_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_ADAR_v1_0_0_0' (1#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_DDS_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' (2#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_DDS_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_processing_system7_0_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_processing_system7_0_0' (3#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:257]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:257]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:257]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:257]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:257]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'Zed_SPI_processing_system7_0_0' has 68 connections declared, but only 63 given [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:257]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_ps7_0_axi_periph_2' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:415]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1KGKESD' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:990]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1KGKESD' (4#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:990]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_LBOE5A' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1136]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_LBOE5A' (5#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1136]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_L5RQYP' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1282]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_auto_pc_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_auto_pc_0' (6#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_L5RQYP' (7#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1282]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_xbar_2' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_xbar_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_xbar_2' (8#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_xbar_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_ps7_0_axi_periph_2' (9#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:415]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_rst_ps7_0_100M_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_rst_ps7_0_100M_0' (10#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-151600-AELAB-RG1OCO4RM/realtime/Zed_SPI_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:406]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:406]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:406]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:406]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'Zed_SPI_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:406]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI' (11#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_wrapper' (12#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/hdl/Zed_SPI_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_ADAR_v1_0_0_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_ADAR_v1_0_0_0' (1#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_ADF4159_v1_0_0_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_ADF4159_v1_0_0_0' (2#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_DDS_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' (3#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_DDS_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_Parallel_41B2_0_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_Parallel_41B2_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_Parallel_41B2_0_0' (4#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_PL_SPI_Parallel_41B2_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_clk_wiz_0_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_clk_wiz_0_0' (5#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_clk_wiz_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'locked' of module 'Zed_SPI_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:390]
+WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'Zed_SPI_clk_wiz_0_0' has 4 connections declared, but only 3 given [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:390]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_clk_wiz_1_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_clk_wiz_1_0' (6#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_processing_system7_0_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_processing_system7_0_0' (7#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:397]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:397]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:397]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:397]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:397]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'Zed_SPI_processing_system7_0_0' has 68 connections declared, but only 63 given [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:397]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_ps7_0_axi_periph_4' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:597]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1KGKESD' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1456]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1KGKESD' (8#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1456]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_LBOE5A' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1602]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_LBOE5A' (9#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1602]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_8O6KUY' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1748]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_8O6KUY' (10#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1748]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_16F9LJT' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1894]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_16F9LJT' (11#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1894]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_L5RQYP' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:2040]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_auto_pc_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_auto_pc_0' (12#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_L5RQYP' (13#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:2040]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_xbar_1' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_xbar_1' (14#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_ps7_0_axi_periph_4' (15#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:597]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_rst_ps7_0_100M_0' [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_rst_ps7_0_100M_0' (16#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-74024-AELAB-RG1OCO4RM/realtime/Zed_SPI_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:588]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:588]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:588]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:588]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'Zed_SPI_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:588]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI' (17#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_wrapper' (18#1) [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/hdl/Zed_SPI_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1243.402 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1243.402 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1243.402 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1243.402 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_processing_system7_0_0/Zed_SPI_processing_system7_0_0/Zed_SPI_processing_system7_0_0_in_context.xdc] for cell 'Zed_SPI_i/processing_system7_0'
 Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_processing_system7_0_0/Zed_SPI_processing_system7_0_0/Zed_SPI_processing_system7_0_0_in_context.xdc] for cell 'Zed_SPI_i/processing_system7_0'
-Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0_in_context.xdc] for cell 'Zed_SPI_i/rst_ps7_0_100M'
-Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0_in_context.xdc] for cell 'Zed_SPI_i/rst_ps7_0_100M'
-Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_xbar_2/Zed_SPI_xbar_2/Zed_SPI_xbar_2_in_context.xdc] for cell 'Zed_SPI_i/ps7_0_axi_periph/xbar'
-Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_xbar_2/Zed_SPI_xbar_2/Zed_SPI_xbar_2_in_context.xdc] for cell 'Zed_SPI_i/ps7_0_axi_periph/xbar'
-Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_pc_0/Zed_SPI_auto_pc_0/Zed_SPI_auto_pc_0_in_context.xdc] for cell 'Zed_SPI_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_pc_0/Zed_SPI_auto_pc_0/Zed_SPI_auto_pc_0_in_context.xdc] for cell 'Zed_SPI_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_in_context.xdc] for cell 'Zed_SPI_i/PL_SPI_ADAR_v1_0_0'
 Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_in_context.xdc] for cell 'Zed_SPI_i/PL_SPI_ADAR_v1_0_0'
+Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_in_context.xdc] for cell 'Zed_SPI_i/PL_SPI_ADF4159_v1_0_0'
+Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_in_context.xdc] for cell 'Zed_SPI_i/PL_SPI_ADF4159_v1_0_0'
+Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0_in_context.xdc] for cell 'Zed_SPI_i/rst_ps7_0_100M'
+Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0_in_context.xdc] for cell 'Zed_SPI_i/rst_ps7_0_100M'
+Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_xbar_1/Zed_SPI_xbar_1/Zed_SPI_xbar_1_in_context.xdc] for cell 'Zed_SPI_i/ps7_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_xbar_1/Zed_SPI_xbar_1/Zed_SPI_xbar_1_in_context.xdc] for cell 'Zed_SPI_i/ps7_0_axi_periph/xbar'
+Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_pc_0/Zed_SPI_auto_pc_0/Zed_SPI_auto_pc_0_in_context.xdc] for cell 'Zed_SPI_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_pc_0/Zed_SPI_auto_pc_0/Zed_SPI_auto_pc_0_in_context.xdc] for cell 'Zed_SPI_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0_in_context.xdc] for cell 'Zed_SPI_i/clk_wiz_0'
+Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0_in_context.xdc] for cell 'Zed_SPI_i/clk_wiz_0'
 Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/Zed_SPI_PL_SPI_DDS_v1_0_0_0/Zed_SPI_PL_SPI_DDS_v1_0_0_0_in_context.xdc] for cell 'Zed_SPI_i/PL_SPI_DDS_v1_0_0'
 Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/Zed_SPI_PL_SPI_DDS_v1_0_0_0/Zed_SPI_PL_SPI_DDS_v1_0_0_0_in_context.xdc] for cell 'Zed_SPI_i/PL_SPI_DDS_v1_0_0'
+Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0_in_context.xdc] for cell 'Zed_SPI_i/clk_wiz_1'
+Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0_in_context.xdc] for cell 'Zed_SPI_i/clk_wiz_1'
+Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_Parallel_41B2_0_0/Zed_SPI_PL_SPI_Parallel_41B2_0_0/Zed_SPI_PL_SPI_Parallel_41B2_0_0_in_context.xdc] for cell 'Zed_SPI_i/PL_SPI_Parallel_41B29_0'
+Finished Parsing XDC File [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_Parallel_41B2_0_0/Zed_SPI_PL_SPI_Parallel_41B2_0_0/Zed_SPI_PL_SPI_Parallel_41B2_0_0_in_context.xdc] for cell 'Zed_SPI_i/PL_SPI_Parallel_41B29_0'
 Parsing XDC File [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.srcs/constrs_1/new/Zed_PSPL.xdc]
 Finished Parsing XDC File [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.srcs/constrs_1/new/Zed_PSPL.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.srcs/constrs_1/new/Zed_PSPL.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Zed_SPI_wrapper_propImpl.xdc].
@@ -96,20 +118,20 @@ Parsing XDC File [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth
 Finished Parsing XDC File [C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1243.402 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1243.402 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1243.402 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1243.402 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -376,17 +398,21 @@ Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint fi
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_processing_system7_0_0/Zed_SPI_processing_system7_0_0/Zed_SPI_processing_system7_0_0_in_context.xdc, line 261).
 Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/processing_system7_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/PL_SPI_ADAR_v1_0_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/PL_SPI_ADF4159_v1_0_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/PL_SPI_ADAR_v1_0_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/clk_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/PL_SPI_DDS_v1_0_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/clk_wiz_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/PL_SPI_Parallel_41B29_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1243.402 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1243.402 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -408,25 +434,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1248.438 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1243.402 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1272.414 ; gain = 23.977
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1272.762 ; gain = 29.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1272.563 ; gain = 24.125
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1273.211 ; gain = 29.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1291.676 ; gain = 43.238
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1292.309 ; gain = 48.906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -444,86 +470,94 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1296.363 ; gain = 47.926
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1299.098 ; gain = 55.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1296.363 ; gain = 47.926
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1299.098 ; gain = 55.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1296.363 ; gain = 47.926
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1299.098 ; gain = 55.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1296.363 ; gain = 47.926
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1299.098 ; gain = 55.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1296.363 ; gain = 47.926
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1299.098 ; gain = 55.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1296.363 ; gain = 47.926
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1299.098 ; gain = 55.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+-------------------------------+----------+
-|      |BlackBox name                  |Instances |
-+------+-------------------------------+----------+
-|1     |Zed_SPI_xbar_2                 |         1|
-|2     |Zed_SPI_auto_pc_0              |         1|
-|3     |Zed_SPI_PL_SPI_ADAR_v1_0_0_0   |         1|
-|4     |Zed_SPI_PL_SPI_DDS_v1_0_0_0    |         1|
-|5     |Zed_SPI_processing_system7_0_0 |         1|
-|6     |Zed_SPI_rst_ps7_0_100M_0       |         1|
-+------+-------------------------------+----------+
++------+---------------------------------+----------+
+|      |BlackBox name                    |Instances |
++------+---------------------------------+----------+
+|1     |Zed_SPI_xbar_1                   |         1|
+|2     |Zed_SPI_auto_pc_0                |         1|
+|3     |Zed_SPI_PL_SPI_ADAR_v1_0_0_0     |         1|
+|4     |Zed_SPI_PL_SPI_ADF4159_v1_0_0_0  |         1|
+|5     |Zed_SPI_PL_SPI_DDS_v1_0_0_0      |         1|
+|6     |Zed_SPI_PL_SPI_Parallel_41B2_0_0 |         1|
+|7     |Zed_SPI_clk_wiz_0_0              |         1|
+|8     |Zed_SPI_clk_wiz_1_0              |         1|
+|9     |Zed_SPI_processing_system7_0_0   |         1|
+|10    |Zed_SPI_rst_ps7_0_100M_0         |         1|
++------+---------------------------------+----------+
 
 Report Cell Usage: 
-+------+-----------------------------+------+
-|      |Cell                         |Count |
-+------+-----------------------------+------+
-|1     |Zed_SPI_PL_SPI_ADAR_v1_0_0   |     1|
-|2     |Zed_SPI_PL_SPI_DDS_v1_0_0    |     1|
-|3     |Zed_SPI_auto_pc              |     1|
-|4     |Zed_SPI_processing_system7_0 |     1|
-|5     |Zed_SPI_rst_ps7_0_100M       |     1|
-|6     |Zed_SPI_xbar                 |     1|
-|7     |IBUF                         |     3|
-|8     |OBUF                         |    19|
-+------+-----------------------------+------+
++------+-------------------------------+------+
+|      |Cell                           |Count |
++------+-------------------------------+------+
+|1     |Zed_SPI_PL_SPI_ADAR_v1_0_0     |     1|
+|2     |Zed_SPI_PL_SPI_ADF4159_v1_0_0  |     1|
+|3     |Zed_SPI_PL_SPI_DDS_v1_0_0      |     1|
+|4     |Zed_SPI_PL_SPI_Parallel_41B2_0 |     1|
+|5     |Zed_SPI_auto_pc                |     1|
+|6     |Zed_SPI_clk_wiz_0              |     1|
+|7     |Zed_SPI_clk_wiz_1              |     1|
+|8     |Zed_SPI_processing_system7_0   |     1|
+|9     |Zed_SPI_rst_ps7_0_100M         |     1|
+|10    |Zed_SPI_xbar                   |     1|
+|11    |IBUF                           |    19|
+|12    |OBUF                           |    26|
++------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1296.363 ; gain = 47.926
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1299.098 ; gain = 55.695
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1296.363 ; gain = 47.926
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1296.363 ; gain = 47.926
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1299.098 ; gain = 55.695
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1299.098 ; gain = 55.695
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1309.359 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1311.125 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1321.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1324.281 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 15f8610d
+Synth Design complete, checksum: f395025e
 INFO: [Common 17-83] Releasing license: Synthesis
-40 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+52 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1321.824 ; gain = 73.387
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1324.281 ; gain = 80.879
 INFO: [Common 17-1381] The checkpoint 'C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/synth_1/Zed_SPI_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Zed_SPI_wrapper_utilization_synth.rpt -pb Zed_SPI_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  6 17:34:19 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Jan  4 11:29:03 2022...

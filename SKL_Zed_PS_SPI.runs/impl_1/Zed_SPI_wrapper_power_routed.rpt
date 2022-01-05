@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Mon Dec  6 17:36:38 2021
+| Date             : Tue Jan  4 11:33:57 2022
 | Host             : AELAB-RG1OCO4RM running 64-bit major release  (build 9200)
 | Command          : report_power -file Zed_SPI_wrapper_power_routed.rpt -pb Zed_SPI_wrapper_power_summary_routed.pb -rpx Zed_SPI_wrapper_power_routed.rpx
 | Design           : Zed_SPI_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.697        |
+| Total On-Chip Power (W)  | 1.983        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.552        |
-| Device Static (W)        | 0.145        |
+| Dynamic (W)              | 1.828        |
+| Device Static (W)        | 0.154        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 65.4         |
-| Junction Temperature (C) | 44.6         |
+| Max Ambient (C)          | 62.1         |
+| Junction Temperature (C) | 47.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,20 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.010 |        3 |       --- |             --- |
-| Slice Logic             |     0.004 |     5523 |       --- |             --- |
-|   LUT as Logic          |     0.004 |     2286 |     53200 |            4.30 |
-|   Register              |    <0.001 |     2101 |    106400 |            1.97 |
-|   F7/F8 Muxes           |    <0.001 |      248 |     53200 |            0.47 |
-|   CARRY4                |    <0.001 |       31 |     13300 |            0.23 |
+| Clocks                  |     0.023 |        9 |       --- |             --- |
+| Slice Logic             |     0.007 |     9680 |       --- |             --- |
+|   LUT as Logic          |     0.007 |     4235 |     53200 |            7.96 |
+|   Register              |    <0.001 |     3630 |    106400 |            3.41 |
+|   CARRY4                |    <0.001 |       66 |     13300 |            0.50 |
+|   F7/F8 Muxes           |    <0.001 |      430 |     53200 |            0.81 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
-|   Others                |     0.000 |      201 |       --- |             --- |
-| Signals                 |     0.005 |     3775 |       --- |             --- |
-| I/O                     |     0.004 |       22 |       200 |           11.00 |
+|   Others                |     0.000 |      211 |       --- |             --- |
+| Signals                 |     0.009 |     6669 |       --- |             --- |
+| MMCM                    |     0.213 |        2 |         4 |           50.00 |
+| I/O                     |     0.047 |       45 |       200 |           22.50 |
 | PS7                     |     1.529 |        1 |       --- |             --- |
-| Static Power            |     0.145 |          |           |                 |
-| Total                   |     1.697 |          |           |                 |
+| Static Power            |     0.154 |          |           |                 |
+| Total                   |     1.983 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,11 +75,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.034 |       0.019 |      0.015 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.058 |       0.041 |      0.017 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.135 |       0.119 |      0.016 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.014 |       0.013 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -87,7 +88,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.748 |       0.718 |      0.030 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.752 |       0.718 |      0.034 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.061 |       0.051 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.459 |       0.457 |      0.002 |       NA    | Unspecified | NA         |
@@ -134,11 +135,16 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+------------+------------------------------------------------------------+-----------------+
-| Clock      | Domain                                                     | Constraint (ns) |
-+------------+------------------------------------------------------------+-----------------+
-| clk_fpga_0 | Zed_SPI_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
-+------------+------------------------------------------------------------+-----------------+
++--------------------------------+------------------------------------------------------------+-----------------+
+| Clock                          | Domain                                                     | Constraint (ns) |
++--------------------------------+------------------------------------------------------------+-----------------+
+| clk_fpga_0                     | Zed_SPI_i/processing_system7_0/inst/FCLK_CLK0              |            10.0 |
+| clk_fpga_0                     | Zed_SPI_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
+| clk_out1_Zed_SPI_clk_wiz_0_0   | Zed_SPI_i/clk_wiz_0/inst/clk_out1_Zed_SPI_clk_wiz_0_0      |             4.0 |
+| clk_out1_Zed_SPI_clk_wiz_1_0_1 | Zed_SPI_i/clk_wiz_1/inst/clk_out1_Zed_SPI_clk_wiz_1_0      |             4.0 |
+| clkfbout_Zed_SPI_clk_wiz_0_0   | Zed_SPI_i/clk_wiz_0/inst/clkfbout_Zed_SPI_clk_wiz_0_0      |            10.0 |
+| clkfbout_Zed_SPI_clk_wiz_1_0_1 | Zed_SPI_i/clk_wiz_1/inst/clkfbout_Zed_SPI_clk_wiz_1_0      |            10.0 |
++--------------------------------+------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -147,19 +153,27 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------+-----------+
-| Name                     | Power (W) |
-+--------------------------+-----------+
-| Zed_SPI_wrapper          |     1.552 |
-|   Zed_SPI_i              |     1.548 |
-|     PL_SPI_ADAR_v1_0_0   |     0.006 |
-|       inst               |     0.006 |
-|     PL_SPI_DDS_v1_0_0    |     0.007 |
-|       inst               |     0.007 |
-|     processing_system7_0 |     1.530 |
-|       inst               |     1.530 |
-|     ps7_0_axi_periph     |     0.005 |
-|       s00_couplers       |     0.004 |
-+--------------------------+-----------+
++-----------------------------+-----------+
+| Name                        | Power (W) |
++-----------------------------+-----------+
+| Zed_SPI_wrapper             |     1.828 |
+|   Zed_SPI_i                 |     1.780 |
+|     PL_SPI_ADAR_v1_0_0      |     0.006 |
+|       inst                  |     0.006 |
+|     PL_SPI_ADF4159_v1_0_0   |     0.008 |
+|       inst                  |     0.008 |
+|     PL_SPI_DDS_v1_0_0       |     0.006 |
+|       inst                  |     0.006 |
+|     PL_SPI_Parallel_41B29_0 |     0.010 |
+|       inst                  |     0.010 |
+|     clk_wiz_0               |     0.107 |
+|       inst                  |     0.107 |
+|     clk_wiz_1               |     0.107 |
+|       inst                  |     0.107 |
+|     processing_system7_0    |     1.531 |
+|       inst                  |     1.531 |
+|     ps7_0_axi_periph        |     0.005 |
+|       s00_couplers          |     0.004 |
++-----------------------------+-----------+
 
 
