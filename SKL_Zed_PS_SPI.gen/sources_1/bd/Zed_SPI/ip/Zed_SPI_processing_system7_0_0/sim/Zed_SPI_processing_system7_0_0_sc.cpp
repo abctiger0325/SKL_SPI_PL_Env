@@ -117,6 +117,7 @@ Zed_SPI_processing_system7_0_0_sc::Zed_SPI_processing_system7_0_0_sc(const sc_co
     model_param_props.addString("C_FCLK_CLK2_BUF", "FALSE");
     model_param_props.addString("C_FCLK_CLK3_BUF", "FALSE");
     model_param_props.addString("C_PACKAGE_NAME", "clg484");
+    model_param_props.addString("COMPONENT_NAME", "Zed_SPI_processing_system7_0_0");
 
   mp_impl = new processing_system7_v5_5_tlm("inst", model_param_props);
 

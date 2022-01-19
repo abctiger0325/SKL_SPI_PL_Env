@@ -1,8 +1,8 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Tue Jan  4 11:23:57 2022
-//Host        : AELAB-RG1OCO4RM running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+//Date        : Wed Jan 19 11:05:07 2022
+//Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 //Command     : generate_target Zed_SPI_wrapper.bd
 //Design      : Zed_SPI_wrapper
 //Purpose     : IP block netlist
@@ -31,7 +31,6 @@ module Zed_SPI_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    clk_out1_0,
     i_CMOS_Data_0,
     i_Over_GPIO_0,
     i_SPI_MISO_0,
@@ -73,7 +72,6 @@ module Zed_SPI_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output clk_out1_0;
   input [13:0]i_CMOS_Data_0;
   input i_Over_GPIO_0;
   input i_SPI_MISO_0;
@@ -116,7 +114,6 @@ module Zed_SPI_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire clk_out1_0;
   wire [13:0]i_CMOS_Data_0;
   wire i_Over_GPIO_0;
   wire i_SPI_MISO_0;
@@ -160,7 +157,6 @@ module Zed_SPI_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .clk_out1_0(clk_out1_0),
         .i_CMOS_Data_0(i_CMOS_Data_0),
         .i_Over_GPIO_0(i_Over_GPIO_0),
         .i_SPI_MISO_0(i_SPI_MISO_0),

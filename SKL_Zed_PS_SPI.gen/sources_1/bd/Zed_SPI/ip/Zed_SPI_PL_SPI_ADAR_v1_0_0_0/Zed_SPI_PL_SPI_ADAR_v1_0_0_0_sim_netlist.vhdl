@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Wed Dec 15 15:55:37 2021
--- Host        : AELAB-RG1OCO4RM running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+-- Date        : Thu Jan  6 15:44:32 2022
+-- Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_sim_netlist.vhdl
+--               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_sim_netlist.vhdl
 -- Design      : Zed_SPI_PL_SPI_ADAR_v1_0_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -24552,7 +24552,7 @@ entity Zed_SPI_PL_SPI_ADAR_v1_0_0_0 is
   attribute IP_DEFINITION_SOURCE : string;
   attribute IP_DEFINITION_SOURCE of Zed_SPI_PL_SPI_ADAR_v1_0_0_0 : entity is "package_project";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of Zed_SPI_PL_SPI_ADAR_v1_0_0_0 : entity is "PL_SPI_ADAR_v1_0,Vivado 2021.1";
+  attribute X_CORE_INFO of Zed_SPI_PL_SPI_ADAR_v1_0_0_0 : entity is "PL_SPI_ADAR_v1_0,Vivado 2021.2";
 end Zed_SPI_PL_SPI_ADAR_v1_0_0_0;
 
 architecture STRUCTURE of Zed_SPI_PL_SPI_ADAR_v1_0_0_0 is

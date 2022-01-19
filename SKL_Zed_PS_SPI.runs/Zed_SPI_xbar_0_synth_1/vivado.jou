@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Jan  6 15:42:44 2022
+# Process ID: 15403
+# Current directory: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_xbar_0_synth_1
+# Command line: vivado -log Zed_SPI_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zed_SPI_xbar_0.tcl
+# Log file: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_xbar_0_synth_1/Zed_SPI_xbar_0.vds
+# Journal file: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_xbar_0_synth_1/vivado.jou
+# Running On: labish-OptiPlex-9010, OS: Linux, CPU Frequency: 3691.795 MHz, CPU Physical cores: 4, Host memory: 33558 MB
+#-----------------------------------------------------------
+source Zed_SPI_xbar_0.tcl -notrace

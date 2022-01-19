@@ -1,8 +1,8 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Wed Dec 15 15:54:51 2021
-// Host        : AELAB-RG1OCO4RM running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+// Date        : Thu Jan  6 15:42:01 2022
+// Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top Zed_SPI_processing_system7_0_0 -prefix
 //               Zed_SPI_processing_system7_0_0_ Zed_SPI_processing_system7_0_0_stub.v
 // Design      : Zed_SPI_processing_system7_0_0
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* X_CORE_INFO = "processing_system7_v5_5_processing_system7,Vivado 2021.1" *)
+(* X_CORE_INFO = "processing_system7_v5_5_processing_system7,Vivado 2021.2" *)
 module Zed_SPI_processing_system7_0_0(TTC0_WAVE0_OUT, TTC0_WAVE1_OUT, 
   TTC0_WAVE2_OUT, USB0_PORT_INDCTL, USB0_VBUS_PWRSELECT, USB0_VBUS_PWRFAULT, 
   M_AXI_GP0_ARVALID, M_AXI_GP0_AWVALID, M_AXI_GP0_BREADY, M_AXI_GP0_RREADY, 

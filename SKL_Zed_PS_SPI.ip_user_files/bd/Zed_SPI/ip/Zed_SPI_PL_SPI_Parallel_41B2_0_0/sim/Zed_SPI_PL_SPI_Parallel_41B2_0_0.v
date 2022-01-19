@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:PL_SPI_Parallel_41B29_v1_0:1.1
-// IP Revision: 18
+// IP Revision: 19
 
 `timescale 1ns/1ps
 
@@ -61,7 +61,6 @@ module Zed_SPI_PL_SPI_Parallel_41B2_0_0 (
   o_SPI_CS,
   i_CMOS_Clk,
   i_CMOS_Data,
-  o_LED,
   s00_axi_aclk,
   s00_axi_aresetn,
   s00_axi_awaddr,
@@ -95,7 +94,6 @@ output wire o_SPI_CS;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 i_CMOS_Clk CLK" *)
 input wire i_CMOS_Clk;
 input wire [13 : 0] i_CMOS_Data;
-output wire [7 : 0] o_LED;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_aclk, ASSOCIATED_BUSIF s00_axi, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s00_axi_aclk CLK" *)
 input wire s00_axi_aclk;
@@ -153,7 +151,6 @@ input wire s00_axi_rready;
     .o_SPI_CS(o_SPI_CS),
     .i_CMOS_Clk(i_CMOS_Clk),
     .i_CMOS_Data(i_CMOS_Data),
-    .o_LED(o_LED),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn),
     .s00_axi_awaddr(s00_axi_awaddr),

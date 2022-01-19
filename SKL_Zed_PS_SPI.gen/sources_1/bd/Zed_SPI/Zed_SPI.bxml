@@ -2,21 +2,23 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="Zed_SPI" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1641266674"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1641266674"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1641266674"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1641266674"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1642561508"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1642561508"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1642561508"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1642561508"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth\Zed_SPI.v" Type="Verilog">
+      <File Name="synth/Zed_SPI.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
+        <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim\Zed_SPI.v" Type="Verilog">
+      <File Name="sim/Zed_SPI.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
       </File>
       <File Name="Zed_SPI_ooc.xdc" Type="XDC">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -24,31 +26,31 @@
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="OUT_OF_CONTEXT"/>
+        <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="hw_handoff\Zed_SPI.hwh" Type="HwHandoff">
+      <File Name="hw_handoff/Zed_SPI.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
       </File>
       <File Name="Zed_SPI.bda">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="hw_handoff\Zed_SPI_bd.tcl">
+      <File Name="synth/Zed_SPI.hwdef">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="synth\Zed_SPI.hwdef">
-        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="HW_HANDOFF"/>
-      </File>
-      <File Name="sim\Zed_SPI.protoinst">
+      <File Name="sim/Zed_SPI.protoinst">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
       </File>
     </FileCollection>
   </CompositeFile>

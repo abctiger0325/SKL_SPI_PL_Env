@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2021 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2022 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -50,9 +50,9 @@
 // IP VLNV: xilinx.com:user:PL_SPI_ADF4159_v1_0:1.0
 // IP Revision: 10
 
-(* X_CORE_INFO = "PL_SPI_ADF4159_v1_0,Vivado 2021.1" *)
+(* X_CORE_INFO = "PL_SPI_ADF4159_v1_0,Vivado 2021.2" *)
 (* CHECK_LICENSE_TYPE = "Zed_SPI_PL_SPI_ADF4159_v1_0_0_0,PL_SPI_ADF4159_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "Zed_SPI_PL_SPI_ADF4159_v1_0_0_0,PL_SPI_ADF4159_v1_0,{x_ipProduct=Vivado 2021.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=PL_SPI_ADF4159_v1_0,x_ipVersion=1.0,x_ipCoreRevision=10,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5}" *)
+(* CORE_GENERATION_INFO = "Zed_SPI_PL_SPI_ADF4159_v1_0_0_0,PL_SPI_ADF4159_v1_0,{x_ipProduct=Vivado 2021.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=PL_SPI_ADF4159_v1_0,x_ipVersion=1.0,x_ipCoreRevision=10,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=5}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Zed_SPI_PL_SPI_ADF4159_v1_0_0_0 (

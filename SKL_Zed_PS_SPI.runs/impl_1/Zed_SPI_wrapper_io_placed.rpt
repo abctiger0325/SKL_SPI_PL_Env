@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date                      : Tue Jan  4 11:32:28 2022
-| Host                      : AELAB-RG1OCO4RM running 64-bit major release  (build 9200)
+| Tool Version              : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date                      : Wed Jan 19 11:08:36 2022
+| Host                      : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command                   : report_io -file Zed_SPI_wrapper_io_placed.rpt
 | Design                    : Zed_SPI_wrapper
 | Device                    : xc7z020
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           175 |
+|           174 |
 +---------------+
 
 
@@ -486,7 +486,7 @@ Table of Contents
 | W9         |                   |            | GND                     | GND         |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | W10        |                   | High Range | IO_L3N_T0_DQS_13        | User IO     |                   |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W11        |                   | High Range | IO_L3P_T0_DQS_13        | User IO     |                   |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| W12        | clk_out1_0        | High Range | IO_L4N_T0_13            | OUTPUT      | LVCMOS33          |      13 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| W12        |                   | High Range | IO_L4N_T0_13            | User IO     |                   |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W13        |                   | High Range | IO_L20N_T3_33           | User IO     |                   |      33 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W14        |                   | High Range | VCCO_33                 | VCCO        |                   |      33 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | W15        |                   | High Range | IO_L21P_T3_DQS_33       | User IO     |                   |      33 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

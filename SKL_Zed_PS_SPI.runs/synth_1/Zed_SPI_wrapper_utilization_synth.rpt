@@ -1,11 +1,12 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Tue Jan  4 11:29:03 2022
-| Host         : AELAB-RG1OCO4RM running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Jan 19 11:07:28 2022
+| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -file Zed_SPI_wrapper_utilization_synth.rpt -pb Zed_SPI_wrapper_utilization_synth.pb
 | Design       : Zed_SPI_wrapper
-| Device       : 7z020clg484-1
+| Device       : xc7z020clg484-1
+| Speed File   : -1
 | Design State : Synthesized
 -------------------------------------------------------------------------------------------------------------------------
 
@@ -90,7 +91,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   45 |     0 |          0 |       200 | 22.50 |
+| Bonded IOB                  |   44 |     0 |          0 |       200 | 22.00 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -146,7 +147,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   26 |                  IO |
+| OBUF     |   25 |                  IO |
 | IBUF     |   19 |                  IO |
 +----------+------+---------------------+
 
@@ -157,16 +158,16 @@ Table of Contents
 +----------------------------------+------+
 |             Ref Name             | Used |
 +----------------------------------+------+
-| Zed_SPI_xbar_1                   |    1 |
+| Zed_SPI_xbar_0                   |    1 |
 | Zed_SPI_rst_ps7_0_100M_0         |    1 |
 | Zed_SPI_processing_system7_0_0   |    1 |
 | Zed_SPI_clk_wiz_1_0              |    1 |
-| Zed_SPI_clk_wiz_0_0              |    1 |
 | Zed_SPI_auto_pc_0                |    1 |
 | Zed_SPI_PL_SPI_Parallel_41B2_0_0 |    1 |
 | Zed_SPI_PL_SPI_DDS_v1_0_0_0      |    1 |
 | Zed_SPI_PL_SPI_ADF4159_v1_0_0_0  |    1 |
 | Zed_SPI_PL_SPI_ADAR_v1_0_0_0     |    1 |
+| Zed_SPI_LED_Connector_v1_0_0_0   |    1 |
 +----------------------------------+------+
 
 

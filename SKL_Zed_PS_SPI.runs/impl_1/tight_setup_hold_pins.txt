@@ -1,18 +1,18 @@
-+--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
-+--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |          Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[8]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |          Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[5]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |          Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[2]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |          Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[3]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |         Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[12]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |         Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[13]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |          Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[6]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |          Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[0]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |          Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[4]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |         Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[11]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |          Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[9]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |         Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[10]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |          Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[1]/D|
-| clk_out1_Zed_SPI_clk_wiz_1_0_1 |               clk_fpga_0 |          Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[7]/D|
-+--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
++==============================+===============+===================================================================================================+
+| Launch Clock                 | Capture Clock | Pin                                                                                               |
++==============================+===============+===================================================================================================+
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[5]/D  |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[8]/D  |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[9]/D  |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[1]/D  |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[10]/D |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[6]/D  |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[7]/D  |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[13]/D |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[11]/D |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[3]/D  |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[4]/D  |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[0]/D  |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[2]/D  |
+| clk_out1_Zed_SPI_clk_wiz_1_0 | clk_fpga_0    | Zed_SPI_i/PL_SPI_Parallel_41B29_0/inst/PL_SPI_Parallel_41B29_v1_0_S00_AXI_inst/slv_reg5_reg[12]/D |
++------------------------------+---------------+---------------------------------------------------------------------------------------------------+

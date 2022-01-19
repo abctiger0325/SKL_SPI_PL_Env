@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Wed Dec 15 15:54:10 2021
-// Host        : AELAB-RG1OCO4RM running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top Zed_SPI_rst_ps7_0_100M_0 -prefix
-//               Zed_SPI_rst_ps7_0_100M_0_ Zed_SPI_rst_ps7_0_100M_0_sim_netlist.v
+// Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+// Date        : Thu Jan  6 15:41:59 2022
+// Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
+// Command     : write_verilog -force -mode funcsim
+//               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0_sim_netlist.v
 // Design      : Zed_SPI_rst_ps7_0_100M_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Zed_SPI_rst_ps7_0_100M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2021.1" *) 
+(* CHECK_LICENSE_TYPE = "Zed_SPI_rst_ps7_0_100M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2021.2" *) 
 (* NotValidForBitStream *)
 module Zed_SPI_rst_ps7_0_100M_0
    (slowest_sync_clk,
@@ -69,6 +69,7 @@ module Zed_SPI_rst_ps7_0_100M_0
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
+(* ORIG_REF_NAME = "cdc_sync" *) 
 module Zed_SPI_rst_ps7_0_100M_0_cdc_sync
    (lpf_asr_reg,
     scndry_out,
@@ -102,6 +103,7 @@ module Zed_SPI_rst_ps7_0_100M_0_cdc_sync
 
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -118,6 +120,7 @@ module Zed_SPI_rst_ps7_0_100M_0_cdc_sync
         .O(asr_d1));
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -129,6 +132,7 @@ module Zed_SPI_rst_ps7_0_100M_0_cdc_sync
         .R(1'b0));
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -140,6 +144,7 @@ module Zed_SPI_rst_ps7_0_100M_0_cdc_sync
         .R(1'b0));
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -197,6 +202,7 @@ module Zed_SPI_rst_ps7_0_100M_0_cdc_sync_0
 
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -214,6 +220,7 @@ module Zed_SPI_rst_ps7_0_100M_0_cdc_sync_0
         .O(exr_d1));
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -225,6 +232,7 @@ module Zed_SPI_rst_ps7_0_100M_0_cdc_sync_0
         .R(1'b0));
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -236,6 +244,7 @@ module Zed_SPI_rst_ps7_0_100M_0_cdc_sync_0
         .R(1'b0));
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
   (* box_type = "PRIMITIVE" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -256,6 +265,7 @@ module Zed_SPI_rst_ps7_0_100M_0_cdc_sync_0
         .O(lpf_exr_reg));
 endmodule
 
+(* ORIG_REF_NAME = "lpf" *) 
 module Zed_SPI_rst_ps7_0_100M_0_lpf
    (lpf_int,
     slowest_sync_clk,
@@ -359,6 +369,7 @@ module Zed_SPI_rst_ps7_0_100M_0_lpf
         .Q(exr_lpf),
         .R(1'b0));
   (* XILINX_LEGACY_PRIM = "SRL16" *) 
+  (* XILINX_TRANSFORM_PINMAP = "VCC:CE" *) 
   (* box_type = "PRIMITIVE" *) 
   (* srl_name = "U0/\EXT_LPF/POR_SRL_I " *) 
   SRL16E #(
@@ -409,6 +420,7 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "zynq" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
+(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module Zed_SPI_rst_ps7_0_100M_0_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -525,6 +537,7 @@ module Zed_SPI_rst_ps7_0_100M_0_proc_sys_reset
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
+(* ORIG_REF_NAME = "sequence_psr" *) 
 module Zed_SPI_rst_ps7_0_100M_0_sequence_psr
    (MB_out,
     Bsr_out,
@@ -765,6 +778,7 @@ module Zed_SPI_rst_ps7_0_100M_0_sequence_psr
         .R(lpf_int));
 endmodule
 
+(* ORIG_REF_NAME = "upcnt_n" *) 
 module Zed_SPI_rst_ps7_0_100M_0_upcnt_n
    (Q,
     seq_clr,

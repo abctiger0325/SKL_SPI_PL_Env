@@ -1,87 +1,104 @@
 #-----------------------------------------------------------
-# Vivado v2021.1 (64-bit)
-# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
-# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Mon Jan  3 18:28:56 2022
-# Process ID: 141472
-# Current directory: C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1
-# Command line: vivado.exe -log Zed_SPI_PL_SPI_DDS_v1_0_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zed_SPI_PL_SPI_DDS_v1_0_0_0.tcl
-# Log file: C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1/Zed_SPI_PL_SPI_DDS_v1_0_0_0.vds
-# Journal file: C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1\vivado.jou
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Jan 19 11:05:45 2022
+# Process ID: 10449
+# Current directory: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1
+# Command line: vivado -log Zed_SPI_PL_SPI_DDS_v1_0_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zed_SPI_PL_SPI_DDS_v1_0_0_0.tcl
+# Log file: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1/Zed_SPI_PL_SPI_DDS_v1_0_0_0.vds
+# Journal file: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1/vivado.jou
+# Running On: labish-OptiPlex-9010, OS: Linux, CPU Frequency: 3828.023 MHz, CPU Physical cores: 4, Host memory: 33553 MB
 #-----------------------------------------------------------
 source Zed_SPI_PL_SPI_DDS_v1_0_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/0/Midget/SKL/ip_repo'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/labish/Midget/SKL/SKL_ZED_Backup'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/labish/Vivado/2021.2/Vivado/2021.2/data/ip'.
 Command: synth_design -top Zed_SPI_PL_SPI_DDS_v1_0_0_0 -part xc7z020clg484-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 156428
-WARNING: [Synth 8-6901] identifier 'w_StatusReg' is used before its declaration [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:316]
-WARNING: [Synth 8-6901] identifier 'w_StatusReg' is used before its declaration [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:317]
-WARNING: [Synth 8-6901] identifier 'w_RxBuffer' is used before its declaration [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:318]
+INFO: [Synth 8-7075] Helper process launched with PID 10481
+WARNING: [Synth 8-6901] identifier 'w_StatusReg' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:316]
+WARNING: [Synth 8-6901] identifier 'w_StatusReg' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:317]
+WARNING: [Synth 8-6901] identifier 'w_RxBuffer' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:318]
+WARNING: [Synth 8-6901] identifier 'w_ADC' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:319]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1248.664 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2786.547 ; gain = 0.000 ; free physical = 19001 ; free virtual = 25807
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/synth/Zed_SPI_PL_SPI_DDS_v1_0_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'PL_SPI_DDS_v1_0' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0.v:4]
-INFO: [Synth 8-6157] synthesizing module 'PL_SPI_DDS_v1_0_S00_AXI' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-226] default block is never used [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:246]
-INFO: [Synth 8-226] default block is never used [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:425]
-INFO: [Synth 8-6157] synthesizing module 'PL_SPI_9910' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/src/PL_SPI_9910.v:28]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/src/PL_SPI_9910.v:442]
-INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_9910' (1#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/src/PL_SPI_9910.v:28]
-WARNING: [Synth 8-689] width (8) of port connection 'o_GPIO' does not match port width (5) of module 'PL_SPI_9910' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:471]
-INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_DDS_v1_0_S00_AXI' (2#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:4]
-WARNING: [Synth 8-689] width (5) of port connection 'o_GPIO' does not match port width (8) of module 'PL_SPI_DDS_v1_0_S00_AXI' [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_DDS_v1_0' (3#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/6867/hdl/PL_SPI_DDS_v1_0.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' (4#1) [c:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/synth/Zed_SPI_PL_SPI_DDS_v1_0_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/synth/Zed_SPI_PL_SPI_DDS_v1_0_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'PL_SPI_DDS_v1_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'PL_SPI_DDS_v1_0_S00_AXI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:246]
+INFO: [Synth 8-226] default block is never used [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:426]
+INFO: [Synth 8-6157] synthesizing module 'PL_SPI_9910' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v:28]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v:462]
+WARNING: [Synth 8-6090] variable 'r_GPIO' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v:382]
+WARNING: [Synth 8-6014] Unused sequential element r_Cmd_Lim_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v:155]
+WARNING: [Synth 8-6014] Unused sequential element r_Reset_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v:209]
+WARNING: [Synth 8-6014] Unused sequential element r_Rx_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v:212]
+WARNING: [Synth 8-6014] Unused sequential element r_Lock_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v:259]
+WARNING: [Synth 8-6014] Unused sequential element r_Leading_Edge_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v:135]
+WARNING: [Synth 8-6014] Unused sequential element r_Trailing_Edge_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v:136]
+INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_9910' (1#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v:28]
+WARNING: [Synth 8-689] width (8) of port connection 'o_GPIO' does not match port width (5) of module 'PL_SPI_9910' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:472]
+WARNING: [Synth 8-3848] Net o_ADC_Trigger in module/entity PL_SPI_DDS_v1_0_S00_AXI does not have driver. [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_DDS_v1_0_S00_AXI' (2#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v:4]
+WARNING: [Synth 8-689] width (5) of port connection 'o_GPIO' does not match port width (8) of module 'PL_SPI_DDS_v1_0_S00_AXI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_DDS_v1_0' (3#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' (4#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/synth/Zed_SPI_PL_SPI_DDS_v1_0_0_0.v:58]
+WARNING: [Synth 8-7129] Port o_ADC_Trigger in module PL_SPI_DDS_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module PL_SPI_DDS_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module PL_SPI_DDS_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module PL_SPI_DDS_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module PL_SPI_DDS_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module PL_SPI_DDS_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module PL_SPI_DDS_v1_0_S00_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1248.664 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2786.547 ; gain = 0.000 ; free physical = 20053 ; free virtual = 26824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1248.664 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2786.547 ; gain = 0.000 ; free physical = 20058 ; free virtual = 26827
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1248.664 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2786.547 ; gain = 0.000 ; free physical = 20058 ; free virtual = 26827
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1248.664 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2786.547 ; gain = 0.000 ; free physical = 20057 ; free virtual = 26826
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1298.117 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2850.473 ; gain = 0.000 ; free physical = 19995 ; free virtual = 26740
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1298.117 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2850.473 ; gain = 0.000 ; free physical = 19995 ; free virtual = 26740
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1298.117 ; gain = 49.453
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 20065 ; free virtual = 26808
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1298.117 ; gain = 49.453
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 20065 ; free virtual = 26808
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1298.117 ; gain = 49.453
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 20065 ; free virtual = 26808
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1298.117 ; gain = 49.453
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 20058 ; free virtual = 26804
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -89,27 +106,29 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   32 Bit       Adders := 1     
-	   2 Input   13 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
 	   2 Input    8 Bit       Adders := 7     
 	   2 Input    4 Bit       Adders := 2     
 +---Registers : 
 	               32 Bit    Registers := 9     
+	               12 Bit    Registers := 1     
 	                8 Bit    Registers := 50    
 	                5 Bit    Registers := 3     
 	                4 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 16    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 10    
+	   2 Input   32 Bit        Muxes := 11    
 	   8 Input   32 Bit        Muxes := 8     
-	   3 Input   32 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 3     
 	   2 Input    8 Bit        Muxes := 393   
 	   3 Input    8 Bit        Muxes := 4     
 	   4 Input    8 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 29    
 	   4 Input    4 Bit        Muxes := 2     
 	   3 Input    4 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 75    
+	   2 Input    1 Bit        Muxes := 76    
 	   3 Input    1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -126,26 +145,40 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port o_LED_Temp[7] in module PL_SPI_9910 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[6] in module PL_SPI_9910 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[3] in module PL_SPI_9910 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_GPIO[2] in module PL_SPI_9910 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_GPIO[1] in module PL_SPI_9910 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_GPIO[0] in module PL_SPI_9910 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_ADC_Trigger in module Zed_SPI_PL_SPI_DDS_v1_0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module Zed_SPI_PL_SPI_DDS_v1_0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module Zed_SPI_PL_SPI_DDS_v1_0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module Zed_SPI_PL_SPI_DDS_v1_0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module Zed_SPI_PL_SPI_DDS_v1_0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module Zed_SPI_PL_SPI_DDS_v1_0_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module Zed_SPI_PL_SPI_DDS_v1_0_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1298.117 ; gain = 49.453
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 20026 ; free virtual = 26779
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1298.117 ; gain = 49.453
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 19900 ; free virtual = 26661
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1298.117 ; gain = 49.453
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 19900 ; free virtual = 26661
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1307.633 ; gain = 58.969
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 19896 ; free virtual = 26657
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -163,37 +196,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1317.465 ; gain = 68.801
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 19896 ; free virtual = 26657
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1317.465 ; gain = 68.801
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 19896 ; free virtual = 26657
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1317.465 ; gain = 68.801
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 19896 ; free virtual = 26657
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1317.465 ; gain = 68.801
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 19896 ; free virtual = 26657
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1317.465 ; gain = 68.801
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 19896 ; free virtual = 26657
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1317.465 ; gain = 68.801
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 19896 ; free virtual = 26657
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -209,42 +242,42 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |    16|
-|2     |LUT1   |     9|
-|3     |LUT2   |    33|
-|4     |LUT3   |   240|
-|5     |LUT4   |    96|
-|6     |LUT5   |   115|
-|7     |LUT6   |   562|
-|8     |MUXF7  |    95|
-|9     |MUXF8  |     4|
-|10    |FDRE   |   735|
-|11    |FDSE   |     5|
+|1     |CARRY4 |    11|
+|2     |LUT1   |     6|
+|3     |LUT2   |    20|
+|4     |LUT3   |   346|
+|5     |LUT4   |    71|
+|6     |LUT5   |   126|
+|7     |LUT6   |   580|
+|8     |MUXF7  |    73|
+|9     |MUXF8  |     6|
+|10    |FDRE   |   736|
+|11    |FDSE   |     4|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1317.465 ; gain = 68.801
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 19896 ; free virtual = 26657
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:49 . Memory (MB): peak = 1317.465 ; gain = 19.348
-Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1317.465 ; gain = 68.801
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2850.473 ; gain = 0.000 ; free physical = 19952 ; free virtual = 26713
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2850.473 ; gain = 63.926 ; free physical = 19952 ; free virtual = 26713
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1327.902 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 115 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2850.473 ; gain = 0.000 ; free physical = 20038 ; free virtual = 26802
+INFO: [Netlist 29-17] Analyzing 90 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1329.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2850.473 ; gain = 0.000 ; free physical = 19996 ; free virtual = 26743
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 52fa2fc1
+Synth Design complete, checksum: 4726d372
 INFO: [Common 17-83] Releasing license: Synthesis
-27 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+27 Infos, 36 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 1329.793 ; gain = 81.129
-INFO: [Common 17-1381] The checkpoint 'C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1/Zed_SPI_PL_SPI_DDS_v1_0_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Zed_SPI_PL_SPI_DDS_v1_0_0_0, cache-ID = 1b5b28ec647d2304
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:41 . Memory (MB): peak = 2850.473 ; gain = 64.031 ; free physical = 20199 ; free virtual = 26946
+INFO: [Common 17-1381] The checkpoint '/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1/Zed_SPI_PL_SPI_DDS_v1_0_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Zed_SPI_PL_SPI_DDS_v1_0_0_0, cache-ID = 0e54ab3b254713d6
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/0/Midget/SKL/SKL_Zed_PS_SPI/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1/Zed_SPI_PL_SPI_DDS_v1_0_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1/Zed_SPI_PL_SPI_DDS_v1_0_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Zed_SPI_PL_SPI_DDS_v1_0_0_0_utilization_synth.rpt -pb Zed_SPI_PL_SPI_DDS_v1_0_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jan  3 18:30:15 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 19 11:06:41 2022...
