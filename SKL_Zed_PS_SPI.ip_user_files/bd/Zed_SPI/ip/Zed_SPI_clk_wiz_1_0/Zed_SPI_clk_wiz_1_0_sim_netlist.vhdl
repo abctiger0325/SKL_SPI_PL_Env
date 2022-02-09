@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Thu Jan  6 15:41:58 2022
+-- Date        : Wed Jan 26 13:12:33 2022
 -- Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Zed_SPI_clk_wiz_1_0 -prefix
+--               Zed_SPI_clk_wiz_1_0_ Zed_SPI_clk_wiz_1_0_sim_netlist.vhdl
 -- Design      : Zed_SPI_clk_wiz_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,14 +14,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Zed_SPI_clk_wiz_1_0_clk_wiz is
+entity Zed_SPI_clk_wiz_1_0_Zed_SPI_clk_wiz_1_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-end Zed_SPI_clk_wiz_1_0_clk_wiz;
+end Zed_SPI_clk_wiz_1_0_Zed_SPI_clk_wiz_1_0_clk_wiz;
 
-architecture STRUCTURE of Zed_SPI_clk_wiz_1_0_clk_wiz is
+architecture STRUCTURE of Zed_SPI_clk_wiz_1_0_Zed_SPI_clk_wiz_1_0_clk_wiz is
   signal clk_in1_Zed_SPI_clk_wiz_1_0 : STD_LOGIC;
   signal clk_out1_Zed_SPI_clk_wiz_1_0 : STD_LOGIC;
   signal clkfbout_Zed_SPI_clk_wiz_1_0 : STD_LOGIC;
@@ -175,7 +175,7 @@ end Zed_SPI_clk_wiz_1_0;
 
 architecture STRUCTURE of Zed_SPI_clk_wiz_1_0 is
 begin
-inst: entity work.Zed_SPI_clk_wiz_1_0_clk_wiz
+inst: entity work.Zed_SPI_clk_wiz_1_0_Zed_SPI_clk_wiz_1_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
       clk_out1 => clk_out1

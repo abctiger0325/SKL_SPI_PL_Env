@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Tue Jan 11 09:57:48 2022
+-- Date        : Wed Jan 26 13:12:39 2022
 -- Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_LED_Connector_v1_0_0_0/Zed_SPI_LED_Connector_v1_0_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Zed_SPI_LED_Connector_v1_0_0_0 -prefix
+--               Zed_SPI_LED_Connector_v1_0_0_0_ Zed_SPI_LED_Connector_v1_0_0_0_sim_netlist.vhdl
 -- Design      : Zed_SPI_LED_Connector_v1_0_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity Zed_SPI_LED_Connector_v1_0_0_0_LED_Temp is
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s00_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_LED_Connector_v1_0_0_0_LED_Temp : entity is "LED_Temp";
 end Zed_SPI_LED_Connector_v1_0_0_0_LED_Temp;
 
 architecture STRUCTURE of Zed_SPI_LED_Connector_v1_0_0_0_LED_Temp is
@@ -165,8 +163,6 @@ entity Zed_SPI_LED_Connector_v1_0_0_0_LED_Connector_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_LED_Connector_v1_0_0_0_LED_Connector_v1_0_S00_AXI : entity is "LED_Connector_v1_0_S00_AXI";
 end Zed_SPI_LED_Connector_v1_0_0_0_LED_Connector_v1_0_S00_AXI;
 
 architecture STRUCTURE of Zed_SPI_LED_Connector_v1_0_0_0_LED_Connector_v1_0_S00_AXI is
@@ -1675,8 +1671,6 @@ entity Zed_SPI_LED_Connector_v1_0_0_0_LED_Connector_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_LED_Connector_v1_0_0_0_LED_Connector_v1_0 : entity is "LED_Connector_v1_0";
 end Zed_SPI_LED_Connector_v1_0_0_0_LED_Connector_v1_0;
 
 architecture STRUCTURE of Zed_SPI_LED_Connector_v1_0_0_0_LED_Connector_v1_0 is

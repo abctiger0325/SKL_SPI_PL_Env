@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-//Date        : Wed Jan 19 11:05:07 2022
+//Date        : Mon Feb  7 14:30:03 2022
 //Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 //Command     : generate_target Zed_SPI_wrapper.bd
 //Design      : Zed_SPI_wrapper
@@ -50,7 +50,8 @@ module Zed_SPI_wrapper
     o_SPI_MOSI_0,
     o_SPI_MOSI_1,
     o_SPI_MOSI_2,
-    o_SPI_MOSI_3);
+    o_SPI_MOSI_3,
+    o_SYNC_Clk_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -72,7 +73,7 @@ module Zed_SPI_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [13:0]i_CMOS_Data_0;
+  input [11:0]i_CMOS_Data_0;
   input i_Over_GPIO_0;
   input i_SPI_MISO_0;
   input i_SPI_MISO_1;
@@ -92,6 +93,7 @@ module Zed_SPI_wrapper
   output o_SPI_MOSI_1;
   output o_SPI_MOSI_2;
   output o_SPI_MOSI_3;
+  output o_SYNC_Clk_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -114,7 +116,7 @@ module Zed_SPI_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [13:0]i_CMOS_Data_0;
+  wire [11:0]i_CMOS_Data_0;
   wire i_Over_GPIO_0;
   wire i_SPI_MISO_0;
   wire i_SPI_MISO_1;
@@ -134,6 +136,7 @@ module Zed_SPI_wrapper
   wire o_SPI_MOSI_1;
   wire o_SPI_MOSI_2;
   wire o_SPI_MOSI_3;
+  wire o_SYNC_Clk_0;
 
   Zed_SPI Zed_SPI_i
        (.DDR_addr(DDR_addr),
@@ -176,5 +179,6 @@ module Zed_SPI_wrapper
         .o_SPI_MOSI_0(o_SPI_MOSI_0),
         .o_SPI_MOSI_1(o_SPI_MOSI_1),
         .o_SPI_MOSI_2(o_SPI_MOSI_2),
-        .o_SPI_MOSI_3(o_SPI_MOSI_3));
+        .o_SPI_MOSI_3(o_SPI_MOSI_3),
+        .o_SYNC_Clk_0(o_SYNC_Clk_0));
 endmodule

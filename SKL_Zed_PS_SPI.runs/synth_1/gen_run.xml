@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1642561542">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1644219787">
   <File Type="VDS-TIMINGSUMMARY" Name="Zed_SPI_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="Zed_SPI_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="Zed_SPI_wrapper_utilization_synth.pb"/>
@@ -54,13 +54,5 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_LED_Connector_v1_0_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_PL_SPI_DDS_v1_0_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_PL_SPI_Parallel_41B2_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_clk_wiz_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_PL_SPI_ADF4159_v1_0_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_PL_SPI_ADAR_v1_0_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_PL_SPI_ADC_Master_v1_0_0"/>
 </GenRun>

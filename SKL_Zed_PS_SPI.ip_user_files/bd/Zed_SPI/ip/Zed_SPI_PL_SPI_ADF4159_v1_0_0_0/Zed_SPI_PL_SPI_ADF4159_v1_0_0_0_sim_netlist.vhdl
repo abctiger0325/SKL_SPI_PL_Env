@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Thu Jan  6 15:44:19 2022
+-- Date        : Wed Jan 26 13:12:48 2022
 -- Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Zed_SPI_PL_SPI_ADF4159_v1_0_0_0 -prefix
+--               Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_ Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_sim_netlist.vhdl
 -- Design      : Zed_SPI_PL_SPI_ADF4159_v1_0_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -43,8 +43,6 @@ entity Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI is
     i_SPI_MISO : in STD_LOGIC;
     \r_Byte_Rest_reg[15]_i_3_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI : entity is "PL_SPI";
 end Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI;
 
 architecture STRUCTURE of Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI is
@@ -20122,8 +20120,6 @@ entity Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI_ADF4159_v1_0_S00_AXI is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI_ADF4159_v1_0_S00_AXI : entity is "PL_SPI_ADF4159_v1_0_S00_AXI";
 end Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI_ADF4159_v1_0_S00_AXI;
 
 architecture STRUCTURE of Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI_ADF4159_v1_0_S00_AXI is
@@ -24507,8 +24503,6 @@ entity Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI_ADF4159_v1_0 is
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI_ADF4159_v1_0 : entity is "PL_SPI_ADF4159_v1_0";
 end Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI_ADF4159_v1_0;
 
 architecture STRUCTURE of Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_PL_SPI_ADF4159_v1_0 is

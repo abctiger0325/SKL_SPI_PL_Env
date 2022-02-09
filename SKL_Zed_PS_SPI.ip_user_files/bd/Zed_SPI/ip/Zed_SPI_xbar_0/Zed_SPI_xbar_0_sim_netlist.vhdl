@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Thu Jan  6 15:44:14 2022
+-- Date        : Wed Jan 26 10:55:33 2022
 -- Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_xbar_0/Zed_SPI_xbar_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Zed_SPI_xbar_0 -prefix
+--               Zed_SPI_xbar_0_ Zed_SPI_xbar_0_sim_netlist.vhdl
 -- Design      : Zed_SPI_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,13 +35,13 @@ entity Zed_SPI_xbar_0_axi_crossbar_v2_1_26_addr_arbiter_sasd is
     s_axi_awready : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_arready : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_rvalid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    D : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 5 downto 0 );
     \gen_no_arbiter.m_amesg_i_reg[48]_0\ : out STD_LOGIC_VECTOR ( 34 downto 0 );
-    \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\ : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    \gen_no_arbiter.m_amesg_i_reg[19]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \m_atarget_hot_reg[5]\ : out STD_LOGIC;
     \gen_axilite.s_axi_bvalid_i_reg\ : out STD_LOGIC;
     aclk : in STD_LOGIC;
-    \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_1\ : in STD_LOGIC;
+    \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\ : in STD_LOGIC;
     m_ready_d0_0 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -74,8 +74,6 @@ entity Zed_SPI_xbar_0_axi_crossbar_v2_1_26_addr_arbiter_sasd is
     mi_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_26_addr_arbiter_sasd";
 end Zed_SPI_xbar_0_axi_crossbar_v2_1_26_addr_arbiter_sasd;
 
 architecture STRUCTURE of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_addr_arbiter_sasd is
@@ -116,11 +114,11 @@ architecture STRUCTURE of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_addr_arbiter_sasd 
   attribute inverted : string;
   attribute inverted of \gen_no_arbiter.m_grant_hot_i_reg[0]_inv\ : label is "yes";
   attribute SOFT_HLUTNM of \gen_no_arbiter.s_ready_i[0]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \m_atarget_enc[0]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \m_atarget_enc[1]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \m_atarget_hot[0]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \m_atarget_hot[1]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \m_atarget_hot[2]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \m_atarget_enc[0]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \m_atarget_enc[1]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \m_atarget_hot[0]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \m_atarget_hot[1]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \m_atarget_hot[2]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \m_atarget_hot[3]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \m_atarget_hot[4]_i_2\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \m_atarget_hot[5]_i_1\ : label is "soft_lutpair17";
@@ -920,7 +918,7 @@ begin
         port map (
       I0 => \gen_no_arbiter.m_grant_hot_i[0]_inv_i_2_n_0\,
       I1 => \^m_valid_i\,
-      I2 => \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_1\,
+      I2 => \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\,
       I3 => \gen_no_arbiter.m_grant_hot_i[0]_inv_i_4_n_0\,
       I4 => m_ready_d0_0(0),
       I5 => m_ready_d0_0(1),
@@ -969,7 +967,7 @@ begin
         port map (
       I0 => p_0_in1_in,
       I1 => \^m_valid_i\,
-      I2 => \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_1\,
+      I2 => \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\,
       I3 => \gen_no_arbiter.m_grant_hot_i[0]_inv_i_4_n_0\,
       I4 => m_ready_d0_0(0),
       I5 => m_ready_d0_0(1),
@@ -1009,40 +1007,43 @@ begin
     );
 \m_atarget_enc[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AAA2A2A2"
+      INIT => X"AAAAA222"
     )
         port map (
       I0 => aresetn_d,
       I1 => \m_atarget_hot[4]_i_2_n_0\,
-      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
-      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
-      I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
-      O => D(0)
+      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
+      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
+      I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
+      O => \gen_no_arbiter.m_amesg_i_reg[19]_0\(0)
     );
-\m_atarget_enc[1]_i_1\: unisim.vcomponents.LUT4
+\m_atarget_enc[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0800"
+      INIT => X"02080000"
     )
         port map (
       I0 => aresetn_d,
-      I1 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
-      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
-      I3 => \m_atarget_hot[4]_i_2_n_0\,
-      O => D(1)
+      I1 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
+      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
+      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
+      I4 => \m_atarget_hot[4]_i_2_n_0\,
+      O => \gen_no_arbiter.m_amesg_i_reg[19]_0\(1)
     );
-\m_atarget_enc[2]_i_1\: unisim.vcomponents.LUT3
+\m_atarget_enc[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"D0"
+      INIT => X"DDD70000"
     )
         port map (
       I0 => \m_atarget_hot[4]_i_2_n_0\,
       I1 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
-      I2 => aresetn_d,
-      O => D(2)
+      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
+      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
+      I4 => aresetn_d,
+      O => \gen_no_arbiter.m_amesg_i_reg[19]_0\(2)
     );
 \m_atarget_hot[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00000100"
+      INIT => X"00000400"
     )
         port map (
       I0 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
@@ -1050,33 +1051,9 @@ begin
       I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
       I3 => \m_atarget_hot[4]_i_2_n_0\,
       I4 => p_0_in1_in,
-      O => \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\(0)
+      O => D(0)
     );
 \m_atarget_hot[1]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000400"
-    )
-        port map (
-      I0 => p_0_in1_in,
-      I1 => \m_atarget_hot[4]_i_2_n_0\,
-      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
-      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
-      I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
-      O => \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\(1)
-    );
-\m_atarget_hot[2]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000400"
-    )
-        port map (
-      I0 => p_0_in1_in,
-      I1 => \m_atarget_hot[4]_i_2_n_0\,
-      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
-      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
-      I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
-      O => \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\(2)
-    );
-\m_atarget_hot[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"04000000"
     )
@@ -1086,9 +1063,9 @@ begin
       I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
       I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
       I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
-      O => \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\(3)
+      O => D(1)
     );
-\m_atarget_hot[4]_i_1\: unisim.vcomponents.LUT5
+\m_atarget_hot[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000400"
     )
@@ -1098,18 +1075,42 @@ begin
       I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
       I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
       I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
-      O => \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\(4)
+      O => D(2)
+    );
+\m_atarget_hot[3]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000400"
+    )
+        port map (
+      I0 => p_0_in1_in,
+      I1 => \m_atarget_hot[4]_i_2_n_0\,
+      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
+      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
+      I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
+      O => D(3)
+    );
+\m_atarget_hot[4]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000004"
+    )
+        port map (
+      I0 => p_0_in1_in,
+      I1 => \m_atarget_hot[4]_i_2_n_0\,
+      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
+      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
+      I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
+      O => D(4)
     );
 \m_atarget_hot[4]_i_2\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00020000"
     )
         port map (
-      I0 => \m_atarget_hot[5]_i_3_n_0\,
+      I0 => \m_atarget_hot[5]_i_5_n_0\,
       I1 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(21),
       I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(20),
       I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(19),
-      I4 => \m_atarget_hot[5]_i_5_n_0\,
+      I4 => \m_atarget_hot[5]_i_3_n_0\,
       O => \m_atarget_hot[4]_i_2_n_0\
     );
 \m_atarget_hot[5]_i_1\: unisim.vcomponents.LUT2
@@ -1119,30 +1120,32 @@ begin
         port map (
       I0 => p_0_in1_in,
       I1 => \any_error__0\,
-      O => \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\(5)
+      O => D(5)
     );
 \m_atarget_hot[5]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFF7F7FFF7F7F7F"
+      INIT => X"FF7FFF7FFF7F7F7F"
     )
         port map (
       I0 => \m_atarget_hot[5]_i_3_n_0\,
       I1 => \m_atarget_hot[5]_i_4_n_0\,
       I2 => \m_atarget_hot[5]_i_5_n_0\,
-      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
-      I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
-      I5 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
+      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(18),
+      I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(16),
+      I5 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(17),
       O => \any_error__0\
     );
-\m_atarget_hot[5]_i_3\: unisim.vcomponents.LUT4
+\m_atarget_hot[5]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8000"
+      INIT => X"0000000100000000"
     )
         port map (
-      I0 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(25),
-      I1 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(24),
-      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(23),
-      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(22),
+      I0 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(26),
+      I1 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(27),
+      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(28),
+      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(29),
+      I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(31),
+      I5 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(30),
       O => \m_atarget_hot[5]_i_3_n_0\
     );
 \m_atarget_hot[5]_i_4\: unisim.vcomponents.LUT3
@@ -1155,17 +1158,15 @@ begin
       I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(19),
       O => \m_atarget_hot[5]_i_4_n_0\
     );
-\m_atarget_hot[5]_i_5\: unisim.vcomponents.LUT6
+\m_atarget_hot[5]_i_5\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0000000100000000"
+      INIT => X"8000"
     )
         port map (
-      I0 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(26),
-      I1 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(27),
-      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(28),
-      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(29),
-      I4 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(31),
-      I5 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(30),
+      I0 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(25),
+      I1 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(24),
+      I2 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(23),
+      I3 => \^gen_no_arbiter.m_amesg_i_reg[48]_0\(22),
       O => \m_atarget_hot[5]_i_5_n_0\
     );
 \m_axi_arvalid[0]_INST_0\: unisim.vcomponents.LUT4
@@ -1637,8 +1638,6 @@ entity Zed_SPI_xbar_0_axi_crossbar_v2_1_26_decerr_slave is
     m_axi_awready : in STD_LOGIC_VECTOR ( 0 to 0 );
     aa_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_decerr_slave : entity is "axi_crossbar_v2_1_26_decerr_slave";
 end Zed_SPI_xbar_0_axi_crossbar_v2_1_26_decerr_slave;
 
 architecture STRUCTURE of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_decerr_slave is
@@ -1861,8 +1860,6 @@ entity Zed_SPI_xbar_0_axi_crossbar_v2_1_26_splitter is
     m_ready_d0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_splitter : entity is "axi_crossbar_v2_1_26_splitter";
 end Zed_SPI_xbar_0_axi_crossbar_v2_1_26_splitter;
 
 architecture STRUCTURE of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_splitter is
@@ -2146,8 +2143,6 @@ entity Zed_SPI_xbar_0_axi_register_slice_v2_1_25_axic_register_slice is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_xbar_0_axi_register_slice_v2_1_25_axic_register_slice : entity is "axi_register_slice_v2_1_25_axic_register_slice";
 end Zed_SPI_xbar_0_axi_register_slice_v2_1_25_axic_register_slice;
 
 architecture STRUCTURE of Zed_SPI_xbar_0_axi_register_slice_v2_1_25_axic_register_slice is
@@ -4374,8 +4369,6 @@ entity Zed_SPI_xbar_0_axi_crossbar_v2_1_26_crossbar_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_crossbar_sasd : entity is "axi_crossbar_v2_1_26_crossbar_sasd";
 end Zed_SPI_xbar_0_axi_crossbar_v2_1_26_crossbar_sasd;
 
 architecture STRUCTURE of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_crossbar_sasd is
@@ -4384,9 +4377,9 @@ architecture STRUCTURE of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_crossbar_sasd is
   signal addr_arbiter_inst_n_21 : STD_LOGIC;
   signal addr_arbiter_inst_n_22 : STD_LOGIC;
   signal addr_arbiter_inst_n_24 : STD_LOGIC;
-  signal addr_arbiter_inst_n_36 : STD_LOGIC;
-  signal addr_arbiter_inst_n_37 : STD_LOGIC;
-  signal addr_arbiter_inst_n_38 : STD_LOGIC;
+  signal addr_arbiter_inst_n_77 : STD_LOGIC;
+  signal addr_arbiter_inst_n_78 : STD_LOGIC;
+  signal addr_arbiter_inst_n_79 : STD_LOGIC;
   signal addr_arbiter_inst_n_80 : STD_LOGIC;
   signal addr_arbiter_inst_n_81 : STD_LOGIC;
   signal aresetn_d : STD_LOGIC;
@@ -4433,9 +4426,7 @@ architecture STRUCTURE of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_crossbar_sasd is
 begin
 addr_arbiter_inst: entity work.Zed_SPI_xbar_0_axi_crossbar_v2_1_26_addr_arbiter_sasd
      port map (
-      D(2) => addr_arbiter_inst_n_36,
-      D(1) => addr_arbiter_inst_n_37,
-      D(0) => addr_arbiter_inst_n_38,
+      D(5 downto 0) => m_atarget_hot0(5 downto 0),
       E(0) => p_1_in,
       Q(5 downto 0) => m_atarget_hot(5 downto 0),
       SR(0) => reset,
@@ -4449,9 +4440,11 @@ addr_arbiter_inst: entity work.Zed_SPI_xbar_0_axi_crossbar_v2_1_26_addr_arbiter_
       \f_mux_return__3\ => \f_mux_return__3\,
       \gen_axilite.s_axi_bvalid_i_reg\ => addr_arbiter_inst_n_81,
       \gen_no_arbiter.grant_rnw_reg_0\(0) => m_ready_d0_0(2),
+      \gen_no_arbiter.m_amesg_i_reg[19]_0\(2) => addr_arbiter_inst_n_77,
+      \gen_no_arbiter.m_amesg_i_reg[19]_0\(1) => addr_arbiter_inst_n_78,
+      \gen_no_arbiter.m_amesg_i_reg[19]_0\(0) => addr_arbiter_inst_n_79,
       \gen_no_arbiter.m_amesg_i_reg[48]_0\(34 downto 0) => Q(34 downto 0),
-      \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\(5 downto 0) => m_atarget_hot0(5 downto 0),
-      \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_1\ => reg_slice_r_n_2,
+      \gen_no_arbiter.m_grant_hot_i_reg[0]_inv_0\ => reg_slice_r_n_2,
       \gen_no_arbiter.m_valid_i_reg_0\ => addr_arbiter_inst_n_21,
       \gen_no_arbiter.m_valid_i_reg_1\ => splitter_aw_n_2,
       \gen_no_arbiter.m_valid_i_reg_2\ => \gen_decerr.decerr_slave_inst_n_8\,
@@ -4549,7 +4542,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
         port map (
       C => aclk,
       CE => '1',
-      D => addr_arbiter_inst_n_38,
+      D => addr_arbiter_inst_n_79,
       Q => m_atarget_enc(0),
       R => '0'
     );
@@ -4560,7 +4553,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
         port map (
       C => aclk,
       CE => '1',
-      D => addr_arbiter_inst_n_37,
+      D => addr_arbiter_inst_n_78,
       Q => m_atarget_enc(1),
       R => '0'
     );
@@ -4571,7 +4564,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
         port map (
       C => aclk,
       CE => '1',
-      D => addr_arbiter_inst_n_36,
+      D => addr_arbiter_inst_n_77,
       Q => m_atarget_enc(2),
       R => '0'
     );
@@ -4899,7 +4892,7 @@ entity Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar is
   attribute C_M_AXI_ADDR_WIDTH : string;
   attribute C_M_AXI_ADDR_WIDTH of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar : entity is "160'b0000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000";
   attribute C_M_AXI_BASE_ADDR : string;
-  attribute C_M_AXI_BASE_ADDR of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar : entity is "320'b00000000000000000000000000000000010000111100010000000000000000000000000000000000000000000000000001000011110000110000000000000000000000000000000000000000000000000100001111000001000000000000000000000000000000000000000000000000010000111100001000000000000000000000000000000000000000000000000001000011110000000000000000000000";
+  attribute C_M_AXI_BASE_ADDR of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar : entity is "320'b00000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000011110000100000000000000000000000000000000000000000000000000100001111000100000000000000000000000000000000000000000000000000010000111100001100000000000000000000000000000000000000000000000001000011110000010000000000000000";
   attribute C_M_AXI_READ_CONNECTIVITY : string;
   attribute C_M_AXI_READ_CONNECTIVITY of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar : entity is "160'b0000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001";
   attribute C_M_AXI_READ_ISSUING : string;
@@ -4932,8 +4925,6 @@ entity Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar : entity is "axi_crossbar_v2_1_26_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;
@@ -5478,7 +5469,7 @@ architecture STRUCTURE of Zed_SPI_xbar_0 is
   attribute C_M_AXI_ADDR_WIDTH : string;
   attribute C_M_AXI_ADDR_WIDTH of inst : label is "160'b0000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000";
   attribute C_M_AXI_BASE_ADDR : string;
-  attribute C_M_AXI_BASE_ADDR of inst : label is "320'b00000000000000000000000000000000010000111100010000000000000000000000000000000000000000000000000001000011110000110000000000000000000000000000000000000000000000000100001111000001000000000000000000000000000000000000000000000000010000111100001000000000000000000000000000000000000000000000000001000011110000000000000000000000";
+  attribute C_M_AXI_BASE_ADDR of inst : label is "320'b00000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000011110000100000000000000000000000000000000000000000000000000100001111000100000000000000000000000000000000000000000000000000010000111100001100000000000000000000000000000000000000000000000001000011110000010000000000000000";
   attribute C_M_AXI_READ_CONNECTIVITY : string;
   attribute C_M_AXI_READ_CONNECTIVITY of inst : label is "160'b0000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001";
   attribute C_M_AXI_READ_ISSUING : string;
@@ -5549,7 +5540,7 @@ architecture STRUCTURE of Zed_SPI_xbar_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 CLKIF CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLKIF, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI:M08_AXI:M09_AXI:M10_AXI:M11_AXI:M12_AXI:M13_AXI:M14_AXI:M15_AXI:S00_AXI:S01_AXI:S02_AXI:S03_AXI:S04_AXI:S05_AXI:S06_AXI:S07_AXI:S08_AXI:S09_AXI:S10_AXI:S11_AXI:S12_AXI:S13_AXI:S14_AXI:S15_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLKIF, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI:M08_AXI:M09_AXI:M10_AXI:M11_AXI:M12_AXI:M13_AXI:M14_AXI:M15_AXI:S00_AXI:S01_AXI:S02_AXI:S03_AXI:S04_AXI:S05_AXI:S06_AXI:S07_AXI:S08_AXI:S09_AXI:S10_AXI:S11_AXI:S12_AXI:S13_AXI:S14_AXI:S15_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 RSTIF RST";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of m_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 M00_AXI ARADDR [31:0] [31:0], xilinx.com:interface:aximm:1.0 M01_AXI ARADDR [31:0] [63:32], xilinx.com:interface:aximm:1.0 M02_AXI ARADDR [31:0] [95:64], xilinx.com:interface:aximm:1.0 M03_AXI ARADDR [31:0] [127:96], xilinx.com:interface:aximm:1.0 M04_AXI ARADDR [31:0] [159:128]";
@@ -5565,7 +5556,7 @@ architecture STRUCTURE of Zed_SPI_xbar_0 is
   attribute X_INTERFACE_INFO of m_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 M00_AXI BVALID [0:0] [0:0], xilinx.com:interface:aximm:1.0 M01_AXI BVALID [0:0] [1:1], xilinx.com:interface:aximm:1.0 M02_AXI BVALID [0:0] [2:2], xilinx.com:interface:aximm:1.0 M03_AXI BVALID [0:0] [3:3], xilinx.com:interface:aximm:1.0 M04_AXI BVALID [0:0] [4:4]";
   attribute X_INTERFACE_INFO of m_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RDATA [31:0] [31:0], xilinx.com:interface:aximm:1.0 M01_AXI RDATA [31:0] [63:32], xilinx.com:interface:aximm:1.0 M02_AXI RDATA [31:0] [95:64], xilinx.com:interface:aximm:1.0 M03_AXI RDATA [31:0] [127:96], xilinx.com:interface:aximm:1.0 M04_AXI RDATA [31:0] [159:128]";
   attribute X_INTERFACE_INFO of m_axi_rready : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RREADY [0:0] [0:0], xilinx.com:interface:aximm:1.0 M01_AXI RREADY [0:0] [1:1], xilinx.com:interface:aximm:1.0 M02_AXI RREADY [0:0] [2:2], xilinx.com:interface:aximm:1.0 M03_AXI RREADY [0:0] [3:3], xilinx.com:interface:aximm:1.0 M04_AXI RREADY [0:0] [4:4]";
-  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M00_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M01_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M02_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M03_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M04_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M00_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M01_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M02_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M03_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M04_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RRESP [1:0] [1:0], xilinx.com:interface:aximm:1.0 M01_AXI RRESP [1:0] [3:2], xilinx.com:interface:aximm:1.0 M02_AXI RRESP [1:0] [5:4], xilinx.com:interface:aximm:1.0 M03_AXI RRESP [1:0] [7:6], xilinx.com:interface:aximm:1.0 M04_AXI RRESP [1:0] [9:8]";
   attribute X_INTERFACE_INFO of m_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RVALID [0:0] [0:0], xilinx.com:interface:aximm:1.0 M01_AXI RVALID [0:0] [1:1], xilinx.com:interface:aximm:1.0 M02_AXI RVALID [0:0] [2:2], xilinx.com:interface:aximm:1.0 M03_AXI RVALID [0:0] [3:3], xilinx.com:interface:aximm:1.0 M04_AXI RVALID [0:0] [4:4]";
   attribute X_INTERFACE_INFO of m_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 M00_AXI WDATA [31:0] [31:0], xilinx.com:interface:aximm:1.0 M01_AXI WDATA [31:0] [63:32], xilinx.com:interface:aximm:1.0 M02_AXI WDATA [31:0] [95:64], xilinx.com:interface:aximm:1.0 M03_AXI WDATA [31:0] [127:96], xilinx.com:interface:aximm:1.0 M04_AXI WDATA [31:0] [159:128]";
@@ -5585,7 +5576,7 @@ architecture STRUCTURE of Zed_SPI_xbar_0 is
   attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BVALID";
   attribute X_INTERFACE_INFO of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RDATA";
   attribute X_INTERFACE_INFO of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RRESP";
   attribute X_INTERFACE_INFO of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RVALID";
   attribute X_INTERFACE_INFO of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WDATA";

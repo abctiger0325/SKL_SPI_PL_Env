@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Thu Jan  6 15:41:57 2022
+// Date        : Wed Jan 26 13:12:33 2022
 // Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Zed_SPI_clk_wiz_1_0 -prefix
+//               Zed_SPI_clk_wiz_1_0_ Zed_SPI_clk_wiz_1_0_sim_netlist.v
 // Design      : Zed_SPI_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,12 +22,12 @@ module Zed_SPI_clk_wiz_1_0
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire clk_out1;
 
-  Zed_SPI_clk_wiz_1_0_clk_wiz inst
+  Zed_SPI_clk_wiz_1_0_Zed_SPI_clk_wiz_1_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1));
 endmodule
 
-module Zed_SPI_clk_wiz_1_0_clk_wiz
+module Zed_SPI_clk_wiz_1_0_Zed_SPI_clk_wiz_1_0_clk_wiz
    (clk_out1,
     clk_in1);
   output clk_out1;

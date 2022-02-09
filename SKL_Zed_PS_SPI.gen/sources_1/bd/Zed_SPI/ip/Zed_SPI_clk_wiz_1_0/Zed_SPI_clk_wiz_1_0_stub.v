@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Thu Jan  6 15:41:57 2022
+// Date        : Wed Jan 26 13:12:33 2022
 // Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top Zed_SPI_clk_wiz_1_0 -prefix
+//               Zed_SPI_clk_wiz_1_0_ Zed_SPI_clk_wiz_1_0_stub.v
 // Design      : Zed_SPI_clk_wiz_1_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

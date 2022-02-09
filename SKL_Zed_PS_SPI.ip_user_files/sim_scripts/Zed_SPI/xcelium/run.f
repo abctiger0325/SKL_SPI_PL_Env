@@ -25,10 +25,6 @@
   "../../../bd/Zed_SPI/ipshared/28af/hdl/PL_SPI_ADF4159_v1_0_S00_AXI.v" \
   "../../../bd/Zed_SPI/ipshared/28af/hdl/PL_SPI_ADF4159_v1_0.v" \
   "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/sim/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0.v" \
-  "../../../bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v" \
-  "../../../bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v" \
-  "../../../bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0.v" \
-  "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/sim/Zed_SPI_PL_SPI_DDS_v1_0_0_0.v" \
   "../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0_clk_wiz.v" \
   "../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0.v" \
 -endlib
@@ -78,21 +74,47 @@
   "../../../bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_0/sim/Zed_SPI_rst_ps7_0_100M_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/Zed_SPI/ipshared/7c85/src/PL_SPI_41B29.v" \
-  "../../../bd/Zed_SPI/ipshared/7c85/hdl/PL_SPI_Parallel_41B29_v1_0_S00_AXI.v" \
-  "../../../bd/Zed_SPI/ipshared/7c85/hdl/PL_SPI_Parallel_41B29_v1_0.v" \
-  "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_Parallel_41B2_0_0/sim/Zed_SPI_PL_SPI_Parallel_41B2_0_0.v" \
   "../../../bd/Zed_SPI/ipshared/e9ca/hdl/LED_Connector_v1_0_S00_AXI.v" \
   "../../../bd/Zed_SPI/ipshared/e9ca/src/LED_Temp.v" \
   "../../../bd/Zed_SPI/ipshared/e9ca/hdl/LED_Connector_v1_0.v" \
   "../../../bd/Zed_SPI/ip/Zed_SPI_LED_Connector_v1_0_0_0/sim/Zed_SPI_LED_Connector_v1_0_0_0.v" \
+  "../../../bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v" \
+  "../../../bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/sim/Zed_SPI_PL_SPI_DDS_v1_0_0_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_1_0/sim/Zed_SPI_rst_ps7_0_100M_1_0.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0_clk_wiz.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0.v" \
+  "../../../bd/Zed_SPI/ipshared/4335/src/PL_ADC.v" \
+  "../../../bd/Zed_SPI/ipshared/4335/src/PL_SPI_41B29.v" \
+  "../../../bd/Zed_SPI/ipshared/4335/src/PL_SPI_ADC_Master_v1_0_M00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/4335/src/PL_SPI_ADC_Master_v1_0_S00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/4335/src/PL_SPI_ADC_Master_v1_0.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_Master_v1_0_0/sim/Zed_SPI_PL_SPI_ADC_Master_v1_0_0.v" \
+  "../../../bd/Zed_SPI/sim/Zed_SPI.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_25 \
   "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/8fe4/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/Zed_SPI/ip/Zed_SPI_auto_pc_0/sim/Zed_SPI_auto_pc_0.v" \
-  "../../../bd/Zed_SPI/sim/Zed_SPI.v" \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_auto_pc_1/sim/Zed_SPI_auto_pc_1.v" \
+-endlib
+-makelib xcelium_lib/axi_clock_converter_v2_1_24 \
+  "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/23c0/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/blk_mem_gen_v8_4_5 \
+  "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/25a8/simulation/blk_mem_gen_v8_4.v" \
+-endlib
+-makelib xcelium_lib/axi_dwidth_converter_v2_1_25 \
+  "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/38b4/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_auto_us_df_0/sim/Zed_SPI_auto_us_df_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v
