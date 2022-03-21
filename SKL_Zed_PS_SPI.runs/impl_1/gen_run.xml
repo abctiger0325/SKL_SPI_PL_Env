@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1644219844">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1647486565">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="Zed_SPI_wrapper.drc"/>
   <File Type="BG-BGN" Name="Zed_SPI_wrapper.bgn"/>
@@ -128,5 +128,7 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_PL_SPI_ADC_Master_v1_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_PL_SPI_ADC_MasterStr_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_axi_dma_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Zed_SPI_xbar_0"/>
 </GenRun>

@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -80,7 +81,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.cache/wt [current_project]
 set_property parent.project_path /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths /home/labish/Midget/SKL/SKL_ZED_Backup [current_project]
@@ -91,9 +92,6 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/hdl/Zed_SPI_wrapper.v
 add_files /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.srcs/sources_1/bd/Zed_SPI/Zed_SPI.bd
-set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_1_0/Zed_SPI_clk_wiz_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_processing_system7_0_0/Zed_SPI_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_xbar_0/Zed_SPI_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0_board.xdc]
@@ -105,11 +103,15 @@ set_property used_in_implementation false [get_files -all /home/labish/Midget/SK
 set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_axi_dma_0/Zed_SPI_axi_dma_0.xdc]
+set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_axi_dma_0/Zed_SPI_axi_dma_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_axi_dma_0/Zed_SPI_axi_dma_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_axis_data_fifo_0_0/Zed_SPI_axis_data_fifo_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_pc_0/Zed_SPI_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_pc_1/Zed_SPI_auto_pc_1_ooc.xdc]
-set_property used_in_synthesis false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_us_df_0/Zed_SPI_auto_us_df_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_us_df_0/Zed_SPI_auto_us_df_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_us_df_0/Zed_SPI_auto_us_df_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_us_0/Zed_SPI_auto_us_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_us_0/Zed_SPI_auto_us_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_auto_us_0/Zed_SPI_auto_us_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/Zed_SPI_ooc.xdc]
 
 OPTRACE "Adding files" END { }

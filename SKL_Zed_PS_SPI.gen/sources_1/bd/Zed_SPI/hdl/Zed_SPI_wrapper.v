@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-//Date        : Mon Feb  7 14:30:03 2022
+//Date        : Thu Mar 17 11:08:23 2022
 //Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 //Command     : generate_target Zed_SPI_wrapper.bd
 //Design      : Zed_SPI_wrapper
