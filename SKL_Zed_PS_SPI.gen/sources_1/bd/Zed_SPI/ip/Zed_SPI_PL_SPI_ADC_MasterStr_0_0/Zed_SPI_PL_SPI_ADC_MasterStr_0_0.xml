@@ -127,7 +127,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.FREQ_HZ">300000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.FREQ_HZ">250000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -793,7 +793,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS_ACLK.FREQ_HZ">300000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS_ACLK.FREQ_HZ">250000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1079,11 +1079,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 22 09:44:36 UTC 2022</spirit:value>
+            <spirit:value>Tue Mar 22 15:19:39 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:46b5c73c</spirit:value>
+            <spirit:value>9:71539b85</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1094,7 +1094,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:46b5c73c</spirit:value>
+            <spirit:value>9:71539b85</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1110,11 +1110,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 22 09:44:36 UTC 2022</spirit:value>
+            <spirit:value>Tue Mar 22 15:19:39 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:46b5c73c</spirit:value>
+            <spirit:value>9:71539b85</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1129,11 +1129,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 22 09:44:36 UTC 2022</spirit:value>
+            <spirit:value>Tue Mar 22 15:19:39 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fb190050</spirit:value>
+            <spirit:value>9:ccff5ce9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1149,11 +1149,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 22 09:44:36 UTC 2022</spirit:value>
+            <spirit:value>Tue Mar 22 15:19:39 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fb190050</spirit:value>
+            <spirit:value>9:ccff5ce9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1167,11 +1167,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 22 09:45:55 UTC 2022</spirit:value>
+            <spirit:value>Tue Mar 22 15:21:56 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:46b5c73c</spirit:value>
+            <spirit:value>9:71539b85</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1781,23 +1781,23 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/ff48/src/PL_ADC.v</spirit:name>
+        <spirit:name>../../ipshared/d151/src/PL_ADC.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ff48/src/PL_SPI_41B29.v</spirit:name>
+        <spirit:name>../../ipshared/d151/src/PL_SPI_41B29.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ff48/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v</spirit:name>
+        <spirit:name>../../ipshared/d151/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ff48/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/d151/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ff48/src/PL_SPI_ADC_MasterStream_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/d151/src/PL_SPI_ADC_MasterStream_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1812,23 +1812,23 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/ff48/src/PL_ADC.v</spirit:name>
+        <spirit:name>../../ipshared/d151/src/PL_ADC.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ff48/src/PL_SPI_41B29.v</spirit:name>
+        <spirit:name>../../ipshared/d151/src/PL_SPI_41B29.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ff48/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v</spirit:name>
+        <spirit:name>../../ipshared/d151/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ff48/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/d151/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ff48/src/PL_SPI_ADC_MasterStream_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/d151/src/PL_SPI_ADC_MasterStream_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1908,7 +1908,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>PL_SPI_ADC_MasterStream_v1_0_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>12</xilinx:coreRevision>
+      <xilinx:coreRevision>15</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@12ea4d66_ARCHIVE_LOCATION">/home/labish/Midget/SKL/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@48b5361e_ARCHIVE_LOCATION">/home/labish/Midget/SKL/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
@@ -3218,6 +3218,39 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@673bfdb2_ARCHIVE_LOCATION">/home/labish/Midget/SKL/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@48d314d6_ARCHIVE_LOCATION">/home/labish/Midget/SKL/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@59dc9ece_ARCHIVE_LOCATION">/home/labish/Midget/SKL/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2876eb21_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5e6792b5_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@fb0ce5b_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@11cef49_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4fb5e5d_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4f8b3ba8_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@14974e14_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3d1479d4_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@26e8faeb_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@a0d07be_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@57ca2175_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@471b4a9d_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4137742b_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6fc7dd4_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1f0b26e2_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@e364561_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@d01b7d8_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c8451c8_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@54c456c4_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@5e081195_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@33930629_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@6c440e5_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3e2d5f5d_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7ef4e9cd_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@59332a92_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@78162bbb_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@376c2d46_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3c3ac8ce_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1da2baff_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1004ef9a_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3fab3e15_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1ee7d0e2_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@43a4f7e_ARCHIVE_LOCATION">c:/MGWs/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.I_CMOS_CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
@@ -3301,7 +3334,7 @@
       <xilinx:xilinxVersion>2021.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="23fc263b"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="871c369d"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b0257156"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d00f78f1"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="face71e8"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="c115a869"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="95c7e2e4"/>

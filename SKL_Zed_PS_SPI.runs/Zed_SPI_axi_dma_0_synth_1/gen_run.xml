@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Zed_SPI_axi_dma_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1647942285">
-  <File Type="VDS-TIMINGSUMMARY" Name="Zed_SPI_axi_dma_0_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="Zed_SPI_axi_dma_0.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="Zed_SPI_axi_dma_0_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="Zed_SPI_axi_dma_0_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="Zed_SPI_axi_dma_0_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="Zed_SPI_axi_dma_0.vds"/>
-  <File Type="REPORTS-TCL" Name="Zed_SPI_axi_dma_0_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="Zed_SPI_axi_dma_0_timing_summary_synth.pb"/>
+<GenRun Id="Zed_SPI_axi_dma_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1647962417">
   <File Type="PA-TCL" Name="Zed_SPI_axi_dma_0.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Zed_SPI_axi_dma_0_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Zed_SPI_axi_dma_0_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Zed_SPI_axi_dma_0.vds"/>
+  <File Type="RDS-UTIL" Name="Zed_SPI_axi_dma_0_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Zed_SPI_axi_dma_0_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Zed_SPI_axi_dma_0.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Zed_SPI_axi_dma_0_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Zed_SPI_axi_dma_0_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Zed_SPI_axi_dma_0">
     <File Path="$PSRCDIR/sources_1/bd/Zed_SPI/ip/Zed_SPI_axi_dma_0/Zed_SPI_axi_dma_0.xci">
       <FileInfo>

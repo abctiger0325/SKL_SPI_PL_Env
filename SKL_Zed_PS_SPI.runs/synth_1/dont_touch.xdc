@@ -42,9 +42,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_axi
 # IP: bd/Zed_SPI/ip/Zed_SPI_axi_mem_intercon_0/Zed_SPI_axi_mem_intercon_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_axi_mem_intercon_0 || ORIG_REF_NAME==Zed_SPI_axi_mem_intercon_0} -quiet] -quiet
 
-# IP: bd/Zed_SPI/ip/Zed_SPI_axis_data_fifo_0_0/Zed_SPI_axis_data_fifo_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_axis_data_fifo_0_0 || ORIG_REF_NAME==Zed_SPI_axis_data_fifo_0_0} -quiet] -quiet
-
 # IP: bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_PL_SPI_ADC_MasterStr_0_0 || ORIG_REF_NAME==Zed_SPI_PL_SPI_ADC_MasterStr_0_0} -quiet] -quiet
 
@@ -57,4 +54,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_aut
 # IP: bd/Zed_SPI/ip/Zed_SPI_auto_us_0/Zed_SPI_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Zed_SPI_auto_us_0 || ORIG_REF_NAME==Zed_SPI_auto_us_0} -quiet] -quiet
 
-# XDC: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/Zed_SPI_ooc.xdc
+# XDC: c:/MGWs/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/Zed_SPI_ooc.xdc

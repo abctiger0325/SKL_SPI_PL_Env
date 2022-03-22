@@ -1,15 +1,15 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-//Date        : Tue Mar 22 17:44:35 2022
-//Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
+//Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+//Date        : Tue Mar 22 23:19:04 2022
+//Host        : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
 //Command     : generate_target Zed_SPI.bd
 //Design      : Zed_SPI
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Zed_SPI,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Zed_SPI,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=25,numReposBlks=15,numNonXlnxBlks=1,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=40,da_axi4_s2mm_cnt=1,da_board_cnt=3,da_clkrst_cnt=17,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Zed_SPI.hwdef" *) 
+(* CORE_GENERATION_INFO = "Zed_SPI,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Zed_SPI,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=24,numReposBlks=14,numNonXlnxBlks=1,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=40,da_axi4_s2mm_cnt=1,da_board_cnt=3,da_clkrst_cnt=17,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Zed_SPI.hwdef" *) 
 module Zed_SPI
    (DDR_addr,
     DDR_ba,
@@ -103,7 +103,6 @@ module Zed_SPI
   wire [15:0]PL_SPI_ADC_MasterStr_0_m00_axis_TDATA;
   wire PL_SPI_ADC_MasterStr_0_m00_axis_TLAST;
   wire PL_SPI_ADC_MasterStr_0_m00_axis_TREADY;
-  wire [1:0]PL_SPI_ADC_MasterStr_0_m00_axis_TSTRB;
   wire PL_SPI_ADC_MasterStr_0_m00_axis_TVALID;
   wire [7:0]PL_SPI_ADC_MasterStr_0_o_LED;
   wire PL_SPI_ADC_MasterStr_0_o_SPI_CS;
@@ -151,10 +150,6 @@ module Zed_SPI
   wire axi_mem_intercon_M00_AXI_WREADY;
   wire [7:0]axi_mem_intercon_M00_AXI_WSTRB;
   wire axi_mem_intercon_M00_AXI_WVALID;
-  wire [15:0]axis_data_fifo_0_M_AXIS_TDATA;
-  wire axis_data_fifo_0_M_AXIS_TLAST;
-  wire axis_data_fifo_0_M_AXIS_TREADY;
-  wire axis_data_fifo_0_M_AXIS_TVALID;
   wire clk_wiz_1_clk_out1;
   wire clk_wiz_1_clk_out2;
   wire [11:0]i_CMOS_Data_0_1;
@@ -416,7 +411,6 @@ module Zed_SPI
         .m00_axis_tdata(PL_SPI_ADC_MasterStr_0_m00_axis_TDATA),
         .m00_axis_tlast(PL_SPI_ADC_MasterStr_0_m00_axis_TLAST),
         .m00_axis_tready(PL_SPI_ADC_MasterStr_0_m00_axis_TREADY),
-        .m00_axis_tstrb(PL_SPI_ADC_MasterStr_0_m00_axis_TSTRB),
         .m00_axis_tvalid(PL_SPI_ADC_MasterStr_0_m00_axis_TVALID),
         .o_LED(PL_SPI_ADC_MasterStr_0_o_LED),
         .o_SPI_CS(PL_SPI_ADC_MasterStr_0_o_SPI_CS),
@@ -534,11 +528,11 @@ module Zed_SPI
         .s_axi_lite_wdata(ps7_0_axi_periph_M05_AXI_WDATA),
         .s_axi_lite_wready(ps7_0_axi_periph_M05_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M05_AXI_WVALID),
-        .s_axis_s2mm_tdata(axis_data_fifo_0_M_AXIS_TDATA),
+        .s_axis_s2mm_tdata(PL_SPI_ADC_MasterStr_0_m00_axis_TDATA),
         .s_axis_s2mm_tkeep({1'b1,1'b1}),
-        .s_axis_s2mm_tlast(axis_data_fifo_0_M_AXIS_TLAST),
-        .s_axis_s2mm_tready(axis_data_fifo_0_M_AXIS_TREADY),
-        .s_axis_s2mm_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
+        .s_axis_s2mm_tlast(PL_SPI_ADC_MasterStr_0_m00_axis_TLAST),
+        .s_axis_s2mm_tready(PL_SPI_ADC_MasterStr_0_m00_axis_TREADY),
+        .s_axis_s2mm_tvalid(PL_SPI_ADC_MasterStr_0_m00_axis_TVALID));
   Zed_SPI_axi_mem_intercon_0 axi_mem_intercon
        (.ACLK(clk_wiz_1_clk_out1),
         .ARESETN(M00_ARESETN_1),
@@ -580,18 +574,6 @@ module Zed_SPI
         .S00_AXI_wready(axi_dma_M_AXI_S2MM_WREADY),
         .S00_AXI_wstrb(axi_dma_M_AXI_S2MM_WSTRB),
         .S00_AXI_wvalid(axi_dma_M_AXI_S2MM_WVALID));
-  Zed_SPI_axis_data_fifo_0_0 axis_data_fifo_0
-       (.m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .m_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
-        .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
-        .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
-        .s_axis_aclk(clk_wiz_1_clk_out1),
-        .s_axis_aresetn(M00_ARESETN_1),
-        .s_axis_tdata(PL_SPI_ADC_MasterStr_0_m00_axis_TDATA),
-        .s_axis_tlast(PL_SPI_ADC_MasterStr_0_m00_axis_TLAST),
-        .s_axis_tready(PL_SPI_ADC_MasterStr_0_m00_axis_TREADY),
-        .s_axis_tstrb(PL_SPI_ADC_MasterStr_0_m00_axis_TSTRB),
-        .s_axis_tvalid(PL_SPI_ADC_MasterStr_0_m00_axis_TVALID));
   Zed_SPI_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(processing_system7_0_FCLK_CLK0),
         .clk_out1(clk_wiz_1_clk_out1),

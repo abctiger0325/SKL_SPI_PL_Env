@@ -239,7 +239,7 @@ void Zed_SPI_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "64");
-    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "300000000");
+    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "250000000");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_HP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -521,7 +521,7 @@ void Zed_SPI_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "64");
-    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "300000000");
+    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "250000000");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_HP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -803,7 +803,7 @@ void Zed_SPI_processing_system7_0_0::before_end_of_elaboration()
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "64");
-    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "300000000");
+    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "250000000");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_HP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1055,7 +1055,7 @@ Zed_SPI_processing_system7_0_0::Zed_SPI_processing_system7_0_0(const sc_core::sc
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "64");
-    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "300000000");
+    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "250000000");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_HP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
@@ -1337,7 +1337,7 @@ Zed_SPI_processing_system7_0_0::Zed_SPI_processing_system7_0_0(const sc_core::sc
     S_AXI_HP0_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     S_AXI_HP0_transactor_param_props.addLong("DATA_WIDTH", "64");
-    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "300000000");
+    S_AXI_HP0_transactor_param_props.addLong("FREQ_HZ", "250000000");
     S_AXI_HP0_transactor_param_props.addLong("ID_WIDTH", "6");
     S_AXI_HP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
     S_AXI_HP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");

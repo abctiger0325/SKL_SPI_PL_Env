@@ -1,11 +1,11 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Fri Jan 28 16:54:05 2022
+-- Date        : Tue Jan 25 15:56:57 2022
 -- Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode funcsim -rename_top Zed_SPI_rst_ps7_0_100M_1_0 -prefix
---               Zed_SPI_rst_ps7_0_100M_1_0_ Zed_SPI_rst_ps7_0_100M_1_0_sim_netlist.vhdl
--- Design      : Zed_SPI_rst_ps7_0_100M_1_0
+--               Zed_SPI_rst_ps7_0_100M_1_0_ Zed_SPI_rst_ps7_0_100M_0_sim_netlist.vhdl
+-- Design      : Zed_SPI_rst_ps7_0_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg484-1
@@ -1061,7 +1061,7 @@ entity Zed_SPI_rst_ps7_0_100M_1_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of Zed_SPI_rst_ps7_0_100M_1_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of Zed_SPI_rst_ps7_0_100M_1_0 : entity is "Zed_SPI_rst_ps7_0_100M_1_0,proc_sys_reset,{}";
+  attribute CHECK_LICENSE_TYPE of Zed_SPI_rst_ps7_0_100M_1_0 : entity is "Zed_SPI_rst_ps7_0_100M_0,proc_sys_reset,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Zed_SPI_rst_ps7_0_100M_1_0 : entity is "yes";
   attribute x_core_info : string;
@@ -1098,7 +1098,7 @@ architecture STRUCTURE of Zed_SPI_rst_ps7_0_100M_1_0 is
   attribute x_interface_info of mb_reset : signal is "xilinx.com:signal:reset:1.0 mb_rst RST";
   attribute x_interface_parameter of mb_reset : signal is "XIL_INTERFACENAME mb_rst, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0";
   attribute x_interface_info of slowest_sync_clk : signal is "xilinx.com:signal:clock:1.0 clock CLK";
-  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 300000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
+  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0";
   attribute x_interface_info of bus_struct_reset : signal is "xilinx.com:signal:reset:1.0 bus_struct_reset RST";
   attribute x_interface_parameter of bus_struct_reset : signal is "XIL_INTERFACENAME bus_struct_reset, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0";
   attribute x_interface_info of interconnect_aresetn : signal is "xilinx.com:signal:reset:1.0 interconnect_low_rst RST";

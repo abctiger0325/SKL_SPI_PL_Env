@@ -1,9 +1,9 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.632451",
-   "Default View_TopLeft":"-213,-70",
+   "Default View_ScaleFactor":"0.657264",
+   "Default View_TopLeft":"654,580",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port DDR -pg 1 -lvl 6 -x 2470 -y 730 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -lvl 6 -x 2470 -y 750 -defaultsOSRD
@@ -39,9 +39,8 @@ preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 3 -x 1210 -y 1070 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 840 -y 780 -defaultsOSRD
 preplace inst axi_dma -pg 1 -lvl 3 -x 1210 -y 760 -defaultsOSRD
 preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 1620 -y 800 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 4 -x 1620 -y 1020 -defaultsOSRD
 preplace inst PL_SPI_ADC_MasterStr_0 -pg 1 -lvl 5 -x 2150 -y 1120 -defaultsOSRD
-preplace netloc M00_ARESETN_1 1 3 2 1400 1160 1770J
+preplace netloc M00_ARESETN_1 1 3 2 1390 1200 NJ
 preplace netloc PL_SPI_ADAR_v1_0_0_o_SPI_CS 1 5 1 NJ 110
 preplace netloc PL_SPI_ADAR_v1_0_0_o_SPI_Clk 1 5 1 NJ 70
 preplace netloc PL_SPI_ADAR_v1_0_0_o_SPI_MOSI 1 5 1 NJ 90
@@ -52,37 +51,36 @@ preplace netloc PL_SPI_ADC_MasterStr_0_o_SPI_MOSI 1 5 1 2430J 1110n
 preplace netloc PL_SPI_ADF4159_v1_0_0_o_SPI_CS 1 5 1 NJ 450
 preplace netloc PL_SPI_ADF4159_v1_0_0_o_SPI_Clk 1 5 1 NJ 410
 preplace netloc PL_SPI_ADF4159_v1_0_0_o_SPI_MOSI 1 5 1 NJ 430
-preplace netloc PL_SPI_DDS_v1_0_0_o_ADC_Trigger 1 4 2 1890 0 2410
+preplace netloc PL_SPI_DDS_v1_0_0_o_ADC_Trigger 1 4 2 1830 0 2410
 preplace netloc PL_SPI_DDS_v1_0_0_o_GPIO 1 5 1 NJ 280
 preplace netloc PL_SPI_DDS_v1_0_0_o_SPI_CS 1 5 1 NJ 260
 preplace netloc PL_SPI_DDS_v1_0_0_o_SPI_Clk 1 5 1 NJ 220
 preplace netloc PL_SPI_DDS_v1_0_0_o_SPI_MOSI 1 5 1 NJ 240
-preplace netloc clk_wiz_1_clk_out1 1 2 3 990 860 1390 680 1780
-preplace netloc clk_wiz_1_clk_out2 1 2 4 1010 640 N 640 1800 980 NJ
-preplace netloc i_CMOS_Data_0_1 1 0 5 NJ 1180 NJ 1180 NJ 1180 1410J 1100 NJ
-preplace netloc i_Over_GPIO_0_1 1 0 5 NJ 210 NJ 210 990J 200 NJ 200 1870J
+preplace netloc clk_wiz_1_clk_out1 1 2 3 1000 860 1380 920 1820
+preplace netloc clk_wiz_1_clk_out2 1 2 4 990 930 N 930 1770 980 NJ
+preplace netloc i_CMOS_Data_0_1 1 0 5 NJ 1180 NJ 1180 NJ 1180 1400J 1100 NJ
+preplace netloc i_Over_GPIO_0_1 1 0 5 NJ 210 NJ 210 990J 200 NJ 200 1810J
 preplace netloc i_SPI_MISO_0_1 1 0 5 NJ 80 NJ 80 NJ 80 NJ 80 NJ
-preplace netloc i_SPI_MISO_1_1 1 0 5 NJ 190 NJ 190 NJ 190 NJ 190 1880J
-preplace netloc i_SPI_MISO_2_1 1 0 5 10J 220 NJ 220 1010J 210 NJ 210 1860J
-preplace netloc i_SPI_MISO_3_1 1 0 5 NJ 1160 NJ 1160 1010J 1170 NJ 1170 1820J
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 10 780 670 660 1000 660 N 660 1840 670 2400
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 10 1000 NJ 1000 1020 920 NJ 920 1820J 960 2380
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 4 680 670 1020 650 NJ 650 1850
-preplace netloc PL_SPI_ADC_MasterStr_0_m00_axis 1 3 3 1410 940 1790 970 2380
+preplace netloc i_SPI_MISO_1_1 1 0 5 NJ 190 NJ 190 NJ 190 NJ 190 1820J
+preplace netloc i_SPI_MISO_2_1 1 0 5 10J 220 NJ 220 1010J 210 NJ 210 1770J
+preplace netloc i_SPI_MISO_3_1 1 0 5 NJ 1160 NJ 1160 1010J 1170 1380J 1060 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 10 780 660 670 1000 640 N 640 1790 950 2400
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 10 1000 NJ 1000 1020 970 NJ 970 NJ 970 2390
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 4 670 680 1010 650 NJ 650 1800
 preplace netloc axi_dma_M_AXI_S2MM 1 3 1 N 740
 preplace netloc axi_mem_intercon_M00_AXI 1 4 1 N 800
-preplace netloc axis_data_fifo_0_M_AXIS 1 2 3 1030 630 N 630 1770
 preplace netloc processing_system7_0_DDR 1 5 1 NJ 730
 preplace netloc processing_system7_0_FIXED_IO 1 5 1 NJ 750
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 690 930 NJ 930 NJ 930 1810J 950 2390
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 680 660 NJ 660 NJ 660 NJ 660 2390
 preplace netloc ps7_0_axi_periph_M00_AXI 1 2 3 1000 60 NJ 60 NJ
 preplace netloc ps7_0_axi_periph_M01_AXI 1 2 3 1030 400 NJ 400 NJ
 preplace netloc ps7_0_axi_periph_M02_AXI 1 2 3 1020 220 NJ 220 NJ
-preplace netloc ps7_0_axi_periph_M03_AXI 1 2 3 NJ 450 NJ 450 1830
+preplace netloc ps7_0_axi_periph_M03_AXI 1 2 3 NJ 450 NJ 450 1780
 preplace netloc ps7_0_axi_periph_M04_AXI 1 2 3 1020 560 NJ 560 NJ
 preplace netloc ps7_0_axi_periph_M05_AXI 1 2 1 990 490n
+preplace netloc PL_SPI_ADC_MasterStr_0_m00_axis 1 2 4 1030 960 N 960 N 960 2380
 levelinfo -pg 1 -10 490 840 1210 1620 2150 2470
-pagesize -pg 1 -db -bbox -sgen -220 -140 2630 1400
+pagesize -pg 1 -db -bbox -sgen -210 -140 2620 1400
 "
 }
 {
