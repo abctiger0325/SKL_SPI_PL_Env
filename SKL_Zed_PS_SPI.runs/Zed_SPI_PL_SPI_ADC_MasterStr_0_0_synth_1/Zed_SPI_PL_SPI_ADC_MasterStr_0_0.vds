@@ -1,0 +1,455 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Mar 22 17:13:18 2022
+# Process ID: 13692
+# Current directory: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1
+# Command line: vivado -log Zed_SPI_PL_SPI_ADC_MasterStr_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zed_SPI_PL_SPI_ADC_MasterStr_0_0.tcl
+# Log file: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.vds
+# Journal file: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1/vivado.jou
+# Running On: labish-OptiPlex-9010, OS: Linux, CPU Frequency: 3691.681 MHz, CPU Physical cores: 4, Host memory: 33553 MB
+#-----------------------------------------------------------
+source Zed_SPI_PL_SPI_ADC_MasterStr_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/labish/Midget/SKL/SKL_ZED_Backup'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/labish/Vivado/2021.2/Vivado/2021.2/data/ip'.
+Command: synth_design -top Zed_SPI_PL_SPI_ADC_MasterStr_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13755
+WARNING: [Synth 8-2507] parameter declaration becomes local in PL_SPI_ADC_MasterStream_v1_0_M00_AXIS with formal parameter declaration list [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:70]
+WARNING: [Synth 8-6901] identifier 'w_StatusReg' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:317]
+WARNING: [Synth 8-6901] identifier 'w_StatusReg' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:318]
+WARNING: [Synth 8-6901] identifier 'w_RxBuffer' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:319]
+WARNING: [Synth 8-6901] identifier 'w_ADC_State' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:320]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2777.637 ; gain = 0.000 ; free physical = 11617 ; free virtual = 18599
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/synth/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PL_SPI_ADC_MasterStream_v1_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:247]
+INFO: [Synth 8-226] default block is never used [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:429]
+INFO: [Synth 8-6157] synthesizing module 'PL_SPI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v:27]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v:398]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v:402]
+WARNING: [Synth 8-6014] Unused sequential element r_Cmd_Lim_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v:151]
+WARNING: [Synth 8-6014] Unused sequential element r_Reset_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v:205]
+WARNING: [Synth 8-6014] Unused sequential element r_Rx_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v:208]
+WARNING: [Synth 8-6014] Unused sequential element r_Lock_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v:255]
+WARNING: [Synth 8-6014] Unused sequential element r_Leading_Edge_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v:131]
+WARNING: [Synth 8-6014] Unused sequential element r_Trailing_Edge_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v:132]
+WARNING: [Synth 8-3848] Net o_LED_Temp in module/entity PL_SPI does not have driver. [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'PL_SPI' (1#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v:27]
+WARNING: [Synth 8-689] width (1) of port connection 'o_LED_Temp' does not match port width (8) of module 'PL_SPI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:516]
+WARNING: [Synth 8-3848] Net o_DMA_Reset in module/entity PL_SPI_ADC_MasterStream_v1_0_S00_AXI does not have driver. [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' (2#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:117]
+INFO: [Synth 8-6157] synthesizing module 'PL_ADC' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_ADC.v:23]
+WARNING: [Synth 8-6090] variable 'r_Count' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_ADC.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'PL_ADC' (3#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_ADC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS' (4#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_ADC_MasterStream_v1_0' (5#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0' (6#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/synth/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.v:57]
+WARNING: [Synth 8-7129] Port i_CMOS_Data[11] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[10] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[9] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[8] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[7] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[6] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[5] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[4] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[3] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[2] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[1] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[0] in module PL_ADC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ADC_Work in module PL_SPI_ADC_MasterStream_v1_0_M00_AXIS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[7] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[6] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[5] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[4] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[3] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[2] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[1] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[0] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_DMA_Reset in module PL_SPI_ADC_MasterStream_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_AXI_Done in module PL_SPI_ADC_MasterStream_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module PL_SPI_ADC_MasterStream_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module PL_SPI_ADC_MasterStream_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module PL_SPI_ADC_MasterStream_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module PL_SPI_ADC_MasterStream_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module PL_SPI_ADC_MasterStream_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module PL_SPI_ADC_MasterStream_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ADC_Work in module PL_SPI_ADC_MasterStream_v1_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axis_aresetn in module PL_SPI_ADC_MasterStream_v1_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2777.637 ; gain = 0.000 ; free physical = 12593 ; free virtual = 19572
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2777.637 ; gain = 0.000 ; free physical = 12592 ; free virtual = 19570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2777.637 ; gain = 0.000 ; free physical = 12592 ; free virtual = 19570
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2777.637 ; gain = 0.000 ; free physical = 12584 ; free virtual = 19563
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2841.562 ; gain = 0.000 ; free physical = 12496 ; free virtual = 19474
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2841.562 ; gain = 0.000 ; free physical = 12495 ; free virtual = 19473
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12565 ; free virtual = 19543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12565 ; free virtual = 19543
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12565 ; free virtual = 19543
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+            INIT_COUNTER |                               01 |                               01
+             SEND_STREAM |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mst_exec_state_reg' using encoding 'sequential' in module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12553 ; free virtual = 19533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   20 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 9     
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 49    
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 23    
++---RAMs : 
+	            2929K Bit	(250000 X 12 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 11    
+	   8 Input   32 Bit        Muxes := 8     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 370   
+	   3 Input    8 Bit        Muxes := 4     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 29    
+	   4 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 23    
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 75    
+	   3 Input    1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design Zed_SPI_PL_SPI_ADC_MasterStr_0_0 has port m00_axis_tstrb[1] driven by constant 1
+INFO: [Synth 8-3917] design Zed_SPI_PL_SPI_ADC_MasterStr_0_0 has port m00_axis_tstrb[0] driven by constant 1
+WARNING: [Synth 8-7129] Port o_LED_Temp[7] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[6] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[5] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[4] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[3] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[2] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[1] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_LED_Temp[0] in module PL_SPI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port o_DMA_Reset in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[11] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[10] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[9] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[8] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[7] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[6] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[5] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[4] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[3] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[2] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[1] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_CMOS_Data[0] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ADC_Work in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m00_axis_aresetn in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
+INFO: [Synth 8-5784] Optimized 4 bits of RAM "inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg" due to constant propagation. Old ram width 16 bits, new ram width 12 bits.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__11) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__12) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__13) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__14) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__15) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__16) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__17) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__18) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__19) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__20) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__21) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__22) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__35) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__36) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__37) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__38) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__39) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__40) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__41) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__42) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__43) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__44) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__45) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__46) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12553 ; free virtual = 19541
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++---------------------------------+---------------------------------------------------------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|Module Name                      | RTL Object                                                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width)  | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------+---------------------------------------------------------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|Zed_SPI_PL_SPI_ADC_MasterStr_0_0 | inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg | 244 K x 12(READ_FIRST) | W |   | 244 K x 16(WRITE_FIRST) |   | R | Port A and B     | 0      | 96     | 
++---------------------------------+---------------------------------------------------------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12434 ; free virtual = 19422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12434 ; free virtual = 19422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++---------------------------------+---------------------------------------------------------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|Module Name                      | RTL Object                                                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width)  | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------+---------------------------------------------------------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+|Zed_SPI_PL_SPI_ADC_MasterStr_0_0 | inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg | 244 K x 12(READ_FIRST) | W |   | 244 K x 16(WRITE_FIRST) |   | R | Port A and B     | 0      | 96     | 
++---------------------------------+---------------------------------------------------------------+------------------------+---+---+-------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_3_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_5_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12430 ; free virtual = 19418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12433 ; free virtual = 19421
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12433 ; free virtual = 19421
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12435 ; free virtual = 19423
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12435 ; free virtual = 19423
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12435 ; free virtual = 19423
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12435 ; free virtual = 19423
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    31|
+|2     |LUT1     |    11|
+|3     |LUT2     |   125|
+|4     |LUT3     |   326|
+|5     |LUT4     |    69|
+|6     |LUT5     |   231|
+|7     |LUT6     |   639|
+|8     |MUXF7    |   113|
+|9     |MUXF8    |    32|
+|10    |RAMB36E1 |    96|
+|14    |FDRE     |   931|
+|15    |FDSE     |     4|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12435 ; free virtual = 19423
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2841.562 ; gain = 0.000 ; free physical = 12491 ; free virtual = 19479
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.926 ; free physical = 12491 ; free virtual = 19479
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2841.562 ; gain = 0.000 ; free physical = 12580 ; free virtual = 19567
+INFO: [Netlist 29-17] Analyzing 272 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2841.562 ; gain = 0.000 ; free physical = 12518 ; free virtual = 19506
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: a40c37b2
+INFO: [Common 17-83] Releasing license: Synthesis
+109 Infos, 78 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:46 . Memory (MB): peak = 2841.562 ; gain = 64.031 ; free physical = 12723 ; free virtual = 19711
+INFO: [Common 17-1381] The checkpoint '/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Zed_SPI_PL_SPI_ADC_MasterStr_0_0, cache-ID = a38df76a7452007f
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Zed_SPI_PL_SPI_ADC_MasterStr_0_0_utilization_synth.rpt -pb Zed_SPI_PL_SPI_ADC_MasterStr_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 22 17:14:20 2022...

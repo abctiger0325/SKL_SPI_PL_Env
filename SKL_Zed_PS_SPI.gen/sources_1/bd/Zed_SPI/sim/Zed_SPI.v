@@ -1,8 +1,8 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-//Date        : Mon Mar 21 21:40:50 2022
-//Host        : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
+//Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+//Date        : Tue Mar 22 17:13:05 2022
+//Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 //Command     : generate_target Zed_SPI.bd
 //Design      : Zed_SPI
 //Purpose     : IP block netlist
@@ -100,10 +100,10 @@ module Zed_SPI
   wire PL_SPI_ADAR_v1_0_0_o_SPI_CS;
   wire PL_SPI_ADAR_v1_0_0_o_SPI_Clk;
   wire PL_SPI_ADAR_v1_0_0_o_SPI_MOSI;
-  wire [31:0]PL_SPI_ADC_MasterStr_0_m00_axis_TDATA;
+  wire [15:0]PL_SPI_ADC_MasterStr_0_m00_axis_TDATA;
   wire PL_SPI_ADC_MasterStr_0_m00_axis_TLAST;
   wire PL_SPI_ADC_MasterStr_0_m00_axis_TREADY;
-  wire [3:0]PL_SPI_ADC_MasterStr_0_m00_axis_TSTRB;
+  wire [1:0]PL_SPI_ADC_MasterStr_0_m00_axis_TSTRB;
   wire PL_SPI_ADC_MasterStr_0_m00_axis_TVALID;
   wire [7:0]PL_SPI_ADC_MasterStr_0_o_LED;
   wire PL_SPI_ADC_MasterStr_0_o_SPI_CS;
@@ -151,7 +151,7 @@ module Zed_SPI
   wire axi_mem_intercon_M00_AXI_WREADY;
   wire [7:0]axi_mem_intercon_M00_AXI_WSTRB;
   wire axi_mem_intercon_M00_AXI_WVALID;
-  wire [31:0]axis_data_fifo_0_M_AXIS_TDATA;
+  wire [15:0]axis_data_fifo_0_M_AXIS_TDATA;
   wire axis_data_fifo_0_M_AXIS_TLAST;
   wire axis_data_fifo_0_M_AXIS_TREADY;
   wire axis_data_fifo_0_M_AXIS_TVALID;
@@ -535,7 +535,7 @@ module Zed_SPI
         .s_axi_lite_wready(ps7_0_axi_periph_M05_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M05_AXI_WVALID),
         .s_axis_s2mm_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_s2mm_tkeep({1'b1,1'b1}),
         .s_axis_s2mm_tlast(axis_data_fifo_0_M_AXIS_TLAST),
         .s_axis_s2mm_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .s_axis_s2mm_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
