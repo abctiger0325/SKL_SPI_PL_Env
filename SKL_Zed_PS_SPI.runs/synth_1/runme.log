@@ -9,6 +9,7 @@
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source Zed_SPI_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2771.594 ; gain = 2.016 ; free physical = 12771 ; free virtual = 19912
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/labish/Midget/SKL/SKL_ZED_Backup'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/labish/Vivado/2021.2/Vivado/2021.2/data/ip'.
@@ -19,48 +20,48 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14364
+INFO: [Synth 8-7075] Helper process launched with PID 5332
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2778.715 ; gain = 0.000 ; free physical = 11687 ; free virtual = 18628
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2771.699 ; gain = 0.000 ; free physical = 11222 ; free virtual = 18266
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_wrapper' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/hdl/Zed_SPI_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Zed_SPI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:13]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_LED_Connector_v1_0_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_LED_Connector_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_LED_Connector_v1_0_0_0' (1#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_LED_Connector_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_LED_Connector_v1_0_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_LED_Connector_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_LED_Connector_v1_0_0_0' (1#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_LED_Connector_v1_0_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'o_LED' of module 'Zed_SPI_LED_Connector_v1_0_0_0' is unconnected for instance 'LED_Connector_v1_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:361]
 WARNING: [Synth 8-7023] instance 'LED_Connector_v1_0_0' of module 'Zed_SPI_LED_Connector_v1_0_0_0' has 22 connections declared, but only 21 given [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:361]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_ADAR_v1_0_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_ADAR_v1_0_0_0' (2#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0' (3#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_ADAR_v1_0_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_ADAR_v1_0_0_0' (2#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0' (3#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'o_DMA_Reset' of module 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0' is unconnected for instance 'PL_SPI_ADC_MasterStr_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:409]
 WARNING: [Synth 8-7023] instance 'PL_SPI_ADC_MasterStr_0' of module 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0' has 37 connections declared, but only 36 given [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:409]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_ADF4159_v1_0_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_ADF4159_v1_0_0_0' (4#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_DDS_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' (5#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_DDS_v1_0_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_axi_dma_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_axi_dma_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_axi_dma_0' (6#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_axi_dma_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_ADF4159_v1_0_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_ADF4159_v1_0_0_0' (4#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_DDS_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_DDS_v1_0_0_0' (5#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_PL_SPI_DDS_v1_0_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_axi_dma_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_axi_dma_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_axi_dma_0' (6#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_axi_dma_0_stub.v:6]
 WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'Zed_SPI_axi_dma_0' is unconnected for instance 'axi_dma' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:501]
 WARNING: [Synth 8-7071] port 's2mm_introut' of module 'Zed_SPI_axi_dma_0' is unconnected for instance 'axi_dma' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:501]
 WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'Zed_SPI_axi_dma_0' is unconnected for instance 'axi_dma' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:501]
 WARNING: [Synth 8-7023] instance 'axi_dma' of module 'Zed_SPI_axi_dma_0' has 43 connections declared, but only 40 given [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:501]
 INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_axi_mem_intercon_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:879]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_IM61Z7' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:3056]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_auto_pc_1' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_auto_pc_1' (7#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_auto_us_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_auto_us_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_auto_us_0' (8#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_auto_us_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_auto_pc_1' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_auto_pc_1' (7#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_auto_us_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_auto_us_0' (8#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_auto_us_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_IM61Z7' (9#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:3056]
 INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_axi_mem_intercon_0' (10#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:879]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_axis_data_fifo_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_axis_data_fifo_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_axis_data_fifo_0_0' (11#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_axis_data_fifo_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_axis_data_fifo_0_0' (11#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_axis_data_fifo_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'Zed_SPI_axis_data_fifo_0_0' is unconnected for instance 'axis_data_fifo_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:583]
 WARNING: [Synth 8-7023] instance 'axis_data_fifo_0' of module 'Zed_SPI_axis_data_fifo_0_0' has 12 connections declared, but only 11 given [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:583]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_clk_wiz_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_clk_wiz_0_0' (12#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_processing_system7_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_processing_system7_0_0' (13#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_clk_wiz_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_clk_wiz_0_0' (12#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_processing_system7_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_processing_system7_0_0' (13#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:599]
 WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:599]
 WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'Zed_SPI_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:599]
@@ -92,24 +93,24 @@ INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1F6GO42' (18#1) 
 INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_HPI91T' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:2931]
 INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_HPI91T' (19#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:2931]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_L5RQYP' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:3306]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_auto_pc_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_auto_pc_0' (20#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_auto_pc_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_auto_pc_0' (20#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_L5RQYP' (21#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:3306]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_xbar_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_xbar_0' (22#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_xbar_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_xbar_0' (22#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_xbar_0_stub.v:6]
 WARNING: [Synth 8-689] width (15) of port connection 'm_axi_arprot' does not match port width (18) of module 'Zed_SPI_xbar_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:2162]
 WARNING: [Synth 8-689] width (15) of port connection 'm_axi_awprot' does not match port width (18) of module 'Zed_SPI_xbar_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:2166]
 WARNING: [Synth 8-689] width (20) of port connection 'm_axi_wstrb' does not match port width (24) of module 'Zed_SPI_xbar_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:2178]
 INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_ps7_0_axi_periph_4' (23#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:1079]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_rst_ps7_0_100M_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_rst_ps7_0_100M_0' (24#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_rst_ps7_0_100M_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_rst_ps7_0_100M_0' (24#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_rst_ps7_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:863]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:863]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:863]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'Zed_SPI_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:863]
 WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'Zed_SPI_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:863]
-INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_rst_ps7_0_100M_1_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_rst_ps7_0_100M_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_rst_ps7_0_100M_1_0' (25#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-14315-labish-OptiPlex-9010/realtime/Zed_SPI_rst_ps7_0_100M_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_rst_ps7_0_100M_1_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_rst_ps7_0_100M_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_rst_ps7_0_100M_1_0' (25#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/.Xil/Vivado-5267-labish-OptiPlex-9010/realtime/Zed_SPI_rst_ps7_0_100M_1_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'Zed_SPI_rst_ps7_0_100M_1_0' is unconnected for instance 'rst_ps7_0_100M_1' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:870]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'Zed_SPI_rst_ps7_0_100M_1_0' is unconnected for instance 'rst_ps7_0_100M_1' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:870]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'Zed_SPI_rst_ps7_0_100M_1_0' is unconnected for instance 'rst_ps7_0_100M_1' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/synth/Zed_SPI.v:870]
@@ -162,18 +163,18 @@ WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_IM61Z7 is eith
 WARNING: [Synth 8-7129] Port ACLK in module Zed_SPI_axi_mem_intercon_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESETN in module Zed_SPI_axi_mem_intercon_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2778.715 ; gain = 0.000 ; free physical = 12643 ; free virtual = 19585
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2771.699 ; gain = 0.000 ; free physical = 12212 ; free virtual = 19256
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2778.715 ; gain = 0.000 ; free physical = 12668 ; free virtual = 19609
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2771.699 ; gain = 0.000 ; free physical = 12204 ; free virtual = 19248
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2778.715 ; gain = 0.000 ; free physical = 12668 ; free virtual = 19609
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2771.699 ; gain = 0.000 ; free physical = 12204 ; free virtual = 19248
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2778.715 ; gain = 0.000 ; free physical = 12661 ; free virtual = 19602
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2771.699 ; gain = 0.000 ; free physical = 12198 ; free virtual = 19241
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -216,20 +217,20 @@ Parsing XDC File [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/syn
 Finished Parsing XDC File [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2842.641 ; gain = 0.000 ; free physical = 12565 ; free virtual = 19506
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2835.625 ; gain = 0.000 ; free physical = 12102 ; free virtual = 19145
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2842.641 ; gain = 0.000 ; free physical = 12565 ; free virtual = 19506
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2835.625 ; gain = 0.000 ; free physical = 12102 ; free virtual = 19145
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12642 ; free virtual = 19584
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12184 ; free virtual = 19228
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12642 ; free virtual = 19584
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12184 ; free virtual = 19228
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -513,10 +514,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/axi_mem_intercon. (cons
 Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/axis_data_fifo_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Zed_SPI_i/PL_SPI_ADC_MasterStr_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12642 ; free virtual = 19584
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12184 ; free virtual = 19228
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12640 ; free virtual = 19583
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12182 ; free virtual = 19227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -557,25 +558,25 @@ WARNING: [Synth 8-7129] Port ARESETN in module Zed_SPI_axi_mem_intercon_0 is eit
 WARNING: [Synth 8-7129] Port M00_ACLK in module Zed_SPI_axi_mem_intercon_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M00_ARESETN in module Zed_SPI_axi_mem_intercon_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12627 ; free virtual = 19574
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12172 ; free virtual = 19217
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12489 ; free virtual = 19436
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12008 ; free virtual = 19069
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12489 ; free virtual = 19436
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12009 ; free virtual = 19070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12487 ; free virtual = 19434
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12014 ; free virtual = 19074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -593,37 +594,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12491 ; free virtual = 19438
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12043 ; free virtual = 19087
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12491 ; free virtual = 19438
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12043 ; free virtual = 19087
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12491 ; free virtual = 19438
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12043 ; free virtual = 19087
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12491 ; free virtual = 19438
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12043 ; free virtual = 19087
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12491 ; free virtual = 19438
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12043 ; free virtual = 19088
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12491 ; free virtual = 19438
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12043 ; free virtual = 19088
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -672,16 +673,16 @@ Report Cell Usage:
 |17    |OBUF                           |    26|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12491 ; free virtual = 19438
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12043 ; free virtual = 19088
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2842.641 ; gain = 0.000 ; free physical = 12549 ; free virtual = 19496
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 2842.641 ; gain = 63.926 ; free physical = 12550 ; free virtual = 19497
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2835.625 ; gain = 0.000 ; free physical = 12104 ; free virtual = 19146
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2835.625 ; gain = 63.926 ; free physical = 12104 ; free virtual = 19146
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2842.641 ; gain = 0.000 ; free physical = 12638 ; free virtual = 19585
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2835.625 ; gain = 0.000 ; free physical = 12193 ; free virtual = 19235
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2842.641 ; gain = 0.000 ; free physical = 12574 ; free virtual = 19521
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2835.625 ; gain = 0.000 ; free physical = 12129 ; free virtual = 19170
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -689,7 +690,7 @@ Synth Design complete, checksum: 96da3608
 INFO: [Common 17-83] Releasing license: Synthesis
 70 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 2842.641 ; gain = 64.031 ; free physical = 12766 ; free virtual = 19712
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 2835.625 ; gain = 64.031 ; free physical = 12322 ; free virtual = 19363
 INFO: [Common 17-1381] The checkpoint '/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1/Zed_SPI_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Zed_SPI_wrapper_utilization_synth.rpt -pb Zed_SPI_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 22 17:17:54 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 22 17:47:25 2022...

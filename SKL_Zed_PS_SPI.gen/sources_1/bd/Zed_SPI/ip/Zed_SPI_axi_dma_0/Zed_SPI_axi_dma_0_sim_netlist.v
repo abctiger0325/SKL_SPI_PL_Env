@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Tue Mar 22 16:37:27 2022
+// Date        : Tue Mar 22 17:46:05 2022
 // Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_axi_dma_0/Zed_SPI_axi_dma_0_sim_netlist.v
@@ -77,7 +77,7 @@ module Zed_SPI_axi_dma_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RREADY" *) input s_axi_lite_rready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RDATA" *) output [31:0]s_axi_lite_rdata;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RRESP" *) output [1:0]s_axi_lite_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_S2MM, SUPPORTS_NARROW_BURST 0, NUM_WRITE_OUTSTANDING 16, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 300000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, NUM_READ_OUTSTANDING 8, MAX_BURST_LENGTH 16, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output [31:0]m_axi_s2mm_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_S2MM, SUPPORTS_NARROW_BURST 0, NUM_WRITE_OUTSTANDING 16, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 300000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, NUM_READ_OUTSTANDING 8, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output [31:0]m_axi_s2mm_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM AWLEN" *) output [7:0]m_axi_s2mm_awlen;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM AWSIZE" *) output [2:0]m_axi_s2mm_awsize;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM AWBURST" *) output [1:0]m_axi_s2mm_awburst;
@@ -109,7 +109,7 @@ module Zed_SPI_axi_dma_0
   wire m_axi_s2mm_aclk;
   wire [31:0]m_axi_s2mm_awaddr;
   wire [0:0]\^m_axi_s2mm_awburst ;
-  wire [4:0]\^m_axi_s2mm_awlen ;
+  wire [7:0]m_axi_s2mm_awlen;
   wire m_axi_s2mm_awready;
   wire [1:1]\^m_axi_s2mm_awsize ;
   wire m_axi_s2mm_awvalid;
@@ -170,7 +170,6 @@ module Zed_SPI_axi_dma_0
   wire [3:0]NLW_U0_m_axi_mm2s_aruser_UNCONNECTED;
   wire [1:1]NLW_U0_m_axi_s2mm_awburst_UNCONNECTED;
   wire [3:0]NLW_U0_m_axi_s2mm_awcache_UNCONNECTED;
-  wire [7:5]NLW_U0_m_axi_s2mm_awlen_UNCONNECTED;
   wire [2:0]NLW_U0_m_axi_s2mm_awprot_UNCONNECTED;
   wire [2:0]NLW_U0_m_axi_s2mm_awsize_UNCONNECTED;
   wire [3:0]NLW_U0_m_axi_s2mm_awuser_UNCONNECTED;
@@ -237,10 +236,6 @@ module Zed_SPI_axi_dma_0
   assign m_axi_s2mm_awcache[2] = \<const0> ;
   assign m_axi_s2mm_awcache[1] = \<const1> ;
   assign m_axi_s2mm_awcache[0] = \<const1> ;
-  assign m_axi_s2mm_awlen[7] = \<const0> ;
-  assign m_axi_s2mm_awlen[6] = \<const0> ;
-  assign m_axi_s2mm_awlen[5] = \<const0> ;
-  assign m_axi_s2mm_awlen[4:0] = \^m_axi_s2mm_awlen [4:0];
   assign m_axi_s2mm_awprot[2] = \<const0> ;
   assign m_axi_s2mm_awprot[1] = \<const0> ;
   assign m_axi_s2mm_awprot[0] = \<const0> ;
@@ -278,7 +273,7 @@ module Zed_SPI_axi_dma_0
   (* C_NUM_MM2S_CHANNELS = "1" *) 
   (* C_NUM_S2MM_CHANNELS = "1" *) 
   (* C_PRMRY_IS_ACLK_ASYNC = "1" *) 
-  (* C_S2MM_BURST_SIZE = "16" *) 
+  (* C_S2MM_BURST_SIZE = "256" *) 
   (* C_SG_INCLUDE_STSCNTRL_STRM = "0" *) 
   (* C_SG_LENGTH_WIDTH = "25" *) 
   (* C_SG_USE_STSAPP_LENGTH = "0" *) 
@@ -309,7 +304,7 @@ module Zed_SPI_axi_dma_0
         .m_axi_s2mm_awaddr(m_axi_s2mm_awaddr),
         .m_axi_s2mm_awburst({NLW_U0_m_axi_s2mm_awburst_UNCONNECTED[1],\^m_axi_s2mm_awburst }),
         .m_axi_s2mm_awcache(NLW_U0_m_axi_s2mm_awcache_UNCONNECTED[3:0]),
-        .m_axi_s2mm_awlen({NLW_U0_m_axi_s2mm_awlen_UNCONNECTED[7:5],\^m_axi_s2mm_awlen }),
+        .m_axi_s2mm_awlen(m_axi_s2mm_awlen),
         .m_axi_s2mm_awprot(NLW_U0_m_axi_s2mm_awprot_UNCONNECTED[2:0]),
         .m_axi_s2mm_awready(m_axi_s2mm_awready),
         .m_axi_s2mm_awsize({NLW_U0_m_axi_s2mm_awsize_UNCONNECTED[2],\^m_axi_s2mm_awsize ,NLW_U0_m_axi_s2mm_awsize_UNCONNECTED[0]}),
@@ -468,7 +463,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg
   wire \NLW_xpm_fifo_instance.xpm_fifo_async_inst_sbiterr_UNCONNECTED ;
   wire \NLW_xpm_fifo_instance.xpm_fifo_async_inst_underflow_UNCONNECTED ;
 
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT5 #(
     .INIT(32'hFFFDFF00)) 
     \GEN_HOLD_NO_DATA.s_axis_s2mm_cmd_tvalid_i_1 
@@ -531,7 +526,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg
         .wr_data_count({\xpm_fifo_instance.xpm_fifo_async_inst_n_2 ,\xpm_fifo_instance.xpm_fifo_async_inst_n_3 ,\xpm_fifo_instance.xpm_fifo_async_inst_n_4 ,\xpm_fifo_instance.xpm_fifo_async_inst_n_5 }),
         .wr_en(sig_async_wr_fifo),
         .wr_rst_busy(wr_rst_busy));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT4 #(
     .INIT(16'h0008)) 
     \xpm_fifo_instance.xpm_fifo_async_inst_i_2 
@@ -636,7 +631,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I3(sig_wsc2stat_status_valid),
         .I4(\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ),
         .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[0]_i_1 
@@ -644,7 +639,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[8]),
         .O(sts_received_i_reg_0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[10]_i_1 
@@ -652,7 +647,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[18]),
         .O(sts_received_i_reg_0[10]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[11]_i_1 
@@ -660,7 +655,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[19]),
         .O(sts_received_i_reg_0[11]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[12]_i_1 
@@ -668,7 +663,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[20]),
         .O(sts_received_i_reg_0[12]));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[13]_i_1 
@@ -676,7 +671,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[21]),
         .O(sts_received_i_reg_0[13]));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[14]_i_1 
@@ -684,7 +679,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[22]),
         .O(sts_received_i_reg_0[14]));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[15]_i_1 
@@ -692,7 +687,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[23]),
         .O(sts_received_i_reg_0[15]));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[16]_i_1 
@@ -700,7 +695,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[24]),
         .O(sts_received_i_reg_0[16]));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[17]_i_1 
@@ -708,7 +703,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[25]),
         .O(sts_received_i_reg_0[17]));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[18]_i_1 
@@ -716,7 +711,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[26]),
         .O(sts_received_i_reg_0[18]));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[19]_i_1 
@@ -724,7 +719,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[27]),
         .O(sts_received_i_reg_0[19]));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[1]_i_1 
@@ -732,7 +727,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[9]),
         .O(sts_received_i_reg_0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[20]_i_1 
@@ -740,7 +735,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[28]),
         .O(sts_received_i_reg_0[20]));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[21]_i_1 
@@ -748,7 +743,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[29]),
         .O(sts_received_i_reg_0[21]));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[22]_i_1 
@@ -756,7 +751,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[30]),
         .O(sts_received_i_reg_0[22]));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[23]_i_1 
@@ -764,7 +759,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[31]),
         .O(sts_received_i_reg_0[23]));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[24]_i_1 
@@ -772,7 +767,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[32]),
         .O(sts_received_i_reg_0[24]));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[2]_i_1 
@@ -780,7 +775,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[10]),
         .O(sts_received_i_reg_0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[3]_i_1 
@@ -788,7 +783,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[11]),
         .O(sts_received_i_reg_0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[4]_i_1 
@@ -796,7 +791,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[12]),
         .O(sts_received_i_reg_0[4]));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[5]_i_1 
@@ -804,7 +799,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[13]),
         .O(sts_received_i_reg_0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[6]_i_1 
@@ -812,7 +807,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[14]),
         .O(sts_received_i_reg_0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[7]_i_1 
@@ -820,7 +815,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[15]),
         .O(sts_received_i_reg_0[7]));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[8]_i_1 
@@ -828,7 +823,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[16]),
         .O(sts_received_i_reg_0[8]));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_brcvd[9]_i_1 
@@ -836,7 +831,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[17]),
         .O(sts_received_i_reg_0[9]));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_decerr_i_i_1 
@@ -844,7 +839,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[5]),
         .O(s2mm_decerr_i));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_done_i_1 
@@ -852,7 +847,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[7]),
         .O(sts_received_i_reg));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_interr_i_i_1 
@@ -860,7 +855,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I1(data_valid),
         .I2(m_axis_s2mm_sts_tdata_int[4]),
         .O(s2mm_interr_i));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \INDETERMINATE_BTT_MODE.s2mm_slverr_i_i_1 
@@ -938,7 +933,7 @@ module Zed_SPI_axi_dma_0_async_fifo_fg__parameterized0
         .I2(sig_inhibit_rdy_n),
         .I3(wr_rst_busy),
         .O(sig_async_wr_fifo));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \xpm_fifo_instance.xpm_fifo_async_inst_i_2__0 
@@ -1004,7 +999,7 @@ module Zed_SPI_axi_dma_0_axi_datamover
   output [24:0]sts_received_i_reg_0;
   output sig_inhibit_rdy_n_reg;
   output [31:0]m_axi_s2mm_awaddr;
-  output [4:0]m_axi_s2mm_awlen;
+  output [7:0]m_axi_s2mm_awlen;
   output [31:0]m_axi_s2mm_wdata;
   output [3:0]m_axi_s2mm_wstrb;
   output prmry_in;
@@ -1035,7 +1030,7 @@ module Zed_SPI_axi_dma_0_axi_datamover
   wire m_axi_s2mm_aclk;
   wire [31:0]m_axi_s2mm_awaddr;
   wire [0:0]m_axi_s2mm_awburst;
-  wire [4:0]m_axi_s2mm_awlen;
+  wire [7:0]m_axi_s2mm_awlen;
   wire m_axi_s2mm_awready;
   wire [0:0]m_axi_s2mm_awsize;
   wire m_axi_s2mm_awvalid;
@@ -1144,21 +1139,21 @@ module Zed_SPI_axi_dma_0_axi_datamover_addr_cntl
   output sig_wr_fifo;
   output sig_inhibit_rdy_n;
   output [31:0]m_axi_s2mm_awaddr;
-  output [4:0]m_axi_s2mm_awlen;
+  output [7:0]m_axi_s2mm_awlen;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input sig_next_addr_reg0;
   input sig_init_done_reg;
   input sig_halt_reg;
   input sig_mstr2addr_cmd_valid;
-  input [38:0]in;
+  input [41:0]in;
 
   wire FIFO_Full_reg;
-  wire [38:0]in;
+  wire [41:0]in;
   wire m_axi_s2mm_aclk;
   wire [31:0]m_axi_s2mm_awaddr;
   wire [0:0]m_axi_s2mm_awburst;
-  wire [4:0]m_axi_s2mm_awlen;
+  wire [7:0]m_axi_s2mm_awlen;
   wire [0:0]m_axi_s2mm_awsize;
   wire m_axi_s2mm_awvalid;
   wire p_0_in;
@@ -1184,7 +1179,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_addr_cntl
         .FIFO_Full_reg_0(sig_addr_reg_empty),
         .in(in),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
-        .out({sig_aq_fifo_data_out[50],sig_aq_fifo_data_out[47],sig_aq_fifo_data_out[45],sig_aq_fifo_data_out[40:4]}),
+        .out({sig_aq_fifo_data_out[50],sig_aq_fifo_data_out[47],sig_aq_fifo_data_out[45],sig_aq_fifo_data_out[43:4]}),
         .p_0_in(p_0_in),
         .sel(sig_wr_fifo),
         .sig_halt_reg(sig_halt_reg),
@@ -1529,6 +1524,30 @@ module Zed_SPI_axi_dma_0_axi_datamover_addr_cntl
         .CE(sig_push_addr_reg1_out),
         .D(sig_aq_fifo_data_out[40]),
         .Q(m_axi_s2mm_awlen[4]),
+        .R(sig_next_addr_reg0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_next_len_reg_reg[5] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_push_addr_reg1_out),
+        .D(sig_aq_fifo_data_out[41]),
+        .Q(m_axi_s2mm_awlen[5]),
+        .R(sig_next_addr_reg0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_next_len_reg_reg[6] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_push_addr_reg1_out),
+        .D(sig_aq_fifo_data_out[42]),
+        .Q(m_axi_s2mm_awlen[6]),
+        .R(sig_next_addr_reg0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_next_len_reg_reg[7] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_push_addr_reg1_out),
+        .D(sig_aq_fifo_data_out[43]),
+        .Q(m_axi_s2mm_awlen[7]),
         .R(sig_next_addr_reg0));
   FDRE #(
     .INIT(1'b0)) 
@@ -2069,7 +2088,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized1
     sig_coelsc_slverr_reg0,
     sig_init_reg_reg_1,
     sig_init_reg_reg_2,
-    sig_init_reg_reg_3,
     sig_stream_rst,
     m_axi_s2mm_aclk,
     sig_init_reg2,
@@ -2085,7 +2103,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized1
     \GEN_ENABLE_INDET_BTT.sig_coelsc_okay_reg_reg ,
     out,
     sig_psm_pop_input_cmd,
-    \sig_realigner_btt2_reg[24] ,
     sig_csm_pop_child_cmd,
     m_axi_s2mm_bresp);
   output sig_init_reg_reg_0;
@@ -2099,7 +2116,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized1
   output sig_coelsc_slverr_reg0;
   output [0:0]sig_init_reg_reg_1;
   output [0:0]sig_init_reg_reg_2;
-  output [0:0]sig_init_reg_reg_3;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input sig_init_reg2;
@@ -2115,7 +2131,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized1
   input [2:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_okay_reg_reg ;
   input [0:0]out;
   input sig_psm_pop_input_cmd;
-  input \sig_realigner_btt2_reg[24] ;
   input sig_csm_pop_child_cmd;
   input [1:0]m_axi_s2mm_bresp;
 
@@ -2149,9 +2164,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized1
   wire sig_init_reg_reg_0;
   wire [0:0]sig_init_reg_reg_1;
   wire [0:0]sig_init_reg_reg_2;
-  wire [0:0]sig_init_reg_reg_3;
   wire sig_psm_pop_input_cmd;
-  wire \sig_realigner_btt2_reg[24] ;
   wire sig_stream_rst;
 
   Zed_SPI_axi_dma_0_srl_fifo_f \USE_SRL_FIFO.I_SYNC_FIFO 
@@ -2176,13 +2189,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized1
         .sig_coelsc_slverr_reg0(sig_coelsc_slverr_reg0),
         .sig_inhibit_rdy_n(sig_inhibit_rdy_n),
         .sig_stream_rst(sig_stream_rst));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT2 #(
     .INIT(4'hE)) 
     sig_child_error_reg_i_1
        (.I0(sig_init_reg_reg_0),
         .I1(sig_csm_pop_child_cmd),
-        .O(sig_init_reg_reg_3));
+        .O(sig_init_reg_reg_2));
   LUT2 #(
     .INIT(4'hE)) 
     sig_inhibit_rdy_n_i_1
@@ -2197,7 +2210,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized1
         .D(sig_inhibit_rdy_n_i_1_n_0),
         .Q(sig_inhibit_rdy_n),
         .R(sig_stream_rst));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT3 #(
     .INIT(8'h08)) 
     sig_init_done_i_1__3
@@ -2205,7 +2218,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized1
         .I1(sig_init_reg_reg_0),
         .I2(sig_init_done),
         .O(sig_init_reg2_reg));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT3 #(
     .INIT(8'h08)) 
     sig_init_done_i_1__6
@@ -2229,19 +2242,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized1
         .D(sig_stream_rst),
         .Q(sig_init_reg_reg_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \sig_input_addr_reg[31]_i_1 
        (.I0(sig_init_reg_reg_0),
         .I1(sig_psm_pop_input_cmd),
         .O(sig_init_reg_reg_1));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \sig_realigner_btt2[24]_i_1 
-       (.I0(sig_init_reg_reg_0),
-        .I1(\sig_realigner_btt2_reg[24] ),
-        .O(sig_init_reg_reg_2));
 endmodule
 
 (* ORIG_REF_NAME = "axi_datamover_fifo" *) 
@@ -2249,9 +2256,9 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized2
    (sig_init_done,
     p_0_in,
     out,
-    D,
     sel,
     \INFERRED_GEN.cnt_i_reg[3] ,
+    D,
     \INFERRED_GEN.cnt_i_reg[3]_0 ,
     E,
     \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ,
@@ -2262,17 +2269,17 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized2
     sig_init_done_reg_0,
     Q,
     sig_coelsc_reg_empty,
-    \GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ,
+    \sig_wdc_statcnt_reg[3] ,
     sig_data2wsc_valid,
     \GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ,
     in);
   output sig_init_done;
   output p_0_in;
   output [31:0]out;
-  output [2:0]D;
   output sel;
-  output \INFERRED_GEN.cnt_i_reg[3] ;
-  output [0:0]\INFERRED_GEN.cnt_i_reg[3]_0 ;
+  output [0:0]\INFERRED_GEN.cnt_i_reg[3] ;
+  output [2:0]D;
+  output \INFERRED_GEN.cnt_i_reg[3]_0 ;
   output [0:0]E;
   output [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ;
   output \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ;
@@ -2280,22 +2287,21 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized2
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input sig_init_done_reg_0;
-  input [3:0]Q;
+  input [0:0]Q;
   input sig_coelsc_reg_empty;
-  input [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ;
+  input [3:0]\sig_wdc_statcnt_reg[3] ;
   input sig_data2wsc_valid;
   input [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ;
   input [0:31]in;
 
   wire [2:0]D;
   wire [0:0]E;
-  wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ;
   wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ;
   wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ;
   wire \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ;
-  wire \INFERRED_GEN.cnt_i_reg[3] ;
-  wire [0:0]\INFERRED_GEN.cnt_i_reg[3]_0 ;
-  wire [3:0]Q;
+  wire [0:0]\INFERRED_GEN.cnt_i_reg[3] ;
+  wire \INFERRED_GEN.cnt_i_reg[3]_0 ;
+  wire [0:0]Q;
   wire [0:31]in;
   wire m_axi_s2mm_aclk;
   wire [31:0]out;
@@ -2309,11 +2315,11 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized2
   wire sig_init_done;
   wire sig_init_done_reg_0;
   wire sig_stream_rst;
+  wire [3:0]\sig_wdc_statcnt_reg[3] ;
 
   Zed_SPI_axi_dma_0_srl_fifo_f__parameterized0 \USE_SRL_FIFO.I_SYNC_FIFO 
        (.D(D),
         .E(E),
-        .\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg (\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg (\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg (\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 (\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ),
@@ -2329,7 +2335,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized2
         .sig_data2wsc_valid(sig_data2wsc_valid),
         .sig_inhibit_rdy_n(sig_inhibit_rdy_n),
         .sig_push_to_wsc_reg(sel),
-        .sig_stream_rst(sig_stream_rst));
+        .sig_stream_rst(sig_stream_rst),
+        .\sig_wdc_statcnt_reg[3] (\sig_wdc_statcnt_reg[3] ));
   LUT2 #(
     .INIT(4'hE)) 
     sig_inhibit_rdy_n_i_1
@@ -2377,8 +2384,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized3
     sig_sm_ld_dre_cmd,
     \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ,
     lsig_pullreg_empty,
-    lsig_first_dbeat,
     \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ,
+    \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ,
     sig_sm_pop_cmd_fifo,
     sig_mstr2dre_cmd_valid,
     \FSM_sequential_sig_cmdcntl_sm_state_reg[2] ,
@@ -2407,8 +2414,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized3
   input sig_sm_ld_dre_cmd;
   input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ;
   input lsig_pullreg_empty;
-  input lsig_first_dbeat;
   input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ;
+  input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ;
   input sig_sm_pop_cmd_fifo;
   input sig_mstr2dre_cmd_valid;
   input [2:0]\FSM_sequential_sig_cmdcntl_sm_state_reg[2] ;
@@ -2424,9 +2431,9 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized3
   wire [2:0]\FSM_sequential_sig_cmdcntl_sm_state_reg[2] ;
   wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ;
   wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ;
+  wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ;
   wire [0:0]Q;
   wire [29:0]in;
-  wire lsig_first_dbeat;
   wire lsig_pullreg_empty;
   wire m_axi_s2mm_aclk;
   wire [27:0]out;
@@ -2459,10 +2466,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized3
         .\FSM_sequential_sig_cmdcntl_sm_state_reg[2] (\FSM_sequential_sig_cmdcntl_sm_state_reg[2] ),
         .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ),
         .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ),
+        .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ),
         .\INFERRED_GEN.cnt_i_reg[0] (sig_inhibit_rdy_n_reg_0),
         .Q(Q),
         .in(in),
-        .lsig_first_dbeat(lsig_first_dbeat),
         .lsig_pullreg_empty(lsig_pullreg_empty),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(out),
@@ -2488,7 +2495,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized3
         .D(sig_inhibit_rdy_n_i_1_n_0),
         .Q(sig_inhibit_rdy_n_reg_0),
         .R(sig_stream_rst));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT3 #(
     .INIT(8'h08)) 
     sig_init_done_i_1__1
@@ -2496,7 +2503,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized3
         .I1(sig_init_reg),
         .I2(sig_init_done_2),
         .O(sig_init_done_i_1__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT3 #(
     .INIT(8'h08)) 
     sig_init_done_i_1__2
@@ -2504,7 +2511,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized3
         .I1(sig_init_reg),
         .I2(sig_init_done),
         .O(sig_init_reg2_reg_1));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT3 #(
     .INIT(8'h08)) 
     sig_init_done_i_1__4
@@ -2512,7 +2519,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized3
         .I1(sig_init_reg),
         .I2(sig_init_done_0),
         .O(sig_init_reg2_reg_2));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT3 #(
     .INIT(8'h08)) 
     sig_init_done_i_1__5
@@ -2541,24 +2548,18 @@ endmodule
 (* ORIG_REF_NAME = "axi_datamover_fifo" *) 
 module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized4
    (FIFO_Full_reg,
-    sig_flush_db1_reg,
-    \INFERRED_GEN.cnt_i_reg[4] ,
     sig_cmd_full_reg,
     lsig_set_absorb2tlast,
     sig_cmd_empty_reg,
     sig_inhibit_rdy_n,
-    sig_flush_db1_reg_0,
+    sig_flush_db1_reg,
     out,
     SR,
     Q,
+    \sig_mssa_index_reg_out_reg[0] ,
     D,
     sig_eop_sent_reg0,
     m_axi_s2mm_aclk,
-    \INFERRED_GEN.cnt_i_reg[4]_0 ,
-    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ,
-    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ,
-    sig_flush_db1_reg_1,
-    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ,
     sig_cmd_full,
     sig_sm_ld_dre_cmd,
     sig_cmd_empty_reg_0,
@@ -2566,32 +2567,30 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized4
     sig_scatter2drc_cmd_ready,
     slice_insert_valid,
     sig_eop_sent_reg,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ,
     sig_mssa_index,
     sig_strm_tstrb,
+    FIFO_Full_reg_0,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ,
     sig_eop_halt_xfer,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ,
     sig_cmd_empty_reg_2,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 );
   output FIFO_Full_reg;
-  output sig_flush_db1_reg;
-  output [0:0]\INFERRED_GEN.cnt_i_reg[4] ;
   output sig_cmd_full_reg;
   output lsig_set_absorb2tlast;
   output sig_cmd_empty_reg;
   output sig_inhibit_rdy_n;
-  output [0:0]sig_flush_db1_reg_0;
+  output [0:0]sig_flush_db1_reg;
   output [4:0]out;
   output [0:0]SR;
   output [0:0]Q;
+  output [0:0]\sig_mssa_index_reg_out_reg[0] ;
   output [0:0]D;
   input sig_eop_sent_reg0;
   input m_axi_s2mm_aclk;
-  input \INFERRED_GEN.cnt_i_reg[4]_0 ;
-  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
-  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
-  input sig_flush_db1_reg_1;
-  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ;
   input sig_cmd_full;
   input sig_sm_ld_dre_cmd;
   input sig_cmd_empty_reg_0;
@@ -2599,8 +2598,12 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized4
   input sig_scatter2drc_cmd_ready;
   input slice_insert_valid;
   input sig_eop_sent_reg;
+  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
+  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
+  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ;
   input sig_mssa_index;
   input [0:0]sig_strm_tstrb;
+  input FIFO_Full_reg_0;
   input \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ;
   input sig_eop_halt_xfer;
   input \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ;
@@ -2609,14 +2612,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized4
 
   wire [0:0]D;
   wire FIFO_Full_reg;
+  wire FIFO_Full_reg_0;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ;
   wire \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ;
   wire \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ;
   wire [5:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ;
-  wire [0:0]\INFERRED_GEN.cnt_i_reg[4] ;
-  wire \INFERRED_GEN.cnt_i_reg[4]_0 ;
   wire [0:0]Q;
   wire [0:0]SR;
   wire lsig_set_absorb2tlast;
@@ -2631,9 +2633,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized4
   wire sig_eop_halt_xfer;
   wire sig_eop_sent_reg;
   wire sig_eop_sent_reg0;
-  wire sig_flush_db1_reg;
-  wire [0:0]sig_flush_db1_reg_0;
-  wire sig_flush_db1_reg_1;
+  wire [0:0]sig_flush_db1_reg;
   wire sig_inhibit_rdy_n;
   wire sig_inhibit_rdy_n_i_1_n_0;
   wire sig_init_done;
@@ -2641,6 +2641,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized4
   wire sig_init_reg;
   wire sig_init_reg2;
   wire sig_mssa_index;
+  wire [0:0]\sig_mssa_index_reg_out_reg[0] ;
   wire sig_scatter2drc_cmd_ready;
   wire sig_sm_ld_dre_cmd;
   wire [0:0]sig_strm_tstrb;
@@ -2649,6 +2650,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized4
   Zed_SPI_axi_dma_0_srl_fifo_f__parameterized2 \USE_SRL_FIFO.I_SYNC_FIFO 
        (.D(D),
         .FIFO_Full_reg(FIFO_Full_reg),
+        .FIFO_Full_reg_0(FIFO_Full_reg_0),
         .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
         .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ),
         .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ),
@@ -2656,8 +2658,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized4
         .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ),
         .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
         .\INFERRED_GEN.cnt_i_reg[0] (sig_inhibit_rdy_n),
-        .\INFERRED_GEN.cnt_i_reg[4] (\INFERRED_GEN.cnt_i_reg[4] ),
-        .\INFERRED_GEN.cnt_i_reg[4]_0 (\INFERRED_GEN.cnt_i_reg[4]_0 ),
         .Q(Q),
         .SR(SR),
         .lsig_set_absorb2tlast(lsig_set_absorb2tlast),
@@ -2672,9 +2672,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized4
         .sig_eop_halt_xfer(sig_eop_halt_xfer),
         .sig_eop_sent_reg0(sig_eop_sent_reg0),
         .sig_flush_db1_reg(sig_flush_db1_reg),
-        .sig_flush_db1_reg_0(sig_flush_db1_reg_0),
-        .sig_flush_db1_reg_1(sig_flush_db1_reg_1),
         .sig_mssa_index(sig_mssa_index),
+        .\sig_mssa_index_reg_out_reg[0] (\sig_mssa_index_reg_out_reg[0] ),
         .sig_scatter2drc_cmd_ready(sig_scatter2drc_cmd_ready),
         .sig_sm_ld_dre_cmd(sig_sm_ld_dre_cmd),
         .sig_strm_tstrb(sig_strm_tstrb),
@@ -2697,7 +2696,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized4
     .INIT(32'h00004000)) 
     sig_init_done_i_1
        (.I0(sig_eop_sent_reg),
-        .I1(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ),
+        .I1(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
         .I2(sig_init_reg2),
         .I3(sig_init_reg),
         .I4(sig_init_done),
@@ -2740,30 +2739,30 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized5
     sig_stream_rst,
     m_axi_s2mm_aclk,
     sig_init_done_reg_0,
-    FIFO_Full_reg_0,
     sig_halt_reg,
+    FIFO_Full_reg_0,
     sig_mstr2addr_cmd_valid,
     in);
   output FIFO_Full_reg;
   output sig_init_done;
   output p_0_in;
-  output [39:0]out;
+  output [42:0]out;
   output sel;
   output sig_push_addr_reg1_out;
   output sig_inhibit_rdy_n_reg_0;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input sig_init_done_reg_0;
-  input FIFO_Full_reg_0;
   input sig_halt_reg;
+  input FIFO_Full_reg_0;
   input sig_mstr2addr_cmd_valid;
-  input [38:0]in;
+  input [41:0]in;
 
   wire FIFO_Full_reg;
   wire FIFO_Full_reg_0;
-  wire [38:0]in;
+  wire [41:0]in;
   wire m_axi_s2mm_aclk;
-  wire [39:0]out;
+  wire [42:0]out;
   wire p_0_in;
   wire sel;
   wire sig_halt_reg;
@@ -2824,7 +2823,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized6
     sig_first_dbeat_reg,
     sig_inhibit_rdy_n_reg_0,
     sig_inhibit_rdy_n_reg_1,
-    \sig_dbeat_cntr_reg[4] ,
+    \sig_dbeat_cntr_reg[7] ,
     sig_halt_reg_dly3_reg,
     sig_wdc_status_going_full_reg,
     sig_stream_rst,
@@ -2840,7 +2839,9 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized6
     sig_first_dbeat_reg_2,
     sig_mstr2data_cmd_valid,
     Q,
-    \sig_dbeat_cntr_reg[4]_0 ,
+    \sig_dbeat_cntr_reg[6] ,
+    \sig_dbeat_cntr_reg[5] ,
+    \sig_dbeat_cntr_reg[4] ,
     sig_next_calc_error_reg_reg,
     sig_next_sequential_reg,
     sig_dqual_reg_empty,
@@ -2863,7 +2864,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized6
   output sig_first_dbeat_reg;
   output sig_inhibit_rdy_n_reg_0;
   output sig_inhibit_rdy_n_reg_1;
-  output [4:0]\sig_dbeat_cntr_reg[4] ;
+  output [7:0]\sig_dbeat_cntr_reg[7] ;
   output sig_halt_reg_dly3_reg;
   output sig_wdc_status_going_full_reg;
   input sig_stream_rst;
@@ -2878,8 +2879,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized6
   input sig_first_dbeat_reg_1;
   input sig_first_dbeat_reg_2;
   input sig_mstr2data_cmd_valid;
-  input [4:0]Q;
-  input \sig_dbeat_cntr_reg[4]_0 ;
+  input [7:0]Q;
+  input \sig_dbeat_cntr_reg[6] ;
+  input \sig_dbeat_cntr_reg[5] ;
+  input \sig_dbeat_cntr_reg[4] ;
   input sig_next_calc_error_reg_reg;
   input sig_next_sequential_reg;
   input sig_dqual_reg_empty;
@@ -2891,19 +2894,21 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized6
   input sig_halt_reg;
   input sig_last_mmap_dbeat_reg;
   input sig_wdc_status_going_full;
-  input [13:0]sig_next_calc_error_reg_reg_1;
+  input [16:0]sig_next_calc_error_reg_reg_1;
 
   wire [2:0]D;
   wire [0:0]E;
   wire FIFO_Full_reg;
   wire \GEN_INDET_BTT.lsig_byte_cntr[24]_i_4 ;
   wire \GEN_INDET_BTT.lsig_byte_cntr_reg[24] ;
-  wire [4:0]Q;
+  wire [7:0]Q;
   wire m_axi_s2mm_aclk;
   wire [6:0]out;
   wire [2:0]sig_addr_posted_cntr;
-  wire [4:0]\sig_dbeat_cntr_reg[4] ;
-  wire \sig_dbeat_cntr_reg[4]_0 ;
+  wire \sig_dbeat_cntr_reg[4] ;
+  wire \sig_dbeat_cntr_reg[5] ;
+  wire \sig_dbeat_cntr_reg[6] ;
+  wire [7:0]\sig_dbeat_cntr_reg[7] ;
   wire sig_dqual_reg_empty;
   wire sig_dqual_reg_full;
   wire sig_first_dbeat_reg;
@@ -2926,7 +2931,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized6
   wire sig_next_calc_error_reg;
   wire sig_next_calc_error_reg_reg;
   wire sig_next_calc_error_reg_reg_0;
-  wire [13:0]sig_next_calc_error_reg_reg_1;
+  wire [16:0]sig_next_calc_error_reg_reg_1;
   wire sig_next_sequential_reg;
   wire sig_single_dbeat_reg;
   wire sig_single_dbeat_reg_0;
@@ -2945,7 +2950,9 @@ module Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized6
         .out(out),
         .sig_addr_posted_cntr(sig_addr_posted_cntr),
         .\sig_dbeat_cntr_reg[4] (\sig_dbeat_cntr_reg[4] ),
-        .\sig_dbeat_cntr_reg[4]_0 (\sig_dbeat_cntr_reg[4]_0 ),
+        .\sig_dbeat_cntr_reg[5] (\sig_dbeat_cntr_reg[5] ),
+        .\sig_dbeat_cntr_reg[6] (\sig_dbeat_cntr_reg[6] ),
+        .\sig_dbeat_cntr_reg[7] (\sig_dbeat_cntr_reg[7] ),
         .sig_dqual_reg_empty(sig_dqual_reg_empty),
         .sig_dqual_reg_full(sig_dqual_reg_full),
         .sig_first_dbeat_reg(sig_first_dbeat_reg),
@@ -3010,10 +3017,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     sig_child_qual_first_of_2,
     \sig_child_addr_cntr_lsh_reg[1]_0 ,
     rd_en,
-    sig_first_realigner_cmd_reg_0,
-    \sig_child_addr_reg_reg[7]_0 ,
+    \sig_child_addr_reg_reg[11]_0 ,
     sig_csm_pop_sf_fifo_reg_0,
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][3] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ,
     sig_init_reg,
     m_axi_s2mm_aclk,
     SR,
@@ -3022,12 +3029,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     sig_xfer_is_seq_reg_reg_0,
     O,
     \sig_child_addr_cntr_lsh_reg[7]_0 ,
-    data_valid,
+    \sig_child_addr_cntr_lsh_reg[11]_0 ,
     \FSM_onehot_sig_csm_state_reg[1]_0 ,
+    \sig_xfer_len_reg_reg[3]_0 ,
+    data_valid,
     \FSM_onehot_sig_csm_state_reg[4]_0 ,
     empty,
     \FSM_onehot_sig_csm_state_reg[1]_1 ,
-    \sig_xfer_len_reg_reg[0]_0 ,
+    sig_xfer_is_seq_reg_reg_1,
     sig_wr_fifo,
     sig_inhibit_rdy_n,
     sig_cmd2data_valid_reg_0,
@@ -3035,14 +3044,12 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     sig_cmd2addr_valid_reg_0,
     sig_inhibit_rdy_n_1,
     \sig_realign_strt_offset_reg_reg[0]_1 ,
-    \sig_child_addr_cntr_lsh_reg[11]_0 ,
-    \sig_realigner_btt2_reg[24]_0 ,
-    D);
+    \sig_child_addr_cntr_lsh_reg[15]_0 );
   output sig_pcc2sf_xfer_ready;
   output sig_psm_pop_input_cmd;
   output sig_csm_pop_child_cmd;
   output sig_mstr2dre_cmd_valid;
-  output [38:0]in;
+  output [41:0]in;
   output [5:0]sig_xfer_cmd_cmplt_reg_reg_0;
   output [29:0]\sig_realign_strt_offset_reg_reg[0]_0 ;
   output sig_mstr2data_cmd_valid;
@@ -3050,10 +3057,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   output sig_child_qual_first_of_2;
   output [1:0]\sig_child_addr_cntr_lsh_reg[1]_0 ;
   output rd_en;
-  output sig_first_realigner_cmd_reg_0;
-  output [3:0]\sig_child_addr_reg_reg[7]_0 ;
+  output [3:0]\sig_child_addr_reg_reg[11]_0 ;
   output sig_csm_pop_sf_fifo_reg_0;
   output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][3] ;
+  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
   input sig_init_reg;
   input m_axi_s2mm_aclk;
   input [0:0]SR;
@@ -3062,12 +3069,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   input sig_xfer_is_seq_reg_reg_0;
   input [3:0]O;
   input [3:0]\sig_child_addr_cntr_lsh_reg[7]_0 ;
+  input [3:0]\sig_child_addr_cntr_lsh_reg[11]_0 ;
+  input [12:0]\FSM_onehot_sig_csm_state_reg[1]_0 ;
+  input [1:0]\sig_xfer_len_reg_reg[3]_0 ;
   input data_valid;
-  input [8:0]\FSM_onehot_sig_csm_state_reg[1]_0 ;
   input \FSM_onehot_sig_csm_state_reg[4]_0 ;
   input empty;
   input \FSM_onehot_sig_csm_state_reg[1]_1 ;
-  input \sig_xfer_len_reg_reg[0]_0 ;
+  input sig_xfer_is_seq_reg_reg_1;
   input sig_wr_fifo;
   input sig_inhibit_rdy_n;
   input sig_cmd2data_valid_reg_0;
@@ -3075,16 +3084,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   input sig_cmd2addr_valid_reg_0;
   input sig_inhibit_rdy_n_1;
   input \sig_realign_strt_offset_reg_reg[0]_1 ;
-  input [0:0]\sig_child_addr_cntr_lsh_reg[11]_0 ;
-  input [0:0]\sig_realigner_btt2_reg[24]_0 ;
-  input [4:0]D;
+  input [0:0]\sig_child_addr_cntr_lsh_reg[15]_0 ;
 
-  wire [4:0]D;
   wire \FSM_onehot_sig_csm_state[1]_i_1_n_0 ;
   wire \FSM_onehot_sig_csm_state[2]_i_1_n_0 ;
   wire \FSM_onehot_sig_csm_state[4]_i_1_n_0 ;
   wire \FSM_onehot_sig_csm_state[5]_i_1_n_0 ;
-  wire [8:0]\FSM_onehot_sig_csm_state_reg[1]_0 ;
+  wire [12:0]\FSM_onehot_sig_csm_state_reg[1]_0 ;
   wire \FSM_onehot_sig_csm_state_reg[1]_1 ;
   wire \FSM_onehot_sig_csm_state_reg[4]_0 ;
   wire \FSM_onehot_sig_csm_state_reg_n_0_[0] ;
@@ -3101,10 +3107,12 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   wire [62:0]dout;
   wire empty;
   wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][3] ;
-  wire [38:0]in;
+  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
+  wire [41:0]in;
   wire m_axi_s2mm_aclk;
   wire p_1_in7_in;
   wire rd_en;
+  wire [9:0]sig_adjusted_addr_incr;
   wire \sig_btt_cntr[11]_i_2_n_0 ;
   wire \sig_btt_cntr[11]_i_3_n_0 ;
   wire \sig_btt_cntr[11]_i_4_n_0 ;
@@ -3205,9 +3213,25 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   wire \sig_btt_cntr_reg[7]_i_1_n_5 ;
   wire \sig_btt_cntr_reg[7]_i_1_n_6 ;
   wire \sig_btt_cntr_reg[7]_i_1_n_7 ;
+  wire sig_btt_eq_b2mbaa2;
+  wire sig_btt_eq_b2mbaa2_carry_i_1_n_0;
+  wire sig_btt_eq_b2mbaa2_carry_i_2_n_0;
+  wire sig_btt_eq_b2mbaa2_carry_i_3_n_0;
+  wire sig_btt_eq_b2mbaa2_carry_i_4_n_0;
+  wire sig_btt_eq_b2mbaa2_carry_i_5_n_0;
+  wire sig_btt_eq_b2mbaa2_carry_i_6_n_0;
+  wire sig_btt_eq_b2mbaa2_carry_i_7_n_0;
+  wire sig_btt_eq_b2mbaa2_carry_n_1;
+  wire sig_btt_eq_b2mbaa2_carry_n_2;
+  wire sig_btt_eq_b2mbaa2_carry_n_3;
   wire sig_btt_is_zero;
   wire sig_btt_lt_b2mbaa2;
-  wire sig_btt_lt_b2mbaa2_carry_i_10_n_0;
+  wire sig_btt_lt_b2mbaa2_carry__0_i_1_n_0;
+  wire sig_btt_lt_b2mbaa2_carry__0_i_2_n_0;
+  wire sig_btt_lt_b2mbaa2_carry__0_i_3_n_0;
+  wire sig_btt_lt_b2mbaa2_carry__0_i_4_n_0;
+  wire sig_btt_lt_b2mbaa2_carry__0_i_5_n_0;
+  wire sig_btt_lt_b2mbaa2_carry__0_n_3;
   wire sig_btt_lt_b2mbaa2_carry_i_1_n_0;
   wire sig_btt_lt_b2mbaa2_carry_i_2_n_0;
   wire sig_btt_lt_b2mbaa2_carry_i_3_n_0;
@@ -3216,12 +3240,23 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   wire sig_btt_lt_b2mbaa2_carry_i_6_n_0;
   wire sig_btt_lt_b2mbaa2_carry_i_7_n_0;
   wire sig_btt_lt_b2mbaa2_carry_i_8_n_0;
+  wire sig_btt_lt_b2mbaa2_carry_i_9_n_0;
+  wire sig_btt_lt_b2mbaa2_carry_n_0;
   wire sig_btt_lt_b2mbaa2_carry_n_1;
   wire sig_btt_lt_b2mbaa2_carry_n_2;
   wire sig_btt_lt_b2mbaa2_carry_n_3;
-  wire [6:0]sig_btt_residue_slice;
-  wire [17:0]sig_btt_upper_slice;
-  wire [6:6]sig_bytes_to_mbaa;
+  wire [10:0]sig_btt_residue_slice;
+  wire [13:0]sig_btt_upper_slice;
+  wire sig_byte_change_minus1_carry__0_n_0;
+  wire sig_byte_change_minus1_carry__0_n_1;
+  wire sig_byte_change_minus1_carry__0_n_2;
+  wire sig_byte_change_minus1_carry__0_n_3;
+  wire sig_byte_change_minus1_carry__1_n_3;
+  wire sig_byte_change_minus1_carry_n_0;
+  wire sig_byte_change_minus1_carry_n_1;
+  wire sig_byte_change_minus1_carry_n_2;
+  wire sig_byte_change_minus1_carry_n_3;
+  wire [10:10]sig_bytes_to_mbaa;
   wire sig_calc2dm_calc_err;
   wire sig_calc_error_reg_i_1_n_0;
   wire sig_calc_error_reg_i_3_n_0;
@@ -3233,12 +3268,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   wire \sig_child_addr_cntr_lsh[12]_i_3_n_0 ;
   wire \sig_child_addr_cntr_lsh[12]_i_4_n_0 ;
   wire \sig_child_addr_cntr_lsh[12]_i_5_n_0 ;
-  wire \sig_child_addr_cntr_lsh[8]_i_2_n_0 ;
-  wire \sig_child_addr_cntr_lsh[8]_i_3_n_0 ;
-  wire \sig_child_addr_cntr_lsh[8]_i_4_n_0 ;
-  wire \sig_child_addr_cntr_lsh[8]_i_5_n_0 ;
   wire [14:2]sig_child_addr_cntr_lsh_reg;
-  wire [0:0]\sig_child_addr_cntr_lsh_reg[11]_0 ;
+  wire [3:0]\sig_child_addr_cntr_lsh_reg[11]_0 ;
   wire \sig_child_addr_cntr_lsh_reg[12]_i_1_n_1 ;
   wire \sig_child_addr_cntr_lsh_reg[12]_i_1_n_2 ;
   wire \sig_child_addr_cntr_lsh_reg[12]_i_1_n_3 ;
@@ -3246,16 +3277,9 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   wire \sig_child_addr_cntr_lsh_reg[12]_i_1_n_5 ;
   wire \sig_child_addr_cntr_lsh_reg[12]_i_1_n_6 ;
   wire \sig_child_addr_cntr_lsh_reg[12]_i_1_n_7 ;
+  wire [0:0]\sig_child_addr_cntr_lsh_reg[15]_0 ;
   wire [1:0]\sig_child_addr_cntr_lsh_reg[1]_0 ;
   wire [3:0]\sig_child_addr_cntr_lsh_reg[7]_0 ;
-  wire \sig_child_addr_cntr_lsh_reg[8]_i_1_n_0 ;
-  wire \sig_child_addr_cntr_lsh_reg[8]_i_1_n_1 ;
-  wire \sig_child_addr_cntr_lsh_reg[8]_i_1_n_2 ;
-  wire \sig_child_addr_cntr_lsh_reg[8]_i_1_n_3 ;
-  wire \sig_child_addr_cntr_lsh_reg[8]_i_1_n_4 ;
-  wire \sig_child_addr_cntr_lsh_reg[8]_i_1_n_5 ;
-  wire \sig_child_addr_cntr_lsh_reg[8]_i_1_n_6 ;
-  wire \sig_child_addr_cntr_lsh_reg[8]_i_1_n_7 ;
   wire \sig_child_addr_cntr_msh[0]_i_1_n_0 ;
   wire \sig_child_addr_cntr_msh[0]_i_3_n_0 ;
   wire \sig_child_addr_cntr_msh[0]_i_4_n_0 ;
@@ -3311,9 +3335,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   wire sig_child_addr_lsh_rollover_reg_i_10_n_0;
   wire sig_child_addr_lsh_rollover_reg_i_11_n_0;
   wire sig_child_addr_lsh_rollover_reg_i_12_n_0;
+  wire sig_child_addr_lsh_rollover_reg_i_13_n_0;
+  wire sig_child_addr_lsh_rollover_reg_i_14_n_0;
+  wire sig_child_addr_lsh_rollover_reg_i_15_n_0;
+  wire sig_child_addr_lsh_rollover_reg_i_16_n_0;
+  wire sig_child_addr_lsh_rollover_reg_i_5_n_0;
   wire sig_child_addr_lsh_rollover_reg_i_6_n_0;
   wire sig_child_addr_lsh_rollover_reg_i_7_n_0;
-  wire sig_child_addr_lsh_rollover_reg_i_8_n_0;
   wire sig_child_addr_lsh_rollover_reg_i_9_n_0;
   wire sig_child_addr_lsh_rollover_reg_reg_i_2_n_1;
   wire sig_child_addr_lsh_rollover_reg_reg_i_2_n_2;
@@ -3326,11 +3354,11 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   wire sig_child_addr_lsh_rollover_reg_reg_i_4_n_1;
   wire sig_child_addr_lsh_rollover_reg_reg_i_4_n_2;
   wire sig_child_addr_lsh_rollover_reg_reg_i_4_n_3;
-  wire sig_child_addr_lsh_rollover_reg_reg_i_5_n_0;
-  wire sig_child_addr_lsh_rollover_reg_reg_i_5_n_1;
-  wire sig_child_addr_lsh_rollover_reg_reg_i_5_n_2;
-  wire sig_child_addr_lsh_rollover_reg_reg_i_5_n_3;
-  wire [3:0]\sig_child_addr_reg_reg[7]_0 ;
+  wire sig_child_addr_lsh_rollover_reg_reg_i_8_n_0;
+  wire sig_child_addr_lsh_rollover_reg_reg_i_8_n_1;
+  wire sig_child_addr_lsh_rollover_reg_reg_i_8_n_2;
+  wire sig_child_addr_lsh_rollover_reg_reg_i_8_n_3;
+  wire [3:0]\sig_child_addr_reg_reg[11]_0 ;
   wire \sig_child_addr_reg_reg_n_0_[0] ;
   wire \sig_child_addr_reg_reg_n_0_[10] ;
   wire \sig_child_addr_reg_reg_n_0_[11] ;
@@ -3369,7 +3397,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   wire sig_dre_dest_align;
   wire sig_first_realigner_cmd;
   wire sig_first_realigner_cmd_i_1_n_0;
-  wire sig_first_realigner_cmd_reg_0;
   wire sig_inhibit_rdy_n;
   wire sig_inhibit_rdy_n_0;
   wire sig_inhibit_rdy_n_1;
@@ -3410,43 +3437,50 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   wire sig_realign_tag_reg0;
   wire [15:0]sig_realigner_btt;
   wire [24:0]sig_realigner_btt2;
+  wire \sig_realigner_btt2[24]_i_1_n_0 ;
+  wire \sig_realigner_btt2[24]_i_4_n_0 ;
+  wire \sig_realigner_btt2[24]_i_5_n_0 ;
+  wire \sig_realigner_btt2[24]_i_6_n_0 ;
+  wire \sig_realigner_btt2[24]_i_7_n_0 ;
   wire \sig_realigner_btt2[4]_i_2_n_0 ;
   wire \sig_realigner_btt2[5]_i_2_n_0 ;
-  wire [0:0]\sig_realigner_btt2_reg[24]_0 ;
+  wire \sig_realigner_btt2[8]_i_2_n_0 ;
+  wire \sig_realigner_btt2[8]_i_3_n_0 ;
+  wire \sig_realigner_btt2[9]_i_2_n_0 ;
+  wire sig_skip_align2mbaa;
   wire sig_skip_align2mbaa_s_h;
-  wire sig_skip_align2mbaa_s_h_i_10_n_0;
   wire sig_skip_align2mbaa_s_h_i_1_n_0;
-  wire sig_skip_align2mbaa_s_h_i_2_n_0;
-  wire sig_skip_align2mbaa_s_h_i_3_n_0;
-  wire sig_skip_align2mbaa_s_h_i_4_n_0;
-  wire sig_skip_align2mbaa_s_h_i_5_n_0;
-  wire sig_skip_align2mbaa_s_h_i_6_n_0;
-  wire sig_skip_align2mbaa_s_h_i_7_n_0;
-  wire sig_skip_align2mbaa_s_h_i_8_n_0;
-  wire sig_skip_align2mbaa_s_h_i_9_n_0;
   wire sig_wr_fifo;
   wire sig_xfer_cache_reg0;
   wire sig_xfer_cmd_cmplt_reg0;
   wire [5:0]sig_xfer_cmd_cmplt_reg_reg_0;
   wire sig_xfer_is_seq_reg_reg_0;
-  wire \sig_xfer_len_reg_reg[0]_0 ;
+  wire sig_xfer_is_seq_reg_reg_1;
+  wire [7:0]sig_xfer_len;
+  wire \sig_xfer_len_reg[7]_i_2_n_0 ;
+  wire [1:0]\sig_xfer_len_reg_reg[3]_0 ;
   wire [3:0]\NLW_sig_btt_cntr_reg[24]_i_2_CO_UNCONNECTED ;
   wire [3:1]\NLW_sig_btt_cntr_reg[24]_i_2_O_UNCONNECTED ;
+  wire [3:0]NLW_sig_btt_eq_b2mbaa2_carry_O_UNCONNECTED;
   wire [3:0]NLW_sig_btt_lt_b2mbaa2_carry_O_UNCONNECTED;
+  wire [3:2]NLW_sig_btt_lt_b2mbaa2_carry__0_CO_UNCONNECTED;
+  wire [3:0]NLW_sig_btt_lt_b2mbaa2_carry__0_O_UNCONNECTED;
+  wire [3:1]NLW_sig_byte_change_minus1_carry__1_CO_UNCONNECTED;
+  wire [3:2]NLW_sig_byte_change_minus1_carry__1_O_UNCONNECTED;
   wire [3:3]\NLW_sig_child_addr_cntr_lsh_reg[12]_i_1_CO_UNCONNECTED ;
   wire [3:3]\NLW_sig_child_addr_cntr_msh_reg[12]_i_1_CO_UNCONNECTED ;
   wire [3:3]NLW_sig_child_addr_lsh_rollover_reg_reg_i_2_CO_UNCONNECTED;
   wire [2:0]NLW_sig_child_addr_lsh_rollover_reg_reg_i_2_O_UNCONNECTED;
   wire [3:0]NLW_sig_child_addr_lsh_rollover_reg_reg_i_3_O_UNCONNECTED;
   wire [3:0]NLW_sig_child_addr_lsh_rollover_reg_reg_i_4_O_UNCONNECTED;
-  wire [3:0]NLW_sig_child_addr_lsh_rollover_reg_reg_i_5_O_UNCONNECTED;
+  wire [3:0]NLW_sig_child_addr_lsh_rollover_reg_reg_i_8_O_UNCONNECTED;
 
   LUT6 #(
     .INIT(64'hFFFFFFFF5151FF51)) 
     \FSM_onehot_sig_csm_state[1]_i_1 
        (.I0(\FSM_onehot_sig_csm_state_reg[1]_1 ),
         .I1(sig_child_qual_first_of_2),
-        .I2(\FSM_onehot_sig_csm_state_reg[1]_0 [8]),
+        .I2(\FSM_onehot_sig_csm_state_reg[1]_0 [12]),
         .I3(\FSM_onehot_sig_csm_state_reg_n_0_[1] ),
         .I4(sig_child_cmd_reg_full),
         .I5(\FSM_onehot_sig_csm_state_reg_n_0_[0] ),
@@ -3462,16 +3496,16 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .I5(sig_child_error_reg),
         .O(\FSM_onehot_sig_csm_state[2]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFF44F444F444F4)) 
+    .INIT(64'hF444F444FFFFF444)) 
     \FSM_onehot_sig_csm_state[4]_i_1 
        (.I0(\FSM_onehot_sig_csm_state_reg[4]_0 ),
         .I1(sig_pcc2sf_xfer_ready),
-        .I2(sig_csm_pop_child_cmd_ns),
-        .I3(sig_child_error_reg),
-        .I4(empty),
-        .I5(\FSM_onehot_sig_csm_state_reg_n_0_[4] ),
+        .I2(empty),
+        .I3(\FSM_onehot_sig_csm_state_reg_n_0_[4] ),
+        .I4(sig_csm_pop_child_cmd_ns),
+        .I5(sig_child_error_reg),
         .O(\FSM_onehot_sig_csm_state[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT5 #(
     .INIT(32'hFFF44444)) 
     \FSM_onehot_sig_csm_state[5]_i_1 
@@ -3527,26 +3561,26 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .Q(\FSM_onehot_sig_csm_state_reg_n_0_[5] ),
         .R(sig_init_reg));
   LUT6 #(
-    .INIT(64'hFFF3FFFF000000AA)) 
+    .INIT(64'h333333033333BBBB)) 
     \FSM_sequential_sig_psm_state[0]_i_1 
        (.I0(sig_realign_reg_empty),
-        .I1(sig_push_input_reg14_out),
-        .I2(sig_psm_state[1]),
-        .I3(sig_psm_state[2]),
-        .I4(sig_psm_state[0]),
-        .I5(\FSM_sequential_sig_psm_state[0]_i_2_n_0 ),
+        .I1(\FSM_sequential_sig_psm_state[0]_i_2_n_0 ),
+        .I2(sig_push_input_reg14_out),
+        .I3(sig_psm_state[1]),
+        .I4(sig_psm_state[2]),
+        .I5(sig_psm_state[0]),
         .O(sig_psm_state_ns[0]));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT5 #(
-    .INIT(32'hF0D0F0FF)) 
+    .INIT(32'h0020EEEE)) 
     \FSM_sequential_sig_psm_state[0]_i_2 
-       (.I0(sig_calc2dm_calc_err),
-        .I1(sig_child_cmd_reg_full),
-        .I2(sig_psm_state[0]),
-        .I3(sig_psm_state[2]),
-        .I4(sig_psm_state[1]),
+       (.I0(sig_psm_state[1]),
+        .I1(sig_psm_state[2]),
+        .I2(sig_calc2dm_calc_err),
+        .I3(sig_child_cmd_reg_full),
+        .I4(sig_psm_state[0]),
         .O(\FSM_sequential_sig_psm_state[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT5 #(
     .INIT(32'h32300230)) 
     \FSM_sequential_sig_psm_state[1]_i_1 
@@ -3557,13 +3591,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .I4(sig_child_cmd_reg_full),
         .O(sig_psm_state_ns[1]));
   LUT6 #(
-    .INIT(64'h55FF55FF03000000)) 
+    .INIT(64'h00FFFFFF10001000)) 
     \FSM_sequential_sig_psm_state[2]_i_1 
-       (.I0(sig_realign_reg_empty),
-        .I1(\FSM_sequential_sig_psm_state[2]_i_2_n_0 ),
-        .I2(sig_child_cmd_reg_full),
+       (.I0(\FSM_sequential_sig_psm_state[2]_i_2_n_0 ),
+        .I1(sig_child_cmd_reg_full),
+        .I2(sig_psm_state[1]),
         .I3(sig_psm_state[0]),
-        .I4(sig_psm_state[1]),
+        .I4(sig_realign_reg_empty),
         .I5(sig_psm_state[2]),
         .O(sig_psm_state_ns[2]));
   LUT4 #(
@@ -3571,7 +3605,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     \FSM_sequential_sig_psm_state[2]_i_2 
        (.I0(sig_calc2dm_calc_err),
         .I1(sig_first_realigner_cmd),
-        .I2(sig_skip_align2mbaa_s_h_i_2_n_0),
+        .I2(sig_skip_align2mbaa),
         .I3(sig_skip_align2mbaa_s_h),
         .O(\FSM_sequential_sig_psm_state[2]_i_2_n_0 ));
   (* FSM_ENCODED_STATES = "p_init:000,p_ld_first_cmd:010,p_ld_child_cmd:011,p_error_trap:100,p_ld_last_cmd:101,p_wait_for_cmd:001" *) 
@@ -3801,7 +3835,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[11]_i_6 
        (.I0(sig_realigner_btt2[11]),
-        .I1(sig_btt_upper_slice[4]),
+        .I1(sig_btt_upper_slice[0]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[11]),
         .O(\sig_btt_cntr[11]_i_6_n_0 ));
@@ -3809,7 +3843,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[11]_i_7 
        (.I0(sig_realigner_btt2[10]),
-        .I1(sig_btt_upper_slice[3]),
+        .I1(sig_btt_residue_slice[10]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[10]),
         .O(\sig_btt_cntr[11]_i_7_n_0 ));
@@ -3817,7 +3851,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[11]_i_8 
        (.I0(sig_realigner_btt2[9]),
-        .I1(sig_btt_upper_slice[2]),
+        .I1(sig_btt_residue_slice[9]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[9]),
         .O(\sig_btt_cntr[11]_i_8_n_0 ));
@@ -3825,7 +3859,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[11]_i_9 
        (.I0(sig_realigner_btt2[8]),
-        .I1(sig_btt_upper_slice[1]),
+        .I1(sig_btt_residue_slice[8]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[8]),
         .O(\sig_btt_cntr[11]_i_9_n_0 ));
@@ -3869,7 +3903,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[15]_i_6 
        (.I0(sig_realigner_btt2[15]),
-        .I1(sig_btt_upper_slice[8]),
+        .I1(sig_btt_upper_slice[4]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[15]),
         .O(\sig_btt_cntr[15]_i_6_n_0 ));
@@ -3877,7 +3911,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[15]_i_7 
        (.I0(sig_realigner_btt2[14]),
-        .I1(sig_btt_upper_slice[7]),
+        .I1(sig_btt_upper_slice[3]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[14]),
         .O(\sig_btt_cntr[15]_i_7_n_0 ));
@@ -3885,7 +3919,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[15]_i_8 
        (.I0(sig_realigner_btt2[13]),
-        .I1(sig_btt_upper_slice[6]),
+        .I1(sig_btt_upper_slice[2]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[13]),
         .O(\sig_btt_cntr[15]_i_8_n_0 ));
@@ -3893,7 +3927,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[15]_i_9 
        (.I0(sig_realigner_btt2[12]),
-        .I1(sig_btt_upper_slice[5]),
+        .I1(sig_btt_upper_slice[1]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[12]),
         .O(\sig_btt_cntr[15]_i_9_n_0 ));
@@ -3937,7 +3971,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[19]_i_6 
        (.I0(sig_realigner_btt2[19]),
-        .I1(sig_btt_upper_slice[12]),
+        .I1(sig_btt_upper_slice[8]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[19]),
         .O(\sig_btt_cntr[19]_i_6_n_0 ));
@@ -3945,7 +3979,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[19]_i_7 
        (.I0(sig_realigner_btt2[18]),
-        .I1(sig_btt_upper_slice[11]),
+        .I1(sig_btt_upper_slice[7]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[18]),
         .O(\sig_btt_cntr[19]_i_7_n_0 ));
@@ -3953,7 +3987,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[19]_i_8 
        (.I0(sig_realigner_btt2[17]),
-        .I1(sig_btt_upper_slice[10]),
+        .I1(sig_btt_upper_slice[6]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[17]),
         .O(\sig_btt_cntr[19]_i_8_n_0 ));
@@ -3961,7 +3995,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[19]_i_9 
        (.I0(sig_realigner_btt2[16]),
-        .I1(sig_btt_upper_slice[9]),
+        .I1(sig_btt_upper_slice[5]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[16]),
         .O(\sig_btt_cntr[19]_i_9_n_0 ));
@@ -4005,7 +4039,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[23]_i_6 
        (.I0(sig_realigner_btt2[23]),
-        .I1(sig_btt_upper_slice[16]),
+        .I1(sig_btt_upper_slice[12]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[23]),
         .O(\sig_btt_cntr[23]_i_6_n_0 ));
@@ -4013,7 +4047,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[23]_i_7 
        (.I0(sig_realigner_btt2[22]),
-        .I1(sig_btt_upper_slice[15]),
+        .I1(sig_btt_upper_slice[11]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[22]),
         .O(\sig_btt_cntr[23]_i_7_n_0 ));
@@ -4021,7 +4055,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[23]_i_8 
        (.I0(sig_realigner_btt2[21]),
-        .I1(sig_btt_upper_slice[14]),
+        .I1(sig_btt_upper_slice[10]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[21]),
         .O(\sig_btt_cntr[23]_i_8_n_0 ));
@@ -4029,7 +4063,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[23]_i_9 
        (.I0(sig_realigner_btt2[20]),
-        .I1(sig_btt_upper_slice[13]),
+        .I1(sig_btt_upper_slice[9]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[20]),
         .O(\sig_btt_cntr[23]_i_9_n_0 ));
@@ -4046,7 +4080,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[24]_i_3 
        (.I0(sig_realigner_btt2[24]),
-        .I1(sig_btt_upper_slice[17]),
+        .I1(sig_btt_upper_slice[13]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[24]),
         .O(\sig_btt_cntr[24]_i_3_n_0 ));
@@ -4166,7 +4200,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(16'hF909)) 
     \sig_btt_cntr[7]_i_6 
        (.I0(sig_realigner_btt2[7]),
-        .I1(sig_btt_upper_slice[0]),
+        .I1(sig_btt_residue_slice[7]),
         .I2(sig_push_input_reg14_out),
         .I3(dout[7]),
         .O(\sig_btt_cntr[7]_i_6_n_0 ));
@@ -4208,7 +4242,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[11]_i_1_n_5 ),
-        .Q(sig_btt_upper_slice[3]),
+        .Q(sig_btt_residue_slice[10]),
         .R(sig_init_reg));
   FDRE #(
     .INIT(1'b0)) 
@@ -4216,7 +4250,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[11]_i_1_n_4 ),
-        .Q(sig_btt_upper_slice[4]),
+        .Q(sig_btt_upper_slice[0]),
         .R(sig_init_reg));
   CARRY4 \sig_btt_cntr_reg[11]_i_1 
        (.CI(\sig_btt_cntr_reg[7]_i_1_n_0 ),
@@ -4231,7 +4265,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[15]_i_1_n_7 ),
-        .Q(sig_btt_upper_slice[5]),
+        .Q(sig_btt_upper_slice[1]),
         .R(sig_init_reg));
   FDRE #(
     .INIT(1'b0)) 
@@ -4239,7 +4273,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[15]_i_1_n_6 ),
-        .Q(sig_btt_upper_slice[6]),
+        .Q(sig_btt_upper_slice[2]),
         .R(sig_init_reg));
   FDRE #(
     .INIT(1'b0)) 
@@ -4247,7 +4281,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[15]_i_1_n_5 ),
-        .Q(sig_btt_upper_slice[7]),
+        .Q(sig_btt_upper_slice[3]),
         .R(sig_init_reg));
   FDRE #(
     .INIT(1'b0)) 
@@ -4255,7 +4289,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[15]_i_1_n_4 ),
-        .Q(sig_btt_upper_slice[8]),
+        .Q(sig_btt_upper_slice[4]),
         .R(sig_init_reg));
   CARRY4 \sig_btt_cntr_reg[15]_i_1 
        (.CI(\sig_btt_cntr_reg[11]_i_1_n_0 ),
@@ -4270,7 +4304,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[19]_i_1_n_7 ),
-        .Q(sig_btt_upper_slice[9]),
+        .Q(sig_btt_upper_slice[5]),
         .R(sig_init_reg));
   FDRE #(
     .INIT(1'b0)) 
@@ -4278,7 +4312,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[19]_i_1_n_6 ),
-        .Q(sig_btt_upper_slice[10]),
+        .Q(sig_btt_upper_slice[6]),
         .R(sig_init_reg));
   FDRE #(
     .INIT(1'b0)) 
@@ -4286,7 +4320,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[19]_i_1_n_5 ),
-        .Q(sig_btt_upper_slice[11]),
+        .Q(sig_btt_upper_slice[7]),
         .R(sig_init_reg));
   FDRE #(
     .INIT(1'b0)) 
@@ -4294,7 +4328,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[19]_i_1_n_4 ),
-        .Q(sig_btt_upper_slice[12]),
+        .Q(sig_btt_upper_slice[8]),
         .R(sig_init_reg));
   CARRY4 \sig_btt_cntr_reg[19]_i_1 
        (.CI(\sig_btt_cntr_reg[15]_i_1_n_0 ),
@@ -4317,7 +4351,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[23]_i_1_n_7 ),
-        .Q(sig_btt_upper_slice[13]),
+        .Q(sig_btt_upper_slice[9]),
         .R(sig_init_reg));
   FDRE #(
     .INIT(1'b0)) 
@@ -4325,7 +4359,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[23]_i_1_n_6 ),
-        .Q(sig_btt_upper_slice[14]),
+        .Q(sig_btt_upper_slice[10]),
         .R(sig_init_reg));
   FDRE #(
     .INIT(1'b0)) 
@@ -4333,7 +4367,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[23]_i_1_n_5 ),
-        .Q(sig_btt_upper_slice[15]),
+        .Q(sig_btt_upper_slice[11]),
         .R(sig_init_reg));
   FDRE #(
     .INIT(1'b0)) 
@@ -4341,7 +4375,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[23]_i_1_n_4 ),
-        .Q(sig_btt_upper_slice[16]),
+        .Q(sig_btt_upper_slice[12]),
         .R(sig_init_reg));
   CARRY4 \sig_btt_cntr_reg[23]_i_1 
        (.CI(\sig_btt_cntr_reg[19]_i_1_n_0 ),
@@ -4356,7 +4390,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[24]_i_2_n_7 ),
-        .Q(sig_btt_upper_slice[17]),
+        .Q(sig_btt_upper_slice[13]),
         .R(sig_init_reg));
   CARRY4 \sig_btt_cntr_reg[24]_i_2 
        (.CI(\sig_btt_cntr_reg[23]_i_1_n_0 ),
@@ -4418,7 +4452,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[7]_i_1_n_4 ),
-        .Q(sig_btt_upper_slice[0]),
+        .Q(sig_btt_residue_slice[7]),
         .R(sig_init_reg));
   CARRY4 \sig_btt_cntr_reg[7]_i_1 
        (.CI(\sig_btt_cntr_reg[3]_i_1_n_0 ),
@@ -4433,7 +4467,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[11]_i_1_n_7 ),
-        .Q(sig_btt_upper_slice[1]),
+        .Q(sig_btt_residue_slice[8]),
         .R(sig_init_reg));
   FDRE #(
     .INIT(1'b0)) 
@@ -4441,62 +4475,184 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_btt_cntr[24]_i_1_n_0 ),
         .D(\sig_btt_cntr_reg[11]_i_1_n_6 ),
-        .Q(sig_btt_upper_slice[2]),
+        .Q(sig_btt_residue_slice[9]),
         .R(sig_init_reg));
+  CARRY4 sig_btt_eq_b2mbaa2_carry
+       (.CI(1'b0),
+        .CO({sig_btt_eq_b2mbaa2,sig_btt_eq_b2mbaa2_carry_n_1,sig_btt_eq_b2mbaa2_carry_n_2,sig_btt_eq_b2mbaa2_carry_n_3}),
+        .CYINIT(1'b1),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_sig_btt_eq_b2mbaa2_carry_O_UNCONNECTED[3:0]),
+        .S({sig_btt_eq_b2mbaa2_carry_i_1_n_0,sig_btt_eq_b2mbaa2_carry_i_2_n_0,sig_btt_eq_b2mbaa2_carry_i_3_n_0,sig_btt_eq_b2mbaa2_carry_i_4_n_0}));
+  LUT4 #(
+    .INIT(16'h2412)) 
+    sig_btt_eq_b2mbaa2_carry_i_1
+       (.I0(sig_btt_residue_slice[9]),
+        .I1(sig_btt_residue_slice[10]),
+        .I2(sig_input_addr_reg[9]),
+        .I3(sig_btt_eq_b2mbaa2_carry_i_5_n_0),
+        .O(sig_btt_eq_b2mbaa2_carry_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h55560000AAA90000)) 
+    sig_btt_eq_b2mbaa2_carry_i_2
+       (.I0(sig_input_addr_reg[8]),
+        .I1(sig_input_addr_reg[6]),
+        .I2(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I3(sig_input_addr_reg[7]),
+        .I4(sig_btt_eq_b2mbaa2_carry_i_6_n_0),
+        .I5(sig_btt_residue_slice[8]),
+        .O(sig_btt_eq_b2mbaa2_carry_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h2222222888888882)) 
+    sig_btt_eq_b2mbaa2_carry_i_3
+       (.I0(sig_btt_eq_b2mbaa2_carry_i_7_n_0),
+        .I1(sig_input_addr_reg[3]),
+        .I2(sig_input_addr_reg[1]),
+        .I3(sig_input_addr_reg[0]),
+        .I4(sig_input_addr_reg[2]),
+        .I5(sig_btt_residue_slice[3]),
+        .O(sig_btt_eq_b2mbaa2_carry_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h0204081020408001)) 
+    sig_btt_eq_b2mbaa2_carry_i_4
+       (.I0(sig_btt_residue_slice[0]),
+        .I1(sig_btt_residue_slice[1]),
+        .I2(sig_input_addr_reg[2]),
+        .I3(sig_input_addr_reg[0]),
+        .I4(sig_input_addr_reg[1]),
+        .I5(sig_btt_residue_slice[2]),
+        .O(sig_btt_eq_b2mbaa2_carry_i_4_n_0));
+  LUT4 #(
+    .INIT(16'h0001)) 
+    sig_btt_eq_b2mbaa2_carry_i_5
+       (.I0(sig_input_addr_reg[8]),
+        .I1(sig_input_addr_reg[6]),
+        .I2(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I3(sig_input_addr_reg[7]),
+        .O(sig_btt_eq_b2mbaa2_carry_i_5_n_0));
+  LUT5 #(
+    .INIT(32'h06606009)) 
+    sig_btt_eq_b2mbaa2_carry_i_6
+       (.I0(sig_input_addr_reg[7]),
+        .I1(sig_btt_residue_slice[7]),
+        .I2(sig_input_addr_reg[6]),
+        .I3(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I4(sig_btt_residue_slice[6]),
+        .O(sig_btt_eq_b2mbaa2_carry_i_6_n_0));
+  LUT5 #(
+    .INIT(32'h06606009)) 
+    sig_btt_eq_b2mbaa2_carry_i_7
+       (.I0(sig_input_addr_reg[5]),
+        .I1(sig_btt_residue_slice[5]),
+        .I2(sig_input_addr_reg[4]),
+        .I3(sig_btt_lt_b2mbaa2_carry_i_9_n_0),
+        .I4(sig_btt_residue_slice[4]),
+        .O(sig_btt_eq_b2mbaa2_carry_i_7_n_0));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 sig_btt_lt_b2mbaa2_carry
        (.CI(1'b0),
-        .CO({sig_btt_lt_b2mbaa2,sig_btt_lt_b2mbaa2_carry_n_1,sig_btt_lt_b2mbaa2_carry_n_2,sig_btt_lt_b2mbaa2_carry_n_3}),
+        .CO({sig_btt_lt_b2mbaa2_carry_n_0,sig_btt_lt_b2mbaa2_carry_n_1,sig_btt_lt_b2mbaa2_carry_n_2,sig_btt_lt_b2mbaa2_carry_n_3}),
         .CYINIT(1'b0),
         .DI({sig_btt_lt_b2mbaa2_carry_i_1_n_0,sig_btt_lt_b2mbaa2_carry_i_2_n_0,sig_btt_lt_b2mbaa2_carry_i_3_n_0,sig_btt_lt_b2mbaa2_carry_i_4_n_0}),
         .O(NLW_sig_btt_lt_b2mbaa2_carry_O_UNCONNECTED[3:0]),
         .S({sig_btt_lt_b2mbaa2_carry_i_5_n_0,sig_btt_lt_b2mbaa2_carry_i_6_n_0,sig_btt_lt_b2mbaa2_carry_i_7_n_0,sig_btt_lt_b2mbaa2_carry_i_8_n_0}));
-  LUT2 #(
-    .INIT(4'h2)) 
-    sig_btt_lt_b2mbaa2_carry_i_1
-       (.I0(sig_bytes_to_mbaa),
-        .I1(sig_btt_residue_slice[6]),
-        .O(sig_btt_lt_b2mbaa2_carry_i_1_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    sig_btt_lt_b2mbaa2_carry_i_10
-       (.I0(sig_input_addr_reg[3]),
-        .I1(sig_input_addr_reg[0]),
-        .I2(sig_input_addr_reg[1]),
-        .I3(sig_input_addr_reg[2]),
-        .O(sig_btt_lt_b2mbaa2_carry_i_10_n_0));
+  (* COMPARATOR_THRESHOLD = "11" *) 
+  CARRY4 sig_btt_lt_b2mbaa2_carry__0
+       (.CI(sig_btt_lt_b2mbaa2_carry_n_0),
+        .CO({NLW_sig_btt_lt_b2mbaa2_carry__0_CO_UNCONNECTED[3:2],sig_btt_lt_b2mbaa2,sig_btt_lt_b2mbaa2_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,sig_btt_lt_b2mbaa2_carry__0_i_1_n_0,sig_btt_lt_b2mbaa2_carry__0_i_2_n_0}),
+        .O(NLW_sig_btt_lt_b2mbaa2_carry__0_O_UNCONNECTED[3:0]),
+        .S({1'b0,1'b0,sig_btt_lt_b2mbaa2_carry__0_i_3_n_0,sig_btt_lt_b2mbaa2_carry__0_i_4_n_0}));
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
+    sig_btt_lt_b2mbaa2_carry__0_i_1
+       (.I0(sig_input_addr_reg[9]),
+        .I1(sig_input_addr_reg[8]),
+        .I2(sig_input_addr_reg[6]),
+        .I3(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I4(sig_input_addr_reg[7]),
+        .I5(sig_btt_residue_slice[10]),
+        .O(sig_btt_lt_b2mbaa2_carry__0_i_1_n_0));
   LUT5 #(
-    .INIT(32'h001417FC)) 
+    .INIT(32'h001706EE)) 
+    sig_btt_lt_b2mbaa2_carry__0_i_2
+       (.I0(sig_btt_lt_b2mbaa2_carry__0_i_5_n_0),
+        .I1(sig_input_addr_reg[8]),
+        .I2(sig_btt_residue_slice[8]),
+        .I3(sig_btt_residue_slice[9]),
+        .I4(sig_input_addr_reg[9]),
+        .O(sig_btt_lt_b2mbaa2_carry__0_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h5555555555555556)) 
+    sig_btt_lt_b2mbaa2_carry__0_i_3
+       (.I0(sig_btt_residue_slice[10]),
+        .I1(sig_input_addr_reg[9]),
+        .I2(sig_input_addr_reg[8]),
+        .I3(sig_input_addr_reg[6]),
+        .I4(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I5(sig_input_addr_reg[7]),
+        .O(sig_btt_lt_b2mbaa2_carry__0_i_3_n_0));
+  LUT5 #(
+    .INIT(32'h06606009)) 
+    sig_btt_lt_b2mbaa2_carry__0_i_4
+       (.I0(sig_input_addr_reg[9]),
+        .I1(sig_btt_residue_slice[9]),
+        .I2(sig_input_addr_reg[8]),
+        .I3(sig_btt_lt_b2mbaa2_carry__0_i_5_n_0),
+        .I4(sig_btt_residue_slice[8]),
+        .O(sig_btt_lt_b2mbaa2_carry__0_i_4_n_0));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    sig_btt_lt_b2mbaa2_carry__0_i_5
+       (.I0(sig_input_addr_reg[7]),
+        .I1(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I2(sig_input_addr_reg[6]),
+        .O(sig_btt_lt_b2mbaa2_carry__0_i_5_n_0));
+  LUT5 #(
+    .INIT(32'h001706EE)) 
+    sig_btt_lt_b2mbaa2_carry_i_1
+       (.I0(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I1(sig_input_addr_reg[6]),
+        .I2(sig_btt_residue_slice[6]),
+        .I3(sig_btt_residue_slice[7]),
+        .I4(sig_input_addr_reg[7]),
+        .O(sig_btt_lt_b2mbaa2_carry_i_1_n_0));
+  LUT5 #(
+    .INIT(32'h001706EE)) 
     sig_btt_lt_b2mbaa2_carry_i_2
-       (.I0(sig_btt_residue_slice[4]),
+       (.I0(sig_btt_lt_b2mbaa2_carry_i_9_n_0),
         .I1(sig_input_addr_reg[4]),
-        .I2(sig_btt_lt_b2mbaa2_carry_i_10_n_0),
-        .I3(sig_input_addr_reg[5]),
-        .I4(sig_btt_residue_slice[5]),
+        .I2(sig_btt_residue_slice[4]),
+        .I3(sig_btt_residue_slice[5]),
+        .I4(sig_input_addr_reg[5]),
         .O(sig_btt_lt_b2mbaa2_carry_i_2_n_0));
   LUT6 #(
     .INIT(64'h0000011F001EFEFE)) 
     sig_btt_lt_b2mbaa2_carry_i_3
-       (.I0(sig_input_addr_reg[0]),
-        .I1(sig_input_addr_reg[1]),
+       (.I0(sig_input_addr_reg[1]),
+        .I1(sig_input_addr_reg[0]),
         .I2(sig_input_addr_reg[2]),
         .I3(sig_btt_residue_slice[2]),
         .I4(sig_btt_residue_slice[3]),
         .I5(sig_input_addr_reg[3]),
         .O(sig_btt_lt_b2mbaa2_carry_i_3_n_0));
   LUT4 #(
-    .INIT(16'h047C)) 
+    .INIT(16'h072A)) 
     sig_btt_lt_b2mbaa2_carry_i_4
-       (.I0(sig_btt_residue_slice[0]),
-        .I1(sig_input_addr_reg[0]),
-        .I2(sig_input_addr_reg[1]),
-        .I3(sig_btt_residue_slice[1]),
+       (.I0(sig_input_addr_reg[0]),
+        .I1(sig_btt_residue_slice[0]),
+        .I2(sig_btt_residue_slice[1]),
+        .I3(sig_input_addr_reg[1]),
         .O(sig_btt_lt_b2mbaa2_carry_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
+  LUT5 #(
+    .INIT(32'h06606009)) 
     sig_btt_lt_b2mbaa2_carry_i_5
-       (.I0(sig_btt_residue_slice[6]),
-        .I1(sig_bytes_to_mbaa),
+       (.I0(sig_input_addr_reg[7]),
+        .I1(sig_btt_residue_slice[7]),
+        .I2(sig_input_addr_reg[6]),
+        .I3(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I4(sig_btt_residue_slice[6]),
         .O(sig_btt_lt_b2mbaa2_carry_i_5_n_0));
   LUT5 #(
     .INIT(32'h06606009)) 
@@ -4504,38 +4660,60 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.I0(sig_input_addr_reg[5]),
         .I1(sig_btt_residue_slice[5]),
         .I2(sig_input_addr_reg[4]),
-        .I3(sig_btt_lt_b2mbaa2_carry_i_10_n_0),
+        .I3(sig_btt_lt_b2mbaa2_carry_i_9_n_0),
         .I4(sig_btt_residue_slice[4]),
         .O(sig_btt_lt_b2mbaa2_carry_i_6_n_0));
   LUT6 #(
-    .INIT(64'h1114222844428881)) 
+    .INIT(64'h0606066060606009)) 
     sig_btt_lt_b2mbaa2_carry_i_7
-       (.I0(sig_btt_residue_slice[3]),
-        .I1(sig_input_addr_reg[2]),
-        .I2(sig_input_addr_reg[1]),
+       (.I0(sig_input_addr_reg[3]),
+        .I1(sig_btt_residue_slice[3]),
+        .I2(sig_input_addr_reg[2]),
         .I3(sig_input_addr_reg[0]),
-        .I4(sig_input_addr_reg[3]),
+        .I4(sig_input_addr_reg[1]),
         .I5(sig_btt_residue_slice[2]),
         .O(sig_btt_lt_b2mbaa2_carry_i_7_n_0));
   LUT4 #(
-    .INIT(16'h1881)) 
+    .INIT(16'h6009)) 
     sig_btt_lt_b2mbaa2_carry_i_8
-       (.I0(sig_btt_residue_slice[0]),
-        .I1(sig_input_addr_reg[0]),
-        .I2(sig_input_addr_reg[1]),
-        .I3(sig_btt_residue_slice[1]),
+       (.I0(sig_input_addr_reg[1]),
+        .I1(sig_btt_residue_slice[1]),
+        .I2(sig_btt_residue_slice[0]),
+        .I3(sig_input_addr_reg[0]),
         .O(sig_btt_lt_b2mbaa2_carry_i_8_n_0));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     sig_btt_lt_b2mbaa2_carry_i_9
        (.I0(sig_input_addr_reg[3]),
-        .I1(sig_input_addr_reg[0]),
-        .I2(sig_input_addr_reg[1]),
+        .I1(sig_input_addr_reg[1]),
+        .I2(sig_input_addr_reg[0]),
         .I3(sig_input_addr_reg[2]),
-        .I4(sig_input_addr_reg[4]),
-        .I5(sig_input_addr_reg[5]),
-        .O(sig_bytes_to_mbaa));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+        .O(sig_btt_lt_b2mbaa2_carry_i_9_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 sig_byte_change_minus1_carry
+       (.CI(1'b0),
+        .CO({sig_byte_change_minus1_carry_n_0,sig_byte_change_minus1_carry_n_1,sig_byte_change_minus1_carry_n_2,sig_byte_change_minus1_carry_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,\FSM_onehot_sig_csm_state_reg[1]_0 [1:0]}),
+        .O(sig_adjusted_addr_incr[3:0]),
+        .S({\FSM_onehot_sig_csm_state_reg[1]_0 [3:2],\sig_xfer_len_reg_reg[3]_0 }));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 sig_byte_change_minus1_carry__0
+       (.CI(sig_byte_change_minus1_carry_n_0),
+        .CO({sig_byte_change_minus1_carry__0_n_0,sig_byte_change_minus1_carry__0_n_1,sig_byte_change_minus1_carry__0_n_2,sig_byte_change_minus1_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(sig_adjusted_addr_incr[7:4]),
+        .S(\FSM_onehot_sig_csm_state_reg[1]_0 [7:4]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 sig_byte_change_minus1_carry__1
+       (.CI(sig_byte_change_minus1_carry__0_n_0),
+        .CO({NLW_sig_byte_change_minus1_carry__1_CO_UNCONNECTED[3:1],sig_byte_change_minus1_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({NLW_sig_byte_change_minus1_carry__1_O_UNCONNECTED[3:2],sig_adjusted_addr_incr[9:8]}),
+        .S({1'b0,1'b0,\FSM_onehot_sig_csm_state_reg[1]_0 [9:8]}));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT5 #(
     .INIT(32'hFFFF2000)) 
     sig_calc_error_reg_i_1
@@ -4669,65 +4847,69 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .I1(sig_csm_pop_child_cmd),
         .I2(sig_child_addr_cntr_lsh_reg[12]),
         .O(\sig_child_addr_cntr_lsh[12]_i_5_n_0 ));
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \sig_child_addr_cntr_lsh[4]_i_5 
-       (.I0(\sig_child_addr_reg_reg_n_0_[7] ),
-        .I1(sig_csm_pop_child_cmd),
-        .I2(sig_child_addr_cntr_lsh_reg[7]),
-        .O(\sig_child_addr_reg_reg[7]_0 [3]));
   LUT4 #(
     .INIT(16'hF606)) 
     \sig_child_addr_cntr_lsh[4]_i_6 
+       (.I0(\FSM_onehot_sig_csm_state_reg[1]_0 [7]),
+        .I1(sig_child_addr_cntr_lsh_reg[7]),
+        .I2(sig_csm_pop_child_cmd),
+        .I3(\sig_child_addr_reg_reg_n_0_[7] ),
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] [3]));
+  LUT4 #(
+    .INIT(16'hF606)) 
+    \sig_child_addr_cntr_lsh[4]_i_7 
        (.I0(\FSM_onehot_sig_csm_state_reg[1]_0 [6]),
         .I1(sig_child_addr_cntr_lsh_reg[6]),
         .I2(sig_csm_pop_child_cmd),
         .I3(\sig_child_addr_reg_reg_n_0_[6] ),
-        .O(\sig_child_addr_reg_reg[7]_0 [2]));
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] [2]));
   LUT4 #(
     .INIT(16'hF606)) 
-    \sig_child_addr_cntr_lsh[4]_i_7 
+    \sig_child_addr_cntr_lsh[4]_i_8 
        (.I0(\FSM_onehot_sig_csm_state_reg[1]_0 [5]),
         .I1(sig_child_addr_cntr_lsh_reg[5]),
         .I2(sig_csm_pop_child_cmd),
         .I3(\sig_child_addr_reg_reg_n_0_[5] ),
-        .O(\sig_child_addr_reg_reg[7]_0 [1]));
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] [1]));
   LUT4 #(
     .INIT(16'hF606)) 
-    \sig_child_addr_cntr_lsh[4]_i_8 
+    \sig_child_addr_cntr_lsh[4]_i_9 
        (.I0(\FSM_onehot_sig_csm_state_reg[1]_0 [4]),
         .I1(sig_child_addr_cntr_lsh_reg[4]),
         .I2(sig_csm_pop_child_cmd),
         .I3(\sig_child_addr_reg_reg_n_0_[4] ),
-        .O(\sig_child_addr_reg_reg[7]_0 [0]));
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \sig_child_addr_cntr_lsh[8]_i_2 
-       (.I0(\sig_child_addr_reg_reg_n_0_[11] ),
-        .I1(sig_csm_pop_child_cmd),
-        .I2(sig_child_addr_cntr_lsh_reg[11]),
-        .O(\sig_child_addr_cntr_lsh[8]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \sig_child_addr_cntr_lsh[8]_i_3 
-       (.I0(\sig_child_addr_reg_reg_n_0_[10] ),
-        .I1(sig_csm_pop_child_cmd),
-        .I2(sig_child_addr_cntr_lsh_reg[10]),
-        .O(\sig_child_addr_cntr_lsh[8]_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \sig_child_addr_cntr_lsh[8]_i_4 
-       (.I0(\sig_child_addr_reg_reg_n_0_[9] ),
-        .I1(sig_csm_pop_child_cmd),
-        .I2(sig_child_addr_cntr_lsh_reg[9]),
-        .O(\sig_child_addr_cntr_lsh[8]_i_4_n_0 ));
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] [0]));
   LUT3 #(
     .INIT(8'hB8)) 
     \sig_child_addr_cntr_lsh[8]_i_5 
-       (.I0(\sig_child_addr_reg_reg_n_0_[8] ),
+       (.I0(\sig_child_addr_reg_reg_n_0_[11] ),
         .I1(sig_csm_pop_child_cmd),
-        .I2(sig_child_addr_cntr_lsh_reg[8]),
-        .O(\sig_child_addr_cntr_lsh[8]_i_5_n_0 ));
+        .I2(sig_child_addr_cntr_lsh_reg[11]),
+        .O(\sig_child_addr_reg_reg[11]_0 [3]));
+  LUT4 #(
+    .INIT(16'hF606)) 
+    \sig_child_addr_cntr_lsh[8]_i_6 
+       (.I0(\FSM_onehot_sig_csm_state_reg[1]_0 [10]),
+        .I1(sig_child_addr_cntr_lsh_reg[10]),
+        .I2(sig_csm_pop_child_cmd),
+        .I3(\sig_child_addr_reg_reg_n_0_[10] ),
+        .O(\sig_child_addr_reg_reg[11]_0 [2]));
+  LUT4 #(
+    .INIT(16'hF606)) 
+    \sig_child_addr_cntr_lsh[8]_i_7 
+       (.I0(\FSM_onehot_sig_csm_state_reg[1]_0 [9]),
+        .I1(sig_child_addr_cntr_lsh_reg[9]),
+        .I2(sig_csm_pop_child_cmd),
+        .I3(\sig_child_addr_reg_reg_n_0_[9] ),
+        .O(\sig_child_addr_reg_reg[11]_0 [1]));
+  LUT4 #(
+    .INIT(16'hF606)) 
+    \sig_child_addr_cntr_lsh[8]_i_8 
+       (.I0(\FSM_onehot_sig_csm_state_reg[1]_0 [8]),
+        .I1(sig_child_addr_cntr_lsh_reg[8]),
+        .I2(sig_csm_pop_child_cmd),
+        .I3(\sig_child_addr_reg_reg_n_0_[8] ),
+        .O(\sig_child_addr_reg_reg[11]_0 [0]));
   FDRE #(
     .INIT(1'b0)) 
     \sig_child_addr_cntr_lsh_reg[0] 
@@ -4741,7 +4923,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     \sig_child_addr_cntr_lsh_reg[10] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_child_addr_cntr_lsh[0]_i_1_n_0 ),
-        .D(\sig_child_addr_cntr_lsh_reg[8]_i_1_n_5 ),
+        .D(\sig_child_addr_cntr_lsh_reg[11]_0 [2]),
         .Q(sig_child_addr_cntr_lsh_reg[10]),
         .R(sig_init_reg));
   FDRE #(
@@ -4749,7 +4931,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     \sig_child_addr_cntr_lsh_reg[11] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_child_addr_cntr_lsh[0]_i_1_n_0 ),
-        .D(\sig_child_addr_cntr_lsh_reg[8]_i_1_n_4 ),
+        .D(\sig_child_addr_cntr_lsh_reg[11]_0 [3]),
         .Q(sig_child_addr_cntr_lsh_reg[11]),
         .R(sig_init_reg));
   FDRE #(
@@ -4762,7 +4944,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .R(sig_init_reg));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \sig_child_addr_cntr_lsh_reg[12]_i_1 
-       (.CI(\sig_child_addr_cntr_lsh_reg[8]_i_1_n_0 ),
+       (.CI(\sig_child_addr_cntr_lsh_reg[15]_0 ),
         .CO({\NLW_sig_child_addr_cntr_lsh_reg[12]_i_1_CO_UNCONNECTED [3],\sig_child_addr_cntr_lsh_reg[12]_i_1_n_1 ,\sig_child_addr_cntr_lsh_reg[12]_i_1_n_2 ,\sig_child_addr_cntr_lsh_reg[12]_i_1_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
@@ -4853,23 +5035,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     \sig_child_addr_cntr_lsh_reg[8] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_child_addr_cntr_lsh[0]_i_1_n_0 ),
-        .D(\sig_child_addr_cntr_lsh_reg[8]_i_1_n_7 ),
+        .D(\sig_child_addr_cntr_lsh_reg[11]_0 [0]),
         .Q(sig_child_addr_cntr_lsh_reg[8]),
         .R(sig_init_reg));
-  (* ADDER_THRESHOLD = "11" *) 
-  CARRY4 \sig_child_addr_cntr_lsh_reg[8]_i_1 
-       (.CI(\sig_child_addr_cntr_lsh_reg[11]_0 ),
-        .CO({\sig_child_addr_cntr_lsh_reg[8]_i_1_n_0 ,\sig_child_addr_cntr_lsh_reg[8]_i_1_n_1 ,\sig_child_addr_cntr_lsh_reg[8]_i_1_n_2 ,\sig_child_addr_cntr_lsh_reg[8]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\sig_child_addr_cntr_lsh_reg[8]_i_1_n_4 ,\sig_child_addr_cntr_lsh_reg[8]_i_1_n_5 ,\sig_child_addr_cntr_lsh_reg[8]_i_1_n_6 ,\sig_child_addr_cntr_lsh_reg[8]_i_1_n_7 }),
-        .S({\sig_child_addr_cntr_lsh[8]_i_2_n_0 ,\sig_child_addr_cntr_lsh[8]_i_3_n_0 ,\sig_child_addr_cntr_lsh[8]_i_4_n_0 ,\sig_child_addr_cntr_lsh[8]_i_5_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \sig_child_addr_cntr_lsh_reg[9] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_child_addr_cntr_lsh[0]_i_1_n_0 ),
-        .D(\sig_child_addr_cntr_lsh_reg[8]_i_1_n_6 ),
+        .D(\sig_child_addr_cntr_lsh_reg[11]_0 [1]),
         .Q(sig_child_addr_cntr_lsh_reg[9]),
         .R(sig_init_reg));
   LUT4 #(
@@ -5168,44 +5342,68 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
   LUT2 #(
     .INIT(4'h6)) 
     sig_child_addr_lsh_rollover_reg_i_10
-       (.I0(sig_child_addr_cntr_lsh_reg[2]),
-        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [2]),
+       (.I0(sig_child_addr_cntr_lsh_reg[6]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [6]),
         .O(sig_child_addr_lsh_rollover_reg_i_10_n_0));
   LUT2 #(
     .INIT(4'h6)) 
     sig_child_addr_lsh_rollover_reg_i_11
-       (.I0(\sig_child_addr_cntr_lsh_reg[1]_0 [1]),
-        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [1]),
+       (.I0(sig_child_addr_cntr_lsh_reg[5]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [5]),
         .O(sig_child_addr_lsh_rollover_reg_i_11_n_0));
   LUT2 #(
     .INIT(4'h6)) 
     sig_child_addr_lsh_rollover_reg_i_12
-       (.I0(\sig_child_addr_cntr_lsh_reg[1]_0 [0]),
-        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [0]),
+       (.I0(sig_child_addr_cntr_lsh_reg[4]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [4]),
         .O(sig_child_addr_lsh_rollover_reg_i_12_n_0));
   LUT2 #(
     .INIT(4'h6)) 
+    sig_child_addr_lsh_rollover_reg_i_13
+       (.I0(sig_child_addr_cntr_lsh_reg[3]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [3]),
+        .O(sig_child_addr_lsh_rollover_reg_i_13_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    sig_child_addr_lsh_rollover_reg_i_14
+       (.I0(sig_child_addr_cntr_lsh_reg[2]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [2]),
+        .O(sig_child_addr_lsh_rollover_reg_i_14_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    sig_child_addr_lsh_rollover_reg_i_15
+       (.I0(\sig_child_addr_cntr_lsh_reg[1]_0 [1]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [1]),
+        .O(sig_child_addr_lsh_rollover_reg_i_15_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    sig_child_addr_lsh_rollover_reg_i_16
+       (.I0(\sig_child_addr_cntr_lsh_reg[1]_0 [0]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [0]),
+        .O(sig_child_addr_lsh_rollover_reg_i_16_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    sig_child_addr_lsh_rollover_reg_i_5
+       (.I0(sig_child_addr_cntr_lsh_reg[10]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [10]),
+        .O(sig_child_addr_lsh_rollover_reg_i_5_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
     sig_child_addr_lsh_rollover_reg_i_6
-       (.I0(sig_child_addr_cntr_lsh_reg[6]),
-        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [6]),
+       (.I0(sig_child_addr_cntr_lsh_reg[9]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [9]),
         .O(sig_child_addr_lsh_rollover_reg_i_6_n_0));
   LUT2 #(
     .INIT(4'h6)) 
     sig_child_addr_lsh_rollover_reg_i_7
-       (.I0(sig_child_addr_cntr_lsh_reg[5]),
-        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [5]),
+       (.I0(sig_child_addr_cntr_lsh_reg[8]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [8]),
         .O(sig_child_addr_lsh_rollover_reg_i_7_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    sig_child_addr_lsh_rollover_reg_i_8
-       (.I0(sig_child_addr_cntr_lsh_reg[4]),
-        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [4]),
-        .O(sig_child_addr_lsh_rollover_reg_i_8_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
     sig_child_addr_lsh_rollover_reg_i_9
-       (.I0(sig_child_addr_cntr_lsh_reg[3]),
-        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [3]),
+       (.I0(sig_child_addr_cntr_lsh_reg[7]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [7]),
         .O(sig_child_addr_lsh_rollover_reg_i_9_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -5228,25 +5426,25 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.CI(sig_child_addr_lsh_rollover_reg_reg_i_4_n_0),
         .CO({sig_child_addr_lsh_rollover_reg_reg_i_3_n_0,sig_child_addr_lsh_rollover_reg_reg_i_3_n_1,sig_child_addr_lsh_rollover_reg_reg_i_3_n_2,sig_child_addr_lsh_rollover_reg_reg_i_3_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .DI({1'b0,sig_child_addr_cntr_lsh_reg[10:8]}),
         .O(NLW_sig_child_addr_lsh_rollover_reg_reg_i_3_O_UNCONNECTED[3:0]),
-        .S(sig_child_addr_cntr_lsh_reg[11:8]));
+        .S({sig_child_addr_cntr_lsh_reg[11],sig_child_addr_lsh_rollover_reg_i_5_n_0,sig_child_addr_lsh_rollover_reg_i_6_n_0,sig_child_addr_lsh_rollover_reg_i_7_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 sig_child_addr_lsh_rollover_reg_reg_i_4
-       (.CI(sig_child_addr_lsh_rollover_reg_reg_i_5_n_0),
+       (.CI(sig_child_addr_lsh_rollover_reg_reg_i_8_n_0),
         .CO({sig_child_addr_lsh_rollover_reg_reg_i_4_n_0,sig_child_addr_lsh_rollover_reg_reg_i_4_n_1,sig_child_addr_lsh_rollover_reg_reg_i_4_n_2,sig_child_addr_lsh_rollover_reg_reg_i_4_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,sig_child_addr_cntr_lsh_reg[6:4]}),
+        .DI(sig_child_addr_cntr_lsh_reg[7:4]),
         .O(NLW_sig_child_addr_lsh_rollover_reg_reg_i_4_O_UNCONNECTED[3:0]),
-        .S({sig_child_addr_cntr_lsh_reg[7],sig_child_addr_lsh_rollover_reg_i_6_n_0,sig_child_addr_lsh_rollover_reg_i_7_n_0,sig_child_addr_lsh_rollover_reg_i_8_n_0}));
+        .S({sig_child_addr_lsh_rollover_reg_i_9_n_0,sig_child_addr_lsh_rollover_reg_i_10_n_0,sig_child_addr_lsh_rollover_reg_i_11_n_0,sig_child_addr_lsh_rollover_reg_i_12_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 sig_child_addr_lsh_rollover_reg_reg_i_5
+  CARRY4 sig_child_addr_lsh_rollover_reg_reg_i_8
        (.CI(1'b0),
-        .CO({sig_child_addr_lsh_rollover_reg_reg_i_5_n_0,sig_child_addr_lsh_rollover_reg_reg_i_5_n_1,sig_child_addr_lsh_rollover_reg_reg_i_5_n_2,sig_child_addr_lsh_rollover_reg_reg_i_5_n_3}),
+        .CO({sig_child_addr_lsh_rollover_reg_reg_i_8_n_0,sig_child_addr_lsh_rollover_reg_reg_i_8_n_1,sig_child_addr_lsh_rollover_reg_reg_i_8_n_2,sig_child_addr_lsh_rollover_reg_reg_i_8_n_3}),
         .CYINIT(1'b0),
         .DI({sig_child_addr_cntr_lsh_reg[3:2],\sig_child_addr_cntr_lsh_reg[1]_0 }),
-        .O(NLW_sig_child_addr_lsh_rollover_reg_reg_i_5_O_UNCONNECTED[3:0]),
-        .S({sig_child_addr_lsh_rollover_reg_i_9_n_0,sig_child_addr_lsh_rollover_reg_i_10_n_0,sig_child_addr_lsh_rollover_reg_i_11_n_0,sig_child_addr_lsh_rollover_reg_i_12_n_0}));
+        .O(NLW_sig_child_addr_lsh_rollover_reg_reg_i_8_O_UNCONNECTED[3:0]),
+        .S({sig_child_addr_lsh_rollover_reg_i_13_n_0,sig_child_addr_lsh_rollover_reg_i_14_n_0,sig_child_addr_lsh_rollover_reg_i_15_n_0,sig_child_addr_lsh_rollover_reg_i_16_n_0}));
   FDRE #(
     .INIT(1'b0)) 
     \sig_child_addr_reg_reg[0] 
@@ -5547,7 +5745,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     .INIT(64'h0000000070777000)) 
     sig_child_qual_first_of_2_i_1
        (.I0(sig_pcc2sf_xfer_ready),
-        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [7]),
+        .I1(\FSM_onehot_sig_csm_state_reg[1]_0 [11]),
         .I2(sig_needed_2_realign_cmds),
         .I3(sig_csm_pop_child_cmd),
         .I4(sig_child_qual_first_of_2),
@@ -5689,7 +5887,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .D(sig_csm_pop_child_cmd_ns),
         .Q(sig_csm_pop_child_cmd),
         .R(sig_init_reg));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'h02)) 
     sig_csm_pop_sf_fifo_i_1
@@ -6118,7 +6316,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .D(sig_needed_2_realign_cmds_i_1_n_0),
         .Q(sig_needed_2_realign_cmds),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT2 #(
     .INIT(4'h1)) 
     sig_psm_halt_i_1
@@ -6133,7 +6331,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .D(sig_psm_halt_ns),
         .Q(sig_psm_halt),
         .S(sig_init_reg));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT4 #(
     .INIT(16'h0020)) 
     sig_psm_ld_calc1_i_1
@@ -6150,7 +6348,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .D(sig_psm_ld_calc1_ns),
         .Q(sig_psm_ld_calc1),
         .R(sig_init_reg));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     sig_psm_ld_chcmd_reg_i_1
@@ -6167,7 +6365,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .D(sig_psm_ld_chcmd_reg_ns),
         .Q(sig_psm_ld_chcmd_reg),
         .R(sig_init_reg));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT4 #(
     .INIT(16'h4200)) 
     sig_psm_ld_realigner_reg_i_1
@@ -6410,10 +6608,11 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .D(sig_calc2dm_calc_err),
         .Q(\sig_realign_strt_offset_reg_reg[0]_0 [28]),
         .R(sig_realign_tag_reg0));
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT2 #(
+    .INIT(4'hD)) 
     sig_realign_cmd_cmplt_reg_i_1
-       (.I0(sig_first_realigner_cmd_reg_0),
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
         .O(sig_realign_cmd_cmplt_reg0));
   FDRE #(
     .INIT(1'b0)) 
@@ -6437,11 +6636,12 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .D(sig_dre_dest_align),
         .Q(\sig_realign_strt_offset_reg_reg[0]_0 [0]),
         .R(sig_realign_tag_reg0));
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT3 #(
+    .INIT(8'hD0)) 
     sig_realign_eof_reg_i_1
-       (.I0(sig_input_eof_reg),
-        .I1(sig_first_realigner_cmd_reg_0),
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_input_eof_reg),
         .O(sig_realign_eof_reg0));
   FDRE #(
     .INIT(1'b0)) 
@@ -6490,140 +6690,241 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .D(sig_realign_strt_offset),
         .Q(\sig_realign_strt_offset_reg_reg[0]_0 [29]),
         .R(sig_realign_tag_reg0));
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \sig_realigner_btt2[0]_i_1 
-       (.I0(sig_input_addr_reg[0]),
-        .I1(sig_first_realigner_cmd_reg_0),
-        .I2(sig_btt_residue_slice[0]),
-        .O(sig_realigner_btt[0]));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \sig_realigner_btt2[10]_i_1 
-       (.I0(sig_btt_upper_slice[3]),
-        .I1(sig_first_realigner_cmd_reg_0),
-        .O(sig_realigner_btt[10]));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \sig_realigner_btt2[11]_i_1 
-       (.I0(sig_btt_upper_slice[4]),
-        .I1(sig_first_realigner_cmd_reg_0),
-        .O(sig_realigner_btt[11]));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \sig_realigner_btt2[12]_i_1 
-       (.I0(sig_btt_upper_slice[5]),
-        .I1(sig_first_realigner_cmd_reg_0),
-        .O(sig_realigner_btt[12]));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \sig_realigner_btt2[13]_i_1 
-       (.I0(sig_btt_upper_slice[6]),
-        .I1(sig_first_realigner_cmd_reg_0),
-        .O(sig_realigner_btt[13]));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \sig_realigner_btt2[14]_i_1 
-       (.I0(sig_btt_upper_slice[7]),
-        .I1(sig_first_realigner_cmd_reg_0),
-        .O(sig_realigner_btt[14]));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \sig_realigner_btt2[15]_i_1 
-       (.I0(sig_btt_upper_slice[8]),
-        .I1(sig_first_realigner_cmd_reg_0),
-        .O(sig_realigner_btt[15]));
   LUT4 #(
-    .INIT(16'h6F60)) 
+    .INIT(16'hFD20)) 
+    \sig_realigner_btt2[0]_i_1 
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_input_addr_reg[0]),
+        .I3(sig_btt_residue_slice[0]),
+        .O(sig_realigner_btt[0]));
+  LUT3 #(
+    .INIT(8'hD0)) 
+    \sig_realigner_btt2[10]_i_1 
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_btt_residue_slice[10]),
+        .O(sig_realigner_btt[10]));
+  LUT3 #(
+    .INIT(8'hD0)) 
+    \sig_realigner_btt2[11]_i_1 
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_btt_upper_slice[0]),
+        .O(sig_realigner_btt[11]));
+  LUT3 #(
+    .INIT(8'hD0)) 
+    \sig_realigner_btt2[12]_i_1 
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_btt_upper_slice[1]),
+        .O(sig_realigner_btt[12]));
+  LUT3 #(
+    .INIT(8'hD0)) 
+    \sig_realigner_btt2[13]_i_1 
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_btt_upper_slice[2]),
+        .O(sig_realigner_btt[13]));
+  LUT3 #(
+    .INIT(8'hD0)) 
+    \sig_realigner_btt2[14]_i_1 
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_btt_upper_slice[3]),
+        .O(sig_realigner_btt[14]));
+  LUT3 #(
+    .INIT(8'hD0)) 
+    \sig_realigner_btt2[15]_i_1 
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_btt_upper_slice[4]),
+        .O(sig_realigner_btt[15]));
+  LUT5 #(
+    .INIT(32'hDFFD0220)) 
     \sig_realigner_btt2[1]_i_1 
-       (.I0(sig_input_addr_reg[0]),
-        .I1(sig_input_addr_reg[1]),
-        .I2(sig_first_realigner_cmd_reg_0),
-        .I3(sig_btt_residue_slice[1]),
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_input_addr_reg[1]),
+        .I3(sig_input_addr_reg[0]),
+        .I4(sig_btt_residue_slice[1]),
         .O(sig_realigner_btt[1]));
   LUT3 #(
-    .INIT(8'h04)) 
+    .INIT(8'hF2)) 
+    \sig_realigner_btt2[24]_i_1 
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_init_reg),
+        .O(\sig_realigner_btt2[24]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFAAAABBBA)) 
     \sig_realigner_btt2[24]_i_2 
-       (.I0(sig_skip_align2mbaa_s_h_i_2_n_0),
-        .I1(sig_first_realigner_cmd),
-        .I2(sig_calc2dm_calc_err),
-        .O(sig_first_realigner_cmd_reg_0));
+       (.I0(sig_bytes_to_mbaa),
+        .I1(\sig_realigner_btt2[24]_i_4_n_0 ),
+        .I2(sig_btt_eq_b2mbaa2),
+        .I3(sig_btt_lt_b2mbaa2),
+        .I4(\sig_realigner_btt2[24]_i_5_n_0 ),
+        .I5(sig_calc2dm_calc_err),
+        .O(sig_skip_align2mbaa));
   LUT5 #(
-    .INIT(32'h56FF5600)) 
+    .INIT(32'h00000001)) 
+    \sig_realigner_btt2[24]_i_3 
+       (.I0(sig_input_addr_reg[7]),
+        .I1(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I2(sig_input_addr_reg[6]),
+        .I3(sig_input_addr_reg[8]),
+        .I4(sig_input_addr_reg[9]),
+        .O(sig_bytes_to_mbaa));
+  LUT4 #(
+    .INIT(16'hFFFD)) 
+    \sig_realigner_btt2[24]_i_4 
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_btt_upper_slice[4]),
+        .I2(sig_btt_upper_slice[0]),
+        .I3(sig_btt_upper_slice[11]),
+        .O(\sig_realigner_btt2[24]_i_4_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \sig_realigner_btt2[24]_i_5 
+       (.I0(sig_btt_upper_slice[8]),
+        .I1(sig_btt_upper_slice[6]),
+        .I2(sig_btt_upper_slice[2]),
+        .I3(\sig_realigner_btt2[24]_i_6_n_0 ),
+        .I4(\sig_realigner_btt2[24]_i_7_n_0 ),
+        .O(\sig_realigner_btt2[24]_i_5_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \sig_realigner_btt2[24]_i_6 
+       (.I0(sig_btt_upper_slice[1]),
+        .I1(sig_btt_upper_slice[9]),
+        .I2(sig_btt_upper_slice[3]),
+        .I3(sig_btt_upper_slice[13]),
+        .O(\sig_realigner_btt2[24]_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \sig_realigner_btt2[24]_i_7 
+       (.I0(sig_btt_upper_slice[12]),
+        .I1(sig_btt_upper_slice[10]),
+        .I2(sig_btt_upper_slice[5]),
+        .I3(sig_btt_upper_slice[7]),
+        .O(\sig_realigner_btt2[24]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'hDFDFDFFD02020220)) 
     \sig_realigner_btt2[2]_i_1 
-       (.I0(sig_input_addr_reg[2]),
-        .I1(sig_input_addr_reg[1]),
-        .I2(sig_input_addr_reg[0]),
-        .I3(sig_first_realigner_cmd_reg_0),
-        .I4(sig_btt_residue_slice[2]),
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_input_addr_reg[2]),
+        .I3(sig_input_addr_reg[0]),
+        .I4(sig_input_addr_reg[1]),
+        .I5(sig_btt_residue_slice[2]),
         .O(sig_realigner_btt[2]));
   LUT6 #(
     .INIT(64'h5556FFFF55560000)) 
     \sig_realigner_btt2[3]_i_1 
        (.I0(sig_input_addr_reg[3]),
-        .I1(sig_input_addr_reg[0]),
-        .I2(sig_input_addr_reg[1]),
+        .I1(sig_input_addr_reg[1]),
+        .I2(sig_input_addr_reg[0]),
         .I3(sig_input_addr_reg[2]),
-        .I4(sig_first_realigner_cmd_reg_0),
+        .I4(\sig_realigner_btt2[8]_i_3_n_0 ),
         .I5(sig_btt_residue_slice[3]),
         .O(sig_realigner_btt[3]));
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT4 #(
+    .INIT(16'hFD20)) 
     \sig_realigner_btt2[4]_i_1 
-       (.I0(\sig_realigner_btt2[4]_i_2_n_0 ),
-        .I1(sig_first_realigner_cmd_reg_0),
-        .I2(sig_btt_residue_slice[4]),
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(\sig_realigner_btt2[4]_i_2_n_0 ),
+        .I3(sig_btt_residue_slice[4]),
         .O(sig_realigner_btt[4]));
   LUT5 #(
     .INIT(32'h55555556)) 
     \sig_realigner_btt2[4]_i_2 
        (.I0(sig_input_addr_reg[4]),
         .I1(sig_input_addr_reg[2]),
-        .I2(sig_input_addr_reg[1]),
-        .I3(sig_input_addr_reg[0]),
+        .I2(sig_input_addr_reg[0]),
+        .I3(sig_input_addr_reg[1]),
         .I4(sig_input_addr_reg[3]),
         .O(\sig_realigner_btt2[4]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'hB8)) 
+  LUT4 #(
+    .INIT(16'hFD20)) 
     \sig_realigner_btt2[5]_i_1 
-       (.I0(\sig_realigner_btt2[5]_i_2_n_0 ),
-        .I1(sig_first_realigner_cmd_reg_0),
-        .I2(sig_btt_residue_slice[5]),
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(\sig_realigner_btt2[5]_i_2_n_0 ),
+        .I3(sig_btt_residue_slice[5]),
         .O(sig_realigner_btt[5]));
   LUT6 #(
-    .INIT(64'h00000001FFFFFFFE)) 
+    .INIT(64'h5555555555555556)) 
     \sig_realigner_btt2[5]_i_2 
-       (.I0(sig_input_addr_reg[4]),
-        .I1(sig_input_addr_reg[2]),
+       (.I0(sig_input_addr_reg[5]),
+        .I1(sig_input_addr_reg[3]),
         .I2(sig_input_addr_reg[1]),
         .I3(sig_input_addr_reg[0]),
-        .I4(sig_input_addr_reg[3]),
-        .I5(sig_input_addr_reg[5]),
+        .I4(sig_input_addr_reg[2]),
+        .I5(sig_input_addr_reg[4]),
         .O(\sig_realigner_btt2[5]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT5 #(
+    .INIT(32'hDFFD0220)) 
     \sig_realigner_btt2[6]_i_1 
-       (.I0(sig_btt_residue_slice[6]),
-        .I1(sig_first_realigner_cmd_reg_0),
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_input_addr_reg[6]),
+        .I3(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I4(sig_btt_residue_slice[6]),
         .O(sig_realigner_btt[6]));
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT6 #(
+    .INIT(64'hDFDFDFFD02020220)) 
     \sig_realigner_btt2[7]_i_1 
-       (.I0(sig_btt_upper_slice[0]),
-        .I1(sig_first_realigner_cmd_reg_0),
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_input_addr_reg[7]),
+        .I3(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I4(sig_input_addr_reg[6]),
+        .I5(sig_btt_residue_slice[7]),
         .O(sig_realigner_btt[7]));
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT6 #(
+    .INIT(64'h5556FFFF55560000)) 
     \sig_realigner_btt2[8]_i_1 
-       (.I0(sig_btt_upper_slice[1]),
-        .I1(sig_first_realigner_cmd_reg_0),
+       (.I0(sig_input_addr_reg[8]),
+        .I1(sig_input_addr_reg[6]),
+        .I2(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I3(sig_input_addr_reg[7]),
+        .I4(\sig_realigner_btt2[8]_i_3_n_0 ),
+        .I5(sig_btt_residue_slice[8]),
         .O(sig_realigner_btt[8]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \sig_realigner_btt2[8]_i_2 
+       (.I0(sig_input_addr_reg[5]),
+        .I1(sig_input_addr_reg[3]),
+        .I2(sig_input_addr_reg[1]),
+        .I3(sig_input_addr_reg[0]),
+        .I4(sig_input_addr_reg[2]),
+        .I5(sig_input_addr_reg[4]),
+        .O(\sig_realigner_btt2[8]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h2)) 
+    \sig_realigner_btt2[8]_i_3 
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .O(\sig_realigner_btt2[8]_i_3_n_0 ));
+  LUT4 #(
+    .INIT(16'hD0F2)) 
     \sig_realigner_btt2[9]_i_1 
-       (.I0(sig_btt_upper_slice[2]),
-        .I1(sig_first_realigner_cmd_reg_0),
+       (.I0(sig_first_realigner_cmd),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_btt_residue_slice[9]),
+        .I3(\sig_realigner_btt2[9]_i_2_n_0 ),
         .O(sig_realigner_btt[9]));
+  LUT5 #(
+    .INIT(32'hAAAAAAA9)) 
+    \sig_realigner_btt2[9]_i_2 
+       (.I0(sig_input_addr_reg[9]),
+        .I1(sig_input_addr_reg[7]),
+        .I2(\sig_realigner_btt2[8]_i_2_n_0 ),
+        .I3(sig_input_addr_reg[6]),
+        .I4(sig_input_addr_reg[8]),
+        .O(\sig_realigner_btt2[9]_i_2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sig_realigner_btt2_reg[0] 
@@ -6685,33 +6986,33 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     \sig_realigner_btt2_reg[16] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(sig_btt_upper_slice[9]),
+        .D(sig_btt_upper_slice[5]),
         .Q(sig_realigner_btt2[16]),
-        .R(\sig_realigner_btt2_reg[24]_0 ));
+        .R(\sig_realigner_btt2[24]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sig_realigner_btt2_reg[17] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(sig_btt_upper_slice[10]),
+        .D(sig_btt_upper_slice[6]),
         .Q(sig_realigner_btt2[17]),
-        .R(\sig_realigner_btt2_reg[24]_0 ));
+        .R(\sig_realigner_btt2[24]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sig_realigner_btt2_reg[18] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(sig_btt_upper_slice[11]),
+        .D(sig_btt_upper_slice[7]),
         .Q(sig_realigner_btt2[18]),
-        .R(\sig_realigner_btt2_reg[24]_0 ));
+        .R(\sig_realigner_btt2[24]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sig_realigner_btt2_reg[19] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(sig_btt_upper_slice[12]),
+        .D(sig_btt_upper_slice[8]),
         .Q(sig_realigner_btt2[19]),
-        .R(\sig_realigner_btt2_reg[24]_0 ));
+        .R(\sig_realigner_btt2[24]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sig_realigner_btt2_reg[1] 
@@ -6725,41 +7026,41 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     \sig_realigner_btt2_reg[20] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(sig_btt_upper_slice[13]),
+        .D(sig_btt_upper_slice[9]),
         .Q(sig_realigner_btt2[20]),
-        .R(\sig_realigner_btt2_reg[24]_0 ));
+        .R(\sig_realigner_btt2[24]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sig_realigner_btt2_reg[21] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(sig_btt_upper_slice[14]),
+        .D(sig_btt_upper_slice[10]),
         .Q(sig_realigner_btt2[21]),
-        .R(\sig_realigner_btt2_reg[24]_0 ));
+        .R(\sig_realigner_btt2[24]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sig_realigner_btt2_reg[22] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(sig_btt_upper_slice[15]),
+        .D(sig_btt_upper_slice[11]),
         .Q(sig_realigner_btt2[22]),
-        .R(\sig_realigner_btt2_reg[24]_0 ));
+        .R(\sig_realigner_btt2[24]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sig_realigner_btt2_reg[23] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(sig_btt_upper_slice[16]),
+        .D(sig_btt_upper_slice[12]),
         .Q(sig_realigner_btt2[23]),
-        .R(\sig_realigner_btt2_reg[24]_0 ));
+        .R(\sig_realigner_btt2[24]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sig_realigner_btt2_reg[24] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(sig_btt_upper_slice[17]),
+        .D(sig_btt_upper_slice[13]),
         .Q(sig_realigner_btt2[24]),
-        .R(\sig_realigner_btt2_reg[24]_0 ));
+        .R(\sig_realigner_btt2[24]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sig_realigner_btt2_reg[2] 
@@ -6824,97 +7125,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .D(sig_realigner_btt[9]),
         .Q(sig_realigner_btt2[9]),
         .R(sig_init_reg));
-  LUT6 #(
-    .INIT(64'h00000000FC55FC00)) 
+  LUT5 #(
+    .INIT(32'h0000C5C0)) 
     sig_skip_align2mbaa_s_h_i_1
        (.I0(sig_psm_ld_chcmd_reg),
-        .I1(sig_calc2dm_calc_err),
-        .I2(sig_skip_align2mbaa_s_h_i_2_n_0),
-        .I3(sig_psm_ld_realigner_reg),
-        .I4(sig_skip_align2mbaa_s_h),
-        .I5(sig_init_reg),
+        .I1(sig_skip_align2mbaa),
+        .I2(sig_psm_ld_realigner_reg),
+        .I3(sig_skip_align2mbaa_s_h),
+        .I4(sig_init_reg),
         .O(sig_skip_align2mbaa_s_h_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hEEEDDDDBBBB7777E)) 
-    sig_skip_align2mbaa_s_h_i_10
-       (.I0(sig_btt_residue_slice[2]),
-        .I1(sig_input_addr_reg[3]),
-        .I2(sig_input_addr_reg[0]),
-        .I3(sig_input_addr_reg[1]),
-        .I4(sig_input_addr_reg[2]),
-        .I5(sig_btt_residue_slice[3]),
-        .O(sig_skip_align2mbaa_s_h_i_10_n_0));
-  LUT6 #(
-    .INIT(64'hABAAABABABAAABAA)) 
-    sig_skip_align2mbaa_s_h_i_2
-       (.I0(sig_bytes_to_mbaa),
-        .I1(sig_skip_align2mbaa_s_h_i_3_n_0),
-        .I2(sig_skip_align2mbaa_s_h_i_4_n_0),
-        .I3(sig_btt_lt_b2mbaa2),
-        .I4(sig_skip_align2mbaa_s_h_i_5_n_0),
-        .I5(sig_skip_align2mbaa_s_h_i_6_n_0),
-        .O(sig_skip_align2mbaa_s_h_i_2_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    sig_skip_align2mbaa_s_h_i_3
-       (.I0(sig_btt_upper_slice[10]),
-        .I1(sig_btt_upper_slice[13]),
-        .I2(sig_btt_upper_slice[16]),
-        .I3(sig_btt_upper_slice[12]),
-        .I4(sig_skip_align2mbaa_s_h_i_7_n_0),
-        .O(sig_skip_align2mbaa_s_h_i_3_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    sig_skip_align2mbaa_s_h_i_4
-       (.I0(sig_btt_upper_slice[4]),
-        .I1(sig_btt_upper_slice[7]),
-        .I2(sig_btt_upper_slice[8]),
-        .I3(sig_skip_align2mbaa_s_h_i_8_n_0),
-        .I4(sig_skip_align2mbaa_s_h_i_9_n_0),
-        .O(sig_skip_align2mbaa_s_h_i_4_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFF9FF6)) 
-    sig_skip_align2mbaa_s_h_i_5
-       (.I0(sig_btt_residue_slice[1]),
-        .I1(sig_input_addr_reg[1]),
-        .I2(sig_input_addr_reg[0]),
-        .I3(sig_btt_residue_slice[0]),
-        .I4(sig_skip_align2mbaa_s_h_i_10_n_0),
-        .I5(sig_btt_residue_slice[6]),
-        .O(sig_skip_align2mbaa_s_h_i_5_n_0));
-  LUT5 #(
-    .INIT(32'h06606009)) 
-    sig_skip_align2mbaa_s_h_i_6
-       (.I0(sig_input_addr_reg[5]),
-        .I1(sig_btt_residue_slice[5]),
-        .I2(sig_input_addr_reg[4]),
-        .I3(sig_btt_lt_b2mbaa2_carry_i_10_n_0),
-        .I4(sig_btt_residue_slice[4]),
-        .O(sig_skip_align2mbaa_s_h_i_6_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    sig_skip_align2mbaa_s_h_i_7
-       (.I0(sig_btt_upper_slice[6]),
-        .I1(sig_btt_upper_slice[11]),
-        .I2(sig_btt_upper_slice[14]),
-        .I3(sig_btt_upper_slice[9]),
-        .O(sig_skip_align2mbaa_s_h_i_7_n_0));
-  LUT4 #(
-    .INIT(16'hFFFD)) 
-    sig_skip_align2mbaa_s_h_i_8
-       (.I0(sig_first_realigner_cmd),
-        .I1(sig_btt_upper_slice[17]),
-        .I2(sig_btt_upper_slice[5]),
-        .I3(sig_btt_upper_slice[15]),
-        .O(sig_skip_align2mbaa_s_h_i_8_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    sig_skip_align2mbaa_s_h_i_9
-       (.I0(sig_btt_upper_slice[0]),
-        .I1(sig_btt_upper_slice[1]),
-        .I2(sig_btt_upper_slice[2]),
-        .I3(sig_btt_upper_slice[3]),
-        .O(sig_skip_align2mbaa_s_h_i_9_n_0));
   FDRE #(
     .INIT(1'b0)) 
     sig_skip_align2mbaa_s_h_reg
@@ -7185,15 +7404,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(sig_csm_ld_xfer),
         .D(sig_child_qual_error_reg),
-        .Q(in[38]),
+        .Q(in[41]),
         .R(sig_xfer_cache_reg0));
   LUT4 #(
     .INIT(16'hFBAA)) 
     sig_xfer_cmd_cmplt_reg_i_1
        (.I0(sig_child_qual_error_reg),
         .I1(sig_child_qual_first_of_2),
-        .I2(\FSM_onehot_sig_csm_state_reg[1]_0 [8]),
-        .I3(\FSM_onehot_sig_csm_state_reg[1]_0 [7]),
+        .I2(\FSM_onehot_sig_csm_state_reg[1]_0 [12]),
+        .I3(\FSM_onehot_sig_csm_state_reg[1]_0 [11]),
         .O(sig_xfer_cmd_cmplt_reg0));
   FDRE #(
     .INIT(1'b0)) 
@@ -7211,12 +7430,92 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
         .D(sig_xfer_is_seq_reg_reg_0),
         .Q(sig_xfer_cmd_cmplt_reg_reg_0[4]),
         .R(sig_xfer_cache_reg0));
+  LUT3 #(
+    .INIT(8'hA9)) 
+    \sig_xfer_len_reg[0]_i_1 
+       (.I0(sig_adjusted_addr_incr[2]),
+        .I1(sig_adjusted_addr_incr[0]),
+        .I2(sig_adjusted_addr_incr[1]),
+        .O(sig_xfer_len[0]));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT4 #(
+    .INIT(16'hAAA9)) 
+    \sig_xfer_len_reg[1]_i_1 
+       (.I0(sig_adjusted_addr_incr[3]),
+        .I1(sig_adjusted_addr_incr[2]),
+        .I2(sig_adjusted_addr_incr[1]),
+        .I3(sig_adjusted_addr_incr[0]),
+        .O(sig_xfer_len[1]));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  LUT5 #(
+    .INIT(32'hAAAAAAA9)) 
+    \sig_xfer_len_reg[2]_i_1 
+       (.I0(sig_adjusted_addr_incr[4]),
+        .I1(sig_adjusted_addr_incr[3]),
+        .I2(sig_adjusted_addr_incr[0]),
+        .I3(sig_adjusted_addr_incr[1]),
+        .I4(sig_adjusted_addr_incr[2]),
+        .O(sig_xfer_len[2]));
+  LUT6 #(
+    .INIT(64'hAAAAAAAAAAAAAAA9)) 
+    \sig_xfer_len_reg[3]_i_1 
+       (.I0(sig_adjusted_addr_incr[5]),
+        .I1(sig_adjusted_addr_incr[4]),
+        .I2(sig_adjusted_addr_incr[2]),
+        .I3(sig_adjusted_addr_incr[1]),
+        .I4(sig_adjusted_addr_incr[0]),
+        .I5(sig_adjusted_addr_incr[3]),
+        .O(sig_xfer_len[3]));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \sig_xfer_len_reg[4]_i_1 
+       (.I0(sig_adjusted_addr_incr[6]),
+        .I1(\sig_xfer_len_reg[7]_i_2_n_0 ),
+        .O(sig_xfer_len[4]));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  LUT3 #(
+    .INIT(8'h9A)) 
+    \sig_xfer_len_reg[5]_i_1 
+       (.I0(sig_adjusted_addr_incr[7]),
+        .I1(sig_adjusted_addr_incr[6]),
+        .I2(\sig_xfer_len_reg[7]_i_2_n_0 ),
+        .O(sig_xfer_len[5]));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT4 #(
+    .INIT(16'hAA9A)) 
+    \sig_xfer_len_reg[6]_i_1 
+       (.I0(sig_adjusted_addr_incr[8]),
+        .I1(sig_adjusted_addr_incr[7]),
+        .I2(\sig_xfer_len_reg[7]_i_2_n_0 ),
+        .I3(sig_adjusted_addr_incr[6]),
+        .O(sig_xfer_len[6]));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT5 #(
+    .INIT(32'hAAAAA9AA)) 
+    \sig_xfer_len_reg[7]_i_1 
+       (.I0(sig_adjusted_addr_incr[9]),
+        .I1(sig_adjusted_addr_incr[8]),
+        .I2(sig_adjusted_addr_incr[6]),
+        .I3(\sig_xfer_len_reg[7]_i_2_n_0 ),
+        .I4(sig_adjusted_addr_incr[7]),
+        .O(sig_xfer_len[7]));
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
+    \sig_xfer_len_reg[7]_i_2 
+       (.I0(sig_adjusted_addr_incr[4]),
+        .I1(sig_adjusted_addr_incr[2]),
+        .I2(sig_adjusted_addr_incr[1]),
+        .I3(sig_adjusted_addr_incr[0]),
+        .I4(sig_adjusted_addr_incr[3]),
+        .I5(sig_adjusted_addr_incr[5]),
+        .O(\sig_xfer_len_reg[7]_i_2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sig_xfer_len_reg_reg[0] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_csm_ld_xfer),
-        .D(D[0]),
+        .D(sig_xfer_len[0]),
         .Q(in[32]),
         .R(sig_xfer_cache_reg0));
   FDRE #(
@@ -7224,7 +7523,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     \sig_xfer_len_reg_reg[1] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_csm_ld_xfer),
-        .D(D[1]),
+        .D(sig_xfer_len[1]),
         .Q(in[33]),
         .R(sig_xfer_cache_reg0));
   FDRE #(
@@ -7232,7 +7531,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     \sig_xfer_len_reg_reg[2] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_csm_ld_xfer),
-        .D(D[2]),
+        .D(sig_xfer_len[2]),
         .Q(in[34]),
         .R(sig_xfer_cache_reg0));
   FDRE #(
@@ -7240,7 +7539,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     \sig_xfer_len_reg_reg[3] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_csm_ld_xfer),
-        .D(D[3]),
+        .D(sig_xfer_len[3]),
         .Q(in[35]),
         .R(sig_xfer_cache_reg0));
   FDRE #(
@@ -7248,15 +7547,39 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
     \sig_xfer_len_reg_reg[4] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_csm_ld_xfer),
-        .D(D[4]),
+        .D(sig_xfer_len[4]),
         .Q(in[36]),
+        .R(sig_xfer_cache_reg0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_xfer_len_reg_reg[5] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_csm_ld_xfer),
+        .D(sig_xfer_len[5]),
+        .Q(in[37]),
+        .R(sig_xfer_cache_reg0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_xfer_len_reg_reg[6] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_csm_ld_xfer),
+        .D(sig_xfer_len[6]),
+        .Q(in[38]),
+        .R(sig_xfer_cache_reg0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_xfer_len_reg_reg[7] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_csm_ld_xfer),
+        .D(sig_xfer_len[7]),
+        .Q(in[39]),
         .R(sig_xfer_cache_reg0));
   LUT6 #(
     .INIT(64'hBABBAAAABABBBAAA)) 
     \sig_xfer_tag_reg[3]_i_1 
        (.I0(sig_init_reg),
         .I1(sig_csm_ld_xfer),
-        .I2(\sig_xfer_len_reg_reg[0]_0 ),
+        .I2(sig_xfer_is_seq_reg_reg_1),
         .I3(sig_mstr2data_cmd_valid),
         .I4(sig_wr_fifo),
         .I5(sig_mstr2addr_cmd_valid),
@@ -7299,9 +7622,9 @@ module Zed_SPI_axi_dma_0_axi_datamover_ibttcc
        (.C(m_axi_s2mm_aclk),
         .CE(sig_csm_ld_xfer),
         .D(sig_child_qual_burst_type),
-        .Q(in[37]),
+        .Q(in[40]),
         .R(sig_xfer_cache_reg0));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \xpm_fifo_instance.xpm_fifo_async_inst_i_3 
@@ -7323,11 +7646,11 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
     empty,
     sig_clr_dbc_reg,
     out,
-    sig_clr_dbeat_cntr0_out,
     lsig_0ffset_cntr,
     \INCLUDE_PACKING.lsig_first_dbeat_reg_0 ,
     sig_dre_tvalid_i_reg,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ,
+    sig_tlast_out_reg,
     sig_dre_halted_reg,
     \sig_data_reg_out_reg[33] ,
     sig_m_valid_out_reg,
@@ -7335,18 +7658,20 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
     CO,
     D,
     sig_child_qual_first_of_2_reg,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ,
     O,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ,
     \sig_strb_reg_out_reg[3] ,
     sig_stream_rst,
     m_axi_s2mm_aclk,
     rd_en,
     sig_dre2ibtt_tlast,
     sig_dre2ibtt_eop,
+    \sig_burst_dbeat_cntr_reg[7]_0 ,
     sig_sf_strt_addr_offset,
     sig_dre_halted,
     sig_dre2ibtt_tvalid,
@@ -7354,7 +7679,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
     \GEN_INDET_BTT.lsig_end_of_cmd_reg_reg ,
     Q,
     \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0]_0 ,
-    sig_m_valid_out_reg_1,
     lsig_end_of_cmd_reg,
     lsig_eop_reg,
     \GEN_INDET_BTT.lsig_byte_cntr_reg[3] ,
@@ -7364,26 +7688,24 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
     sig_child_qual_first_of_2,
     sig_csm_pop_child_cmd,
     sig_pcc2sf_xfer_ready,
-    lsig_first_dbeat,
     lsig_eop_reg_0,
-    sig_child_addr_cntr_lsh_reg,
     \sig_child_addr_cntr_lsh_reg[3] ,
     \sig_child_addr_cntr_lsh_reg[7] ,
+    \sig_child_addr_cntr_lsh_reg[11] ,
+    sig_child_addr_cntr_lsh_reg,
     \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0]_0 ,
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg_reg[1][15]_0 ,
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1]_0 ,
-    SR,
-    \sig_burst_dbeat_cntr_reg[0]_0 ,
-    \sig_byte_cntr_reg[3]_0 );
-  output [8:0]dout;
+    SR);
+  output [12:0]dout;
   output empty;
   output sig_clr_dbc_reg;
   output out;
-  output sig_clr_dbeat_cntr0_out;
   output lsig_0ffset_cntr;
   output \INCLUDE_PACKING.lsig_first_dbeat_reg_0 ;
   output sig_dre_tvalid_i_reg;
   output \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ;
+  output sig_tlast_out_reg;
   output sig_dre_halted_reg;
   output [33:0]\sig_data_reg_out_reg[33] ;
   output sig_m_valid_out_reg;
@@ -7391,18 +7713,20 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
   output [0:0]CO;
   output [3:0]D;
   output sig_child_qual_first_of_2_reg;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ;
-  output [4:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ;
+  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ;
+  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ;
   output [3:0]O;
-  output [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
-  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ;
+  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
+  output [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ;
+  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ;
+  output [1:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ;
   output [3:0]\sig_strb_reg_out_reg[3] ;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input rd_en;
   input sig_dre2ibtt_tlast;
   input sig_dre2ibtt_eop;
+  input \sig_burst_dbeat_cntr_reg[7]_0 ;
   input sig_sf_strt_addr_offset;
   input sig_dre_halted;
   input sig_dre2ibtt_tvalid;
@@ -7410,7 +7734,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
   input \GEN_INDET_BTT.lsig_end_of_cmd_reg_reg ;
   input [8:0]Q;
   input [8:0]\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0]_0 ;
-  input sig_m_valid_out_reg_1;
   input lsig_end_of_cmd_reg;
   input lsig_eop_reg;
   input [2:0]\GEN_INDET_BTT.lsig_byte_cntr_reg[3] ;
@@ -7420,17 +7743,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
   input sig_child_qual_first_of_2;
   input sig_csm_pop_child_cmd;
   input sig_pcc2sf_xfer_ready;
-  input lsig_first_dbeat;
   input lsig_eop_reg_0;
-  input [1:0]sig_child_addr_cntr_lsh_reg;
   input [3:0]\sig_child_addr_cntr_lsh_reg[3] ;
   input [3:0]\sig_child_addr_cntr_lsh_reg[7] ;
+  input [3:0]\sig_child_addr_cntr_lsh_reg[11] ;
+  input [1:0]sig_child_addr_cntr_lsh_reg;
   input [0:0]\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0]_0 ;
   input [15:0]\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg_reg[1][15]_0 ;
   input [1:0]\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1]_0 ;
-  input [0:0]SR;
-  input [0:0]\sig_burst_dbeat_cntr_reg[0]_0 ;
-  input [1:0]\sig_byte_cntr_reg[3]_0 ;
+  input [1:0]SR;
 
   wire [0:0]CO;
   wire [3:0]D;
@@ -7448,16 +7769,11 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
   wire \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ;
   wire \INCLUDE_PACKING.lsig_first_dbeat_reg_0 ;
   wire I_DATA_FIFO_n_39;
-  wire I_XD_FIFO_n_10;
-  wire I_XD_FIFO_n_13;
   wire I_XD_FIFO_n_14;
   wire I_XD_FIFO_n_17;
   wire I_XD_FIFO_n_18;
   wire I_XD_FIFO_n_19;
   wire I_XD_FIFO_n_20;
-  wire I_XD_FIFO_n_21;
-  wire I_XD_FIFO_n_22;
-  wire I_XD_FIFO_n_23;
   wire I_XD_FIFO_n_24;
   wire I_XD_FIFO_n_25;
   wire I_XD_FIFO_n_26;
@@ -7470,53 +7786,64 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
   wire I_XD_FIFO_n_33;
   wire I_XD_FIFO_n_34;
   wire I_XD_FIFO_n_35;
+  wire I_XD_FIFO_n_36;
+  wire I_XD_FIFO_n_37;
+  wire I_XD_FIFO_n_38;
+  wire I_XD_FIFO_n_39;
+  wire I_XD_FIFO_n_40;
   wire I_XD_FIFO_n_41;
   wire I_XD_FIFO_n_42;
-  wire I_XD_FIFO_n_58;
-  wire I_XD_FIFO_n_59;
-  wire I_XD_FIFO_n_60;
-  wire I_XD_FIFO_n_61;
-  wire I_XD_FIFO_n_62;
-  wire I_XD_FIFO_n_63;
-  wire I_XD_FIFO_n_64;
+  wire I_XD_FIFO_n_46;
+  wire I_XD_FIFO_n_47;
+  wire I_XD_FIFO_n_65;
+  wire I_XD_FIFO_n_66;
+  wire I_XD_FIFO_n_67;
+  wire I_XD_FIFO_n_68;
+  wire I_XD_FIFO_n_69;
+  wire I_XD_FIFO_n_70;
+  wire I_XD_FIFO_n_71;
+  wire I_XD_FIFO_n_72;
+  wire I_XD_FIFO_n_73;
+  wire I_XD_FIFO_n_74;
+  wire I_XD_FIFO_n_75;
   wire [3:0]O;
   wire [8:0]Q;
   wire [0:0]S;
-  wire [0:0]SR;
-  wire [8:0]dout;
+  wire [1:0]SR;
+  wire [12:0]dout;
   wire empty;
-  wire [4:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ;
-  wire [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
-  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ;
+  wire [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ;
+  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ;
+  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ;
+  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ;
+  wire [1:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ;
+  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
   wire lsig_0ffset_cntr;
   wire [31:0]lsig_combined_data;
   wire [3:0]lsig_combined_strb;
   wire lsig_end_of_cmd_reg;
   wire lsig_eop_reg;
   wire lsig_eop_reg_0;
-  wire lsig_first_dbeat;
   wire \lsig_flag_slice_reg[0]_0 ;
   wire \lsig_flag_slice_reg[1]_3 ;
   wire lsig_packer_full;
   wire m_axi_s2mm_aclk;
   wire out;
-  wire [3:0]p_0_in;
+  wire [7:0]p_0_in;
   wire p_0_in5_in;
   wire rd_en;
   wire [34:32]s_data;
-  wire [3:0]sig_burst_dbeat_cntr_reg;
-  wire [0:0]\sig_burst_dbeat_cntr_reg[0]_0 ;
-  wire [6:0]sig_byte_cntr;
-  wire [1:0]\sig_byte_cntr_reg[3]_0 ;
+  wire [7:0]sig_burst_dbeat_cntr_reg;
+  wire \sig_burst_dbeat_cntr_reg[7]_0 ;
+  wire [10:0]sig_byte_cntr;
   wire [1:0]sig_child_addr_cntr_lsh_reg;
+  wire [3:0]\sig_child_addr_cntr_lsh_reg[11] ;
   wire [3:0]\sig_child_addr_cntr_lsh_reg[3] ;
   wire [3:0]\sig_child_addr_cntr_lsh_reg[7] ;
   wire sig_child_qual_first_of_2;
   wire sig_child_qual_first_of_2_reg;
   wire sig_clr_dbc_reg;
-  wire sig_clr_dbeat_cntr0_out;
+  wire sig_clr_dbc_reg_i_2_n_0;
   wire sig_csm_pop_child_cmd;
   wire [37:36]sig_data_fifo_data_in;
   wire [37:0]sig_data_fifo_data_out;
@@ -7536,13 +7863,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
   wire sig_init_reg;
   wire sig_m_valid_out_reg;
   wire sig_m_valid_out_reg_0;
-  wire sig_m_valid_out_reg_1;
   wire sig_next_cmd_cmplt_reg;
   wire sig_pcc2sf_xfer_ready;
   wire sig_pop_data_fifo;
   wire sig_sf_strt_addr_offset;
   wire [3:0]\sig_strb_reg_out_reg[3] ;
   wire sig_stream_rst;
+  wire sig_tlast_out_reg;
 
   Zed_SPI_axi_dma_0_axi_datamover_skid_buf__parameterized0 \ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF 
        (.CO(CO),
@@ -7566,104 +7893,104 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
         .sig_m_valid_out_reg_0(out),
         .sig_m_valid_out_reg_1(sig_m_valid_out_reg),
         .sig_m_valid_out_reg_2(sig_m_valid_out_reg_0),
-        .sig_m_valid_out_reg_3(sig_m_valid_out_reg_1),
+        .sig_m_valid_out_reg_3(\sig_burst_dbeat_cntr_reg[7]_0 ),
         .sig_next_cmd_cmplt_reg(sig_next_cmd_cmplt_reg),
         .\sig_strb_reg_out_reg[3]_0 (\sig_strb_reg_out_reg[3] ),
         .sig_stream_rst(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][0] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_35),
+        .D(I_XD_FIFO_n_42),
         .Q(lsig_combined_data[0]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][10] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_25),
+        .D(I_XD_FIFO_n_32),
         .Q(lsig_combined_data[10]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][11] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_24),
+        .D(I_XD_FIFO_n_31),
         .Q(lsig_combined_data[11]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][12] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_23),
+        .D(I_XD_FIFO_n_30),
         .Q(lsig_combined_data[12]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][13] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_22),
+        .D(I_XD_FIFO_n_29),
         .Q(lsig_combined_data[13]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][14] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_21),
+        .D(I_XD_FIFO_n_28),
         .Q(lsig_combined_data[14]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][15] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_20),
+        .D(I_XD_FIFO_n_27),
         .Q(lsig_combined_data[15]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][1] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_34),
+        .D(I_XD_FIFO_n_41),
         .Q(lsig_combined_data[1]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][2] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_33),
+        .D(I_XD_FIFO_n_40),
         .Q(lsig_combined_data[2]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][3] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_32),
+        .D(I_XD_FIFO_n_39),
         .Q(lsig_combined_data[3]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][4] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_31),
+        .D(I_XD_FIFO_n_38),
         .Q(lsig_combined_data[4]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][5] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_30),
+        .D(I_XD_FIFO_n_37),
         .Q(lsig_combined_data[5]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][6] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_29),
+        .D(I_XD_FIFO_n_36),
         .Q(lsig_combined_data[6]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][7] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_28),
+        .D(I_XD_FIFO_n_35),
         .Q(lsig_combined_data[7]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][8] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_27),
+        .D(I_XD_FIFO_n_34),
         .Q(lsig_combined_data[8]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_data_slice_reg_reg[0][9] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_26),
+        .D(I_XD_FIFO_n_33),
         .Q(lsig_combined_data[9]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0] 
@@ -7675,19 +8002,19 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][1] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_17),
+        .D(I_XD_FIFO_n_24),
         .Q(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg_n_0_[0][1] ),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_19),
+        .D(I_XD_FIFO_n_26),
         .Q(lsig_combined_strb[0]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[0]_0 ),
-        .D(I_XD_FIFO_n_18),
+        .D(I_XD_FIFO_n_25),
         .Q(lsig_combined_strb[1]),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg_reg[1][0] 
@@ -7789,13 +8116,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_flag_slice_reg_reg[1][0] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[1]_3 ),
-        .D(I_XD_FIFO_n_42),
+        .D(I_XD_FIFO_n_47),
         .Q(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_flag_slice_reg_reg_n_0_[1][0] ),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_flag_slice_reg_reg[1][1] 
        (.C(m_axi_s2mm_aclk),
         .CE(\lsig_flag_slice_reg[1]_3 ),
-        .D(I_XD_FIFO_n_41),
+        .D(I_XD_FIFO_n_46),
         .Q(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_flag_slice_reg_reg_n_0_[1][1] ),
         .R(sig_stream_rst));
   FDRE \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][0] 
@@ -7815,7 +8142,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(I_XD_FIFO_n_14),
+        .D(I_XD_FIFO_n_19),
         .Q(lsig_0ffset_cntr),
         .R(sig_stream_rst));
   FDSE #(
@@ -7823,7 +8150,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
     \INCLUDE_PACKING.lsig_first_dbeat_reg 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(I_XD_FIFO_n_13),
+        .D(I_XD_FIFO_n_18),
         .Q(\INCLUDE_PACKING.lsig_first_dbeat_reg_0 ),
         .S(sig_stream_rst));
   FDRE #(
@@ -7831,7 +8158,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
     \INCLUDE_PACKING.lsig_packer_full_reg 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(I_XD_FIFO_n_10),
+        .D(I_XD_FIFO_n_14),
         .Q(lsig_packer_full),
         .R(sig_stream_rst));
   Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord__parameterized0 I_DATA_FIFO
@@ -7840,52 +8167,55 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
         .dout(sig_data_fifo_data_out),
         .empty(I_DATA_FIFO_n_39),
         .full(sig_data_fifo_full),
-        .\gen_wr_a.gen_word_narrow.mem_reg (sig_data_skid_mux_out),
-        .\gen_wr_a.gen_word_narrow.mem_reg_0 (s_data),
+        .\gen_wr_a.gen_word_narrow.mem_reg_1 (sig_data_skid_mux_out),
+        .\gen_wr_a.gen_word_narrow.mem_reg_1_0 (s_data),
         .lsig_packer_full(lsig_packer_full),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(p_0_in5_in),
         .rd_en(sig_pop_data_fifo),
         .sig_stream_rst(sig_stream_rst));
   Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord I_XD_FIFO
-       (.D(I_XD_FIFO_n_17),
+       (.D(I_XD_FIFO_n_24),
         .E(sig_dre_tvalid_i_reg),
-        .\GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] (I_XD_FIFO_n_14),
+        .\GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] (I_XD_FIFO_n_19),
         .\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] (\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0]_0 ),
+        .\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] (Q),
         .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] (\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ),
         .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 (\lsig_flag_slice_reg[0]_0 ),
-        .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 ({I_XD_FIFO_n_18,I_XD_FIFO_n_19}),
-        .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 ({I_XD_FIFO_n_20,I_XD_FIFO_n_21,I_XD_FIFO_n_22,I_XD_FIFO_n_23,I_XD_FIFO_n_24,I_XD_FIFO_n_25,I_XD_FIFO_n_26,I_XD_FIFO_n_27,I_XD_FIFO_n_28,I_XD_FIFO_n_29,I_XD_FIFO_n_30,I_XD_FIFO_n_31,I_XD_FIFO_n_32,I_XD_FIFO_n_33,I_XD_FIFO_n_34,I_XD_FIFO_n_35}),
+        .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 ({I_XD_FIFO_n_25,I_XD_FIFO_n_26}),
+        .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 ({I_XD_FIFO_n_27,I_XD_FIFO_n_28,I_XD_FIFO_n_29,I_XD_FIFO_n_30,I_XD_FIFO_n_31,I_XD_FIFO_n_32,I_XD_FIFO_n_33,I_XD_FIFO_n_34,I_XD_FIFO_n_35,I_XD_FIFO_n_36,I_XD_FIFO_n_37,I_XD_FIFO_n_38,I_XD_FIFO_n_39,I_XD_FIFO_n_40,I_XD_FIFO_n_41,I_XD_FIFO_n_42}),
         .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_3 (sig_incr_dbeat_cntr),
         .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 (lsig_0ffset_cntr),
         .\INCLUDE_PACKING.lsig_first_dbeat_reg (\INCLUDE_PACKING.lsig_first_dbeat_reg_0 ),
         .O(O),
-        .Q(Q),
+        .Q(sig_burst_dbeat_cntr_reg[7:6]),
+        .SR(I_XD_FIFO_n_17),
         .din({sig_dre2ibtt_eop_reg,sig_dre2ibtt_tlast_reg,sig_byte_cntr}),
         .dout(dout),
         .empty(empty),
         .full(sig_data_fifo_full),
-        .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg (I_XD_FIFO_n_10),
+        .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg (I_XD_FIFO_n_14),
         .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 (\lsig_flag_slice_reg[1]_3 ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ),
         .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ),
         .lsig_eop_reg_0(lsig_eop_reg_0),
-        .lsig_first_dbeat(lsig_first_dbeat),
         .lsig_packer_full(lsig_packer_full),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
-        .out({I_XD_FIFO_n_58,I_XD_FIFO_n_59,I_XD_FIFO_n_60,I_XD_FIFO_n_61,I_XD_FIFO_n_62,I_XD_FIFO_n_63,I_XD_FIFO_n_64}),
+        .out({I_XD_FIFO_n_65,I_XD_FIFO_n_66,I_XD_FIFO_n_67,I_XD_FIFO_n_68,I_XD_FIFO_n_69,I_XD_FIFO_n_70,I_XD_FIFO_n_71,I_XD_FIFO_n_72,I_XD_FIFO_n_73,I_XD_FIFO_n_74,I_XD_FIFO_n_75}),
         .rd_en(rd_en),
-        .\sig_byte_cntr_reg[3] (\sig_byte_cntr_reg[3]_0 ),
+        .\sig_burst_dbeat_cntr_reg[7] (I_XD_FIFO_n_20),
+        .\sig_burst_dbeat_cntr_reg[7]_0 (\sig_burst_dbeat_cntr_reg[7]_0 ),
         .sig_child_addr_cntr_lsh_reg(sig_child_addr_cntr_lsh_reg),
+        .\sig_child_addr_cntr_lsh_reg[11] (\sig_child_addr_cntr_lsh_reg[11] ),
         .\sig_child_addr_cntr_lsh_reg[3] (\sig_child_addr_cntr_lsh_reg[3] ),
         .\sig_child_addr_cntr_lsh_reg[7] (\sig_child_addr_cntr_lsh_reg[7] ),
         .sig_child_qual_first_of_2(sig_child_qual_first_of_2),
         .sig_child_qual_first_of_2_reg(sig_child_qual_first_of_2_reg),
-        .sig_clr_dbc_reg_reg(sig_burst_dbeat_cntr_reg),
-        .sig_clr_dbeat_cntr0_out(sig_clr_dbeat_cntr0_out),
+        .sig_clr_dbc_reg_reg(sig_clr_dbc_reg_i_2_n_0),
         .sig_csm_pop_child_cmd(sig_csm_pop_child_cmd),
         .sig_dre2ibtt_tlast(sig_dre2ibtt_tlast),
         .sig_dre2ibtt_tvalid(sig_dre2ibtt_tvalid),
@@ -7894,39 +8224,70 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
         .sig_pcc2sf_xfer_ready(sig_pcc2sf_xfer_ready),
         .sig_sf_strt_addr_offset(sig_sf_strt_addr_offset),
         .sig_stream_rst(sig_stream_rst),
-        .sig_tlast_out_reg(I_XD_FIFO_n_13),
-        .sig_tlast_out_reg_0({I_XD_FIFO_n_41,I_XD_FIFO_n_42}),
+        .sig_tlast_out_reg(I_XD_FIFO_n_18),
+        .sig_tlast_out_reg_0(sig_tlast_out_reg),
+        .sig_tlast_out_reg_1({I_XD_FIFO_n_46,I_XD_FIFO_n_47}),
         .wr_en(sig_clr_dbc_reg));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \sig_burst_dbeat_cntr[0]_i_1 
        (.I0(sig_burst_dbeat_cntr_reg[0]),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \sig_burst_dbeat_cntr[1]_i_1 
-       (.I0(sig_burst_dbeat_cntr_reg[0]),
-        .I1(sig_burst_dbeat_cntr_reg[1]),
+       (.I0(sig_burst_dbeat_cntr_reg[1]),
+        .I1(sig_burst_dbeat_cntr_reg[0]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \sig_burst_dbeat_cntr[2]_i_1 
        (.I0(sig_burst_dbeat_cntr_reg[2]),
-        .I1(sig_burst_dbeat_cntr_reg[1]),
-        .I2(sig_burst_dbeat_cntr_reg[0]),
-        .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT4 #(
-    .INIT(16'h6AAA)) 
-    \sig_burst_dbeat_cntr[3]_i_3 
-       (.I0(sig_burst_dbeat_cntr_reg[3]),
         .I1(sig_burst_dbeat_cntr_reg[0]),
         .I2(sig_burst_dbeat_cntr_reg[1]),
+        .O(p_0_in[2]));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  LUT4 #(
+    .INIT(16'h6AAA)) 
+    \sig_burst_dbeat_cntr[3]_i_1 
+       (.I0(sig_burst_dbeat_cntr_reg[3]),
+        .I1(sig_burst_dbeat_cntr_reg[1]),
+        .I2(sig_burst_dbeat_cntr_reg[0]),
         .I3(sig_burst_dbeat_cntr_reg[2]),
         .O(p_0_in[3]));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  LUT5 #(
+    .INIT(32'h6AAAAAAA)) 
+    \sig_burst_dbeat_cntr[4]_i_1 
+       (.I0(sig_burst_dbeat_cntr_reg[4]),
+        .I1(sig_burst_dbeat_cntr_reg[2]),
+        .I2(sig_burst_dbeat_cntr_reg[0]),
+        .I3(sig_burst_dbeat_cntr_reg[1]),
+        .I4(sig_burst_dbeat_cntr_reg[3]),
+        .O(p_0_in[4]));
+  LUT6 #(
+    .INIT(64'h6AAAAAAAAAAAAAAA)) 
+    \sig_burst_dbeat_cntr[5]_i_1 
+       (.I0(sig_burst_dbeat_cntr_reg[5]),
+        .I1(sig_burst_dbeat_cntr_reg[3]),
+        .I2(sig_burst_dbeat_cntr_reg[1]),
+        .I3(sig_burst_dbeat_cntr_reg[0]),
+        .I4(sig_burst_dbeat_cntr_reg[2]),
+        .I5(sig_burst_dbeat_cntr_reg[4]),
+        .O(p_0_in[5]));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \sig_burst_dbeat_cntr[6]_i_1 
+       (.I0(sig_burst_dbeat_cntr_reg[6]),
+        .I1(sig_clr_dbc_reg_i_2_n_0),
+        .O(p_0_in[6]));
+  LUT3 #(
+    .INIT(8'h6A)) 
+    \sig_burst_dbeat_cntr[7]_i_3 
+       (.I0(sig_burst_dbeat_cntr_reg[7]),
+        .I1(sig_clr_dbc_reg_i_2_n_0),
+        .I2(sig_burst_dbeat_cntr_reg[6]),
+        .O(p_0_in[7]));
   FDRE #(
     .INIT(1'b0)) 
     \sig_burst_dbeat_cntr_reg[0] 
@@ -7934,7 +8295,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
         .CE(sig_incr_dbeat_cntr),
         .D(p_0_in[0]),
         .Q(sig_burst_dbeat_cntr_reg[0]),
-        .R(\sig_burst_dbeat_cntr_reg[0]_0 ));
+        .R(I_XD_FIFO_n_17));
   FDRE #(
     .INIT(1'b0)) 
     \sig_burst_dbeat_cntr_reg[1] 
@@ -7942,7 +8303,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
         .CE(sig_incr_dbeat_cntr),
         .D(p_0_in[1]),
         .Q(sig_burst_dbeat_cntr_reg[1]),
-        .R(\sig_burst_dbeat_cntr_reg[0]_0 ));
+        .R(I_XD_FIFO_n_17));
   FDRE #(
     .INIT(1'b0)) 
     \sig_burst_dbeat_cntr_reg[2] 
@@ -7950,7 +8311,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
         .CE(sig_incr_dbeat_cntr),
         .D(p_0_in[2]),
         .Q(sig_burst_dbeat_cntr_reg[2]),
-        .R(\sig_burst_dbeat_cntr_reg[0]_0 ));
+        .R(I_XD_FIFO_n_17));
   FDRE #(
     .INIT(1'b0)) 
     \sig_burst_dbeat_cntr_reg[3] 
@@ -7958,69 +8319,143 @@ module Zed_SPI_axi_dma_0_axi_datamover_indet_btt
         .CE(sig_incr_dbeat_cntr),
         .D(p_0_in[3]),
         .Q(sig_burst_dbeat_cntr_reg[3]),
-        .R(\sig_burst_dbeat_cntr_reg[0]_0 ));
+        .R(I_XD_FIFO_n_17));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_burst_dbeat_cntr_reg[4] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_incr_dbeat_cntr),
+        .D(p_0_in[4]),
+        .Q(sig_burst_dbeat_cntr_reg[4]),
+        .R(I_XD_FIFO_n_17));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_burst_dbeat_cntr_reg[5] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_incr_dbeat_cntr),
+        .D(p_0_in[5]),
+        .Q(sig_burst_dbeat_cntr_reg[5]),
+        .R(I_XD_FIFO_n_17));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_burst_dbeat_cntr_reg[6] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_incr_dbeat_cntr),
+        .D(p_0_in[6]),
+        .Q(sig_burst_dbeat_cntr_reg[6]),
+        .R(I_XD_FIFO_n_17));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_burst_dbeat_cntr_reg[7] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_incr_dbeat_cntr),
+        .D(p_0_in[7]),
+        .Q(sig_burst_dbeat_cntr_reg[7]),
+        .R(I_XD_FIFO_n_17));
   FDRE #(
     .INIT(1'b0)) 
     \sig_byte_cntr_reg[0] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_dre_tvalid_i_reg),
-        .D(I_XD_FIFO_n_64),
+        .D(I_XD_FIFO_n_75),
         .Q(sig_byte_cntr[0]),
-        .R(SR));
+        .R(SR[0]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_byte_cntr_reg[10] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_dre_tvalid_i_reg),
+        .D(I_XD_FIFO_n_65),
+        .Q(sig_byte_cntr[10]),
+        .R(SR[1]));
   FDRE #(
     .INIT(1'b0)) 
     \sig_byte_cntr_reg[1] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_dre_tvalid_i_reg),
-        .D(I_XD_FIFO_n_63),
+        .D(I_XD_FIFO_n_74),
         .Q(sig_byte_cntr[1]),
-        .R(SR));
+        .R(SR[0]));
   FDRE #(
     .INIT(1'b0)) 
     \sig_byte_cntr_reg[2] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_dre_tvalid_i_reg),
-        .D(I_XD_FIFO_n_62),
+        .D(I_XD_FIFO_n_73),
         .Q(sig_byte_cntr[2]),
-        .R(SR));
+        .R(SR[0]));
   FDRE #(
     .INIT(1'b0)) 
     \sig_byte_cntr_reg[3] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_dre_tvalid_i_reg),
-        .D(I_XD_FIFO_n_61),
+        .D(I_XD_FIFO_n_72),
         .Q(sig_byte_cntr[3]),
-        .R(SR));
+        .R(SR[0]));
   FDRE #(
     .INIT(1'b0)) 
     \sig_byte_cntr_reg[4] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_dre_tvalid_i_reg),
-        .D(I_XD_FIFO_n_60),
+        .D(I_XD_FIFO_n_71),
         .Q(sig_byte_cntr[4]),
-        .R(SR));
+        .R(SR[0]));
   FDRE #(
     .INIT(1'b0)) 
     \sig_byte_cntr_reg[5] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_dre_tvalid_i_reg),
-        .D(I_XD_FIFO_n_59),
+        .D(I_XD_FIFO_n_70),
         .Q(sig_byte_cntr[5]),
-        .R(SR));
+        .R(SR[0]));
   FDRE #(
     .INIT(1'b0)) 
     \sig_byte_cntr_reg[6] 
        (.C(m_axi_s2mm_aclk),
         .CE(sig_dre_tvalid_i_reg),
-        .D(I_XD_FIFO_n_58),
+        .D(I_XD_FIFO_n_69),
         .Q(sig_byte_cntr[6]),
-        .R(SR));
+        .R(SR[0]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_byte_cntr_reg[7] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_dre_tvalid_i_reg),
+        .D(I_XD_FIFO_n_68),
+        .Q(sig_byte_cntr[7]),
+        .R(SR[0]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_byte_cntr_reg[8] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_dre_tvalid_i_reg),
+        .D(I_XD_FIFO_n_67),
+        .Q(sig_byte_cntr[8]),
+        .R(SR[1]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sig_byte_cntr_reg[9] 
+       (.C(m_axi_s2mm_aclk),
+        .CE(sig_dre_tvalid_i_reg),
+        .D(I_XD_FIFO_n_66),
+        .Q(sig_byte_cntr[9]),
+        .R(SR[1]));
+  LUT6 #(
+    .INIT(64'h8000000000000000)) 
+    sig_clr_dbc_reg_i_2
+       (.I0(sig_burst_dbeat_cntr_reg[5]),
+        .I1(sig_burst_dbeat_cntr_reg[3]),
+        .I2(sig_burst_dbeat_cntr_reg[1]),
+        .I3(sig_burst_dbeat_cntr_reg[0]),
+        .I4(sig_burst_dbeat_cntr_reg[2]),
+        .I5(sig_burst_dbeat_cntr_reg[4]),
+        .O(sig_clr_dbc_reg_i_2_n_0));
   FDRE #(
     .INIT(1'b0)) 
     sig_clr_dbc_reg_reg
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(sig_clr_dbeat_cntr0_out),
+        .D(I_XD_FIFO_n_20),
         .Q(sig_clr_dbc_reg),
         .R(sig_stream_rst));
   FDRE #(
@@ -8063,20 +8498,20 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
     sig_last_reg_out_reg_0,
     sig_mssa_index,
     \GEN_INDET_BTT.lsig_absorb2tlast_reg ,
+    sig_eop_halt_xfer_reg,
     sig_last_reg_out_reg_1,
-    sig_flush_db1_reg,
+    \sig_mssa_index_reg_out_reg[0]_0 ,
+    sig_strb_skid_reg,
     \GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg ,
     lsig_set_eop,
-    sig_strb_skid_reg,
     sig_btt_eq_0_reg,
     \GEN_ENABLE_INDET_BTT.sig_need_cmd_flush_reg ,
     sig_last_reg_out_reg_2,
     sig_last_reg_out_reg_3,
     sig_s_ready_out_reg_1,
-    sig_eop_sent1_out,
     \sig_strb_reg_out_reg[0]_0 ,
-    \sig_mssa_index_reg_out_reg[0]_0 ,
-    sig_eop_halt_xfer_reg,
+    sig_eop_sent1_out,
+    sig_eop_halt_xfer_reg_0,
     \sig_data_reg_out_reg[15]_0 ,
     m_axi_s2mm_aclk,
     sig_stream_rst,
@@ -8084,15 +8519,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
     lsig_set_absorb2tlast,
     \sig_btt_cntr_reg[24] ,
     \sig_btt_cntr_reg[24]_0 ,
-    lsig_cmd_fetch_pause,
-    sig_sm_pop_cmd_fifo,
-    sig_need_cmd_flush,
+    \GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 ,
     sig_m_valid_out_reg_0,
     sig_init_reg,
     \sig_mssa_index_reg_out_reg[0]_1 ,
     skid2dre_wlast,
     sig_eop_halt_xfer,
-    \GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 ,
+    lsig_cmd_fetch_pause,
+    sig_sm_pop_cmd_fifo,
+    sig_need_cmd_flush,
     sig_btt_eq_0_reg_0,
     sig_btt_eq_0_reg_1,
     sig_btt_eq_0_reg_2,
@@ -8101,10 +8536,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
     sig_sm_ld_dre_cmd,
     \GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_1 ,
     \sig_data_reg_out_reg[15]_1 ,
-    \sig_btt_cntr_reg[24]_1 ,
-    \sig_btt_cntr_reg[24]_2 ,
     Q,
-    \sig_btt_cntr_reg[24]_3 ,
+    sig_eop_sent_reg_reg,
+    sig_eop_sent_reg_reg_0,
+    sig_flush_db2,
     \sig_data_skid_reg_reg[15]_0 ,
     \sig_strb_skid_reg_reg[1]_0 ,
     \sig_strb_skid_reg_reg[0]_0 );
@@ -8116,20 +8551,20 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
   output sig_last_reg_out_reg_0;
   output sig_mssa_index;
   output \GEN_INDET_BTT.lsig_absorb2tlast_reg ;
+  output sig_eop_halt_xfer_reg;
   output sig_last_reg_out_reg_1;
-  output sig_flush_db1_reg;
+  output [0:0]\sig_mssa_index_reg_out_reg[0]_0 ;
+  output [1:0]sig_strb_skid_reg;
   output \GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg ;
   output lsig_set_eop;
-  output [1:0]sig_strb_skid_reg;
   output sig_btt_eq_0_reg;
   output \GEN_ENABLE_INDET_BTT.sig_need_cmd_flush_reg ;
   output sig_last_reg_out_reg_2;
   output sig_last_reg_out_reg_3;
   output [0:0]sig_s_ready_out_reg_1;
-  output sig_eop_sent1_out;
   output [0:0]\sig_strb_reg_out_reg[0]_0 ;
-  output [0:0]\sig_mssa_index_reg_out_reg[0]_0 ;
-  output sig_eop_halt_xfer_reg;
+  output sig_eop_sent1_out;
+  output sig_eop_halt_xfer_reg_0;
   output [15:0]\sig_data_reg_out_reg[15]_0 ;
   input m_axi_s2mm_aclk;
   input sig_stream_rst;
@@ -8137,15 +8572,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
   input lsig_set_absorb2tlast;
   input \sig_btt_cntr_reg[24] ;
   input \sig_btt_cntr_reg[24]_0 ;
-  input lsig_cmd_fetch_pause;
-  input sig_sm_pop_cmd_fifo;
-  input sig_need_cmd_flush;
+  input [4:0]\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 ;
   input sig_m_valid_out_reg_0;
   input sig_init_reg;
   input [1:0]\sig_mssa_index_reg_out_reg[0]_1 ;
   input skid2dre_wlast;
   input sig_eop_halt_xfer;
-  input [4:0]\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 ;
+  input lsig_cmd_fetch_pause;
+  input sig_sm_pop_cmd_fifo;
+  input sig_need_cmd_flush;
   input sig_btt_eq_0_reg_0;
   input sig_btt_eq_0_reg_1;
   input sig_btt_eq_0_reg_2;
@@ -8154,10 +8589,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
   input sig_sm_ld_dre_cmd;
   input [0:0]\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_1 ;
   input \sig_data_reg_out_reg[15]_1 ;
-  input \sig_btt_cntr_reg[24]_1 ;
-  input \sig_btt_cntr_reg[24]_2 ;
   input [0:0]Q;
-  input \sig_btt_cntr_reg[24]_3 ;
+  input sig_eop_sent_reg_reg;
+  input sig_eop_sent_reg_reg_0;
+  input sig_flush_db2;
   input [15:0]\sig_data_skid_reg_reg[15]_0 ;
   input \sig_strb_skid_reg_reg[1]_0 ;
   input \sig_strb_skid_reg_reg[0]_0 ;
@@ -8174,16 +8609,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
   wire m_axi_s2mm_aclk;
   wire \sig_btt_cntr_reg[24] ;
   wire \sig_btt_cntr_reg[24]_0 ;
-  wire \sig_btt_cntr_reg[24]_1 ;
-  wire \sig_btt_cntr_reg[24]_2 ;
-  wire \sig_btt_cntr_reg[24]_3 ;
   wire sig_btt_eq_0;
   wire sig_btt_eq_0_reg;
   wire sig_btt_eq_0_reg_0;
   wire sig_btt_eq_0_reg_1;
   wire sig_btt_eq_0_reg_2;
   wire sig_btt_eq_0_reg_3;
-  wire \sig_data_reg_out[15]_i_3_n_0 ;
+  wire \sig_data_reg_out[15]_i_4_n_0 ;
   wire sig_data_reg_out_en;
   wire [15:0]\sig_data_reg_out_reg[15]_0 ;
   wire \sig_data_reg_out_reg[15]_1 ;
@@ -8192,8 +8624,11 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
   wire [15:0]\sig_data_skid_reg_reg[15]_0 ;
   wire sig_eop_halt_xfer;
   wire sig_eop_halt_xfer_reg;
+  wire sig_eop_halt_xfer_reg_0;
   wire sig_eop_sent1_out;
-  wire sig_flush_db1_reg;
+  wire sig_eop_sent_reg_reg;
+  wire sig_eop_sent_reg_reg_0;
+  wire sig_flush_db2;
   wire sig_init_reg;
   wire sig_last_reg_out_i_1__2_n_0;
   wire sig_last_reg_out_reg_0;
@@ -8239,10 +8674,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
        (.I0(sig_eop_halt_xfer),
         .I1(sig_m_valid_out),
         .I2(Q),
-        .I3(\sig_btt_cntr_reg[24]_2 ),
-        .I4(\sig_btt_cntr_reg[24]_1 ),
-        .I5(\sig_btt_cntr_reg[24]_3 ),
-        .O(sig_eop_halt_xfer_reg));
+        .I3(sig_flush_db2),
+        .I4(sig_eop_sent_reg_reg_0),
+        .I5(sig_eop_sent_reg_reg),
+        .O(sig_eop_halt_xfer_reg_0));
   LUT6 #(
     .INIT(64'h8888888800000800)) 
     \GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_i_1 
@@ -8262,13 +8697,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
         .I3(sig_need_cmd_flush),
         .O(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg ));
   LUT5 #(
-    .INIT(32'h0000D000)) 
+    .INIT(32'hA2000000)) 
     \GEN_INCLUDE_DRE.lsig_eop_reg_i_2 
-       (.I0(sig_mssa_index),
-        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [2]),
-        .I2(sig_m_valid_out),
-        .I3(sig_last_reg_out_reg_0),
-        .I4(sig_flush_db1_reg),
+       (.I0(sig_eop_halt_xfer_reg),
+        .I1(sig_mssa_index),
+        .I2(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [2]),
+        .I3(sig_m_valid_out),
+        .I4(sig_last_reg_out_reg_0),
         .O(lsig_set_eop));
   LUT5 #(
     .INIT(32'h3FAA0000)) 
@@ -8280,18 +8715,18 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
         .I4(\sig_btt_cntr_reg[24]_0 ),
         .O(sig_last_reg_out_reg_3));
   LUT3 #(
-    .INIT(8'h08)) 
+    .INIT(8'h80)) 
     \GEN_INPUT_REG[0].sig_input_data_reg[0][9]_i_2 
-       (.I0(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [0]),
-        .I1(sig_strm_tstrb),
-        .I2(sig_flush_db1_reg),
+       (.I0(sig_eop_halt_xfer_reg),
+        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [0]),
+        .I2(sig_strm_tstrb),
         .O(\sig_strb_reg_out_reg[0]_0 ));
   LUT3 #(
-    .INIT(8'h08)) 
+    .INIT(8'h80)) 
     \GEN_INPUT_REG[1].sig_input_data_reg[1][9]_i_2 
-       (.I0(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [1]),
-        .I1(sig_mssa_index),
-        .I2(sig_flush_db1_reg),
+       (.I0(sig_eop_halt_xfer_reg),
+        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [1]),
+        .I2(sig_mssa_index),
         .O(\sig_mssa_index_reg_out_reg[0]_0 ));
   LUT4 #(
     .INIT(16'h8088)) 
@@ -8302,10 +8737,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
         .I3(sig_mssa_index),
         .O(sig_last_reg_out_reg_1));
   LUT5 #(
-    .INIT(32'h22F2FFFF)) 
+    .INIT(32'h88F8FFFF)) 
     \sig_btt_cntr[24]_i_1__0 
-       (.I0(sig_last_reg_out_reg_1),
-        .I1(sig_flush_db1_reg),
+       (.I0(sig_eop_halt_xfer_reg),
+        .I1(sig_last_reg_out_reg_1),
         .I2(lsig_set_absorb2tlast),
         .I3(\sig_btt_cntr_reg[24] ),
         .I4(\sig_btt_cntr_reg[24]_0 ),
@@ -8321,14 +8756,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
         .I5(sig_btt_eq_0),
         .O(sig_btt_eq_0_reg));
   LUT6 #(
-    .INIT(64'hAAAAAAAABFFFBFBF)) 
+    .INIT(64'h00007F77FFFFFFFF)) 
     sig_cmd_full_i_2
-       (.I0(sig_flush_db1_reg),
-        .I1(sig_last_reg_out_reg_0),
-        .I2(sig_m_valid_out),
-        .I3(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [2]),
-        .I4(sig_mssa_index),
-        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [4]),
+       (.I0(sig_last_reg_out_reg_0),
+        .I1(sig_m_valid_out),
+        .I2(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [2]),
+        .I3(sig_mssa_index),
+        .I4(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [4]),
+        .I5(sig_eop_halt_xfer_reg),
         .O(sig_last_reg_out_reg_2));
   LUT3 #(
     .INIT(8'hCA)) 
@@ -8373,13 +8808,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
         .I2(sig_s_ready_dup2),
         .O(sig_data_skid_mux_out[14]));
   LUT6 #(
-    .INIT(64'hFFFFFFFF5555557F)) 
+    .INIT(64'hFFFFFFFF55555DDD)) 
     \sig_data_reg_out[15]_i_1__0 
        (.I0(sig_m_valid_dup),
-        .I1(sig_m_valid_out),
-        .I2(\sig_data_reg_out[15]_i_3_n_0 ),
-        .I3(sig_eop_halt_xfer),
-        .I4(sig_flush_db1_reg),
+        .I1(sig_eop_halt_xfer_reg),
+        .I2(sig_m_valid_out),
+        .I3(\sig_data_reg_out[15]_i_4_n_0 ),
+        .I4(sig_eop_halt_xfer),
         .I5(\sig_btt_cntr_reg[24] ),
         .O(sig_data_reg_out_en));
   LUT2 #(
@@ -8395,25 +8830,25 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
         .I1(\sig_data_skid_reg_reg[15]_0 [15]),
         .I2(sig_s_ready_dup2),
         .O(sig_data_skid_mux_out[15]));
+  LUT6 #(
+    .INIT(64'h0000000000000400)) 
+    \sig_data_reg_out[15]_i_3 
+       (.I0(sig_eop_halt_xfer),
+        .I1(sig_m_valid_out),
+        .I2(Q),
+        .I3(sig_eop_sent_reg_reg),
+        .I4(sig_eop_sent_reg_reg_0),
+        .I5(sig_flush_db2),
+        .O(sig_eop_halt_xfer_reg));
   LUT5 #(
     .INIT(32'h08AAAAAA)) 
-    \sig_data_reg_out[15]_i_3 
+    \sig_data_reg_out[15]_i_4 
        (.I0(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [3]),
         .I1(sig_mssa_index),
         .I2(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [2]),
         .I3(sig_m_valid_out),
         .I4(sig_last_reg_out_reg_0),
-        .O(\sig_data_reg_out[15]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFEFFFFFFFFFF)) 
-    \sig_data_reg_out[15]_i_4 
-       (.I0(\sig_btt_cntr_reg[24]_1 ),
-        .I1(\sig_btt_cntr_reg[24]_2 ),
-        .I2(sig_eop_halt_xfer),
-        .I3(sig_m_valid_out),
-        .I4(Q),
-        .I5(\sig_btt_cntr_reg[24]_3 ),
-        .O(sig_flush_db1_reg));
+        .O(\sig_data_reg_out[15]_i_4_n_0 ));
   LUT3 #(
     .INIT(8'hCA)) 
     \sig_data_reg_out[1]_i_1 
@@ -8734,12 +9169,12 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
         .Q(sig_data_skid_reg[9]),
         .R(1'b0));
   LUT4 #(
-    .INIT(16'h4F44)) 
+    .INIT(16'hF444)) 
     sig_eop_sent_reg_i_1
        (.I0(\sig_btt_cntr_reg[24] ),
         .I1(lsig_set_absorb2tlast),
-        .I2(sig_flush_db1_reg),
-        .I3(sig_last_reg_out_reg_1),
+        .I2(sig_last_reg_out_reg_1),
+        .I3(sig_eop_halt_xfer_reg),
         .O(sig_eop_sent1_out));
   LUT5 #(
     .INIT(32'hB8FFB800)) 
@@ -8853,14 +9288,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf
         .I4(sig_s_ready_dup_i_2__0_n_0),
         .O(sig_s_ready_dup_i_1__0_n_0));
   LUT6 #(
-    .INIT(64'h5454555454545454)) 
+    .INIT(64'h4454444455555555)) 
     sig_s_ready_dup_i_2__0
        (.I0(\sig_btt_cntr_reg[24] ),
-        .I1(sig_flush_db1_reg),
-        .I2(sig_eop_halt_xfer),
-        .I3(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [3]),
-        .I4(sig_last_reg_out_reg_1),
-        .I5(sig_m_valid_out),
+        .I1(sig_eop_halt_xfer),
+        .I2(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [3]),
+        .I3(sig_last_reg_out_reg_1),
+        .I4(sig_m_valid_out),
+        .I5(sig_eop_halt_xfer_reg),
         .O(sig_s_ready_dup_i_2__0_n_0));
   (* KEEP = "yes" *) 
   (* equivalent_register_removal = "no" *) 
@@ -8919,33 +9354,29 @@ endmodule
 
 (* ORIG_REF_NAME = "axi_datamover_reset" *) 
 module Zed_SPI_axi_dma_0_axi_datamover_reset
-   (sig_cmd_stat_rst_user_reg_n_cdc_from,
-    sig_rst2all_stop_request,
+   (sig_rst2all_stop_request,
     sig_stream_rst,
     sig_secondary_aresetn_reg,
     sig_flush_db1_reg,
-    scndry_out,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ,
     SR,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ,
-    sig_clr_dbc_reg_reg,
+    sig_push_err2wsc_reg,
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] ,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ,
     sig_init_reg_reg,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ,
+    scndry_out,
     sig_s_h_halt_reg_reg_0,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ,
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ,
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ,
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ,
     \GEN_INDET_BTT.lsig_end_of_cmd_reg_reg ,
     rst,
     sig_ld_new_cmd_reg_reg,
     sig_next_addr_reg0,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_6 ,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_7 ,
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ,
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ,
     sig_eop_sent_reg0,
     sig_mvalid_stop_reg_reg,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_8 ,
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ,
     prmry_in,
     sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0,
     m_axi_s2mm_aclk,
@@ -8955,15 +9386,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
     sig_flush_db1,
     sig_flush_db2,
     sig_flush_db2_reg,
+    sig_clr_dbc_reg,
     sig_push_err2wsc,
     sig_last_mmap_dbeat,
     sig_wr_fifo,
     sig_push_dqual_reg,
-    \sig_byte_cntr_reg[0] ,
-    sig_clr_dbc_reg,
     \GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9] ,
     Q,
-    sig_clr_dbeat_cntr0_out,
+    \sig_byte_cntr_reg[0] ,
     sig_init_reg,
     sig_halt_reg,
     sig_last_skid_reg,
@@ -8986,37 +9416,33 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
     sig_strm_tlast,
     sig_eop_sent_reg,
     sig_mvalid_stop,
-    sig_addr_reg_empty,
     sig_halt_cmplt_reg_0,
+    sig_addr_reg_empty,
     sig_halt_cmplt_reg_1,
     sig_halt_cmplt_reg_2);
-  output sig_cmd_stat_rst_user_reg_n_cdc_from;
   output sig_rst2all_stop_request;
   output sig_stream_rst;
   output sig_secondary_aresetn_reg;
   output sig_flush_db1_reg;
-  output scndry_out;
+  output [1:0]SR;
+  output [0:0]sig_push_err2wsc_reg;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
-  output [0:0]SR;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
-  output [0:0]sig_clr_dbc_reg_reg;
   output [0:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] ;
-  output [0:0]\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
   output sig_init_reg_reg;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ;
+  output scndry_out;
   output sig_s_h_halt_reg_reg_0;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ;
+  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
+  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
+  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ;
   output [1:0]\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg ;
   output rst;
   output sig_ld_new_cmd_reg_reg;
   output sig_next_addr_reg0;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_6 ;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_7 ;
+  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ;
+  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ;
   output sig_eop_sent_reg0;
   output [0:0]sig_mvalid_stop_reg_reg;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_8 ;
+  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ;
   output prmry_in;
   input sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0;
   input m_axi_s2mm_aclk;
@@ -9026,15 +9452,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
   input sig_flush_db1;
   input sig_flush_db2;
   input sig_flush_db2_reg;
+  input sig_clr_dbc_reg;
   input sig_push_err2wsc;
   input sig_last_mmap_dbeat;
   input sig_wr_fifo;
   input sig_push_dqual_reg;
-  input \sig_byte_cntr_reg[0] ;
-  input sig_clr_dbc_reg;
   input \GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9] ;
   input [0:0]Q;
-  input sig_clr_dbeat_cntr0_out;
+  input \sig_byte_cntr_reg[0] ;
   input sig_init_reg;
   input sig_halt_reg;
   input sig_last_skid_reg;
@@ -9057,21 +9482,18 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
   input sig_strm_tlast;
   input sig_eop_sent_reg;
   input sig_mvalid_stop;
+  input sig_halt_cmplt_reg_0;
   input sig_addr_reg_empty;
-  input [0:0]sig_halt_cmplt_reg_0;
-  input sig_halt_cmplt_reg_1;
+  input [0:0]sig_halt_cmplt_reg_1;
   input sig_halt_cmplt_reg_2;
 
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
-  wire [0:0]\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
+  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ;
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_6 ;
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_7 ;
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_8 ;
   wire \GEN_ASYNC_CMDSTAT_RESET.sig_secondary_aresetn_reg_reg_0 ;
   wire \GEN_ASYNC_CMDSTAT_RESET.sig_secondary_dly1_i_1_n_0 ;
   wire \GEN_ASYNC_CMDSTAT_RESET.sig_secondary_dly2_i_1_n_0 ;
@@ -9082,7 +9504,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
   wire [1:0]\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg ;
   wire [0:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] ;
   wire [0:0]Q;
-  wire [0:0]SR;
+  wire [1:0]SR;
   wire lsig_absorb2tlast;
   wire lsig_end_of_cmd_reg;
   wire m_axi_s2mm_aclk;
@@ -9096,8 +9518,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
   wire sig_addr_reg_full;
   wire \sig_byte_cntr_reg[0] ;
   wire sig_clr_dbc_reg;
-  wire [0:0]sig_clr_dbc_reg_reg;
-  wire sig_clr_dbeat_cntr0_out;
   wire sig_cmd_empty_reg;
   wire sig_cmd_stat_rst_user_reg_n_cdc_from;
   wire sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0;
@@ -9108,8 +9528,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
   wire sig_flush_db2;
   wire sig_flush_db2_reg;
   wire sig_halt_cmplt_i_1_n_0;
-  wire [0:0]sig_halt_cmplt_reg_0;
-  wire sig_halt_cmplt_reg_1;
+  wire sig_halt_cmplt_reg_0;
+  wire [0:0]sig_halt_cmplt_reg_1;
   wire sig_halt_cmplt_reg_2;
   wire sig_halt_reg;
   wire sig_halt_reg_dly2;
@@ -9125,9 +9545,12 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
   wire sig_next_addr_reg0;
   wire sig_push_dqual_reg;
   wire sig_push_err2wsc;
+  wire [0:0]sig_push_err2wsc_reg;
   wire sig_rst2all_stop_request;
   wire sig_s_h_halt_reg_reg_0;
   wire sig_s_h_halt_reg_reg_1;
+  wire sig_sec2prim_reset_reg2;
+  wire sig_sec2prim_rst_syncro2;
   wire sig_sec_neg_edge_plus_delay;
   wire sig_sec_neg_edge_plus_delay0__0;
   wire sig_secondary_aresetn_reg;
@@ -9142,18 +9565,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
   wire skid2dre_wlast;
 
   Zed_SPI_axi_dma_0_cdc_sync_5 \GEN_ASYNC_CMDSTAT_RESET.SEC2PRIM_RST_SYNCRO 
-       (.\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 (sig_sec_neg_edge_plus_delay),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_6 ),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_6 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_7 ),
+       (.\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ),
         .\GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9] (\GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9] ),
-        .\GEN_INDET_BTT.lsig_byte_cntr_reg[0] (scndry_out),
-        .\GEN_INDET_BTT.lsig_byte_cntr_reg[0]_0 (\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
-        .\GEN_INDET_BTT.lsig_byte_cntr_reg[0]_1 (\GEN_INDET_BTT.lsig_byte_cntr_reg[0]_0 ),
+        .\GEN_INDET_BTT.lsig_byte_cntr_reg[0] (\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .\GEN_INDET_BTT.lsig_byte_cntr_reg[0]_0 (\GEN_INDET_BTT.lsig_byte_cntr_reg[0]_0 ),
         .\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg (\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg ),
         .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] ),
         .Q(Q),
@@ -9162,15 +9582,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
         .lsig_end_of_cmd_reg(lsig_end_of_cmd_reg),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .m_axi_s2mm_awready(m_axi_s2mm_awready),
-        .prmry_in(sig_cmd_stat_rst_user_reg_n_cdc_from),
-        .scndry_out(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ),
+        .prmry_in(sig_sec_neg_edge_plus_delay),
+        .scndry_out(sig_sec2prim_reset_reg2),
         .sig_addr2wsc_calc_error(sig_addr2wsc_calc_error),
         .sig_addr_reg_full(sig_addr_reg_full),
         .\sig_byte_cntr_reg[0] (\sig_byte_cntr_reg[0] ),
+        .\sig_byte_cntr_reg[9] (sig_sec2prim_rst_syncro2),
         .sig_clr_dbc_reg(sig_clr_dbc_reg),
-        .sig_clr_dbc_reg_reg(sig_clr_dbc_reg_reg),
-        .sig_clr_dbeat_cntr0_out(sig_clr_dbeat_cntr0_out),
         .sig_cmd_empty_reg(sig_cmd_empty_reg),
+        .sig_cmd_stat_rst_user_reg_n_cdc_from(sig_cmd_stat_rst_user_reg_n_cdc_from),
         .sig_halt_reg_dly2(sig_halt_reg_dly2),
         .sig_halt_reg_dly3(sig_halt_reg_dly3),
         .sig_last_mmap_dbeat(sig_last_mmap_dbeat),
@@ -9180,6 +9600,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
         .sig_next_addr_reg0(sig_next_addr_reg0),
         .sig_push_dqual_reg(sig_push_dqual_reg),
         .sig_push_err2wsc(sig_push_err2wsc),
+        .sig_push_err2wsc_reg(sig_push_err2wsc_reg),
         .sig_stop_request(sig_stop_request),
         .sig_strb_skid_reg(sig_strb_skid_reg),
         .\sig_strb_skid_reg_reg[1] (\sig_strb_skid_reg_reg[1] ),
@@ -9190,25 +9611,25 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
         .skid2dre_wlast(skid2dre_wlast));
   Zed_SPI_axi_dma_0_cdc_sync_6 \GEN_ASYNC_CMDSTAT_RESET.SEC2PRIM_RST_SYNCRO_2 
        (.\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 (sig_secondary_aresetn_reg),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_8 ),
-        .\INFERRED_GEN.cnt_i_reg[0] (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
-        .prmry_in(sig_cmd_stat_rst_user_reg_n_cdc_from),
-        .scndry_out(scndry_out),
+        .scndry_out(sig_sec2prim_rst_syncro2),
+        .sig_cmd_stat_rst_user_reg_n_cdc_from(sig_cmd_stat_rst_user_reg_n_cdc_from),
         .sig_eop_sent_reg(sig_eop_sent_reg),
         .sig_eop_sent_reg0(sig_eop_sent_reg0),
         .sig_flush_db1(sig_flush_db1),
         .sig_flush_db1_reg(sig_flush_db1_reg),
         .sig_flush_db2(sig_flush_db2),
-        .sig_flush_db2_reg(sig_flush_db2_reg),
+        .sig_flush_db2_reg(sig_sec2prim_reset_reg2),
+        .sig_flush_db2_reg_0(sig_flush_db2_reg),
         .sig_ld_new_cmd_reg(sig_ld_new_cmd_reg),
         .sig_ld_new_cmd_reg_reg(sig_ld_new_cmd_reg_reg),
         .sig_push_dqual_reg(sig_push_dqual_reg));
   Zed_SPI_axi_dma_0_cdc_sync_7 \GEN_ASYNC_CMDSTAT_RESET.SYNC_PRIM2SEC_RST 
-       (.\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ),
-        .out(out),
+       (.out(out),
         .prmry_in(sig_cmd_stat_rst_user_reg_n_cdc_from),
         .rst(rst),
+        .scndry_out(scndry_out),
         .sig_init_reg(sig_init_reg),
         .sig_init_reg_reg(sig_init_reg_reg),
         .sig_init_reg_reg_0(sig_secondary_aresetn_reg));
@@ -9244,7 +9665,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
         .D(\GEN_ASYNC_CMDSTAT_RESET.sig_secondary_dly1_i_1_n_0 ),
         .Q(sig_secondary_dly1),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT4 #(
     .INIT(16'h2022)) 
     \GEN_ASYNC_CMDSTAT_RESET.sig_secondary_dly2_i_1 
@@ -9270,12 +9691,12 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
         .Q(sig_cmd_stat_rst_user_reg_n_cdc_from),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hFFFFFFFF00C20000)) 
+    .INIT(64'hFFFFFFFF50040000)) 
     sig_halt_cmplt_i_1
-       (.I0(sig_addr_reg_empty),
-        .I1(sig_halt_cmplt_reg_0),
-        .I2(sig_addr2wsc_calc_error),
-        .I3(sig_halt_cmplt_reg_1),
+       (.I0(sig_halt_cmplt_reg_0),
+        .I1(sig_addr_reg_empty),
+        .I2(sig_halt_cmplt_reg_1),
+        .I3(sig_addr2wsc_calc_error),
         .I4(sig_halt_cmplt_reg_2),
         .I5(prmry_in),
         .O(sig_halt_cmplt_i_1_n_0));
@@ -9301,7 +9722,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_reset
         .D(sig_s_h_halt_reg_reg_1),
         .Q(sig_rst2all_stop_request),
         .R(sig_stream_rst));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT4 #(
     .INIT(16'hFFF4)) 
     sig_sec_neg_edge_plus_delay0
@@ -9322,39 +9743,32 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
     sig_tlast_out_reg_1,
     Q,
     sig_sm_ld_dre_cmd_reg,
-    \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_0 ,
-    \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 ,
-    \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 ,
-    \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ,
     sig_tlast_out_reg_2,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ,
     sig_tlast_out_reg_3,
     sig_dre2ibtt_eop,
     \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 ,
-    \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_1 ,
+    sig_dre2ibtt_tdata,
+    \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 ,
+    sig_dre2ibtt_tstrb,
     \INFERRED_GEN.cnt_i_reg[2] ,
     sig_flush_db2_reg_1,
     sig_stream_rst,
     m_axi_s2mm_aclk,
-    sig_flush_db1_reg_1,
     sig_flush_db2_reg_2,
+    sig_dre2scatter_tready,
+    D,
+    sig_dre_halted_reg_1,
+    sig_dre_halted_reg_2,
     sig_dre2ibtt_eop_reg_reg,
     lsig_pullreg_empty,
     \GEN_INCLUDE_DRE.lsig_pullreg_empty_reg ,
-    sig_dre_halted_reg_1,
     \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][0]_0 ,
     sig_sm_ld_dre_cmd,
-    sig_clr_dbc_reg,
     sig_scatter2dre_src_align,
     out,
-    \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ,
-    sig_sf_strt_addr_offset,
-    scndry_out,
-    sig_cmd_stat_rst_user_reg_n_cdc_from,
-    \GEN_INCLUDE_DRE.lsig_eop_reg_reg ,
     lsig_set_eop,
     sig_dre2ibtt_eop_reg_reg_0,
-    sig_dre_halted_reg_2,
+    sig_sf_strt_addr_offset,
     \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0] ,
     lsig_0ffset_cntr,
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ,
@@ -9364,10 +9778,9 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
     sig_scatter2drc_cmd_ready,
     SR,
     E,
-    D,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ,
-    \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ,
-    \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 ,
+    \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ,
     \GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9]_0 );
   output sig_flush_db1_reg_0;
   output sig_flush_db2_reg_0;
@@ -9377,39 +9790,32 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
   output sig_tlast_out_reg_1;
   output [0:0]Q;
   output sig_sm_ld_dre_cmd_reg;
-  output [1:0]\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_0 ;
-  output [8:0]\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 ;
-  output [8:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 ;
-  output \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ;
   output sig_tlast_out_reg_2;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
   output [0:0]sig_tlast_out_reg_3;
   output sig_dre2ibtt_eop;
   output [15:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 ;
-  output [1:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_1 ;
+  output [15:0]sig_dre2ibtt_tdata;
+  output [1:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 ;
+  output [1:0]sig_dre2ibtt_tstrb;
   output \INFERRED_GEN.cnt_i_reg[2] ;
   output sig_flush_db2_reg_1;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
-  input sig_flush_db1_reg_1;
   input sig_flush_db2_reg_2;
+  input sig_dre2scatter_tready;
+  input [8:0]D;
+  input sig_dre_halted_reg_1;
+  input sig_dre_halted_reg_2;
   input sig_dre2ibtt_eop_reg_reg;
   input lsig_pullreg_empty;
   input \GEN_INCLUDE_DRE.lsig_pullreg_empty_reg ;
-  input sig_dre_halted_reg_1;
   input \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][0]_0 ;
   input sig_sm_ld_dre_cmd;
-  input sig_clr_dbc_reg;
   input sig_scatter2dre_src_align;
   input [0:0]out;
-  input \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ;
-  input sig_sf_strt_addr_offset;
-  input scndry_out;
-  input sig_cmd_stat_rst_user_reg_n_cdc_from;
-  input \GEN_INCLUDE_DRE.lsig_eop_reg_reg ;
   input lsig_set_eop;
   input sig_dre2ibtt_eop_reg_reg_0;
-  input sig_dre_halted_reg_2;
+  input sig_sf_strt_addr_offset;
   input \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0] ;
   input lsig_0ffset_cntr;
   input \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ;
@@ -9419,28 +9825,23 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
   input sig_scatter2drc_cmd_ready;
   input [0:0]SR;
   input [0:0]E;
-  input [8:0]D;
+  input [8:0]\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
   input [0:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ;
-  input [0:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ;
-  input [8:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 ;
+  input [0:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ;
   input [0:0]\GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9]_0 ;
 
   wire [8:0]D;
   wire [0:0]E;
   wire [0:0]\FSM_sequential_sig_cmdcntl_sm_state_reg[0] ;
   wire [0:0]\FSM_sequential_sig_cmdcntl_sm_state_reg[0]_0 ;
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
   wire \GEN_DELAY_REG[0].sig_delay_data_reg_reg[0]0 ;
   wire [0:0]\GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9]_0 ;
   wire [9:0]\GEN_DELAY_REG[0].sig_delay_data_reg_reg[0]_2 ;
-  wire \GEN_INCLUDE_DRE.lsig_eop_reg_reg ;
-  wire \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ;
   wire \GEN_INCLUDE_DRE.lsig_pullreg_empty_reg ;
-  wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ;
+  wire [8:0]\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
   wire [9:0]\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 ;
+  wire [0:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ;
   wire [0:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ;
-  wire [0:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ;
-  wire [8:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 ;
   wire \GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][0] ;
   wire \GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][1] ;
   wire \GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][2] ;
@@ -9455,13 +9856,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
   wire \GEN_OUTPUT_REG[0].sig_output_data_reg[0][8]_i_1_n_0 ;
   wire \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0]0 ;
   wire \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][0]_0 ;
-  wire [1:0]\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_0 ;
-  wire [8:0]\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 ;
   wire \GEN_OUTPUT_REG[1].sig_output_data_reg[1][8]_i_1_n_0 ;
   wire \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1]0 ;
   wire [15:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 ;
-  wire [8:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 ;
-  wire [1:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_1 ;
+  wire [1:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 ;
   wire \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0] ;
   wire \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ;
   wire \INFERRED_GEN.cnt_i_reg[2] ;
@@ -9472,13 +9870,13 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
   wire lsig_set_eop;
   wire m_axi_s2mm_aclk;
   wire [0:0]out;
-  wire scndry_out;
-  wire sig_clr_dbc_reg;
-  wire sig_cmd_stat_rst_user_reg_n_cdc_from;
   wire sig_dre2ibtt_eop;
   wire sig_dre2ibtt_eop_reg_reg;
   wire sig_dre2ibtt_eop_reg_reg_0;
+  wire [15:0]sig_dre2ibtt_tdata;
+  wire [1:0]sig_dre2ibtt_tstrb;
   wire sig_dre2ibtt_tvalid;
+  wire sig_dre2scatter_tready;
   wire sig_dre_halted_i_1_n_0;
   wire sig_dre_halted_reg_0;
   wire sig_dre_halted_reg_1;
@@ -9488,8 +9886,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
   wire [7:0]\sig_final_mux_bus[0]_7 ;
   wire [7:0]\sig_final_mux_bus[1]_5 ;
   wire sig_final_mux_has_tlast;
+  wire sig_flush_db1_i_1_n_0;
   wire sig_flush_db1_reg_0;
-  wire sig_flush_db1_reg_1;
   wire sig_flush_db2_reg_0;
   wire sig_flush_db2_reg_1;
   wire sig_flush_db2_reg_2;
@@ -9591,91 +9989,80 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .D(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][9] ),
         .Q(\GEN_DELAY_REG[0].sig_delay_data_reg_reg[0]_2 [9]),
         .R(\GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9]_0 ));
-  LUT6 #(
-    .INIT(64'h0030001000300000)) 
+  LUT5 #(
+    .INIT(32'hF070F000)) 
     \GEN_INCLUDE_DRE.lsig_eop_reg_i_1 
-       (.I0(sig_tlast_out_reg_2),
-        .I1(scndry_out),
-        .I2(sig_cmd_stat_rst_user_reg_n_cdc_from),
-        .I3(\GEN_INCLUDE_DRE.lsig_eop_reg_reg ),
-        .I4(lsig_set_eop),
-        .I5(sig_dre2ibtt_eop_reg_reg_0),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ));
-  LUT6 #(
-    .INIT(64'h888800008A80AA00)) 
-    \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg[0]_i_1 
-       (.I0(sig_dre_halted_reg_1),
-        .I1(\GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ),
-        .I2(lsig_pullreg_empty),
-        .I3(sig_sf_strt_addr_offset),
-        .I4(\GEN_INCLUDE_DRE.lsig_pullreg_empty_reg ),
-        .I5(sig_tlast_out_reg_2),
-        .O(\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+       (.I0(sig_dre2ibtt_eop_reg_reg),
+        .I1(sig_tlast_out_reg_0),
+        .I2(sig_dre_halted_reg_1),
+        .I3(lsig_set_eop),
+        .I4(sig_dre2ibtt_eop_reg_reg_0),
+        .O(sig_tlast_out_reg_2));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT4 #(
     .INIT(16'h00F8)) 
     \GEN_INCLUDE_DRE.lsig_pullreg_empty_i_1 
-       (.I0(sig_dre2ibtt_eop_reg_reg),
-        .I1(sig_tlast_out_reg_0),
+       (.I0(sig_tlast_out_reg_0),
+        .I1(sig_dre2ibtt_eop_reg_reg),
         .I2(lsig_pullreg_empty),
         .I3(\GEN_INCLUDE_DRE.lsig_pullreg_empty_reg ),
         .O(sig_tlast_out_reg_1));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT5 #(
     .INIT(32'hAAAEAEAE)) 
     \GEN_INCLUDE_DRE.lsig_pushreg_full_i_1 
        (.I0(sig_sm_ld_dre_cmd),
         .I1(\GEN_INCLUDE_DRE.lsig_pullreg_empty_reg ),
         .I2(lsig_pullreg_empty),
-        .I3(sig_tlast_out_reg_0),
-        .I4(sig_dre2ibtt_eop_reg_reg),
+        .I3(sig_dre2ibtt_eop_reg_reg),
+        .I4(sig_tlast_out_reg_0),
         .O(sig_sm_ld_dre_cmd_reg));
   FDRE \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][0] 
        (.C(m_axi_s2mm_aclk),
         .CE(E),
-        .D(D[0]),
+        .D(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 [0]),
         .Q(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [0]),
         .R(SR));
   FDRE \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][1] 
        (.C(m_axi_s2mm_aclk),
         .CE(E),
-        .D(D[1]),
+        .D(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 [1]),
         .Q(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [1]),
         .R(SR));
   FDRE \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][2] 
        (.C(m_axi_s2mm_aclk),
         .CE(E),
-        .D(D[2]),
+        .D(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 [2]),
         .Q(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [2]),
         .R(SR));
   FDRE \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][3] 
        (.C(m_axi_s2mm_aclk),
         .CE(E),
-        .D(D[3]),
+        .D(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 [3]),
         .Q(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [3]),
         .R(SR));
   FDRE \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][4] 
        (.C(m_axi_s2mm_aclk),
         .CE(E),
-        .D(D[4]),
+        .D(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 [4]),
         .Q(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [4]),
         .R(SR));
   FDRE \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][5] 
        (.C(m_axi_s2mm_aclk),
         .CE(E),
-        .D(D[5]),
+        .D(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 [5]),
         .Q(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [5]),
         .R(SR));
   FDRE \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][6] 
        (.C(m_axi_s2mm_aclk),
         .CE(E),
-        .D(D[6]),
+        .D(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 [6]),
         .Q(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [6]),
         .R(SR));
   FDRE \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][7] 
        (.C(m_axi_s2mm_aclk),
         .CE(E),
-        .D(D[7]),
+        .D(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 [7]),
         .Q(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [7]),
         .R(SR));
   FDRE \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][8] 
@@ -9687,67 +10074,67 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
   FDRE \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] 
        (.C(m_axi_s2mm_aclk),
         .CE(E),
-        .D(D[8]),
+        .D(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 [8]),
         .Q(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [9]),
         .R(SR));
   FDRE \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0] 
        (.C(m_axi_s2mm_aclk),
-        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
-        .D(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 [0]),
+        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ),
+        .D(D[0]),
         .Q(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][0] ),
         .R(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ));
   FDRE \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][1] 
        (.C(m_axi_s2mm_aclk),
-        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
-        .D(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 [1]),
+        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ),
+        .D(D[1]),
         .Q(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][1] ),
         .R(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ));
   FDRE \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][2] 
        (.C(m_axi_s2mm_aclk),
-        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
-        .D(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 [2]),
+        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ),
+        .D(D[2]),
         .Q(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][2] ),
         .R(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ));
   FDRE \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][3] 
        (.C(m_axi_s2mm_aclk),
-        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
-        .D(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 [3]),
+        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ),
+        .D(D[3]),
         .Q(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][3] ),
         .R(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ));
   FDRE \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][4] 
        (.C(m_axi_s2mm_aclk),
-        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
-        .D(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 [4]),
+        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ),
+        .D(D[4]),
         .Q(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][4] ),
         .R(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ));
   FDRE \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][5] 
        (.C(m_axi_s2mm_aclk),
-        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
-        .D(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 [5]),
+        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ),
+        .D(D[5]),
         .Q(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][5] ),
         .R(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ));
   FDRE \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][6] 
        (.C(m_axi_s2mm_aclk),
-        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
-        .D(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 [6]),
+        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ),
+        .D(D[6]),
         .Q(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][6] ),
         .R(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ));
   FDRE \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][7] 
        (.C(m_axi_s2mm_aclk),
-        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
-        .D(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 [7]),
+        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ),
+        .D(D[7]),
         .Q(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][7] ),
         .R(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ));
   FDRE \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] 
        (.C(m_axi_s2mm_aclk),
-        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
+        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ),
         .D(1'b1),
         .Q(Q),
         .R(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ));
   FDRE \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] 
        (.C(m_axi_s2mm_aclk),
-        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
-        .D(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 [8]),
+        .CE(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 ),
+        .D(D[8]),
         .Q(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][9] ),
         .R(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ));
   LUT6 #(
@@ -9774,7 +10161,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .D(\GEN_MUXFARM_16.sig_shift_case_reg_i_1_n_0 ),
         .Q(sig_shift_case_reg),
         .R(sig_stream_rst));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[0].sig_output_data_reg[0][0]_i_1 
@@ -9782,7 +10169,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [0]),
         .O(\sig_final_mux_bus[0]_7 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[0].sig_output_data_reg[0][1]_i_1 
@@ -9790,7 +10177,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [1]),
         .O(\sig_final_mux_bus[0]_7 [1]));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[0].sig_output_data_reg[0][2]_i_1 
@@ -9798,7 +10185,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [2]),
         .O(\sig_final_mux_bus[0]_7 [2]));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[0].sig_output_data_reg[0][3]_i_1 
@@ -9806,7 +10193,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [3]),
         .O(\sig_final_mux_bus[0]_7 [3]));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[0].sig_output_data_reg[0][4]_i_1 
@@ -9814,7 +10201,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [4]),
         .O(\sig_final_mux_bus[0]_7 [4]));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[0].sig_output_data_reg[0][5]_i_1 
@@ -9822,7 +10209,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [5]),
         .O(\sig_final_mux_bus[0]_7 [5]));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[0].sig_output_data_reg[0][6]_i_1 
@@ -9830,7 +10217,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [6]),
         .O(\sig_final_mux_bus[0]_7 [6]));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[0].sig_output_data_reg[0][7]_i_1 
@@ -9855,7 +10242,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I2(\GEN_DELAY_REG[0].sig_delay_data_reg_reg[0]_2 [8]),
         .I3(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][0]_0 ),
         .O(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0]0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[0].sig_output_data_reg[0][8]_i_3 
@@ -9867,57 +10254,57 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0]0 ),
         .D(\sig_final_mux_bus[0]_7 [0]),
-        .Q(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [0]),
+        .Q(sig_dre2ibtt_tdata[0]),
         .R(\GEN_OUTPUT_REG[0].sig_output_data_reg[0][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][1] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0]0 ),
         .D(\sig_final_mux_bus[0]_7 [1]),
-        .Q(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [1]),
+        .Q(sig_dre2ibtt_tdata[1]),
         .R(\GEN_OUTPUT_REG[0].sig_output_data_reg[0][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][2] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0]0 ),
         .D(\sig_final_mux_bus[0]_7 [2]),
-        .Q(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [2]),
+        .Q(sig_dre2ibtt_tdata[2]),
         .R(\GEN_OUTPUT_REG[0].sig_output_data_reg[0][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][3] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0]0 ),
         .D(\sig_final_mux_bus[0]_7 [3]),
-        .Q(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [3]),
+        .Q(sig_dre2ibtt_tdata[3]),
         .R(\GEN_OUTPUT_REG[0].sig_output_data_reg[0][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][4] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0]0 ),
         .D(\sig_final_mux_bus[0]_7 [4]),
-        .Q(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [4]),
+        .Q(sig_dre2ibtt_tdata[4]),
         .R(\GEN_OUTPUT_REG[0].sig_output_data_reg[0][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][5] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0]0 ),
         .D(\sig_final_mux_bus[0]_7 [5]),
-        .Q(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [5]),
+        .Q(sig_dre2ibtt_tdata[5]),
         .R(\GEN_OUTPUT_REG[0].sig_output_data_reg[0][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][6] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0]0 ),
         .D(\sig_final_mux_bus[0]_7 [6]),
-        .Q(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [6]),
+        .Q(sig_dre2ibtt_tdata[6]),
         .R(\GEN_OUTPUT_REG[0].sig_output_data_reg[0][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][7] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0]0 ),
         .D(\sig_final_mux_bus[0]_7 [7]),
-        .Q(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [7]),
+        .Q(sig_dre2ibtt_tdata[7]),
         .R(\GEN_OUTPUT_REG[0].sig_output_data_reg[0][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0]0 ),
         .D(\sig_final_mux_bus[0]_6 ),
-        .Q(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [8]),
+        .Q(sig_dre2ibtt_tstrb[0]),
         .R(\GEN_OUTPUT_REG[0].sig_output_data_reg[0][8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[1].sig_output_data_reg[1][0]_i_1 
@@ -9925,7 +10312,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][0] ),
         .O(\sig_final_mux_bus[1]_5 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[1].sig_output_data_reg[1][1]_i_1 
@@ -9933,7 +10320,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][1] ),
         .O(\sig_final_mux_bus[1]_5 [1]));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[1].sig_output_data_reg[1][2]_i_1 
@@ -9941,7 +10328,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][2] ),
         .O(\sig_final_mux_bus[1]_5 [2]));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[1].sig_output_data_reg[1][3]_i_1 
@@ -9949,7 +10336,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][3] ),
         .O(\sig_final_mux_bus[1]_5 [3]));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[1].sig_output_data_reg[1][4]_i_1 
@@ -9957,7 +10344,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][4] ),
         .O(\sig_final_mux_bus[1]_5 [4]));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[1].sig_output_data_reg[1][5]_i_1 
@@ -9965,7 +10352,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][5] ),
         .O(\sig_final_mux_bus[1]_5 [5]));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[1].sig_output_data_reg[1][6]_i_1 
@@ -9973,7 +10360,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I1(sig_shift_case_reg),
         .I2(\GEN_INPUT_REG[1].sig_input_data_reg_reg_n_0_[1][6] ),
         .O(\sig_final_mux_bus[1]_5 [6]));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[1].sig_output_data_reg[1][7]_i_1 
@@ -9998,7 +10385,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .I2(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]_1 [8]),
         .I3(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][0]_0 ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1]0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_OUTPUT_REG[1].sig_output_data_reg[1][8]_i_3 
@@ -10010,55 +10397,55 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1]0 ),
         .D(\sig_final_mux_bus[1]_5 [0]),
-        .Q(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [0]),
+        .Q(sig_dre2ibtt_tdata[8]),
         .R(\GEN_OUTPUT_REG[1].sig_output_data_reg[1][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][1] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1]0 ),
         .D(\sig_final_mux_bus[1]_5 [1]),
-        .Q(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [1]),
+        .Q(sig_dre2ibtt_tdata[9]),
         .R(\GEN_OUTPUT_REG[1].sig_output_data_reg[1][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][2] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1]0 ),
         .D(\sig_final_mux_bus[1]_5 [2]),
-        .Q(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [2]),
+        .Q(sig_dre2ibtt_tdata[10]),
         .R(\GEN_OUTPUT_REG[1].sig_output_data_reg[1][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][3] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1]0 ),
         .D(\sig_final_mux_bus[1]_5 [3]),
-        .Q(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [3]),
+        .Q(sig_dre2ibtt_tdata[11]),
         .R(\GEN_OUTPUT_REG[1].sig_output_data_reg[1][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][4] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1]0 ),
         .D(\sig_final_mux_bus[1]_5 [4]),
-        .Q(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [4]),
+        .Q(sig_dre2ibtt_tdata[12]),
         .R(\GEN_OUTPUT_REG[1].sig_output_data_reg[1][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][5] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1]0 ),
         .D(\sig_final_mux_bus[1]_5 [5]),
-        .Q(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [5]),
+        .Q(sig_dre2ibtt_tdata[13]),
         .R(\GEN_OUTPUT_REG[1].sig_output_data_reg[1][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][6] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1]0 ),
         .D(\sig_final_mux_bus[1]_5 [6]),
-        .Q(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [6]),
+        .Q(sig_dre2ibtt_tdata[14]),
         .R(\GEN_OUTPUT_REG[1].sig_output_data_reg[1][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1]0 ),
         .D(\sig_final_mux_bus[1]_5 [7]),
-        .Q(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [7]),
+        .Q(sig_dre2ibtt_tdata[15]),
         .R(\GEN_OUTPUT_REG[1].sig_output_data_reg[1][8]_i_1_n_0 ));
   FDRE \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1]0 ),
         .D(\sig_pass_mux_bus[1]_4 ),
-        .Q(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [8]),
+        .Q(sig_dre2ibtt_tstrb[1]),
         .R(\GEN_OUTPUT_REG[1].sig_output_data_reg[1][8]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h0080000000808080)) 
@@ -10073,139 +10460,117 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][0]_i_1 
-       (.I0(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [0]),
+       (.I0(sig_dre2ibtt_tdata[0]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [0]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][10]_i_1 
-       (.I0(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [2]),
+       (.I0(sig_dre2ibtt_tdata[10]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [10]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][11]_i_1 
-       (.I0(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [3]),
+       (.I0(sig_dre2ibtt_tdata[11]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [11]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][12]_i_1 
-       (.I0(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [4]),
+       (.I0(sig_dre2ibtt_tdata[12]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [12]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][13]_i_1 
-       (.I0(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [5]),
+       (.I0(sig_dre2ibtt_tdata[13]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [13]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][14]_i_1 
-       (.I0(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [6]),
+       (.I0(sig_dre2ibtt_tdata[14]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [14]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][15]_i_1 
-       (.I0(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [7]),
+       (.I0(sig_dre2ibtt_tdata[15]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [15]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][1]_i_1 
-       (.I0(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [1]),
+       (.I0(sig_dre2ibtt_tdata[1]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [1]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][2]_i_1 
-       (.I0(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [2]),
+       (.I0(sig_dre2ibtt_tdata[2]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [2]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][3]_i_1 
-       (.I0(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [3]),
+       (.I0(sig_dre2ibtt_tdata[3]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [3]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][4]_i_1 
-       (.I0(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [4]),
+       (.I0(sig_dre2ibtt_tdata[4]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [4]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][5]_i_1 
-       (.I0(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [5]),
+       (.I0(sig_dre2ibtt_tdata[5]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [5]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][6]_i_1 
-       (.I0(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [6]),
+       (.I0(sig_dre2ibtt_tdata[6]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [6]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][7]_i_1 
-       (.I0(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [7]),
+       (.I0(sig_dre2ibtt_tdata[7]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [7]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][8]_i_1 
-       (.I0(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [0]),
+       (.I0(sig_dre2ibtt_tdata[8]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [8]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg[1][9]_i_1 
-       (.I0(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [1]),
+       (.I0(sig_dre2ibtt_tdata[9]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
         .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 [9]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg[1][0]_i_1 
-       (.I0(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [8]),
+       (.I0(sig_dre2ibtt_tstrb[0]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
-        .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_1 [0]));
+        .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [0]));
   LUT2 #(
     .INIT(4'h8)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg[1][1]_i_1 
-       (.I0(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [8]),
+       (.I0(sig_dre2ibtt_tstrb[1]),
         .I1(\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
-        .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_1 [1]));
-  LUT4 #(
-    .INIT(16'h0888)) 
-    \sig_byte_cntr[3]_i_2 
-       (.I0(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [8]),
-        .I1(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [8]),
-        .I2(sig_dre2ibtt_eop_reg_reg),
-        .I3(sig_clr_dbc_reg),
-        .O(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_0 [1]));
-  LUT4 #(
-    .INIT(16'h0666)) 
-    \sig_byte_cntr[3]_i_3 
-       (.I0(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 [8]),
-        .I1(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [8]),
-        .I2(sig_dre2ibtt_eop_reg_reg),
-        .I3(sig_clr_dbc_reg),
-        .O(\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_0 [0]));
-  LUT2 #(
-    .INIT(4'h8)) 
-    sig_clr_dbc_reg_i_2
-       (.I0(sig_tlast_out_reg_0),
-        .I1(sig_dre2ibtt_eop_reg_reg),
-        .O(sig_tlast_out_reg_2));
+        .O(\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 [1]));
   LUT3 #(
     .INIT(8'h80)) 
     sig_dre2ibtt_eop_reg_i_1
        (.I0(sig_dre2ibtt_eop_reg_reg_0),
-        .I1(sig_dre2ibtt_eop_reg_reg),
-        .I2(sig_tlast_out_reg_0),
+        .I1(sig_tlast_out_reg_0),
+        .I2(sig_dre2ibtt_eop_reg_reg),
         .O(sig_dre2ibtt_eop));
   LUT5 #(
     .INIT(32'h5555FDDD)) 
@@ -10250,12 +10615,22 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre
         .D(sig_dre_tvalid_i_i_1_n_0),
         .Q(sig_dre2ibtt_tvalid),
         .R(1'b0));
+  LUT6 #(
+    .INIT(64'h0000E200E200E200)) 
+    sig_flush_db1_i_1
+       (.I0(sig_flush_db1_reg_0),
+        .I1(sig_dre2scatter_tready),
+        .I2(D[8]),
+        .I3(sig_dre_halted_reg_1),
+        .I4(sig_flush_db2_reg_0),
+        .I5(sig_dre_halted_reg_2),
+        .O(sig_flush_db1_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
     sig_flush_db1_reg
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(sig_flush_db1_reg_1),
+        .D(sig_flush_db1_i_1_n_0),
         .Q(sig_flush_db1_reg_0),
         .R(1'b0));
   FDRE #(
@@ -10342,7 +10717,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
   output [24:0]sts_received_i_reg_0;
   output sig_inhibit_rdy_n_reg;
   output [31:0]m_axi_s2mm_awaddr;
-  output [4:0]m_axi_s2mm_awlen;
+  output [7:0]m_axi_s2mm_awlen;
   output [31:0]m_axi_s2mm_wdata;
   output [3:0]m_axi_s2mm_wstrb;
   output prmry_in;
@@ -10374,20 +10749,23 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
   wire \GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/sig_init_done ;
   wire \GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO/sig_init_reg ;
   wire \GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO/sig_wr_fifo ;
-  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_14 ;
-  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_15 ;
-  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_16 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_13 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_17 ;
-  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_52 ;
-  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_53 ;
-  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_54 ;
-  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_55 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_18 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_19 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_20 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_21 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_56 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_57 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_58 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_59 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_60 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_61 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_62 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_63 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_64 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_65 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_66 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_67 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_68 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_69 ;
@@ -10397,46 +10775,51 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_73 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_74 ;
   wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_75 ;
-  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_9 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_76 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_77 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_78 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_79 ;
+  wire \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_80 ;
   wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/p_0_in11_in ;
   wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/sig_dre_halted ;
   wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/sig_flush_db1 ;
   wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/sig_flush_db2 ;
-  wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_85 ;
-  wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_86 ;
-  wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_87 ;
+  wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_100 ;
   wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_88 ;
   wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_89 ;
+  wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_90 ;
   wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_91 ;
-  wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_92 ;
   wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_93 ;
   wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_94 ;
+  wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_95 ;
+  wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_96 ;
+  wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_97 ;
+  wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_98 ;
+  wire \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_99 ;
   wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_17 ;
   wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_18 ;
   wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_19 ;
   wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_20 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_22 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_23 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_25 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_27 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_28 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_29 ;
   wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_3 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_46 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_48 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_49 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_50 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_51 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_52 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_53 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_54 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_55 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_56 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_57 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_58 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_30 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_31 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_32 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_33 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_34 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_35 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_36 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_37 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_38 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_39 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_40 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_41 ;
+  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_42 ;
   wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_59 ;
   wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_60 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_61 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_62 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_63 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_64 ;
-  wire \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_65 ;
   wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_MSSAI_SKID_BUF/p_0_in5_in ;
   wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_MSSAI_SKID_BUF/sig_last_skid_reg ;
   wire [1:0]\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_MSSAI_SKID_BUF/sig_strb_skid_reg ;
@@ -10453,20 +10836,20 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
   wire I_CMD_STATUS_n_99;
   wire \I_DRE_CNTL_FIFO/sig_inhibit_rdy_n ;
   wire \I_DRE_CNTL_FIFO/sig_init_reg2 ;
-  wire I_RESET_n_10;
   wire I_RESET_n_11;
   wire I_RESET_n_12;
+  wire I_RESET_n_13;
   wire I_RESET_n_14;
   wire I_RESET_n_15;
   wire I_RESET_n_16;
-  wire I_RESET_n_17;
   wire I_RESET_n_18;
-  wire I_RESET_n_19;
+  wire I_RESET_n_20;
   wire I_RESET_n_21;
-  wire I_RESET_n_23;
   wire I_RESET_n_24;
-  wire I_RESET_n_27;
+  wire I_RESET_n_3;
   wire I_RESET_n_4;
+  wire I_RESET_n_5;
+  wire I_RESET_n_6;
   wire I_RESET_n_7;
   wire I_RESET_n_8;
   wire I_RESET_n_9;
@@ -10483,7 +10866,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
   wire I_WR_DATA_CNTL_n_53;
   wire I_WR_STATUS_CNTLR_n_39;
   wire I_WR_STATUS_CNTLR_n_43;
-  wire I_WR_STATUS_CNTLR_n_45;
   wire data_valid;
   wire [58:0]din;
   wire [0:0]dout;
@@ -10492,11 +10874,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
   wire lsig_end_of_cmd_reg;
   wire lsig_eop_reg;
   wire lsig_eop_reg_0;
-  wire lsig_first_dbeat;
   wire m_axi_s2mm_aclk;
   wire [31:0]m_axi_s2mm_awaddr;
   wire [0:0]m_axi_s2mm_awburst;
-  wire [4:0]m_axi_s2mm_awlen;
+  wire [7:0]m_axi_s2mm_awlen;
   wire m_axi_s2mm_awready;
   wire [0:0]m_axi_s2mm_awsize;
   wire m_axi_s2mm_awvalid;
@@ -10533,11 +10914,9 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
   wire sig_child_qual_first_of_2;
   wire sig_child_tag_reg0;
   wire sig_clr_dbc_reg;
-  wire sig_clr_dbeat_cntr0_out;
   wire sig_cmd2mstr_cmd_valid;
   wire [70:0]sig_cmd2mstr_command;
   wire sig_cmd_stat_rst_user;
-  wire sig_cmd_stat_rst_user_reg_n_cdc_from;
   wire sig_cmd_stat_rst_user_reg_n_cdc_from_reg;
   wire sig_csm_pop_child_cmd;
   wire sig_data2skid_wlast;
@@ -10575,7 +10954,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
   wire sig_mstr2data_calc_error;
   wire sig_mstr2data_cmd_last;
   wire sig_mstr2data_cmd_valid;
-  wire [4:0]sig_mstr2data_len;
+  wire [7:0]sig_mstr2data_len;
   wire [1:0]sig_mstr2data_saddr_lsb;
   wire sig_mstr2data_sequential;
   wire [3:0]sig_mstr2data_tag;
@@ -10597,12 +10976,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
   wire sig_push_err2wsc;
   wire sig_rst2all_stop_request;
   wire sig_s_h_halt_reg_reg;
-  wire sig_sec2prim_reset_reg2;
-  wire sig_sec2prim_rst_syncro2;
   wire sig_secondary_aresetn_reg;
   wire sig_sf2pcc_cmd_cmplt;
   wire sig_sf2pcc_packet_eop;
-  wire [6:0]sig_sf2pcc_xfer_bytes;
+  wire [10:0]sig_sf2pcc_xfer_bytes;
   wire sig_sf_strt_addr_offset;
   wire sig_skid2data_wready;
   wire sig_stop_request;
@@ -10612,7 +10989,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
   wire sig_wdc_status_going_full;
   wire [34:0]sig_wsc2stat_status;
   wire sig_wsc2stat_status_valid;
-  wire [4:0]sig_xfer_len;
   wire [15:0]skid2dre_wdata;
   wire skid2dre_wlast;
   wire [1:0]skid2dre_wstrb;
@@ -10637,93 +11013,92 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .sig_m_valid_out_reg_0(skid2dre_wvalid),
         .sig_mvalid_stop(sig_mvalid_stop),
         .sig_mvalid_stop_reg_reg_0(dre2skid_wready),
-        .sig_s_ready_out_reg_0(I_RESET_n_23),
+        .sig_s_ready_out_reg_0(I_RESET_n_20),
         .sig_sready_stop_reg_reg_0(I_WR_DATA_CNTL_n_44),
         .sig_stop_request(sig_stop_request),
         .\sig_strb_reg_out_reg[1]_0 (skid2dre_wstrb),
         .sig_stream_rst(sig_stream_rst),
         .skid2dre_wlast(skid2dre_wlast));
   Zed_SPI_axi_dma_0_axi_datamover_indet_btt \GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT 
-       (.CO(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_54 ),
-        .D({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_55 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_56 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_57 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_58 }),
+       (.CO(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_58 ),
+        .D({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_59 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_60 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_61 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_62 }),
         .DI({I_WR_DATA_CNTL_n_46,I_WR_DATA_CNTL_n_47}),
         .\GEN_INDET_BTT.lsig_byte_cntr_reg[3] (sig_data2wsc_bytes_rcvd[2:0]),
         .\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg (I_WR_STATUS_CNTLR_n_39),
-        .\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0]_0 (\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_46 ),
+        .\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0]_0 (\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_25 ),
         .\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0]_0 ({sig_dre2ibtt_tstrb[0],sig_dre2ibtt_tdata[7:0]}),
-        .\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg_reg[1][15]_0 ({\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_48 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_49 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_50 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_51 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_52 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_53 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_54 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_55 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_56 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_57 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_58 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_59 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_60 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_61 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_62 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_63 }),
-        .\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1]_0 ({\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_64 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_65 }),
-        .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_16 ),
-        .\INCLUDE_PACKING.lsig_first_dbeat_reg_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_14 ),
-        .O({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_67 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_68 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_69 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_70 }),
+        .\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_data_slice_reg_reg[1][15]_0 ({\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_27 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_28 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_29 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_30 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_31 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_32 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_33 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_34 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_35 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_36 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_37 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_38 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_39 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_40 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_41 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_42 }),
+        .\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1]_0 ({\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_59 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_60 }),
+        .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_19 ),
+        .\INCLUDE_PACKING.lsig_first_dbeat_reg_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_17 ),
+        .O({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_66 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_67 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_68 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_69 }),
         .Q({sig_dre2ibtt_tstrb[1],sig_dre2ibtt_tdata[15:8]}),
         .S(I_WR_DATA_CNTL_n_45),
-        .SR(I_RESET_n_9),
+        .SR({I_RESET_n_4,I_RESET_n_5}),
         .dout({sig_sf2pcc_packet_eop,sig_sf2pcc_cmd_cmplt,sig_sf2pcc_xfer_bytes}),
-        .empty(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_9 ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] (sig_xfer_len),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_71 ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_72 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_73 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_74 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_75 }),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_60 ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_61 ),
+        .empty(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_13 ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_74 ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_75 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_76 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_77 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_78 }),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_64 ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_65 ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_79 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_80 }),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_70 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_71 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_72 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_73 }),
         .lsig_0ffset_cntr(lsig_0ffset_cntr),
         .lsig_end_of_cmd_reg(lsig_end_of_cmd_reg),
         .lsig_eop_reg(lsig_eop_reg_0),
         .lsig_eop_reg_0(lsig_eop_reg),
-        .lsig_first_dbeat(lsig_first_dbeat),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(sig_ibtt2wdc_tvalid),
         .rd_en(sig_pop_xd_fifo),
-        .\sig_burst_dbeat_cntr_reg[0]_0 (I_RESET_n_11),
-        .\sig_byte_cntr_reg[3]_0 ({\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_22 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_23 }),
+        .\sig_burst_dbeat_cntr_reg[7]_0 (I_RESET_n_24),
         .sig_child_addr_cntr_lsh_reg(sig_child_addr_cntr_lsh_reg),
-        .\sig_child_addr_cntr_lsh_reg[3] ({\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_91 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_92 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_93 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_94 }),
-        .\sig_child_addr_cntr_lsh_reg[7] ({\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_86 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_87 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_88 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_89 }),
+        .\sig_child_addr_cntr_lsh_reg[11] ({\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_88 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_89 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_90 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_91 }),
+        .\sig_child_addr_cntr_lsh_reg[3] ({\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_93 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_94 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_95 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_96 }),
+        .\sig_child_addr_cntr_lsh_reg[7] ({\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_97 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_98 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_99 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_100 }),
         .sig_child_qual_first_of_2(sig_child_qual_first_of_2),
-        .sig_child_qual_first_of_2_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_59 ),
+        .sig_child_qual_first_of_2_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_63 ),
         .sig_clr_dbc_reg(sig_clr_dbc_reg),
-        .sig_clr_dbeat_cntr0_out(sig_clr_dbeat_cntr0_out),
         .sig_csm_pop_child_cmd(sig_csm_pop_child_cmd),
         .\sig_data_reg_out_reg[33] ({sig_ibtt2wdc_stbs_asserted,sig_ibtt2wdc_tdata}),
         .sig_dre2ibtt_eop(sig_dre2ibtt_eop),
         .sig_dre2ibtt_tlast(sig_dre2ibtt_tlast),
         .sig_dre2ibtt_tvalid(sig_dre2ibtt_tvalid),
         .sig_dre_halted(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/sig_dre_halted ),
-        .sig_dre_halted_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_17 ),
-        .sig_dre_tvalid_i_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_15 ),
+        .sig_dre_halted_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_21 ),
+        .sig_dre_tvalid_i_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_18 ),
         .sig_init_reg(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO/sig_init_reg ),
-        .sig_m_valid_out_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_52 ),
-        .sig_m_valid_out_reg_0(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_53 ),
-        .sig_m_valid_out_reg_1(I_RESET_n_27),
+        .sig_m_valid_out_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_56 ),
+        .sig_m_valid_out_reg_0(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_57 ),
         .sig_next_cmd_cmplt_reg(sig_next_cmd_cmplt_reg),
         .sig_pcc2sf_xfer_ready(sig_pcc2sf_xfer_ready),
         .sig_sf_strt_addr_offset(sig_sf_strt_addr_offset),
         .\sig_strb_reg_out_reg[3] (sig_ibtt2wdc_tstrb),
-        .sig_stream_rst(sig_stream_rst));
+        .sig_stream_rst(sig_stream_rst),
+        .sig_tlast_out_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_20 ));
   Zed_SPI_axi_dma_0_axi_datamover_ibttcc \GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC 
-       (.D(sig_xfer_len),
-        .\FSM_onehot_sig_csm_state_reg[1]_0 ({sig_sf2pcc_packet_eop,sig_sf2pcc_cmd_cmplt,sig_sf2pcc_xfer_bytes}),
-        .\FSM_onehot_sig_csm_state_reg[1]_1 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_61 ),
-        .\FSM_onehot_sig_csm_state_reg[4]_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_60 ),
-        .O({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_67 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_68 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_69 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_70 }),
+       (.\FSM_onehot_sig_csm_state_reg[1]_0 ({sig_sf2pcc_packet_eop,sig_sf2pcc_cmd_cmplt,sig_sf2pcc_xfer_bytes}),
+        .\FSM_onehot_sig_csm_state_reg[1]_1 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_65 ),
+        .\FSM_onehot_sig_csm_state_reg[4]_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_64 ),
+        .O({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_66 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_67 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_68 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_69 }),
         .SR(sig_child_tag_reg0),
         .data_valid(sig_cmd2mstr_cmd_valid),
         .dout({sig_cmd2mstr_command[70:35],sig_cmd2mstr_command[33],sig_cmd2mstr_command[26],sig_cmd2mstr_command[24:0]}),
-        .empty(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_9 ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][3] ({\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_91 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_92 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_93 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_94 }),
+        .empty(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_13 ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][3] ({\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_93 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_94 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_95 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_96 }),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ({\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_97 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_98 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_99 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_100 }),
         .in({sig_mstr2data_calc_error,sig_mstr2addr_burst,sig_mstr2data_len,sig_mstr2addr_addr,sig_mstr2data_saddr_lsb}),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .rd_en(\I_CMD_FIFO/sig_async_rd_fifo ),
-        .\sig_child_addr_cntr_lsh_reg[11]_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_71 ),
+        .\sig_child_addr_cntr_lsh_reg[11]_0 ({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_75 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_76 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_77 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_78 }),
+        .\sig_child_addr_cntr_lsh_reg[15]_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_74 ),
         .\sig_child_addr_cntr_lsh_reg[1]_0 (sig_child_addr_cntr_lsh_reg),
-        .\sig_child_addr_cntr_lsh_reg[7]_0 ({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_72 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_73 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_74 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_75 }),
-        .\sig_child_addr_reg_reg[7]_0 ({\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_86 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_87 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_88 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_89 }),
+        .\sig_child_addr_cntr_lsh_reg[7]_0 ({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_70 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_71 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_72 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_73 }),
+        .\sig_child_addr_reg_reg[11]_0 ({\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_88 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_89 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_90 ,\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_91 }),
         .sig_child_qual_first_of_2(sig_child_qual_first_of_2),
         .sig_cmd2addr_valid_reg_0(I_ADDR_CNTL_n_1),
         .sig_cmd2data_valid_reg_0(I_WR_DATA_CNTL_n_0),
         .sig_csm_pop_child_cmd(sig_csm_pop_child_cmd),
         .sig_csm_pop_sf_fifo_reg_0(sig_pop_xd_fifo),
-        .sig_first_realigner_cmd_reg_0(\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_85 ),
         .sig_inhibit_rdy_n(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/sig_inhibit_rdy_n ),
         .sig_inhibit_rdy_n_0(\GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/sig_inhibit_rdy_n ),
         .sig_inhibit_rdy_n_1(\I_DRE_CNTL_FIFO/sig_inhibit_rdy_n ),
@@ -10736,41 +11111,36 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .sig_psm_pop_input_cmd(sig_psm_pop_input_cmd),
         .\sig_realign_strt_offset_reg_reg[0]_0 ({sig_mstr2dre_sf_strt_offset,sig_mstr2dre_calc_error,sig_mstr2dre_cmd_cmplt,sig_mstr2dre_eof,sig_mstr2dre_btt,sig_mstr2dre_dre_dest_align}),
         .\sig_realign_strt_offset_reg_reg[0]_1 (\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_3 ),
-        .\sig_realigner_btt2_reg[24]_0 (I_WR_STATUS_CNTLR_n_45),
         .sig_wr_fifo(\GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/sig_wr_fifo ),
         .sig_xfer_cmd_cmplt_reg_reg_0({sig_mstr2data_cmd_last,sig_mstr2data_sequential,sig_mstr2data_tag}),
-        .sig_xfer_is_seq_reg_reg_0(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_59 ),
-        .\sig_xfer_len_reg_reg[0]_0 (I_WR_DATA_CNTL_n_50));
+        .sig_xfer_is_seq_reg_reg_0(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_63 ),
+        .sig_xfer_is_seq_reg_reg_1(I_WR_DATA_CNTL_n_50),
+        .\sig_xfer_len_reg_reg[3]_0 ({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_79 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_80 }));
   Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign \GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER 
        (.D(skid2dre_wdata),
         .E(sig_data_reg_out_en),
         .FIFO_Full_reg(\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_3 ),
-        .\GEN_INCLUDE_DRE.lsig_eop_reg_reg_0 (sig_sec2prim_reset_reg2),
-        .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_17 ),
-        .\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8] ({\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_22 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_23 }),
-        .\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_0 ({sig_dre2ibtt_tstrb[0],sig_dre2ibtt_tdata[7:0]}),
-        .\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7] ({\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_48 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_49 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_50 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_51 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_52 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_53 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_54 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_55 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_56 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_57 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_58 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_59 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_60 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_61 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_62 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_63 }),
-        .\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8] ({sig_dre2ibtt_tstrb[1],sig_dre2ibtt_tdata[15:8]}),
-        .\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 ({\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_64 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_65 }),
-        .\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_14 ),
-        .\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_16 ),
+        .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_20 ),
+        .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_21 ),
+        .\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7] ({\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_27 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_28 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_29 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_30 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_31 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_32 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_33 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_34 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_35 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_36 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_37 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_38 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_39 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_40 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_41 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_42 }),
+        .\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8] ({\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_59 ,\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_60 }),
+        .\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_17 ),
+        .\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_19 ),
         .Q(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/p_0_in11_in ),
-        .SR(I_RESET_n_10),
+        .SR(I_RESET_n_8),
         .in({sig_mstr2dre_sf_strt_offset,sig_mstr2dre_calc_error,sig_mstr2dre_cmd_cmplt,sig_mstr2dre_eof,sig_mstr2dre_btt,sig_mstr2dre_dre_dest_align}),
         .lsig_0ffset_cntr(lsig_0ffset_cntr),
         .lsig_absorb2tlast(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/lsig_absorb2tlast ),
         .lsig_eop_reg(lsig_eop_reg),
-        .lsig_first_dbeat(lsig_first_dbeat),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_MSSAI_SKID_BUF/p_0_in5_in ),
-        .scndry_out(sig_sec2prim_rst_syncro2),
-        .sig_clr_dbc_reg(sig_clr_dbc_reg),
-        .sig_cmd_empty_reg(I_RESET_n_24),
-        .sig_cmd_stat_rst_user_reg_n_cdc_from(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .sig_cmd_empty_reg(I_RESET_n_21),
         .\sig_data_reg_out_reg[15] (p_0_in2_in),
         .sig_dre2ibtt_eop(sig_dre2ibtt_eop),
-        .sig_dre2ibtt_eop_reg_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_15 ),
+        .sig_dre2ibtt_eop_reg_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_18 ),
+        .sig_dre2ibtt_tdata(sig_dre2ibtt_tdata),
         .sig_dre2ibtt_tlast(sig_dre2ibtt_tlast),
+        .sig_dre2ibtt_tstrb(sig_dre2ibtt_tstrb),
         .sig_dre2ibtt_tvalid(sig_dre2ibtt_tvalid),
         .sig_dre_halted(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/sig_dre_halted ),
         .sig_eop_halt_xfer_reg(\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_17 ),
@@ -10778,7 +11148,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .sig_eop_sent_reg0(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_eop_sent_reg0 ),
         .sig_flush_db1(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/sig_flush_db1 ),
         .sig_flush_db2(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/sig_flush_db2 ),
-        .sig_flush_db2_reg(I_RESET_n_4),
+        .sig_flush_db2_reg(I_RESET_n_3),
         .sig_inhibit_rdy_n(\I_DRE_CNTL_FIFO/sig_inhibit_rdy_n ),
         .sig_init_done(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/sig_init_done ),
         .sig_init_done_0(\GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/sig_init_done ),
@@ -10789,20 +11159,20 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .sig_init_reg2_reg_0(\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_19 ),
         .sig_init_reg2_reg_1(\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_20 ),
         .sig_last_skid_reg(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_MSSAI_SKID_BUF/sig_last_skid_reg ),
-        .sig_last_skid_reg_reg(I_RESET_n_15),
+        .sig_last_skid_reg_reg(I_RESET_n_12),
         .sig_m_valid_out_reg(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_strm_tvalid ),
         .sig_m_valid_out_reg_0(skid2dre_wvalid),
-        .\sig_max_first_increment_reg[0] (I_RESET_n_27),
+        .\sig_max_first_increment_reg[0] (I_RESET_n_24),
         .\sig_mssa_index_reg_out_reg[0] (skid2dre_wstrb),
         .sig_mstr2dre_cmd_valid(sig_mstr2dre_cmd_valid),
         .sig_s_ready_out_reg(dre2skid_wready),
         .sig_sf_strt_addr_offset(sig_sf_strt_addr_offset),
         .sig_strb_skid_reg(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_MSSAI_SKID_BUF/sig_strb_skid_reg ),
-        .\sig_strb_skid_reg_reg[0] (I_RESET_n_16),
-        .\sig_strb_skid_reg_reg[1] (I_RESET_n_17),
+        .\sig_strb_skid_reg_reg[0] (I_RESET_n_13),
+        .\sig_strb_skid_reg_reg[1] (I_RESET_n_14),
         .sig_stream_rst(sig_stream_rst),
         .sig_strm_tlast(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_strm_tlast ),
-        .sig_tlast_out_reg(\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_46 ),
+        .sig_tlast_out_reg(\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_25 ),
         .skid2dre_wlast(skid2dre_wlast));
   Zed_SPI_axi_dma_0_axi_datamover_addr_cntl I_ADDR_CNTL
        (.FIFO_Full_reg(I_ADDR_CNTL_n_1),
@@ -10826,7 +11196,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .sig_stream_rst(sig_stream_rst),
         .sig_wr_fifo(\GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/sig_wr_fifo ));
   Zed_SPI_axi_dma_0_axi_datamover_cmd_status I_CMD_STATUS
-       (.\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg (I_RESET_n_27),
+       (.\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg (I_RESET_n_24),
         .SR(I_CMD_STATUS_n_98),
         .data_valid(sig_cmd2mstr_cmd_valid),
         .din(din),
@@ -10851,7 +11221,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .sig_init_done(\GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/sig_init_done ),
         .sig_init_done_reg(\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_19 ),
         .sig_init_reg(\I_CMD_FIFO/sig_init_reg ),
-        .sig_init_reg2_reg(I_RESET_n_12),
+        .sig_init_reg2_reg(I_RESET_n_9),
         .sig_next_calc_error_reg_reg(I_WR_DATA_CNTL_n_53),
         .sig_secondary_aresetn_reg(sig_secondary_aresetn_reg),
         .sig_stream_rst(sig_stream_rst),
@@ -10859,24 +11229,21 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .sts_received_i_reg(sts_received_i_reg),
         .sts_received_i_reg_0(sts_received_i_reg_0));
   Zed_SPI_axi_dma_0_axi_datamover_reset I_RESET
-       (.\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 (sig_sec2prim_reset_reg2),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (I_RESET_n_8),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 (I_RESET_n_11),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 (sig_prim2sec_rst_reg2_n),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 (I_RESET_n_15),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 (I_RESET_n_16),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 (I_RESET_n_17),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_6 (I_RESET_n_23),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_7 (I_RESET_n_24),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_8 (I_RESET_n_27),
+       (.\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 (I_RESET_n_7),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 (I_RESET_n_12),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 (I_RESET_n_13),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 (I_RESET_n_14),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 (I_RESET_n_20),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 (I_RESET_n_21),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 (I_RESET_n_24),
         .\GEN_ASYNC_CMDSTAT_RESET.sig_secondary_aresetn_reg_reg_0 (\GEN_ASYNC_CMDSTAT_RESET.sig_secondary_aresetn_reg_reg ),
         .\GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9] (\GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER_n_17 ),
         .\GEN_INDET_BTT.lsig_byte_cntr_reg[0] (sig_ibtt2wdc_tvalid),
         .\GEN_INDET_BTT.lsig_byte_cntr_reg[0]_0 (I_WR_STATUS_CNTLR_n_39),
-        .\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg ({I_RESET_n_18,I_RESET_n_19}),
-        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] (I_RESET_n_10),
+        .\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg ({I_RESET_n_15,I_RESET_n_16}),
+        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] (I_RESET_n_8),
         .Q(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/p_0_in11_in ),
-        .SR(I_RESET_n_7),
+        .SR({I_RESET_n_4,I_RESET_n_5}),
         .lsig_absorb2tlast(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/lsig_absorb2tlast ),
         .lsig_end_of_cmd_reg(lsig_end_of_cmd_reg),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
@@ -10884,42 +11251,40 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .out(out),
         .prmry_in(prmry_in),
         .rst(sig_cmd_stat_rst_user),
-        .scndry_out(sig_sec2prim_rst_syncro2),
+        .scndry_out(sig_prim2sec_rst_reg2_n),
         .sig_addr2wsc_calc_error(sig_addr2wsc_calc_error),
         .sig_addr_reg_empty(sig_addr_reg_empty),
         .sig_addr_reg_full(sig_addr_reg_full),
-        .\sig_byte_cntr_reg[0] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_15 ),
+        .\sig_byte_cntr_reg[0] (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_18 ),
         .sig_clr_dbc_reg(sig_clr_dbc_reg),
-        .sig_clr_dbc_reg_reg(I_RESET_n_9),
-        .sig_clr_dbeat_cntr0_out(sig_clr_dbeat_cntr0_out),
         .sig_cmd_empty_reg(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_strm_tvalid ),
-        .sig_cmd_stat_rst_user_reg_n_cdc_from(sig_cmd_stat_rst_user_reg_n_cdc_from),
         .sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0(sig_cmd_stat_rst_user_reg_n_cdc_from_reg),
         .sig_eop_sent_reg(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_eop_sent_reg ),
         .sig_eop_sent_reg0(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/sig_eop_sent_reg0 ),
         .sig_flush_db1(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/sig_flush_db1 ),
-        .sig_flush_db1_reg(I_RESET_n_4),
+        .sig_flush_db1_reg(I_RESET_n_3),
         .sig_flush_db2(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK/sig_flush_db2 ),
-        .sig_flush_db2_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_17 ),
-        .sig_halt_cmplt_reg_0(sig_addr_posted_cntr_reg),
-        .sig_halt_cmplt_reg_1(I_WR_STATUS_CNTLR_n_43),
+        .sig_flush_db2_reg(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_21 ),
+        .sig_halt_cmplt_reg_0(I_WR_STATUS_CNTLR_n_43),
+        .sig_halt_cmplt_reg_1(sig_addr_posted_cntr_reg),
         .sig_halt_cmplt_reg_2(I_WR_DATA_CNTL_n_52),
         .sig_halt_reg(sig_halt_reg),
         .sig_halt_reg_dly2(sig_halt_reg_dly2),
         .sig_halt_reg_dly3(sig_halt_reg_dly3),
         .sig_init_reg(\I_CMD_FIFO/sig_init_reg ),
-        .sig_init_reg_reg(I_RESET_n_12),
+        .sig_init_reg_reg(I_RESET_n_9),
         .sig_last_mmap_dbeat(sig_last_mmap_dbeat),
         .sig_last_skid_reg(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_MSSAI_SKID_BUF/sig_last_skid_reg ),
         .sig_ld_new_cmd_reg(sig_ld_new_cmd_reg),
-        .sig_ld_new_cmd_reg_reg(I_RESET_n_21),
+        .sig_ld_new_cmd_reg_reg(I_RESET_n_18),
         .sig_mvalid_stop(sig_mvalid_stop),
         .sig_mvalid_stop_reg_reg(sig_data_reg_out0),
         .sig_next_addr_reg0(sig_next_addr_reg0),
         .sig_push_dqual_reg(sig_push_dqual_reg),
         .sig_push_err2wsc(sig_push_err2wsc),
+        .sig_push_err2wsc_reg(I_RESET_n_6),
         .sig_rst2all_stop_request(sig_rst2all_stop_request),
-        .sig_s_h_halt_reg_reg_0(I_RESET_n_14),
+        .sig_s_h_halt_reg_reg_0(I_RESET_n_11),
         .sig_s_h_halt_reg_reg_1(sig_s_h_halt_reg_reg),
         .sig_secondary_aresetn_reg(sig_secondary_aresetn_reg),
         .sig_stop_request(sig_stop_request),
@@ -10946,7 +11311,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .sig_last_skid_mux_out(sig_last_skid_mux_out),
         .sig_last_skid_reg(sig_last_skid_reg),
         .sig_m_valid_out_reg_0(I_WR_DATA_CNTL_n_51),
-        .sig_m_valid_out_reg_1(I_RESET_n_27),
+        .sig_m_valid_out_reg_1(I_RESET_n_24),
         .sig_next_calc_error_reg_reg(sig_ibtt2wdc_tvalid),
         .sig_next_calc_error_reg_reg_0(I_WR_DATA_CNTL_n_48),
         .sig_s_ready_out_reg_0(sig_skid2data_wready),
@@ -10955,20 +11320,20 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .\sig_strb_skid_reg_reg[3]_0 (sig_data2skid_wstrb),
         .sig_stream_rst(sig_stream_rst));
   Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl I_WR_DATA_CNTL
-       (.CO(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_54 ),
-        .D({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_55 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_56 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_57 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_58 }),
+       (.CO(\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_58 ),
+        .D({\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_59 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_60 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_61 ,\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_62 }),
         .DI({I_WR_DATA_CNTL_n_46,I_WR_DATA_CNTL_n_47}),
         .E(sig_good_strm_dbeat9_out),
         .FIFO_Full_reg(I_WR_DATA_CNTL_n_0),
         .\GEN_INDET_BTT.lsig_byte_cntr_reg[3]_0 (I_WR_STATUS_CNTLR_n_39),
         .\GEN_INDET_BTT.lsig_byte_cntr_reg[3]_1 (sig_skid2data_wready),
         .\GEN_INDET_BTT.lsig_byte_cntr_reg[3]_2 (sig_ibtt2wdc_stbs_asserted),
-        .\GEN_INDET_BTT.lsig_byte_cntr_reg[8]_0 ({I_RESET_n_18,I_RESET_n_19}),
-        .\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_53 ),
-        .\GEN_INDET_BTT.lsig_eop_reg_reg_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_52 ),
+        .\GEN_INDET_BTT.lsig_byte_cntr_reg[8]_0 ({I_RESET_n_15,I_RESET_n_16}),
+        .\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_57 ),
+        .\GEN_INDET_BTT.lsig_eop_reg_reg_0 (\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT_n_56 ),
         .Q(sig_strb_skid_reg),
         .S(I_WR_DATA_CNTL_n_45),
-        .SR(I_RESET_n_7),
+        .SR(I_RESET_n_6),
         .in({sig_data2wsc_eop,sig_data2wsc_bytes_rcvd[24],sig_data2wsc_bytes_rcvd[23],sig_data2wsc_bytes_rcvd[22],sig_data2wsc_bytes_rcvd[21],sig_data2wsc_bytes_rcvd[20],sig_data2wsc_bytes_rcvd[19],sig_data2wsc_bytes_rcvd[18],sig_data2wsc_bytes_rcvd[17],sig_data2wsc_bytes_rcvd[16],sig_data2wsc_bytes_rcvd[15],sig_data2wsc_bytes_rcvd[14],sig_data2wsc_bytes_rcvd[13],sig_data2wsc_bytes_rcvd[12],sig_data2wsc_bytes_rcvd[11],sig_data2wsc_bytes_rcvd[10],sig_data2wsc_bytes_rcvd[9],sig_data2wsc_bytes_rcvd[8],sig_data2wsc_bytes_rcvd[7],sig_data2wsc_bytes_rcvd[6],sig_data2wsc_bytes_rcvd[5],sig_data2wsc_bytes_rcvd[4],sig_data2wsc_bytes_rcvd[3],sig_data2wsc_bytes_rcvd[2],sig_data2wsc_bytes_rcvd[1],sig_data2wsc_bytes_rcvd[0],sig_data2wsc_cmd_cmplt,sig_data2wsc_calc_err,sig_data2wsc_tag[3],sig_data2wsc_tag[2],sig_data2wsc_tag[1],sig_data2wsc_tag[0]}),
         .lsig_end_of_cmd_reg(lsig_end_of_cmd_reg),
         .lsig_eop_reg(lsig_eop_reg_0),
@@ -10977,7 +11342,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .\sig_addr_posted_cntr_reg[2]_0 (sig_addr2data_addr_posted),
         .sig_data2skid_wlast(sig_data2skid_wlast),
         .sig_data2wsc_valid(sig_data2wsc_valid),
-        .sig_first_dbeat_reg_0(I_RESET_n_27),
+        .sig_first_dbeat_reg_0(I_RESET_n_24),
         .sig_halt_reg(sig_halt_reg),
         .sig_halt_reg_dly2(sig_halt_reg_dly2),
         .sig_halt_reg_dly2_reg_0(I_WR_DATA_CNTL_n_44),
@@ -10993,14 +11358,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .sig_last_skid_mux_out(sig_last_skid_mux_out),
         .sig_last_skid_reg(sig_last_skid_reg),
         .sig_ld_new_cmd_reg(sig_ld_new_cmd_reg),
-        .sig_ld_new_cmd_reg_reg_0(I_RESET_n_21),
+        .sig_ld_new_cmd_reg_reg_0(I_RESET_n_18),
         .sig_m_valid_out_reg(I_WR_DATA_CNTL_n_51),
         .sig_mstr2data_cmd_valid(sig_mstr2data_cmd_valid),
         .sig_next_calc_error_reg_reg_0(I_S2MM_MMAP_SKID_BUF_n_5),
         .sig_next_calc_error_reg_reg_1(I_CMD_STATUS_n_99),
         .sig_next_calc_error_reg_reg_2({sig_mstr2data_calc_error,sig_mstr2data_cmd_last,sig_mstr2data_sequential,sig_mstr2data_len,sig_mstr2data_saddr_lsb,sig_mstr2data_tag}),
         .sig_next_cmd_cmplt_reg(sig_next_cmd_cmplt_reg),
-        .sig_next_cmd_cmplt_reg_reg_0(I_RESET_n_8),
+        .sig_next_cmd_cmplt_reg_reg_0(I_RESET_n_7),
         .\sig_next_strt_strb_reg_reg[3]_0 (sig_strb_skid_mux_out),
         .\sig_next_strt_strb_reg_reg[3]_1 (sig_data2skid_wstrb),
         .sig_push_dqual_reg(sig_push_dqual_reg),
@@ -11030,14 +11395,12 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_full_wrap
         .sig_halt_reg(sig_halt_reg),
         .sig_halt_reg_dly3(sig_halt_reg_dly3),
         .sig_halt_reg_reg_0(I_WR_STATUS_CNTLR_n_39),
-        .sig_halt_reg_reg_1(I_RESET_n_14),
+        .sig_halt_reg_reg_1(I_RESET_n_11),
         .sig_init_reg(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO/sig_init_reg ),
         .sig_init_reg2(\I_DRE_CNTL_FIFO/sig_init_reg2 ),
         .sig_init_reg_reg(sig_input_cache_type_reg0),
-        .sig_init_reg_reg_0(I_WR_STATUS_CNTLR_n_45),
-        .sig_init_reg_reg_1(sig_child_tag_reg0),
+        .sig_init_reg_reg_0(sig_child_tag_reg0),
         .sig_psm_pop_input_cmd(sig_psm_pop_input_cmd),
-        .\sig_realigner_btt2_reg[24] (\GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC_n_85 ),
         .sig_stream_rst(sig_stream_rst),
         .sig_wdc_status_going_full(sig_wdc_status_going_full),
         .sig_wr_fifo(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO/sig_wr_fifo ),
@@ -11067,17 +11430,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
     sig_init_reg2_reg,
     sig_init_reg2_reg_0,
     sig_init_reg2_reg_1,
-    lsig_first_dbeat,
-    \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8] ,
-    \GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_0 ,
-    \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8] ,
     sig_strb_skid_reg,
     E,
     sig_inhibit_rdy_n,
     sig_tlast_out_reg,
     sig_dre2ibtt_eop,
     \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7] ,
-    \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 ,
+    sig_dre2ibtt_tdata,
+    \GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8] ,
+    sig_dre2ibtt_tstrb,
     sig_stream_rst,
     m_axi_s2mm_aclk,
     sig_eop_sent_reg0,
@@ -11091,13 +11452,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
     sig_init_done,
     sig_init_done_0,
     sig_init_done_1,
-    sig_clr_dbc_reg,
+    \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ,
     sig_m_valid_out_reg_0,
     \sig_mssa_index_reg_out_reg[0] ,
     skid2dre_wlast,
-    scndry_out,
-    sig_cmd_stat_rst_user_reg_n_cdc_from,
-    \GEN_INCLUDE_DRE.lsig_eop_reg_reg_0 ,
     \sig_data_reg_out_reg[15] ,
     sig_mstr2dre_cmd_valid,
     \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0] ,
@@ -11129,17 +11487,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
   output sig_init_reg2_reg;
   output sig_init_reg2_reg_0;
   output sig_init_reg2_reg_1;
-  output lsig_first_dbeat;
-  output [1:0]\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8] ;
-  output [8:0]\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_0 ;
-  output [8:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8] ;
   output [1:0]sig_strb_skid_reg;
   output [0:0]E;
   output sig_inhibit_rdy_n;
   output [0:0]sig_tlast_out_reg;
   output sig_dre2ibtt_eop;
   output [15:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7] ;
-  output [1:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 ;
+  output [15:0]sig_dre2ibtt_tdata;
+  output [1:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8] ;
+  output [1:0]sig_dre2ibtt_tstrb;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input sig_eop_sent_reg0;
@@ -11153,13 +11509,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
   input sig_init_done;
   input sig_init_done_0;
   input sig_init_done_1;
-  input sig_clr_dbc_reg;
+  input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ;
   input sig_m_valid_out_reg_0;
   input [1:0]\sig_mssa_index_reg_out_reg[0] ;
   input skid2dre_wlast;
-  input scndry_out;
-  input sig_cmd_stat_rst_user_reg_n_cdc_from;
-  input \GEN_INCLUDE_DRE.lsig_eop_reg_reg_0 ;
   input \sig_data_reg_out_reg[15] ;
   input sig_mstr2dre_cmd_valid;
   input \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0] ;
@@ -11174,28 +11527,24 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
   wire [15:0]D;
   wire [0:0]E;
   wire FIFO_Full_reg;
-  wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_28 ;
-  wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_30 ;
+  wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_47 ;
+  wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_48 ;
   wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_5 ;
-  wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_51 ;
-  wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_52 ;
   wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_7 ;
-  wire \GEN_INCLUDE_DRE.lsig_eop_reg_reg_0 ;
+  wire \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_8 ;
+  wire \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg[0]_i_1_n_0 ;
+  wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ;
   wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg_n_0_[0] ;
   wire \GEN_INCLUDE_DRE.lsig_pushreg_full_reg_n_0 ;
-  wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_19 ;
-  wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_23 ;
-  wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_24 ;
-  wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_25 ;
-  wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_9 ;
+  wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_10 ;
+  wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_13 ;
+  wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_15 ;
+  wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_16 ;
+  wire \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_17 ;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0]0 ;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
-  wire \GEN_INPUT_REG[1].sig_input_data_reg_reg[1]0 ;
-  wire [1:0]\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8] ;
-  wire [8:0]\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_0 ;
   wire [15:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7] ;
-  wire [8:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8] ;
-  wire [1:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 ;
+  wire [1:0]\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8] ;
   wire \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0] ;
   wire \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ;
   wire I_DRE_CNTL_FIFO_n_5;
@@ -11206,25 +11555,24 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
   wire lsig_absorb2tlast;
   wire lsig_cmd_fetch_pause;
   wire lsig_eop_reg;
-  wire lsig_first_dbeat;
   wire lsig_pullreg_empty;
   wire lsig_set_eop;
   wire m_axi_s2mm_aclk;
   wire out;
   wire [7:0]p_1_in;
   wire [7:0]p_1_in__0;
-  wire scndry_out;
-  wire sig_clr_dbc_reg;
   wire sig_cmd_empty_reg;
   wire [33:5]sig_cmd_fifo_data_out;
-  wire sig_cmd_stat_rst_user_reg_n_cdc_from;
   wire [2:0]sig_cmdcntl_sm_state;
   wire [2:0]sig_cmdcntl_sm_state_ns;
   wire \sig_data_reg_out_reg[15] ;
   wire sig_dre2ibtt_eop;
   wire sig_dre2ibtt_eop_reg_reg;
+  wire [15:0]sig_dre2ibtt_tdata;
   wire sig_dre2ibtt_tlast;
+  wire [1:0]sig_dre2ibtt_tstrb;
   wire sig_dre2ibtt_tvalid;
+  wire sig_dre2scatter_tready;
   wire sig_dre_halted;
   wire sig_eop_halt_xfer_reg;
   wire sig_eop_sent_reg;
@@ -11300,7 +11648,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
     \GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_25 ),
+        .D(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_17 ),
         .Q(lsig_cmd_fetch_pause),
         .R(1'b0));
   FDRE #(
@@ -11308,53 +11656,45 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
     \GEN_ENABLE_INDET_BTT.sig_need_cmd_flush_reg 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_19 ),
+        .D(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_13 ),
         .Q(sig_need_cmd_flush),
         .R(sig_stream_rst));
   Zed_SPI_axi_dma_0_axi_datamover_s2mm_dre \GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK 
-       (.D({sig_tlast_enables,p_1_in__0}),
+       (.D({sig_scatter2dre_tlast,p_1_in}),
         .E(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0]0 ),
         .\FSM_sequential_sig_cmdcntl_sm_state_reg[0] (sig_rd_empty),
         .\FSM_sequential_sig_cmdcntl_sm_state_reg[0]_0 (sig_cmdcntl_sm_state[1]),
-        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 (\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_30 ),
         .\GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9]_0 (SR),
-        .\GEN_INCLUDE_DRE.lsig_eop_reg_reg (\GEN_INCLUDE_DRE.lsig_eop_reg_reg_0 ),
-        .\GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg_n_0_[0] ),
         .\GEN_INCLUDE_DRE.lsig_pullreg_empty_reg (\GEN_INCLUDE_DRE.lsig_pushreg_full_reg_n_0 ),
-        .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] (\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_28 ),
-        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 (\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_23 ),
-        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1]0 ),
-        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_2 ({sig_scatter2dre_tlast,p_1_in}),
+        .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ({sig_tlast_enables,p_1_in__0}),
+        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][0]_0 (\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_10 ),
+        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 (\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_15 ),
         .\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][0]_0 (sig_eop_halt_xfer_reg),
-        .\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_0 (\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8] ),
-        .\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_1 (\GEN_OUTPUT_REG[0].sig_output_data_reg_reg[0][8]_0 ),
         .\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7]_0 (\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][7] ),
         .\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 (\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8] ),
-        .\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_1 (\GEN_OUTPUT_REG[1].sig_output_data_reg_reg[1][8]_0 ),
         .\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0] (\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg_reg[0][0] ),
         .\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] (\INCLUDE_PACKING.DO_REG_SLICES[1].lsig_strb_slice_reg_reg[1][1] ),
-        .\INFERRED_GEN.cnt_i_reg[2] (\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_51 ),
+        .\INFERRED_GEN.cnt_i_reg[2] (\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_47 ),
         .Q(Q),
-        .SR(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_24 ),
+        .SR(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_16 ),
         .lsig_0ffset_cntr(lsig_0ffset_cntr),
         .lsig_pullreg_empty(lsig_pullreg_empty),
         .lsig_set_eop(lsig_set_eop),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(sig_cmd_fifo_data_out[5]),
-        .scndry_out(scndry_out),
-        .sig_clr_dbc_reg(sig_clr_dbc_reg),
-        .sig_cmd_stat_rst_user_reg_n_cdc_from(sig_cmd_stat_rst_user_reg_n_cdc_from),
         .sig_dre2ibtt_eop(sig_dre2ibtt_eop),
         .sig_dre2ibtt_eop_reg_reg(sig_dre2ibtt_eop_reg_reg),
         .sig_dre2ibtt_eop_reg_reg_0(lsig_eop_reg),
+        .sig_dre2ibtt_tdata(sig_dre2ibtt_tdata),
+        .sig_dre2ibtt_tstrb(sig_dre2ibtt_tstrb),
         .sig_dre2ibtt_tvalid(sig_dre2ibtt_tvalid),
+        .sig_dre2scatter_tready(sig_dre2scatter_tready),
         .sig_dre_halted_reg_0(sig_dre_halted),
         .sig_dre_halted_reg_1(\sig_max_first_increment_reg[0] ),
         .sig_dre_halted_reg_2(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
         .sig_flush_db1_reg_0(sig_flush_db1),
-        .sig_flush_db1_reg_1(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_9 ),
         .sig_flush_db2_reg_0(sig_flush_db2),
-        .sig_flush_db2_reg_1(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_52 ),
+        .sig_flush_db2_reg_1(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_48 ),
         .sig_flush_db2_reg_2(sig_flush_db2_reg),
         .sig_need_cmd_flush(sig_need_cmd_flush),
         .sig_scatter2drc_cmd_ready(sig_scatter2drc_cmd_ready),
@@ -11365,22 +11705,32 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
         .sig_stream_rst(sig_stream_rst),
         .sig_tlast_out_reg_0(sig_dre2ibtt_tlast),
         .sig_tlast_out_reg_1(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_5 ),
-        .sig_tlast_out_reg_2(lsig_first_dbeat),
+        .sig_tlast_out_reg_2(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_8 ),
         .sig_tlast_out_reg_3(sig_tlast_out_reg));
   FDRE #(
     .INIT(1'b0)) 
     \GEN_INCLUDE_DRE.lsig_eop_reg_reg 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_30 ),
+        .D(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_8 ),
         .Q(lsig_eop_reg),
         .R(1'b0));
+  LUT6 #(
+    .INIT(64'h888800008A80AA00)) 
+    \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg[0]_i_1 
+       (.I0(\sig_max_first_increment_reg[0] ),
+        .I1(\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg_n_0_[0] ),
+        .I2(lsig_pullreg_empty),
+        .I3(sig_sf_strt_addr_offset),
+        .I4(\GEN_INCLUDE_DRE.lsig_pushreg_full_reg_n_0 ),
+        .I5(\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ),
+        .O(\GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_28 ),
+        .D(\GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg[0]_i_1_n_0 ),
         .Q(sig_sf_strt_addr_offset),
         .R(1'b0));
   FDSE #(
@@ -11408,16 +11758,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
         .Q(\GEN_INCLUDE_DRE.lsig_pushreg_full_reg_n_0 ),
         .R(sig_stream_rst));
   Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter \GEN_INCLUDE_SCATTER.I_S2MM_SCATTER 
-       (.D({sig_tlast_enables,p_1_in__0}),
+       (.D({sig_scatter2dre_tlast,p_1_in}),
         .E(out),
-        .\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg (\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_19 ),
+        .\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg (\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_13 ),
         .\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 ({sig_cmd_fifo_data_out[33:32],sig_cmd_fifo_data_out[30:6]}),
-        .\GEN_ENABLE_INDET_BTT.sig_need_cmd_flush_reg (\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_25 ),
+        .\GEN_ENABLE_INDET_BTT.sig_need_cmd_flush_reg (\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_17 ),
         .\GEN_INDET_BTT.lsig_absorb2tlast_reg_0 (lsig_absorb2tlast),
         .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] (sig_flush_db1),
         .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
-        .\INFERRED_GEN.cnt_i_reg[4] ({sig_scatter2dre_tlast,p_1_in}),
-        .SR(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_24 ),
+        .SR(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_16 ),
         .lsig_cmd_fetch_pause(lsig_cmd_fetch_pause),
         .lsig_set_eop(lsig_set_eop),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
@@ -11425,20 +11774,21 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
         .sig_cmd_empty_reg_0(sig_cmd_empty_reg),
         .\sig_data_reg_out_reg[15] (\sig_data_reg_out_reg[15] ),
         .\sig_data_skid_reg_reg[15] (D),
+        .sig_dre2scatter_tready(sig_dre2scatter_tready),
         .sig_eop_halt_xfer_reg_0(sig_eop_halt_xfer_reg),
         .sig_eop_sent_reg(sig_eop_sent_reg),
         .sig_eop_sent_reg0(sig_eop_sent_reg0),
-        .sig_flush_db1_reg(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_9 ),
-        .sig_flush_db1_reg_0(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_23 ),
-        .sig_flush_db1_reg_1(sig_flush_db2),
+        .sig_flush_db1_reg(\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_15 ),
+        .sig_flush_db2(sig_flush_db2),
         .sig_init_reg(sig_init_reg),
         .sig_last_reg_out_reg(sig_strm_tlast),
         .sig_last_skid_reg(sig_last_skid_reg),
         .sig_last_skid_reg_reg(sig_last_skid_reg_reg),
         .sig_m_valid_out_reg(sig_m_valid_out_reg_0),
         .\sig_max_first_increment_reg[0]_0 (\sig_max_first_increment_reg[0] ),
-        .\sig_mssa_index_reg_out_reg[0] (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1]0 ),
-        .\sig_mssa_index_reg_out_reg[0]_0 (\sig_mssa_index_reg_out_reg[0] ),
+        .\sig_mssa_index_reg_out_reg[0] (\GEN_INCLUDE_SCATTER.I_S2MM_SCATTER_n_10 ),
+        .\sig_mssa_index_reg_out_reg[0]_0 ({sig_tlast_enables,p_1_in__0}),
+        .\sig_mssa_index_reg_out_reg[0]_1 (\sig_mssa_index_reg_out_reg[0] ),
         .sig_need_cmd_flush(sig_need_cmd_flush),
         .sig_s_ready_out_reg(sig_s_ready_out_reg),
         .sig_s_ready_out_reg_0(E),
@@ -11455,14 +11805,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_realign
   Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized3 I_DRE_CNTL_FIFO
        (.D(sig_cmdcntl_sm_state_ns),
         .FIFO_Full_reg(FIFO_Full_reg),
-        .\FSM_sequential_sig_cmdcntl_sm_state_reg[0] (\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_51 ),
-        .\FSM_sequential_sig_cmdcntl_sm_state_reg[1] (\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_52 ),
+        .\FSM_sequential_sig_cmdcntl_sm_state_reg[0] (\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_47 ),
+        .\FSM_sequential_sig_cmdcntl_sm_state_reg[1] (\GEN_INCLUDE_DRE.I_S2MM_DRE_BLOCK_n_48 ),
         .\FSM_sequential_sig_cmdcntl_sm_state_reg[2] (sig_cmdcntl_sm_state),
         .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] (\GEN_INCLUDE_DRE.lsig_pushreg_full_reg_n_0 ),
-        .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg_n_0_[0] ),
+        .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ),
+        .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg_n_0_[0] ),
         .Q(sig_rd_empty),
         .in(in),
-        .lsig_first_dbeat(lsig_first_dbeat),
         .lsig_pullreg_empty(lsig_pullreg_empty),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out({sig_cmd_fifo_data_out[33:32],sig_cmd_fifo_data_out[30:5]}),
@@ -11512,18 +11862,18 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
     sig_scatter2dre_src_align,
     \GEN_INDET_BTT.lsig_absorb2tlast_reg_0 ,
     sig_scatter2drc_cmd_ready,
-    sig_flush_db1_reg,
-    \INFERRED_GEN.cnt_i_reg[4] ,
+    sig_dre2scatter_tready,
+    \sig_mssa_index_reg_out_reg[0] ,
+    sig_strb_skid_reg,
     \GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg ,
     lsig_set_eop,
-    sig_strb_skid_reg,
-    sig_flush_db1_reg_0,
+    sig_flush_db1_reg,
     SR,
     \GEN_ENABLE_INDET_BTT.sig_need_cmd_flush_reg ,
     sig_s_ready_out_reg_0,
     \sig_strb_reg_out_reg[0] ,
-    \sig_mssa_index_reg_out_reg[0] ,
     sig_eop_halt_xfer_reg_0,
+    \sig_mssa_index_reg_out_reg[0]_0 ,
     D,
     m_axi_s2mm_aclk,
     sig_eop_sent_reg0,
@@ -11531,19 +11881,19 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
     sig_stream_rst,
     sig_last_skid_reg_reg,
     sig_sm_ld_dre_cmd,
-    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ,
     \sig_max_first_increment_reg[0]_0 ,
-    sig_flush_db1_reg_1,
-    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ,
     sig_cmd_empty_reg_0,
+    sig_m_valid_out_reg,
+    sig_init_reg,
+    \sig_mssa_index_reg_out_reg[0]_1 ,
+    skid2dre_wlast,
     lsig_cmd_fetch_pause,
     sig_sm_pop_cmd_fifo,
     sig_need_cmd_flush,
-    sig_m_valid_out_reg,
-    sig_init_reg,
-    \sig_mssa_index_reg_out_reg[0]_0 ,
-    skid2dre_wlast,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ,
     \sig_data_reg_out_reg[15] ,
+    sig_flush_db2,
     \sig_data_skid_reg_reg[15] ,
     \sig_strb_skid_reg_reg[1] ,
     \sig_strb_skid_reg_reg[0] );
@@ -11556,18 +11906,18 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
   output sig_scatter2dre_src_align;
   output \GEN_INDET_BTT.lsig_absorb2tlast_reg_0 ;
   output sig_scatter2drc_cmd_ready;
-  output sig_flush_db1_reg;
-  output [8:0]\INFERRED_GEN.cnt_i_reg[4] ;
+  output sig_dre2scatter_tready;
+  output [0:0]\sig_mssa_index_reg_out_reg[0] ;
+  output [1:0]sig_strb_skid_reg;
   output \GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg ;
   output lsig_set_eop;
-  output [1:0]sig_strb_skid_reg;
-  output [0:0]sig_flush_db1_reg_0;
+  output [0:0]sig_flush_db1_reg;
   output [0:0]SR;
   output \GEN_ENABLE_INDET_BTT.sig_need_cmd_flush_reg ;
   output [0:0]sig_s_ready_out_reg_0;
   output [0:0]\sig_strb_reg_out_reg[0] ;
-  output [0:0]\sig_mssa_index_reg_out_reg[0] ;
   output sig_eop_halt_xfer_reg_0;
+  output [8:0]\sig_mssa_index_reg_out_reg[0]_0 ;
   output [8:0]D;
   input m_axi_s2mm_aclk;
   input sig_eop_sent_reg0;
@@ -11575,19 +11925,19 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
   input sig_stream_rst;
   input sig_last_skid_reg_reg;
   input sig_sm_ld_dre_cmd;
-  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
   input \sig_max_first_increment_reg[0]_0 ;
-  input sig_flush_db1_reg_1;
-  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
   input sig_cmd_empty_reg_0;
+  input sig_m_valid_out_reg;
+  input sig_init_reg;
+  input [1:0]\sig_mssa_index_reg_out_reg[0]_1 ;
+  input skid2dre_wlast;
   input lsig_cmd_fetch_pause;
   input sig_sm_pop_cmd_fifo;
   input sig_need_cmd_flush;
-  input sig_m_valid_out_reg;
-  input sig_init_reg;
-  input [1:0]\sig_mssa_index_reg_out_reg[0]_0 ;
-  input skid2dre_wlast;
+  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
+  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
   input \sig_data_reg_out_reg[15] ;
+  input sig_flush_db2;
   input [15:0]\sig_data_skid_reg_reg[15] ;
   input \sig_strb_skid_reg_reg[1] ;
   input \sig_strb_skid_reg_reg[0] ;
@@ -11600,16 +11950,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
   wire \GEN_INDET_BTT.lsig_absorb2tlast_reg_0 ;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
-  wire [8:0]\INFERRED_GEN.cnt_i_reg[4] ;
-  wire I_MSSAI_SKID_BUF_n_14;
-  wire I_MSSAI_SKID_BUF_n_16;
+  wire I_MSSAI_SKID_BUF_n_15;
   wire I_MSSAI_SKID_BUF_n_17;
+  wire I_MSSAI_SKID_BUF_n_18;
   wire I_MSSAI_SKID_BUF_n_7;
-  wire I_MSSAI_SKID_BUF_n_8;
   wire I_MSSAI_SKID_BUF_n_9;
   wire I_TSTRB_FIFO_n_0;
+  wire I_TSTRB_FIFO_n_1;
   wire I_TSTRB_FIFO_n_3;
-  wire I_TSTRB_FIFO_n_5;
   wire SLICE_INSERTION_n_1;
   wire SLICE_INSERTION_n_10;
   wire SLICE_INSERTION_n_3;
@@ -11710,7 +12058,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
   wire sig_btt_eq_0_i_11_n_0;
   wire sig_btt_eq_0_i_12_n_0;
   wire sig_btt_eq_0_i_13_n_0;
-  wire sig_btt_eq_0_i_14_n_0;
   wire sig_btt_eq_0_i_2_n_0;
   wire sig_btt_eq_0_i_3_n_0;
   wire sig_btt_eq_0_i_4_n_0;
@@ -11750,6 +12097,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
   wire sig_curr_strt_offset;
   wire \sig_data_reg_out_reg[15] ;
   wire [15:0]\sig_data_skid_reg_reg[15] ;
+  wire sig_dre2scatter_tready;
   wire sig_eop_halt_xfer;
   wire sig_eop_halt_xfer_i_1_n_0;
   wire sig_eop_halt_xfer_reg_0;
@@ -11758,9 +12106,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
   wire sig_eop_sent_reg0;
   wire sig_fifo_mssai;
   wire \sig_fifo_mssai[0]_i_1_n_0 ;
-  wire sig_flush_db1_reg;
-  wire [0:0]sig_flush_db1_reg_0;
-  wire sig_flush_db1_reg_1;
+  wire [0:0]sig_flush_db1_reg;
+  wire sig_flush_db2;
   wire sig_inhibit_rdy_n;
   wire sig_init_reg;
   wire sig_last_reg_out_reg;
@@ -11773,7 +12120,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
   wire \sig_max_first_increment_reg_n_0_[1] ;
   wire sig_mssa_index;
   wire [0:0]\sig_mssa_index_reg_out_reg[0] ;
-  wire [1:0]\sig_mssa_index_reg_out_reg[0]_0 ;
+  wire [8:0]\sig_mssa_index_reg_out_reg[0]_0 ;
+  wire [1:0]\sig_mssa_index_reg_out_reg[0]_1 ;
   wire sig_need_cmd_flush;
   wire \sig_next_strt_offset[0]_i_1_n_0 ;
   wire sig_rd_empty;
@@ -11807,7 +12155,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
     \GEN_INDET_BTT.lsig_absorb2tlast_reg 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(I_MSSAI_SKID_BUF_n_17),
+        .D(I_MSSAI_SKID_BUF_n_18),
         .Q(\GEN_INDET_BTT.lsig_absorb2tlast_reg_0 ),
         .R(1'b0));
   Zed_SPI_axi_dma_0_axi_datamover_mssai_skid_buf I_MSSAI_SKID_BUF
@@ -11825,33 +12173,33 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
         .out(out),
         .\sig_btt_cntr_reg[24] (\GEN_INDET_BTT.lsig_absorb2tlast_reg_0 ),
         .\sig_btt_cntr_reg[24]_0 (\sig_max_first_increment_reg[0]_0 ),
-        .\sig_btt_cntr_reg[24]_1 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
-        .\sig_btt_cntr_reg[24]_2 (sig_flush_db1_reg_1),
-        .\sig_btt_cntr_reg[24]_3 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ),
         .sig_btt_eq_0(sig_btt_eq_0),
-        .sig_btt_eq_0_reg(I_MSSAI_SKID_BUF_n_14),
+        .sig_btt_eq_0_reg(I_MSSAI_SKID_BUF_n_15),
         .sig_btt_eq_0_reg_0(sig_btt_eq_0_i_2_n_0),
         .sig_btt_eq_0_reg_1(sig_btt_eq_0_i_3_n_0),
         .sig_btt_eq_0_reg_2(sig_btt_eq_0_i_4_n_0),
         .sig_btt_eq_0_reg_3(SLICE_INSERTION_n_6),
-        .\sig_data_reg_out_reg[15]_0 ({\INFERRED_GEN.cnt_i_reg[4] [7:0],D[7:0]}),
+        .\sig_data_reg_out_reg[15]_0 ({D[7:0],\sig_mssa_index_reg_out_reg[0]_0 [7:0]}),
         .\sig_data_reg_out_reg[15]_1 (\sig_data_reg_out_reg[15] ),
         .\sig_data_skid_reg_reg[15]_0 (\sig_data_skid_reg_reg[15] ),
         .sig_eop_halt_xfer(sig_eop_halt_xfer),
-        .sig_eop_halt_xfer_reg(sig_eop_halt_xfer_reg_0),
+        .sig_eop_halt_xfer_reg(sig_dre2scatter_tready),
+        .sig_eop_halt_xfer_reg_0(sig_eop_halt_xfer_reg_0),
         .sig_eop_sent1_out(sig_eop_sent1_out),
-        .sig_flush_db1_reg(I_MSSAI_SKID_BUF_n_9),
+        .sig_eop_sent_reg_reg(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ),
+        .sig_eop_sent_reg_reg_0(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
+        .sig_flush_db2(sig_flush_db2),
         .sig_init_reg(sig_init_reg),
         .sig_last_reg_out_reg_0(sig_last_reg_out_reg),
-        .sig_last_reg_out_reg_1(I_MSSAI_SKID_BUF_n_8),
-        .sig_last_reg_out_reg_2(I_MSSAI_SKID_BUF_n_16),
-        .sig_last_reg_out_reg_3(I_MSSAI_SKID_BUF_n_17),
+        .sig_last_reg_out_reg_1(I_MSSAI_SKID_BUF_n_9),
+        .sig_last_reg_out_reg_2(I_MSSAI_SKID_BUF_n_17),
+        .sig_last_reg_out_reg_3(I_MSSAI_SKID_BUF_n_18),
         .sig_last_skid_reg(sig_last_skid_reg),
         .sig_last_skid_reg_reg_0(sig_last_skid_reg_reg),
         .sig_m_valid_out_reg_0(sig_m_valid_out_reg),
         .sig_mssa_index(sig_mssa_index),
         .\sig_mssa_index_reg_out_reg[0]_0 (\sig_mssa_index_reg_out_reg[0] ),
-        .\sig_mssa_index_reg_out_reg[0]_1 (\sig_mssa_index_reg_out_reg[0]_0 ),
+        .\sig_mssa_index_reg_out_reg[0]_1 (\sig_mssa_index_reg_out_reg[0]_1 ),
         .sig_need_cmd_flush(sig_need_cmd_flush),
         .sig_s_ready_out_reg_0(sig_s_ready_out_reg),
         .sig_s_ready_out_reg_1(sig_s_ready_out_reg_0),
@@ -11867,33 +12215,31 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
   Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized4 I_TSTRB_FIFO
        (.D(D[8]),
         .FIFO_Full_reg(I_TSTRB_FIFO_n_0),
-        .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
-        .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 (\sig_max_first_increment_reg[0]_0 ),
+        .FIFO_Full_reg_0(sig_dre2scatter_tready),
+        .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] (\sig_max_first_increment_reg[0]_0 ),
+        .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
         .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ),
         .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] (out),
-        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 (I_MSSAI_SKID_BUF_n_8),
+        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 (I_MSSAI_SKID_BUF_n_9),
         .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 (slice_insert_data),
-        .\INFERRED_GEN.cnt_i_reg[4] (\INFERRED_GEN.cnt_i_reg[4] [8]),
-        .\INFERRED_GEN.cnt_i_reg[4]_0 (I_MSSAI_SKID_BUF_n_9),
         .Q(sig_rd_empty),
         .SR(SR),
         .lsig_set_absorb2tlast(lsig_set_absorb2tlast),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out({sig_tstrb_fifo_data_out[5],sig_tstrb_fifo_data_out[3:0]}),
-        .sig_cmd_empty_reg(I_TSTRB_FIFO_n_5),
-        .sig_cmd_empty_reg_0(I_MSSAI_SKID_BUF_n_16),
+        .sig_cmd_empty_reg(I_TSTRB_FIFO_n_3),
+        .sig_cmd_empty_reg_0(I_MSSAI_SKID_BUF_n_17),
         .sig_cmd_empty_reg_1(sig_cmd_empty_reg_0),
         .sig_cmd_empty_reg_2(sig_last_reg_out_reg),
         .sig_cmd_full(sig_cmd_full),
-        .sig_cmd_full_reg(I_TSTRB_FIFO_n_3),
+        .sig_cmd_full_reg(I_TSTRB_FIFO_n_1),
         .sig_eop_halt_xfer(sig_eop_halt_xfer),
         .sig_eop_sent_reg(sig_eop_sent_reg),
         .sig_eop_sent_reg0(sig_eop_sent_reg0),
         .sig_flush_db1_reg(sig_flush_db1_reg),
-        .sig_flush_db1_reg_0(sig_flush_db1_reg_0),
-        .sig_flush_db1_reg_1(sig_flush_db1_reg_1),
         .sig_inhibit_rdy_n(sig_inhibit_rdy_n),
         .sig_mssa_index(sig_mssa_index),
+        .\sig_mssa_index_reg_out_reg[0] (\sig_mssa_index_reg_out_reg[0]_0 [8]),
         .sig_scatter2drc_cmd_ready(sig_scatter2drc_cmd_ready),
         .sig_sm_ld_dre_cmd(sig_sm_ld_dre_cmd),
         .sig_strm_tstrb(sig_strm_tstrb),
@@ -12869,98 +13215,87 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
   LUT6 #(
     .INIT(64'hFAFFFAFAFACCFAFA)) 
     sig_btt_eq_0_i_10
-       (.I0(sig_btt_cntr_prv0[22]),
-        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [22]),
-        .I2(sig_btt_cntr_prv0[4]),
+       (.I0(sig_btt_cntr_prv0[17]),
+        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [17]),
+        .I2(sig_btt_cntr_prv0[0]),
         .I3(sig_cmd_full),
         .I4(sig_sm_ld_dre_cmd),
-        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [4]),
+        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [0]),
         .O(sig_btt_eq_0_i_10_n_0));
   LUT6 #(
     .INIT(64'hFAFFFAFAFACCFAFA)) 
     sig_btt_eq_0_i_11
-       (.I0(sig_btt_cntr_prv0[19]),
-        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [19]),
-        .I2(sig_btt_cntr_prv0[11]),
+       (.I0(sig_btt_cntr_prv0[16]),
+        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [16]),
+        .I2(sig_btt_cntr_prv0[4]),
         .I3(sig_cmd_full),
         .I4(sig_sm_ld_dre_cmd),
-        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [11]),
+        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [4]),
         .O(sig_btt_eq_0_i_11_n_0));
   LUT6 #(
     .INIT(64'hFAFFFAFAFACCFAFA)) 
     sig_btt_eq_0_i_12
-       (.I0(sig_btt_cntr_prv0[7]),
-        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [7]),
-        .I2(sig_btt_cntr_prv0[5]),
-        .I3(sig_cmd_full),
-        .I4(sig_sm_ld_dre_cmd),
-        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [5]),
-        .O(sig_btt_eq_0_i_12_n_0));
-  LUT6 #(
-    .INIT(64'hFAFFFAFAFACCFAFA)) 
-    sig_btt_eq_0_i_13
-       (.I0(sig_btt_cntr_prv0[17]),
-        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [17]),
-        .I2(sig_btt_cntr_prv0[14]),
-        .I3(sig_cmd_full),
-        .I4(sig_sm_ld_dre_cmd),
-        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [14]),
-        .O(sig_btt_eq_0_i_13_n_0));
-  LUT6 #(
-    .INIT(64'hFAFFFAFAFACCFAFA)) 
-    sig_btt_eq_0_i_14
-       (.I0(sig_btt_cntr_prv0[1]),
-        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [1]),
-        .I2(sig_btt_cntr_prv0[23]),
-        .I3(sig_cmd_full),
-        .I4(sig_sm_ld_dre_cmd),
-        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [23]),
-        .O(sig_btt_eq_0_i_14_n_0));
-  LUT6 #(
-    .INIT(64'h0000000000000004)) 
-    sig_btt_eq_0_i_2
-       (.I0(sel0[20]),
-        .I1(sig_btt_eq_0_i_6_n_0),
-        .I2(sig_btt_eq_0_i_7_n_0),
-        .I3(sig_btt_eq_0_i_8_n_0),
-        .I4(sig_btt_eq_0_i_9_n_0),
-        .I5(sig_btt_eq_0_i_10_n_0),
-        .O(sig_btt_eq_0_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hEEFEEEFEFFFFEEFE)) 
-    sig_btt_eq_0_i_3
-       (.I0(sig_btt_eq_0_i_11_n_0),
-        .I1(sig_btt_eq_0_i_12_n_0),
-        .I2(sel0[12]),
-        .I3(sel0[13]),
-        .I4(sel0[15]),
-        .I5(sel0[16]),
-        .O(sig_btt_eq_0_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    sig_btt_eq_0_i_4
-       (.I0(sel0[24]),
-        .I1(sel0[9]),
-        .I2(sel0[21]),
-        .I3(sel0[18]),
-        .I4(sig_btt_eq_0_i_13_n_0),
-        .I5(sig_btt_eq_0_i_14_n_0),
-        .O(sig_btt_eq_0_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h0500050505330505)) 
-    sig_btt_eq_0_i_6
-       (.I0(sig_btt_cntr_prv0[6]),
-        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [6]),
+       (.I0(sig_btt_cntr_prv0[24]),
+        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [24]),
         .I2(sig_btt_cntr_prv0[8]),
         .I3(sig_cmd_full),
         .I4(sig_sm_ld_dre_cmd),
         .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [8]),
-        .O(sig_btt_eq_0_i_6_n_0));
+        .O(sig_btt_eq_0_i_12_n_0));
   LUT6 #(
     .INIT(64'hFAFFFAFAFACCFAFA)) 
+    sig_btt_eq_0_i_13
+       (.I0(sig_btt_cntr_prv0[9]),
+        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [9]),
+        .I2(sig_btt_cntr_prv0[23]),
+        .I3(sig_cmd_full),
+        .I4(sig_sm_ld_dre_cmd),
+        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [23]),
+        .O(sig_btt_eq_0_i_13_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
+    sig_btt_eq_0_i_2
+       (.I0(sig_btt_eq_0_i_6_n_0),
+        .I1(sig_btt_eq_0_i_7_n_0),
+        .I2(sig_btt_eq_0_i_8_n_0),
+        .I3(sig_btt_eq_0_i_9_n_0),
+        .I4(sig_btt_eq_0_i_10_n_0),
+        .I5(sig_btt_eq_0_i_11_n_0),
+        .O(sig_btt_eq_0_i_2_n_0));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    sig_btt_eq_0_i_3
+       (.I0(sel0[18]),
+        .I1(sel0[19]),
+        .I2(sel0[10]),
+        .I3(sel0[14]),
+        .I4(sel0[11]),
+        .O(sig_btt_eq_0_i_3_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    sig_btt_eq_0_i_4
+       (.I0(sel0[12]),
+        .I1(sel0[20]),
+        .I2(sel0[13]),
+        .I3(sel0[7]),
+        .I4(sig_btt_eq_0_i_12_n_0),
+        .I5(sig_btt_eq_0_i_13_n_0),
+        .O(sig_btt_eq_0_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hFAFFFAFAFACCFAFA)) 
+    sig_btt_eq_0_i_6
+       (.I0(sig_btt_cntr_prv0[2]),
+        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [2]),
+        .I2(sig_btt_cntr_prv0[5]),
+        .I3(sig_cmd_full),
+        .I4(sig_sm_ld_dre_cmd),
+        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [5]),
+        .O(sig_btt_eq_0_i_6_n_0));
+  LUT6 #(
+    .INIT(64'h0500050505330505)) 
     sig_btt_eq_0_i_7
-       (.I0(sig_btt_cntr_prv0[0]),
-        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [0]),
+       (.I0(sig_btt_cntr_prv0[1]),
+        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [1]),
         .I2(sig_btt_cntr_prv0[3]),
         .I3(sig_cmd_full),
         .I4(sig_sm_ld_dre_cmd),
@@ -12969,29 +13304,29 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
   LUT6 #(
     .INIT(64'hFAFFFAFAFACCFAFA)) 
     sig_btt_eq_0_i_8
-       (.I0(sig_btt_cntr_prv0[16]),
-        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [16]),
-        .I2(sig_btt_cntr_prv0[10]),
+       (.I0(sig_btt_cntr_prv0[21]),
+        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [21]),
+        .I2(sig_btt_cntr_prv0[6]),
         .I3(sig_cmd_full),
         .I4(sig_sm_ld_dre_cmd),
-        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [10]),
+        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [6]),
         .O(sig_btt_eq_0_i_8_n_0));
   LUT6 #(
     .INIT(64'hFAFFFAFAFACCFAFA)) 
     sig_btt_eq_0_i_9
-       (.I0(sig_btt_cntr_prv0[2]),
-        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [2]),
-        .I2(sig_btt_cntr_prv0[13]),
+       (.I0(sig_btt_cntr_prv0[15]),
+        .I1(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [15]),
+        .I2(sig_btt_cntr_prv0[22]),
         .I3(sig_cmd_full),
         .I4(sig_sm_ld_dre_cmd),
-        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [13]),
+        .I5(\GEN_ENABLE_INDET_BTT.lsig_cmd_fetch_pause_reg_0 [22]),
         .O(sig_btt_eq_0_i_9_n_0));
   FDRE #(
     .INIT(1'b0)) 
     sig_btt_eq_0_reg
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(I_MSSAI_SKID_BUF_n_14),
+        .D(I_MSSAI_SKID_BUF_n_15),
         .Q(sig_btt_eq_0),
         .R(1'b0));
   (* COMPARATOR_THRESHOLD = "11" *) 
@@ -13113,7 +13448,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
     sig_cmd_empty_reg
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(I_TSTRB_FIFO_n_5),
+        .D(I_TSTRB_FIFO_n_3),
         .Q(sig_scatter2drc_cmd_ready),
         .R(1'b0));
   FDRE #(
@@ -13121,7 +13456,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_s2mm_scatter
     sig_cmd_full_reg
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(I_TSTRB_FIFO_n_3),
+        .D(I_TSTRB_FIFO_n_1),
         .Q(sig_cmd_full),
         .R(1'b0));
   LUT2 #(
@@ -13226,24 +13561,27 @@ module Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ,
     E,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] ,
+    SR,
     sig_tlast_out_reg,
     \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ,
+    \sig_burst_dbeat_cntr_reg[7] ,
+    sig_tlast_out_reg_0,
     sig_dre_halted_reg,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ,
     D,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 ,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 ,
     sig_child_qual_first_of_2_reg,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ,
-    sig_clr_dbeat_cntr0_out,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ,
+    sig_tlast_out_reg_1,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_3 ,
-    sig_tlast_out_reg_0,
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ,
     O,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ,
     out,
     sig_stream_rst,
     m_axi_s2mm_aclk,
@@ -13253,77 +13591,83 @@ module Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord
     full,
     sig_dre2ibtt_tlast,
     lsig_packer_full,
+    Q,
+    sig_clr_dbc_reg_reg,
+    \sig_burst_dbeat_cntr_reg[7]_0 ,
     \INCLUDE_PACKING.lsig_first_dbeat_reg ,
     sig_sf_strt_addr_offset,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ,
     sig_dre_halted,
     sig_dre2ibtt_tvalid,
-    Q,
+    \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] ,
     \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] ,
     sig_child_qual_first_of_2,
     sig_csm_pop_child_cmd,
     sig_pcc2sf_xfer_ready,
-    sig_clr_dbc_reg_reg,
-    lsig_first_dbeat,
     lsig_eop_reg_0,
-    sig_child_addr_cntr_lsh_reg,
     \sig_child_addr_cntr_lsh_reg[3] ,
     \sig_child_addr_cntr_lsh_reg[7] ,
-    \sig_byte_cntr_reg[3] );
-  output [8:0]dout;
+    \sig_child_addr_cntr_lsh_reg[11] ,
+    sig_child_addr_cntr_lsh_reg);
+  output [12:0]dout;
   output empty;
   output \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
   output [0:0]E;
   output \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] ;
+  output [0:0]SR;
   output sig_tlast_out_reg;
   output \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ;
+  output \sig_burst_dbeat_cntr_reg[7] ;
+  output sig_tlast_out_reg_0;
   output sig_dre_halted_reg;
   output [0:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ;
   output [0:0]D;
   output [1:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 ;
   output [15:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 ;
   output sig_child_qual_first_of_2_reg;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ;
-  output sig_clr_dbeat_cntr0_out;
+  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ;
+  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ;
+  output [1:0]sig_tlast_out_reg_1;
   output [0:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_3 ;
-  output [1:0]sig_tlast_out_reg_0;
   output [0:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ;
-  output [4:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ;
   output [3:0]O;
-  output [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
-  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ;
-  output [6:0]out;
+  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
+  output [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ;
+  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ;
+  output [1:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ;
+  output [10:0]out;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input wr_en;
-  input [8:0]din;
+  input [12:0]din;
   input rd_en;
   input full;
   input sig_dre2ibtt_tlast;
   input lsig_packer_full;
+  input [1:0]Q;
+  input sig_clr_dbc_reg_reg;
+  input \sig_burst_dbeat_cntr_reg[7]_0 ;
   input \INCLUDE_PACKING.lsig_first_dbeat_reg ;
   input sig_sf_strt_addr_offset;
   input \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ;
   input sig_dre_halted;
   input sig_dre2ibtt_tvalid;
-  input [8:0]Q;
+  input [8:0]\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] ;
   input [8:0]\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] ;
   input sig_child_qual_first_of_2;
   input sig_csm_pop_child_cmd;
   input sig_pcc2sf_xfer_ready;
-  input [3:0]sig_clr_dbc_reg_reg;
-  input lsig_first_dbeat;
   input lsig_eop_reg_0;
-  input [1:0]sig_child_addr_cntr_lsh_reg;
   input [3:0]\sig_child_addr_cntr_lsh_reg[3] ;
   input [3:0]\sig_child_addr_cntr_lsh_reg[7] ;
-  input [1:0]\sig_byte_cntr_reg[3] ;
+  input [3:0]\sig_child_addr_cntr_lsh_reg[11] ;
+  input [1:0]sig_child_addr_cntr_lsh_reg;
 
   wire [0:0]D;
   wire [0:0]E;
   wire \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ;
   wire [8:0]\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] ;
+  wire [8:0]\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] ;
   wire \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] ;
   wire [0:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ;
   wire [1:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 ;
@@ -13332,32 +13676,34 @@ module Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord
   wire \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ;
   wire \INCLUDE_PACKING.lsig_first_dbeat_reg ;
   wire [3:0]O;
-  wire [8:0]Q;
-  wire [8:0]din;
-  wire [8:0]dout;
+  wire [1:0]Q;
+  wire [0:0]SR;
+  wire [12:0]din;
+  wire [12:0]dout;
   wire empty;
   wire full;
   wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
   wire [0:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ;
-  wire [4:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ;
-  wire [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
-  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ;
+  wire [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ;
+  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ;
+  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ;
+  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ;
+  wire [1:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ;
+  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
   wire lsig_eop_reg_0;
-  wire lsig_first_dbeat;
   wire lsig_packer_full;
   wire m_axi_s2mm_aclk;
-  wire [6:0]out;
+  wire [10:0]out;
   wire rd_en;
-  wire [1:0]\sig_byte_cntr_reg[3] ;
+  wire \sig_burst_dbeat_cntr_reg[7] ;
+  wire \sig_burst_dbeat_cntr_reg[7]_0 ;
   wire [1:0]sig_child_addr_cntr_lsh_reg;
+  wire [3:0]\sig_child_addr_cntr_lsh_reg[11] ;
   wire [3:0]\sig_child_addr_cntr_lsh_reg[3] ;
   wire [3:0]\sig_child_addr_cntr_lsh_reg[7] ;
   wire sig_child_qual_first_of_2;
   wire sig_child_qual_first_of_2_reg;
-  wire [3:0]sig_clr_dbc_reg_reg;
-  wire sig_clr_dbeat_cntr0_out;
+  wire sig_clr_dbc_reg_reg;
   wire sig_csm_pop_child_cmd;
   wire sig_dre2ibtt_tlast;
   wire sig_dre2ibtt_tvalid;
@@ -13367,13 +13713,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord
   wire sig_sf_strt_addr_offset;
   wire sig_stream_rst;
   wire sig_tlast_out_reg;
-  wire [1:0]sig_tlast_out_reg_0;
+  wire sig_tlast_out_reg_0;
+  wire [1:0]sig_tlast_out_reg_1;
   wire wr_en;
 
   Zed_SPI_axi_dma_0_sync_fifo_fg \NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO 
        (.D(D),
         .\GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] (\GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ),
         .\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] (\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] ),
+        .\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] (\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] ),
         .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] (\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] ),
         .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 (\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ),
         .\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 (\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 ),
@@ -13383,31 +13731,33 @@ module Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord
         .\INCLUDE_PACKING.lsig_first_dbeat_reg (\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .O(O),
         .Q(Q),
+        .SR(SR),
         .din(din),
         .dout(dout),
         .empty(empty),
         .full(full),
         .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg (\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ),
         .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 (\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ),
+        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ),
         .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ),
-        .\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 (\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ),
         .lsig_eop_reg_0(lsig_eop_reg_0),
-        .lsig_first_dbeat(lsig_first_dbeat),
         .lsig_packer_full(lsig_packer_full),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(out),
         .rd_en(rd_en),
-        .\sig_byte_cntr_reg[3] (\sig_byte_cntr_reg[3] ),
+        .\sig_burst_dbeat_cntr_reg[7] (\sig_burst_dbeat_cntr_reg[7] ),
+        .\sig_burst_dbeat_cntr_reg[7]_0 (\sig_burst_dbeat_cntr_reg[7]_0 ),
         .sig_child_addr_cntr_lsh_reg(sig_child_addr_cntr_lsh_reg),
+        .\sig_child_addr_cntr_lsh_reg[11] (\sig_child_addr_cntr_lsh_reg[11] ),
         .\sig_child_addr_cntr_lsh_reg[3] (\sig_child_addr_cntr_lsh_reg[3] ),
         .\sig_child_addr_cntr_lsh_reg[7] (\sig_child_addr_cntr_lsh_reg[7] ),
         .sig_child_qual_first_of_2(sig_child_qual_first_of_2),
         .sig_child_qual_first_of_2_reg(sig_child_qual_first_of_2_reg),
         .sig_clr_dbc_reg_reg(sig_clr_dbc_reg_reg),
-        .sig_clr_dbeat_cntr0_out(sig_clr_dbeat_cntr0_out),
         .sig_csm_pop_child_cmd(sig_csm_pop_child_cmd),
         .sig_dre2ibtt_tlast(sig_dre2ibtt_tlast),
         .sig_dre2ibtt_tvalid(sig_dre2ibtt_tvalid),
@@ -13419,6 +13769,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord
         .sig_stream_rst(sig_stream_rst),
         .sig_tlast_out_reg(sig_tlast_out_reg),
         .sig_tlast_out_reg_0(sig_tlast_out_reg_0),
+        .sig_tlast_out_reg_1(sig_tlast_out_reg_1),
         .wr_en(wr_en));
 endmodule
 
@@ -13427,8 +13778,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord__parameterized0
    (full,
     dout,
     empty,
-    \gen_wr_a.gen_word_narrow.mem_reg ,
-    \gen_wr_a.gen_word_narrow.mem_reg_0 ,
+    \gen_wr_a.gen_word_narrow.mem_reg_1 ,
+    \gen_wr_a.gen_word_narrow.mem_reg_1_0 ,
     sig_stream_rst,
     m_axi_s2mm_aclk,
     din,
@@ -13439,8 +13790,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord__parameterized0
   output full;
   output [37:0]dout;
   output empty;
-  output [2:0]\gen_wr_a.gen_word_narrow.mem_reg ;
-  output [2:0]\gen_wr_a.gen_word_narrow.mem_reg_0 ;
+  output [2:0]\gen_wr_a.gen_word_narrow.mem_reg_1 ;
+  output [2:0]\gen_wr_a.gen_word_narrow.mem_reg_1_0 ;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input [37:0]din;
@@ -13454,8 +13805,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord__parameterized0
   wire [37:0]dout;
   wire empty;
   wire full;
-  wire [2:0]\gen_wr_a.gen_word_narrow.mem_reg ;
-  wire [2:0]\gen_wr_a.gen_word_narrow.mem_reg_0 ;
+  wire [2:0]\gen_wr_a.gen_word_narrow.mem_reg_1 ;
+  wire [2:0]\gen_wr_a.gen_word_narrow.mem_reg_1_0 ;
   wire lsig_packer_full;
   wire m_axi_s2mm_aclk;
   wire out;
@@ -13468,8 +13819,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_sfifo_autord__parameterized0
         .dout(dout),
         .empty(empty),
         .full(full),
-        .\gen_wr_a.gen_word_narrow.mem_reg (\gen_wr_a.gen_word_narrow.mem_reg ),
-        .\gen_wr_a.gen_word_narrow.mem_reg_0 (\gen_wr_a.gen_word_narrow.mem_reg_0 ),
+        .\gen_wr_a.gen_word_narrow.mem_reg_1 (\gen_wr_a.gen_word_narrow.mem_reg_1 ),
+        .\gen_wr_a.gen_word_narrow.mem_reg_1_0 (\gen_wr_a.gen_word_narrow.mem_reg_1_0 ),
         .lsig_packer_full(lsig_packer_full),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(out),
@@ -16486,19 +16837,20 @@ module Zed_SPI_axi_dma_0_axi_datamover_slice
         .I3(sig_valid_fifo_ld12_out),
         .I4(\sig_max_first_increment_reg[1] ),
         .O(\sig_next_strt_offset_reg[0] ));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \storage_data[0]_i_1 
        (.I0(sig_curr_strt_offset),
         .O(\I_SCATTER_STROBE_GEN/var_start_vector ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \storage_data[1]_i_1 
        (.I0(\storage_data[3]_i_2_n_0 ),
-        .I1(Q[12]),
-        .I2(Q[19]),
-        .I3(Q[22]),
+        .I1(Q[5]),
+        .I2(Q[1]),
+        .I3(Q[23]),
         .I4(\storage_data[3]_i_3_n_0 ),
         .O(\I_SCATTER_STROBE_GEN/sig_end_offset_un ));
   LUT2 #(
@@ -16507,23 +16859,24 @@ module Zed_SPI_axi_dma_0_axi_datamover_slice
        (.I0(sig_fifo_mssai),
         .I1(CO),
         .O(sig_tstrb_fifo_data_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT5 #(
     .INIT(32'h00000001)) 
     \storage_data[3]_i_1 
        (.I0(\storage_data[3]_i_2_n_0 ),
-        .I1(Q[12]),
-        .I2(Q[19]),
-        .I3(Q[22]),
+        .I1(Q[5]),
+        .I2(Q[1]),
+        .I3(Q[23]),
         .I4(\storage_data[3]_i_3_n_0 ),
         .O(sig_tstrb_fifo_data_in[3]));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \storage_data[3]_i_2 
-       (.I0(Q[23]),
-        .I1(Q[5]),
-        .I2(Q[1]),
-        .I3(Q[8]),
+       (.I0(sig_curr_strt_offset),
+        .I1(Q[4]),
+        .I2(Q[12]),
+        .I3(Q[22]),
         .I4(\storage_data[3]_i_4_n_0 ),
         .O(\storage_data[3]_i_2_n_0 ));
   LUT6 #(
@@ -16531,35 +16884,35 @@ module Zed_SPI_axi_dma_0_axi_datamover_slice
     \storage_data[3]_i_3 
        (.I0(\storage_data[3]_i_5_n_0 ),
         .I1(\storage_data[3]_i_6_n_0 ),
-        .I2(Q[4]),
-        .I3(sig_curr_strt_offset),
+        .I2(Q[11]),
+        .I3(Q[17]),
         .I4(Q[18]),
-        .I5(Q[13]),
+        .I5(Q[16]),
         .O(\storage_data[3]_i_3_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \storage_data[3]_i_4 
-       (.I0(Q[10]),
-        .I1(Q[9]),
-        .I2(Q[20]),
-        .I3(Q[16]),
+       (.I0(Q[8]),
+        .I1(Q[20]),
+        .I2(Q[19]),
+        .I3(Q[9]),
         .O(\storage_data[3]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \storage_data[3]_i_5 
-       (.I0(Q[7]),
-        .I1(Q[3]),
-        .I2(Q[14]),
-        .I3(Q[11]),
+       (.I0(Q[6]),
+        .I1(Q[21]),
+        .I2(Q[13]),
+        .I3(Q[7]),
         .I4(Q[2]),
-        .I5(Q[6]),
+        .I5(Q[3]),
         .O(\storage_data[3]_i_5_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \storage_data[3]_i_6 
-       (.I0(Q[17]),
+       (.I0(Q[14]),
         .I1(Q[15]),
-        .I2(Q[21]),
+        .I2(Q[10]),
         .I3(Q[0]),
         .O(\storage_data[3]_i_6_n_0 ));
   LUT2 #(
@@ -16638,7 +16991,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
     \sig_addr_posted_cntr_reg[3]_0 ,
     sig_init_reg_reg,
     sig_init_reg_reg_0,
-    sig_init_reg_reg_1,
     sig_stream_rst,
     m_axi_s2mm_aclk,
     SR,
@@ -16652,7 +17004,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
     sig_data2wsc_valid,
     sig_halt_reg_dly3,
     sig_psm_pop_input_cmd,
-    \sig_realigner_btt2_reg[24] ,
     sig_csm_pop_child_cmd,
     m_axi_s2mm_bresp,
     in);
@@ -16669,7 +17020,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
   output \sig_addr_posted_cntr_reg[3]_0 ;
   output [0:0]sig_init_reg_reg;
   output [0:0]sig_init_reg_reg_0;
-  output [0:0]sig_init_reg_reg_1;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input [0:0]SR;
@@ -16683,16 +17033,15 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
   input sig_data2wsc_valid;
   input sig_halt_reg_dly3;
   input sig_psm_pop_input_cmd;
-  input \sig_realigner_btt2_reg[24] ;
   input sig_csm_pop_child_cmd;
   input [1:0]m_axi_s2mm_bresp;
   input [0:31]in;
 
   wire [0:0]E;
-  wire \GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_34 ;
-  wire \GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_35 ;
   wire \GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_36 ;
+  wire \GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_37 ;
   wire \GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_38 ;
+  wire \GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_39 ;
   wire \GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_40 ;
   wire \GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_42 ;
   wire [33:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg_0 ;
@@ -16733,12 +17082,10 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
   wire sig_init_reg2;
   wire [0:0]sig_init_reg_reg;
   wire [0:0]sig_init_reg_reg_0;
-  wire [0:0]sig_init_reg_reg_1;
   wire sig_psm_pop_input_cmd;
   wire sig_push_coelsc_reg;
   wire sig_rd_empty;
   wire sig_rd_empty_0;
-  wire \sig_realigner_btt2_reg[24] ;
   wire sig_statcnt_gt_eq_thres;
   wire sig_stream_rst;
   wire \sig_wdc_statcnt[0]_i_1_n_0 ;
@@ -16748,15 +17095,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
   wire sig_wsc2stat_status_valid;
 
   Zed_SPI_axi_dma_0_axi_datamover_fifo__parameterized2 \GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO 
-       (.D({\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_34 ,\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_35 ,\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_36 }),
+       (.D({\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_36 ,\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_37 ,\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_38 }),
         .E(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_40 ),
-        .\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg (sig_rd_empty_0),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg (\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg_0 [4]),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg (sig_push_coelsc_reg),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 (\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_42 ),
-        .\INFERRED_GEN.cnt_i_reg[3] (\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_38 ),
-        .\INFERRED_GEN.cnt_i_reg[3]_0 (sig_rd_empty),
-        .Q(sig_wdc_statcnt_reg),
+        .\INFERRED_GEN.cnt_i_reg[3] (sig_rd_empty),
+        .\INFERRED_GEN.cnt_i_reg[3]_0 (\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_39 ),
+        .Q(sig_rd_empty_0),
         .in(in),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(sig_dcntl_sfifo_out),
@@ -16767,7 +17113,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
         .sig_data2wsc_valid(sig_data2wsc_valid),
         .sig_init_done(sig_init_done),
         .sig_init_done_reg_0(I_WRESP_STATUS_FIFO_n_1),
-        .sig_stream_rst(sig_stream_rst));
+        .sig_stream_rst(sig_stream_rst),
+        .\sig_wdc_statcnt_reg[3] (sig_wdc_statcnt_reg));
   FDRE #(
     .INIT(1'b0)) 
     \GEN_ENABLE_INDET_BTT.sig_coelsc_bytes_rcvd_reg[0] 
@@ -17070,7 +17417,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
         .FIFO_Full_reg(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_42 ),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_okay_reg_reg (\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg_0 [6:4]),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_slverr_reg_reg (I_WRESP_STATUS_FIFO_n_8),
-        .\INFERRED_GEN.cnt_i_reg[0] (\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_38 ),
+        .\INFERRED_GEN.cnt_i_reg[0] (\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_39 ),
         .\INFERRED_GEN.cnt_i_reg[3] (sig_rd_empty),
         .Q(sig_rd_empty_0),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
@@ -17091,9 +17438,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
         .sig_init_reg_reg_0(sig_init_reg),
         .sig_init_reg_reg_1(sig_init_reg_reg),
         .sig_init_reg_reg_2(sig_init_reg_reg_0),
-        .sig_init_reg_reg_3(sig_init_reg_reg_1),
         .sig_psm_pop_input_cmd(sig_psm_pop_input_cmd),
-        .\sig_realigner_btt2_reg[24] (\sig_realigner_btt2_reg[24] ),
         .sig_stream_rst(sig_stream_rst));
   LUT1 #(
     .INIT(2'h1)) 
@@ -17174,7 +17519,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
     \sig_wdc_statcnt_reg[1] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_40 ),
-        .D(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_36 ),
+        .D(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_38 ),
         .Q(sig_wdc_statcnt_reg[1]),
         .R(sig_stream_rst));
   FDRE #(
@@ -17182,7 +17527,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
     \sig_wdc_statcnt_reg[2] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_40 ),
-        .D(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_35 ),
+        .D(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_37 ),
         .Q(sig_wdc_statcnt_reg[2]),
         .R(sig_stream_rst));
   FDRE #(
@@ -17190,7 +17535,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wr_status_cntl
     \sig_wdc_statcnt_reg[3] 
        (.C(m_axi_s2mm_aclk),
         .CE(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_40 ),
-        .D(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_34 ),
+        .D(\GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO_n_36 ),
         .Q(sig_wdc_statcnt_reg[3]),
         .R(sig_stream_rst));
   LUT2 #(
@@ -17317,7 +17662,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
   input sig_last_skid_reg;
   input [3:0]\sig_strb_reg_out_reg[3] ;
   input [3:0]Q;
-  input [13:0]sig_next_calc_error_reg_reg_2;
+  input [16:0]sig_next_calc_error_reg_reg_2;
   input [1:0]\GEN_INDET_BTT.lsig_byte_cntr_reg[8]_0 ;
   input [0:0]E;
   input [3:0]D;
@@ -17335,6 +17680,9 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
   wire \GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_20 ;
   wire \GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_21 ;
   wire \GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_22 ;
+  wire \GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_23 ;
+  wire \GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_24 ;
+  wire \GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_25 ;
   wire \GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_3 ;
   wire \GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_4 ;
   wire \GEN_INDET_BTT.lsig_byte_cntr[11]_i_2_n_0 ;
@@ -17423,11 +17771,8 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
   wire sig_data2wsc_valid;
   wire [7:0]sig_dbeat_cntr;
   wire \sig_dbeat_cntr[4]_i_2_n_0 ;
-  wire \sig_dbeat_cntr[5]_i_1_n_0 ;
   wire \sig_dbeat_cntr[5]_i_2_n_0 ;
-  wire \sig_dbeat_cntr[6]_i_1_n_0 ;
   wire \sig_dbeat_cntr[7]_i_1_n_0 ;
-  wire \sig_dbeat_cntr[7]_i_2_n_0 ;
   wire \sig_dbeat_cntr[7]_i_3_n_0 ;
   wire sig_dqual_reg_empty;
   wire sig_dqual_reg_full;
@@ -17446,7 +17791,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
   wire sig_init_done;
   wire sig_init_done_reg;
   wire sig_last_dbeat_i_3_n_0;
-  wire sig_last_dbeat_i_4_n_0;
+  wire sig_last_dbeat_i_5_n_0;
   wire sig_last_dbeat_reg_n_0;
   wire sig_last_mmap_dbeat;
   wire sig_last_mmap_dbeat_reg;
@@ -17461,7 +17806,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
   wire sig_next_calc_error_reg;
   wire sig_next_calc_error_reg_reg_0;
   wire sig_next_calc_error_reg_reg_1;
-  wire [13:0]sig_next_calc_error_reg_reg_2;
+  wire [16:0]sig_next_calc_error_reg_reg_2;
   wire sig_next_cmd_cmplt_reg;
   wire sig_next_cmd_cmplt_reg_reg_0;
   wire sig_next_sequential_reg;
@@ -17490,12 +17835,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
         .FIFO_Full_reg(FIFO_Full_reg),
         .\GEN_INDET_BTT.lsig_byte_cntr[24]_i_4 (\sig_addr_posted_cntr_reg[2]_0 ),
         .\GEN_INDET_BTT.lsig_byte_cntr_reg[24] (sig_halt_reg_dly3),
-        .Q(sig_dbeat_cntr[4:0]),
+        .Q(sig_dbeat_cntr),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out({sig_cmd_fifo_data_out[26:24],sig_cmd_fifo_data_out[3:0]}),
         .sig_addr_posted_cntr(sig_addr_posted_cntr),
-        .\sig_dbeat_cntr_reg[4] ({\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_18 ,\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_19 ,\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_20 ,\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_21 ,\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_22 }),
-        .\sig_dbeat_cntr_reg[4]_0 (\sig_dbeat_cntr[4]_i_2_n_0 ),
+        .\sig_dbeat_cntr_reg[4] (\sig_dbeat_cntr[4]_i_2_n_0 ),
+        .\sig_dbeat_cntr_reg[5] (\sig_dbeat_cntr[5]_i_2_n_0 ),
+        .\sig_dbeat_cntr_reg[6] (sig_last_reg_out_i_2_n_0),
+        .\sig_dbeat_cntr_reg[7] ({\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_18 ,\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_19 ,\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_20 ,\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_21 ,\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_22 ,\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_23 ,\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_24 ,\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_25 }),
         .sig_dqual_reg_empty(sig_dqual_reg_empty),
         .sig_dqual_reg_full(sig_dqual_reg_full),
         .sig_first_dbeat_reg(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_15 ),
@@ -17993,7 +18340,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
         .I3(sig_addr_posted_cntr[2]),
         .I4(sig_addr_posted_cntr[0]),
         .O(\sig_addr_posted_cntr[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT5 #(
     .INIT(32'hF0BCC2F0)) 
     \sig_addr_posted_cntr[1]_i_1 
@@ -18003,7 +18350,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
         .I3(sig_last_mmap_dbeat_reg),
         .I4(\sig_addr_posted_cntr_reg[2]_0 ),
         .O(\sig_addr_posted_cntr[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT5 #(
     .INIT(32'hAAEAA8AA)) 
     \sig_addr_posted_cntr[2]_i_1 
@@ -18085,7 +18432,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
         .D(sig_next_tag_reg[3]),
         .Q(in[28]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \sig_dbeat_cntr[4]_i_2 
@@ -18094,14 +18441,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
         .I2(sig_dbeat_cntr[3]),
         .I3(sig_dbeat_cntr[2]),
         .O(\sig_dbeat_cntr[4]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'h06)) 
-    \sig_dbeat_cntr[5]_i_1 
-       (.I0(\sig_dbeat_cntr[5]_i_2_n_0 ),
-        .I1(sig_dbeat_cntr[5]),
-        .I2(sig_push_dqual_reg),
-        .O(\sig_dbeat_cntr[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT5 #(
     .INIT(32'h00000001)) 
     \sig_dbeat_cntr[5]_i_2 
@@ -18111,13 +18451,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
         .I3(sig_dbeat_cntr[0]),
         .I4(sig_dbeat_cntr[4]),
         .O(\sig_dbeat_cntr[5]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'h06)) 
-    \sig_dbeat_cntr[6]_i_1 
-       (.I0(sig_last_reg_out_i_2_n_0),
-        .I1(sig_dbeat_cntr[6]),
-        .I2(sig_push_dqual_reg),
-        .O(\sig_dbeat_cntr[6]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h5444FFFF44444444)) 
     \sig_dbeat_cntr[7]_i_1 
@@ -18128,14 +18461,6 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
         .I4(\sig_dbeat_cntr[7]_i_3_n_0 ),
         .I5(sig_next_calc_error_reg_reg_0),
         .O(\sig_dbeat_cntr[7]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h00D2)) 
-    \sig_dbeat_cntr[7]_i_2 
-       (.I0(sig_last_reg_out_i_2_n_0),
-        .I1(sig_dbeat_cntr[6]),
-        .I2(sig_dbeat_cntr[7]),
-        .I3(sig_push_dqual_reg),
-        .O(\sig_dbeat_cntr[7]_i_2_n_0 ));
   LUT3 #(
     .INIT(8'h04)) 
     \sig_dbeat_cntr[7]_i_3 
@@ -18148,7 +18473,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
     \sig_dbeat_cntr_reg[0] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_dbeat_cntr[7]_i_1_n_0 ),
-        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_22 ),
+        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_25 ),
         .Q(sig_dbeat_cntr[0]),
         .R(sig_stream_rst));
   FDRE #(
@@ -18156,7 +18481,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
     \sig_dbeat_cntr_reg[1] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_dbeat_cntr[7]_i_1_n_0 ),
-        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_21 ),
+        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_24 ),
         .Q(sig_dbeat_cntr[1]),
         .R(sig_stream_rst));
   FDRE #(
@@ -18164,7 +18489,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
     \sig_dbeat_cntr_reg[2] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_dbeat_cntr[7]_i_1_n_0 ),
-        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_20 ),
+        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_23 ),
         .Q(sig_dbeat_cntr[2]),
         .R(sig_stream_rst));
   FDRE #(
@@ -18172,7 +18497,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
     \sig_dbeat_cntr_reg[3] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_dbeat_cntr[7]_i_1_n_0 ),
-        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_19 ),
+        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_22 ),
         .Q(sig_dbeat_cntr[3]),
         .R(sig_stream_rst));
   FDRE #(
@@ -18180,7 +18505,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
     \sig_dbeat_cntr_reg[4] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_dbeat_cntr[7]_i_1_n_0 ),
-        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_18 ),
+        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_21 ),
         .Q(sig_dbeat_cntr[4]),
         .R(sig_stream_rst));
   FDRE #(
@@ -18188,7 +18513,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
     \sig_dbeat_cntr_reg[5] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_dbeat_cntr[7]_i_1_n_0 ),
-        .D(\sig_dbeat_cntr[5]_i_1_n_0 ),
+        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_20 ),
         .Q(sig_dbeat_cntr[5]),
         .R(sig_stream_rst));
   FDRE #(
@@ -18196,7 +18521,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
     \sig_dbeat_cntr_reg[6] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_dbeat_cntr[7]_i_1_n_0 ),
-        .D(\sig_dbeat_cntr[6]_i_1_n_0 ),
+        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_19 ),
         .Q(sig_dbeat_cntr[6]),
         .R(sig_stream_rst));
   FDRE #(
@@ -18204,7 +18529,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
     \sig_dbeat_cntr_reg[7] 
        (.C(m_axi_s2mm_aclk),
         .CE(\sig_dbeat_cntr[7]_i_1_n_0 ),
-        .D(\sig_dbeat_cntr[7]_i_2_n_0 ),
+        .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_18 ),
         .Q(sig_dbeat_cntr[7]),
         .R(sig_stream_rst));
   FDSE #(
@@ -18223,7 +18548,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
         .D(sig_push_dqual_reg),
         .Q(sig_dqual_reg_full),
         .R(sig_next_cmd_cmplt_reg_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT4 #(
     .INIT(16'hAA8A)) 
     sig_first_dbeat_i_2
@@ -18281,17 +18606,17 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
         .I2(sig_dbeat_cntr[3]),
         .I3(sig_dbeat_cntr[2]),
         .I4(sig_first_dbeat_reg_0),
-        .I5(sig_last_dbeat_i_4_n_0),
+        .I5(sig_last_dbeat_i_5_n_0),
         .O(sig_last_dbeat_i_3_n_0));
   LUT5 #(
     .INIT(32'hFFFFFFEF)) 
-    sig_last_dbeat_i_4
+    sig_last_dbeat_i_5
        (.I0(sig_dbeat_cntr[5]),
         .I1(sig_dbeat_cntr[7]),
         .I2(sig_dbeat_cntr[0]),
         .I3(sig_dbeat_cntr[4]),
         .I4(sig_dbeat_cntr[6]),
-        .O(sig_last_dbeat_i_4_n_0));
+        .O(sig_last_dbeat_i_5_n_0));
   FDRE #(
     .INIT(1'b0)) 
     sig_last_dbeat_reg
@@ -18337,7 +18662,7 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
         .I4(sig_dbeat_cntr[2]),
         .I5(sig_dbeat_cntr[5]),
         .O(sig_last_reg_out_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT4 #(
     .INIT(16'h0020)) 
     sig_last_skid_reg_i_1__0
@@ -18533,14 +18858,14 @@ module Zed_SPI_axi_dma_0_axi_datamover_wrdata_cntl
         .I4(sig_last_reg_out_reg),
         .I5(Q[3]),
         .O(\sig_next_strt_strb_reg_reg[3]_0 [3]));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \sig_strb_reg_out[3]_i_3 
        (.I0(sig_single_dbeat_reg_n_0),
         .I1(sig_first_dbeat_reg_n_0),
         .O(\sig_strb_reg_out[3]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT5 #(
     .INIT(32'hABFFAB00)) 
     \sig_strb_skid_reg[0]_i_1__0 
@@ -18587,7 +18912,7 @@ endmodule
 (* C_M_AXIS_MM2S_TDATA_WIDTH = "32" *) (* C_M_AXI_MM2S_ADDR_WIDTH = "32" *) (* C_M_AXI_MM2S_DATA_WIDTH = "32" *) 
 (* C_M_AXI_S2MM_ADDR_WIDTH = "32" *) (* C_M_AXI_S2MM_DATA_WIDTH = "32" *) (* C_M_AXI_SG_ADDR_WIDTH = "32" *) 
 (* C_M_AXI_SG_DATA_WIDTH = "32" *) (* C_NUM_MM2S_CHANNELS = "1" *) (* C_NUM_S2MM_CHANNELS = "1" *) 
-(* C_PRMRY_IS_ACLK_ASYNC = "1" *) (* C_S2MM_BURST_SIZE = "16" *) (* C_SG_INCLUDE_STSCNTRL_STRM = "0" *) 
+(* C_PRMRY_IS_ACLK_ASYNC = "1" *) (* C_S2MM_BURST_SIZE = "256" *) (* C_SG_INCLUDE_STSCNTRL_STRM = "0" *) 
 (* C_SG_LENGTH_WIDTH = "25" *) (* C_SG_USE_STSAPP_LENGTH = "0" *) (* C_S_AXIS_S2MM_STS_TDATA_WIDTH = "32" *) 
 (* C_S_AXIS_S2MM_TDATA_WIDTH = "16" *) (* C_S_AXI_LITE_ADDR_WIDTH = "10" *) (* C_S_AXI_LITE_DATA_WIDTH = "32" *) 
 (* ORIG_REF_NAME = "axi_dma" *) (* downgradeipidentifiedwarnings = "yes" *) 
@@ -18886,7 +19211,7 @@ module Zed_SPI_axi_dma_0_axi_dma
   wire m_axi_s2mm_aresetn;
   wire [31:0]m_axi_s2mm_awaddr;
   wire [0:0]\^m_axi_s2mm_awburst ;
-  wire [4:0]\^m_axi_s2mm_awlen ;
+  wire [7:0]m_axi_s2mm_awlen;
   wire m_axi_s2mm_awready;
   wire [1:1]\^m_axi_s2mm_awsize ;
   wire m_axi_s2mm_awvalid;
@@ -19039,10 +19364,6 @@ module Zed_SPI_axi_dma_0_axi_dma
   assign m_axi_s2mm_awcache[2] = \<const0> ;
   assign m_axi_s2mm_awcache[1] = \<const0> ;
   assign m_axi_s2mm_awcache[0] = \<const0> ;
-  assign m_axi_s2mm_awlen[7] = \<const0> ;
-  assign m_axi_s2mm_awlen[6] = \<const0> ;
-  assign m_axi_s2mm_awlen[5] = \<const0> ;
-  assign m_axi_s2mm_awlen[4:0] = \^m_axi_s2mm_awlen [4:0];
   assign m_axi_s2mm_awprot[2] = \<const0> ;
   assign m_axi_s2mm_awprot[1] = \<const0> ;
   assign m_axi_s2mm_awprot[0] = \<const0> ;
@@ -19417,7 +19738,7 @@ module Zed_SPI_axi_dma_0_axi_dma
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .m_axi_s2mm_awaddr(m_axi_s2mm_awaddr),
         .m_axi_s2mm_awburst(\^m_axi_s2mm_awburst ),
-        .m_axi_s2mm_awlen(\^m_axi_s2mm_awlen ),
+        .m_axi_s2mm_awlen(m_axi_s2mm_awlen),
         .m_axi_s2mm_awready(m_axi_s2mm_awready),
         .m_axi_s2mm_awsize(\^m_axi_s2mm_awsize ),
         .m_axi_s2mm_awvalid(m_axi_s2mm_awvalid),
@@ -22405,7 +22726,7 @@ module Zed_SPI_axi_dma_0_axi_dma_reset
   wire halt_cmplt_reg;
   wire m_axi_s2mm_aclk;
   wire min_assert_sftrst;
-  wire n_0_904;
+  wire n_0_906;
   (* RTL_KEEP = "true" *) (* equivalent_register_removal = "no" *) wire out;
   wire p_halt;
   wire prmry_in;
@@ -22713,9 +23034,9 @@ module Zed_SPI_axi_dma_0_axi_dma_reset
         .O(s2mm_sts_reset_out_n));
   LUT1 #(
     .INIT(2'h1)) 
-    i_904
+    i_906
        (.I0(out),
-        .O(n_0_904));
+        .O(n_0_906));
   LUT1 #(
     .INIT(2'h2)) 
     prmry_resetn_inst
@@ -25691,37 +26012,35 @@ endmodule
 module Zed_SPI_axi_dma_0_cdc_sync_5
    (SR,
     scndry_out,
+    sig_push_err2wsc_reg,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ,
-    sig_clr_dbc_reg_reg,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] ,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ,
     \GEN_INDET_BTT.lsig_end_of_cmd_reg_reg ,
     sig_next_addr_reg0,
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_6 ,
     sig_mvalid_stop_reg_reg,
     sig_stream_rst,
+    sig_clr_dbc_reg,
+    sig_cmd_stat_rst_user_reg_n_cdc_from,
+    \sig_byte_cntr_reg[9] ,
     sig_push_err2wsc,
     sig_last_mmap_dbeat,
     sig_wr_fifo,
-    prmry_in,
-    \GEN_INDET_BTT.lsig_byte_cntr_reg[0] ,
     sig_push_dqual_reg,
-    \sig_byte_cntr_reg[0] ,
-    sig_clr_dbc_reg,
     \GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9] ,
     Q,
-    sig_clr_dbeat_cntr0_out,
+    \sig_byte_cntr_reg[0] ,
     sig_last_skid_reg,
     \sig_strb_skid_reg_reg[1] ,
     skid2dre_wlast,
     sig_strb_skid_reg,
     \sig_strb_skid_reg_reg[1]_0 ,
+    \GEN_INDET_BTT.lsig_byte_cntr_reg[0] ,
     \GEN_INDET_BTT.lsig_byte_cntr_reg[0]_0 ,
-    \GEN_INDET_BTT.lsig_byte_cntr_reg[0]_1 ,
     lsig_end_of_cmd_reg,
     sig_addr_reg_full,
     m_axi_s2mm_awready,
@@ -25733,41 +26052,39 @@ module Zed_SPI_axi_dma_0_cdc_sync_5
     sig_cmd_empty_reg,
     sig_strm_tlast,
     sig_mvalid_stop,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ,
+    prmry_in,
     m_axi_s2mm_aclk);
-  output [0:0]SR;
+  output [1:0]SR;
   output scndry_out;
+  output [0:0]sig_push_err2wsc_reg;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
-  output [0:0]sig_clr_dbc_reg_reg;
   output [0:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] ;
-  output [0:0]\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
+  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ;
   output [1:0]\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg ;
   output sig_next_addr_reg0;
+  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_6 ;
   output [0:0]sig_mvalid_stop_reg_reg;
   output sig_stream_rst;
+  input sig_clr_dbc_reg;
+  input sig_cmd_stat_rst_user_reg_n_cdc_from;
+  input \sig_byte_cntr_reg[9] ;
   input sig_push_err2wsc;
   input sig_last_mmap_dbeat;
   input sig_wr_fifo;
-  input prmry_in;
-  input \GEN_INDET_BTT.lsig_byte_cntr_reg[0] ;
   input sig_push_dqual_reg;
-  input \sig_byte_cntr_reg[0] ;
-  input sig_clr_dbc_reg;
   input \GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9] ;
   input [0:0]Q;
-  input sig_clr_dbeat_cntr0_out;
+  input \sig_byte_cntr_reg[0] ;
   input sig_last_skid_reg;
   input \sig_strb_skid_reg_reg[1] ;
   input skid2dre_wlast;
   input [1:0]sig_strb_skid_reg;
   input [1:0]\sig_strb_skid_reg_reg[1]_0 ;
+  input \GEN_INDET_BTT.lsig_byte_cntr_reg[0] ;
   input \GEN_INDET_BTT.lsig_byte_cntr_reg[0]_0 ;
-  input \GEN_INDET_BTT.lsig_byte_cntr_reg[0]_1 ;
   input lsig_end_of_cmd_reg;
   input sig_addr_reg_full;
   input m_axi_s2mm_awready;
@@ -25779,25 +26096,22 @@ module Zed_SPI_axi_dma_0_cdc_sync_5
   input sig_cmd_empty_reg;
   input sig_strm_tlast;
   input sig_mvalid_stop;
-  input \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ;
+  input prmry_in;
   input m_axi_s2mm_aclk;
 
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
-  wire [0:0]\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
+  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ;
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_6 ;
   wire \GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9] ;
   wire \GEN_INDET_BTT.lsig_byte_cntr_reg[0] ;
   wire \GEN_INDET_BTT.lsig_byte_cntr_reg[0]_0 ;
-  wire \GEN_INDET_BTT.lsig_byte_cntr_reg[0]_1 ;
   wire [1:0]\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg ;
   wire [0:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] ;
   wire [0:0]Q;
-  wire [0:0]SR;
+  wire [1:0]SR;
   wire lsig_absorb2tlast;
   wire lsig_end_of_cmd_reg;
   wire m_axi_s2mm_aclk;
@@ -25810,10 +26124,10 @@ module Zed_SPI_axi_dma_0_cdc_sync_5
   wire sig_addr2wsc_calc_error;
   wire sig_addr_reg_full;
   wire \sig_byte_cntr_reg[0] ;
+  wire \sig_byte_cntr_reg[9] ;
   wire sig_clr_dbc_reg;
-  wire [0:0]sig_clr_dbc_reg_reg;
-  wire sig_clr_dbeat_cntr0_out;
   wire sig_cmd_empty_reg;
+  wire sig_cmd_stat_rst_user_reg_n_cdc_from;
   wire sig_halt_reg_dly2;
   wire sig_halt_reg_dly3;
   wire sig_last_mmap_dbeat;
@@ -25823,6 +26137,7 @@ module Zed_SPI_axi_dma_0_cdc_sync_5
   wire sig_next_addr_reg0;
   wire sig_push_dqual_reg;
   wire sig_push_err2wsc;
+  wire [0:0]sig_push_err2wsc_reg;
   wire sig_stop_request;
   wire [1:0]sig_strb_skid_reg;
   wire \sig_strb_skid_reg_reg[1] ;
@@ -25841,7 +26156,7 @@ module Zed_SPI_axi_dma_0_cdc_sync_5
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ),
+        .D(prmry_in),
         .Q(s_level_out_d1_cdc_to),
         .R(1'b0));
   (* ASYNC_REG *) 
@@ -25880,87 +26195,87 @@ module Zed_SPI_axi_dma_0_cdc_sync_5
         .D(s_level_out_d3),
         .Q(scndry_out),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT5 #(
     .INIT(32'hFFFFF1FF)) 
     \GEN_DELAY_REG[0].sig_delay_data_reg[0][9]_i_1 
        (.I0(\GEN_DELAY_REG[0].sig_delay_data_reg_reg[0][9] ),
         .I1(Q),
         .I2(scndry_out),
-        .I3(prmry_in),
-        .I4(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I3(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I4(\sig_byte_cntr_reg[9] ),
         .O(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT4 #(
     .INIT(16'hFFEF)) 
     \GEN_INDET_BTT.lsig_byte_cntr[24]_i_1 
        (.I0(lsig_end_of_cmd_reg),
         .I1(scndry_out),
-        .I2(prmry_in),
-        .I3(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I2(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I3(\sig_byte_cntr_reg[9] ),
         .O(\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg [1]));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFD0FFFF)) 
     \GEN_INDET_BTT.lsig_byte_cntr[7]_i_1 
-       (.I0(\GEN_INDET_BTT.lsig_byte_cntr_reg[0]_0 ),
-        .I1(\GEN_INDET_BTT.lsig_byte_cntr_reg[0]_1 ),
+       (.I0(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I1(\GEN_INDET_BTT.lsig_byte_cntr_reg[0]_0 ),
         .I2(lsig_end_of_cmd_reg),
         .I3(scndry_out),
-        .I4(prmry_in),
-        .I5(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I4(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I5(\sig_byte_cntr_reg[9] ),
         .O(\GEN_INDET_BTT.lsig_end_of_cmd_reg_reg [0]));
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT4 #(
     .INIT(16'hFFEF)) 
-    \sig_burst_dbeat_cntr[3]_i_1 
-       (.I0(sig_clr_dbeat_cntr0_out),
+    \sig_byte_cntr[10]_i_1 
+       (.I0(sig_clr_dbc_reg),
         .I1(scndry_out),
-        .I2(prmry_in),
-        .I3(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ));
+        .I2(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I3(\sig_byte_cntr_reg[9] ),
+        .O(SR[1]));
   LUT5 #(
     .INIT(32'hFFFFF4FF)) 
-    \sig_byte_cntr[6]_i_1 
+    \sig_byte_cntr[7]_i_1 
        (.I0(\sig_byte_cntr_reg[0] ),
         .I1(sig_clr_dbc_reg),
         .I2(scndry_out),
-        .I3(prmry_in),
-        .I4(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
-        .O(sig_clr_dbc_reg_reg));
+        .I3(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I4(\sig_byte_cntr_reg[9] ),
+        .O(SR[0]));
   LUT6 #(
     .INIT(64'hFFFBFBFBFBFBFBFB)) 
     sig_cmd_full_i_3
        (.I0(scndry_out),
-        .I1(prmry_in),
-        .I2(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I1(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I2(\sig_byte_cntr_reg[9] ),
         .I3(lsig_absorb2tlast),
         .I4(sig_cmd_empty_reg),
         .I5(sig_strm_tlast),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_6 ));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ));
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT4 #(
     .INIT(16'hFFEF)) 
     \sig_data_reg_out[15]_i_1 
        (.I0(sig_mvalid_stop),
         .I1(scndry_out),
-        .I2(prmry_in),
-        .I3(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I2(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I3(\sig_byte_cntr_reg[9] ),
         .O(sig_mvalid_stop_reg_reg));
   LUT6 #(
     .INIT(64'h0404040000000400)) 
     sig_last_skid_reg_i_1__1
        (.I0(scndry_out),
-        .I1(prmry_in),
-        .I2(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I1(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I2(\sig_byte_cntr_reg[9] ),
         .I3(sig_last_skid_reg),
         .I4(\sig_strb_skid_reg_reg[1] ),
         .I5(skid2dre_wlast),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ));
+        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_1 ));
   LUT6 #(
     .INIT(64'hFBFBFBFBFFFBFBFB)) 
     \sig_next_addr_reg[31]_i_1 
        (.I0(scndry_out),
-        .I1(prmry_in),
-        .I2(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I1(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I2(\sig_byte_cntr_reg[9] ),
         .I3(sig_addr_reg_full),
         .I4(m_axi_s2mm_awready),
         .I5(sig_addr2wsc_calc_error),
@@ -25971,8 +26286,8 @@ module Zed_SPI_axi_dma_0_cdc_sync_5
        (.I0(sig_push_dqual_reg),
         .I1(sig_last_mmap_dbeat),
         .I2(scndry_out),
-        .I3(prmry_in),
-        .I4(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I3(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I4(\sig_byte_cntr_reg[9] ),
         .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFF10FFFF)) 
@@ -25981,47 +26296,47 @@ module Zed_SPI_axi_dma_0_cdc_sync_5
         .I1(sig_last_mmap_dbeat),
         .I2(sig_wr_fifo),
         .I3(scndry_out),
-        .I4(prmry_in),
-        .I5(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
-        .O(SR));
+        .I4(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I5(\sig_byte_cntr_reg[9] ),
+        .O(sig_push_err2wsc_reg));
   LUT6 #(
     .INIT(64'hFFFFFFFFFBFBFFFB)) 
     sig_s_ready_dup_i_2
        (.I0(scndry_out),
-        .I1(prmry_in),
-        .I2(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I1(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I2(\sig_byte_cntr_reg[9] ),
         .I3(sig_halt_reg_dly2),
         .I4(sig_halt_reg_dly3),
         .I5(sig_stop_request),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_5 ));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ));
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT3 #(
     .INIT(8'hFB)) 
     \sig_strb_reg_out[3]_i_1 
        (.I0(scndry_out),
-        .I1(prmry_in),
-        .I2(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I1(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I2(\sig_byte_cntr_reg[9] ),
         .O(sig_stream_rst));
   LUT6 #(
     .INIT(64'h0404040000000400)) 
     \sig_strb_skid_reg[0]_i_1__1 
        (.I0(scndry_out),
-        .I1(prmry_in),
-        .I2(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I1(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I2(\sig_byte_cntr_reg[9] ),
         .I3(sig_strb_skid_reg[0]),
         .I4(\sig_strb_skid_reg_reg[1] ),
         .I5(\sig_strb_skid_reg_reg[1]_0 [0]),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ));
+        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_2 ));
   LUT6 #(
     .INIT(64'h0404040000000400)) 
     \sig_strb_skid_reg[1]_i_1__1 
        (.I0(scndry_out),
-        .I1(prmry_in),
-        .I2(\GEN_INDET_BTT.lsig_byte_cntr_reg[0] ),
+        .I1(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I2(\sig_byte_cntr_reg[9] ),
         .I3(sig_strb_skid_reg[1]),
         .I4(\sig_strb_skid_reg_reg[1] ),
         .I5(\sig_strb_skid_reg_reg[1]_0 [1]),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_4 ));
+        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_3 ));
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
@@ -26032,10 +26347,10 @@ module Zed_SPI_axi_dma_0_cdc_sync_6
     sig_eop_sent_reg0,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ,
     sig_flush_db1,
-    prmry_in,
-    \INFERRED_GEN.cnt_i_reg[0] ,
-    sig_flush_db2,
+    sig_cmd_stat_rst_user_reg_n_cdc_from,
     sig_flush_db2_reg,
+    sig_flush_db2,
+    sig_flush_db2_reg_0,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ,
     sig_ld_new_cmd_reg,
     sig_push_dqual_reg,
@@ -26047,10 +26362,10 @@ module Zed_SPI_axi_dma_0_cdc_sync_6
   output sig_eop_sent_reg0;
   output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
   input sig_flush_db1;
-  input prmry_in;
-  input \INFERRED_GEN.cnt_i_reg[0] ;
-  input sig_flush_db2;
+  input sig_cmd_stat_rst_user_reg_n_cdc_from;
   input sig_flush_db2_reg;
+  input sig_flush_db2;
+  input sig_flush_db2_reg_0;
   input \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ;
   input sig_ld_new_cmd_reg;
   input sig_push_dqual_reg;
@@ -26059,19 +26374,19 @@ module Zed_SPI_axi_dma_0_cdc_sync_6
 
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_0 ;
   wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
-  wire \INFERRED_GEN.cnt_i_reg[0] ;
   wire m_axi_s2mm_aclk;
-  wire prmry_in;
   wire s_level_out_d1_cdc_to;
   wire s_level_out_d2;
   wire s_level_out_d3;
   wire scndry_out;
+  wire sig_cmd_stat_rst_user_reg_n_cdc_from;
   wire sig_eop_sent_reg;
   wire sig_eop_sent_reg0;
   wire sig_flush_db1;
   wire sig_flush_db1_reg;
   wire sig_flush_db2;
   wire sig_flush_db2_reg;
+  wire sig_flush_db2_reg_0;
   wire sig_ld_new_cmd_reg;
   wire sig_ld_new_cmd_reg_reg;
   wire sig_push_dqual_reg;
@@ -26134,26 +26449,26 @@ module Zed_SPI_axi_dma_0_cdc_sync_6
     .INIT(8'h04)) 
     \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_i_4 
        (.I0(scndry_out),
-        .I1(prmry_in),
-        .I2(\INFERRED_GEN.cnt_i_reg[0] ),
+        .I1(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I2(sig_flush_db2_reg),
         .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ));
   LUT4 #(
     .INIT(16'hFFEF)) 
     \INFERRED_GEN.cnt_i[4]_i_1 
        (.I0(sig_eop_sent_reg),
         .I1(scndry_out),
-        .I2(prmry_in),
-        .I3(\INFERRED_GEN.cnt_i_reg[0] ),
+        .I2(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I3(sig_flush_db2_reg),
         .O(sig_eop_sent_reg0));
   LUT6 #(
     .INIT(64'h0000002000300000)) 
     sig_flush_db2_i_1
        (.I0(sig_flush_db1),
         .I1(scndry_out),
-        .I2(prmry_in),
-        .I3(\INFERRED_GEN.cnt_i_reg[0] ),
+        .I2(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I3(sig_flush_db2_reg),
         .I4(sig_flush_db2),
-        .I5(sig_flush_db2_reg),
+        .I5(sig_flush_db2_reg_0),
         .O(sig_flush_db1_reg));
   LUT5 #(
     .INIT(32'h00000400)) 
@@ -26161,35 +26476,35 @@ module Zed_SPI_axi_dma_0_cdc_sync_6
        (.I0(sig_ld_new_cmd_reg),
         .I1(sig_push_dqual_reg),
         .I2(scndry_out),
-        .I3(prmry_in),
-        .I4(\INFERRED_GEN.cnt_i_reg[0] ),
+        .I3(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I4(sig_flush_db2_reg),
         .O(sig_ld_new_cmd_reg_reg));
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
 module Zed_SPI_axi_dma_0_cdc_sync_7
    (sig_init_reg_reg,
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ,
+    scndry_out,
     rst,
     sig_init_reg,
     sig_init_reg_reg_0,
     prmry_in,
     out);
   output sig_init_reg_reg;
-  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
+  output scndry_out;
   output rst;
   input sig_init_reg;
   input sig_init_reg_reg_0;
   input prmry_in;
   input out;
 
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ;
   wire out;
   wire prmry_in;
   wire rst;
   wire s_level_out_d1_cdc_to;
   wire s_level_out_d2;
   wire s_level_out_d3;
+  wire scndry_out;
   wire sig_init_reg;
   wire sig_init_reg_reg;
   wire sig_init_reg_reg_0;
@@ -26240,22 +26555,22 @@ module Zed_SPI_axi_dma_0_cdc_sync_7
        (.C(out),
         .CE(1'b1),
         .D(s_level_out_d3),
-        .Q(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ),
+        .Q(scndry_out),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'hBF)) 
     sig_init_reg2_i_1
        (.I0(sig_init_reg),
-        .I1(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ),
+        .I1(scndry_out),
         .I2(sig_init_reg_reg_0),
         .O(sig_init_reg_reg));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \xpm_fifo_instance.xpm_fifo_async_inst_i_1__0 
        (.I0(sig_init_reg_reg_0),
-        .I1(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ),
+        .I1(scndry_out),
         .O(rst));
 endmodule
 
@@ -29234,7 +29549,7 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f
         .I4(sig_wr_fifo),
         .I5(Q[2]),
         .O(fifo_full_p1));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT5 #(
     .INIT(32'h66966666)) 
     \INFERRED_GEN.cnt_i[0]_i_1 
@@ -29273,7 +29588,7 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f
         .I4(sig_coelsc_reg_empty),
         .I5(Q[3]),
         .O(addr_i_p1[3]));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT5 #(
     .INIT(32'h88E88888)) 
     \INFERRED_GEN.cnt_i[3]_i_2 
@@ -29311,34 +29626,34 @@ endmodule
 
 (* ORIG_REF_NAME = "cntr_incr_decr_addn_f" *) 
 module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f_4
-   (\INFERRED_GEN.cnt_i_reg[3]_0 ,
-    Q,
+   (Q,
+    \INFERRED_GEN.cnt_i_reg[3]_0 ,
     fifo_full_p1,
     \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ,
     \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ,
-    sig_coelsc_reg_empty,
-    \GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ,
     FIFO_Full_reg,
+    out,
+    \GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ,
+    sig_coelsc_reg_empty,
     FIFO_Full_reg_0,
     sig_data2wsc_valid,
     sig_inhibit_rdy_n,
     \INFERRED_GEN.cnt_i_reg[1]_0 ,
-    out,
     sig_stream_rst,
     m_axi_s2mm_aclk);
-  output \INFERRED_GEN.cnt_i_reg[3]_0 ;
   output [3:0]Q;
+  output \INFERRED_GEN.cnt_i_reg[3]_0 ;
   output fifo_full_p1;
   output [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ;
   output \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ;
-  input sig_coelsc_reg_empty;
-  input [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ;
   input FIFO_Full_reg;
+  input [0:0]out;
+  input [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ;
+  input sig_coelsc_reg_empty;
   input FIFO_Full_reg_0;
   input sig_data2wsc_valid;
   input sig_inhibit_rdy_n;
   input \INFERRED_GEN.cnt_i_reg[1]_0 ;
-  input [0:0]out;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
 
@@ -29347,10 +29662,11 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f_4
   wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ;
   wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ;
   wire \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ;
+  wire \INFERRED_GEN.cnt_i[0]_i_1__4_n_0 ;
   wire \INFERRED_GEN.cnt_i_reg[1]_0 ;
   wire \INFERRED_GEN.cnt_i_reg[3]_0 ;
   wire [3:0]Q;
-  wire [3:0]addr_i_p1;
+  wire [3:1]addr_i_p1;
   wire fifo_full_p1;
   wire m_axi_s2mm_aclk;
   wire [0:0]out;
@@ -29369,7 +29685,7 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f_4
         .I4(Q[1]),
         .I5(Q[2]),
         .O(fifo_full_p1));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT2 #(
     .INIT(4'h2)) 
     FIFO_Full_i_2
@@ -29385,15 +29701,15 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f_4
         .I3(out),
         .O(\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ));
   LUT6 #(
-    .INIT(64'h2202DDFDDDFD2202)) 
-    \INFERRED_GEN.cnt_i[0]_i_1__0 
-       (.I0(sig_coelsc_reg_empty),
-        .I1(Q[3]),
-        .I2(\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ),
-        .I3(out),
-        .I4(FIFO_Full_reg),
-        .I5(Q[0]),
-        .O(addr_i_p1[0]));
+    .INIT(64'h6666969966666666)) 
+    \INFERRED_GEN.cnt_i[0]_i_1__4 
+       (.I0(Q[0]),
+        .I1(FIFO_Full_reg),
+        .I2(out),
+        .I3(\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ),
+        .I4(Q[3]),
+        .I5(sig_coelsc_reg_empty),
+        .O(\INFERRED_GEN.cnt_i[0]_i_1__4_n_0 ));
   LUT6 #(
     .INIT(64'hAAAA6AAA9999A999)) 
     \INFERRED_GEN.cnt_i[1]_i_1__0 
@@ -29413,7 +29729,7 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f_4
         .I3(FIFO_Full_reg),
         .I4(FIFO_Full_reg_0),
         .O(addr_i_p1[2]));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \INFERRED_GEN.cnt_i[2]_i_2 
@@ -29434,7 +29750,7 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f_4
   FDSE \INFERRED_GEN.cnt_i_reg[0] 
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
-        .D(addr_i_p1[0]),
+        .D(\INFERRED_GEN.cnt_i[0]_i_1__4_n_0 ),
         .Q(Q[0]),
         .S(sig_stream_rst));
   FDSE \INFERRED_GEN.cnt_i_reg[1] 
@@ -29537,7 +29853,7 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized0
   wire sig_wdc_status_going_full_reg;
   wire sig_wr_fifo;
 
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT5 #(
     .INIT(32'h80009200)) 
     FIFO_Full_i_1__1
@@ -29575,7 +29891,7 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized0
         .O(\GEN_INDET_BTT.lsig_byte_cntr[24]_i_7_n_0 ));
   LUT5 #(
     .INIT(32'h66966666)) 
-    \INFERRED_GEN.cnt_i[0]_i_1__1 
+    \INFERRED_GEN.cnt_i[0]_i_1__0 
        (.I0(Q[0]),
         .I1(sig_last_dbeat_reg),
         .I2(sig_mstr2data_cmd_valid),
@@ -29592,7 +29908,7 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized0
         .I4(sig_last_dbeat_reg),
         .I5(Q[1]),
         .O(addr_i_p1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT5 #(
     .INIT(32'h006A03AA)) 
     \INFERRED_GEN.cnt_i[2]_i_1__1 
@@ -29646,9 +29962,9 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized0_24
    (fifo_full_p1,
     Q,
     sig_push_addr_reg1_out,
+    sig_halt_reg,
     FIFO_Full_reg,
     FIFO_Full_reg_0,
-    sig_halt_reg,
     \INFERRED_GEN.cnt_i_reg[1]_0 ,
     \INFERRED_GEN.cnt_i_reg[1]_1 ,
     sig_mstr2addr_cmd_valid,
@@ -29657,9 +29973,9 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized0_24
   output fifo_full_p1;
   output [1:0]Q;
   output sig_push_addr_reg1_out;
+  input sig_halt_reg;
   input FIFO_Full_reg;
   input FIFO_Full_reg_0;
-  input sig_halt_reg;
   input \INFERRED_GEN.cnt_i_reg[1]_0 ;
   input \INFERRED_GEN.cnt_i_reg[1]_1 ;
   input sig_mstr2addr_cmd_valid;
@@ -29681,42 +29997,42 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized0_24
   wire sig_stream_rst;
 
   LUT6 #(
-    .INIT(64'h1121220200000000)) 
+    .INIT(64'h040B0B0000000000)) 
     FIFO_Full_i_1__2
-       (.I0(FIFO_Full_reg),
-        .I1(sig_rd_empty),
-        .I2(FIFO_Full_reg_0),
-        .I3(sig_halt_reg),
+       (.I0(sig_halt_reg),
+        .I1(FIFO_Full_reg),
+        .I2(sig_rd_empty),
+        .I3(FIFO_Full_reg_0),
         .I4(Q[0]),
         .I5(Q[1]),
         .O(fifo_full_p1));
   LUT5 #(
-    .INIT(32'h08F7F708)) 
-    \INFERRED_GEN.cnt_i[0]_i_1__2 
-       (.I0(sig_mstr2addr_cmd_valid),
-        .I1(\INFERRED_GEN.cnt_i_reg[1]_1 ),
-        .I2(\INFERRED_GEN.cnt_i_reg[1]_0 ),
-        .I3(sig_push_addr_reg1_out),
+    .INIT(32'h65559AAA)) 
+    \INFERRED_GEN.cnt_i[0]_i_1__1 
+       (.I0(sig_push_addr_reg1_out),
+        .I1(\INFERRED_GEN.cnt_i_reg[1]_0 ),
+        .I2(\INFERRED_GEN.cnt_i_reg[1]_1 ),
+        .I3(sig_mstr2addr_cmd_valid),
         .I4(Q[0]),
         .O(addr_i_p1[0]));
   LUT6 #(
-    .INIT(64'hA69AA6A6A6A6A6A6)) 
+    .INIT(64'hA9AAAAAA6A666666)) 
     \INFERRED_GEN.cnt_i[1]_i_1__2 
        (.I0(Q[1]),
         .I1(sig_push_addr_reg1_out),
-        .I2(Q[0]),
-        .I3(\INFERRED_GEN.cnt_i_reg[1]_0 ),
-        .I4(\INFERRED_GEN.cnt_i_reg[1]_1 ),
-        .I5(sig_mstr2addr_cmd_valid),
+        .I2(\INFERRED_GEN.cnt_i_reg[1]_0 ),
+        .I3(\INFERRED_GEN.cnt_i_reg[1]_1 ),
+        .I4(sig_mstr2addr_cmd_valid),
+        .I5(Q[0]),
         .O(addr_i_p1[1]));
   LUT6 #(
-    .INIT(64'h78787078F0F0F1F0)) 
+    .INIT(64'h0BF0F0F0F0F0F0F4)) 
     \INFERRED_GEN.cnt_i[2]_i_1__2 
-       (.I0(Q[0]),
+       (.I0(sig_halt_reg),
         .I1(FIFO_Full_reg),
         .I2(sig_rd_empty),
         .I3(FIFO_Full_reg_0),
-        .I4(sig_halt_reg),
+        .I4(Q[0]),
         .I5(Q[1]),
         .O(addr_i_p1[2]));
   FDSE \INFERRED_GEN.cnt_i_reg[0] 
@@ -29741,7 +30057,7 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized0_24
     .INIT(8'h04)) 
     \sig_next_addr_reg[31]_i_2 
        (.I0(sig_rd_empty),
-        .I1(FIFO_Full_reg_0),
+        .I1(FIFO_Full_reg),
         .I2(sig_halt_reg),
         .O(sig_push_addr_reg1_out));
 endmodule
@@ -29803,7 +30119,7 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized0_25
   wire sig_stream_rst;
   wire sig_wr_fifo;
 
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT5 #(
     .INIT(32'h09020000)) 
     FIFO_Full_i_1__3
@@ -29825,7 +30141,7 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized0_25
         .O(D));
   LUT6 #(
     .INIT(64'hBFBF40BF4040BF40)) 
-    \INFERRED_GEN.cnt_i[0]_i_1__3 
+    \INFERRED_GEN.cnt_i[0]_i_1__2 
        (.I0(\INFERRED_GEN.cnt_i_reg[0]_0 ),
         .I1(\INFERRED_GEN.cnt_i_reg[0]_1 ),
         .I2(sig_mstr2dre_cmd_valid),
@@ -29834,21 +30150,21 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized0_25
         .I5(Q[0]),
         .O(addr_i_p1[0]));
   LUT5 #(
-    .INIT(32'h77E78818)) 
+    .INIT(32'h6A66A9AA)) 
     \INFERRED_GEN.cnt_i[1]_i_1__3 
-       (.I0(Q[0]),
+       (.I0(Q[1]),
         .I1(sig_wr_fifo),
-        .I2(sig_sm_pop_cmd_fifo),
-        .I3(Q[2]),
-        .I4(Q[1]),
+        .I2(Q[2]),
+        .I3(sig_sm_pop_cmd_fifo),
+        .I4(Q[0]),
         .O(addr_i_p1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT5 #(
-    .INIT(32'h1AAAAAAE)) 
+    .INIT(32'h46CCCCDC)) 
     \INFERRED_GEN.cnt_i[2]_i_1__3 
-       (.I0(Q[2]),
-        .I1(sig_sm_pop_cmd_fifo),
-        .I2(sig_wr_fifo),
+       (.I0(sig_wr_fifo),
+        .I1(Q[2]),
+        .I2(sig_sm_pop_cmd_fifo),
         .I3(Q[0]),
         .I4(Q[1]),
         .O(addr_i_p1[2]));
@@ -29901,63 +30217,55 @@ endmodule
 
 (* ORIG_REF_NAME = "cntr_incr_decr_addn_f" *) 
 module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized1
-   (sig_flush_db1_reg,
-    \INFERRED_GEN.cnt_i_reg[4]_0 ,
-    fifo_full_p1,
+   (fifo_full_p1,
     Q,
-    \INFERRED_GEN.cnt_i_reg[4]_1 ,
+    \INFERRED_GEN.cnt_i_reg[4]_0 ,
+    \sig_mssa_index_reg_out_reg[0] ,
     D,
-    \INFERRED_GEN.cnt_i_reg[4]_2 ,
-    sig_flush_db1_reg_0,
-    sig_flush_db1_reg_1,
-    sig_flush_db1_reg_2,
-    sig_flush_db1_reg_3,
     FIFO_Full_reg,
-    slice_insert_valid,
+    FIFO_Full_reg_0,
     \INFERRED_GEN.cnt_i_reg[0]_0 ,
     \INFERRED_GEN.cnt_i_reg[0]_1 ,
+    slice_insert_valid,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ,
+    \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ,
     sig_eop_halt_xfer,
     out,
     sig_mssa_index,
-    \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ,
+    \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ,
     sig_eop_sent_reg0,
     m_axi_s2mm_aclk);
-  output sig_flush_db1_reg;
-  output [0:0]\INFERRED_GEN.cnt_i_reg[4]_0 ;
   output fifo_full_p1;
   output [4:0]Q;
-  output \INFERRED_GEN.cnt_i_reg[4]_1 ;
+  output \INFERRED_GEN.cnt_i_reg[4]_0 ;
+  output [0:0]\sig_mssa_index_reg_out_reg[0] ;
   output [0:0]D;
-  input \INFERRED_GEN.cnt_i_reg[4]_2 ;
-  input sig_flush_db1_reg_0;
-  input sig_flush_db1_reg_1;
-  input sig_flush_db1_reg_2;
-  input sig_flush_db1_reg_3;
   input FIFO_Full_reg;
-  input slice_insert_valid;
+  input FIFO_Full_reg_0;
   input \INFERRED_GEN.cnt_i_reg[0]_0 ;
   input \INFERRED_GEN.cnt_i_reg[0]_1 ;
+  input slice_insert_valid;
   input \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ;
+  input \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ;
   input sig_eop_halt_xfer;
   input [1:0]out;
   input sig_mssa_index;
-  input \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ;
+  input \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ;
   input sig_eop_sent_reg0;
   input m_axi_s2mm_aclk;
 
   wire [0:0]D;
   wire FIFO_Full_i_2__0_n_0;
   wire FIFO_Full_reg;
+  wire FIFO_Full_reg_0;
   wire \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ;
   wire \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ;
+  wire \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ;
   wire \INFERRED_GEN.cnt_i[4]_i_3_n_0 ;
   wire \INFERRED_GEN.cnt_i[4]_i_4_n_0 ;
   wire \INFERRED_GEN.cnt_i_reg[0]_0 ;
   wire \INFERRED_GEN.cnt_i_reg[0]_1 ;
-  wire [0:0]\INFERRED_GEN.cnt_i_reg[4]_0 ;
-  wire \INFERRED_GEN.cnt_i_reg[4]_1 ;
-  wire \INFERRED_GEN.cnt_i_reg[4]_2 ;
+  wire \INFERRED_GEN.cnt_i_reg[4]_0 ;
   wire [4:0]Q;
   wire [4:0]addr_i_p1;
   wire fifo_full_p1;
@@ -29965,121 +30273,117 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized1
   wire [1:0]out;
   wire sig_eop_halt_xfer;
   wire sig_eop_sent_reg0;
-  wire sig_flush_db1_reg;
-  wire sig_flush_db1_reg_0;
-  wire sig_flush_db1_reg_1;
-  wire sig_flush_db1_reg_2;
-  wire sig_flush_db1_reg_3;
   wire sig_mssa_index;
+  wire [0:0]\sig_mssa_index_reg_out_reg[0] ;
   wire slice_insert_valid;
 
   LUT6 #(
-    .INIT(64'h0000000014400001)) 
+    .INIT(64'h0000000041040010)) 
     FIFO_Full_i_1__4
        (.I0(addr_i_p1[4]),
         .I1(Q[0]),
-        .I2(\INFERRED_GEN.cnt_i_reg[4]_2 ),
-        .I3(FIFO_Full_reg),
+        .I2(FIFO_Full_reg),
+        .I3(FIFO_Full_reg_0),
         .I4(Q[1]),
         .I5(FIFO_Full_i_2__0_n_0),
         .O(fifo_full_p1));
   LUT6 #(
-    .INIT(64'hD55555577FFFFFFE)) 
+    .INIT(64'h5D555575F7FFFFEF)) 
     FIFO_Full_i_2__0
        (.I0(Q[3]),
         .I1(Q[0]),
         .I2(FIFO_Full_reg),
-        .I3(\INFERRED_GEN.cnt_i_reg[4]_2 ),
+        .I3(FIFO_Full_reg_0),
         .I4(Q[1]),
         .I5(Q[2]),
         .O(FIFO_Full_i_2__0_n_0));
   LUT3 #(
     .INIT(8'h2A)) 
     \GEN_INPUT_REG[0].sig_input_data_reg[0][9]_i_3 
-       (.I0(\INFERRED_GEN.cnt_i_reg[4]_0 ),
+       (.I0(D),
         .I1(out[0]),
         .I2(sig_mssa_index),
-        .O(D));
+        .O(\sig_mssa_index_reg_out_reg[0] ));
   LUT4 #(
     .INIT(16'h0020)) 
     \GEN_INPUT_REG[0].sig_input_data_reg[0][9]_i_5 
-       (.I0(sig_flush_db1_reg_3),
+       (.I0(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ),
         .I1(Q[4]),
-        .I2(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ),
+        .I2(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ),
         .I3(sig_eop_halt_xfer),
-        .O(\INFERRED_GEN.cnt_i_reg[4]_1 ));
+        .O(\INFERRED_GEN.cnt_i_reg[4]_0 ));
   LUT5 #(
     .INIT(32'h04040400)) 
     \GEN_INPUT_REG[1].sig_input_data_reg[1][9]_i_3 
        (.I0(Q[4]),
-        .I1(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ),
+        .I1(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ),
         .I2(sig_eop_halt_xfer),
-        .I3(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ),
+        .I3(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
         .I4(out[1]),
-        .O(\INFERRED_GEN.cnt_i_reg[4]_0 ));
+        .O(D));
   LUT5 #(
-    .INIT(32'h96999999)) 
-    \INFERRED_GEN.cnt_i[0]_i_1__4 
-       (.I0(Q[0]),
-        .I1(\INFERRED_GEN.cnt_i_reg[4]_2 ),
-        .I2(\INFERRED_GEN.cnt_i_reg[0]_1 ),
-        .I3(\INFERRED_GEN.cnt_i_reg[0]_0 ),
-        .I4(slice_insert_valid),
+    .INIT(32'h08F7F708)) 
+    \INFERRED_GEN.cnt_i[0]_i_1__3 
+       (.I0(slice_insert_valid),
+        .I1(\INFERRED_GEN.cnt_i_reg[0]_1 ),
+        .I2(\INFERRED_GEN.cnt_i_reg[0]_0 ),
+        .I3(FIFO_Full_reg),
+        .I4(Q[0]),
         .O(addr_i_p1[0]));
   LUT6 #(
-    .INIT(64'hEEEE7EEE11118111)) 
+    .INIT(64'hAAAA9AAA6555AAAA)) 
     \INFERRED_GEN.cnt_i[1]_i_1__4 
-       (.I0(Q[0]),
-        .I1(\INFERRED_GEN.cnt_i_reg[4]_2 ),
-        .I2(slice_insert_valid),
-        .I3(\INFERRED_GEN.cnt_i_reg[0]_0 ),
-        .I4(\INFERRED_GEN.cnt_i_reg[0]_1 ),
-        .I5(Q[1]),
+       (.I0(Q[1]),
+        .I1(\INFERRED_GEN.cnt_i_reg[0]_0 ),
+        .I2(\INFERRED_GEN.cnt_i_reg[0]_1 ),
+        .I3(slice_insert_valid),
+        .I4(FIFO_Full_reg),
+        .I5(Q[0]),
         .O(addr_i_p1[1]));
   LUT5 #(
-    .INIT(32'h6AAAAAA9)) 
+    .INIT(32'hAA6AA9AA)) 
     \INFERRED_GEN.cnt_i[2]_i_1__4 
        (.I0(Q[2]),
         .I1(Q[1]),
-        .I2(\INFERRED_GEN.cnt_i_reg[4]_2 ),
+        .I2(FIFO_Full_reg_0),
         .I3(FIFO_Full_reg),
         .I4(Q[0]),
         .O(addr_i_p1[2]));
   LUT6 #(
-    .INIT(64'h6AAAAAAAAAAAAAA9)) 
+    .INIT(64'hAAAA6AAAAAA9AAAA)) 
     \INFERRED_GEN.cnt_i[3]_i_1__1 
        (.I0(Q[3]),
         .I1(Q[1]),
         .I2(Q[2]),
-        .I3(FIFO_Full_reg),
-        .I4(\INFERRED_GEN.cnt_i_reg[4]_2 ),
+        .I3(FIFO_Full_reg_0),
+        .I4(FIFO_Full_reg),
         .I5(Q[0]),
         .O(addr_i_p1[3]));
   LUT6 #(
-    .INIT(64'h6A6A0300AAAA0300)) 
+    .INIT(64'hFF170424FF170020)) 
     \INFERRED_GEN.cnt_i[4]_i_2 
-       (.I0(Q[4]),
-        .I1(Q[0]),
-        .I2(FIFO_Full_reg),
+       (.I0(Q[0]),
+        .I1(FIFO_Full_reg),
+        .I2(FIFO_Full_reg_0),
         .I3(\INFERRED_GEN.cnt_i[4]_i_3_n_0 ),
-        .I4(\INFERRED_GEN.cnt_i_reg[4]_2 ),
+        .I4(Q[4]),
         .I5(\INFERRED_GEN.cnt_i[4]_i_4_n_0 ),
         .O(addr_i_p1[4]));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT3 #(
-    .INIT(8'h01)) 
+    .INIT(8'h7F)) 
     \INFERRED_GEN.cnt_i[4]_i_3 
        (.I0(Q[1]),
         .I1(Q[2]),
         .I2(Q[3]),
         .O(\INFERRED_GEN.cnt_i[4]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT3 #(
-    .INIT(8'h80)) 
+    .INIT(8'h01)) 
     \INFERRED_GEN.cnt_i[4]_i_4 
-       (.I0(Q[3]),
-        .I1(Q[1]),
-        .I2(Q[2]),
+       (.I0(Q[1]),
+        .I1(Q[2]),
+        .I2(Q[3]),
         .O(\INFERRED_GEN.cnt_i[4]_i_4_n_0 ));
   FDSE \INFERRED_GEN.cnt_i_reg[0] 
        (.C(m_axi_s2mm_aclk),
@@ -30111,16 +30415,6 @@ module Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized1
         .D(addr_i_p1[4]),
         .Q(Q[4]),
         .S(sig_eop_sent_reg0));
-  LUT6 #(
-    .INIT(64'h0000E200E200E200)) 
-    sig_flush_db1_i_1
-       (.I0(\INFERRED_GEN.cnt_i_reg[4]_0 ),
-        .I1(\INFERRED_GEN.cnt_i_reg[4]_2 ),
-        .I2(sig_flush_db1_reg_0),
-        .I3(sig_flush_db1_reg_1),
-        .I4(sig_flush_db1_reg_2),
-        .I5(sig_flush_db1_reg_3),
-        .O(sig_flush_db1_reg));
 endmodule
 
 (* ORIG_REF_NAME = "dynshreg_f" *) 
@@ -30233,9 +30527,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
     \INFERRED_GEN.cnt_i_reg[3] ,
     E,
     sig_coelsc_interr_reg0,
+    \sig_wdc_statcnt_reg[3] ,
     Q,
     \sig_wdc_statcnt_reg[2] ,
-    \sig_wdc_statcnt_reg[2]_0 ,
     sig_coelsc_reg_empty,
     sig_data2wsc_valid,
     sig_inhibit_rdy_n,
@@ -30250,9 +30544,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   output \INFERRED_GEN.cnt_i_reg[3] ;
   output [0:0]E;
   output sig_coelsc_interr_reg0;
-  input [3:0]Q;
-  input [0:0]\sig_wdc_statcnt_reg[2] ;
-  input [3:0]\sig_wdc_statcnt_reg[2]_0 ;
+  input [3:0]\sig_wdc_statcnt_reg[3] ;
+  input [0:0]Q;
+  input [3:0]\sig_wdc_statcnt_reg[2] ;
   input sig_coelsc_reg_empty;
   input sig_data2wsc_valid;
   input sig_inhibit_rdy_n;
@@ -30266,7 +30560,7 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   wire \GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ;
   wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ;
   wire \INFERRED_GEN.cnt_i_reg[3] ;
-  wire [3:0]Q;
+  wire [0:0]Q;
   wire [0:31]in;
   wire m_axi_s2mm_aclk;
   wire [31:0]out;
@@ -30276,8 +30570,8 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   wire sig_data2wsc_valid;
   wire sig_inhibit_rdy_n;
   wire sig_push_to_wsc_reg;
-  wire [0:0]\sig_wdc_statcnt_reg[2] ;
-  wire [3:0]\sig_wdc_statcnt_reg[2]_0 ;
+  wire [3:0]\sig_wdc_statcnt_reg[2] ;
+  wire [3:0]\sig_wdc_statcnt_reg[3] ;
 
   LUT2 #(
     .INIT(4'hE)) 
@@ -30294,8 +30588,8 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
     .INIT(16'hF4FF)) 
     \INFERRED_GEN.cnt_i[3]_i_2__0 
        (.I0(out[4]),
-        .I1(\sig_wdc_statcnt_reg[2] ),
-        .I2(\sig_wdc_statcnt_reg[2]_0 [3]),
+        .I1(Q),
+        .I2(\sig_wdc_statcnt_reg[2] [3]),
         .I3(sig_coelsc_reg_empty),
         .O(\INFERRED_GEN.cnt_i_reg[3] ));
   (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_STATUS_CNTLR/GEN_ENABLE_INDET_BTT.I_SF_DATA_CNTL_STATUS_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[5] " *) 
@@ -30303,9 +30597,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][0]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30316,9 +30610,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][10]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30329,9 +30623,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][11]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30342,9 +30636,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][12]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30355,9 +30649,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][13]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30368,9 +30662,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][14]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30381,9 +30675,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][15]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30394,9 +30688,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][16]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30407,9 +30701,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][17]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30420,9 +30714,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][18]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30433,9 +30727,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][19]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30446,9 +30740,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][1]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30459,9 +30753,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][20]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30472,9 +30766,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][21]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30485,9 +30779,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][22]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30498,9 +30792,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][23]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30511,9 +30805,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][24]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30524,9 +30818,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][25]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30537,9 +30831,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][26]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30550,9 +30844,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][27]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30563,9 +30857,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][28]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30576,9 +30870,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][29]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30589,9 +30883,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][2]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30602,9 +30896,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][30]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30615,9 +30909,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][31]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30635,9 +30929,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][3]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30648,9 +30942,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][4]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30661,9 +30955,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][5]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30674,9 +30968,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][6]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30687,9 +30981,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][7]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30700,9 +30994,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][8]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30713,9 +31007,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   SRL16E #(
     .INIT(16'h0000)) 
     \INFERRED_GEN.data_reg[5][9]_srl6 
-       (.A0(\sig_wdc_statcnt_reg[2]_0 [0]),
-        .A1(\sig_wdc_statcnt_reg[2]_0 [1]),
-        .A2(\sig_wdc_statcnt_reg[2]_0 [2]),
+       (.A0(\sig_wdc_statcnt_reg[2] [0]),
+        .A1(\sig_wdc_statcnt_reg[2] [1]),
+        .A2(\sig_wdc_statcnt_reg[2] [2]),
         .A3(1'b0),
         .CE(sig_push_to_wsc_reg),
         .CLK(m_axi_s2mm_aclk),
@@ -30724,19 +31018,19 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
   LUT6 #(
     .INIT(64'h0FFFF000B0000FFF)) 
     \sig_wdc_statcnt[1]_i_1 
-       (.I0(Q[3]),
-        .I1(Q[2]),
+       (.I0(\sig_wdc_statcnt_reg[3] [3]),
+        .I1(\sig_wdc_statcnt_reg[3] [2]),
         .I2(\INFERRED_GEN.cnt_i_reg[3] ),
         .I3(sig_push_to_wsc_reg),
-        .I4(Q[1]),
-        .I5(Q[0]),
+        .I4(\sig_wdc_statcnt_reg[3] [1]),
+        .I5(\sig_wdc_statcnt_reg[3] [0]),
         .O(D[0]));
   LUT5 #(
     .INIT(32'h6AA9A9A9)) 
     \sig_wdc_statcnt[2]_i_1 
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+       (.I0(\sig_wdc_statcnt_reg[3] [2]),
+        .I1(\sig_wdc_statcnt_reg[3] [1]),
+        .I2(\sig_wdc_statcnt_reg[3] [0]),
         .I3(sig_push_to_wsc_reg),
         .I4(\INFERRED_GEN.cnt_i_reg[3] ),
         .O(D[1]));
@@ -30745,20 +31039,20 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized0
     \sig_wdc_statcnt[3]_i_1 
        (.I0(\INFERRED_GEN.cnt_i_reg[3] ),
         .I1(sig_push_to_wsc_reg),
-        .I2(Q[1]),
-        .I3(Q[0]),
-        .I4(Q[2]),
-        .I5(Q[3]),
+        .I2(\sig_wdc_statcnt_reg[3] [1]),
+        .I3(\sig_wdc_statcnt_reg[3] [0]),
+        .I4(\sig_wdc_statcnt_reg[3] [2]),
+        .I5(\sig_wdc_statcnt_reg[3] [3]),
         .O(E));
   LUT6 #(
     .INIT(64'h6AAAAAAAAAAAAA95)) 
     \sig_wdc_statcnt[3]_i_2 
-       (.I0(Q[3]),
+       (.I0(\sig_wdc_statcnt_reg[3] [3]),
         .I1(sig_push_to_wsc_reg),
         .I2(\INFERRED_GEN.cnt_i_reg[3] ),
-        .I3(Q[2]),
-        .I4(Q[0]),
-        .I5(Q[1]),
+        .I3(\sig_wdc_statcnt_reg[3] [2]),
+        .I4(\sig_wdc_statcnt_reg[3] [0]),
+        .I5(\sig_wdc_statcnt_reg[3] [1]),
         .O(D[2]));
 endmodule
 
@@ -30771,8 +31065,8 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized1
     sig_sm_ld_dre_cmd,
     \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ,
     lsig_pullreg_empty,
-    lsig_first_dbeat,
     \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ,
+    \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ,
     sig_mstr2dre_cmd_valid,
     sig_curr_eof_reg_reg,
     sig_curr_eof_reg_reg_0,
@@ -30789,8 +31083,8 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized1
   input sig_sm_ld_dre_cmd;
   input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ;
   input lsig_pullreg_empty;
-  input lsig_first_dbeat;
   input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ;
+  input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ;
   input sig_mstr2dre_cmd_valid;
   input sig_curr_eof_reg_reg;
   input sig_curr_eof_reg_reg_0;
@@ -30807,9 +31101,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized1
   wire [2:0]\FSM_sequential_sig_cmdcntl_sm_state_reg[2] ;
   wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ;
   wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ;
+  wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ;
   wire [2:0]Q;
   wire [29:0]in;
-  wire lsig_first_dbeat;
   wire lsig_pullreg_empty;
   wire m_axi_s2mm_aclk;
   wire [28:0]out;
@@ -30859,8 +31153,8 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized1
         .I1(sig_sm_ld_dre_cmd),
         .I2(\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ),
         .I3(lsig_pullreg_empty),
-        .I4(lsig_first_dbeat),
-        .I5(\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ),
+        .I4(\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ),
+        .I5(\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ),
         .O(sig_sm_ld_dre_cmd_reg));
   (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/I_DRE_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3] " *) 
   (* srl_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/I_DRE_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][0]_srl4 " *) 
@@ -31495,20 +31789,20 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized3
     Q,
     m_axi_s2mm_aclk);
   output p_0_in;
-  output [39:0]out;
+  output [42:0]out;
   output FIFO_Full_reg;
   input sig_calc_error_reg_reg;
   input sig_calc_error_reg_reg_0;
   input sig_mstr2addr_cmd_valid;
-  input [38:0]in;
+  input [41:0]in;
   input [1:0]Q;
   input m_axi_s2mm_aclk;
 
   wire FIFO_Full_reg;
   wire [1:0]Q;
-  wire [38:0]in;
+  wire [41:0]in;
   wire m_axi_s2mm_aclk;
-  wire [39:0]out;
+  wire [42:0]out;
   wire p_0_in;
   wire sig_calc_error_reg_reg;
   wire sig_calc_error_reg_reg_0;
@@ -31525,8 +31819,8 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized3
         .A3(1'b0),
         .CE(FIFO_Full_reg),
         .CLK(m_axi_s2mm_aclk),
-        .D(in[37]),
-        .Q(out[38]));
+        .D(in[40]),
+        .Q(out[41]));
   (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3] " *) 
   (* srl_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][13]_srl4 " *) 
   SRL16E #(
@@ -31539,6 +31833,45 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized3
         .CE(FIFO_Full_reg),
         .CLK(m_axi_s2mm_aclk),
         .D(1'b1),
+        .Q(out[40]));
+  (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3] " *) 
+  (* srl_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][15]_srl4 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \INFERRED_GEN.data_reg[3][15]_srl4 
+       (.A0(Q[0]),
+        .A1(Q[1]),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(FIFO_Full_reg),
+        .CLK(m_axi_s2mm_aclk),
+        .D(in[39]),
+        .Q(out[39]));
+  (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3] " *) 
+  (* srl_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][16]_srl4 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \INFERRED_GEN.data_reg[3][16]_srl4 
+       (.A0(Q[0]),
+        .A1(Q[1]),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(FIFO_Full_reg),
+        .CLK(m_axi_s2mm_aclk),
+        .D(in[38]),
+        .Q(out[38]));
+  (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3] " *) 
+  (* srl_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][17]_srl4 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \INFERRED_GEN.data_reg[3][17]_srl4 
+       (.A0(Q[0]),
+        .A1(Q[1]),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(FIFO_Full_reg),
+        .CLK(m_axi_s2mm_aclk),
+        .D(in[37]),
         .Q(out[37]));
   (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3] " *) 
   (* srl_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_ADDR_CNTL/GEN_ADDR_FIFO.I_ADDR_QUAL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][18]_srl4 " *) 
@@ -32039,12 +32372,12 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized3
         .A3(1'b0),
         .CE(FIFO_Full_reg),
         .CLK(m_axi_s2mm_aclk),
-        .D(in[38]),
-        .Q(out[39]));
+        .D(in[41]),
+        .Q(out[42]));
   LUT1 #(
     .INIT(2'h1)) 
     sig_addr_valid_reg_i_1
-       (.I0(out[39]),
+       (.I0(out[42]),
         .O(p_0_in));
 endmodule
 
@@ -32055,7 +32388,7 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
     sig_last_dbeat_reg,
     sig_first_dbeat_reg,
     sig_wr_fifo,
-    \sig_dbeat_cntr_reg[4] ,
+    \sig_dbeat_cntr_reg[7] ,
     out,
     sig_first_dbeat_reg_0,
     sig_last_dbeat_reg_0,
@@ -32069,7 +32402,9 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
     sig_next_calc_error_reg_reg,
     sig_next_calc_error_reg_reg_0,
     Q,
-    \sig_dbeat_cntr_reg[4]_0 ,
+    \sig_dbeat_cntr_reg[6] ,
+    \sig_dbeat_cntr_reg[5] ,
+    \sig_dbeat_cntr_reg[4] ,
     sig_next_calc_error_reg_reg_1,
     sig_next_calc_error_reg_reg_2,
     m_axi_s2mm_aclk);
@@ -32078,7 +32413,7 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
   output sig_last_dbeat_reg;
   output sig_first_dbeat_reg;
   output sig_wr_fifo;
-  output [4:0]\sig_dbeat_cntr_reg[4] ;
+  output [7:0]\sig_dbeat_cntr_reg[7] ;
   output [6:0]out;
   input sig_first_dbeat_reg_0;
   input [0:0]sig_last_dbeat_reg_0;
@@ -32091,25 +32426,30 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
   input sig_mstr2data_cmd_valid;
   input sig_next_calc_error_reg_reg;
   input sig_next_calc_error_reg_reg_0;
-  input [4:0]Q;
-  input \sig_dbeat_cntr_reg[4]_0 ;
-  input [13:0]sig_next_calc_error_reg_reg_1;
+  input [7:0]Q;
+  input \sig_dbeat_cntr_reg[6] ;
+  input \sig_dbeat_cntr_reg[5] ;
+  input \sig_dbeat_cntr_reg[4] ;
+  input [16:0]sig_next_calc_error_reg_reg_1;
   input [1:0]sig_next_calc_error_reg_reg_2;
   input m_axi_s2mm_aclk;
 
   wire [2:0]D;
-  wire [4:0]Q;
+  wire [7:0]Q;
   wire m_axi_s2mm_aclk;
   wire [6:0]out;
-  wire [10:4]sig_cmd_fifo_data_out;
-  wire [4:0]\sig_dbeat_cntr_reg[4] ;
-  wire \sig_dbeat_cntr_reg[4]_0 ;
+  wire [13:4]sig_cmd_fifo_data_out;
+  wire \sig_dbeat_cntr_reg[4] ;
+  wire \sig_dbeat_cntr_reg[5] ;
+  wire \sig_dbeat_cntr_reg[6] ;
+  wire [7:0]\sig_dbeat_cntr_reg[7] ;
   wire sig_first_dbeat_reg;
   wire sig_first_dbeat_reg_0;
   wire sig_first_dbeat_reg_1;
   wire sig_first_dbeat_reg_2;
   wire sig_first_dbeat_reg_3;
   wire sig_last_dbeat_i_2_n_0;
+  wire sig_last_dbeat_i_4_n_0;
   wire sig_last_dbeat_reg;
   wire [0:0]sig_last_dbeat_reg_0;
   wire sig_last_dbeat_reg_1;
@@ -32117,7 +32457,7 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
   wire sig_mstr2data_cmd_valid;
   wire sig_next_calc_error_reg_reg;
   wire sig_next_calc_error_reg_reg_0;
-  wire [13:0]sig_next_calc_error_reg_reg_1;
+  wire [16:0]sig_next_calc_error_reg_reg_1;
   wire [1:0]sig_next_calc_error_reg_reg_2;
   wire sig_single_dbeat_reg;
   wire sig_single_dbeat_reg_0;
@@ -32134,8 +32474,47 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
         .A3(1'b0),
         .CE(sig_wr_fifo),
         .CLK(m_axi_s2mm_aclk),
-        .D(sig_next_calc_error_reg_reg_1[13]),
+        .D(sig_next_calc_error_reg_reg_1[16]),
         .Q(out[6]));
+  (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3] " *) 
+  (* srl_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][13]_srl4 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \INFERRED_GEN.data_reg[3][13]_srl4 
+       (.A0(sig_next_calc_error_reg_reg_2[0]),
+        .A1(sig_next_calc_error_reg_reg_2[1]),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(sig_wr_fifo),
+        .CLK(m_axi_s2mm_aclk),
+        .D(sig_next_calc_error_reg_reg_1[13]),
+        .Q(sig_cmd_fifo_data_out[13]));
+  (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3] " *) 
+  (* srl_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][14]_srl4 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \INFERRED_GEN.data_reg[3][14]_srl4 
+       (.A0(sig_next_calc_error_reg_reg_2[0]),
+        .A1(sig_next_calc_error_reg_reg_2[1]),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(sig_wr_fifo),
+        .CLK(m_axi_s2mm_aclk),
+        .D(sig_next_calc_error_reg_reg_1[12]),
+        .Q(sig_cmd_fifo_data_out[12]));
+  (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3] " *) 
+  (* srl_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][15]_srl4 " *) 
+  SRL16E #(
+    .INIT(16'h0000)) 
+    \INFERRED_GEN.data_reg[3][15]_srl4 
+       (.A0(sig_next_calc_error_reg_reg_2[0]),
+        .A1(sig_next_calc_error_reg_reg_2[1]),
+        .A2(1'b0),
+        .A3(1'b0),
+        .CE(sig_wr_fifo),
+        .CLK(m_axi_s2mm_aclk),
+        .D(sig_next_calc_error_reg_reg_1[11]),
+        .Q(sig_cmd_fifo_data_out[11]));
   (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3] " *) 
   (* srl_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][16]_srl4 " *) 
   SRL16E #(
@@ -32199,7 +32578,7 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
         .A3(1'b0),
         .CE(sig_wr_fifo),
         .CLK(m_axi_s2mm_aclk),
-        .D(sig_next_calc_error_reg_reg_1[12]),
+        .D(sig_next_calc_error_reg_reg_1[15]),
         .Q(out[5]));
   (* srl_bus_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3] " *) 
   (* srl_name = "U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO/USE_SRL_FIFO.I_SYNC_FIFO/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/INFERRED_GEN.data_reg[3][20]_srl4 " *) 
@@ -32310,7 +32689,7 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
         .A3(1'b0),
         .CE(sig_wr_fifo),
         .CLK(m_axi_s2mm_aclk),
-        .D(sig_next_calc_error_reg_reg_1[11]),
+        .D(sig_next_calc_error_reg_reg_1[14]),
         .Q(out[4]));
   LUT3 #(
     .INIT(8'h8B)) 
@@ -32318,7 +32697,7 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
        (.I0(sig_cmd_fifo_data_out[6]),
         .I1(sig_first_dbeat_reg_0),
         .I2(Q[0]),
-        .O(\sig_dbeat_cntr_reg[4] [0]));
+        .O(\sig_dbeat_cntr_reg[7] [0]));
   LUT4 #(
     .INIT(16'hB88B)) 
     \sig_dbeat_cntr[1]_i_1 
@@ -32326,7 +32705,7 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
         .I1(sig_first_dbeat_reg_0),
         .I2(Q[0]),
         .I3(Q[1]),
-        .O(\sig_dbeat_cntr_reg[4] [1]));
+        .O(\sig_dbeat_cntr_reg[7] [1]));
   LUT5 #(
     .INIT(32'hB8B8B88B)) 
     \sig_dbeat_cntr[2]_i_1 
@@ -32335,7 +32714,7 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
         .I2(Q[2]),
         .I3(Q[1]),
         .I4(Q[0]),
-        .O(\sig_dbeat_cntr_reg[4] [2]));
+        .O(\sig_dbeat_cntr_reg[7] [2]));
   LUT6 #(
     .INIT(64'hB8B8B8B8B8B8B88B)) 
     \sig_dbeat_cntr[3]_i_1 
@@ -32345,15 +32724,40 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
         .I3(Q[2]),
         .I4(Q[0]),
         .I5(Q[1]),
-        .O(\sig_dbeat_cntr_reg[4] [3]));
+        .O(\sig_dbeat_cntr_reg[7] [3]));
   LUT4 #(
     .INIT(16'h8BB8)) 
     \sig_dbeat_cntr[4]_i_1 
        (.I0(sig_cmd_fifo_data_out[10]),
         .I1(sig_first_dbeat_reg_0),
         .I2(Q[4]),
-        .I3(\sig_dbeat_cntr_reg[4]_0 ),
-        .O(\sig_dbeat_cntr_reg[4] [4]));
+        .I3(\sig_dbeat_cntr_reg[4] ),
+        .O(\sig_dbeat_cntr_reg[7] [4]));
+  LUT4 #(
+    .INIT(16'h8BB8)) 
+    \sig_dbeat_cntr[5]_i_1 
+       (.I0(sig_cmd_fifo_data_out[11]),
+        .I1(sig_first_dbeat_reg_0),
+        .I2(Q[5]),
+        .I3(\sig_dbeat_cntr_reg[5] ),
+        .O(\sig_dbeat_cntr_reg[7] [5]));
+  LUT4 #(
+    .INIT(16'h8BB8)) 
+    \sig_dbeat_cntr[6]_i_1 
+       (.I0(sig_cmd_fifo_data_out[12]),
+        .I1(sig_first_dbeat_reg_0),
+        .I2(Q[6]),
+        .I3(\sig_dbeat_cntr_reg[6] ),
+        .O(\sig_dbeat_cntr_reg[7] [6]));
+  LUT5 #(
+    .INIT(32'hB88BB8B8)) 
+    \sig_dbeat_cntr[7]_i_2 
+       (.I0(sig_cmd_fifo_data_out[13]),
+        .I1(sig_first_dbeat_reg_0),
+        .I2(Q[7]),
+        .I3(Q[6]),
+        .I4(\sig_dbeat_cntr_reg[6] ),
+        .O(\sig_dbeat_cntr_reg[7] [7]));
   LUT5 #(
     .INIT(32'h0C440C00)) 
     sig_first_dbeat_i_1
@@ -32376,12 +32780,20 @@ module Zed_SPI_axi_dma_0_dynshreg_f__parameterized4
   LUT5 #(
     .INIT(32'h00000001)) 
     sig_last_dbeat_i_2
-       (.I0(sig_cmd_fifo_data_out[7]),
-        .I1(sig_cmd_fifo_data_out[6]),
-        .I2(sig_cmd_fifo_data_out[8]),
-        .I3(sig_cmd_fifo_data_out[9]),
-        .I4(sig_cmd_fifo_data_out[10]),
+       (.I0(sig_cmd_fifo_data_out[10]),
+        .I1(sig_cmd_fifo_data_out[11]),
+        .I2(sig_cmd_fifo_data_out[13]),
+        .I3(sig_cmd_fifo_data_out[12]),
+        .I4(sig_last_dbeat_i_4_n_0),
         .O(sig_last_dbeat_i_2_n_0));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    sig_last_dbeat_i_4
+       (.I0(sig_cmd_fifo_data_out[9]),
+        .I1(sig_cmd_fifo_data_out[8]),
+        .I2(sig_cmd_fifo_data_out[7]),
+        .I3(sig_cmd_fifo_data_out[6]),
+        .O(sig_last_dbeat_i_4_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     \sig_next_strt_strb_reg[0]_i_1 
@@ -32505,9 +32917,9 @@ endmodule
 module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized0
    (p_0_in,
     out,
-    D,
     sig_push_to_wsc_reg,
     \INFERRED_GEN.cnt_i_reg[3] ,
+    D,
     \INFERRED_GEN.cnt_i_reg[3]_0 ,
     E,
     \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ,
@@ -32517,26 +32929,26 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized0
     m_axi_s2mm_aclk,
     Q,
     sig_coelsc_reg_empty,
-    \GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ,
+    \sig_wdc_statcnt_reg[3] ,
     sig_data2wsc_valid,
     sig_inhibit_rdy_n,
     \GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ,
     in);
   output p_0_in;
   output [31:0]out;
-  output [2:0]D;
   output sig_push_to_wsc_reg;
-  output \INFERRED_GEN.cnt_i_reg[3] ;
-  output [0:0]\INFERRED_GEN.cnt_i_reg[3]_0 ;
+  output [0:0]\INFERRED_GEN.cnt_i_reg[3] ;
+  output [2:0]D;
+  output \INFERRED_GEN.cnt_i_reg[3]_0 ;
   output [0:0]E;
   output [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ;
   output \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ;
   output sig_coelsc_interr_reg0;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
-  input [3:0]Q;
+  input [0:0]Q;
   input sig_coelsc_reg_empty;
-  input [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ;
+  input [3:0]\sig_wdc_statcnt_reg[3] ;
   input sig_data2wsc_valid;
   input sig_inhibit_rdy_n;
   input [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ;
@@ -32544,13 +32956,12 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized0
 
   wire [2:0]D;
   wire [0:0]E;
-  wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ;
   wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ;
   wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ;
   wire \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ;
-  wire \INFERRED_GEN.cnt_i_reg[3] ;
-  wire [0:0]\INFERRED_GEN.cnt_i_reg[3]_0 ;
-  wire [3:0]Q;
+  wire [0:0]\INFERRED_GEN.cnt_i_reg[3] ;
+  wire \INFERRED_GEN.cnt_i_reg[3]_0 ;
+  wire [0:0]Q;
   wire [0:31]in;
   wire m_axi_s2mm_aclk;
   wire [31:0]out;
@@ -32561,11 +32972,11 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized0
   wire sig_inhibit_rdy_n;
   wire sig_push_to_wsc_reg;
   wire sig_stream_rst;
+  wire [3:0]\sig_wdc_statcnt_reg[3] ;
 
   Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized0 I_SRL_FIFO_RBU_F
        (.D(D),
         .E(E),
-        .\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg (\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg (\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg (\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 (\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ),
@@ -32581,7 +32992,8 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized0
         .sig_coelsc_reg_empty(sig_coelsc_reg_empty),
         .sig_data2wsc_valid(sig_data2wsc_valid),
         .sig_inhibit_rdy_n(sig_inhibit_rdy_n),
-        .sig_stream_rst(sig_stream_rst));
+        .sig_stream_rst(sig_stream_rst),
+        .\sig_wdc_statcnt_reg[3] (\sig_wdc_statcnt_reg[3] ));
 endmodule
 
 (* ORIG_REF_NAME = "srl_fifo_f" *) 
@@ -32598,8 +33010,8 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized1
     sig_sm_ld_dre_cmd,
     \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ,
     lsig_pullreg_empty,
-    lsig_first_dbeat,
     \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ,
+    \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ,
     sig_sm_pop_cmd_fifo,
     \INFERRED_GEN.cnt_i_reg[0] ,
     sig_mstr2dre_cmd_valid,
@@ -32620,8 +33032,8 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized1
   input sig_sm_ld_dre_cmd;
   input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ;
   input lsig_pullreg_empty;
-  input lsig_first_dbeat;
   input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ;
+  input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ;
   input sig_sm_pop_cmd_fifo;
   input \INFERRED_GEN.cnt_i_reg[0] ;
   input sig_mstr2dre_cmd_valid;
@@ -32638,10 +33050,10 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized1
   wire [2:0]\FSM_sequential_sig_cmdcntl_sm_state_reg[2] ;
   wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ;
   wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ;
+  wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ;
   wire \INFERRED_GEN.cnt_i_reg[0] ;
   wire [0:0]Q;
   wire [29:0]in;
-  wire lsig_first_dbeat;
   wire lsig_pullreg_empty;
   wire m_axi_s2mm_aclk;
   wire [27:0]out;
@@ -32662,10 +33074,10 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized1
         .\FSM_sequential_sig_cmdcntl_sm_state_reg[2] (\FSM_sequential_sig_cmdcntl_sm_state_reg[2] ),
         .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ),
         .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ),
+        .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ),
         .\INFERRED_GEN.cnt_i_reg[0] (\INFERRED_GEN.cnt_i_reg[0] ),
         .Q(Q),
         .in(in),
-        .lsig_first_dbeat(lsig_first_dbeat),
         .lsig_pullreg_empty(lsig_pullreg_empty),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(out),
@@ -32682,23 +33094,17 @@ endmodule
 (* ORIG_REF_NAME = "srl_fifo_f" *) 
 module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized2
    (FIFO_Full_reg,
-    sig_flush_db1_reg,
-    \INFERRED_GEN.cnt_i_reg[4] ,
     sig_cmd_full_reg,
     lsig_set_absorb2tlast,
     sig_cmd_empty_reg,
-    sig_flush_db1_reg_0,
+    sig_flush_db1_reg,
     out,
     SR,
     Q,
+    \sig_mssa_index_reg_out_reg[0] ,
     D,
     sig_eop_sent_reg0,
     m_axi_s2mm_aclk,
-    \INFERRED_GEN.cnt_i_reg[4]_0 ,
-    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ,
-    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ,
-    sig_flush_db1_reg_1,
-    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ,
     sig_cmd_full,
     sig_sm_ld_dre_cmd,
     sig_cmd_empty_reg_0,
@@ -32706,31 +33112,29 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized2
     sig_scatter2drc_cmd_ready,
     \INFERRED_GEN.cnt_i_reg[0] ,
     slice_insert_valid,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ,
     sig_mssa_index,
     sig_strm_tstrb,
+    FIFO_Full_reg_0,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ,
     sig_eop_halt_xfer,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ,
     sig_cmd_empty_reg_2,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 );
   output FIFO_Full_reg;
-  output sig_flush_db1_reg;
-  output [0:0]\INFERRED_GEN.cnt_i_reg[4] ;
   output sig_cmd_full_reg;
   output lsig_set_absorb2tlast;
   output sig_cmd_empty_reg;
-  output [0:0]sig_flush_db1_reg_0;
+  output [0:0]sig_flush_db1_reg;
   output [4:0]out;
   output [0:0]SR;
   output [0:0]Q;
+  output [0:0]\sig_mssa_index_reg_out_reg[0] ;
   output [0:0]D;
   input sig_eop_sent_reg0;
   input m_axi_s2mm_aclk;
-  input \INFERRED_GEN.cnt_i_reg[4]_0 ;
-  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
-  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
-  input sig_flush_db1_reg_1;
-  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ;
   input sig_cmd_full;
   input sig_sm_ld_dre_cmd;
   input sig_cmd_empty_reg_0;
@@ -32738,8 +33142,12 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized2
   input sig_scatter2drc_cmd_ready;
   input \INFERRED_GEN.cnt_i_reg[0] ;
   input slice_insert_valid;
+  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
+  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
+  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ;
   input sig_mssa_index;
   input [0:0]sig_strm_tstrb;
+  input FIFO_Full_reg_0;
   input \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ;
   input sig_eop_halt_xfer;
   input \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ;
@@ -32748,6 +33156,7 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized2
 
   wire [0:0]D;
   wire FIFO_Full_reg;
+  wire FIFO_Full_reg_0;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ;
@@ -32755,8 +33164,6 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized2
   wire \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ;
   wire [5:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ;
   wire \INFERRED_GEN.cnt_i_reg[0] ;
-  wire [0:0]\INFERRED_GEN.cnt_i_reg[4] ;
-  wire \INFERRED_GEN.cnt_i_reg[4]_0 ;
   wire [0:0]Q;
   wire [0:0]SR;
   wire lsig_set_absorb2tlast;
@@ -32770,10 +33177,9 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized2
   wire sig_cmd_full_reg;
   wire sig_eop_halt_xfer;
   wire sig_eop_sent_reg0;
-  wire sig_flush_db1_reg;
-  wire [0:0]sig_flush_db1_reg_0;
-  wire sig_flush_db1_reg_1;
+  wire [0:0]sig_flush_db1_reg;
   wire sig_mssa_index;
+  wire [0:0]\sig_mssa_index_reg_out_reg[0] ;
   wire sig_scatter2drc_cmd_ready;
   wire sig_sm_ld_dre_cmd;
   wire [0:0]sig_strm_tstrb;
@@ -32782,6 +33188,7 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized2
   Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized2 I_SRL_FIFO_RBU_F
        (.D(D),
         .FIFO_Full_reg_0(FIFO_Full_reg),
+        .FIFO_Full_reg_1(FIFO_Full_reg_0),
         .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
         .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ),
         .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ),
@@ -32789,8 +33196,6 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized2
         .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ),
         .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
         .\INFERRED_GEN.cnt_i_reg[0] (\INFERRED_GEN.cnt_i_reg[0] ),
-        .\INFERRED_GEN.cnt_i_reg[4] (\INFERRED_GEN.cnt_i_reg[4] ),
-        .\INFERRED_GEN.cnt_i_reg[4]_0 (\INFERRED_GEN.cnt_i_reg[4]_0 ),
         .Q(Q),
         .SR(SR),
         .lsig_set_absorb2tlast(lsig_set_absorb2tlast),
@@ -32805,9 +33210,8 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized2
         .sig_eop_halt_xfer(sig_eop_halt_xfer),
         .sig_eop_sent_reg0(sig_eop_sent_reg0),
         .sig_flush_db1_reg(sig_flush_db1_reg),
-        .sig_flush_db1_reg_0(sig_flush_db1_reg_0),
-        .sig_flush_db1_reg_1(sig_flush_db1_reg_1),
         .sig_mssa_index(sig_mssa_index),
+        .\sig_mssa_index_reg_out_reg[0] (\sig_mssa_index_reg_out_reg[0] ),
         .sig_scatter2drc_cmd_ready(sig_scatter2drc_cmd_ready),
         .sig_sm_ld_dre_cmd(sig_sm_ld_dre_cmd),
         .sig_strm_tstrb(sig_strm_tstrb),
@@ -32823,31 +33227,31 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized3
     sig_push_addr_reg1_out,
     sig_stream_rst,
     m_axi_s2mm_aclk,
-    FIFO_Full_reg_1,
     sig_halt_reg,
+    FIFO_Full_reg_1,
     \INFERRED_GEN.cnt_i_reg[1] ,
     sig_mstr2addr_cmd_valid,
     in);
   output FIFO_Full_reg;
   output p_0_in;
-  output [39:0]out;
+  output [42:0]out;
   output FIFO_Full_reg_0;
   output sig_push_addr_reg1_out;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
-  input FIFO_Full_reg_1;
   input sig_halt_reg;
+  input FIFO_Full_reg_1;
   input \INFERRED_GEN.cnt_i_reg[1] ;
   input sig_mstr2addr_cmd_valid;
-  input [38:0]in;
+  input [41:0]in;
 
   wire FIFO_Full_reg;
   wire FIFO_Full_reg_0;
   wire FIFO_Full_reg_1;
   wire \INFERRED_GEN.cnt_i_reg[1] ;
-  wire [38:0]in;
+  wire [41:0]in;
   wire m_axi_s2mm_aclk;
-  wire [39:0]out;
+  wire [42:0]out;
   wire p_0_in;
   wire sig_halt_reg;
   wire sig_mstr2addr_cmd_valid;
@@ -32878,7 +33282,7 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized4
     sig_last_dbeat_reg_0,
     sig_first_dbeat_reg,
     sig_inhibit_rdy_n_reg,
-    \sig_dbeat_cntr_reg[4] ,
+    \sig_dbeat_cntr_reg[7] ,
     sig_halt_reg_dly3_reg,
     sig_wdc_status_going_full_reg,
     out,
@@ -32895,7 +33299,9 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized4
     \INFERRED_GEN.cnt_i_reg[1] ,
     sig_mstr2data_cmd_valid,
     Q,
-    \sig_dbeat_cntr_reg[4]_0 ,
+    \sig_dbeat_cntr_reg[6] ,
+    \sig_dbeat_cntr_reg[5] ,
+    \sig_dbeat_cntr_reg[4] ,
     sig_next_calc_error_reg_reg,
     sig_next_sequential_reg,
     sig_dqual_reg_empty,
@@ -32915,7 +33321,7 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized4
   output sig_last_dbeat_reg_0;
   output sig_first_dbeat_reg;
   output sig_inhibit_rdy_n_reg;
-  output [4:0]\sig_dbeat_cntr_reg[4] ;
+  output [7:0]\sig_dbeat_cntr_reg[7] ;
   output sig_halt_reg_dly3_reg;
   output sig_wdc_status_going_full_reg;
   output [6:0]out;
@@ -32931,8 +33337,10 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized4
   input sig_first_dbeat_reg_2;
   input \INFERRED_GEN.cnt_i_reg[1] ;
   input sig_mstr2data_cmd_valid;
-  input [4:0]Q;
-  input \sig_dbeat_cntr_reg[4]_0 ;
+  input [7:0]Q;
+  input \sig_dbeat_cntr_reg[6] ;
+  input \sig_dbeat_cntr_reg[5] ;
+  input \sig_dbeat_cntr_reg[4] ;
   input sig_next_calc_error_reg_reg;
   input sig_next_sequential_reg;
   input sig_dqual_reg_empty;
@@ -32944,19 +33352,21 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized4
   input sig_halt_reg;
   input sig_last_mmap_dbeat_reg;
   input sig_wdc_status_going_full;
-  input [13:0]sig_next_calc_error_reg_reg_1;
+  input [16:0]sig_next_calc_error_reg_reg_1;
 
   wire [2:0]D;
   wire FIFO_Full_reg;
   wire \GEN_INDET_BTT.lsig_byte_cntr[24]_i_4 ;
   wire \GEN_INDET_BTT.lsig_byte_cntr_reg[24] ;
   wire \INFERRED_GEN.cnt_i_reg[1] ;
-  wire [4:0]Q;
+  wire [7:0]Q;
   wire m_axi_s2mm_aclk;
   wire [6:0]out;
   wire [2:0]sig_addr_posted_cntr;
-  wire [4:0]\sig_dbeat_cntr_reg[4] ;
-  wire \sig_dbeat_cntr_reg[4]_0 ;
+  wire \sig_dbeat_cntr_reg[4] ;
+  wire \sig_dbeat_cntr_reg[5] ;
+  wire \sig_dbeat_cntr_reg[6] ;
+  wire [7:0]\sig_dbeat_cntr_reg[7] ;
   wire sig_dqual_reg_empty;
   wire sig_dqual_reg_full;
   wire sig_first_dbeat_reg;
@@ -32976,7 +33386,7 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized4
   wire sig_next_calc_error_reg;
   wire sig_next_calc_error_reg_reg;
   wire sig_next_calc_error_reg_reg_0;
-  wire [13:0]sig_next_calc_error_reg_reg_1;
+  wire [16:0]sig_next_calc_error_reg_reg_1;
   wire sig_next_sequential_reg;
   wire sig_single_dbeat_reg;
   wire sig_single_dbeat_reg_0;
@@ -32995,7 +33405,9 @@ module Zed_SPI_axi_dma_0_srl_fifo_f__parameterized4
         .out(out),
         .sig_addr_posted_cntr(sig_addr_posted_cntr),
         .\sig_dbeat_cntr_reg[4] (\sig_dbeat_cntr_reg[4] ),
-        .\sig_dbeat_cntr_reg[4]_0 (\sig_dbeat_cntr_reg[4]_0 ),
+        .\sig_dbeat_cntr_reg[5] (\sig_dbeat_cntr_reg[5] ),
+        .\sig_dbeat_cntr_reg[6] (\sig_dbeat_cntr_reg[6] ),
+        .\sig_dbeat_cntr_reg[7] (\sig_dbeat_cntr_reg[7] ),
         .sig_dqual_reg_empty(sig_dqual_reg_empty),
         .sig_dqual_reg_full(sig_dqual_reg_full),
         .sig_first_dbeat_reg(sig_first_dbeat_reg),
@@ -33182,9 +33594,9 @@ endmodule
 module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized0
    (p_0_in,
     out,
-    D,
     sel,
     \INFERRED_GEN.cnt_i_reg[3] ,
+    D,
     \INFERRED_GEN.cnt_i_reg[3]_0 ,
     E,
     \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ,
@@ -33194,45 +33606,44 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized0
     m_axi_s2mm_aclk,
     Q,
     sig_coelsc_reg_empty,
-    \GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ,
+    \sig_wdc_statcnt_reg[3] ,
     sig_data2wsc_valid,
     sig_inhibit_rdy_n,
     \GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ,
     in);
   output p_0_in;
   output [31:0]out;
-  output [2:0]D;
   output sel;
-  output \INFERRED_GEN.cnt_i_reg[3] ;
-  output [0:0]\INFERRED_GEN.cnt_i_reg[3]_0 ;
+  output [0:0]\INFERRED_GEN.cnt_i_reg[3] ;
+  output [2:0]D;
+  output \INFERRED_GEN.cnt_i_reg[3]_0 ;
   output [0:0]E;
   output [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ;
   output \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ;
   output sig_coelsc_interr_reg0;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
-  input [3:0]Q;
+  input [0:0]Q;
   input sig_coelsc_reg_empty;
-  input [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ;
+  input [3:0]\sig_wdc_statcnt_reg[3] ;
   input sig_data2wsc_valid;
   input sig_inhibit_rdy_n;
   input [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ;
   input [0:31]in;
 
+  wire CNTR_INCR_DECR_ADDN_F_I_n_1;
   wire CNTR_INCR_DECR_ADDN_F_I_n_2;
   wire CNTR_INCR_DECR_ADDN_F_I_n_3;
-  wire CNTR_INCR_DECR_ADDN_F_I_n_4;
   wire [2:0]D;
   wire DYNSHREG_F_I_n_37;
   wire [0:0]E;
   wire FIFO_Full_reg_n_0;
-  wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ;
   wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_interr_reg_reg ;
   wire [0:0]\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ;
   wire \GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ;
-  wire \INFERRED_GEN.cnt_i_reg[3] ;
-  wire [0:0]\INFERRED_GEN.cnt_i_reg[3]_0 ;
-  wire [3:0]Q;
+  wire [0:0]\INFERRED_GEN.cnt_i_reg[3] ;
+  wire \INFERRED_GEN.cnt_i_reg[3]_0 ;
+  wire [0:0]Q;
   wire fifo_full_p1;
   wire [0:31]in;
   wire m_axi_s2mm_aclk;
@@ -33244,16 +33655,17 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized0
   wire sig_data2wsc_valid;
   wire sig_inhibit_rdy_n;
   wire sig_stream_rst;
+  wire [3:0]\sig_wdc_statcnt_reg[3] ;
 
   Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f_4 CNTR_INCR_DECR_ADDN_F_I
        (.FIFO_Full_reg(sel),
         .FIFO_Full_reg_0(DYNSHREG_F_I_n_37),
-        .\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg (\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ),
+        .\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg (Q),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg (\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg ),
         .\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 (\GEN_ENABLE_INDET_BTT.sig_coelsc_reg_empty_reg_0 ),
         .\INFERRED_GEN.cnt_i_reg[1]_0 (FIFO_Full_reg_n_0),
-        .\INFERRED_GEN.cnt_i_reg[3]_0 (\INFERRED_GEN.cnt_i_reg[3] ),
-        .Q({\INFERRED_GEN.cnt_i_reg[3]_0 ,CNTR_INCR_DECR_ADDN_F_I_n_2,CNTR_INCR_DECR_ADDN_F_I_n_3,CNTR_INCR_DECR_ADDN_F_I_n_4}),
+        .\INFERRED_GEN.cnt_i_reg[3]_0 (\INFERRED_GEN.cnt_i_reg[3]_0 ),
+        .Q({\INFERRED_GEN.cnt_i_reg[3] ,CNTR_INCR_DECR_ADDN_F_I_n_1,CNTR_INCR_DECR_ADDN_F_I_n_2,CNTR_INCR_DECR_ADDN_F_I_n_3}),
         .fifo_full_p1(fifo_full_p1),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(out[4]),
@@ -33277,8 +33689,8 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized0
         .sig_data2wsc_valid(sig_data2wsc_valid),
         .sig_inhibit_rdy_n(sig_inhibit_rdy_n),
         .sig_push_to_wsc_reg(sel),
-        .\sig_wdc_statcnt_reg[2] (\GEN_ENABLE_INDET_BTT.sig_coelsc_eop_reg ),
-        .\sig_wdc_statcnt_reg[2]_0 ({\INFERRED_GEN.cnt_i_reg[3]_0 ,CNTR_INCR_DECR_ADDN_F_I_n_2,CNTR_INCR_DECR_ADDN_F_I_n_3,CNTR_INCR_DECR_ADDN_F_I_n_4}));
+        .\sig_wdc_statcnt_reg[2] ({\INFERRED_GEN.cnt_i_reg[3] ,CNTR_INCR_DECR_ADDN_F_I_n_1,CNTR_INCR_DECR_ADDN_F_I_n_2,CNTR_INCR_DECR_ADDN_F_I_n_3}),
+        .\sig_wdc_statcnt_reg[3] (\sig_wdc_statcnt_reg[3] ));
   FDRE FIFO_Full_reg
        (.C(m_axi_s2mm_aclk),
         .CE(1'b1),
@@ -33301,8 +33713,8 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized1
     sig_sm_ld_dre_cmd,
     \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ,
     lsig_pullreg_empty,
-    lsig_first_dbeat,
     \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ,
+    \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ,
     sig_sm_pop_cmd_fifo,
     \INFERRED_GEN.cnt_i_reg[0] ,
     sig_mstr2dre_cmd_valid,
@@ -33323,8 +33735,8 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized1
   input sig_sm_ld_dre_cmd;
   input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ;
   input lsig_pullreg_empty;
-  input lsig_first_dbeat;
   input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ;
+  input \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ;
   input sig_sm_pop_cmd_fifo;
   input \INFERRED_GEN.cnt_i_reg[0] ;
   input sig_mstr2dre_cmd_valid;
@@ -33343,11 +33755,11 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized1
   wire [2:0]\FSM_sequential_sig_cmdcntl_sm_state_reg[2] ;
   wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ;
   wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ;
+  wire \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ;
   wire \INFERRED_GEN.cnt_i_reg[0] ;
   wire [0:0]Q;
   wire fifo_full_p1;
   wire [29:0]in;
-  wire lsig_first_dbeat;
   wire lsig_pullreg_empty;
   wire m_axi_s2mm_aclk;
   wire [27:0]out;
@@ -33386,9 +33798,9 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized1
         .\FSM_sequential_sig_cmdcntl_sm_state_reg[2] (\FSM_sequential_sig_cmdcntl_sm_state_reg[2] ),
         .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0] ),
         .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_0 ),
+        .\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 (\GEN_INCLUDE_DRE.lsig_push_strt_offset_reg_reg[0]_1 ),
         .Q({Q,CNTR_INCR_DECR_ADDN_F_I_n_2,CNTR_INCR_DECR_ADDN_F_I_n_3}),
         .in(in),
-        .lsig_first_dbeat(lsig_first_dbeat),
         .lsig_pullreg_empty(lsig_pullreg_empty),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out({sig_cmd_fifo_data_out,out}),
@@ -33410,23 +33822,17 @@ endmodule
 (* ORIG_REF_NAME = "srl_fifo_rbu_f" *) 
 module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized2
    (FIFO_Full_reg_0,
-    sig_flush_db1_reg,
-    \INFERRED_GEN.cnt_i_reg[4] ,
     sig_cmd_full_reg,
     lsig_set_absorb2tlast,
     sig_cmd_empty_reg,
-    sig_flush_db1_reg_0,
+    sig_flush_db1_reg,
     out,
     SR,
     Q,
+    \sig_mssa_index_reg_out_reg[0] ,
     D,
     sig_eop_sent_reg0,
     m_axi_s2mm_aclk,
-    \INFERRED_GEN.cnt_i_reg[4]_0 ,
-    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ,
-    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ,
-    sig_flush_db1_reg_1,
-    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ,
     sig_cmd_full,
     sig_sm_ld_dre_cmd,
     sig_cmd_empty_reg_0,
@@ -33434,31 +33840,29 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized2
     sig_scatter2drc_cmd_ready,
     \INFERRED_GEN.cnt_i_reg[0] ,
     slice_insert_valid,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ,
+    \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ,
     sig_mssa_index,
     sig_strm_tstrb,
+    FIFO_Full_reg_1,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ,
     sig_eop_halt_xfer,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ,
     sig_cmd_empty_reg_2,
     \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 );
   output FIFO_Full_reg_0;
-  output sig_flush_db1_reg;
-  output [0:0]\INFERRED_GEN.cnt_i_reg[4] ;
   output sig_cmd_full_reg;
   output lsig_set_absorb2tlast;
   output sig_cmd_empty_reg;
-  output [0:0]sig_flush_db1_reg_0;
+  output [0:0]sig_flush_db1_reg;
   output [4:0]out;
   output [0:0]SR;
   output [0:0]Q;
+  output [0:0]\sig_mssa_index_reg_out_reg[0] ;
   output [0:0]D;
   input sig_eop_sent_reg0;
   input m_axi_s2mm_aclk;
-  input \INFERRED_GEN.cnt_i_reg[4]_0 ;
-  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
-  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
-  input sig_flush_db1_reg_1;
-  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ;
   input sig_cmd_full;
   input sig_sm_ld_dre_cmd;
   input sig_cmd_empty_reg_0;
@@ -33466,22 +33870,27 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized2
   input sig_scatter2drc_cmd_ready;
   input \INFERRED_GEN.cnt_i_reg[0] ;
   input slice_insert_valid;
+  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
+  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
+  input \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ;
   input sig_mssa_index;
   input [0:0]sig_strm_tstrb;
+  input FIFO_Full_reg_1;
   input \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ;
   input sig_eop_halt_xfer;
   input \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ;
   input sig_cmd_empty_reg_2;
   input [5:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ;
 
+  wire CNTR_INCR_DECR_ADDN_F_I_n_2;
+  wire CNTR_INCR_DECR_ADDN_F_I_n_3;
   wire CNTR_INCR_DECR_ADDN_F_I_n_4;
   wire CNTR_INCR_DECR_ADDN_F_I_n_5;
   wire CNTR_INCR_DECR_ADDN_F_I_n_6;
-  wire CNTR_INCR_DECR_ADDN_F_I_n_7;
-  wire CNTR_INCR_DECR_ADDN_F_I_n_8;
   wire [0:0]D;
   wire DYNSHREG_F_I_n_3;
   wire FIFO_Full_reg_0;
+  wire FIFO_Full_reg_1;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ;
   wire \GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ;
@@ -33489,8 +33898,6 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized2
   wire \GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ;
   wire [5:0]\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ;
   wire \INFERRED_GEN.cnt_i_reg[0] ;
-  wire [0:0]\INFERRED_GEN.cnt_i_reg[4] ;
-  wire \INFERRED_GEN.cnt_i_reg[4]_0 ;
   wire [0:0]Q;
   wire [0:0]SR;
   wire fifo_full_p1;
@@ -33505,10 +33912,9 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized2
   wire sig_cmd_full_reg;
   wire sig_eop_halt_xfer;
   wire sig_eop_sent_reg0;
-  wire sig_flush_db1_reg;
-  wire [0:0]sig_flush_db1_reg_0;
-  wire sig_flush_db1_reg_1;
+  wire [0:0]sig_flush_db1_reg;
   wire sig_mssa_index;
+  wire [0:0]\sig_mssa_index_reg_out_reg[0] ;
   wire sig_scatter2drc_cmd_ready;
   wire sig_sm_ld_dre_cmd;
   wire [0:0]sig_strm_tstrb;
@@ -33516,36 +33922,32 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized2
 
   Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized1 CNTR_INCR_DECR_ADDN_F_I
        (.D(D),
-        .FIFO_Full_reg(DYNSHREG_F_I_n_3),
-        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ),
-        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ),
-        .\INFERRED_GEN.cnt_i_reg[0]_0 (\INFERRED_GEN.cnt_i_reg[0] ),
-        .\INFERRED_GEN.cnt_i_reg[0]_1 (FIFO_Full_reg_0),
-        .\INFERRED_GEN.cnt_i_reg[4]_0 (\INFERRED_GEN.cnt_i_reg[4] ),
-        .\INFERRED_GEN.cnt_i_reg[4]_1 (CNTR_INCR_DECR_ADDN_F_I_n_8),
-        .\INFERRED_GEN.cnt_i_reg[4]_2 (\INFERRED_GEN.cnt_i_reg[4]_0 ),
-        .Q({Q,CNTR_INCR_DECR_ADDN_F_I_n_4,CNTR_INCR_DECR_ADDN_F_I_n_5,CNTR_INCR_DECR_ADDN_F_I_n_6,CNTR_INCR_DECR_ADDN_F_I_n_7}),
+        .FIFO_Full_reg(FIFO_Full_reg_1),
+        .FIFO_Full_reg_0(DYNSHREG_F_I_n_3),
+        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ),
+        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ),
+        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 ),
+        .\INFERRED_GEN.cnt_i_reg[0]_0 (FIFO_Full_reg_0),
+        .\INFERRED_GEN.cnt_i_reg[0]_1 (\INFERRED_GEN.cnt_i_reg[0] ),
+        .\INFERRED_GEN.cnt_i_reg[4]_0 (CNTR_INCR_DECR_ADDN_F_I_n_6),
+        .Q({Q,CNTR_INCR_DECR_ADDN_F_I_n_2,CNTR_INCR_DECR_ADDN_F_I_n_3,CNTR_INCR_DECR_ADDN_F_I_n_4,CNTR_INCR_DECR_ADDN_F_I_n_5}),
         .fifo_full_p1(fifo_full_p1),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out({out[4],out[1]}),
         .sig_eop_halt_xfer(sig_eop_halt_xfer),
         .sig_eop_sent_reg0(sig_eop_sent_reg0),
-        .sig_flush_db1_reg(sig_flush_db1_reg),
-        .sig_flush_db1_reg_0(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
-        .sig_flush_db1_reg_1(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ),
-        .sig_flush_db1_reg_2(sig_flush_db1_reg_1),
-        .sig_flush_db1_reg_3(\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ),
         .sig_mssa_index(sig_mssa_index),
+        .\sig_mssa_index_reg_out_reg[0] (\sig_mssa_index_reg_out_reg[0] ),
         .slice_insert_valid(slice_insert_valid));
   Zed_SPI_axi_dma_0_dynshreg_f__parameterized2 DYNSHREG_F_I
        (.FIFO_Full_reg(FIFO_Full_reg_0),
         .FIFO_Full_reg_0(\INFERRED_GEN.cnt_i_reg[0] ),
-        .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ),
-        .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
+        .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9] ),
+        .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_0 ),
         .\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 (\GEN_INPUT_REG[0].sig_input_data_reg_reg[0][9]_1 ),
-        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] (CNTR_INCR_DECR_ADDN_F_I_n_8),
+        .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] (CNTR_INCR_DECR_ADDN_F_I_n_6),
         .\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_0 (\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9]_1 ),
-        .Q({Q,CNTR_INCR_DECR_ADDN_F_I_n_4,CNTR_INCR_DECR_ADDN_F_I_n_5,CNTR_INCR_DECR_ADDN_F_I_n_6,CNTR_INCR_DECR_ADDN_F_I_n_7}),
+        .Q({Q,CNTR_INCR_DECR_ADDN_F_I_n_2,CNTR_INCR_DECR_ADDN_F_I_n_3,CNTR_INCR_DECR_ADDN_F_I_n_4,CNTR_INCR_DECR_ADDN_F_I_n_5}),
         .SR(SR),
         .lsig_set_absorb2tlast(lsig_set_absorb2tlast),
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
@@ -33559,7 +33961,7 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized2
         .sig_cmd_empty_reg_4(\GEN_INPUT_REG[1].sig_input_data_reg_reg[1][9] ),
         .sig_cmd_full(sig_cmd_full),
         .sig_cmd_full_reg(sig_cmd_full_reg),
-        .sig_flush_db1_reg(sig_flush_db1_reg_0),
+        .sig_flush_db1_reg(sig_flush_db1_reg),
         .sig_mssa_index(sig_mssa_index),
         .sig_scatter2drc_cmd_ready(sig_scatter2drc_cmd_ready),
         .sig_sm_ld_dre_cmd(sig_sm_ld_dre_cmd),
@@ -33582,23 +33984,23 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized3
     sig_push_addr_reg1_out,
     sig_stream_rst,
     m_axi_s2mm_aclk,
-    FIFO_Full_reg_1,
     sig_halt_reg,
+    FIFO_Full_reg_1,
     \INFERRED_GEN.cnt_i_reg[1] ,
     sig_mstr2addr_cmd_valid,
     in);
   output FIFO_Full_reg_0;
   output p_0_in;
-  output [39:0]out;
+  output [42:0]out;
   output sel;
   output sig_push_addr_reg1_out;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
-  input FIFO_Full_reg_1;
   input sig_halt_reg;
+  input FIFO_Full_reg_1;
   input \INFERRED_GEN.cnt_i_reg[1] ;
   input sig_mstr2addr_cmd_valid;
-  input [38:0]in;
+  input [41:0]in;
 
   wire CNTR_INCR_DECR_ADDN_F_I_n_1;
   wire CNTR_INCR_DECR_ADDN_F_I_n_2;
@@ -33606,9 +34008,9 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized3
   wire FIFO_Full_reg_1;
   wire \INFERRED_GEN.cnt_i_reg[1] ;
   wire fifo_full_p1;
-  wire [38:0]in;
+  wire [41:0]in;
   wire m_axi_s2mm_aclk;
-  wire [39:0]out;
+  wire [42:0]out;
   wire p_0_in;
   wire sel;
   wire sig_halt_reg;
@@ -33617,8 +34019,8 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized3
   wire sig_stream_rst;
 
   Zed_SPI_axi_dma_0_cntr_incr_decr_addn_f__parameterized0_24 CNTR_INCR_DECR_ADDN_F_I
-       (.FIFO_Full_reg(sel),
-        .FIFO_Full_reg_0(FIFO_Full_reg_1),
+       (.FIFO_Full_reg(FIFO_Full_reg_1),
+        .FIFO_Full_reg_0(sel),
         .\INFERRED_GEN.cnt_i_reg[1]_0 (FIFO_Full_reg_0),
         .\INFERRED_GEN.cnt_i_reg[1]_1 (\INFERRED_GEN.cnt_i_reg[1] ),
         .Q({CNTR_INCR_DECR_ADDN_F_I_n_1,CNTR_INCR_DECR_ADDN_F_I_n_2}),
@@ -33655,7 +34057,7 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized4
     sig_last_dbeat_reg_0,
     sig_first_dbeat_reg,
     sig_inhibit_rdy_n_reg,
-    \sig_dbeat_cntr_reg[4] ,
+    \sig_dbeat_cntr_reg[7] ,
     sig_halt_reg_dly3_reg,
     sig_wdc_status_going_full_reg,
     out,
@@ -33672,7 +34074,9 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized4
     \INFERRED_GEN.cnt_i_reg[1] ,
     sig_mstr2data_cmd_valid,
     Q,
-    \sig_dbeat_cntr_reg[4]_0 ,
+    \sig_dbeat_cntr_reg[6] ,
+    \sig_dbeat_cntr_reg[5] ,
+    \sig_dbeat_cntr_reg[4] ,
     sig_next_calc_error_reg_reg,
     sig_next_sequential_reg,
     sig_dqual_reg_empty,
@@ -33692,7 +34096,7 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized4
   output sig_last_dbeat_reg_0;
   output sig_first_dbeat_reg;
   output sig_inhibit_rdy_n_reg;
-  output [4:0]\sig_dbeat_cntr_reg[4] ;
+  output [7:0]\sig_dbeat_cntr_reg[7] ;
   output sig_halt_reg_dly3_reg;
   output sig_wdc_status_going_full_reg;
   output [6:0]out;
@@ -33708,8 +34112,10 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized4
   input sig_first_dbeat_reg_2;
   input \INFERRED_GEN.cnt_i_reg[1] ;
   input sig_mstr2data_cmd_valid;
-  input [4:0]Q;
-  input \sig_dbeat_cntr_reg[4]_0 ;
+  input [7:0]Q;
+  input \sig_dbeat_cntr_reg[6] ;
+  input \sig_dbeat_cntr_reg[5] ;
+  input \sig_dbeat_cntr_reg[4] ;
   input sig_next_calc_error_reg_reg;
   input sig_next_sequential_reg;
   input sig_dqual_reg_empty;
@@ -33721,7 +34127,7 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized4
   input sig_halt_reg;
   input sig_last_mmap_dbeat_reg;
   input sig_wdc_status_going_full;
-  input [13:0]sig_next_calc_error_reg_reg_1;
+  input [16:0]sig_next_calc_error_reg_reg_1;
 
   wire CNTR_INCR_DECR_ADDN_F_I_n_2;
   wire CNTR_INCR_DECR_ADDN_F_I_n_3;
@@ -33730,13 +34136,15 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized4
   wire \GEN_INDET_BTT.lsig_byte_cntr[24]_i_4 ;
   wire \GEN_INDET_BTT.lsig_byte_cntr_reg[24] ;
   wire \INFERRED_GEN.cnt_i_reg[1] ;
-  wire [4:0]Q;
+  wire [7:0]Q;
   wire fifo_full_p1;
   wire m_axi_s2mm_aclk;
   wire [6:0]out;
   wire [2:0]sig_addr_posted_cntr;
-  wire [4:0]\sig_dbeat_cntr_reg[4] ;
-  wire \sig_dbeat_cntr_reg[4]_0 ;
+  wire \sig_dbeat_cntr_reg[4] ;
+  wire \sig_dbeat_cntr_reg[5] ;
+  wire \sig_dbeat_cntr_reg[6] ;
+  wire [7:0]\sig_dbeat_cntr_reg[7] ;
   wire sig_dqual_reg_empty;
   wire sig_dqual_reg_full;
   wire sig_first_dbeat_reg;
@@ -33756,7 +34164,7 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized4
   wire sig_next_calc_error_reg;
   wire sig_next_calc_error_reg_reg;
   wire sig_next_calc_error_reg_reg_0;
-  wire [13:0]sig_next_calc_error_reg_reg_1;
+  wire [16:0]sig_next_calc_error_reg_reg_1;
   wire sig_next_sequential_reg;
   wire sig_single_dbeat_reg;
   wire sig_single_dbeat_reg_0;
@@ -33796,7 +34204,9 @@ module Zed_SPI_axi_dma_0_srl_fifo_rbu_f__parameterized4
         .m_axi_s2mm_aclk(m_axi_s2mm_aclk),
         .out(out),
         .\sig_dbeat_cntr_reg[4] (\sig_dbeat_cntr_reg[4] ),
-        .\sig_dbeat_cntr_reg[4]_0 (\sig_dbeat_cntr_reg[4]_0 ),
+        .\sig_dbeat_cntr_reg[5] (\sig_dbeat_cntr_reg[5] ),
+        .\sig_dbeat_cntr_reg[6] (\sig_dbeat_cntr_reg[6] ),
+        .\sig_dbeat_cntr_reg[7] (\sig_dbeat_cntr_reg[7] ),
         .sig_first_dbeat_reg(sig_first_dbeat_reg),
         .sig_first_dbeat_reg_0(sig_last_dbeat_reg),
         .sig_first_dbeat_reg_1(sig_first_dbeat_reg_0),
@@ -33835,24 +34245,27 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ,
     sig_dre_tvalid_i_reg,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] ,
+    SR,
     sig_tlast_out_reg,
     \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ,
+    \sig_burst_dbeat_cntr_reg[7] ,
+    sig_tlast_out_reg_0,
     sig_dre_halted_reg,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ,
     D,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 ,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 ,
     sig_child_qual_first_of_2_reg,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ,
-    sig_clr_dbeat_cntr0_out,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ,
+    sig_tlast_out_reg_1,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_3 ,
-    sig_tlast_out_reg_0,
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ,
     O,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ,
-    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ,
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ,
     out,
     sig_stream_rst,
     m_axi_s2mm_aclk,
@@ -33862,76 +34275,82 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
     full,
     sig_dre2ibtt_tlast,
     lsig_packer_full,
+    Q,
+    sig_clr_dbc_reg_reg,
+    \sig_burst_dbeat_cntr_reg[7]_0 ,
     \INCLUDE_PACKING.lsig_first_dbeat_reg ,
     sig_sf_strt_addr_offset,
     \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ,
     sig_dre_halted,
     sig_dre2ibtt_tvalid,
-    Q,
+    \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] ,
     \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] ,
     sig_child_qual_first_of_2,
     sig_csm_pop_child_cmd,
     sig_pcc2sf_xfer_ready,
-    sig_clr_dbc_reg_reg,
-    lsig_first_dbeat,
     lsig_eop_reg_0,
-    sig_child_addr_cntr_lsh_reg,
     \sig_child_addr_cntr_lsh_reg[3] ,
     \sig_child_addr_cntr_lsh_reg[7] ,
-    \sig_byte_cntr_reg[3] );
-  output [8:0]dout;
+    \sig_child_addr_cntr_lsh_reg[11] ,
+    sig_child_addr_cntr_lsh_reg);
+  output [12:0]dout;
   output empty;
   output \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
   output sig_dre_tvalid_i_reg;
   output \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] ;
+  output [0:0]SR;
   output sig_tlast_out_reg;
   output \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ;
+  output \sig_burst_dbeat_cntr_reg[7] ;
+  output sig_tlast_out_reg_0;
   output sig_dre_halted_reg;
   output [0:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ;
   output [0:0]D;
   output [1:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 ;
   output [15:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 ;
   output sig_child_qual_first_of_2_reg;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
-  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ;
-  output sig_clr_dbeat_cntr0_out;
+  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ;
+  output \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ;
+  output [1:0]sig_tlast_out_reg_1;
   output [0:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_3 ;
-  output [1:0]sig_tlast_out_reg_0;
   output [0:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ;
-  output [4:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ;
   output [3:0]O;
-  output [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
-  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ;
-  output [6:0]out;
+  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
+  output [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ;
+  output [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ;
+  output [1:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ;
+  output [10:0]out;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input wr_en;
-  input [8:0]din;
+  input [12:0]din;
   input rd_en;
   input full;
   input sig_dre2ibtt_tlast;
   input lsig_packer_full;
+  input [1:0]Q;
+  input sig_clr_dbc_reg_reg;
+  input \sig_burst_dbeat_cntr_reg[7]_0 ;
   input \INCLUDE_PACKING.lsig_first_dbeat_reg ;
   input sig_sf_strt_addr_offset;
   input \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ;
   input sig_dre_halted;
   input sig_dre2ibtt_tvalid;
-  input [8:0]Q;
+  input [8:0]\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] ;
   input [8:0]\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] ;
   input sig_child_qual_first_of_2;
   input sig_csm_pop_child_cmd;
   input sig_pcc2sf_xfer_ready;
-  input [3:0]sig_clr_dbc_reg_reg;
-  input lsig_first_dbeat;
   input lsig_eop_reg_0;
-  input [1:0]sig_child_addr_cntr_lsh_reg;
   input [3:0]\sig_child_addr_cntr_lsh_reg[3] ;
   input [3:0]\sig_child_addr_cntr_lsh_reg[7] ;
-  input [1:0]\sig_byte_cntr_reg[3] ;
+  input [3:0]\sig_child_addr_cntr_lsh_reg[11] ;
+  input [1:0]sig_child_addr_cntr_lsh_reg;
 
   wire [0:0]D;
   wire \GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ;
   wire [8:0]\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] ;
+  wire [8:0]\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] ;
   wire \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] ;
   wire [0:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ;
   wire [1:0]\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 ;
@@ -33940,39 +34359,52 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
   wire \INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ;
   wire \INCLUDE_PACKING.lsig_first_dbeat_reg ;
   wire [3:0]O;
-  wire [8:0]Q;
-  wire [8:0]din;
-  wire [8:0]dout;
+  wire [1:0]Q;
+  wire [0:0]SR;
+  wire [12:0]din;
+  wire [12:0]dout;
   wire empty;
   wire full;
   wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
   wire [0:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ;
-  wire [4:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] ;
-  wire [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ;
-  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
-  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ;
+  wire [0:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ;
+  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ;
+  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ;
+  wire \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ;
+  wire [1:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] ;
+  wire [3:0]\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ;
   wire lsig_eop_reg_0;
-  wire lsig_first_dbeat;
   wire lsig_packer_full;
   wire m_axi_s2mm_aclk;
-  wire [6:0]out;
+  wire [10:0]out;
   wire rd_en;
+  wire \sig_burst_dbeat_cntr[7]_i_4_n_0 ;
+  wire \sig_burst_dbeat_cntr_reg[7] ;
+  wire \sig_burst_dbeat_cntr_reg[7]_0 ;
+  wire \sig_byte_cntr[10]_i_4_n_0 ;
+  wire \sig_byte_cntr[10]_i_5_n_0 ;
+  wire \sig_byte_cntr[10]_i_6_n_0 ;
+  wire \sig_byte_cntr[10]_i_7_n_0 ;
+  wire \sig_byte_cntr[3]_i_2_n_0 ;
+  wire \sig_byte_cntr[3]_i_3_n_0 ;
   wire \sig_byte_cntr[3]_i_4_n_0 ;
   wire \sig_byte_cntr[3]_i_5_n_0 ;
   wire \sig_byte_cntr[3]_i_6_n_0 ;
   wire \sig_byte_cntr[3]_i_7_n_0 ;
-  wire \sig_byte_cntr[6]_i_4_n_0 ;
-  wire \sig_byte_cntr[6]_i_5_n_0 ;
-  wire \sig_byte_cntr[6]_i_6_n_0 ;
-  wire \sig_byte_cntr[6]_i_7_n_0 ;
-  wire [1:0]\sig_byte_cntr_reg[3] ;
+  wire \sig_byte_cntr[7]_i_3_n_0 ;
+  wire \sig_byte_cntr[7]_i_4_n_0 ;
+  wire \sig_byte_cntr[7]_i_5_n_0 ;
+  wire \sig_byte_cntr[7]_i_6_n_0 ;
+  wire \sig_byte_cntr_reg[10]_i_3_n_2 ;
+  wire \sig_byte_cntr_reg[10]_i_3_n_3 ;
   wire \sig_byte_cntr_reg[3]_i_1_n_0 ;
   wire \sig_byte_cntr_reg[3]_i_1_n_1 ;
   wire \sig_byte_cntr_reg[3]_i_1_n_2 ;
   wire \sig_byte_cntr_reg[3]_i_1_n_3 ;
-  wire \sig_byte_cntr_reg[6]_i_3_n_2 ;
-  wire \sig_byte_cntr_reg[6]_i_3_n_3 ;
+  wire \sig_byte_cntr_reg[7]_i_2_n_0 ;
+  wire \sig_byte_cntr_reg[7]_i_2_n_1 ;
+  wire \sig_byte_cntr_reg[7]_i_2_n_2 ;
+  wire \sig_byte_cntr_reg[7]_i_2_n_3 ;
   wire \sig_child_addr_cntr_lsh[0]_i_3_n_0 ;
   wire \sig_child_addr_cntr_lsh[0]_i_4_n_0 ;
   wire \sig_child_addr_cntr_lsh[0]_i_5_n_0 ;
@@ -33980,20 +34412,28 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
   wire \sig_child_addr_cntr_lsh[4]_i_2_n_0 ;
   wire \sig_child_addr_cntr_lsh[4]_i_3_n_0 ;
   wire \sig_child_addr_cntr_lsh[4]_i_4_n_0 ;
+  wire \sig_child_addr_cntr_lsh[4]_i_5_n_0 ;
+  wire \sig_child_addr_cntr_lsh[8]_i_2_n_0 ;
+  wire \sig_child_addr_cntr_lsh[8]_i_3_n_0 ;
+  wire \sig_child_addr_cntr_lsh[8]_i_4_n_0 ;
   wire [1:0]sig_child_addr_cntr_lsh_reg;
   wire \sig_child_addr_cntr_lsh_reg[0]_i_2_n_0 ;
   wire \sig_child_addr_cntr_lsh_reg[0]_i_2_n_1 ;
   wire \sig_child_addr_cntr_lsh_reg[0]_i_2_n_2 ;
   wire \sig_child_addr_cntr_lsh_reg[0]_i_2_n_3 ;
+  wire [3:0]\sig_child_addr_cntr_lsh_reg[11] ;
   wire [3:0]\sig_child_addr_cntr_lsh_reg[3] ;
+  wire \sig_child_addr_cntr_lsh_reg[4]_i_1_n_0 ;
   wire \sig_child_addr_cntr_lsh_reg[4]_i_1_n_1 ;
   wire \sig_child_addr_cntr_lsh_reg[4]_i_1_n_2 ;
   wire \sig_child_addr_cntr_lsh_reg[4]_i_1_n_3 ;
   wire [3:0]\sig_child_addr_cntr_lsh_reg[7] ;
+  wire \sig_child_addr_cntr_lsh_reg[8]_i_1_n_1 ;
+  wire \sig_child_addr_cntr_lsh_reg[8]_i_1_n_2 ;
+  wire \sig_child_addr_cntr_lsh_reg[8]_i_1_n_3 ;
   wire sig_child_qual_first_of_2;
   wire sig_child_qual_first_of_2_reg;
-  wire [3:0]sig_clr_dbc_reg_reg;
-  wire sig_clr_dbeat_cntr0_out;
+  wire sig_clr_dbc_reg_reg;
   wire sig_csm_pop_child_cmd;
   wire sig_dre2ibtt_tlast;
   wire sig_dre2ibtt_tvalid;
@@ -34004,18 +34444,17 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
   wire sig_sf_strt_addr_offset;
   wire sig_stream_rst;
   wire sig_tlast_out_reg;
-  wire [1:0]sig_tlast_out_reg_0;
+  wire sig_tlast_out_reg_0;
+  wire [1:0]sig_tlast_out_reg_1;
   wire sig_xd_fifo_full;
-  wire \sig_xfer_len_reg[4]_i_2_n_0 ;
-  wire \sig_xfer_len_reg[4]_i_3_n_0 ;
   wire wr_en;
   wire \xpm_fifo_instance.xpm_fifo_sync_inst_n_2 ;
   wire \xpm_fifo_instance.xpm_fifo_sync_inst_n_3 ;
   wire \xpm_fifo_instance.xpm_fifo_sync_inst_n_4 ;
   wire \xpm_fifo_instance.xpm_fifo_sync_inst_n_5 ;
   wire \xpm_fifo_instance.xpm_fifo_sync_inst_n_6 ;
-  wire [3:2]\NLW_sig_byte_cntr_reg[6]_i_3_CO_UNCONNECTED ;
-  wire [3:3]\NLW_sig_byte_cntr_reg[6]_i_3_O_UNCONNECTED ;
+  wire [3:2]\NLW_sig_byte_cntr_reg[10]_i_3_CO_UNCONNECTED ;
+  wire [3:3]\NLW_sig_byte_cntr_reg[10]_i_3_O_UNCONNECTED ;
   wire \NLW_xpm_fifo_instance.xpm_fifo_sync_inst_almost_empty_UNCONNECTED ;
   wire \NLW_xpm_fifo_instance.xpm_fifo_sync_inst_almost_full_UNCONNECTED ;
   wire \NLW_xpm_fifo_instance.xpm_fifo_sync_inst_data_valid_UNCONNECTED ;
@@ -34033,17 +34472,23 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
   LUT2 #(
     .INIT(4'h7)) 
     \FSM_onehot_sig_csm_state[1]_i_2 
-       (.I0(dout[7]),
+       (.I0(dout[11]),
         .I1(sig_pcc2sf_xfer_ready),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'h8A)) 
     \FSM_onehot_sig_csm_state[4]_i_2 
-       (.I0(dout[7]),
-        .I1(dout[8]),
+       (.I0(dout[11]),
+        .I1(dout[12]),
         .I2(sig_child_qual_first_of_2),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ));
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] ));
+  LUT2 #(
+    .INIT(4'h8)) 
+    \GEN_INCLUDE_DRE.lsig_push_strt_offset_reg[0]_i_2 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(sig_dre2ibtt_tlast),
+        .O(sig_tlast_out_reg_0));
   LUT6 #(
     .INIT(64'h0000001555555555)) 
     \GEN_INPUT_REG[0].sig_input_data_reg[0][9]_i_4 
@@ -34051,7 +34496,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I1(lsig_packer_full),
         .I2(full),
         .I3(sig_xd_fifo_full),
-        .I4(\sig_byte_cntr[6]_i_4_n_0 ),
+        .I4(\sig_byte_cntr[10]_i_4_n_0 ),
         .I5(sig_dre2ibtt_tvalid),
         .O(sig_dre_halted_reg));
   LUT5 #(
@@ -34070,7 +34515,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I1(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I2(sig_sf_strt_addr_offset),
         .I3(sig_dre_tvalid_i_reg),
-        .I4(Q[2]),
+        .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [2]),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 [10]));
   LUT5 #(
     .INIT(32'h1D000000)) 
@@ -34079,7 +34524,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I1(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I2(sig_sf_strt_addr_offset),
         .I3(sig_dre_tvalid_i_reg),
-        .I4(Q[3]),
+        .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [3]),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 [11]));
   LUT5 #(
     .INIT(32'h1D000000)) 
@@ -34088,7 +34533,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I1(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I2(sig_sf_strt_addr_offset),
         .I3(sig_dre_tvalid_i_reg),
-        .I4(Q[4]),
+        .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [4]),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 [12]));
   LUT5 #(
     .INIT(32'h1D000000)) 
@@ -34097,7 +34542,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I1(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I2(sig_sf_strt_addr_offset),
         .I3(sig_dre_tvalid_i_reg),
-        .I4(Q[5]),
+        .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [5]),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 [13]));
   LUT5 #(
     .INIT(32'h1D000000)) 
@@ -34106,7 +34551,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I1(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I2(sig_sf_strt_addr_offset),
         .I3(sig_dre_tvalid_i_reg),
-        .I4(Q[6]),
+        .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [6]),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 [14]));
   LUT5 #(
     .INIT(32'h1D000000)) 
@@ -34115,7 +34560,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I1(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I2(sig_sf_strt_addr_offset),
         .I3(sig_dre_tvalid_i_reg),
-        .I4(Q[7]),
+        .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [7]),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 [15]));
   LUT5 #(
     .INIT(32'h1D000000)) 
@@ -34187,7 +34632,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I1(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I2(sig_sf_strt_addr_offset),
         .I3(sig_dre_tvalid_i_reg),
-        .I4(Q[0]),
+        .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [0]),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 [8]));
   LUT5 #(
     .INIT(32'h1D000000)) 
@@ -34196,7 +34641,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I1(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I2(sig_sf_strt_addr_offset),
         .I3(sig_dre_tvalid_i_reg),
-        .I4(Q[1]),
+        .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [1]),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_2 [9]));
   LUT6 #(
     .INIT(64'h1D00FFFF1D001D00)) 
@@ -34208,7 +34653,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I4(full),
         .I5(lsig_packer_full),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT5 #(
     .INIT(32'h1D000000)) 
     \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_flag_slice_reg[0][1]_i_2 
@@ -34227,7 +34672,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I3(sig_dre_tvalid_i_reg),
         .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] [8]),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT5 #(
     .INIT(32'h1D000000)) 
     \INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg[0][1]_i_1 
@@ -34235,18 +34680,18 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I1(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I2(sig_sf_strt_addr_offset),
         .I3(sig_dre_tvalid_i_reg),
-        .I4(Q[8]),
+        .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [8]),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_1 [1]));
   LUT6 #(
-    .INIT(64'hE200000000000000)) 
+    .INIT(64'h8080800000008000)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_flag_slice_reg[1][0]_i_1 
-       (.I0(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ),
-        .I1(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
-        .I2(sig_sf_strt_addr_offset),
-        .I3(sig_dre2ibtt_tlast),
-        .I4(sig_dre_tvalid_i_reg),
-        .I5(lsig_eop_reg_0),
-        .O(sig_tlast_out_reg_0[0]));
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(sig_dre2ibtt_tlast),
+        .I2(lsig_eop_reg_0),
+        .I3(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ),
+        .I4(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
+        .I5(sig_sf_strt_addr_offset),
+        .O(sig_tlast_out_reg_1[0]));
   LUT3 #(
     .INIT(8'hBA)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_flag_slice_reg[1][1]_i_1 
@@ -34254,16 +34699,16 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I1(full),
         .I2(lsig_packer_full),
         .O(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT5 #(
     .INIT(32'h88800080)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_flag_slice_reg[1][1]_i_2 
-       (.I0(sig_dre_tvalid_i_reg),
-        .I1(sig_dre2ibtt_tlast),
+       (.I0(sig_dre2ibtt_tlast),
+        .I1(sig_dre_tvalid_i_reg),
         .I2(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ),
         .I3(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I4(sig_sf_strt_addr_offset),
-        .O(sig_tlast_out_reg_0[1]));
+        .O(sig_tlast_out_reg_1[1]));
   LUT4 #(
     .INIT(16'hA808)) 
     \INCLUDE_PACKING.DO_REG_SLICES[1].lsig_flag_slice_reg[1][1]_i_3 
@@ -34272,7 +34717,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I2(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I3(sig_sf_strt_addr_offset),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT4 #(
     .INIT(16'h4F70)) 
     \INCLUDE_PACKING.lsig_0ffset_cntr[0]_i_1 
@@ -34281,7 +34726,6 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
         .I2(sig_dre_tvalid_i_reg),
         .I3(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ),
         .O(\GEN_INCLUDE_DRE.lsig_pull_strt_offset_reg_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INCLUDE_PACKING.lsig_first_dbeat_i_1 
@@ -34293,106 +34737,189 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
     .INIT(32'hFFEAFFC0)) 
     \INCLUDE_PACKING.lsig_packer_full_i_1 
        (.I0(full),
-        .I1(sig_dre_tvalid_i_reg),
-        .I2(sig_dre2ibtt_tlast),
+        .I1(sig_dre2ibtt_tlast),
+        .I2(sig_dre_tvalid_i_reg),
         .I3(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] ),
         .I4(lsig_packer_full),
         .O(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  LUT6 #(
+    .INIT(64'h0000EAAAFFFFFFFF)) 
+    \sig_burst_dbeat_cntr[7]_i_1 
+       (.I0(sig_dre2ibtt_tlast),
+        .I1(Q[0]),
+        .I2(sig_clr_dbc_reg_reg),
+        .I3(Q[1]),
+        .I4(\sig_burst_dbeat_cntr[7]_i_4_n_0 ),
+        .I5(\sig_burst_dbeat_cntr_reg[7]_0 ),
+        .O(SR));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT5 #(
     .INIT(32'hAAAAA808)) 
-    \sig_burst_dbeat_cntr[3]_i_2 
+    \sig_burst_dbeat_cntr[7]_i_2 
        (.I0(sig_dre_tvalid_i_reg),
         .I1(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ),
         .I2(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
         .I3(sig_sf_strt_addr_offset),
         .I4(sig_dre2ibtt_tlast),
         .O(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_3 ));
-  LUT3 #(
-    .INIT(8'h2A)) 
-    \sig_byte_cntr[3]_i_4 
-       (.I0(din[3]),
-        .I1(sig_dre_tvalid_i_reg),
-        .I2(wr_en),
-        .O(\sig_byte_cntr[3]_i_4_n_0 ));
-  LUT3 #(
-    .INIT(8'h2A)) 
-    \sig_byte_cntr[3]_i_5 
-       (.I0(din[2]),
-        .I1(sig_dre_tvalid_i_reg),
-        .I2(wr_en),
-        .O(\sig_byte_cntr[3]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT5 #(
-    .INIT(32'hD52A2A2A)) 
-    \sig_byte_cntr[3]_i_6 
-       (.I0(din[1]),
-        .I1(sig_dre_tvalid_i_reg),
-        .I2(wr_en),
-        .I3(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] [8]),
-        .I4(Q[8]),
-        .O(\sig_byte_cntr[3]_i_6_n_0 ));
-  LUT5 #(
-    .INIT(32'h2AD5D52A)) 
-    \sig_byte_cntr[3]_i_7 
-       (.I0(din[0]),
-        .I1(sig_dre_tvalid_i_reg),
-        .I2(wr_en),
-        .I3(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] [8]),
-        .I4(Q[8]),
-        .O(\sig_byte_cntr[3]_i_7_n_0 ));
+    .INIT(32'h1015FFFF)) 
+    \sig_burst_dbeat_cntr[7]_i_4 
+       (.I0(sig_dre2ibtt_tlast),
+        .I1(sig_sf_strt_addr_offset),
+        .I2(\INCLUDE_PACKING.lsig_first_dbeat_reg ),
+        .I3(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0]_4 ),
+        .I4(sig_dre_tvalid_i_reg),
+        .O(\sig_burst_dbeat_cntr[7]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h6)) 
+    sig_byte_change_minus1_carry_i_1
+       (.I0(dout[1]),
+        .I1(sig_child_addr_cntr_lsh_reg[1]),
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] [1]));
+  LUT2 #(
+    .INIT(4'h6)) 
+    sig_byte_change_minus1_carry_i_2
+       (.I0(dout[0]),
+        .I1(sig_child_addr_cntr_lsh_reg[0]),
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][1] [0]));
   LUT5 #(
     .INIT(32'h00020202)) 
-    \sig_byte_cntr[6]_i_2 
+    \sig_byte_cntr[10]_i_2 
        (.I0(sig_dre2ibtt_tvalid),
-        .I1(\sig_byte_cntr[6]_i_4_n_0 ),
+        .I1(\sig_byte_cntr[10]_i_4_n_0 ),
         .I2(sig_xd_fifo_full),
         .I3(full),
         .I4(lsig_packer_full),
         .O(sig_dre_tvalid_i_reg));
   LUT5 #(
     .INIT(32'h40000000)) 
-    \sig_byte_cntr[6]_i_4 
+    \sig_byte_cntr[10]_i_4 
        (.I0(\xpm_fifo_instance.xpm_fifo_sync_inst_n_2 ),
         .I1(\xpm_fifo_instance.xpm_fifo_sync_inst_n_5 ),
         .I2(\xpm_fifo_instance.xpm_fifo_sync_inst_n_6 ),
         .I3(\xpm_fifo_instance.xpm_fifo_sync_inst_n_4 ),
         .I4(\xpm_fifo_instance.xpm_fifo_sync_inst_n_3 ),
-        .O(\sig_byte_cntr[6]_i_4_n_0 ));
+        .O(\sig_byte_cntr[10]_i_4_n_0 ));
   LUT3 #(
-    .INIT(8'h2A)) 
-    \sig_byte_cntr[6]_i_5 
-       (.I0(din[6]),
-        .I1(sig_dre_tvalid_i_reg),
-        .I2(wr_en),
-        .O(\sig_byte_cntr[6]_i_5_n_0 ));
+    .INIT(8'h70)) 
+    \sig_byte_cntr[10]_i_5 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(din[10]),
+        .O(\sig_byte_cntr[10]_i_5_n_0 ));
   LUT3 #(
-    .INIT(8'h2A)) 
-    \sig_byte_cntr[6]_i_6 
-       (.I0(din[5]),
-        .I1(sig_dre_tvalid_i_reg),
-        .I2(wr_en),
-        .O(\sig_byte_cntr[6]_i_6_n_0 ));
+    .INIT(8'h70)) 
+    \sig_byte_cntr[10]_i_6 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(din[9]),
+        .O(\sig_byte_cntr[10]_i_6_n_0 ));
   LUT3 #(
-    .INIT(8'h2A)) 
-    \sig_byte_cntr[6]_i_7 
-       (.I0(din[4]),
-        .I1(sig_dre_tvalid_i_reg),
-        .I2(wr_en),
-        .O(\sig_byte_cntr[6]_i_7_n_0 ));
+    .INIT(8'h70)) 
+    \sig_byte_cntr[10]_i_7 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(din[8]),
+        .O(\sig_byte_cntr[10]_i_7_n_0 ));
+  LUT4 #(
+    .INIT(16'h7000)) 
+    \sig_byte_cntr[3]_i_2 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] [8]),
+        .I3(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [8]),
+        .O(\sig_byte_cntr[3]_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h0770)) 
+    \sig_byte_cntr[3]_i_3 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] [8]),
+        .I3(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [8]),
+        .O(\sig_byte_cntr[3]_i_3_n_0 ));
+  LUT3 #(
+    .INIT(8'h70)) 
+    \sig_byte_cntr[3]_i_4 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(din[3]),
+        .O(\sig_byte_cntr[3]_i_4_n_0 ));
+  LUT3 #(
+    .INIT(8'h70)) 
+    \sig_byte_cntr[3]_i_5 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(din[2]),
+        .O(\sig_byte_cntr[3]_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'h8F707070)) 
+    \sig_byte_cntr[3]_i_6 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(din[1]),
+        .I3(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] [8]),
+        .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [8]),
+        .O(\sig_byte_cntr[3]_i_6_n_0 ));
+  LUT5 #(
+    .INIT(32'h708F8F70)) 
+    \sig_byte_cntr[3]_i_7 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(din[0]),
+        .I3(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][0] [8]),
+        .I4(\INCLUDE_PACKING.DO_REG_SLICES[0].lsig_strb_slice_reg_reg[0][1] [8]),
+        .O(\sig_byte_cntr[3]_i_7_n_0 ));
+  LUT3 #(
+    .INIT(8'h70)) 
+    \sig_byte_cntr[7]_i_3 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(din[7]),
+        .O(\sig_byte_cntr[7]_i_3_n_0 ));
+  LUT3 #(
+    .INIT(8'h70)) 
+    \sig_byte_cntr[7]_i_4 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(din[6]),
+        .O(\sig_byte_cntr[7]_i_4_n_0 ));
+  LUT3 #(
+    .INIT(8'h70)) 
+    \sig_byte_cntr[7]_i_5 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(din[5]),
+        .O(\sig_byte_cntr[7]_i_5_n_0 ));
+  LUT3 #(
+    .INIT(8'h70)) 
+    \sig_byte_cntr[7]_i_6 
+       (.I0(sig_dre_tvalid_i_reg),
+        .I1(wr_en),
+        .I2(din[4]),
+        .O(\sig_byte_cntr[7]_i_6_n_0 ));
+  CARRY4 \sig_byte_cntr_reg[10]_i_3 
+       (.CI(\sig_byte_cntr_reg[7]_i_2_n_0 ),
+        .CO({\NLW_sig_byte_cntr_reg[10]_i_3_CO_UNCONNECTED [3:2],\sig_byte_cntr_reg[10]_i_3_n_2 ,\sig_byte_cntr_reg[10]_i_3_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\NLW_sig_byte_cntr_reg[10]_i_3_O_UNCONNECTED [3],out[10:8]}),
+        .S({1'b0,\sig_byte_cntr[10]_i_5_n_0 ,\sig_byte_cntr[10]_i_6_n_0 ,\sig_byte_cntr[10]_i_7_n_0 }));
   CARRY4 \sig_byte_cntr_reg[3]_i_1 
        (.CI(1'b0),
         .CO({\sig_byte_cntr_reg[3]_i_1_n_0 ,\sig_byte_cntr_reg[3]_i_1_n_1 ,\sig_byte_cntr_reg[3]_i_1_n_2 ,\sig_byte_cntr_reg[3]_i_1_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,\sig_byte_cntr_reg[3] }),
+        .DI({1'b0,1'b0,\sig_byte_cntr[3]_i_2_n_0 ,\sig_byte_cntr[3]_i_3_n_0 }),
         .O(out[3:0]),
         .S({\sig_byte_cntr[3]_i_4_n_0 ,\sig_byte_cntr[3]_i_5_n_0 ,\sig_byte_cntr[3]_i_6_n_0 ,\sig_byte_cntr[3]_i_7_n_0 }));
-  CARRY4 \sig_byte_cntr_reg[6]_i_3 
+  CARRY4 \sig_byte_cntr_reg[7]_i_2 
        (.CI(\sig_byte_cntr_reg[3]_i_1_n_0 ),
-        .CO({\NLW_sig_byte_cntr_reg[6]_i_3_CO_UNCONNECTED [3:2],\sig_byte_cntr_reg[6]_i_3_n_2 ,\sig_byte_cntr_reg[6]_i_3_n_3 }),
+        .CO({\sig_byte_cntr_reg[7]_i_2_n_0 ,\sig_byte_cntr_reg[7]_i_2_n_1 ,\sig_byte_cntr_reg[7]_i_2_n_2 ,\sig_byte_cntr_reg[7]_i_2_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_sig_byte_cntr_reg[6]_i_3_O_UNCONNECTED [3],out[6:4]}),
-        .S({1'b0,\sig_byte_cntr[6]_i_5_n_0 ,\sig_byte_cntr[6]_i_6_n_0 ,\sig_byte_cntr[6]_i_7_n_0 }));
+        .O(out[7:4]),
+        .S({\sig_byte_cntr[7]_i_3_n_0 ,\sig_byte_cntr[7]_i_4_n_0 ,\sig_byte_cntr[7]_i_5_n_0 ,\sig_byte_cntr[7]_i_6_n_0 }));
   LUT2 #(
     .INIT(4'h2)) 
     \sig_child_addr_cntr_lsh[0]_i_3 
@@ -34420,21 +34947,45 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
   LUT2 #(
     .INIT(4'h2)) 
     \sig_child_addr_cntr_lsh[4]_i_2 
-       (.I0(dout[6]),
+       (.I0(dout[7]),
         .I1(sig_csm_pop_child_cmd),
         .O(\sig_child_addr_cntr_lsh[4]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h2)) 
     \sig_child_addr_cntr_lsh[4]_i_3 
-       (.I0(dout[5]),
+       (.I0(dout[6]),
         .I1(sig_csm_pop_child_cmd),
         .O(\sig_child_addr_cntr_lsh[4]_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h2)) 
     \sig_child_addr_cntr_lsh[4]_i_4 
-       (.I0(dout[4]),
+       (.I0(dout[5]),
         .I1(sig_csm_pop_child_cmd),
         .O(\sig_child_addr_cntr_lsh[4]_i_4_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \sig_child_addr_cntr_lsh[4]_i_5 
+       (.I0(dout[4]),
+        .I1(sig_csm_pop_child_cmd),
+        .O(\sig_child_addr_cntr_lsh[4]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \sig_child_addr_cntr_lsh[8]_i_2 
+       (.I0(dout[10]),
+        .I1(sig_csm_pop_child_cmd),
+        .O(\sig_child_addr_cntr_lsh[8]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \sig_child_addr_cntr_lsh[8]_i_3 
+       (.I0(dout[9]),
+        .I1(sig_csm_pop_child_cmd),
+        .O(\sig_child_addr_cntr_lsh[8]_i_3_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \sig_child_addr_cntr_lsh[8]_i_4 
+       (.I0(dout[8]),
+        .I1(sig_csm_pop_child_cmd),
+        .O(\sig_child_addr_cntr_lsh[8]_i_4_n_0 ));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \sig_child_addr_cntr_lsh_reg[0]_i_2 
        (.CI(1'b0),
@@ -34446,94 +34997,37 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \sig_child_addr_cntr_lsh_reg[4]_i_1 
        (.CI(\sig_child_addr_cntr_lsh_reg[0]_i_2_n_0 ),
-        .CO({\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6] ,\sig_child_addr_cntr_lsh_reg[4]_i_1_n_1 ,\sig_child_addr_cntr_lsh_reg[4]_i_1_n_2 ,\sig_child_addr_cntr_lsh_reg[4]_i_1_n_3 }),
+        .CO({\sig_child_addr_cntr_lsh_reg[4]_i_1_n_0 ,\sig_child_addr_cntr_lsh_reg[4]_i_1_n_1 ,\sig_child_addr_cntr_lsh_reg[4]_i_1_n_2 ,\sig_child_addr_cntr_lsh_reg[4]_i_1_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,\sig_child_addr_cntr_lsh[4]_i_2_n_0 ,\sig_child_addr_cntr_lsh[4]_i_3_n_0 ,\sig_child_addr_cntr_lsh[4]_i_4_n_0 }),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][6]_0 ),
+        .DI({\sig_child_addr_cntr_lsh[4]_i_2_n_0 ,\sig_child_addr_cntr_lsh[4]_i_3_n_0 ,\sig_child_addr_cntr_lsh[4]_i_4_n_0 ,\sig_child_addr_cntr_lsh[4]_i_5_n_0 }),
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][7] ),
         .S(\sig_child_addr_cntr_lsh_reg[7] ));
+  (* ADDER_THRESHOLD = "11" *) 
+  CARRY4 \sig_child_addr_cntr_lsh_reg[8]_i_1 
+       (.CI(\sig_child_addr_cntr_lsh_reg[4]_i_1_n_0 ),
+        .CO({\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] ,\sig_child_addr_cntr_lsh_reg[8]_i_1_n_1 ,\sig_child_addr_cntr_lsh_reg[8]_i_1_n_2 ,\sig_child_addr_cntr_lsh_reg[8]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,\sig_child_addr_cntr_lsh[8]_i_2_n_0 ,\sig_child_addr_cntr_lsh[8]_i_3_n_0 ,\sig_child_addr_cntr_lsh[8]_i_4_n_0 }),
+        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10]_0 ),
+        .S(\sig_child_addr_cntr_lsh_reg[11] ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF80000000)) 
+    .INIT(64'hEEEEEEEEA0000000)) 
     sig_clr_dbc_reg_i_1
-       (.I0(sig_clr_dbc_reg_reg[3]),
-        .I1(sig_clr_dbc_reg_reg[0]),
-        .I2(sig_clr_dbc_reg_reg[1]),
-        .I3(sig_clr_dbc_reg_reg[2]),
-        .I4(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] ),
-        .I5(lsig_first_dbeat),
-        .O(sig_clr_dbeat_cntr0_out));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+       (.I0(\INCLUDE_PACKING.lsig_0ffset_cntr_reg[0] ),
+        .I1(sig_dre_tvalid_i_reg),
+        .I2(Q[1]),
+        .I3(sig_clr_dbc_reg_reg),
+        .I4(Q[0]),
+        .I5(sig_dre2ibtt_tlast),
+        .O(\sig_burst_dbeat_cntr_reg[7] ));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'h2F)) 
     sig_xfer_is_seq_reg_i_1
        (.I0(sig_child_qual_first_of_2),
-        .I1(dout[8]),
-        .I2(dout[7]),
+        .I1(dout[12]),
+        .I2(dout[11]),
         .O(sig_child_qual_first_of_2_reg));
-  LUT5 #(
-    .INIT(32'h1FFEE001)) 
-    \sig_xfer_len_reg[0]_i_1 
-       (.I0(sig_child_addr_cntr_lsh_reg[0]),
-        .I1(dout[0]),
-        .I2(sig_child_addr_cntr_lsh_reg[1]),
-        .I3(dout[1]),
-        .I4(dout[2]),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] [0]));
-  LUT6 #(
-    .INIT(64'h7F7F7FFE80808001)) 
-    \sig_xfer_len_reg[1]_i_1 
-       (.I0(dout[2]),
-        .I1(dout[1]),
-        .I2(sig_child_addr_cntr_lsh_reg[1]),
-        .I3(dout[0]),
-        .I4(sig_child_addr_cntr_lsh_reg[0]),
-        .I5(dout[3]),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] [1]));
-  LUT3 #(
-    .INIT(8'h96)) 
-    \sig_xfer_len_reg[2]_i_1 
-       (.I0(\sig_xfer_len_reg[4]_i_2_n_0 ),
-        .I1(\sig_xfer_len_reg[4]_i_3_n_0 ),
-        .I2(dout[4]),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] [2]));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
-  LUT4 #(
-    .INIT(16'hBD42)) 
-    \sig_xfer_len_reg[3]_i_1 
-       (.I0(\sig_xfer_len_reg[4]_i_2_n_0 ),
-        .I1(dout[4]),
-        .I2(\sig_xfer_len_reg[4]_i_3_n_0 ),
-        .I3(dout[5]),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] [3]));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
-  LUT5 #(
-    .INIT(32'hBFFD4002)) 
-    \sig_xfer_len_reg[4]_i_1 
-       (.I0(\sig_xfer_len_reg[4]_i_2_n_0 ),
-        .I1(dout[5]),
-        .I2(\sig_xfer_len_reg[4]_i_3_n_0 ),
-        .I3(dout[4]),
-        .I4(dout[6]),
-        .O(\gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][5] [4]));
-  LUT6 #(
-    .INIT(64'h2800008000000001)) 
-    \sig_xfer_len_reg[4]_i_2 
-       (.I0(dout[2]),
-        .I1(dout[1]),
-        .I2(sig_child_addr_cntr_lsh_reg[1]),
-        .I3(dout[0]),
-        .I4(sig_child_addr_cntr_lsh_reg[0]),
-        .I5(dout[3]),
-        .O(\sig_xfer_len_reg[4]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hAA80800000000000)) 
-    \sig_xfer_len_reg[4]_i_3 
-       (.I0(dout[3]),
-        .I1(sig_child_addr_cntr_lsh_reg[0]),
-        .I2(dout[0]),
-        .I3(sig_child_addr_cntr_lsh_reg[1]),
-        .I4(dout[1]),
-        .I5(dout[2]),
-        .O(\sig_xfer_len_reg[4]_i_3_n_0 ));
   (* CASCADE_HEIGHT = "0" *) 
   (* DOUT_RESET_VALUE = "0" *) 
   (* ECC_MODE = "no_ecc" *) 
@@ -34550,12 +35044,12 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg
   (* P_READ_MODE = "1" *) 
   (* P_WAKEUP_TIME = "2" *) 
   (* RD_DATA_COUNT_WIDTH = "4" *) 
-  (* READ_DATA_WIDTH = "9" *) 
+  (* READ_DATA_WIDTH = "13" *) 
   (* READ_MODE = "fwft" *) 
   (* SIM_ASSERT_CHK = "0" *) 
   (* USE_ADV_FEATURES = "1F1F" *) 
   (* WAKEUP_TIME = "0" *) 
-  (* WRITE_DATA_WIDTH = "9" *) 
+  (* WRITE_DATA_WIDTH = "13" *) 
   (* WR_DATA_COUNT_WIDTH = "5" *) 
   (* XPM_MODULE = "TRUE" *) 
   Zed_SPI_axi_dma_0_xpm_fifo_sync \xpm_fifo_instance.xpm_fifo_sync_inst 
@@ -34591,8 +35085,8 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
    (full,
     dout,
     empty,
-    \gen_wr_a.gen_word_narrow.mem_reg ,
-    \gen_wr_a.gen_word_narrow.mem_reg_0 ,
+    \gen_wr_a.gen_word_narrow.mem_reg_1 ,
+    \gen_wr_a.gen_word_narrow.mem_reg_1_0 ,
     sig_stream_rst,
     m_axi_s2mm_aclk,
     din,
@@ -34603,8 +35097,8 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
   output full;
   output [37:0]dout;
   output empty;
-  output [2:0]\gen_wr_a.gen_word_narrow.mem_reg ;
-  output [2:0]\gen_wr_a.gen_word_narrow.mem_reg_0 ;
+  output [2:0]\gen_wr_a.gen_word_narrow.mem_reg_1 ;
+  output [2:0]\gen_wr_a.gen_word_narrow.mem_reg_1_0 ;
   input sig_stream_rst;
   input m_axi_s2mm_aclk;
   input [37:0]din;
@@ -34618,8 +35112,8 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
   wire [37:0]dout;
   wire empty;
   wire full;
-  wire [2:0]\gen_wr_a.gen_word_narrow.mem_reg ;
-  wire [2:0]\gen_wr_a.gen_word_narrow.mem_reg_0 ;
+  wire [2:0]\gen_wr_a.gen_word_narrow.mem_reg_1 ;
+  wire [2:0]\gen_wr_a.gen_word_narrow.mem_reg_1_0 ;
   wire lsig_good_push2fifo11_out;
   wire lsig_packer_full;
   wire m_axi_s2mm_aclk;
@@ -34639,7 +35133,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
   wire \NLW_xpm_fifo_instance.xpm_fifo_sync_inst_wr_ack_UNCONNECTED ;
   wire \NLW_xpm_fifo_instance.xpm_fifo_sync_inst_wr_rst_busy_UNCONNECTED ;
   wire [3:0]\NLW_xpm_fifo_instance.xpm_fifo_sync_inst_rd_data_count_UNCONNECTED ;
-  wire [7:0]\NLW_xpm_fifo_instance.xpm_fifo_sync_inst_wr_data_count_UNCONNECTED ;
+  wire [11:0]\NLW_xpm_fifo_instance.xpm_fifo_sync_inst_wr_data_count_UNCONNECTED ;
 
   LUT6 #(
     .INIT(64'h2196FFFF21960000)) 
@@ -34650,7 +35144,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
         .I3(dout[35]),
         .I4(out),
         .I5(Q[0]),
-        .O(\gen_wr_a.gen_word_narrow.mem_reg [0]));
+        .O(\gen_wr_a.gen_word_narrow.mem_reg_1 [0]));
   LUT6 #(
     .INIT(64'h0CA8FFFF0CA80000)) 
     \sig_data_reg_out[33]_i_1 
@@ -34660,7 +35154,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
         .I3(dout[32]),
         .I4(out),
         .I5(Q[1]),
-        .O(\gen_wr_a.gen_word_narrow.mem_reg [1]));
+        .O(\gen_wr_a.gen_word_narrow.mem_reg_1 [1]));
   LUT6 #(
     .INIT(64'h8000FFFF80000000)) 
     \sig_data_reg_out[34]_i_2 
@@ -34670,8 +35164,8 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
         .I3(dout[33]),
         .I4(out),
         .I5(Q[2]),
-        .O(\gen_wr_a.gen_word_narrow.mem_reg [2]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+        .O(\gen_wr_a.gen_word_narrow.mem_reg_1 [2]));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT4 #(
     .INIT(16'h2196)) 
     \sig_data_skid_reg[32]_i_1 
@@ -34679,8 +35173,8 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
         .I1(dout[32]),
         .I2(dout[34]),
         .I3(dout[35]),
-        .O(\gen_wr_a.gen_word_narrow.mem_reg_0 [0]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+        .O(\gen_wr_a.gen_word_narrow.mem_reg_1_0 [0]));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT4 #(
     .INIT(16'h0CA8)) 
     \sig_data_skid_reg[33]_i_1 
@@ -34688,7 +35182,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
         .I1(dout[33]),
         .I2(dout[35]),
         .I3(dout[32]),
-        .O(\gen_wr_a.gen_word_narrow.mem_reg_0 [1]));
+        .O(\gen_wr_a.gen_word_narrow.mem_reg_1_0 [1]));
   LUT4 #(
     .INIT(16'h8000)) 
     \sig_data_skid_reg[34]_i_1 
@@ -34696,14 +35190,14 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
         .I1(dout[35]),
         .I2(dout[32]),
         .I3(dout[33]),
-        .O(\gen_wr_a.gen_word_narrow.mem_reg_0 [2]));
+        .O(\gen_wr_a.gen_word_narrow.mem_reg_1_0 [2]));
   (* CASCADE_HEIGHT = "0" *) 
   (* DOUT_RESET_VALUE = "0" *) 
   (* ECC_MODE = "no_ecc" *) 
   (* EN_ADV_FEATURE_SYNC = "16'b0001111100011111" *) 
   (* FIFO_MEMORY_TYPE = "block" *) 
   (* FIFO_READ_LATENCY = "0" *) 
-  (* FIFO_WRITE_DEPTH = "128" *) 
+  (* FIFO_WRITE_DEPTH = "2048" *) 
   (* FULL_RESET_VALUE = "1" *) 
   (* PROG_EMPTY_THRESH = "10" *) 
   (* PROG_FULL_THRESH = "10" *) 
@@ -34719,7 +35213,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
   (* USE_ADV_FEATURES = "1F1F" *) 
   (* WAKEUP_TIME = "0" *) 
   (* WRITE_DATA_WIDTH = "38" *) 
-  (* WR_DATA_COUNT_WIDTH = "8" *) 
+  (* WR_DATA_COUNT_WIDTH = "12" *) 
   (* XPM_MODULE = "TRUE" *) 
   Zed_SPI_axi_dma_0_xpm_fifo_sync__parameterized1 \xpm_fifo_instance.xpm_fifo_sync_inst 
        (.almost_empty(\NLW_xpm_fifo_instance.xpm_fifo_sync_inst_almost_empty_UNCONNECTED ),
@@ -34744,7 +35238,7 @@ module Zed_SPI_axi_dma_0_sync_fifo_fg__parameterized0
         .underflow(\NLW_xpm_fifo_instance.xpm_fifo_sync_inst_underflow_UNCONNECTED ),
         .wr_ack(\NLW_xpm_fifo_instance.xpm_fifo_sync_inst_wr_ack_UNCONNECTED ),
         .wr_clk(m_axi_s2mm_aclk),
-        .wr_data_count(\NLW_xpm_fifo_instance.xpm_fifo_sync_inst_wr_data_count_UNCONNECTED [7:0]),
+        .wr_data_count(\NLW_xpm_fifo_instance.xpm_fifo_sync_inst_wr_data_count_UNCONNECTED [11:0]),
         .wr_en(lsig_good_push2fifo11_out),
         .wr_rst_busy(\NLW_xpm_fifo_instance.xpm_fifo_sync_inst_wr_rst_busy_UNCONNECTED ));
   LUT2 #(
@@ -34947,14 +35441,14 @@ module Zed_SPI_axi_dma_0_xpm_cdc_gray
        (.I0(\dest_graysync_ff[3] [2]),
         .I1(\dest_graysync_ff[3] [3]),
         .O(\^dest_out_bin [2]));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
@@ -35185,14 +35679,14 @@ module Zed_SPI_axi_dma_0_xpm_cdc_gray__4
        (.I0(\dest_graysync_ff[3] [2]),
         .I1(\dest_graysync_ff[3] [3]),
         .O(\^dest_out_bin [2]));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
@@ -35423,14 +35917,14 @@ module Zed_SPI_axi_dma_0_xpm_cdc_gray__5
        (.I0(\dest_graysync_ff[3] [2]),
         .I1(\dest_graysync_ff[3] [3]),
         .O(\^dest_out_bin [2]));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
@@ -35661,14 +36155,14 @@ module Zed_SPI_axi_dma_0_xpm_cdc_gray__6
        (.I0(\dest_graysync_ff[3] [2]),
         .I1(\dest_graysync_ff[3] [3]),
         .O(\^dest_out_bin [2]));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
@@ -36036,28 +36530,28 @@ module Zed_SPI_axi_dma_0_xpm_cdc_gray__parameterized0
        (.I0(\dest_graysync_ff[5] [3]),
         .I1(\dest_graysync_ff[5] [4]),
         .O(\^dest_out_bin [3]));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
@@ -36425,28 +36919,28 @@ module Zed_SPI_axi_dma_0_xpm_cdc_gray__parameterized0__2
        (.I0(\dest_graysync_ff[5] [3]),
         .I1(\dest_graysync_ff[5] [4]),
         .O(\^dest_out_bin [3]));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
@@ -36722,28 +37216,28 @@ module Zed_SPI_axi_dma_0_xpm_cdc_gray__parameterized1
        (.I0(\dest_graysync_ff[3] [3]),
         .I1(\dest_graysync_ff[3] [4]),
         .O(\^dest_out_bin [3]));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
@@ -37019,28 +37513,28 @@ module Zed_SPI_axi_dma_0_xpm_cdc_gray__parameterized1__2
        (.I0(\dest_graysync_ff[3] [3]),
         .I1(\dest_graysync_ff[3] [4]),
         .O(\^dest_out_bin [3]));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[0]_i_1 
        (.I0(src_in_bin[1]),
         .I1(src_in_bin[0]),
         .O(gray_enc[0]));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[1]_i_1 
        (.I0(src_in_bin[2]),
         .I1(src_in_bin[1]),
         .O(gray_enc[1]));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[2]_i_1 
        (.I0(src_in_bin[3]),
         .I1(src_in_bin[2]),
         .O(gray_enc[2]));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \src_gray_ff[3]_i_1 
@@ -37351,20 +37845,20 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn
   wire wr_pntr_plus1_pf_carry;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count_value_i[0]_i_1__2 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__2 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__2 
@@ -37372,7 +37866,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__2 
@@ -37435,20 +37929,20 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn_12
   wire wr_pntr_plus1_pf_carry;
   wire wrst_busy;
 
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \count_value_i[0]_i_1__2 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__2 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__2 
@@ -37456,7 +37950,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn_12
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__2 
@@ -37530,7 +38024,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized0
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1 
@@ -37538,7 +38032,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized0
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1 
@@ -37612,7 +38106,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized0_23
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1 
@@ -37620,7 +38114,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized0_23
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1 
@@ -38068,7 +38562,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2
         .I3(\count_value_i_reg[3]_0 [0]),
         .I4(\count_value_i_reg[3]_0 [1]),
         .O(\count_value_i[1]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__4 
@@ -38076,7 +38570,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2
         .I1(\count_value_i_reg[3]_0 [1]),
         .I2(\count_value_i_reg[3]_0 [2]),
         .O(\count_value_i[2]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__4 
@@ -38085,7 +38579,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2
         .I2(\count_value_i_reg[3]_0 [2]),
         .I3(\count_value_i_reg[3]_0 [3]),
         .O(\count_value_i[3]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -38155,7 +38649,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2
         .I4(\count_value_i_reg[3]_0 [0]),
         .I5(\count_value_i_reg[3]_0 [3]),
         .O(src_in_bin[2]));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT5 #(
     .INIT(32'hB0FB4F04)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3 
@@ -38285,14 +38779,14 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_10
     \count_value_i[0]_i_1__1 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__1 
@@ -38300,7 +38794,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_10
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__1 
@@ -38309,7 +38803,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_10
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1 
@@ -38433,7 +38927,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_18
   wire \src_gray_ff_reg[4] ;
   wire [3:0]src_in_bin;
 
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT4 #(
     .INIT(16'h10EF)) 
     \count_value_i[0]_i_1__4 
@@ -38442,7 +38936,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_18
         .I2(\count_value_i_reg[0]_0 [1]),
         .I3(\count_value_i_reg[3]_0 [0]),
         .O(\count_value_i[0]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT5 #(
     .INIT(32'h02FFFD00)) 
     \count_value_i[1]_i_1__4 
@@ -38452,7 +38946,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_18
         .I3(\count_value_i_reg[3]_0 [0]),
         .I4(\count_value_i_reg[3]_0 [1]),
         .O(\count_value_i[1]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__4 
@@ -38460,7 +38954,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_18
         .I1(\count_value_i_reg[3]_0 [1]),
         .I2(\count_value_i_reg[3]_0 [2]),
         .O(\count_value_i[2]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__4 
@@ -38469,7 +38963,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_18
         .I2(\count_value_i_reg[3]_0 [2]),
         .I3(\count_value_i_reg[3]_0 [3]),
         .O(\count_value_i[3]_i_1__4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -38539,7 +39033,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_18
         .I4(\count_value_i_reg[3]_0 [0]),
         .I5(\count_value_i_reg[3]_0 [3]),
         .O(src_in_bin[2]));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT5 #(
     .INIT(32'hB0FB4F04)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_3 
@@ -38549,14 +39043,14 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_18
         .I3(\src_gray_ff_reg[4] ),
         .I4(\count_value_i_reg[3]_0 [2]),
         .O(src_in_bin[1]));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_5 
        (.I0(\count_value_i_reg[3]_0 [0]),
         .I1(\src_gray_ff_reg[2] ),
         .O(src_in_bin[0]));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \gen_cdc_pntr.rd_pntr_cdc_dc_inst_i_6 
@@ -38671,14 +39165,14 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_21
     \count_value_i[0]_i_1__1 
        (.I0(Q[0]),
         .O(\count_value_i[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \count_value_i[1]_i_1__1 
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__1 
@@ -38686,7 +39180,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_21
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__1 
@@ -38695,7 +39189,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_21
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1 
@@ -38833,7 +39327,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_27
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__1 
@@ -38842,7 +39336,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_27
         .I2(Q[2]),
         .I3(Q[3]),
         .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1__0 
@@ -39048,7 +39542,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_30
         .I1(\count_value_i_reg[4]_0 [1]),
         .I2(\count_value_i_reg[4]_0 [2]),
         .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1 
@@ -39057,7 +39551,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized2_30
         .I2(\count_value_i_reg[4]_0 [2]),
         .I3(\count_value_i_reg[4]_0 [3]),
         .O(\count_value_i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \count_value_i[4]_i_1 
@@ -39226,7 +39720,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3
         .I3(Q[0]),
         .I4(Q[1]),
         .O(\count_value_i[1]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__3 
@@ -39234,7 +39728,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__3 
@@ -39308,7 +39802,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3_11
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__0 
@@ -39316,7 +39810,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3_11
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__0 
@@ -39402,7 +39896,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3_19
         .I3(Q[0]),
         .I4(Q[1]),
         .O(\count_value_i[1]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__3 
@@ -39410,7 +39904,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3_19
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__3 
@@ -39484,7 +39978,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3_22
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__0 
@@ -39492,7 +39986,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3_22
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__0 
@@ -39578,7 +40072,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3_28
         .I3(Q[0]),
         .I4(Q[1]),
         .O(\count_value_i[1]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__2 
@@ -39586,7 +40080,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3_28
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__2 
@@ -39660,7 +40154,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3_31
        (.I0(Q[0]),
         .I1(Q[1]),
         .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \count_value_i[2]_i_1__0 
@@ -39668,7 +40162,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized3_31
         .I1(Q[1]),
         .I2(Q[2]),
         .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \count_value_i[3]_i_1__0 
@@ -39714,148 +40208,128 @@ endmodule
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
 module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized6
    (Q,
-    leaving_empty0,
+    CO,
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ,
     enb,
-    \count_value_i_reg[0]_0 ,
-    rd_en,
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 ,
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 ,
     ram_empty_i,
+    rd_en,
+    \count_value_i_reg[0]_0 ,
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ,
-    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1 ,
-    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_2 ,
     E,
     clr_full,
     \count_value_i_reg[0]_1 ,
     wr_clk);
-  output [6:0]Q;
-  output leaving_empty0;
+  output [10:0]Q;
+  output [0:0]CO;
   output \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
   output enb;
-  input [1:0]\count_value_i_reg[0]_0 ;
-  input rd_en;
+  input [10:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 ;
+  input [10:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 ;
   input ram_empty_i;
-  input [6:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ;
-  input [6:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1 ;
-  input \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_2 ;
+  input rd_en;
+  input [1:0]\count_value_i_reg[0]_0 ;
+  input \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ;
   input [0:0]E;
   input clr_full;
   input [0:0]\count_value_i_reg[0]_1 ;
   input wr_clk;
 
+  wire [0:0]CO;
   wire [0:0]E;
-  wire [6:0]Q;
+  wire [10:0]Q;
   wire clr_full;
-  wire \count_value_i[0]_i_1__1_n_0 ;
-  wire \count_value_i[1]_i_1__1_n_0 ;
-  wire \count_value_i[2]_i_1__1_n_0 ;
-  wire \count_value_i[3]_i_1__1_n_0 ;
-  wire \count_value_i[4]_i_1__1_n_0 ;
-  wire \count_value_i[5]_i_1__1_n_0 ;
-  wire \count_value_i[6]_i_1__1_n_0 ;
-  wire \count_value_i[6]_i_2__1_n_0 ;
+  wire \count_value_i[3]_i_2__0_n_0 ;
   wire [1:0]\count_value_i_reg[0]_0 ;
   wire [0:0]\count_value_i_reg[0]_1 ;
+  wire \count_value_i_reg[10]_i_1__0_n_2 ;
+  wire \count_value_i_reg[10]_i_1__0_n_3 ;
+  wire \count_value_i_reg[10]_i_1__0_n_5 ;
+  wire \count_value_i_reg[10]_i_1__0_n_6 ;
+  wire \count_value_i_reg[10]_i_1__0_n_7 ;
+  wire \count_value_i_reg[3]_i_1__0_n_0 ;
+  wire \count_value_i_reg[3]_i_1__0_n_1 ;
+  wire \count_value_i_reg[3]_i_1__0_n_2 ;
+  wire \count_value_i_reg[3]_i_1__0_n_3 ;
+  wire \count_value_i_reg[3]_i_1__0_n_4 ;
+  wire \count_value_i_reg[3]_i_1__0_n_5 ;
+  wire \count_value_i_reg[3]_i_1__0_n_6 ;
+  wire \count_value_i_reg[3]_i_1__0_n_7 ;
+  wire \count_value_i_reg[7]_i_1__0_n_0 ;
+  wire \count_value_i_reg[7]_i_1__0_n_1 ;
+  wire \count_value_i_reg[7]_i_1__0_n_2 ;
+  wire \count_value_i_reg[7]_i_1__0_n_3 ;
+  wire \count_value_i_reg[7]_i_1__0_n_4 ;
+  wire \count_value_i_reg[7]_i_1__0_n_5 ;
+  wire \count_value_i_reg[7]_i_1__0_n_6 ;
+  wire \count_value_i_reg[7]_i_1__0_n_7 ;
   wire enb;
+  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_10_n_0 ;
+  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_11_n_0 ;
+  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_12_n_0 ;
   wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_5_n_0 ;
   wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_6_n_0 ;
   wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_7_n_0 ;
   wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_8_n_0 ;
+  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_9_n_0 ;
   wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ;
-  wire [6:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ;
-  wire [6:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1 ;
-  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_2 ;
+  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ;
+  wire [10:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 ;
+  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_n_1 ;
+  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_n_2 ;
+  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_n_3 ;
+  wire [10:0]\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 ;
+  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_n_1 ;
+  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_n_2 ;
+  wire \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_n_3 ;
   wire going_full1;
-  wire leaving_empty0;
   wire ram_empty_i;
   wire rd_en;
   wire wr_clk;
+  wire [3:2]\NLW_count_value_i_reg[10]_i_1__0_CO_UNCONNECTED ;
+  wire [3:3]\NLW_count_value_i_reg[10]_i_1__0_O_UNCONNECTED ;
+  wire [3:0]\NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_O_UNCONNECTED ;
+  wire [3:0]\NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_O_UNCONNECTED ;
 
-  LUT4 #(
-    .INIT(16'h10EF)) 
-    \count_value_i[0]_i_1__1 
-       (.I0(rd_en),
-        .I1(\count_value_i_reg[0]_0 [0]),
-        .I2(\count_value_i_reg[0]_0 [1]),
-        .I3(Q[0]),
-        .O(\count_value_i[0]_i_1__1_n_0 ));
   LUT5 #(
-    .INIT(32'h02FFFD00)) 
-    \count_value_i[1]_i_1__1 
-       (.I0(\count_value_i_reg[0]_0 [1]),
-        .I1(\count_value_i_reg[0]_0 [0]),
-        .I2(rd_en),
-        .I3(Q[0]),
-        .I4(Q[1]),
-        .O(\count_value_i[1]_i_1__1_n_0 ));
-  LUT3 #(
-    .INIT(8'h78)) 
-    \count_value_i[2]_i_1__1 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .I2(Q[2]),
-        .O(\count_value_i[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \count_value_i[3]_i_1__1 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
-        .I3(Q[3]),
-        .O(\count_value_i[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \count_value_i[4]_i_1__1 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[3]),
-        .I4(Q[4]),
-        .O(\count_value_i[4]_i_1__1_n_0 ));
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \count_value_i[5]_i_1__1 
-       (.I0(Q[3]),
-        .I1(\count_value_i[6]_i_2__1_n_0 ),
-        .I2(Q[2]),
-        .I3(Q[4]),
-        .I4(Q[5]),
-        .O(\count_value_i[5]_i_1__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
-    \count_value_i[6]_i_1__1 
-       (.I0(Q[4]),
-        .I1(Q[2]),
-        .I2(\count_value_i[6]_i_2__1_n_0 ),
-        .I3(Q[3]),
-        .I4(Q[5]),
-        .I5(Q[6]),
-        .O(\count_value_i[6]_i_1__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000AAA200000000)) 
-    \count_value_i[6]_i_2__1 
-       (.I0(Q[1]),
-        .I1(\count_value_i_reg[0]_0 [1]),
+    .INIT(32'hABAA5455)) 
+    \count_value_i[3]_i_2__0 
+       (.I0(ram_empty_i),
+        .I1(rd_en),
         .I2(\count_value_i_reg[0]_0 [0]),
-        .I3(rd_en),
-        .I4(ram_empty_i),
-        .I5(Q[0]),
-        .O(\count_value_i[6]_i_2__1_n_0 ));
+        .I3(\count_value_i_reg[0]_0 [1]),
+        .I4(Q[0]),
+        .O(\count_value_i[3]_i_2__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[0] 
        (.C(wr_clk),
         .CE(enb),
-        .D(\count_value_i[0]_i_1__1_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__0_n_7 ),
         .Q(Q[0]),
         .R(\count_value_i_reg[0]_1 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[10] 
+       (.C(wr_clk),
+        .CE(enb),
+        .D(\count_value_i_reg[10]_i_1__0_n_5 ),
+        .Q(Q[10]),
+        .R(\count_value_i_reg[0]_1 ));
+  CARRY4 \count_value_i_reg[10]_i_1__0 
+       (.CI(\count_value_i_reg[7]_i_1__0_n_0 ),
+        .CO({\NLW_count_value_i_reg[10]_i_1__0_CO_UNCONNECTED [3:2],\count_value_i_reg[10]_i_1__0_n_2 ,\count_value_i_reg[10]_i_1__0_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\NLW_count_value_i_reg[10]_i_1__0_O_UNCONNECTED [3],\count_value_i_reg[10]_i_1__0_n_5 ,\count_value_i_reg[10]_i_1__0_n_6 ,\count_value_i_reg[10]_i_1__0_n_7 }),
+        .S({1'b0,Q[10:8]}));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[1] 
        (.C(wr_clk),
         .CE(enb),
-        .D(\count_value_i[1]_i_1__1_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__0_n_6 ),
         .Q(Q[1]),
         .R(\count_value_i_reg[0]_1 ));
   FDRE #(
@@ -39863,7 +40337,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized6
     \count_value_i_reg[2] 
        (.C(wr_clk),
         .CE(enb),
-        .D(\count_value_i[2]_i_1__1_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__0_n_5 ),
         .Q(Q[2]),
         .R(\count_value_i_reg[0]_1 ));
   FDRE #(
@@ -39871,15 +40345,22 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized6
     \count_value_i_reg[3] 
        (.C(wr_clk),
         .CE(enb),
-        .D(\count_value_i[3]_i_1__1_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__0_n_4 ),
         .Q(Q[3]),
         .R(\count_value_i_reg[0]_1 ));
+  CARRY4 \count_value_i_reg[3]_i_1__0 
+       (.CI(1'b0),
+        .CO({\count_value_i_reg[3]_i_1__0_n_0 ,\count_value_i_reg[3]_i_1__0_n_1 ,\count_value_i_reg[3]_i_1__0_n_2 ,\count_value_i_reg[3]_i_1__0_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,Q[0]}),
+        .O({\count_value_i_reg[3]_i_1__0_n_4 ,\count_value_i_reg[3]_i_1__0_n_5 ,\count_value_i_reg[3]_i_1__0_n_6 ,\count_value_i_reg[3]_i_1__0_n_7 }),
+        .S({Q[3:1],\count_value_i[3]_i_2__0_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[4] 
        (.C(wr_clk),
         .CE(enb),
-        .D(\count_value_i[4]_i_1__1_n_0 ),
+        .D(\count_value_i_reg[7]_i_1__0_n_7 ),
         .Q(Q[4]),
         .R(\count_value_i_reg[0]_1 ));
   FDRE #(
@@ -39887,7 +40368,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized6
     \count_value_i_reg[5] 
        (.C(wr_clk),
         .CE(enb),
-        .D(\count_value_i[5]_i_1__1_n_0 ),
+        .D(\count_value_i_reg[7]_i_1__0_n_6 ),
         .Q(Q[5]),
         .R(\count_value_i_reg[0]_1 ));
   FDRE #(
@@ -39895,75 +40376,140 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized6
     \count_value_i_reg[6] 
        (.C(wr_clk),
         .CE(enb),
-        .D(\count_value_i[6]_i_1__1_n_0 ),
+        .D(\count_value_i_reg[7]_i_1__0_n_5 ),
         .Q(Q[6]),
+        .R(\count_value_i_reg[0]_1 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[7] 
+       (.C(wr_clk),
+        .CE(enb),
+        .D(\count_value_i_reg[7]_i_1__0_n_4 ),
+        .Q(Q[7]),
+        .R(\count_value_i_reg[0]_1 ));
+  CARRY4 \count_value_i_reg[7]_i_1__0 
+       (.CI(\count_value_i_reg[3]_i_1__0_n_0 ),
+        .CO({\count_value_i_reg[7]_i_1__0_n_0 ,\count_value_i_reg[7]_i_1__0_n_1 ,\count_value_i_reg[7]_i_1__0_n_2 ,\count_value_i_reg[7]_i_1__0_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\count_value_i_reg[7]_i_1__0_n_4 ,\count_value_i_reg[7]_i_1__0_n_5 ,\count_value_i_reg[7]_i_1__0_n_6 ,\count_value_i_reg[7]_i_1__0_n_7 }),
+        .S(Q[7:4]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[8] 
+       (.C(wr_clk),
+        .CE(enb),
+        .D(\count_value_i_reg[10]_i_1__0_n_7 ),
+        .Q(Q[8]),
+        .R(\count_value_i_reg[0]_1 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[9] 
+       (.C(wr_clk),
+        .CE(enb),
+        .D(\count_value_i_reg[10]_i_1__0_n_6 ),
+        .Q(Q[9]),
         .R(\count_value_i_reg[0]_1 ));
   LUT6 #(
     .INIT(64'h000000003B2A2A2A)) 
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_1 
-       (.I0(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_2 ),
+       (.I0(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 ),
         .I1(enb),
-        .I2(leaving_empty0),
+        .I2(CO),
         .I3(going_full1),
         .I4(E),
         .I5(clr_full),
         .O(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ));
-  LUT4 #(
-    .INIT(16'h9000)) 
-    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_2 
-       (.I0(Q[6]),
-        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 [6]),
-        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_5_n_0 ),
-        .I3(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_6_n_0 ),
-        .O(leaving_empty0));
-  LUT4 #(
-    .INIT(16'h9000)) 
-    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_3 
-       (.I0(Q[6]),
-        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1 [6]),
-        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_7_n_0 ),
-        .I3(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_8_n_0 ),
-        .O(going_full1));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
-    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_5 
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_10 
+       (.I0(Q[6]),
+        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 [6]),
+        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 [8]),
+        .I3(Q[8]),
+        .I4(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 [7]),
+        .I5(Q[7]),
+        .O(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_11 
        (.I0(Q[3]),
-        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 [3]),
-        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 [5]),
+        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 [3]),
+        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 [5]),
         .I3(Q[5]),
-        .I4(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 [4]),
+        .I4(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 [4]),
         .I5(Q[4]),
+        .O(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_11_n_0 ));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_12 
+       (.I0(Q[0]),
+        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 [0]),
+        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 [2]),
+        .I3(Q[2]),
+        .I4(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 [1]),
+        .I5(Q[1]),
+        .O(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_12_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_5 
+       (.I0(Q[9]),
+        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 [9]),
+        .I2(Q[10]),
+        .I3(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 [10]),
         .O(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_5_n_0 ));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_6 
-       (.I0(Q[0]),
-        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 [0]),
-        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 [2]),
-        .I3(Q[2]),
-        .I4(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 [1]),
-        .I5(Q[1]),
+       (.I0(Q[6]),
+        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 [6]),
+        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 [8]),
+        .I3(Q[8]),
+        .I4(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 [7]),
+        .I5(Q[7]),
         .O(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_6_n_0 ));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_7 
        (.I0(Q[3]),
-        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1 [3]),
-        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1 [5]),
+        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 [3]),
+        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 [5]),
         .I3(Q[5]),
-        .I4(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1 [4]),
+        .I4(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 [4]),
         .I5(Q[4]),
         .O(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_8 
        (.I0(Q[0]),
-        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1 [0]),
-        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1 [2]),
+        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 [0]),
+        .I2(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 [2]),
         .I3(Q[2]),
-        .I4(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1 [1]),
+        .I4(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 [1]),
         .I5(Q[1]),
         .O(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_9 
+       (.I0(Q[9]),
+        .I1(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 [9]),
+        .I2(Q[10]),
+        .I3(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 [10]),
+        .O(\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_9_n_0 ));
+  CARRY4 \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2 
+       (.CI(1'b0),
+        .CO({CO,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_n_1 ,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_n_2 ,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_n_3 }),
+        .CYINIT(1'b1),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(\NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_O_UNCONNECTED [3:0]),
+        .S({\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_5_n_0 ,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_6_n_0 ,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_7_n_0 ,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_8_n_0 }));
+  CARRY4 \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3 
+       (.CI(1'b0),
+        .CO({going_full1,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_n_1 ,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_n_2 ,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_n_3 }),
+        .CYINIT(1'b1),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(\NLW_gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_O_UNCONNECTED [3:0]),
+        .S({\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_9_n_0 ,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_10_n_0 ,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_11_n_0 ,\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_i_12_n_0 }));
   LUT4 #(
     .INIT(16'h00FD)) 
     \gen_sdpram.xpm_memory_base_inst_i_2 
@@ -39979,332 +40525,320 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized6_33
    (ram_empty_i0,
     Q,
     enb,
-    leaving_empty0,
+    CO,
     E,
     ram_empty_i,
-    wr_en,
-    \count_value_i_reg[5]_0 ,
-    \count_value_i_reg[6]_0 ,
-    rst_d1,
-    \gen_pntr_flags_cc.ram_empty_i_reg ,
+    \gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 ,
+    S,
+    \count_value_i_reg[10]_0 ,
     wr_clk);
   output ram_empty_i0;
-  output [6:0]Q;
+  output [10:0]Q;
   input enb;
-  input leaving_empty0;
+  input [0:0]CO;
   input [0:0]E;
   input ram_empty_i;
-  input wr_en;
-  input \count_value_i_reg[5]_0 ;
-  input [0:0]\count_value_i_reg[6]_0 ;
-  input rst_d1;
-  input [6:0]\gen_pntr_flags_cc.ram_empty_i_reg ;
+  input [10:0]\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 ;
+  input [0:0]S;
+  input [0:0]\count_value_i_reg[10]_0 ;
   input wr_clk;
 
+  wire [0:0]CO;
   wire [0:0]E;
-  wire [6:0]Q;
-  wire \count_value_i[0]_i_1_n_0 ;
-  wire \count_value_i[1]_i_1_n_0 ;
-  wire \count_value_i[2]_i_1_n_0 ;
-  wire \count_value_i[3]_i_1_n_0 ;
-  wire \count_value_i[4]_i_1_n_0 ;
-  wire \count_value_i[5]_i_1__0_n_0 ;
-  wire \count_value_i[6]_i_1__0_n_0 ;
-  wire \count_value_i[6]_i_2__0_n_0 ;
-  wire \count_value_i_reg[5]_0 ;
-  wire [0:0]\count_value_i_reg[6]_0 ;
+  wire [10:0]Q;
+  wire [0:0]S;
+  wire [0:0]\count_value_i_reg[10]_0 ;
+  wire \count_value_i_reg[10]_i_1_n_2 ;
+  wire \count_value_i_reg[10]_i_1_n_3 ;
+  wire \count_value_i_reg[10]_i_1_n_5 ;
+  wire \count_value_i_reg[10]_i_1_n_6 ;
+  wire \count_value_i_reg[10]_i_1_n_7 ;
+  wire \count_value_i_reg[3]_i_1_n_0 ;
+  wire \count_value_i_reg[3]_i_1_n_1 ;
+  wire \count_value_i_reg[3]_i_1_n_2 ;
+  wire \count_value_i_reg[3]_i_1_n_3 ;
+  wire \count_value_i_reg[3]_i_1_n_4 ;
+  wire \count_value_i_reg[3]_i_1_n_5 ;
+  wire \count_value_i_reg[3]_i_1_n_6 ;
+  wire \count_value_i_reg[3]_i_1_n_7 ;
+  wire \count_value_i_reg[7]_i_1_n_0 ;
+  wire \count_value_i_reg[7]_i_1_n_1 ;
+  wire \count_value_i_reg[7]_i_1_n_2 ;
+  wire \count_value_i_reg[7]_i_1_n_3 ;
+  wire \count_value_i_reg[7]_i_1_n_4 ;
+  wire \count_value_i_reg[7]_i_1_n_5 ;
+  wire \count_value_i_reg[7]_i_1_n_6 ;
+  wire \count_value_i_reg[7]_i_1_n_7 ;
   wire enb;
   wire \gen_pntr_flags_cc.ram_empty_i_i_3_n_0 ;
   wire \gen_pntr_flags_cc.ram_empty_i_i_4_n_0 ;
-  wire [6:0]\gen_pntr_flags_cc.ram_empty_i_reg ;
+  wire \gen_pntr_flags_cc.ram_empty_i_i_5_n_0 ;
+  wire \gen_pntr_flags_cc.ram_empty_i_i_6_n_0 ;
+  wire [10:0]\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 ;
+  wire \gen_pntr_flags_cc.ram_empty_i_reg_i_2_n_1 ;
+  wire \gen_pntr_flags_cc.ram_empty_i_reg_i_2_n_2 ;
+  wire \gen_pntr_flags_cc.ram_empty_i_reg_i_2_n_3 ;
   wire going_empty1;
-  wire leaving_empty0;
   wire ram_empty_i;
   wire ram_empty_i0;
-  wire rst_d1;
   wire wr_clk;
-  wire wr_en;
+  wire [3:2]\NLW_count_value_i_reg[10]_i_1_CO_UNCONNECTED ;
+  wire [3:3]\NLW_count_value_i_reg[10]_i_1_O_UNCONNECTED ;
+  wire [3:0]\NLW_gen_pntr_flags_cc.ram_empty_i_reg_i_2_O_UNCONNECTED ;
 
-  LUT1 #(
-    .INIT(2'h1)) 
-    \count_value_i[0]_i_1 
-       (.I0(Q[0]),
-        .O(\count_value_i[0]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \count_value_i[1]_i_1 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .O(\count_value_i[1]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'h78)) 
-    \count_value_i[2]_i_1 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .I2(Q[2]),
-        .O(\count_value_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \count_value_i[3]_i_1 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
-        .I3(Q[3]),
-        .O(\count_value_i[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \count_value_i[4]_i_1 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[3]),
-        .I4(Q[4]),
-        .O(\count_value_i[4]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \count_value_i[5]_i_1__0 
-       (.I0(Q[3]),
-        .I1(\count_value_i[6]_i_2__0_n_0 ),
-        .I2(Q[2]),
-        .I3(Q[4]),
-        .I4(Q[5]),
-        .O(\count_value_i[5]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
-    \count_value_i[6]_i_1__0 
-       (.I0(Q[4]),
-        .I1(Q[2]),
-        .I2(\count_value_i[6]_i_2__0_n_0 ),
-        .I3(Q[3]),
-        .I4(Q[5]),
-        .I5(Q[6]),
-        .O(\count_value_i[6]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000800000000)) 
-    \count_value_i[6]_i_2__0 
-       (.I0(Q[1]),
-        .I1(wr_en),
-        .I2(\count_value_i_reg[5]_0 ),
-        .I3(\count_value_i_reg[6]_0 ),
-        .I4(rst_d1),
-        .I5(Q[0]),
-        .O(\count_value_i[6]_i_2__0_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[0] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[0]_i_1_n_0 ),
+        .D(\count_value_i_reg[3]_i_1_n_7 ),
         .Q(Q[0]),
-        .R(\count_value_i_reg[6]_0 ));
+        .R(\count_value_i_reg[10]_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[10] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[10]_i_1_n_5 ),
+        .Q(Q[10]),
+        .R(\count_value_i_reg[10]_0 ));
+  CARRY4 \count_value_i_reg[10]_i_1 
+       (.CI(\count_value_i_reg[7]_i_1_n_0 ),
+        .CO({\NLW_count_value_i_reg[10]_i_1_CO_UNCONNECTED [3:2],\count_value_i_reg[10]_i_1_n_2 ,\count_value_i_reg[10]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\NLW_count_value_i_reg[10]_i_1_O_UNCONNECTED [3],\count_value_i_reg[10]_i_1_n_5 ,\count_value_i_reg[10]_i_1_n_6 ,\count_value_i_reg[10]_i_1_n_7 }),
+        .S({1'b0,Q[10:8]}));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[1] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[1]_i_1_n_0 ),
+        .D(\count_value_i_reg[3]_i_1_n_6 ),
         .Q(Q[1]),
-        .R(\count_value_i_reg[6]_0 ));
+        .R(\count_value_i_reg[10]_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[2] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[2]_i_1_n_0 ),
+        .D(\count_value_i_reg[3]_i_1_n_5 ),
         .Q(Q[2]),
-        .R(\count_value_i_reg[6]_0 ));
+        .R(\count_value_i_reg[10]_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[3] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[3]_i_1_n_0 ),
+        .D(\count_value_i_reg[3]_i_1_n_4 ),
         .Q(Q[3]),
-        .R(\count_value_i_reg[6]_0 ));
+        .R(\count_value_i_reg[10]_0 ));
+  CARRY4 \count_value_i_reg[3]_i_1 
+       (.CI(1'b0),
+        .CO({\count_value_i_reg[3]_i_1_n_0 ,\count_value_i_reg[3]_i_1_n_1 ,\count_value_i_reg[3]_i_1_n_2 ,\count_value_i_reg[3]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,Q[0]}),
+        .O({\count_value_i_reg[3]_i_1_n_4 ,\count_value_i_reg[3]_i_1_n_5 ,\count_value_i_reg[3]_i_1_n_6 ,\count_value_i_reg[3]_i_1_n_7 }),
+        .S({Q[3:1],S}));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[4] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[4]_i_1_n_0 ),
+        .D(\count_value_i_reg[7]_i_1_n_7 ),
         .Q(Q[4]),
-        .R(\count_value_i_reg[6]_0 ));
+        .R(\count_value_i_reg[10]_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[5] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[5]_i_1__0_n_0 ),
+        .D(\count_value_i_reg[7]_i_1_n_6 ),
         .Q(Q[5]),
-        .R(\count_value_i_reg[6]_0 ));
+        .R(\count_value_i_reg[10]_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[6] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[6]_i_1__0_n_0 ),
+        .D(\count_value_i_reg[7]_i_1_n_5 ),
         .Q(Q[6]),
-        .R(\count_value_i_reg[6]_0 ));
+        .R(\count_value_i_reg[10]_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[7] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[7]_i_1_n_4 ),
+        .Q(Q[7]),
+        .R(\count_value_i_reg[10]_0 ));
+  CARRY4 \count_value_i_reg[7]_i_1 
+       (.CI(\count_value_i_reg[3]_i_1_n_0 ),
+        .CO({\count_value_i_reg[7]_i_1_n_0 ,\count_value_i_reg[7]_i_1_n_1 ,\count_value_i_reg[7]_i_1_n_2 ,\count_value_i_reg[7]_i_1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\count_value_i_reg[7]_i_1_n_4 ,\count_value_i_reg[7]_i_1_n_5 ,\count_value_i_reg[7]_i_1_n_6 ,\count_value_i_reg[7]_i_1_n_7 }),
+        .S(Q[7:4]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[8] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[10]_i_1_n_7 ),
+        .Q(Q[8]),
+        .R(\count_value_i_reg[10]_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[9] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[10]_i_1_n_6 ),
+        .Q(Q[9]),
+        .R(\count_value_i_reg[10]_0 ));
   LUT5 #(
     .INIT(32'h0FFF0088)) 
     \gen_pntr_flags_cc.ram_empty_i_i_1 
        (.I0(enb),
         .I1(going_empty1),
-        .I2(leaving_empty0),
+        .I2(CO),
         .I3(E),
         .I4(ram_empty_i),
         .O(ram_empty_i0));
   LUT4 #(
-    .INIT(16'h9000)) 
-    \gen_pntr_flags_cc.ram_empty_i_i_2 
-       (.I0(Q[6]),
-        .I1(\gen_pntr_flags_cc.ram_empty_i_reg [6]),
-        .I2(\gen_pntr_flags_cc.ram_empty_i_i_3_n_0 ),
-        .I3(\gen_pntr_flags_cc.ram_empty_i_i_4_n_0 ),
-        .O(going_empty1));
-  LUT6 #(
-    .INIT(64'h9009000000009009)) 
+    .INIT(16'h9009)) 
     \gen_pntr_flags_cc.ram_empty_i_i_3 
-       (.I0(Q[3]),
-        .I1(\gen_pntr_flags_cc.ram_empty_i_reg [3]),
-        .I2(\gen_pntr_flags_cc.ram_empty_i_reg [5]),
-        .I3(Q[5]),
-        .I4(\gen_pntr_flags_cc.ram_empty_i_reg [4]),
-        .I5(Q[4]),
+       (.I0(Q[9]),
+        .I1(\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 [9]),
+        .I2(Q[10]),
+        .I3(\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 [10]),
         .O(\gen_pntr_flags_cc.ram_empty_i_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     \gen_pntr_flags_cc.ram_empty_i_i_4 
-       (.I0(Q[0]),
-        .I1(\gen_pntr_flags_cc.ram_empty_i_reg [0]),
-        .I2(\gen_pntr_flags_cc.ram_empty_i_reg [2]),
-        .I3(Q[2]),
-        .I4(\gen_pntr_flags_cc.ram_empty_i_reg [1]),
-        .I5(Q[1]),
+       (.I0(Q[6]),
+        .I1(\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 [6]),
+        .I2(\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 [8]),
+        .I3(Q[8]),
+        .I4(\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 [7]),
+        .I5(Q[7]),
         .O(\gen_pntr_flags_cc.ram_empty_i_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    \gen_pntr_flags_cc.ram_empty_i_i_5 
+       (.I0(Q[3]),
+        .I1(\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 [3]),
+        .I2(\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 [5]),
+        .I3(Q[5]),
+        .I4(\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 [4]),
+        .I5(Q[4]),
+        .O(\gen_pntr_flags_cc.ram_empty_i_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h9009000000009009)) 
+    \gen_pntr_flags_cc.ram_empty_i_i_6 
+       (.I0(Q[0]),
+        .I1(\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 [0]),
+        .I2(\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 [2]),
+        .I3(Q[2]),
+        .I4(\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 [1]),
+        .I5(Q[1]),
+        .O(\gen_pntr_flags_cc.ram_empty_i_i_6_n_0 ));
+  CARRY4 \gen_pntr_flags_cc.ram_empty_i_reg_i_2 
+       (.CI(1'b0),
+        .CO({going_empty1,\gen_pntr_flags_cc.ram_empty_i_reg_i_2_n_1 ,\gen_pntr_flags_cc.ram_empty_i_reg_i_2_n_2 ,\gen_pntr_flags_cc.ram_empty_i_reg_i_2_n_3 }),
+        .CYINIT(1'b1),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(\NLW_gen_pntr_flags_cc.ram_empty_i_reg_i_2_O_UNCONNECTED [3:0]),
+        .S({\gen_pntr_flags_cc.ram_empty_i_i_3_n_0 ,\gen_pntr_flags_cc.ram_empty_i_i_4_n_0 ,\gen_pntr_flags_cc.ram_empty_i_i_5_n_0 ,\gen_pntr_flags_cc.ram_empty_i_i_6_n_0 }));
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
 module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7
    (Q,
-    \count_value_i_reg[1]_0 ,
-    rd_en,
     ram_empty_i,
+    rd_en,
+    \count_value_i_reg[3]_0 ,
     \count_value_i_reg[0]_0 ,
     E,
     wr_clk);
-  output [6:0]Q;
-  input [1:0]\count_value_i_reg[1]_0 ;
-  input rd_en;
+  output [10:0]Q;
   input ram_empty_i;
+  input rd_en;
+  input [1:0]\count_value_i_reg[3]_0 ;
   input [0:0]\count_value_i_reg[0]_0 ;
   input [0:0]E;
   input wr_clk;
 
   wire [0:0]E;
-  wire [6:0]Q;
-  wire \count_value_i[0]_i_1__2_n_0 ;
-  wire \count_value_i[1]_i_1__2_n_0 ;
-  wire \count_value_i[2]_i_1__2_n_0 ;
-  wire \count_value_i[3]_i_1__2_n_0 ;
-  wire \count_value_i[4]_i_1__2_n_0 ;
-  wire \count_value_i[5]_i_1__2_n_0 ;
-  wire \count_value_i[6]_i_1__2_n_0 ;
-  wire \count_value_i[6]_i_2__2_n_0 ;
+  wire [10:0]Q;
+  wire \count_value_i[3]_i_2__1_n_0 ;
   wire [0:0]\count_value_i_reg[0]_0 ;
-  wire [1:0]\count_value_i_reg[1]_0 ;
+  wire \count_value_i_reg[10]_i_1__1_n_2 ;
+  wire \count_value_i_reg[10]_i_1__1_n_3 ;
+  wire \count_value_i_reg[10]_i_1__1_n_5 ;
+  wire \count_value_i_reg[10]_i_1__1_n_6 ;
+  wire \count_value_i_reg[10]_i_1__1_n_7 ;
+  wire [1:0]\count_value_i_reg[3]_0 ;
+  wire \count_value_i_reg[3]_i_1__1_n_0 ;
+  wire \count_value_i_reg[3]_i_1__1_n_1 ;
+  wire \count_value_i_reg[3]_i_1__1_n_2 ;
+  wire \count_value_i_reg[3]_i_1__1_n_3 ;
+  wire \count_value_i_reg[3]_i_1__1_n_4 ;
+  wire \count_value_i_reg[3]_i_1__1_n_5 ;
+  wire \count_value_i_reg[3]_i_1__1_n_6 ;
+  wire \count_value_i_reg[3]_i_1__1_n_7 ;
+  wire \count_value_i_reg[7]_i_1__1_n_0 ;
+  wire \count_value_i_reg[7]_i_1__1_n_1 ;
+  wire \count_value_i_reg[7]_i_1__1_n_2 ;
+  wire \count_value_i_reg[7]_i_1__1_n_3 ;
+  wire \count_value_i_reg[7]_i_1__1_n_4 ;
+  wire \count_value_i_reg[7]_i_1__1_n_5 ;
+  wire \count_value_i_reg[7]_i_1__1_n_6 ;
+  wire \count_value_i_reg[7]_i_1__1_n_7 ;
   wire ram_empty_i;
   wire rd_en;
   wire wr_clk;
+  wire [3:2]\NLW_count_value_i_reg[10]_i_1__1_CO_UNCONNECTED ;
+  wire [3:3]\NLW_count_value_i_reg[10]_i_1__1_O_UNCONNECTED ;
 
-  LUT4 #(
-    .INIT(16'h10EF)) 
-    \count_value_i[0]_i_1__2 
-       (.I0(rd_en),
-        .I1(\count_value_i_reg[1]_0 [0]),
-        .I2(\count_value_i_reg[1]_0 [1]),
-        .I3(Q[0]),
-        .O(\count_value_i[0]_i_1__2_n_0 ));
   LUT5 #(
-    .INIT(32'h02FFFD00)) 
-    \count_value_i[1]_i_1__2 
-       (.I0(\count_value_i_reg[1]_0 [1]),
-        .I1(\count_value_i_reg[1]_0 [0]),
-        .I2(rd_en),
-        .I3(Q[0]),
-        .I4(Q[1]),
-        .O(\count_value_i[1]_i_1__2_n_0 ));
-  LUT3 #(
-    .INIT(8'h78)) 
-    \count_value_i[2]_i_1__2 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .I2(Q[2]),
-        .O(\count_value_i[2]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \count_value_i[3]_i_1__2 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
-        .I3(Q[3]),
-        .O(\count_value_i[3]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \count_value_i[4]_i_1__2 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[3]),
-        .I4(Q[4]),
-        .O(\count_value_i[4]_i_1__2_n_0 ));
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \count_value_i[5]_i_1__2 
-       (.I0(Q[3]),
-        .I1(\count_value_i[6]_i_2__2_n_0 ),
-        .I2(Q[2]),
-        .I3(Q[4]),
-        .I4(Q[5]),
-        .O(\count_value_i[5]_i_1__2_n_0 ));
-  LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
-    \count_value_i[6]_i_1__2 
-       (.I0(Q[4]),
-        .I1(Q[2]),
-        .I2(\count_value_i[6]_i_2__2_n_0 ),
-        .I3(Q[3]),
-        .I4(Q[5]),
-        .I5(Q[6]),
-        .O(\count_value_i[6]_i_1__2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000AAA200000000)) 
-    \count_value_i[6]_i_2__2 
-       (.I0(Q[1]),
-        .I1(\count_value_i_reg[1]_0 [1]),
-        .I2(\count_value_i_reg[1]_0 [0]),
-        .I3(rd_en),
-        .I4(ram_empty_i),
-        .I5(Q[0]),
-        .O(\count_value_i[6]_i_2__2_n_0 ));
+    .INIT(32'hABAA5455)) 
+    \count_value_i[3]_i_2__1 
+       (.I0(ram_empty_i),
+        .I1(rd_en),
+        .I2(\count_value_i_reg[3]_0 [0]),
+        .I3(\count_value_i_reg[3]_0 [1]),
+        .I4(Q[0]),
+        .O(\count_value_i[3]_i_2__1_n_0 ));
   FDSE #(
     .INIT(1'b1)) 
     \count_value_i_reg[0] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[0]_i_1__2_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__1_n_7 ),
         .Q(Q[0]),
         .S(\count_value_i_reg[0]_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[10] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[10]_i_1__1_n_5 ),
+        .Q(Q[10]),
+        .R(\count_value_i_reg[0]_0 ));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \count_value_i_reg[10]_i_1__1 
+       (.CI(\count_value_i_reg[7]_i_1__1_n_0 ),
+        .CO({\NLW_count_value_i_reg[10]_i_1__1_CO_UNCONNECTED [3:2],\count_value_i_reg[10]_i_1__1_n_2 ,\count_value_i_reg[10]_i_1__1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\NLW_count_value_i_reg[10]_i_1__1_O_UNCONNECTED [3],\count_value_i_reg[10]_i_1__1_n_5 ,\count_value_i_reg[10]_i_1__1_n_6 ,\count_value_i_reg[10]_i_1__1_n_7 }),
+        .S({1'b0,Q[10:8]}));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[1] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[1]_i_1__2_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__1_n_6 ),
         .Q(Q[1]),
         .R(\count_value_i_reg[0]_0 ));
   FDRE #(
@@ -40312,7 +40846,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7
     \count_value_i_reg[2] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[2]_i_1__2_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__1_n_5 ),
         .Q(Q[2]),
         .R(\count_value_i_reg[0]_0 ));
   FDRE #(
@@ -40320,15 +40854,23 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7
     \count_value_i_reg[3] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[3]_i_1__2_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__1_n_4 ),
         .Q(Q[3]),
         .R(\count_value_i_reg[0]_0 ));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \count_value_i_reg[3]_i_1__1 
+       (.CI(1'b0),
+        .CO({\count_value_i_reg[3]_i_1__1_n_0 ,\count_value_i_reg[3]_i_1__1_n_1 ,\count_value_i_reg[3]_i_1__1_n_2 ,\count_value_i_reg[3]_i_1__1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,Q[0]}),
+        .O({\count_value_i_reg[3]_i_1__1_n_4 ,\count_value_i_reg[3]_i_1__1_n_5 ,\count_value_i_reg[3]_i_1__1_n_6 ,\count_value_i_reg[3]_i_1__1_n_7 }),
+        .S({Q[3:1],\count_value_i[3]_i_2__1_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[4] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[4]_i_1__2_n_0 ),
+        .D(\count_value_i_reg[7]_i_1__1_n_7 ),
         .Q(Q[4]),
         .R(\count_value_i_reg[0]_0 ));
   FDRE #(
@@ -40336,7 +40878,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7
     \count_value_i_reg[5] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[5]_i_1__2_n_0 ),
+        .D(\count_value_i_reg[7]_i_1__1_n_6 ),
         .Q(Q[5]),
         .R(\count_value_i_reg[0]_0 ));
   FDRE #(
@@ -40344,126 +40886,115 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7
     \count_value_i_reg[6] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[6]_i_1__2_n_0 ),
+        .D(\count_value_i_reg[7]_i_1__1_n_5 ),
         .Q(Q[6]),
+        .R(\count_value_i_reg[0]_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[7] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[7]_i_1__1_n_4 ),
+        .Q(Q[7]),
+        .R(\count_value_i_reg[0]_0 ));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \count_value_i_reg[7]_i_1__1 
+       (.CI(\count_value_i_reg[3]_i_1__1_n_0 ),
+        .CO({\count_value_i_reg[7]_i_1__1_n_0 ,\count_value_i_reg[7]_i_1__1_n_1 ,\count_value_i_reg[7]_i_1__1_n_2 ,\count_value_i_reg[7]_i_1__1_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\count_value_i_reg[7]_i_1__1_n_4 ,\count_value_i_reg[7]_i_1__1_n_5 ,\count_value_i_reg[7]_i_1__1_n_6 ,\count_value_i_reg[7]_i_1__1_n_7 }),
+        .S(Q[7:4]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[8] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[10]_i_1__1_n_7 ),
+        .Q(Q[8]),
+        .R(\count_value_i_reg[0]_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[9] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[10]_i_1__1_n_6 ),
+        .Q(Q[9]),
         .R(\count_value_i_reg[0]_0 ));
 endmodule
 
 (* ORIG_REF_NAME = "xpm_counter_updn" *) 
 module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7_34
    (Q,
-    wr_en,
-    \count_value_i_reg[5]_0 ,
+    \count_value_i_reg[3]_0 ,
     \count_value_i_reg[0]_0 ,
-    rst_d1,
     E,
     wr_clk);
-  output [6:0]Q;
-  input wr_en;
-  input \count_value_i_reg[5]_0 ;
+  output [10:0]Q;
+  input [0:0]\count_value_i_reg[3]_0 ;
   input [0:0]\count_value_i_reg[0]_0 ;
-  input rst_d1;
   input [0:0]E;
   input wr_clk;
 
   wire [0:0]E;
-  wire [6:0]Q;
-  wire \count_value_i[0]_i_1__0_n_0 ;
-  wire \count_value_i[1]_i_1__0_n_0 ;
-  wire \count_value_i[2]_i_1__0_n_0 ;
-  wire \count_value_i[3]_i_1__0_n_0 ;
-  wire \count_value_i[4]_i_1__0_n_0 ;
-  wire \count_value_i[5]_i_1_n_0 ;
-  wire \count_value_i[6]_i_1_n_0 ;
-  wire \count_value_i[6]_i_2_n_0 ;
+  wire [10:0]Q;
   wire [0:0]\count_value_i_reg[0]_0 ;
-  wire \count_value_i_reg[5]_0 ;
-  wire rst_d1;
+  wire \count_value_i_reg[10]_i_1__2_n_2 ;
+  wire \count_value_i_reg[10]_i_1__2_n_3 ;
+  wire \count_value_i_reg[10]_i_1__2_n_5 ;
+  wire \count_value_i_reg[10]_i_1__2_n_6 ;
+  wire \count_value_i_reg[10]_i_1__2_n_7 ;
+  wire [0:0]\count_value_i_reg[3]_0 ;
+  wire \count_value_i_reg[3]_i_1__2_n_0 ;
+  wire \count_value_i_reg[3]_i_1__2_n_1 ;
+  wire \count_value_i_reg[3]_i_1__2_n_2 ;
+  wire \count_value_i_reg[3]_i_1__2_n_3 ;
+  wire \count_value_i_reg[3]_i_1__2_n_4 ;
+  wire \count_value_i_reg[3]_i_1__2_n_5 ;
+  wire \count_value_i_reg[3]_i_1__2_n_6 ;
+  wire \count_value_i_reg[3]_i_1__2_n_7 ;
+  wire \count_value_i_reg[7]_i_1__2_n_0 ;
+  wire \count_value_i_reg[7]_i_1__2_n_1 ;
+  wire \count_value_i_reg[7]_i_1__2_n_2 ;
+  wire \count_value_i_reg[7]_i_1__2_n_3 ;
+  wire \count_value_i_reg[7]_i_1__2_n_4 ;
+  wire \count_value_i_reg[7]_i_1__2_n_5 ;
+  wire \count_value_i_reg[7]_i_1__2_n_6 ;
+  wire \count_value_i_reg[7]_i_1__2_n_7 ;
   wire wr_clk;
-  wire wr_en;
+  wire [3:2]\NLW_count_value_i_reg[10]_i_1__2_CO_UNCONNECTED ;
+  wire [3:3]\NLW_count_value_i_reg[10]_i_1__2_O_UNCONNECTED ;
 
-  LUT1 #(
-    .INIT(2'h1)) 
-    \count_value_i[0]_i_1__0 
-       (.I0(Q[0]),
-        .O(\count_value_i[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \count_value_i[1]_i_1__0 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .O(\count_value_i[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT3 #(
-    .INIT(8'h78)) 
-    \count_value_i[2]_i_1__0 
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .I2(Q[2]),
-        .O(\count_value_i[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \count_value_i[3]_i_1__0 
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(Q[2]),
-        .I3(Q[3]),
-        .O(\count_value_i[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \count_value_i[4]_i_1__0 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[3]),
-        .I4(Q[4]),
-        .O(\count_value_i[4]_i_1__0_n_0 ));
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \count_value_i[5]_i_1 
-       (.I0(Q[3]),
-        .I1(\count_value_i[6]_i_2_n_0 ),
-        .I2(Q[2]),
-        .I3(Q[4]),
-        .I4(Q[5]),
-        .O(\count_value_i[5]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
-    \count_value_i[6]_i_1 
-       (.I0(Q[4]),
-        .I1(Q[2]),
-        .I2(\count_value_i[6]_i_2_n_0 ),
-        .I3(Q[3]),
-        .I4(Q[5]),
-        .I5(Q[6]),
-        .O(\count_value_i[6]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000800000000)) 
-    \count_value_i[6]_i_2 
-       (.I0(Q[1]),
-        .I1(wr_en),
-        .I2(\count_value_i_reg[5]_0 ),
-        .I3(\count_value_i_reg[0]_0 ),
-        .I4(rst_d1),
-        .I5(Q[0]),
-        .O(\count_value_i[6]_i_2_n_0 ));
   FDSE #(
     .INIT(1'b1)) 
     \count_value_i_reg[0] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[0]_i_1__0_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__2_n_7 ),
         .Q(Q[0]),
         .S(\count_value_i_reg[0]_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[10] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[10]_i_1__2_n_5 ),
+        .Q(Q[10]),
+        .R(\count_value_i_reg[0]_0 ));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \count_value_i_reg[10]_i_1__2 
+       (.CI(\count_value_i_reg[7]_i_1__2_n_0 ),
+        .CO({\NLW_count_value_i_reg[10]_i_1__2_CO_UNCONNECTED [3:2],\count_value_i_reg[10]_i_1__2_n_2 ,\count_value_i_reg[10]_i_1__2_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\NLW_count_value_i_reg[10]_i_1__2_O_UNCONNECTED [3],\count_value_i_reg[10]_i_1__2_n_5 ,\count_value_i_reg[10]_i_1__2_n_6 ,\count_value_i_reg[10]_i_1__2_n_7 }),
+        .S({1'b0,Q[10:8]}));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[1] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[1]_i_1__0_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__2_n_6 ),
         .Q(Q[1]),
         .R(\count_value_i_reg[0]_0 ));
   FDRE #(
@@ -40471,7 +41002,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7_34
     \count_value_i_reg[2] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[2]_i_1__0_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__2_n_5 ),
         .Q(Q[2]),
         .R(\count_value_i_reg[0]_0 ));
   FDRE #(
@@ -40479,15 +41010,23 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7_34
     \count_value_i_reg[3] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[3]_i_1__0_n_0 ),
+        .D(\count_value_i_reg[3]_i_1__2_n_4 ),
         .Q(Q[3]),
         .R(\count_value_i_reg[0]_0 ));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \count_value_i_reg[3]_i_1__2 
+       (.CI(1'b0),
+        .CO({\count_value_i_reg[3]_i_1__2_n_0 ,\count_value_i_reg[3]_i_1__2_n_1 ,\count_value_i_reg[3]_i_1__2_n_2 ,\count_value_i_reg[3]_i_1__2_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,Q[0]}),
+        .O({\count_value_i_reg[3]_i_1__2_n_4 ,\count_value_i_reg[3]_i_1__2_n_5 ,\count_value_i_reg[3]_i_1__2_n_6 ,\count_value_i_reg[3]_i_1__2_n_7 }),
+        .S({Q[3:1],\count_value_i_reg[3]_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \count_value_i_reg[4] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[4]_i_1__0_n_0 ),
+        .D(\count_value_i_reg[7]_i_1__2_n_7 ),
         .Q(Q[4]),
         .R(\count_value_i_reg[0]_0 ));
   FDRE #(
@@ -40495,7 +41034,7 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7_34
     \count_value_i_reg[5] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[5]_i_1_n_0 ),
+        .D(\count_value_i_reg[7]_i_1__2_n_6 ),
         .Q(Q[5]),
         .R(\count_value_i_reg[0]_0 ));
   FDRE #(
@@ -40503,8 +41042,40 @@ module Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7_34
     \count_value_i_reg[6] 
        (.C(wr_clk),
         .CE(E),
-        .D(\count_value_i[6]_i_1_n_0 ),
+        .D(\count_value_i_reg[7]_i_1__2_n_5 ),
         .Q(Q[6]),
+        .R(\count_value_i_reg[0]_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[7] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[7]_i_1__2_n_4 ),
+        .Q(Q[7]),
+        .R(\count_value_i_reg[0]_0 ));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 \count_value_i_reg[7]_i_1__2 
+       (.CI(\count_value_i_reg[3]_i_1__2_n_0 ),
+        .CO({\count_value_i_reg[7]_i_1__2_n_0 ,\count_value_i_reg[7]_i_1__2_n_1 ,\count_value_i_reg[7]_i_1__2_n_2 ,\count_value_i_reg[7]_i_1__2_n_3 }),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({\count_value_i_reg[7]_i_1__2_n_4 ,\count_value_i_reg[7]_i_1__2_n_5 ,\count_value_i_reg[7]_i_1__2_n_6 ,\count_value_i_reg[7]_i_1__2_n_7 }),
+        .S(Q[7:4]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[8] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[10]_i_1__2_n_7 ),
+        .Q(Q[8]),
+        .R(\count_value_i_reg[0]_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \count_value_i_reg[9] 
+       (.C(wr_clk),
+        .CE(E),
+        .D(\count_value_i_reg[10]_i_1__2_n_6 ),
+        .Q(Q[9]),
         .R(\count_value_i_reg[0]_0 ));
 endmodule
 
@@ -41790,7 +42361,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized0
   assign dout[32:0] = \^dout [32:0];
   assign full_n = \<const0> ;
   assign sbiterr = \<const0> ;
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT4 #(
     .INIT(16'h6A85)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
@@ -41799,7 +42370,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized0
         .I2(curr_fwft_state[1]),
         .I3(ram_empty_i),
         .O(next_fwft_state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT4 #(
     .INIT(16'h3FF0)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1 
@@ -42347,16 +42918,16 @@ endmodule
 (* EN_PF = "1'b1" *) (* EN_RDC = "1'b1" *) (* EN_UF = "1'b1" *) 
 (* EN_WACK = "1'b1" *) (* EN_WDC = "1'b1" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) 
 (* FIFO_MEMORY_TYPE = "0" *) (* FIFO_MEM_TYPE = "0" *) (* FIFO_READ_DEPTH = "16" *) 
-(* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "144" *) (* FIFO_WRITE_DEPTH = "16" *) 
+(* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "208" *) (* FIFO_WRITE_DEPTH = "16" *) 
 (* FULL_RESET_VALUE = "1" *) (* FULL_RST_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) 
 (* PE_THRESH_ADJ = "8" *) (* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) 
 (* PF_THRESH_ADJ = "8" *) (* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "5" *) 
 (* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* RD_DATA_COUNT_WIDTH = "4" *) 
 (* RD_DC_WIDTH_EXT = "5" *) (* RD_LATENCY = "2" *) (* RD_MODE = "1" *) 
-(* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "9" *) (* READ_MODE = "1" *) 
+(* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "13" *) (* READ_MODE = "1" *) 
 (* READ_MODE_LL = "1" *) (* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
 (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "9" *) 
+(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "13" *) 
 (* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) (* WR_DEPTH_LOG = "4" *) 
 (* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "4" *) 
 (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) (* invalid = "0" *) 
@@ -42393,7 +42964,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
   input rst;
   input wr_clk;
   input wr_en;
-  input [8:0]din;
+  input [12:0]din;
   output full;
   output full_n;
   output prog_full;
@@ -42404,7 +42975,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
   output wr_ack;
   input rd_clk;
   input rd_en;
-  output [8:0]dout;
+  output [12:0]dout;
   output empty;
   output prog_empty;
   output [3:0]rd_data_count;
@@ -42422,8 +42993,8 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
   wire [1:0]count_value_i;
   wire [1:0]curr_fwft_state;
   wire data_valid_fwft1;
-  wire [8:0]din;
-  wire [8:0]dout;
+  wire [12:0]din;
+  wire [12:0]dout;
   wire empty;
   wire full;
   wire \gen_fwft.ram_regout_en ;
@@ -42460,7 +43031,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
   wire \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ;
   wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterra_UNCONNECTED ;
   wire \NLW_gen_sdpram.xpm_memory_base_inst_sbiterrb_UNCONNECTED ;
-  wire [8:0]\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED ;
+  wire [12:0]\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED ;
 
   assign almost_empty = \<const0> ;
   assign almost_full = \<const0> ;
@@ -42479,7 +43050,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
   assign underflow = \<const0> ;
   assign wr_ack = \<const0> ;
   assign wr_rst_busy = \<const0> ;
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT4 #(
     .INIT(16'h6A85)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[0]_i_1 
@@ -42488,7 +43059,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
         .I2(curr_fwft_state[1]),
         .I3(ram_empty_i),
         .O(next_fwft_state__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'h7C)) 
     \FSM_sequential_gen_fwft.curr_fwft_state[1]_i_1 
@@ -42561,8 +43132,8 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
   (* ADDR_WIDTH_A = "4" *) 
   (* ADDR_WIDTH_B = "4" *) 
   (* AUTO_SLEEP_TIME = "0" *) 
-  (* BYTE_WRITE_WIDTH_A = "9" *) 
-  (* BYTE_WRITE_WIDTH_B = "9" *) 
+  (* BYTE_WRITE_WIDTH_A = "13" *) 
+  (* BYTE_WRITE_WIDTH_B = "13" *) 
   (* CASCADE_HEIGHT = "0" *) 
   (* CLOCKING_MODE = "0" *) 
   (* ECC_MODE = "0" *) 
@@ -42573,7 +43144,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
   (* MEMORY_INIT_PARAM = "" *) 
   (* MEMORY_OPTIMIZATION = "true" *) 
   (* MEMORY_PRIMITIVE = "0" *) 
-  (* MEMORY_SIZE = "144" *) 
+  (* MEMORY_SIZE = "208" *) 
   (* MEMORY_TYPE = "1" *) 
   (* MESSAGE_CONTROL = "0" *) 
   (* NUM_CHAR_LOC = "0" *) 
@@ -42583,12 +43154,12 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
   (* P_MAX_DEPTH_DATA = "16" *) 
   (* P_MEMORY_OPT = "yes" *) 
   (* P_MEMORY_PRIMITIVE = "auto" *) 
-  (* P_MIN_WIDTH_DATA = "9" *) 
-  (* P_MIN_WIDTH_DATA_A = "9" *) 
-  (* P_MIN_WIDTH_DATA_B = "9" *) 
-  (* P_MIN_WIDTH_DATA_ECC = "9" *) 
+  (* P_MIN_WIDTH_DATA = "13" *) 
+  (* P_MIN_WIDTH_DATA_A = "13" *) 
+  (* P_MIN_WIDTH_DATA_B = "13" *) 
+  (* P_MIN_WIDTH_DATA_ECC = "13" *) 
   (* P_MIN_WIDTH_DATA_LDW = "4" *) 
-  (* P_MIN_WIDTH_DATA_SHFT = "9" *) 
+  (* P_MIN_WIDTH_DATA_SHFT = "13" *) 
   (* P_NUM_COLS_WRITE_A = "1" *) 
   (* P_NUM_COLS_WRITE_B = "1" *) 
   (* P_NUM_ROWS_READ_A = "1" *) 
@@ -42604,10 +43175,10 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
   (* P_WIDTH_ADDR_READ_B = "4" *) 
   (* P_WIDTH_ADDR_WRITE_A = "4" *) 
   (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-  (* P_WIDTH_COL_WRITE_A = "9" *) 
-  (* P_WIDTH_COL_WRITE_B = "9" *) 
-  (* READ_DATA_WIDTH_A = "9" *) 
-  (* READ_DATA_WIDTH_B = "9" *) 
+  (* P_WIDTH_COL_WRITE_A = "13" *) 
+  (* P_WIDTH_COL_WRITE_B = "13" *) 
+  (* READ_DATA_WIDTH_A = "13" *) 
+  (* READ_DATA_WIDTH_B = "13" *) 
   (* READ_LATENCY_A = "2" *) 
   (* READ_LATENCY_B = "2" *) 
   (* READ_RESET_VALUE_A = "0" *) 
@@ -42620,14 +43191,14 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
   (* USE_MEM_INIT_MMI = "0" *) 
   (* VERSION = "0" *) 
   (* WAKEUP_TIME = "0" *) 
-  (* WRITE_DATA_WIDTH_A = "9" *) 
-  (* WRITE_DATA_WIDTH_B = "9" *) 
+  (* WRITE_DATA_WIDTH_A = "13" *) 
+  (* WRITE_DATA_WIDTH_B = "13" *) 
   (* WRITE_MODE_A = "2" *) 
   (* WRITE_MODE_B = "2" *) 
   (* WRITE_PROTECT = "1" *) 
   (* XPM_MODULE = "TRUE" *) 
-  (* rsta_loop_iter = "12" *) 
-  (* rstb_loop_iter = "12" *) 
+  (* rsta_loop_iter = "16" *) 
+  (* rstb_loop_iter = "16" *) 
   Zed_SPI_axi_dma_0_xpm_memory_base__parameterized1 \gen_sdpram.xpm_memory_base_inst 
        (.addra(wr_pntr_ext),
         .addrb(rd_pntr_ext),
@@ -42636,8 +43207,8 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized1
         .dbiterra(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED ),
         .dbiterrb(\NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ),
         .dina(din),
-        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [8:0]),
+        .dinb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [12:0]),
         .doutb(dout),
         .ena(1'b0),
         .enb(rdp_inst_n_8),
@@ -42756,19 +43327,19 @@ endmodule
 (* EN_DVLD = "1'b1" *) (* EN_OF = "1'b1" *) (* EN_PE = "1'b1" *) 
 (* EN_PF = "1'b1" *) (* EN_RDC = "1'b1" *) (* EN_UF = "1'b1" *) 
 (* EN_WACK = "1'b1" *) (* EN_WDC = "1'b1" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) 
-(* FIFO_MEMORY_TYPE = "2" *) (* FIFO_MEM_TYPE = "2" *) (* FIFO_READ_DEPTH = "128" *) 
-(* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "4864" *) (* FIFO_WRITE_DEPTH = "128" *) 
+(* FIFO_MEMORY_TYPE = "2" *) (* FIFO_MEM_TYPE = "2" *) (* FIFO_READ_DEPTH = "2048" *) 
+(* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "77824" *) (* FIFO_WRITE_DEPTH = "2048" *) 
 (* FULL_RESET_VALUE = "1" *) (* FULL_RST_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) 
-(* PE_THRESH_ADJ = "8" *) (* PE_THRESH_MAX = "123" *) (* PE_THRESH_MIN = "5" *) 
-(* PF_THRESH_ADJ = "8" *) (* PF_THRESH_MAX = "123" *) (* PF_THRESH_MIN = "5" *) 
+(* PE_THRESH_ADJ = "8" *) (* PE_THRESH_MAX = "2043" *) (* PE_THRESH_MIN = "5" *) 
+(* PF_THRESH_ADJ = "8" *) (* PF_THRESH_MAX = "2043" *) (* PF_THRESH_MIN = "5" *) 
 (* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* RD_DATA_COUNT_WIDTH = "4" *) 
-(* RD_DC_WIDTH_EXT = "8" *) (* RD_LATENCY = "2" *) (* RD_MODE = "1" *) 
-(* RD_PNTR_WIDTH = "7" *) (* READ_DATA_WIDTH = "38" *) (* READ_MODE = "1" *) 
+(* RD_DC_WIDTH_EXT = "12" *) (* RD_LATENCY = "2" *) (* RD_MODE = "1" *) 
+(* RD_PNTR_WIDTH = "11" *) (* READ_DATA_WIDTH = "38" *) (* READ_MODE = "1" *) 
 (* READ_MODE_LL = "1" *) (* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
 (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) (* VERSION = "0" *) 
 (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "38" *) 
-(* WR_DATA_COUNT_WIDTH = "8" *) (* WR_DC_WIDTH_EXT = "8" *) (* WR_DEPTH_LOG = "7" *) 
-(* WR_PNTR_WIDTH = "7" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "6" *) 
+(* WR_DATA_COUNT_WIDTH = "12" *) (* WR_DC_WIDTH_EXT = "12" *) (* WR_DEPTH_LOG = "11" *) 
+(* WR_PNTR_WIDTH = "11" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "6" *) 
 (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) (* invalid = "0" *) 
 (* keep_hierarchy = "soft" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
 module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized2
@@ -42807,7 +43378,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized2
   output full;
   output full_n;
   output prog_full;
-  output [7:0]wr_data_count;
+  output [11:0]wr_data_count;
   output overflow;
   output wr_rst_busy;
   output almost_full;
@@ -42842,29 +43413,39 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized2
   wire ram_empty_i0;
   wire ram_wr_en_pf;
   wire rd_en;
-  wire [6:0]rd_pntr_ext;
-  wire rdp_inst_n_8;
-  wire rdp_inst_n_9;
+  wire [10:0]rd_pntr_ext;
+  wire rdp_inst_n_12;
+  wire rdp_inst_n_13;
   wire rdpp1_inst_n_0;
   wire rdpp1_inst_n_1;
+  wire rdpp1_inst_n_10;
   wire rdpp1_inst_n_2;
   wire rdpp1_inst_n_3;
   wire rdpp1_inst_n_4;
   wire rdpp1_inst_n_5;
   wire rdpp1_inst_n_6;
+  wire rdpp1_inst_n_7;
+  wire rdpp1_inst_n_8;
+  wire rdpp1_inst_n_9;
   wire rst;
   wire rst_d1;
+  wire rst_d1_inst_n_2;
+  wire rst_d1_inst_n_3;
   wire sleep;
   wire wr_clk;
   wire wr_en;
-  wire [6:0]wr_pntr_ext;
+  wire [10:0]wr_pntr_ext;
   wire wrpp1_inst_n_0;
   wire wrpp1_inst_n_1;
+  wire wrpp1_inst_n_10;
   wire wrpp1_inst_n_2;
   wire wrpp1_inst_n_3;
   wire wrpp1_inst_n_4;
   wire wrpp1_inst_n_5;
   wire wrpp1_inst_n_6;
+  wire wrpp1_inst_n_7;
+  wire wrpp1_inst_n_8;
+  wire wrpp1_inst_n_9;
   wire xpm_fifo_rst_inst_n_1;
   wire \NLW_gen_sdpram.xpm_memory_base_inst_dbiterra_UNCONNECTED ;
   wire \NLW_gen_sdpram.xpm_memory_base_inst_dbiterrb_UNCONNECTED ;
@@ -42888,6 +43469,10 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized2
   assign sbiterr = \<const0> ;
   assign underflow = \<const0> ;
   assign wr_ack = \<const0> ;
+  assign wr_data_count[11] = \<const0> ;
+  assign wr_data_count[10] = \<const0> ;
+  assign wr_data_count[9] = \<const0> ;
+  assign wr_data_count[8] = \<const0> ;
   assign wr_data_count[7] = \<const0> ;
   assign wr_data_count[6] = \<const0> ;
   assign wr_data_count[5] = \<const0> ;
@@ -42953,7 +43538,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized2
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg 
        (.C(wr_clk),
         .CE(1'b1),
-        .D(rdp_inst_n_8),
+        .D(rdp_inst_n_12),
         .Q(full),
         .S(xpm_fifo_rst_inst_n_1));
   FDSE #(
@@ -42964,8 +43549,8 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized2
         .D(ram_empty_i0),
         .Q(ram_empty_i),
         .S(xpm_fifo_rst_inst_n_1));
-  (* ADDR_WIDTH_A = "7" *) 
-  (* ADDR_WIDTH_B = "7" *) 
+  (* ADDR_WIDTH_A = "11" *) 
+  (* ADDR_WIDTH_B = "11" *) 
   (* AUTO_SLEEP_TIME = "0" *) 
   (* BYTE_WRITE_WIDTH_A = "38" *) 
   (* BYTE_WRITE_WIDTH_B = "38" *) 
@@ -42979,20 +43564,20 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized2
   (* \MEM.ADDRESS_SPACE_BEGIN  = "0" *) 
   (* \MEM.ADDRESS_SPACE_DATA_LSB  = "0" *) 
   (* \MEM.ADDRESS_SPACE_DATA_MSB  = "37" *) 
-  (* \MEM.ADDRESS_SPACE_END  = "511" *) 
+  (* \MEM.ADDRESS_SPACE_END  = "2047" *) 
   (* \MEM.CORE_MEMORY_WIDTH  = "38" *) 
   (* MEMORY_INIT_FILE = "none" *) 
   (* MEMORY_INIT_PARAM = "" *) 
   (* MEMORY_OPTIMIZATION = "true" *) 
   (* MEMORY_PRIMITIVE = "2" *) 
-  (* MEMORY_SIZE = "4864" *) 
+  (* MEMORY_SIZE = "77824" *) 
   (* MEMORY_TYPE = "1" *) 
   (* MESSAGE_CONTROL = "0" *) 
   (* NUM_CHAR_LOC = "0" *) 
   (* P_ECC_MODE = "no_ecc" *) 
   (* P_ENABLE_BYTE_WRITE_A = "0" *) 
   (* P_ENABLE_BYTE_WRITE_B = "0" *) 
-  (* P_MAX_DEPTH_DATA = "128" *) 
+  (* P_MAX_DEPTH_DATA = "2048" *) 
   (* P_MEMORY_OPT = "yes" *) 
   (* P_MEMORY_PRIMITIVE = "block" *) 
   (* P_MIN_WIDTH_DATA = "38" *) 
@@ -43012,10 +43597,10 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized2
   (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
   (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
   (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) 
-  (* P_WIDTH_ADDR_READ_A = "7" *) 
-  (* P_WIDTH_ADDR_READ_B = "7" *) 
-  (* P_WIDTH_ADDR_WRITE_A = "7" *) 
-  (* P_WIDTH_ADDR_WRITE_B = "7" *) 
+  (* P_WIDTH_ADDR_READ_A = "11" *) 
+  (* P_WIDTH_ADDR_READ_B = "11" *) 
+  (* P_WIDTH_ADDR_WRITE_A = "11" *) 
+  (* P_WIDTH_ADDR_WRITE_B = "11" *) 
   (* P_WIDTH_COL_WRITE_A = "38" *) 
   (* P_WIDTH_COL_WRITE_B = "38" *) 
   (* READ_DATA_WIDTH_A = "38" *) 
@@ -43052,7 +43637,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized2
         .douta(\NLW_gen_sdpram.xpm_memory_base_inst_douta_UNCONNECTED [37:0]),
         .doutb(dout),
         .ena(1'b0),
-        .enb(rdp_inst_n_9),
+        .enb(rdp_inst_n_13),
         .injectdbiterra(1'b0),
         .injectdbiterrb(1'b0),
         .injectsbiterra(1'b0),
@@ -43074,59 +43659,61 @@ module Zed_SPI_axi_dma_0_xpm_fifo_base__parameterized2
         .I2(rd_en),
         .O(\gen_fwft.ram_regout_en ));
   Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized6 rdp_inst
-       (.E(ram_wr_en_pf),
+       (.CO(leaving_empty0),
+        .E(ram_wr_en_pf),
         .Q(rd_pntr_ext),
         .clr_full(clr_full),
         .\count_value_i_reg[0]_0 (curr_fwft_state),
         .\count_value_i_reg[0]_1 (xpm_fifo_rst_inst_n_1),
-        .enb(rdp_inst_n_9),
-        .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg (rdp_inst_n_8),
-        .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 (wr_pntr_ext),
-        .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_1 ({wrpp1_inst_n_0,wrpp1_inst_n_1,wrpp1_inst_n_2,wrpp1_inst_n_3,wrpp1_inst_n_4,wrpp1_inst_n_5,wrpp1_inst_n_6}),
-        .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_2 (full),
-        .leaving_empty0(leaving_empty0),
+        .enb(rdp_inst_n_13),
+        .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg (rdp_inst_n_12),
+        .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0 (full),
+        .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_2_0 (wr_pntr_ext),
+        .\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_i_3_0 ({wrpp1_inst_n_0,wrpp1_inst_n_1,wrpp1_inst_n_2,wrpp1_inst_n_3,wrpp1_inst_n_4,wrpp1_inst_n_5,wrpp1_inst_n_6,wrpp1_inst_n_7,wrpp1_inst_n_8,wrpp1_inst_n_9,wrpp1_inst_n_10}),
         .ram_empty_i(ram_empty_i),
         .rd_en(rd_en),
         .wr_clk(wr_clk));
   Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7 rdpp1_inst
-       (.E(rdp_inst_n_9),
-        .Q({rdpp1_inst_n_0,rdpp1_inst_n_1,rdpp1_inst_n_2,rdpp1_inst_n_3,rdpp1_inst_n_4,rdpp1_inst_n_5,rdpp1_inst_n_6}),
+       (.E(rdp_inst_n_13),
+        .Q({rdpp1_inst_n_0,rdpp1_inst_n_1,rdpp1_inst_n_2,rdpp1_inst_n_3,rdpp1_inst_n_4,rdpp1_inst_n_5,rdpp1_inst_n_6,rdpp1_inst_n_7,rdpp1_inst_n_8,rdpp1_inst_n_9,rdpp1_inst_n_10}),
         .\count_value_i_reg[0]_0 (xpm_fifo_rst_inst_n_1),
-        .\count_value_i_reg[1]_0 (curr_fwft_state),
+        .\count_value_i_reg[3]_0 (curr_fwft_state),
         .ram_empty_i(ram_empty_i),
         .rd_en(rd_en),
         .wr_clk(wr_clk));
   Zed_SPI_axi_dma_0_xpm_fifo_reg_bit_32 rst_d1_inst
        (.Q(xpm_fifo_rst_inst_n_1),
+        .S(rst_d1_inst_n_2),
         .clr_full(clr_full),
+        .\count_value_i_reg[3] (full),
+        .\count_value_i_reg[3]_0 (wr_pntr_ext[0]),
+        .\count_value_i_reg[3]_1 (wrpp1_inst_n_10),
+        .d_out_reg_0(rst_d1_inst_n_3),
         .rst(rst),
         .rst_d1(rst_d1),
-        .wr_clk(wr_clk));
+        .wr_clk(wr_clk),
+        .wr_en(wr_en));
   Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized6_33 wrp_inst
-       (.E(ram_wr_en_pf),
+       (.CO(leaving_empty0),
+        .E(ram_wr_en_pf),
         .Q(wr_pntr_ext),
-        .\count_value_i_reg[5]_0 (full),
-        .\count_value_i_reg[6]_0 (xpm_fifo_rst_inst_n_1),
-        .enb(rdp_inst_n_9),
-        .\gen_pntr_flags_cc.ram_empty_i_reg ({rdpp1_inst_n_0,rdpp1_inst_n_1,rdpp1_inst_n_2,rdpp1_inst_n_3,rdpp1_inst_n_4,rdpp1_inst_n_5,rdpp1_inst_n_6}),
-        .leaving_empty0(leaving_empty0),
+        .S(rst_d1_inst_n_2),
+        .\count_value_i_reg[10]_0 (xpm_fifo_rst_inst_n_1),
+        .enb(rdp_inst_n_13),
+        .\gen_pntr_flags_cc.ram_empty_i_reg_i_2_0 ({rdpp1_inst_n_0,rdpp1_inst_n_1,rdpp1_inst_n_2,rdpp1_inst_n_3,rdpp1_inst_n_4,rdpp1_inst_n_5,rdpp1_inst_n_6,rdpp1_inst_n_7,rdpp1_inst_n_8,rdpp1_inst_n_9,rdpp1_inst_n_10}),
         .ram_empty_i(ram_empty_i),
         .ram_empty_i0(ram_empty_i0),
-        .rst_d1(rst_d1),
-        .wr_clk(wr_clk),
-        .wr_en(wr_en));
+        .wr_clk(wr_clk));
   Zed_SPI_axi_dma_0_xpm_counter_updn__parameterized7_34 wrpp1_inst
        (.E(ram_wr_en_pf),
-        .Q({wrpp1_inst_n_0,wrpp1_inst_n_1,wrpp1_inst_n_2,wrpp1_inst_n_3,wrpp1_inst_n_4,wrpp1_inst_n_5,wrpp1_inst_n_6}),
+        .Q({wrpp1_inst_n_0,wrpp1_inst_n_1,wrpp1_inst_n_2,wrpp1_inst_n_3,wrpp1_inst_n_4,wrpp1_inst_n_5,wrpp1_inst_n_6,wrpp1_inst_n_7,wrpp1_inst_n_8,wrpp1_inst_n_9,wrpp1_inst_n_10}),
         .\count_value_i_reg[0]_0 (xpm_fifo_rst_inst_n_1),
-        .\count_value_i_reg[5]_0 (full),
-        .rst_d1(rst_d1),
-        .wr_clk(wr_clk),
-        .wr_en(wr_en));
+        .\count_value_i_reg[3]_0 (rst_d1_inst_n_3),
+        .wr_clk(wr_clk));
   Zed_SPI_axi_dma_0_xpm_fifo_rst__parameterized0_35 xpm_fifo_rst_inst
        (.E(ram_wr_en_pf),
         .Q(xpm_fifo_rst_inst_n_1),
-        .\count_value_i_reg[6] (full),
+        .\count_value_i_reg[10] (full),
         .rst(rst),
         .rst_d1(rst_d1),
         .wr_clk(wr_clk),
@@ -43178,7 +43765,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_reg_bit
         .D(wrst_busy),
         .Q(rst_d1),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \gen_pf_ic_rc.gen_full_rst_val.ram_full_i_i_4 
@@ -43195,7 +43782,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_reg_bit
         .I3(\gof.overflow_i_reg ),
         .I4(prog_full),
         .O(\gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[4] ));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT4 #(
     .INIT(16'hFE00)) 
     \gof.overflow_i_i_1 
@@ -43317,21 +43904,57 @@ endmodule
 module Zed_SPI_axi_dma_0_xpm_fifo_reg_bit_32
    (rst_d1,
     clr_full,
+    S,
+    d_out_reg_0,
     Q,
     wr_clk,
-    rst);
+    rst,
+    \count_value_i_reg[3] ,
+    wr_en,
+    \count_value_i_reg[3]_0 ,
+    \count_value_i_reg[3]_1 );
   output rst_d1;
   output clr_full;
+  output [0:0]S;
+  output [0:0]d_out_reg_0;
   input [0:0]Q;
   input wr_clk;
   input rst;
+  input \count_value_i_reg[3] ;
+  input wr_en;
+  input [0:0]\count_value_i_reg[3]_0 ;
+  input [0:0]\count_value_i_reg[3]_1 ;
 
   wire [0:0]Q;
+  wire [0:0]S;
   wire clr_full;
+  wire \count_value_i_reg[3] ;
+  wire [0:0]\count_value_i_reg[3]_0 ;
+  wire [0:0]\count_value_i_reg[3]_1 ;
+  wire [0:0]d_out_reg_0;
   wire rst;
   wire rst_d1;
   wire wr_clk;
+  wire wr_en;
 
+  LUT5 #(
+    .INIT(32'hFEFF0100)) 
+    \count_value_i[3]_i_2 
+       (.I0(rst_d1),
+        .I1(Q),
+        .I2(\count_value_i_reg[3] ),
+        .I3(wr_en),
+        .I4(\count_value_i_reg[3]_0 ),
+        .O(S));
+  LUT5 #(
+    .INIT(32'hFEFF0100)) 
+    \count_value_i[3]_i_2__2 
+       (.I0(rst_d1),
+        .I1(Q),
+        .I2(\count_value_i_reg[3] ),
+        .I3(wr_en),
+        .I4(\count_value_i_reg[3]_1 ),
+        .O(d_out_reg_0));
   FDRE #(
     .INIT(1'b0)) 
     d_out_reg
@@ -43980,7 +44603,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_reg_vec__parameterized0
         .I2(Q[1]),
         .I3(\gwdc.wr_data_count_i_reg[4] [1]),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \gwdc.wr_data_count_i[3]_i_1 
@@ -43988,7 +44611,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_reg_vec__parameterized0
         .I1(\reg_out_i_reg_n_0_[3] ),
         .I2(\gwdc.wr_data_count_i_reg[4] [3]),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT5 #(
     .INIT(32'h718E8E71)) 
     \gwdc.wr_data_count_i[4]_i_1 
@@ -44083,7 +44706,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_reg_vec__parameterized0_14
         .I2(Q[1]),
         .I3(\gwdc.wr_data_count_i_reg[4] [1]),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'h69)) 
     \gwdc.wr_data_count_i[3]_i_1 
@@ -44091,7 +44714,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_reg_vec__parameterized0_14
         .I1(\reg_out_i_reg_n_0_[3] ),
         .I2(\gwdc.wr_data_count_i_reg[4] [3]),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT5 #(
     .INIT(32'h718E8E71)) 
     \gwdc.wr_data_count_i[4]_i_1 
@@ -44696,7 +45319,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_rst
         .I2(wrst_busy),
         .I3(rst_d1),
         .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT3 #(
     .INIT(8'hAB)) 
     \grdc.rd_data_count_i[4]_i_1 
@@ -44704,7 +45327,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_rst
         .I1(Q[0]),
         .I2(Q[1]),
         .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT3 #(
     .INIT(8'hE0)) 
     \guf.underflow_i_i_1 
@@ -44837,20 +45460,20 @@ module Zed_SPI_axi_dma_0_xpm_fifo_rst__parameterized0_35
     Q,
     rst,
     wr_en,
-    \count_value_i_reg[6] ,
+    \count_value_i_reg[10] ,
     rst_d1,
     wr_clk);
   output [0:0]E;
   output [0:0]Q;
   input rst;
   input wr_en;
-  input \count_value_i_reg[6] ;
+  input \count_value_i_reg[10] ;
   input rst_d1;
   input wr_clk;
 
   wire [0:0]E;
   wire [0:0]Q;
-  wire \count_value_i_reg[6] ;
+  wire \count_value_i_reg[10] ;
   wire [1:0]\gen_rst_cc.fifo_wr_rst_cc ;
   wire p_0_in;
   wire \power_on_rst_reg_n_0_[0] ;
@@ -44894,7 +45517,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_rst__parameterized0_35
     .INIT(16'h0002)) 
     \gen_sdpram.xpm_memory_base_inst_i_1 
        (.I0(wr_en),
-        .I1(\count_value_i_reg[6] ),
+        .I1(\count_value_i_reg[10] ),
         .I2(Q),
         .I3(rst_d1),
         .O(E));
@@ -45175,7 +45798,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_rst__xdcDup__1
         .I4(\gen_rst_ic.fifo_wr_rst_ic_i_3_n_0 ),
         .I5(\gen_rst_ic.fifo_wr_rst_ic ),
         .O(\gen_rst_ic.fifo_wr_rst_ic_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \gen_rst_ic.fifo_wr_rst_ic_i_2 
@@ -45211,7 +45834,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_rst__xdcDup__1
        (.dest_clk(wr_clk),
         .dest_rst(\gen_rst_ic.fifo_rd_rst_wr_i ),
         .src_rst(\gen_rst_ic.fifo_rd_rst_ic_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \gen_rst_ic.rst_seq_reentered_i_1 
@@ -45336,9 +45959,9 @@ endmodule
 (* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "1" *) (* ORIG_REF_NAME = "xpm_fifo_sync" *) 
 (* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* P_COMMON_CLOCK = "1" *) 
 (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) (* P_READ_MODE = "1" *) 
-(* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "4" *) (* READ_DATA_WIDTH = "9" *) 
+(* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "4" *) (* READ_DATA_WIDTH = "13" *) 
 (* READ_MODE = "fwft" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "9" *) (* WR_DATA_COUNT_WIDTH = "5" *) 
+(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "13" *) (* WR_DATA_COUNT_WIDTH = "5" *) 
 (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
 module Zed_SPI_axi_dma_0_xpm_fifo_sync
    (sleep,
@@ -45370,7 +45993,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync
   input rst;
   input wr_clk;
   input wr_en;
-  input [8:0]din;
+  input [12:0]din;
   output full;
   output prog_full;
   output [4:0]wr_data_count;
@@ -45379,7 +46002,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync
   output almost_full;
   output wr_ack;
   input rd_en;
-  output [8:0]dout;
+  output [12:0]dout;
   output empty;
   output prog_empty;
   output [3:0]rd_data_count;
@@ -45393,8 +46016,8 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync
   output dbiterr;
 
   wire \<const0> ;
-  wire [8:0]din;
-  wire [8:0]dout;
+  wire [12:0]din;
+  wire [12:0]dout;
   wire empty;
   wire full;
   wire rd_en;
@@ -45458,7 +46081,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync
   (* FIFO_MEM_TYPE = "0" *) 
   (* FIFO_READ_DEPTH = "16" *) 
   (* FIFO_READ_LATENCY = "0" *) 
-  (* FIFO_SIZE = "144" *) 
+  (* FIFO_SIZE = "208" *) 
   (* FIFO_WRITE_DEPTH = "16" *) 
   (* FULL_RESET_VALUE = "1" *) 
   (* FULL_RST_VAL = "1'b1" *) 
@@ -45476,7 +46099,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync
   (* RD_LATENCY = "2" *) 
   (* RD_MODE = "1" *) 
   (* RD_PNTR_WIDTH = "4" *) 
-  (* READ_DATA_WIDTH = "9" *) 
+  (* READ_DATA_WIDTH = "13" *) 
   (* READ_MODE = "1" *) 
   (* READ_MODE_LL = "1" *) 
   (* RELATED_CLOCKS = "0" *) 
@@ -45486,7 +46109,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync
   (* VERSION = "0" *) 
   (* WAKEUP_TIME = "0" *) 
   (* WIDTH_RATIO = "1" *) 
-  (* WRITE_DATA_WIDTH = "9" *) 
+  (* WRITE_DATA_WIDTH = "13" *) 
   (* WR_DATA_COUNT_WIDTH = "5" *) 
   (* WR_DC_WIDTH_EXT = "5" *) 
   (* WR_DEPTH_LOG = "4" *) 
@@ -45530,12 +46153,12 @@ endmodule
 
 (* CASCADE_HEIGHT = "0" *) (* DOUT_RESET_VALUE = "0" *) (* ECC_MODE = "no_ecc" *) 
 (* EN_ADV_FEATURE_SYNC = "16'b0001111100011111" *) (* FIFO_MEMORY_TYPE = "block" *) (* FIFO_READ_LATENCY = "0" *) 
-(* FIFO_WRITE_DEPTH = "128" *) (* FULL_RESET_VALUE = "1" *) (* ORIG_REF_NAME = "xpm_fifo_sync" *) 
+(* FIFO_WRITE_DEPTH = "2048" *) (* FULL_RESET_VALUE = "1" *) (* ORIG_REF_NAME = "xpm_fifo_sync" *) 
 (* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* P_COMMON_CLOCK = "1" *) 
 (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "2" *) (* P_READ_MODE = "1" *) 
 (* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "4" *) (* READ_DATA_WIDTH = "38" *) 
 (* READ_MODE = "fwft" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "38" *) (* WR_DATA_COUNT_WIDTH = "8" *) 
+(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "38" *) (* WR_DATA_COUNT_WIDTH = "12" *) 
 (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
 module Zed_SPI_axi_dma_0_xpm_fifo_sync__parameterized1
    (sleep,
@@ -45570,7 +46193,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync__parameterized1
   input [37:0]din;
   output full;
   output prog_full;
-  output [7:0]wr_data_count;
+  output [11:0]wr_data_count;
   output overflow;
   output wr_rst_busy;
   output almost_full;
@@ -45613,7 +46236,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync__parameterized1
   wire NLW_xpm_fifo_base_inst_wr_ack_UNCONNECTED;
   wire NLW_xpm_fifo_base_inst_wr_rst_busy_UNCONNECTED;
   wire [3:0]NLW_xpm_fifo_base_inst_rd_data_count_UNCONNECTED;
-  wire [7:0]NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED;
+  wire [11:0]NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED;
 
   assign almost_empty = \<const0> ;
   assign almost_full = \<const0> ;
@@ -45630,6 +46253,10 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync__parameterized1
   assign sbiterr = \<const0> ;
   assign underflow = \<const0> ;
   assign wr_ack = \<const0> ;
+  assign wr_data_count[11] = \<const0> ;
+  assign wr_data_count[10] = \<const0> ;
+  assign wr_data_count[9] = \<const0> ;
+  assign wr_data_count[8] = \<const0> ;
   assign wr_data_count[7] = \<const0> ;
   assign wr_data_count[6] = \<const0> ;
   assign wr_data_count[5] = \<const0> ;
@@ -45661,26 +46288,26 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync__parameterized1
   (* FG_EQ_ASYM_DOUT = "1'b0" *) 
   (* FIFO_MEMORY_TYPE = "2" *) 
   (* FIFO_MEM_TYPE = "2" *) 
-  (* FIFO_READ_DEPTH = "128" *) 
+  (* FIFO_READ_DEPTH = "2048" *) 
   (* FIFO_READ_LATENCY = "0" *) 
-  (* FIFO_SIZE = "4864" *) 
-  (* FIFO_WRITE_DEPTH = "128" *) 
+  (* FIFO_SIZE = "77824" *) 
+  (* FIFO_WRITE_DEPTH = "2048" *) 
   (* FULL_RESET_VALUE = "1" *) 
   (* FULL_RST_VAL = "1'b1" *) 
   (* KEEP_HIERARCHY = "soft" *) 
   (* PE_THRESH_ADJ = "8" *) 
-  (* PE_THRESH_MAX = "123" *) 
+  (* PE_THRESH_MAX = "2043" *) 
   (* PE_THRESH_MIN = "5" *) 
   (* PF_THRESH_ADJ = "8" *) 
-  (* PF_THRESH_MAX = "123" *) 
+  (* PF_THRESH_MAX = "2043" *) 
   (* PF_THRESH_MIN = "5" *) 
   (* PROG_EMPTY_THRESH = "10" *) 
   (* PROG_FULL_THRESH = "10" *) 
   (* RD_DATA_COUNT_WIDTH = "4" *) 
-  (* RD_DC_WIDTH_EXT = "8" *) 
+  (* RD_DC_WIDTH_EXT = "12" *) 
   (* RD_LATENCY = "2" *) 
   (* RD_MODE = "1" *) 
-  (* RD_PNTR_WIDTH = "7" *) 
+  (* RD_PNTR_WIDTH = "11" *) 
   (* READ_DATA_WIDTH = "38" *) 
   (* READ_MODE = "1" *) 
   (* READ_MODE_LL = "1" *) 
@@ -45692,10 +46319,10 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync__parameterized1
   (* WAKEUP_TIME = "0" *) 
   (* WIDTH_RATIO = "1" *) 
   (* WRITE_DATA_WIDTH = "38" *) 
-  (* WR_DATA_COUNT_WIDTH = "8" *) 
-  (* WR_DC_WIDTH_EXT = "8" *) 
-  (* WR_DEPTH_LOG = "7" *) 
-  (* WR_PNTR_WIDTH = "7" *) 
+  (* WR_DATA_COUNT_WIDTH = "12" *) 
+  (* WR_DC_WIDTH_EXT = "12" *) 
+  (* WR_DEPTH_LOG = "11" *) 
+  (* WR_PNTR_WIDTH = "11" *) 
   (* WR_RD_RATIO = "0" *) 
   (* WR_WIDTH_LOG = "6" *) 
   (* XPM_MODULE = "TRUE" *) 
@@ -45728,7 +46355,7 @@ module Zed_SPI_axi_dma_0_xpm_fifo_sync__parameterized1
         .underflow(NLW_xpm_fifo_base_inst_underflow_UNCONNECTED),
         .wr_ack(NLW_xpm_fifo_base_inst_wr_ack_UNCONNECTED),
         .wr_clk(wr_clk),
-        .wr_data_count(NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED[7:0]),
+        .wr_data_count(NLW_xpm_fifo_base_inst_wr_data_count_UNCONNECTED[11:0]),
         .wr_en(wr_en),
         .wr_rst_busy(NLW_xpm_fifo_base_inst_wr_rst_busy_UNCONNECTED));
 endmodule
@@ -46397,29 +47024,29 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized0
 endmodule
 
 (* ADDR_WIDTH_A = "4" *) (* ADDR_WIDTH_B = "4" *) (* AUTO_SLEEP_TIME = "0" *) 
-(* BYTE_WRITE_WIDTH_A = "9" *) (* BYTE_WRITE_WIDTH_B = "9" *) (* CASCADE_HEIGHT = "0" *) 
+(* BYTE_WRITE_WIDTH_A = "13" *) (* BYTE_WRITE_WIDTH_B = "13" *) (* CASCADE_HEIGHT = "0" *) 
 (* CLOCKING_MODE = "0" *) (* ECC_MODE = "0" *) (* IGNORE_INIT_SYNTH = "0" *) 
 (* MAX_NUM_CHAR = "0" *) (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) 
-(* MEMORY_OPTIMIZATION = "true" *) (* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "144" *) 
+(* MEMORY_OPTIMIZATION = "true" *) (* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "208" *) 
 (* MEMORY_TYPE = "1" *) (* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) 
 (* ORIG_REF_NAME = "xpm_memory_base" *) (* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) 
 (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) 
-(* P_MEMORY_PRIMITIVE = "auto" *) (* P_MIN_WIDTH_DATA = "9" *) (* P_MIN_WIDTH_DATA_A = "9" *) 
-(* P_MIN_WIDTH_DATA_B = "9" *) (* P_MIN_WIDTH_DATA_ECC = "9" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) 
-(* P_MIN_WIDTH_DATA_SHFT = "9" *) (* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) 
+(* P_MEMORY_PRIMITIVE = "auto" *) (* P_MIN_WIDTH_DATA = "13" *) (* P_MIN_WIDTH_DATA_A = "13" *) 
+(* P_MIN_WIDTH_DATA_B = "13" *) (* P_MIN_WIDTH_DATA_ECC = "13" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) 
+(* P_MIN_WIDTH_DATA_SHFT = "13" *) (* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) 
 (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) 
 (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
 (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) 
 (* P_WIDTH_ADDR_READ_A = "4" *) (* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) 
-(* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "9" *) (* P_WIDTH_COL_WRITE_B = "9" *) 
-(* READ_DATA_WIDTH_A = "9" *) (* READ_DATA_WIDTH_B = "9" *) (* READ_LATENCY_A = "2" *) 
+(* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "13" *) (* P_WIDTH_COL_WRITE_B = "13" *) 
+(* READ_DATA_WIDTH_A = "13" *) (* READ_DATA_WIDTH_B = "13" *) (* READ_LATENCY_A = "2" *) 
 (* READ_LATENCY_B = "2" *) (* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) 
 (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) 
 (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) (* USE_MEM_INIT_MMI = "0" *) 
-(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "9" *) 
-(* WRITE_DATA_WIDTH_B = "9" *) (* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) 
+(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "13" *) 
+(* WRITE_DATA_WIDTH_B = "13" *) (* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) 
 (* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
-(* rsta_loop_iter = "12" *) (* rstb_loop_iter = "12" *) 
+(* rsta_loop_iter = "16" *) (* rstb_loop_iter = "16" *) 
 module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized1
    (sleep,
     clka,
@@ -46453,10 +47080,10 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized1
   input regcea;
   input [0:0]wea;
   input [3:0]addra;
-  input [8:0]dina;
+  input [12:0]dina;
   input injectsbiterra;
   input injectdbiterra;
-  output [8:0]douta;
+  output [12:0]douta;
   output sbiterra;
   output dbiterra;
   input clkb;
@@ -46465,10 +47092,10 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized1
   input regceb;
   input [0:0]web;
   input [3:0]addrb;
-  input [8:0]dinb;
+  input [12:0]dinb;
   input injectsbiterrb;
   input injectdbiterrb;
-  output [8:0]doutb;
+  output [12:0]doutb;
   output sbiterrb;
   output dbiterrb;
 
@@ -46476,11 +47103,14 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized1
   wire [3:0]addra;
   wire [3:0]addrb;
   wire clka;
-  wire [8:0]dina;
-  wire [8:0]doutb;
+  wire [12:0]dina;
+  wire [12:0]doutb;
   wire enb;
-  wire [8:0]\gen_rd_b.doutb_reg0 ;
+  wire [12:0]\gen_rd_b.doutb_reg0 ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[0] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[10] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[11] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[12] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[1] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[2] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[3] ;
@@ -46489,17 +47119,21 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized1
   wire \gen_rd_b.doutb_reg_reg_n_0_[6] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[7] ;
   wire \gen_rd_b.doutb_reg_reg_n_0_[8] ;
+  wire \gen_rd_b.doutb_reg_reg_n_0_[9] ;
   wire regceb;
   wire rstb;
   wire sleep;
   wire [0:0]wea;
   wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5_DOD_UNCONNECTED ;
-  wire [1:1]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOB_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOC_UNCONNECTED ;
-  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOD_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_12_SPO_UNCONNECTED ;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11_DOD_UNCONNECTED ;
 
   assign dbiterra = \<const0> ;
   assign dbiterrb = \<const0> ;
+  assign douta[12] = \<const0> ;
+  assign douta[11] = \<const0> ;
+  assign douta[10] = \<const0> ;
+  assign douta[9] = \<const0> ;
   assign douta[8] = \<const0> ;
   assign douta[7] = \<const0> ;
   assign douta[6] = \<const0> ;
@@ -46521,6 +47155,33 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized1
         .CE(enb),
         .D(\gen_rd_b.doutb_reg0 [0]),
         .Q(\gen_rd_b.doutb_reg_reg_n_0_[0] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[10] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [10]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[10] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[11] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [11]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[11] ),
+        .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[12] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [12]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[12] ),
         .R(1'b0));
   (* dram_emb_xdc = "no" *) 
   FDRE #(
@@ -46594,6 +47255,15 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized1
         .D(\gen_rd_b.doutb_reg0 [8]),
         .Q(\gen_rd_b.doutb_reg_reg_n_0_[8] ),
         .R(1'b0));
+  (* dram_emb_xdc = "no" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.doutb_reg_reg[9] 
+       (.C(clka),
+        .CE(enb),
+        .D(\gen_rd_b.doutb_reg0 [9]),
+        .Q(\gen_rd_b.doutb_reg_reg_n_0_[9] ),
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][0] 
@@ -46601,6 +47271,30 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized1
         .CE(regceb),
         .D(\gen_rd_b.doutb_reg_reg_n_0_[0] ),
         .Q(doutb[0]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][10] 
+       (.C(clka),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[10] ),
+        .Q(doutb[10]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][11] 
+       (.C(clka),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[11] ),
+        .Q(doutb[11]),
+        .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][12] 
+       (.C(clka),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[12] ),
+        .Q(doutb[12]),
         .R(rstb));
   FDRE #(
     .INIT(1'b0)) 
@@ -46666,8 +47360,16 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized1
         .D(\gen_rd_b.doutb_reg_reg_n_0_[8] ),
         .Q(doutb[8]),
         .R(rstb));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_rd_b.gen_doutb_pipe.doutb_pipe_reg[0][9] 
+       (.C(clka),
+        .CE(regceb),
+        .D(\gen_rd_b.doutb_reg_reg_n_0_[9] ),
+        .Q(doutb[9]),
+        .R(rstb));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "144" *) 
+  (* RTL_RAM_BITS = "208" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 
@@ -46696,52 +47398,79 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized1
         .WCLK(clka),
         .WE(wea));
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "144" *) 
+  (* RTL_RAM_BITS = "208" *) 
+  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
+  (* RTL_RAM_TYPE = "RAM_SDP" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "12" *) 
+  (* ram_slice_end = "12" *) 
+  RAM32X1D #(
+    .INIT(32'h00000000)) 
+    \gen_wr_a.gen_word_narrow.mem_reg_0_15_12_12 
+       (.A0(addra[0]),
+        .A1(addra[1]),
+        .A2(addra[2]),
+        .A3(addra[3]),
+        .A4(1'b0),
+        .D(dina[12]),
+        .DPO(\gen_rd_b.doutb_reg0 [12]),
+        .DPRA0(addrb[0]),
+        .DPRA1(addrb[1]),
+        .DPRA2(addrb[2]),
+        .DPRA3(addrb[3]),
+        .DPRA4(1'b0),
+        .SPO(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_12_12_SPO_UNCONNECTED ),
+        .WCLK(clka),
+        .WE(wea));
+  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "208" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "6" *) 
-  (* ram_slice_end = "8" *) 
+  (* ram_slice_end = "11" *) 
   RAM32M #(
     .INIT_A(64'h0000000000000000),
     .INIT_B(64'h0000000000000000),
     .INIT_C(64'h0000000000000000),
     .INIT_D(64'h0000000000000000)) 
-    \gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8 
+    \gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11 
        (.ADDRA({1'b0,addrb}),
         .ADDRB({1'b0,addrb}),
         .ADDRC({1'b0,addrb}),
         .ADDRD({1'b0,addra}),
         .DIA(dina[7:6]),
-        .DIB({1'b0,dina[8]}),
-        .DIC({1'b0,1'b0}),
+        .DIB(dina[9:8]),
+        .DIC(dina[11:10]),
         .DID({1'b0,1'b0}),
         .DOA(\gen_rd_b.doutb_reg0 [7:6]),
-        .DOB({\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOB_UNCONNECTED [1],\gen_rd_b.doutb_reg0 [8]}),
-        .DOC(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOC_UNCONNECTED [1:0]),
-        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8_DOD_UNCONNECTED [1:0]),
+        .DOB(\gen_rd_b.doutb_reg0 [9:8]),
+        .DOC(\gen_rd_b.doutb_reg0 [11:10]),
+        .DOD(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_15_6_11_DOD_UNCONNECTED [1:0]),
         .WCLK(clka),
         .WE(wea));
 endmodule
 
-(* ADDR_WIDTH_A = "7" *) (* ADDR_WIDTH_B = "7" *) (* AUTO_SLEEP_TIME = "0" *) 
+(* ADDR_WIDTH_A = "11" *) (* ADDR_WIDTH_B = "11" *) (* AUTO_SLEEP_TIME = "0" *) 
 (* BYTE_WRITE_WIDTH_A = "38" *) (* BYTE_WRITE_WIDTH_B = "38" *) (* CASCADE_HEIGHT = "0" *) 
 (* CLOCKING_MODE = "0" *) (* ECC_MODE = "0" *) (* IGNORE_INIT_SYNTH = "0" *) 
 (* MAX_NUM_CHAR = "0" *) (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) 
-(* MEMORY_OPTIMIZATION = "true" *) (* MEMORY_PRIMITIVE = "2" *) (* MEMORY_SIZE = "4864" *) 
+(* MEMORY_OPTIMIZATION = "true" *) (* MEMORY_PRIMITIVE = "2" *) (* MEMORY_SIZE = "77824" *) 
 (* MEMORY_TYPE = "1" *) (* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) 
 (* ORIG_REF_NAME = "xpm_memory_base" *) (* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) 
-(* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "128" *) (* P_MEMORY_OPT = "yes" *) 
+(* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "2048" *) (* P_MEMORY_OPT = "yes" *) 
 (* P_MEMORY_PRIMITIVE = "block" *) (* P_MIN_WIDTH_DATA = "38" *) (* P_MIN_WIDTH_DATA_A = "38" *) 
 (* P_MIN_WIDTH_DATA_B = "38" *) (* P_MIN_WIDTH_DATA_ECC = "38" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) 
 (* P_MIN_WIDTH_DATA_SHFT = "38" *) (* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) 
 (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) 
 (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "no" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
 (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) 
-(* P_WIDTH_ADDR_READ_A = "7" *) (* P_WIDTH_ADDR_READ_B = "7" *) (* P_WIDTH_ADDR_WRITE_A = "7" *) 
-(* P_WIDTH_ADDR_WRITE_B = "7" *) (* P_WIDTH_COL_WRITE_A = "38" *) (* P_WIDTH_COL_WRITE_B = "38" *) 
+(* P_WIDTH_ADDR_READ_A = "11" *) (* P_WIDTH_ADDR_READ_B = "11" *) (* P_WIDTH_ADDR_WRITE_A = "11" *) 
+(* P_WIDTH_ADDR_WRITE_B = "11" *) (* P_WIDTH_COL_WRITE_A = "38" *) (* P_WIDTH_COL_WRITE_B = "38" *) 
 (* READ_DATA_WIDTH_A = "38" *) (* READ_DATA_WIDTH_B = "38" *) (* READ_LATENCY_A = "2" *) 
 (* READ_LATENCY_B = "2" *) (* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) 
 (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) 
@@ -46782,7 +47511,7 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized2
   input ena;
   input regcea;
   input [0:0]wea;
-  input [6:0]addra;
+  input [10:0]addra;
   input [37:0]dina;
   input injectsbiterra;
   input injectdbiterra;
@@ -46794,7 +47523,7 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized2
   input enb;
   input regceb;
   input [0:0]web;
-  input [6:0]addrb;
+  input [10:0]addrb;
   input [37:0]dinb;
   input injectsbiterrb;
   input injectdbiterrb;
@@ -46803,8 +47532,8 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized2
   output dbiterrb;
 
   wire \<const0> ;
-  wire [6:0]addra;
-  wire [6:0]addrb;
+  wire [10:0]addra;
+  wire [10:0]addrb;
   wire clka;
   wire [37:0]dina;
   wire [37:0]doutb;
@@ -46813,15 +47542,34 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized2
   wire rstb;
   wire sleep;
   wire [0:0]wea;
-  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_CASCADEOUTA_UNCONNECTED ;
-  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_CASCADEOUTB_UNCONNECTED ;
-  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_DBITERR_UNCONNECTED ;
-  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_SBITERR_UNCONNECTED ;
-  wire [31:6]\NLW_gen_wr_a.gen_word_narrow.mem_reg_DOBDO_UNCONNECTED ;
-  wire [3:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_DOPADOP_UNCONNECTED ;
-  wire [3:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_DOPBDOP_UNCONNECTED ;
-  wire [7:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_ECCPARITY_UNCONNECTED ;
-  wire [8:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_RDADDRECC_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_CASCADEOUTA_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_CASCADEOUTB_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DBITERR_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_INJECTDBITERR_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_INJECTSBITERR_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_0_SBITERR_UNCONNECTED ;
+  wire [31:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOADO_UNCONNECTED ;
+  wire [31:16]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOBDO_UNCONNECTED ;
+  wire [3:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOPADOP_UNCONNECTED ;
+  wire [3:2]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOPBDOP_UNCONNECTED ;
+  wire [7:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_ECCPARITY_UNCONNECTED ;
+  wire [8:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_RDADDRECC_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_CASCADEOUTA_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_CASCADEOUTB_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DBITERR_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_INJECTDBITERR_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_INJECTSBITERR_UNCONNECTED ;
+  wire \NLW_gen_wr_a.gen_word_narrow.mem_reg_1_SBITERR_UNCONNECTED ;
+  wire [31:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOADO_UNCONNECTED ;
+  wire [31:16]\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOBDO_UNCONNECTED ;
+  wire [3:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOPADOP_UNCONNECTED ;
+  wire [3:2]\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOPBDOP_UNCONNECTED ;
+  wire [7:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_ECCPARITY_UNCONNECTED ;
+  wire [8:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_RDADDRECC_UNCONNECTED ;
+  wire [15:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOADO_UNCONNECTED ;
+  wire [15:2]\NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOBDO_UNCONNECTED ;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOPADOP_UNCONNECTED ;
+  wire [1:0]\NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOPBDOP_UNCONNECTED ;
 
   assign dbiterra = \<const0> ;
   assign dbiterrb = \<const0> ;
@@ -46868,26 +47616,26 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized2
   GND GND
        (.G(\<const0> ));
   (* \MEM.PORTA.ADDRESS_BEGIN  = "0" *) 
-  (* \MEM.PORTA.ADDRESS_END  = "511" *) 
-  (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d38" *) 
+  (* \MEM.PORTA.ADDRESS_END  = "2047" *) 
+  (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p2_d16" *) 
   (* \MEM.PORTA.DATA_LSB  = "0" *) 
-  (* \MEM.PORTA.DATA_MSB  = "37" *) 
+  (* \MEM.PORTA.DATA_MSB  = "17" *) 
   (* \MEM.PORTB.ADDRESS_BEGIN  = "0" *) 
-  (* \MEM.PORTB.ADDRESS_END  = "511" *) 
-  (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d38" *) 
+  (* \MEM.PORTB.ADDRESS_END  = "2047" *) 
+  (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p2_d16" *) 
   (* \MEM.PORTB.DATA_LSB  = "0" *) 
-  (* \MEM.PORTB.DATA_MSB  = "37" *) 
+  (* \MEM.PORTB.DATA_MSB  = "17" *) 
   (* METHODOLOGY_DRC_VIOS = "" *) 
-  (* RTL_RAM_BITS = "4864" *) 
+  (* RTL_RAM_BITS = "77824" *) 
   (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
   (* RTL_RAM_TYPE = "RAM_SDP" *) 
   (* ram_addr_begin = "0" *) 
-  (* ram_addr_end = "511" *) 
+  (* ram_addr_end = "2047" *) 
   (* ram_offset = "0" *) 
   (* ram_slice_begin = "0" *) 
-  (* ram_slice_end = "37" *) 
+  (* ram_slice_end = "17" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
+    .DOA_REG(0),
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
@@ -47039,53 +47787,405 @@ module Zed_SPI_axi_dma_0_xpm_memory_base__parameterized2
     .INIT_B(36'h000000000),
     .RAM_EXTENSION_A("NONE"),
     .RAM_EXTENSION_B("NONE"),
-    .RAM_MODE("SDP"),
+    .RAM_MODE("TDP"),
     .RDADDR_COLLISION_HWCONFIG("DELAYED_WRITE"),
-    .READ_WIDTH_A(72),
-    .READ_WIDTH_B(0),
+    .READ_WIDTH_A(18),
+    .READ_WIDTH_B(18),
     .RSTREG_PRIORITY_A("RSTREG"),
     .RSTREG_PRIORITY_B("RSTREG"),
     .SIM_COLLISION_CHECK("ALL"),
     .SIM_DEVICE("7SERIES"),
     .SRVAL_A(36'h000000000),
     .SRVAL_B(36'h000000000),
-    .WRITE_MODE_A("WRITE_FIRST"),
-    .WRITE_MODE_B("WRITE_FIRST"),
-    .WRITE_WIDTH_A(0),
-    .WRITE_WIDTH_B(72)) 
-    \gen_wr_a.gen_word_narrow.mem_reg 
-       (.ADDRARDADDR({1'b1,1'b0,1'b0,addrb,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .ADDRBWRADDR({1'b1,1'b0,1'b0,addra,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .CASCADEINA(1'b0),
-        .CASCADEINB(1'b0),
-        .CASCADEOUTA(\NLW_gen_wr_a.gen_word_narrow.mem_reg_CASCADEOUTA_UNCONNECTED ),
-        .CASCADEOUTB(\NLW_gen_wr_a.gen_word_narrow.mem_reg_CASCADEOUTB_UNCONNECTED ),
+    .WRITE_MODE_A("NO_CHANGE"),
+    .WRITE_MODE_B("NO_CHANGE"),
+    .WRITE_WIDTH_A(18),
+    .WRITE_WIDTH_B(18)) 
+    \gen_wr_a.gen_word_narrow.mem_reg_0 
+       (.ADDRARDADDR({1'b1,addra,1'b0,1'b0,1'b0,1'b0}),
+        .ADDRBWRADDR({1'b1,addrb,1'b0,1'b0,1'b0,1'b0}),
+        .CASCADEINA(1'b1),
+        .CASCADEINB(1'b1),
+        .CASCADEOUTA(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_CASCADEOUTA_UNCONNECTED ),
+        .CASCADEOUTB(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_CASCADEOUTB_UNCONNECTED ),
         .CLKARDCLK(clka),
         .CLKBWRCLK(clka),
-        .DBITERR(\NLW_gen_wr_a.gen_word_narrow.mem_reg_DBITERR_UNCONNECTED ),
-        .DIADI(dina[31:0]),
-        .DIBDI({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,dina[37:32]}),
-        .DIPADIP({1'b1,1'b1,1'b1,1'b1}),
-        .DIPBDIP({1'b1,1'b1,1'b1,1'b1}),
-        .DOADO(doutb[31:0]),
-        .DOBDO({\NLW_gen_wr_a.gen_word_narrow.mem_reg_DOBDO_UNCONNECTED [31:6],doutb[37:32]}),
-        .DOPADOP(\NLW_gen_wr_a.gen_word_narrow.mem_reg_DOPADOP_UNCONNECTED [3:0]),
-        .DOPBDOP(\NLW_gen_wr_a.gen_word_narrow.mem_reg_DOPBDOP_UNCONNECTED [3:0]),
-        .ECCPARITY(\NLW_gen_wr_a.gen_word_narrow.mem_reg_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(enb),
-        .ENBWREN(1'b1),
-        .INJECTDBITERR(1'b0),
-        .INJECTSBITERR(1'b0),
-        .RDADDRECC(\NLW_gen_wr_a.gen_word_narrow.mem_reg_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(regceb),
-        .REGCEB(1'b0),
+        .DBITERR(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DBITERR_UNCONNECTED ),
+        .DIADI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,dina[15:0]}),
+        .DIBDI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .DIPADIP({1'b0,1'b0,dina[17:16]}),
+        .DIPBDIP({1'b0,1'b0,1'b1,1'b1}),
+        .DOADO(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOADO_UNCONNECTED [31:0]),
+        .DOBDO({\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOBDO_UNCONNECTED [31:16],doutb[15:0]}),
+        .DOPADOP(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOPADOP_UNCONNECTED [3:0]),
+        .DOPBDOP({\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_DOPBDOP_UNCONNECTED [3:2],doutb[17:16]}),
+        .ECCPARITY(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_ECCPARITY_UNCONNECTED [7:0]),
+        .ENARDEN(wea),
+        .ENBWREN(enb),
+        .INJECTDBITERR(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_INJECTDBITERR_UNCONNECTED ),
+        .INJECTSBITERR(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_INJECTSBITERR_UNCONNECTED ),
+        .RDADDRECC(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_RDADDRECC_UNCONNECTED [8:0]),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(regceb),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
-        .RSTREGARSTREG(rstb),
-        .RSTREGB(1'b0),
-        .SBITERR(\NLW_gen_wr_a.gen_word_narrow.mem_reg_SBITERR_UNCONNECTED ),
-        .WEA({1'b0,1'b0,1'b0,1'b0}),
-        .WEBWE({wea,wea,wea,wea,wea,wea,wea,wea}));
+        .RSTREGARSTREG(1'b0),
+        .RSTREGB(rstb),
+        .SBITERR(\NLW_gen_wr_a.gen_word_narrow.mem_reg_0_SBITERR_UNCONNECTED ),
+        .WEA({wea,wea,1'b1,1'b1}),
+        .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
+  (* \MEM.PORTA.ADDRESS_BEGIN  = "0" *) 
+  (* \MEM.PORTA.ADDRESS_END  = "2047" *) 
+  (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p2_d16" *) 
+  (* \MEM.PORTA.DATA_LSB  = "18" *) 
+  (* \MEM.PORTA.DATA_MSB  = "35" *) 
+  (* \MEM.PORTB.ADDRESS_BEGIN  = "0" *) 
+  (* \MEM.PORTB.ADDRESS_END  = "2047" *) 
+  (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p2_d16" *) 
+  (* \MEM.PORTB.DATA_LSB  = "18" *) 
+  (* \MEM.PORTB.DATA_MSB  = "35" *) 
+  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "77824" *) 
+  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
+  (* RTL_RAM_TYPE = "RAM_SDP" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "2047" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "18" *) 
+  (* ram_slice_end = "35" *) 
+  RAMB36E1 #(
+    .DOA_REG(0),
+    .DOB_REG(1),
+    .EN_ECC_READ("FALSE"),
+    .EN_ECC_WRITE("FALSE"),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_13(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_14(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_15(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_16(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_17(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_18(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_19(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_20(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_21(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_22(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_23(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_24(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_25(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_26(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_27(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_28(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_29(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_30(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_31(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_32(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_33(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_34(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_35(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_36(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_37(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_38(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_39(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_40(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_41(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_42(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_43(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_44(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_45(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_46(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_47(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_48(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_49(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_4F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_50(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_51(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_52(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_53(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_54(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_55(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_56(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_57(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_58(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_59(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_5F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_60(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_61(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_62(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_63(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_64(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_65(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_66(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_67(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_68(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_69(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_6F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_70(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_71(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_72(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_73(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_74(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_75(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_76(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_77(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_78(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_79(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_7F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_A(36'h000000000),
+    .INIT_B(36'h000000000),
+    .RAM_EXTENSION_A("NONE"),
+    .RAM_EXTENSION_B("NONE"),
+    .RAM_MODE("TDP"),
+    .RDADDR_COLLISION_HWCONFIG("DELAYED_WRITE"),
+    .READ_WIDTH_A(18),
+    .READ_WIDTH_B(18),
+    .RSTREG_PRIORITY_A("RSTREG"),
+    .RSTREG_PRIORITY_B("RSTREG"),
+    .SIM_COLLISION_CHECK("ALL"),
+    .SIM_DEVICE("7SERIES"),
+    .SRVAL_A(36'h000000000),
+    .SRVAL_B(36'h000000000),
+    .WRITE_MODE_A("NO_CHANGE"),
+    .WRITE_MODE_B("NO_CHANGE"),
+    .WRITE_WIDTH_A(18),
+    .WRITE_WIDTH_B(18)) 
+    \gen_wr_a.gen_word_narrow.mem_reg_1 
+       (.ADDRARDADDR({1'b1,addra,1'b0,1'b0,1'b0,1'b0}),
+        .ADDRBWRADDR({1'b1,addrb,1'b0,1'b0,1'b0,1'b0}),
+        .CASCADEINA(1'b1),
+        .CASCADEINB(1'b1),
+        .CASCADEOUTA(\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_CASCADEOUTA_UNCONNECTED ),
+        .CASCADEOUTB(\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_CASCADEOUTB_UNCONNECTED ),
+        .CLKARDCLK(clka),
+        .CLKBWRCLK(clka),
+        .DBITERR(\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DBITERR_UNCONNECTED ),
+        .DIADI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,dina[33:18]}),
+        .DIBDI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .DIPADIP({1'b0,1'b0,dina[35:34]}),
+        .DIPBDIP({1'b0,1'b0,1'b1,1'b1}),
+        .DOADO(\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOADO_UNCONNECTED [31:0]),
+        .DOBDO({\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOBDO_UNCONNECTED [31:16],doutb[33:18]}),
+        .DOPADOP(\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOPADOP_UNCONNECTED [3:0]),
+        .DOPBDOP({\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_DOPBDOP_UNCONNECTED [3:2],doutb[35:34]}),
+        .ECCPARITY(\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_ECCPARITY_UNCONNECTED [7:0]),
+        .ENARDEN(wea),
+        .ENBWREN(enb),
+        .INJECTDBITERR(\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_INJECTDBITERR_UNCONNECTED ),
+        .INJECTSBITERR(\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_INJECTSBITERR_UNCONNECTED ),
+        .RDADDRECC(\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_RDADDRECC_UNCONNECTED [8:0]),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(regceb),
+        .RSTRAMARSTRAM(1'b0),
+        .RSTRAMB(1'b0),
+        .RSTREGARSTREG(1'b0),
+        .RSTREGB(rstb),
+        .SBITERR(\NLW_gen_wr_a.gen_word_narrow.mem_reg_1_SBITERR_UNCONNECTED ),
+        .WEA({wea,wea,1'b1,1'b1}),
+        .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
+  (* \MEM.PORTA.ADDRESS_BEGIN  = "0" *) 
+  (* \MEM.PORTA.ADDRESS_END  = "2047" *) 
+  (* \MEM.PORTA.DATA_BIT_LAYOUT  = "p0_d2" *) 
+  (* \MEM.PORTA.DATA_LSB  = "36" *) 
+  (* \MEM.PORTA.DATA_MSB  = "37" *) 
+  (* \MEM.PORTB.ADDRESS_BEGIN  = "0" *) 
+  (* \MEM.PORTB.ADDRESS_END  = "2047" *) 
+  (* \MEM.PORTB.DATA_BIT_LAYOUT  = "p0_d2" *) 
+  (* \MEM.PORTB.DATA_LSB  = "36" *) 
+  (* \MEM.PORTB.DATA_MSB  = "37" *) 
+  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "77824" *) 
+  (* RTL_RAM_NAME = "gen_wr_a.gen_word_narrow.mem" *) 
+  (* RTL_RAM_TYPE = "RAM_SDP" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "2047" *) 
+  (* ram_offset = "0" *) 
+  (* ram_slice_begin = "36" *) 
+  (* ram_slice_end = "37" *) 
+  RAMB18E1 #(
+    .DOA_REG(0),
+    .DOB_REG(1),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_13(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_14(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_15(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_16(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_17(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_18(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_19(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_1F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_20(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_21(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_22(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_23(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_24(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_25(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_26(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_27(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_28(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_29(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_2F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_30(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_31(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_32(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_33(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_34(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_35(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_36(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_37(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_38(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_39(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3A(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3B(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3C(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3D(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3E(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_3F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_A(18'h00000),
+    .INIT_B(18'h00000),
+    .RAM_MODE("TDP"),
+    .RDADDR_COLLISION_HWCONFIG("DELAYED_WRITE"),
+    .READ_WIDTH_A(9),
+    .READ_WIDTH_B(9),
+    .RSTREG_PRIORITY_A("RSTREG"),
+    .RSTREG_PRIORITY_B("RSTREG"),
+    .SIM_COLLISION_CHECK("ALL"),
+    .SIM_DEVICE("7SERIES"),
+    .SRVAL_A(18'h00000),
+    .SRVAL_B(18'h00000),
+    .WRITE_MODE_A("NO_CHANGE"),
+    .WRITE_MODE_B("NO_CHANGE"),
+    .WRITE_WIDTH_A(9),
+    .WRITE_WIDTH_B(9)) 
+    \gen_wr_a.gen_word_narrow.mem_reg_2 
+       (.ADDRARDADDR({addra,1'b0,1'b0,1'b0}),
+        .ADDRBWRADDR({addrb,1'b0,1'b0,1'b0}),
+        .CLKARDCLK(clka),
+        .CLKBWRCLK(clka),
+        .DIADI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,dina[37:36]}),
+        .DIBDI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b1}),
+        .DIPADIP({1'b0,1'b0}),
+        .DIPBDIP({1'b0,1'b0}),
+        .DOADO(\NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOADO_UNCONNECTED [15:0]),
+        .DOBDO({\NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOBDO_UNCONNECTED [15:2],doutb[37:36]}),
+        .DOPADOP(\NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOPADOP_UNCONNECTED [1:0]),
+        .DOPBDOP(\NLW_gen_wr_a.gen_word_narrow.mem_reg_2_DOPBDOP_UNCONNECTED [1:0]),
+        .ENARDEN(wea),
+        .ENBWREN(enb),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(regceb),
+        .RSTRAMARSTRAM(1'b0),
+        .RSTRAMB(1'b0),
+        .RSTREGARSTREG(1'b0),
+        .RSTREGB(rstb),
+        .WEA({wea,1'b1}),
+        .WEBWE({1'b0,1'b0,1'b0,1'b0}));
 endmodule
 `ifndef GLBL
 `define GLBL

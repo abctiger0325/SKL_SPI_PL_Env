@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 17:14:19 2022
+| Date         : Tue Mar 22 17:45:54 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -file Zed_SPI_PL_SPI_ADC_MasterStr_0_0_utilization_synth.rpt -pb Zed_SPI_PL_SPI_ADC_MasterStr_0_0_utilization_synth.pb
 | Design       : Zed_SPI_PL_SPI_ADC_MasterStr_0_0
@@ -155,7 +155,7 @@ Table of Contents
 | LUT2     |  125 |                 LUT |
 | MUXF7    |  113 |               MuxFx |
 | RAMB36E1 |   96 |        Block Memory |
-| LUT4     |   69 |                 LUT |
+| LUT4     |   70 |                 LUT |
 | MUXF8    |   32 |               MuxFx |
 | CARRY4   |   31 |          CarryLogic |
 | LUT1     |   11 |                 LUT |

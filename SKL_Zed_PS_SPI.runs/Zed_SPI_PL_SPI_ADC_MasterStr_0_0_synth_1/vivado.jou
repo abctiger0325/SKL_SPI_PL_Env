@@ -2,12 +2,12 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Mar 22 17:13:18 2022
-# Process ID: 13692
+# Start of session at: Tue Mar 22 17:44:49 2022
+# Process ID: 4703
 # Current directory: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1
 # Command line: vivado -log Zed_SPI_PL_SPI_ADC_MasterStr_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zed_SPI_PL_SPI_ADC_MasterStr_0_0.tcl
 # Log file: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.vds
 # Journal file: /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1/vivado.jou
-# Running On: labish-OptiPlex-9010, OS: Linux, CPU Frequency: 3691.681 MHz, CPU Physical cores: 4, Host memory: 33553 MB
+# Running On: labish-OptiPlex-9010, OS: Linux, CPU Frequency: 3691.820 MHz, CPU Physical cores: 4, Host memory: 33553 MB
 #-----------------------------------------------------------
 source Zed_SPI_PL_SPI_ADC_MasterStr_0_0.tcl -notrace

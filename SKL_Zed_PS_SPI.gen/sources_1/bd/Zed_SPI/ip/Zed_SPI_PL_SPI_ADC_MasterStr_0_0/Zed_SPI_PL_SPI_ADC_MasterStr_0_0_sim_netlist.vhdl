@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Tue Mar 22 17:14:20 2022
+-- Date        : Tue Mar 22 17:45:55 2022
 -- Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_sim_netlist.vhdl
@@ -21,7 +21,7 @@ entity Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC is
     r_Done_reg_1 : out STD_LOGIC;
     i_CMOS_Clk : in STD_LOGIC;
     \count_reg[0]\ : in STD_LOGIC;
-    \count_reg[0]_0\ : in STD_LOGIC;
+    m00_axi_init_axi_txn : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_aresetn : in STD_LOGIC
   );
@@ -73,52 +73,52 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC is
   signal \r_Count_reg[8]_i_1_n_6\ : STD_LOGIC;
   signal \r_Count_reg[8]_i_1_n_7\ : STD_LOGIC;
   signal r_Done_i_1_n_0 : STD_LOGIC;
-  signal r_Done_i_2_n_0 : STD_LOGIC;
-  signal r_Done_i_4_n_0 : STD_LOGIC;
-  signal r_Done_i_5_n_0 : STD_LOGIC;
-  signal r_Done_i_8_n_0 : STD_LOGIC;
   signal \^r_done_reg_0\ : STD_LOGIC;
-  signal r_Done_reg_i_10_n_0 : STD_LOGIC;
-  signal r_Done_reg_i_10_n_1 : STD_LOGIC;
-  signal r_Done_reg_i_10_n_2 : STD_LOGIC;
-  signal r_Done_reg_i_10_n_3 : STD_LOGIC;
-  signal r_Done_reg_i_10_n_4 : STD_LOGIC;
-  signal r_Done_reg_i_3_n_0 : STD_LOGIC;
-  signal r_Done_reg_i_3_n_1 : STD_LOGIC;
-  signal r_Done_reg_i_3_n_2 : STD_LOGIC;
-  signal r_Done_reg_i_3_n_3 : STD_LOGIC;
-  signal r_Done_reg_i_3_n_4 : STD_LOGIC;
-  signal r_Done_reg_i_3_n_5 : STD_LOGIC;
-  signal r_Done_reg_i_3_n_6 : STD_LOGIC;
-  signal r_Done_reg_i_3_n_7 : STD_LOGIC;
-  signal r_Done_reg_i_6_n_2 : STD_LOGIC;
-  signal r_Done_reg_i_6_n_3 : STD_LOGIC;
-  signal r_Done_reg_i_6_n_5 : STD_LOGIC;
-  signal r_Done_reg_i_6_n_6 : STD_LOGIC;
-  signal r_Done_reg_i_6_n_7 : STD_LOGIC;
-  signal r_Done_reg_i_7_n_0 : STD_LOGIC;
-  signal r_Done_reg_i_7_n_1 : STD_LOGIC;
-  signal r_Done_reg_i_7_n_2 : STD_LOGIC;
-  signal r_Done_reg_i_7_n_3 : STD_LOGIC;
-  signal r_Done_reg_i_7_n_4 : STD_LOGIC;
-  signal r_Done_reg_i_7_n_5 : STD_LOGIC;
-  signal r_Done_reg_i_7_n_6 : STD_LOGIC;
-  signal r_Done_reg_i_7_n_7 : STD_LOGIC;
-  signal r_Done_reg_i_9_n_0 : STD_LOGIC;
-  signal r_Done_reg_i_9_n_1 : STD_LOGIC;
-  signal r_Done_reg_i_9_n_2 : STD_LOGIC;
-  signal r_Done_reg_i_9_n_3 : STD_LOGIC;
-  signal r_Done_reg_i_9_n_4 : STD_LOGIC;
-  signal r_Done_reg_i_9_n_5 : STD_LOGIC;
-  signal r_Done_reg_i_9_n_6 : STD_LOGIC;
-  signal r_Done_reg_i_9_n_7 : STD_LOGIC;
   signal r_Work : STD_LOGIC;
   signal r_Work_i_1_n_0 : STD_LOGIC;
+  signal r_Work_i_2_n_0 : STD_LOGIC;
+  signal r_Work_i_4_n_0 : STD_LOGIC;
+  signal r_Work_i_5_n_0 : STD_LOGIC;
+  signal r_Work_i_8_n_0 : STD_LOGIC;
+  signal r_Work_reg_i_10_n_0 : STD_LOGIC;
+  signal r_Work_reg_i_10_n_1 : STD_LOGIC;
+  signal r_Work_reg_i_10_n_2 : STD_LOGIC;
+  signal r_Work_reg_i_10_n_3 : STD_LOGIC;
+  signal r_Work_reg_i_10_n_4 : STD_LOGIC;
+  signal r_Work_reg_i_3_n_0 : STD_LOGIC;
+  signal r_Work_reg_i_3_n_1 : STD_LOGIC;
+  signal r_Work_reg_i_3_n_2 : STD_LOGIC;
+  signal r_Work_reg_i_3_n_3 : STD_LOGIC;
+  signal r_Work_reg_i_3_n_4 : STD_LOGIC;
+  signal r_Work_reg_i_3_n_5 : STD_LOGIC;
+  signal r_Work_reg_i_3_n_6 : STD_LOGIC;
+  signal r_Work_reg_i_3_n_7 : STD_LOGIC;
+  signal r_Work_reg_i_6_n_2 : STD_LOGIC;
+  signal r_Work_reg_i_6_n_3 : STD_LOGIC;
+  signal r_Work_reg_i_6_n_5 : STD_LOGIC;
+  signal r_Work_reg_i_6_n_6 : STD_LOGIC;
+  signal r_Work_reg_i_6_n_7 : STD_LOGIC;
+  signal r_Work_reg_i_7_n_0 : STD_LOGIC;
+  signal r_Work_reg_i_7_n_1 : STD_LOGIC;
+  signal r_Work_reg_i_7_n_2 : STD_LOGIC;
+  signal r_Work_reg_i_7_n_3 : STD_LOGIC;
+  signal r_Work_reg_i_7_n_4 : STD_LOGIC;
+  signal r_Work_reg_i_7_n_5 : STD_LOGIC;
+  signal r_Work_reg_i_7_n_6 : STD_LOGIC;
+  signal r_Work_reg_i_7_n_7 : STD_LOGIC;
+  signal r_Work_reg_i_9_n_0 : STD_LOGIC;
+  signal r_Work_reg_i_9_n_1 : STD_LOGIC;
+  signal r_Work_reg_i_9_n_2 : STD_LOGIC;
+  signal r_Work_reg_i_9_n_3 : STD_LOGIC;
+  signal r_Work_reg_i_9_n_4 : STD_LOGIC;
+  signal r_Work_reg_i_9_n_5 : STD_LOGIC;
+  signal r_Work_reg_i_9_n_6 : STD_LOGIC;
+  signal r_Work_reg_i_9_n_7 : STD_LOGIC;
   signal r_Work_reg_n_0 : STD_LOGIC;
   signal \NLW_r_Count_reg[16]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal NLW_r_Done_reg_i_10_O_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_r_Done_reg_i_6_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 2 );
-  signal NLW_r_Done_reg_i_6_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal NLW_r_Work_reg_i_10_O_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_r_Work_reg_i_6_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal NLW_r_Work_reg_i_6_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \r_Count_reg[0]_i_3\ : label is 11;
   attribute ADDER_THRESHOLD of \r_Count_reg[12]_i_1\ : label is 11;
@@ -127,12 +127,12 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC is
   attribute ADDER_THRESHOLD of \r_Count_reg[8]_i_1\ : label is 11;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of r_Done_i_1 : label is "soft_lutpair0";
-  attribute ADDER_THRESHOLD of r_Done_reg_i_10 : label is 35;
-  attribute ADDER_THRESHOLD of r_Done_reg_i_3 : label is 35;
-  attribute ADDER_THRESHOLD of r_Done_reg_i_6 : label is 35;
-  attribute ADDER_THRESHOLD of r_Done_reg_i_7 : label is 35;
-  attribute ADDER_THRESHOLD of r_Done_reg_i_9 : label is 35;
   attribute SOFT_HLUTNM of r_Work_i_1 : label is "soft_lutpair0";
+  attribute ADDER_THRESHOLD of r_Work_reg_i_10 : label is 35;
+  attribute ADDER_THRESHOLD of r_Work_reg_i_3 : label is 35;
+  attribute ADDER_THRESHOLD of r_Work_reg_i_6 : label is 35;
+  attribute ADDER_THRESHOLD of r_Work_reg_i_7 : label is 35;
+  attribute ADDER_THRESHOLD of r_Work_reg_i_9 : label is 35;
 begin
   r_Done_reg_0 <= \^r_done_reg_0\;
 \count[0]_i_1\: unisim.vcomponents.LUT6
@@ -141,7 +141,7 @@ begin
     )
         port map (
       I0 => \^r_done_reg_0\,
-      I1 => \count_reg[0]_0\,
+      I1 => m00_axi_init_axi_txn,
       I2 => Q(1),
       I3 => Q(0),
       I4 => \count_reg[0]\,
@@ -155,7 +155,7 @@ begin
         port map (
       I0 => Q(0),
       I1 => Q(1),
-      I2 => \count_reg[0]_0\,
+      I2 => m00_axi_init_axi_txn,
       I3 => \^r_done_reg_0\,
       O => E(0)
     );
@@ -166,9 +166,9 @@ begin
         port map (
       I0 => \^r_done_reg_0\,
       I1 => \count_reg[0]\,
-      I2 => \count_reg[0]_0\,
+      I2 => m00_axi_init_axi_txn,
       I3 => r_Work_reg_n_0,
-      I4 => r_Done_i_2_n_0,
+      I4 => r_Work_i_2_n_0,
       O => \r_Count[0]_i_1_n_0\
     );
 \r_Count[0]_i_2\: unisim.vcomponents.LUT4
@@ -178,7 +178,7 @@ begin
         port map (
       I0 => \^r_done_reg_0\,
       I1 => \count_reg[0]\,
-      I2 => \count_reg[0]_0\,
+      I2 => m00_axi_init_axi_txn,
       I3 => r_Work_reg_n_0,
       O => r_Work
     );
@@ -491,59 +491,12 @@ r_Done_i_1: unisim.vcomponents.LUT5
       INIT => X"F4445444"
     )
         port map (
-      I0 => r_Done_i_2_n_0,
+      I0 => r_Work_i_2_n_0,
       I1 => r_Work_reg_n_0,
-      I2 => \count_reg[0]_0\,
+      I2 => m00_axi_init_axi_txn,
       I3 => \count_reg[0]\,
       I4 => \^r_done_reg_0\,
       O => r_Done_i_1_n_0
-    );
-r_Done_i_2: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"000000F1"
-    )
-        port map (
-      I0 => r_Done_reg_i_3_n_7,
-      I1 => r_Done_i_4_n_0,
-      I2 => r_Done_i_5_n_0,
-      I3 => r_Done_reg_i_6_n_6,
-      I4 => r_Done_reg_i_6_n_5,
-      O => r_Done_i_2_n_0
-    );
-r_Done_i_4: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A8A8A8A8A8A8A888"
-    )
-        port map (
-      I0 => r_Done_reg_i_7_n_4,
-      I1 => r_Done_i_8_n_0,
-      I2 => r_Done_reg_i_9_n_5,
-      I3 => r_Done_reg_i_9_n_6,
-      I4 => r_Done_reg_i_9_n_7,
-      I5 => r_Done_reg_i_10_n_4,
-      O => r_Done_i_4_n_0
-    );
-r_Done_i_5: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7FFF"
-    )
-        port map (
-      I0 => r_Done_reg_i_3_n_4,
-      I1 => r_Done_reg_i_6_n_7,
-      I2 => r_Done_reg_i_3_n_6,
-      I3 => r_Done_reg_i_3_n_5,
-      O => r_Done_i_5_n_0
-    );
-r_Done_i_8: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => r_Done_reg_i_7_n_6,
-      I1 => r_Done_reg_i_7_n_5,
-      I2 => r_Done_reg_i_9_n_4,
-      I3 => r_Done_reg_i_7_n_7,
-      O => r_Done_i_8_n_0
     );
 r_Done_reg: unisim.vcomponents.FDRE
     generic map(
@@ -556,90 +509,64 @@ r_Done_reg: unisim.vcomponents.FDRE
       Q => \^r_done_reg_0\,
       R => '0'
     );
-r_Done_reg_i_10: unisim.vcomponents.CARRY4
-     port map (
-      CI => '0',
-      CO(3) => r_Done_reg_i_10_n_0,
-      CO(2) => r_Done_reg_i_10_n_1,
-      CO(1) => r_Done_reg_i_10_n_2,
-      CO(0) => r_Done_reg_i_10_n_3,
-      CYINIT => r_Count_reg(0),
-      DI(3 downto 0) => B"0000",
-      O(3) => r_Done_reg_i_10_n_4,
-      O(2 downto 0) => NLW_r_Done_reg_i_10_O_UNCONNECTED(2 downto 0),
-      S(3 downto 0) => r_Count_reg(4 downto 1)
-    );
-r_Done_reg_i_3: unisim.vcomponents.CARRY4
-     port map (
-      CI => r_Done_reg_i_7_n_0,
-      CO(3) => r_Done_reg_i_3_n_0,
-      CO(2) => r_Done_reg_i_3_n_1,
-      CO(1) => r_Done_reg_i_3_n_2,
-      CO(0) => r_Done_reg_i_3_n_3,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3) => r_Done_reg_i_3_n_4,
-      O(2) => r_Done_reg_i_3_n_5,
-      O(1) => r_Done_reg_i_3_n_6,
-      O(0) => r_Done_reg_i_3_n_7,
-      S(3 downto 0) => r_Count_reg(16 downto 13)
-    );
-r_Done_reg_i_6: unisim.vcomponents.CARRY4
-     port map (
-      CI => r_Done_reg_i_3_n_0,
-      CO(3 downto 2) => NLW_r_Done_reg_i_6_CO_UNCONNECTED(3 downto 2),
-      CO(1) => r_Done_reg_i_6_n_2,
-      CO(0) => r_Done_reg_i_6_n_3,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3) => NLW_r_Done_reg_i_6_O_UNCONNECTED(3),
-      O(2) => r_Done_reg_i_6_n_5,
-      O(1) => r_Done_reg_i_6_n_6,
-      O(0) => r_Done_reg_i_6_n_7,
-      S(3) => '0',
-      S(2 downto 0) => r_Count_reg(19 downto 17)
-    );
-r_Done_reg_i_7: unisim.vcomponents.CARRY4
-     port map (
-      CI => r_Done_reg_i_9_n_0,
-      CO(3) => r_Done_reg_i_7_n_0,
-      CO(2) => r_Done_reg_i_7_n_1,
-      CO(1) => r_Done_reg_i_7_n_2,
-      CO(0) => r_Done_reg_i_7_n_3,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3) => r_Done_reg_i_7_n_4,
-      O(2) => r_Done_reg_i_7_n_5,
-      O(1) => r_Done_reg_i_7_n_6,
-      O(0) => r_Done_reg_i_7_n_7,
-      S(3 downto 0) => r_Count_reg(12 downto 9)
-    );
-r_Done_reg_i_9: unisim.vcomponents.CARRY4
-     port map (
-      CI => r_Done_reg_i_10_n_0,
-      CO(3) => r_Done_reg_i_9_n_0,
-      CO(2) => r_Done_reg_i_9_n_1,
-      CO(1) => r_Done_reg_i_9_n_2,
-      CO(0) => r_Done_reg_i_9_n_3,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3) => r_Done_reg_i_9_n_4,
-      O(2) => r_Done_reg_i_9_n_5,
-      O(1) => r_Done_reg_i_9_n_6,
-      O(0) => r_Done_reg_i_9_n_7,
-      S(3 downto 0) => r_Count_reg(8 downto 5)
-    );
 r_Work_i_1: unisim.vcomponents.LUT5
     generic map(
       INIT => X"AAAA2000"
     )
         port map (
-      I0 => r_Done_i_2_n_0,
+      I0 => r_Work_i_2_n_0,
       I1 => \^r_done_reg_0\,
       I2 => \count_reg[0]\,
-      I3 => \count_reg[0]_0\,
+      I3 => m00_axi_init_axi_txn,
       I4 => r_Work_reg_n_0,
       O => r_Work_i_1_n_0
+    );
+r_Work_i_2: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"000000F1"
+    )
+        port map (
+      I0 => r_Work_reg_i_3_n_7,
+      I1 => r_Work_i_4_n_0,
+      I2 => r_Work_i_5_n_0,
+      I3 => r_Work_reg_i_6_n_6,
+      I4 => r_Work_reg_i_6_n_5,
+      O => r_Work_i_2_n_0
+    );
+r_Work_i_4: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A8A8A8A8A8A8A888"
+    )
+        port map (
+      I0 => r_Work_reg_i_7_n_4,
+      I1 => r_Work_i_8_n_0,
+      I2 => r_Work_reg_i_9_n_5,
+      I3 => r_Work_reg_i_9_n_6,
+      I4 => r_Work_reg_i_9_n_7,
+      I5 => r_Work_reg_i_10_n_4,
+      O => r_Work_i_4_n_0
+    );
+r_Work_i_5: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => r_Work_reg_i_3_n_4,
+      I1 => r_Work_reg_i_6_n_7,
+      I2 => r_Work_reg_i_3_n_6,
+      I3 => r_Work_reg_i_3_n_5,
+      O => r_Work_i_5_n_0
+    );
+r_Work_i_8: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => r_Work_reg_i_7_n_6,
+      I1 => r_Work_reg_i_7_n_5,
+      I2 => r_Work_reg_i_9_n_4,
+      I3 => r_Work_reg_i_7_n_7,
+      O => r_Work_i_8_n_0
     );
 r_Work_reg: unisim.vcomponents.FDRE
     generic map(
@@ -651,6 +578,79 @@ r_Work_reg: unisim.vcomponents.FDRE
       D => r_Work_i_1_n_0,
       Q => r_Work_reg_n_0,
       R => '0'
+    );
+r_Work_reg_i_10: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => r_Work_reg_i_10_n_0,
+      CO(2) => r_Work_reg_i_10_n_1,
+      CO(1) => r_Work_reg_i_10_n_2,
+      CO(0) => r_Work_reg_i_10_n_3,
+      CYINIT => r_Count_reg(0),
+      DI(3 downto 0) => B"0000",
+      O(3) => r_Work_reg_i_10_n_4,
+      O(2 downto 0) => NLW_r_Work_reg_i_10_O_UNCONNECTED(2 downto 0),
+      S(3 downto 0) => r_Count_reg(4 downto 1)
+    );
+r_Work_reg_i_3: unisim.vcomponents.CARRY4
+     port map (
+      CI => r_Work_reg_i_7_n_0,
+      CO(3) => r_Work_reg_i_3_n_0,
+      CO(2) => r_Work_reg_i_3_n_1,
+      CO(1) => r_Work_reg_i_3_n_2,
+      CO(0) => r_Work_reg_i_3_n_3,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => r_Work_reg_i_3_n_4,
+      O(2) => r_Work_reg_i_3_n_5,
+      O(1) => r_Work_reg_i_3_n_6,
+      O(0) => r_Work_reg_i_3_n_7,
+      S(3 downto 0) => r_Count_reg(16 downto 13)
+    );
+r_Work_reg_i_6: unisim.vcomponents.CARRY4
+     port map (
+      CI => r_Work_reg_i_3_n_0,
+      CO(3 downto 2) => NLW_r_Work_reg_i_6_CO_UNCONNECTED(3 downto 2),
+      CO(1) => r_Work_reg_i_6_n_2,
+      CO(0) => r_Work_reg_i_6_n_3,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => NLW_r_Work_reg_i_6_O_UNCONNECTED(3),
+      O(2) => r_Work_reg_i_6_n_5,
+      O(1) => r_Work_reg_i_6_n_6,
+      O(0) => r_Work_reg_i_6_n_7,
+      S(3) => '0',
+      S(2 downto 0) => r_Count_reg(19 downto 17)
+    );
+r_Work_reg_i_7: unisim.vcomponents.CARRY4
+     port map (
+      CI => r_Work_reg_i_9_n_0,
+      CO(3) => r_Work_reg_i_7_n_0,
+      CO(2) => r_Work_reg_i_7_n_1,
+      CO(1) => r_Work_reg_i_7_n_2,
+      CO(0) => r_Work_reg_i_7_n_3,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => r_Work_reg_i_7_n_4,
+      O(2) => r_Work_reg_i_7_n_5,
+      O(1) => r_Work_reg_i_7_n_6,
+      O(0) => r_Work_reg_i_7_n_7,
+      S(3 downto 0) => r_Count_reg(12 downto 9)
+    );
+r_Work_reg_i_9: unisim.vcomponents.CARRY4
+     port map (
+      CI => r_Work_reg_i_10_n_0,
+      CO(3) => r_Work_reg_i_9_n_0,
+      CO(2) => r_Work_reg_i_9_n_1,
+      CO(1) => r_Work_reg_i_9_n_2,
+      CO(0) => r_Work_reg_i_9_n_3,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => r_Work_reg_i_9_n_4,
+      O(2) => r_Work_reg_i_9_n_5,
+      O(1) => r_Work_reg_i_9_n_6,
+      O(0) => r_Work_reg_i_9_n_7,
+      S(3 downto 0) => r_Count_reg(8 downto 5)
     );
 end STRUCTURE;
 library IEEE;
@@ -2005,411 +2005,411 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI is
   signal NLW_r_TX_reg_i_4_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_r_TX_reg_i_8_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \i_TX_Byte[0][7]_i_2\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \i_TX_Byte[0][7]_i_4\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \i_TX_Byte[10][0]_i_1\ : label is "soft_lutpair134";
-  attribute SOFT_HLUTNM of \i_TX_Byte[10][1]_i_1\ : label is "soft_lutpair134";
-  attribute SOFT_HLUTNM of \i_TX_Byte[10][2]_i_1\ : label is "soft_lutpair135";
-  attribute SOFT_HLUTNM of \i_TX_Byte[10][3]_i_1\ : label is "soft_lutpair135";
-  attribute SOFT_HLUTNM of \i_TX_Byte[10][4]_i_1\ : label is "soft_lutpair136";
-  attribute SOFT_HLUTNM of \i_TX_Byte[10][5]_i_1\ : label is "soft_lutpair136";
-  attribute SOFT_HLUTNM of \i_TX_Byte[10][6]_i_1\ : label is "soft_lutpair137";
-  attribute SOFT_HLUTNM of \i_TX_Byte[10][7]_i_1\ : label is "soft_lutpair137";
-  attribute SOFT_HLUTNM of \i_TX_Byte[10][7]_i_2\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \i_TX_Byte[11][0]_i_1\ : label is "soft_lutpair194";
-  attribute SOFT_HLUTNM of \i_TX_Byte[11][1]_i_1\ : label is "soft_lutpair194";
-  attribute SOFT_HLUTNM of \i_TX_Byte[11][2]_i_1\ : label is "soft_lutpair195";
-  attribute SOFT_HLUTNM of \i_TX_Byte[11][3]_i_1\ : label is "soft_lutpair195";
-  attribute SOFT_HLUTNM of \i_TX_Byte[11][4]_i_1\ : label is "soft_lutpair196";
-  attribute SOFT_HLUTNM of \i_TX_Byte[11][5]_i_1\ : label is "soft_lutpair196";
-  attribute SOFT_HLUTNM of \i_TX_Byte[11][6]_i_1\ : label is "soft_lutpair197";
-  attribute SOFT_HLUTNM of \i_TX_Byte[11][7]_i_1\ : label is "soft_lutpair197";
-  attribute SOFT_HLUTNM of \i_TX_Byte[11][7]_i_2\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \i_TX_Byte[12][0]_i_1\ : label is "soft_lutpair202";
-  attribute SOFT_HLUTNM of \i_TX_Byte[12][1]_i_1\ : label is "soft_lutpair202";
-  attribute SOFT_HLUTNM of \i_TX_Byte[12][2]_i_1\ : label is "soft_lutpair203";
-  attribute SOFT_HLUTNM of \i_TX_Byte[12][3]_i_1\ : label is "soft_lutpair203";
-  attribute SOFT_HLUTNM of \i_TX_Byte[12][4]_i_1\ : label is "soft_lutpair204";
-  attribute SOFT_HLUTNM of \i_TX_Byte[12][5]_i_1\ : label is "soft_lutpair204";
-  attribute SOFT_HLUTNM of \i_TX_Byte[12][6]_i_1\ : label is "soft_lutpair205";
-  attribute SOFT_HLUTNM of \i_TX_Byte[12][7]_i_1\ : label is "soft_lutpair205";
-  attribute SOFT_HLUTNM of \i_TX_Byte[12][7]_i_2\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \i_TX_Byte[13][0]_i_1\ : label is "soft_lutpair190";
-  attribute SOFT_HLUTNM of \i_TX_Byte[13][1]_i_1\ : label is "soft_lutpair190";
-  attribute SOFT_HLUTNM of \i_TX_Byte[13][2]_i_1\ : label is "soft_lutpair191";
-  attribute SOFT_HLUTNM of \i_TX_Byte[13][3]_i_1\ : label is "soft_lutpair191";
-  attribute SOFT_HLUTNM of \i_TX_Byte[13][4]_i_1\ : label is "soft_lutpair192";
-  attribute SOFT_HLUTNM of \i_TX_Byte[13][5]_i_1\ : label is "soft_lutpair192";
-  attribute SOFT_HLUTNM of \i_TX_Byte[13][6]_i_1\ : label is "soft_lutpair193";
-  attribute SOFT_HLUTNM of \i_TX_Byte[13][7]_i_1\ : label is "soft_lutpair193";
-  attribute SOFT_HLUTNM of \i_TX_Byte[13][7]_i_2\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \i_TX_Byte[14][0]_i_1\ : label is "soft_lutpair106";
-  attribute SOFT_HLUTNM of \i_TX_Byte[14][1]_i_1\ : label is "soft_lutpair106";
-  attribute SOFT_HLUTNM of \i_TX_Byte[14][2]_i_1\ : label is "soft_lutpair107";
-  attribute SOFT_HLUTNM of \i_TX_Byte[14][3]_i_1\ : label is "soft_lutpair107";
-  attribute SOFT_HLUTNM of \i_TX_Byte[14][4]_i_1\ : label is "soft_lutpair108";
-  attribute SOFT_HLUTNM of \i_TX_Byte[14][5]_i_1\ : label is "soft_lutpair108";
-  attribute SOFT_HLUTNM of \i_TX_Byte[14][6]_i_1\ : label is "soft_lutpair109";
-  attribute SOFT_HLUTNM of \i_TX_Byte[14][7]_i_1\ : label is "soft_lutpair109";
-  attribute SOFT_HLUTNM of \i_TX_Byte[14][7]_i_2\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \i_TX_Byte[15][0]_i_1\ : label is "soft_lutpair110";
-  attribute SOFT_HLUTNM of \i_TX_Byte[15][1]_i_1\ : label is "soft_lutpair110";
-  attribute SOFT_HLUTNM of \i_TX_Byte[15][2]_i_1\ : label is "soft_lutpair111";
-  attribute SOFT_HLUTNM of \i_TX_Byte[15][3]_i_1\ : label is "soft_lutpair111";
-  attribute SOFT_HLUTNM of \i_TX_Byte[15][4]_i_1\ : label is "soft_lutpair112";
-  attribute SOFT_HLUTNM of \i_TX_Byte[15][5]_i_1\ : label is "soft_lutpair112";
-  attribute SOFT_HLUTNM of \i_TX_Byte[15][6]_i_1\ : label is "soft_lutpair113";
-  attribute SOFT_HLUTNM of \i_TX_Byte[15][7]_i_1\ : label is "soft_lutpair113";
-  attribute SOFT_HLUTNM of \i_TX_Byte[15][7]_i_2\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \i_TX_Byte[16][0]_i_1\ : label is "soft_lutpair142";
-  attribute SOFT_HLUTNM of \i_TX_Byte[16][1]_i_1\ : label is "soft_lutpair142";
-  attribute SOFT_HLUTNM of \i_TX_Byte[16][2]_i_1\ : label is "soft_lutpair143";
-  attribute SOFT_HLUTNM of \i_TX_Byte[16][3]_i_1\ : label is "soft_lutpair143";
-  attribute SOFT_HLUTNM of \i_TX_Byte[16][4]_i_1\ : label is "soft_lutpair144";
-  attribute SOFT_HLUTNM of \i_TX_Byte[16][5]_i_1\ : label is "soft_lutpair144";
-  attribute SOFT_HLUTNM of \i_TX_Byte[16][6]_i_1\ : label is "soft_lutpair145";
-  attribute SOFT_HLUTNM of \i_TX_Byte[16][7]_i_1\ : label is "soft_lutpair145";
-  attribute SOFT_HLUTNM of \i_TX_Byte[17][7]_i_3\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \i_TX_Byte[1][0]_i_1\ : label is "soft_lutpair189";
-  attribute SOFT_HLUTNM of \i_TX_Byte[1][1]_i_1\ : label is "soft_lutpair189";
-  attribute SOFT_HLUTNM of \i_TX_Byte[1][2]_i_1\ : label is "soft_lutpair188";
-  attribute SOFT_HLUTNM of \i_TX_Byte[1][3]_i_1\ : label is "soft_lutpair188";
-  attribute SOFT_HLUTNM of \i_TX_Byte[1][4]_i_1\ : label is "soft_lutpair187";
-  attribute SOFT_HLUTNM of \i_TX_Byte[1][5]_i_1\ : label is "soft_lutpair187";
-  attribute SOFT_HLUTNM of \i_TX_Byte[1][6]_i_1\ : label is "soft_lutpair186";
-  attribute SOFT_HLUTNM of \i_TX_Byte[1][7]_i_1\ : label is "soft_lutpair186";
-  attribute SOFT_HLUTNM of \i_TX_Byte[1][7]_i_2\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \i_TX_Byte[24][0]_i_1\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \i_TX_Byte[24][1]_i_1\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \i_TX_Byte[24][2]_i_1\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \i_TX_Byte[24][3]_i_1\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \i_TX_Byte[24][4]_i_1\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \i_TX_Byte[24][5]_i_1\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \i_TX_Byte[24][6]_i_1\ : label is "soft_lutpair78";
-  attribute SOFT_HLUTNM of \i_TX_Byte[24][7]_i_1\ : label is "soft_lutpair79";
-  attribute SOFT_HLUTNM of \i_TX_Byte[25][0]_i_1\ : label is "soft_lutpair174";
-  attribute SOFT_HLUTNM of \i_TX_Byte[25][1]_i_1\ : label is "soft_lutpair174";
-  attribute SOFT_HLUTNM of \i_TX_Byte[25][2]_i_1\ : label is "soft_lutpair175";
-  attribute SOFT_HLUTNM of \i_TX_Byte[25][3]_i_1\ : label is "soft_lutpair175";
-  attribute SOFT_HLUTNM of \i_TX_Byte[25][4]_i_1\ : label is "soft_lutpair176";
-  attribute SOFT_HLUTNM of \i_TX_Byte[25][5]_i_1\ : label is "soft_lutpair176";
-  attribute SOFT_HLUTNM of \i_TX_Byte[25][6]_i_1\ : label is "soft_lutpair177";
-  attribute SOFT_HLUTNM of \i_TX_Byte[25][7]_i_1\ : label is "soft_lutpair177";
-  attribute SOFT_HLUTNM of \i_TX_Byte[26][0]_i_1\ : label is "soft_lutpair130";
-  attribute SOFT_HLUTNM of \i_TX_Byte[26][1]_i_1\ : label is "soft_lutpair130";
-  attribute SOFT_HLUTNM of \i_TX_Byte[26][2]_i_1\ : label is "soft_lutpair131";
-  attribute SOFT_HLUTNM of \i_TX_Byte[26][3]_i_1\ : label is "soft_lutpair131";
-  attribute SOFT_HLUTNM of \i_TX_Byte[26][4]_i_1\ : label is "soft_lutpair132";
-  attribute SOFT_HLUTNM of \i_TX_Byte[26][5]_i_1\ : label is "soft_lutpair132";
-  attribute SOFT_HLUTNM of \i_TX_Byte[26][6]_i_1\ : label is "soft_lutpair133";
-  attribute SOFT_HLUTNM of \i_TX_Byte[26][7]_i_1\ : label is "soft_lutpair133";
-  attribute SOFT_HLUTNM of \i_TX_Byte[27][0]_i_1\ : label is "soft_lutpair166";
-  attribute SOFT_HLUTNM of \i_TX_Byte[27][1]_i_1\ : label is "soft_lutpair166";
-  attribute SOFT_HLUTNM of \i_TX_Byte[27][2]_i_1\ : label is "soft_lutpair167";
-  attribute SOFT_HLUTNM of \i_TX_Byte[27][3]_i_1\ : label is "soft_lutpair167";
-  attribute SOFT_HLUTNM of \i_TX_Byte[27][4]_i_1\ : label is "soft_lutpair168";
-  attribute SOFT_HLUTNM of \i_TX_Byte[27][5]_i_1\ : label is "soft_lutpair168";
-  attribute SOFT_HLUTNM of \i_TX_Byte[27][6]_i_1\ : label is "soft_lutpair169";
-  attribute SOFT_HLUTNM of \i_TX_Byte[27][7]_i_1\ : label is "soft_lutpair169";
-  attribute SOFT_HLUTNM of \i_TX_Byte[28][0]_i_1\ : label is "soft_lutpair158";
-  attribute SOFT_HLUTNM of \i_TX_Byte[28][1]_i_1\ : label is "soft_lutpair158";
-  attribute SOFT_HLUTNM of \i_TX_Byte[28][2]_i_1\ : label is "soft_lutpair159";
-  attribute SOFT_HLUTNM of \i_TX_Byte[28][3]_i_1\ : label is "soft_lutpair159";
-  attribute SOFT_HLUTNM of \i_TX_Byte[28][4]_i_1\ : label is "soft_lutpair160";
-  attribute SOFT_HLUTNM of \i_TX_Byte[28][5]_i_1\ : label is "soft_lutpair160";
-  attribute SOFT_HLUTNM of \i_TX_Byte[28][6]_i_1\ : label is "soft_lutpair161";
-  attribute SOFT_HLUTNM of \i_TX_Byte[28][7]_i_1\ : label is "soft_lutpair161";
-  attribute SOFT_HLUTNM of \i_TX_Byte[29][0]_i_1\ : label is "soft_lutpair150";
-  attribute SOFT_HLUTNM of \i_TX_Byte[29][1]_i_1\ : label is "soft_lutpair150";
-  attribute SOFT_HLUTNM of \i_TX_Byte[29][2]_i_1\ : label is "soft_lutpair151";
-  attribute SOFT_HLUTNM of \i_TX_Byte[29][3]_i_1\ : label is "soft_lutpair151";
-  attribute SOFT_HLUTNM of \i_TX_Byte[29][4]_i_1\ : label is "soft_lutpair152";
-  attribute SOFT_HLUTNM of \i_TX_Byte[29][5]_i_1\ : label is "soft_lutpair152";
-  attribute SOFT_HLUTNM of \i_TX_Byte[29][6]_i_1\ : label is "soft_lutpair153";
-  attribute SOFT_HLUTNM of \i_TX_Byte[29][7]_i_1\ : label is "soft_lutpair153";
-  attribute SOFT_HLUTNM of \i_TX_Byte[2][0]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \i_TX_Byte[2][1]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \i_TX_Byte[2][2]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \i_TX_Byte[2][3]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \i_TX_Byte[2][4]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \i_TX_Byte[2][5]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \i_TX_Byte[2][6]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \i_TX_Byte[2][7]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \i_TX_Byte[2][7]_i_3\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \i_TX_Byte[2][7]_i_4\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \i_TX_Byte[30][0]_i_1\ : label is "soft_lutpair102";
-  attribute SOFT_HLUTNM of \i_TX_Byte[30][1]_i_1\ : label is "soft_lutpair102";
-  attribute SOFT_HLUTNM of \i_TX_Byte[30][2]_i_1\ : label is "soft_lutpair103";
-  attribute SOFT_HLUTNM of \i_TX_Byte[30][3]_i_1\ : label is "soft_lutpair103";
-  attribute SOFT_HLUTNM of \i_TX_Byte[30][4]_i_1\ : label is "soft_lutpair104";
-  attribute SOFT_HLUTNM of \i_TX_Byte[30][5]_i_1\ : label is "soft_lutpair104";
-  attribute SOFT_HLUTNM of \i_TX_Byte[30][6]_i_1\ : label is "soft_lutpair105";
-  attribute SOFT_HLUTNM of \i_TX_Byte[30][7]_i_1\ : label is "soft_lutpair105";
-  attribute SOFT_HLUTNM of \i_TX_Byte[31][0]_i_1\ : label is "soft_lutpair118";
-  attribute SOFT_HLUTNM of \i_TX_Byte[31][1]_i_1\ : label is "soft_lutpair118";
-  attribute SOFT_HLUTNM of \i_TX_Byte[31][2]_i_1\ : label is "soft_lutpair119";
-  attribute SOFT_HLUTNM of \i_TX_Byte[31][3]_i_1\ : label is "soft_lutpair119";
-  attribute SOFT_HLUTNM of \i_TX_Byte[31][4]_i_1\ : label is "soft_lutpair120";
-  attribute SOFT_HLUTNM of \i_TX_Byte[31][5]_i_1\ : label is "soft_lutpair120";
-  attribute SOFT_HLUTNM of \i_TX_Byte[31][6]_i_1\ : label is "soft_lutpair121";
-  attribute SOFT_HLUTNM of \i_TX_Byte[31][7]_i_1\ : label is "soft_lutpair121";
-  attribute SOFT_HLUTNM of \i_TX_Byte[32][0]_i_1\ : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of \i_TX_Byte[32][1]_i_1\ : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \i_TX_Byte[32][2]_i_1\ : label is "soft_lutpair82";
-  attribute SOFT_HLUTNM of \i_TX_Byte[32][3]_i_1\ : label is "soft_lutpair83";
-  attribute SOFT_HLUTNM of \i_TX_Byte[32][4]_i_1\ : label is "soft_lutpair84";
-  attribute SOFT_HLUTNM of \i_TX_Byte[32][5]_i_1\ : label is "soft_lutpair85";
-  attribute SOFT_HLUTNM of \i_TX_Byte[32][6]_i_1\ : label is "soft_lutpair86";
-  attribute SOFT_HLUTNM of \i_TX_Byte[32][7]_i_1\ : label is "soft_lutpair87";
-  attribute SOFT_HLUTNM of \i_TX_Byte[32][7]_i_4\ : label is "soft_lutpair90";
-  attribute SOFT_HLUTNM of \i_TX_Byte[33][0]_i_1\ : label is "soft_lutpair170";
-  attribute SOFT_HLUTNM of \i_TX_Byte[33][1]_i_1\ : label is "soft_lutpair170";
-  attribute SOFT_HLUTNM of \i_TX_Byte[33][2]_i_1\ : label is "soft_lutpair171";
-  attribute SOFT_HLUTNM of \i_TX_Byte[33][3]_i_1\ : label is "soft_lutpair171";
-  attribute SOFT_HLUTNM of \i_TX_Byte[33][4]_i_1\ : label is "soft_lutpair172";
-  attribute SOFT_HLUTNM of \i_TX_Byte[33][5]_i_1\ : label is "soft_lutpair172";
-  attribute SOFT_HLUTNM of \i_TX_Byte[33][6]_i_1\ : label is "soft_lutpair173";
-  attribute SOFT_HLUTNM of \i_TX_Byte[33][7]_i_1\ : label is "soft_lutpair173";
-  attribute SOFT_HLUTNM of \i_TX_Byte[34][0]_i_1\ : label is "soft_lutpair126";
-  attribute SOFT_HLUTNM of \i_TX_Byte[34][1]_i_1\ : label is "soft_lutpair126";
-  attribute SOFT_HLUTNM of \i_TX_Byte[34][2]_i_1\ : label is "soft_lutpair127";
-  attribute SOFT_HLUTNM of \i_TX_Byte[34][3]_i_1\ : label is "soft_lutpair127";
-  attribute SOFT_HLUTNM of \i_TX_Byte[34][4]_i_1\ : label is "soft_lutpair128";
-  attribute SOFT_HLUTNM of \i_TX_Byte[34][5]_i_1\ : label is "soft_lutpair128";
-  attribute SOFT_HLUTNM of \i_TX_Byte[34][6]_i_1\ : label is "soft_lutpair129";
-  attribute SOFT_HLUTNM of \i_TX_Byte[34][7]_i_1\ : label is "soft_lutpair129";
-  attribute SOFT_HLUTNM of \i_TX_Byte[35][0]_i_1\ : label is "soft_lutpair162";
-  attribute SOFT_HLUTNM of \i_TX_Byte[35][1]_i_1\ : label is "soft_lutpair162";
-  attribute SOFT_HLUTNM of \i_TX_Byte[35][2]_i_1\ : label is "soft_lutpair163";
-  attribute SOFT_HLUTNM of \i_TX_Byte[35][3]_i_1\ : label is "soft_lutpair163";
-  attribute SOFT_HLUTNM of \i_TX_Byte[35][4]_i_1\ : label is "soft_lutpair164";
-  attribute SOFT_HLUTNM of \i_TX_Byte[35][5]_i_1\ : label is "soft_lutpair164";
-  attribute SOFT_HLUTNM of \i_TX_Byte[35][6]_i_1\ : label is "soft_lutpair165";
-  attribute SOFT_HLUTNM of \i_TX_Byte[35][7]_i_1\ : label is "soft_lutpair165";
-  attribute SOFT_HLUTNM of \i_TX_Byte[36][0]_i_1\ : label is "soft_lutpair154";
-  attribute SOFT_HLUTNM of \i_TX_Byte[36][1]_i_1\ : label is "soft_lutpair154";
-  attribute SOFT_HLUTNM of \i_TX_Byte[36][2]_i_1\ : label is "soft_lutpair155";
-  attribute SOFT_HLUTNM of \i_TX_Byte[36][3]_i_1\ : label is "soft_lutpair155";
-  attribute SOFT_HLUTNM of \i_TX_Byte[36][4]_i_1\ : label is "soft_lutpair156";
-  attribute SOFT_HLUTNM of \i_TX_Byte[36][5]_i_1\ : label is "soft_lutpair156";
-  attribute SOFT_HLUTNM of \i_TX_Byte[36][6]_i_1\ : label is "soft_lutpair157";
-  attribute SOFT_HLUTNM of \i_TX_Byte[36][7]_i_1\ : label is "soft_lutpair157";
-  attribute SOFT_HLUTNM of \i_TX_Byte[37][0]_i_1\ : label is "soft_lutpair146";
-  attribute SOFT_HLUTNM of \i_TX_Byte[37][1]_i_1\ : label is "soft_lutpair146";
-  attribute SOFT_HLUTNM of \i_TX_Byte[37][2]_i_1\ : label is "soft_lutpair147";
-  attribute SOFT_HLUTNM of \i_TX_Byte[37][3]_i_1\ : label is "soft_lutpair147";
-  attribute SOFT_HLUTNM of \i_TX_Byte[37][4]_i_1\ : label is "soft_lutpair148";
-  attribute SOFT_HLUTNM of \i_TX_Byte[37][5]_i_1\ : label is "soft_lutpair148";
-  attribute SOFT_HLUTNM of \i_TX_Byte[37][6]_i_1\ : label is "soft_lutpair149";
-  attribute SOFT_HLUTNM of \i_TX_Byte[37][7]_i_1\ : label is "soft_lutpair149";
-  attribute SOFT_HLUTNM of \i_TX_Byte[38][0]_i_1\ : label is "soft_lutpair98";
-  attribute SOFT_HLUTNM of \i_TX_Byte[38][1]_i_1\ : label is "soft_lutpair98";
-  attribute SOFT_HLUTNM of \i_TX_Byte[38][2]_i_1\ : label is "soft_lutpair99";
-  attribute SOFT_HLUTNM of \i_TX_Byte[38][3]_i_1\ : label is "soft_lutpair99";
-  attribute SOFT_HLUTNM of \i_TX_Byte[38][4]_i_1\ : label is "soft_lutpair100";
-  attribute SOFT_HLUTNM of \i_TX_Byte[38][5]_i_1\ : label is "soft_lutpair100";
-  attribute SOFT_HLUTNM of \i_TX_Byte[38][6]_i_1\ : label is "soft_lutpair101";
-  attribute SOFT_HLUTNM of \i_TX_Byte[38][7]_i_1\ : label is "soft_lutpair101";
-  attribute SOFT_HLUTNM of \i_TX_Byte[39][0]_i_1\ : label is "soft_lutpair114";
-  attribute SOFT_HLUTNM of \i_TX_Byte[39][1]_i_1\ : label is "soft_lutpair114";
-  attribute SOFT_HLUTNM of \i_TX_Byte[39][2]_i_1\ : label is "soft_lutpair115";
-  attribute SOFT_HLUTNM of \i_TX_Byte[39][3]_i_1\ : label is "soft_lutpair115";
-  attribute SOFT_HLUTNM of \i_TX_Byte[39][4]_i_1\ : label is "soft_lutpair116";
-  attribute SOFT_HLUTNM of \i_TX_Byte[39][5]_i_1\ : label is "soft_lutpair116";
-  attribute SOFT_HLUTNM of \i_TX_Byte[39][6]_i_1\ : label is "soft_lutpair117";
-  attribute SOFT_HLUTNM of \i_TX_Byte[39][7]_i_1\ : label is "soft_lutpair117";
-  attribute SOFT_HLUTNM of \i_TX_Byte[3][0]_i_1\ : label is "soft_lutpair178";
-  attribute SOFT_HLUTNM of \i_TX_Byte[3][1]_i_1\ : label is "soft_lutpair178";
-  attribute SOFT_HLUTNM of \i_TX_Byte[3][2]_i_1\ : label is "soft_lutpair179";
-  attribute SOFT_HLUTNM of \i_TX_Byte[3][3]_i_1\ : label is "soft_lutpair179";
-  attribute SOFT_HLUTNM of \i_TX_Byte[3][4]_i_1\ : label is "soft_lutpair180";
-  attribute SOFT_HLUTNM of \i_TX_Byte[3][5]_i_1\ : label is "soft_lutpair180";
-  attribute SOFT_HLUTNM of \i_TX_Byte[3][6]_i_1\ : label is "soft_lutpair181";
-  attribute SOFT_HLUTNM of \i_TX_Byte[3][7]_i_1\ : label is "soft_lutpair181";
-  attribute SOFT_HLUTNM of \i_TX_Byte[3][7]_i_2\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \i_TX_Byte[40][0]_i_1\ : label is "soft_lutpair138";
-  attribute SOFT_HLUTNM of \i_TX_Byte[40][1]_i_1\ : label is "soft_lutpair138";
-  attribute SOFT_HLUTNM of \i_TX_Byte[40][2]_i_1\ : label is "soft_lutpair139";
-  attribute SOFT_HLUTNM of \i_TX_Byte[40][3]_i_1\ : label is "soft_lutpair139";
-  attribute SOFT_HLUTNM of \i_TX_Byte[40][4]_i_1\ : label is "soft_lutpair140";
-  attribute SOFT_HLUTNM of \i_TX_Byte[40][5]_i_1\ : label is "soft_lutpair140";
-  attribute SOFT_HLUTNM of \i_TX_Byte[40][6]_i_1\ : label is "soft_lutpair141";
-  attribute SOFT_HLUTNM of \i_TX_Byte[40][7]_i_1\ : label is "soft_lutpair141";
-  attribute SOFT_HLUTNM of \i_TX_Byte[4][0]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \i_TX_Byte[4][1]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \i_TX_Byte[4][2]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \i_TX_Byte[4][3]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \i_TX_Byte[4][4]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \i_TX_Byte[4][5]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \i_TX_Byte[4][6]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \i_TX_Byte[4][7]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \i_TX_Byte[5][0]_i_1\ : label is "soft_lutpair185";
-  attribute SOFT_HLUTNM of \i_TX_Byte[5][1]_i_1\ : label is "soft_lutpair185";
-  attribute SOFT_HLUTNM of \i_TX_Byte[5][2]_i_1\ : label is "soft_lutpair184";
-  attribute SOFT_HLUTNM of \i_TX_Byte[5][3]_i_1\ : label is "soft_lutpair184";
-  attribute SOFT_HLUTNM of \i_TX_Byte[5][4]_i_1\ : label is "soft_lutpair183";
-  attribute SOFT_HLUTNM of \i_TX_Byte[5][5]_i_1\ : label is "soft_lutpair183";
-  attribute SOFT_HLUTNM of \i_TX_Byte[5][6]_i_1\ : label is "soft_lutpair182";
-  attribute SOFT_HLUTNM of \i_TX_Byte[5][7]_i_1\ : label is "soft_lutpair182";
-  attribute SOFT_HLUTNM of \i_TX_Byte[5][7]_i_2\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \i_TX_Byte[6][0]_i_1\ : label is "soft_lutpair97";
-  attribute SOFT_HLUTNM of \i_TX_Byte[6][1]_i_1\ : label is "soft_lutpair97";
-  attribute SOFT_HLUTNM of \i_TX_Byte[6][2]_i_1\ : label is "soft_lutpair96";
-  attribute SOFT_HLUTNM of \i_TX_Byte[6][3]_i_1\ : label is "soft_lutpair96";
-  attribute SOFT_HLUTNM of \i_TX_Byte[6][4]_i_1\ : label is "soft_lutpair95";
-  attribute SOFT_HLUTNM of \i_TX_Byte[6][5]_i_1\ : label is "soft_lutpair95";
-  attribute SOFT_HLUTNM of \i_TX_Byte[6][6]_i_1\ : label is "soft_lutpair94";
-  attribute SOFT_HLUTNM of \i_TX_Byte[6][7]_i_1\ : label is "soft_lutpair94";
-  attribute SOFT_HLUTNM of \i_TX_Byte[6][7]_i_2\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \i_TX_Byte[7][0]_i_1\ : label is "soft_lutpair122";
-  attribute SOFT_HLUTNM of \i_TX_Byte[7][1]_i_1\ : label is "soft_lutpair122";
-  attribute SOFT_HLUTNM of \i_TX_Byte[7][2]_i_1\ : label is "soft_lutpair123";
-  attribute SOFT_HLUTNM of \i_TX_Byte[7][3]_i_1\ : label is "soft_lutpair123";
-  attribute SOFT_HLUTNM of \i_TX_Byte[7][4]_i_1\ : label is "soft_lutpair124";
-  attribute SOFT_HLUTNM of \i_TX_Byte[7][5]_i_1\ : label is "soft_lutpair124";
-  attribute SOFT_HLUTNM of \i_TX_Byte[7][6]_i_1\ : label is "soft_lutpair125";
-  attribute SOFT_HLUTNM of \i_TX_Byte[7][7]_i_1\ : label is "soft_lutpair125";
-  attribute SOFT_HLUTNM of \i_TX_Byte[7][7]_i_2\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \i_TX_Byte[8][0]_i_1\ : label is "soft_lutpair206";
-  attribute SOFT_HLUTNM of \i_TX_Byte[8][1]_i_1\ : label is "soft_lutpair206";
-  attribute SOFT_HLUTNM of \i_TX_Byte[8][2]_i_1\ : label is "soft_lutpair207";
-  attribute SOFT_HLUTNM of \i_TX_Byte[8][3]_i_1\ : label is "soft_lutpair207";
-  attribute SOFT_HLUTNM of \i_TX_Byte[8][4]_i_1\ : label is "soft_lutpair208";
-  attribute SOFT_HLUTNM of \i_TX_Byte[8][5]_i_1\ : label is "soft_lutpair208";
-  attribute SOFT_HLUTNM of \i_TX_Byte[8][6]_i_1\ : label is "soft_lutpair209";
-  attribute SOFT_HLUTNM of \i_TX_Byte[8][7]_i_1\ : label is "soft_lutpair209";
-  attribute SOFT_HLUTNM of \i_TX_Byte[8][7]_i_2\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \i_TX_Byte[9][0]_i_1\ : label is "soft_lutpair198";
-  attribute SOFT_HLUTNM of \i_TX_Byte[9][1]_i_1\ : label is "soft_lutpair198";
-  attribute SOFT_HLUTNM of \i_TX_Byte[9][2]_i_1\ : label is "soft_lutpair199";
-  attribute SOFT_HLUTNM of \i_TX_Byte[9][3]_i_1\ : label is "soft_lutpair199";
-  attribute SOFT_HLUTNM of \i_TX_Byte[9][4]_i_1\ : label is "soft_lutpair200";
-  attribute SOFT_HLUTNM of \i_TX_Byte[9][5]_i_1\ : label is "soft_lutpair200";
-  attribute SOFT_HLUTNM of \i_TX_Byte[9][6]_i_1\ : label is "soft_lutpair201";
-  attribute SOFT_HLUTNM of \i_TX_Byte[9][7]_i_1\ : label is "soft_lutpair201";
-  attribute SOFT_HLUTNM of \i_TX_Byte[9][7]_i_2\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \r_Cmd_Cnt[0]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \r_Cmd_Cnt[1]_i_2\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \r_Cmd_Cnt[1]_i_3\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \r_Cmd_Cnt[2]_i_4\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[0]_i_1\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[1]_i_1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[2]_i_1\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[3]_i_2\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[3]_i_4\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[3]_i_5\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[4]_i_1\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[6]_i_1\ : label is "soft_lutpair213";
-  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[7]_i_1\ : label is "soft_lutpair213";
-  attribute SOFT_HLUTNM of r_Halfbit_state_i_1 : label is "soft_lutpair91";
-  attribute SOFT_HLUTNM of \r_Next[0]_i_1\ : label is "soft_lutpair93";
-  attribute SOFT_HLUTNM of \r_Next[1]_i_1\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \r_Next[2]_i_1\ : label is "soft_lutpair93";
-  attribute SOFT_HLUTNM of \r_Next[3]_i_1\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \r_Next[4]_i_1\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \r_Next[6]_i_1\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \r_Next[7]_i_3\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \r_Next[7]_i_5\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \r_Next[7]_i_6\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \r_RX_Bit_Count[0]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \r_RX_Bit_Count[2]_i_2\ : label is "soft_lutpair89";
-  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_2\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_3\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_4\ : label is "soft_lutpair211";
-  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_5\ : label is "soft_lutpair88";
-  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_6\ : label is "soft_lutpair89";
-  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_7\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of r_SPI_CS_i_1 : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of r_SPI_CS_i_3 : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of r_SPI_Clk_i_3 : label is "soft_lutpair214";
-  attribute SOFT_HLUTNM of r_SPI_Clk_i_4 : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \r_SPI_END[2]_i_2\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \r_SPI_END[3]_i_1\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \r_SPI_END[7]_i_3\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \r_SPI_END[7]_i_5\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \r_SPI_END[7]_i_6\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \r_SPI_END[7]_i_7\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of r_SPI_MOSI_i_8 : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of r_SPI_MOSI_i_9 : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \r_SPI_START[0]_i_1\ : label is "soft_lutpair210";
-  attribute SOFT_HLUTNM of \r_SPI_START[1]_i_2\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \r_SPI_START[2]_i_1\ : label is "soft_lutpair210";
-  attribute SOFT_HLUTNM of \r_SPI_START[3]_i_1\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \r_SPI_START[4]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \r_SPI_START[6]_i_1\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \r_SPI_START[7]_i_3\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \r_SPI_START[7]_i_4\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of r_Send_i_3 : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of r_Send_i_5 : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \r_StatusReg[1]_i_2\ : label is "soft_lutpair211";
-  attribute SOFT_HLUTNM of \r_StatusReg[2]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \r_StatusReg[3]_i_1\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \r_TX_Bit_Count[1]_i_1\ : label is "soft_lutpair214";
-  attribute SOFT_HLUTNM of \r_TX_Bit_Count[2]_i_2\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \r_TX_Bit_Count[3]_i_1\ : label is "soft_lutpair92";
-  attribute SOFT_HLUTNM of \r_TX_Byte[0]_i_51\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \r_TX_Byte[0]_i_59\ : label is "soft_lutpair80";
-  attribute SOFT_HLUTNM of \r_TX_Byte[0]_i_63\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \r_TX_Byte[0]_i_65\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \r_TX_Byte[1]_i_51\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \r_TX_Byte[1]_i_59\ : label is "soft_lutpair81";
-  attribute SOFT_HLUTNM of \r_TX_Byte[1]_i_63\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \r_TX_Byte[1]_i_65\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \r_TX_Byte[2]_i_51\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \r_TX_Byte[2]_i_59\ : label is "soft_lutpair82";
-  attribute SOFT_HLUTNM of \r_TX_Byte[2]_i_63\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \r_TX_Byte[2]_i_65\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \r_TX_Byte[3]_i_51\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \r_TX_Byte[3]_i_59\ : label is "soft_lutpair83";
-  attribute SOFT_HLUTNM of \r_TX_Byte[3]_i_63\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \r_TX_Byte[3]_i_65\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \r_TX_Byte[4]_i_51\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \r_TX_Byte[4]_i_59\ : label is "soft_lutpair84";
-  attribute SOFT_HLUTNM of \r_TX_Byte[4]_i_63\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \r_TX_Byte[4]_i_65\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \r_TX_Byte[5]_i_51\ : label is "soft_lutpair77";
-  attribute SOFT_HLUTNM of \r_TX_Byte[5]_i_59\ : label is "soft_lutpair85";
-  attribute SOFT_HLUTNM of \r_TX_Byte[5]_i_63\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \r_TX_Byte[5]_i_65\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \r_TX_Byte[6]_i_51\ : label is "soft_lutpair78";
-  attribute SOFT_HLUTNM of \r_TX_Byte[6]_i_59\ : label is "soft_lutpair86";
-  attribute SOFT_HLUTNM of \r_TX_Byte[6]_i_63\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \r_TX_Byte[6]_i_65\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_13\ : label is "soft_lutpair212";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_4\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_52\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_54\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_55\ : label is "soft_lutpair90";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_63\ : label is "soft_lutpair79";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_71\ : label is "soft_lutpair87";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_75\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_77\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_81\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_90\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_91\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[0]_i_1\ : label is "soft_lutpair216";
-  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[1]_i_1\ : label is "soft_lutpair216";
-  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[2]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[3]_i_1\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[4]_i_1\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[7]_i_7\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \i_TX_Byte[0][7]_i_2\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \i_TX_Byte[0][7]_i_4\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \i_TX_Byte[10][0]_i_1\ : label is "soft_lutpair135";
+  attribute SOFT_HLUTNM of \i_TX_Byte[10][1]_i_1\ : label is "soft_lutpair135";
+  attribute SOFT_HLUTNM of \i_TX_Byte[10][2]_i_1\ : label is "soft_lutpair136";
+  attribute SOFT_HLUTNM of \i_TX_Byte[10][3]_i_1\ : label is "soft_lutpair136";
+  attribute SOFT_HLUTNM of \i_TX_Byte[10][4]_i_1\ : label is "soft_lutpair137";
+  attribute SOFT_HLUTNM of \i_TX_Byte[10][5]_i_1\ : label is "soft_lutpair137";
+  attribute SOFT_HLUTNM of \i_TX_Byte[10][6]_i_1\ : label is "soft_lutpair138";
+  attribute SOFT_HLUTNM of \i_TX_Byte[10][7]_i_1\ : label is "soft_lutpair138";
+  attribute SOFT_HLUTNM of \i_TX_Byte[10][7]_i_2\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \i_TX_Byte[11][0]_i_1\ : label is "soft_lutpair195";
+  attribute SOFT_HLUTNM of \i_TX_Byte[11][1]_i_1\ : label is "soft_lutpair195";
+  attribute SOFT_HLUTNM of \i_TX_Byte[11][2]_i_1\ : label is "soft_lutpair196";
+  attribute SOFT_HLUTNM of \i_TX_Byte[11][3]_i_1\ : label is "soft_lutpair196";
+  attribute SOFT_HLUTNM of \i_TX_Byte[11][4]_i_1\ : label is "soft_lutpair197";
+  attribute SOFT_HLUTNM of \i_TX_Byte[11][5]_i_1\ : label is "soft_lutpair197";
+  attribute SOFT_HLUTNM of \i_TX_Byte[11][6]_i_1\ : label is "soft_lutpair198";
+  attribute SOFT_HLUTNM of \i_TX_Byte[11][7]_i_1\ : label is "soft_lutpair198";
+  attribute SOFT_HLUTNM of \i_TX_Byte[11][7]_i_2\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \i_TX_Byte[12][0]_i_1\ : label is "soft_lutpair203";
+  attribute SOFT_HLUTNM of \i_TX_Byte[12][1]_i_1\ : label is "soft_lutpair203";
+  attribute SOFT_HLUTNM of \i_TX_Byte[12][2]_i_1\ : label is "soft_lutpair204";
+  attribute SOFT_HLUTNM of \i_TX_Byte[12][3]_i_1\ : label is "soft_lutpair204";
+  attribute SOFT_HLUTNM of \i_TX_Byte[12][4]_i_1\ : label is "soft_lutpair205";
+  attribute SOFT_HLUTNM of \i_TX_Byte[12][5]_i_1\ : label is "soft_lutpair205";
+  attribute SOFT_HLUTNM of \i_TX_Byte[12][6]_i_1\ : label is "soft_lutpair206";
+  attribute SOFT_HLUTNM of \i_TX_Byte[12][7]_i_1\ : label is "soft_lutpair206";
+  attribute SOFT_HLUTNM of \i_TX_Byte[12][7]_i_2\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \i_TX_Byte[13][0]_i_1\ : label is "soft_lutpair191";
+  attribute SOFT_HLUTNM of \i_TX_Byte[13][1]_i_1\ : label is "soft_lutpair191";
+  attribute SOFT_HLUTNM of \i_TX_Byte[13][2]_i_1\ : label is "soft_lutpair192";
+  attribute SOFT_HLUTNM of \i_TX_Byte[13][3]_i_1\ : label is "soft_lutpair192";
+  attribute SOFT_HLUTNM of \i_TX_Byte[13][4]_i_1\ : label is "soft_lutpair193";
+  attribute SOFT_HLUTNM of \i_TX_Byte[13][5]_i_1\ : label is "soft_lutpair193";
+  attribute SOFT_HLUTNM of \i_TX_Byte[13][6]_i_1\ : label is "soft_lutpair194";
+  attribute SOFT_HLUTNM of \i_TX_Byte[13][7]_i_1\ : label is "soft_lutpair194";
+  attribute SOFT_HLUTNM of \i_TX_Byte[13][7]_i_2\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \i_TX_Byte[14][0]_i_1\ : label is "soft_lutpair107";
+  attribute SOFT_HLUTNM of \i_TX_Byte[14][1]_i_1\ : label is "soft_lutpair107";
+  attribute SOFT_HLUTNM of \i_TX_Byte[14][2]_i_1\ : label is "soft_lutpair108";
+  attribute SOFT_HLUTNM of \i_TX_Byte[14][3]_i_1\ : label is "soft_lutpair108";
+  attribute SOFT_HLUTNM of \i_TX_Byte[14][4]_i_1\ : label is "soft_lutpair109";
+  attribute SOFT_HLUTNM of \i_TX_Byte[14][5]_i_1\ : label is "soft_lutpair109";
+  attribute SOFT_HLUTNM of \i_TX_Byte[14][6]_i_1\ : label is "soft_lutpair110";
+  attribute SOFT_HLUTNM of \i_TX_Byte[14][7]_i_1\ : label is "soft_lutpair110";
+  attribute SOFT_HLUTNM of \i_TX_Byte[14][7]_i_2\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \i_TX_Byte[15][0]_i_1\ : label is "soft_lutpair111";
+  attribute SOFT_HLUTNM of \i_TX_Byte[15][1]_i_1\ : label is "soft_lutpair111";
+  attribute SOFT_HLUTNM of \i_TX_Byte[15][2]_i_1\ : label is "soft_lutpair112";
+  attribute SOFT_HLUTNM of \i_TX_Byte[15][3]_i_1\ : label is "soft_lutpair112";
+  attribute SOFT_HLUTNM of \i_TX_Byte[15][4]_i_1\ : label is "soft_lutpair113";
+  attribute SOFT_HLUTNM of \i_TX_Byte[15][5]_i_1\ : label is "soft_lutpair113";
+  attribute SOFT_HLUTNM of \i_TX_Byte[15][6]_i_1\ : label is "soft_lutpair114";
+  attribute SOFT_HLUTNM of \i_TX_Byte[15][7]_i_1\ : label is "soft_lutpair114";
+  attribute SOFT_HLUTNM of \i_TX_Byte[15][7]_i_2\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \i_TX_Byte[16][0]_i_1\ : label is "soft_lutpair143";
+  attribute SOFT_HLUTNM of \i_TX_Byte[16][1]_i_1\ : label is "soft_lutpair143";
+  attribute SOFT_HLUTNM of \i_TX_Byte[16][2]_i_1\ : label is "soft_lutpair144";
+  attribute SOFT_HLUTNM of \i_TX_Byte[16][3]_i_1\ : label is "soft_lutpair144";
+  attribute SOFT_HLUTNM of \i_TX_Byte[16][4]_i_1\ : label is "soft_lutpair145";
+  attribute SOFT_HLUTNM of \i_TX_Byte[16][5]_i_1\ : label is "soft_lutpair145";
+  attribute SOFT_HLUTNM of \i_TX_Byte[16][6]_i_1\ : label is "soft_lutpair146";
+  attribute SOFT_HLUTNM of \i_TX_Byte[16][7]_i_1\ : label is "soft_lutpair146";
+  attribute SOFT_HLUTNM of \i_TX_Byte[17][7]_i_3\ : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \i_TX_Byte[1][0]_i_1\ : label is "soft_lutpair190";
+  attribute SOFT_HLUTNM of \i_TX_Byte[1][1]_i_1\ : label is "soft_lutpair190";
+  attribute SOFT_HLUTNM of \i_TX_Byte[1][2]_i_1\ : label is "soft_lutpair189";
+  attribute SOFT_HLUTNM of \i_TX_Byte[1][3]_i_1\ : label is "soft_lutpair189";
+  attribute SOFT_HLUTNM of \i_TX_Byte[1][4]_i_1\ : label is "soft_lutpair188";
+  attribute SOFT_HLUTNM of \i_TX_Byte[1][5]_i_1\ : label is "soft_lutpair188";
+  attribute SOFT_HLUTNM of \i_TX_Byte[1][6]_i_1\ : label is "soft_lutpair187";
+  attribute SOFT_HLUTNM of \i_TX_Byte[1][7]_i_1\ : label is "soft_lutpair187";
+  attribute SOFT_HLUTNM of \i_TX_Byte[1][7]_i_2\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \i_TX_Byte[24][0]_i_1\ : label is "soft_lutpair73";
+  attribute SOFT_HLUTNM of \i_TX_Byte[24][1]_i_1\ : label is "soft_lutpair74";
+  attribute SOFT_HLUTNM of \i_TX_Byte[24][2]_i_1\ : label is "soft_lutpair75";
+  attribute SOFT_HLUTNM of \i_TX_Byte[24][3]_i_1\ : label is "soft_lutpair76";
+  attribute SOFT_HLUTNM of \i_TX_Byte[24][4]_i_1\ : label is "soft_lutpair77";
+  attribute SOFT_HLUTNM of \i_TX_Byte[24][5]_i_1\ : label is "soft_lutpair78";
+  attribute SOFT_HLUTNM of \i_TX_Byte[24][6]_i_1\ : label is "soft_lutpair79";
+  attribute SOFT_HLUTNM of \i_TX_Byte[24][7]_i_1\ : label is "soft_lutpair80";
+  attribute SOFT_HLUTNM of \i_TX_Byte[25][0]_i_1\ : label is "soft_lutpair175";
+  attribute SOFT_HLUTNM of \i_TX_Byte[25][1]_i_1\ : label is "soft_lutpair175";
+  attribute SOFT_HLUTNM of \i_TX_Byte[25][2]_i_1\ : label is "soft_lutpair176";
+  attribute SOFT_HLUTNM of \i_TX_Byte[25][3]_i_1\ : label is "soft_lutpair176";
+  attribute SOFT_HLUTNM of \i_TX_Byte[25][4]_i_1\ : label is "soft_lutpair177";
+  attribute SOFT_HLUTNM of \i_TX_Byte[25][5]_i_1\ : label is "soft_lutpair177";
+  attribute SOFT_HLUTNM of \i_TX_Byte[25][6]_i_1\ : label is "soft_lutpair178";
+  attribute SOFT_HLUTNM of \i_TX_Byte[25][7]_i_1\ : label is "soft_lutpair178";
+  attribute SOFT_HLUTNM of \i_TX_Byte[26][0]_i_1\ : label is "soft_lutpair131";
+  attribute SOFT_HLUTNM of \i_TX_Byte[26][1]_i_1\ : label is "soft_lutpair131";
+  attribute SOFT_HLUTNM of \i_TX_Byte[26][2]_i_1\ : label is "soft_lutpair132";
+  attribute SOFT_HLUTNM of \i_TX_Byte[26][3]_i_1\ : label is "soft_lutpair132";
+  attribute SOFT_HLUTNM of \i_TX_Byte[26][4]_i_1\ : label is "soft_lutpair133";
+  attribute SOFT_HLUTNM of \i_TX_Byte[26][5]_i_1\ : label is "soft_lutpair133";
+  attribute SOFT_HLUTNM of \i_TX_Byte[26][6]_i_1\ : label is "soft_lutpair134";
+  attribute SOFT_HLUTNM of \i_TX_Byte[26][7]_i_1\ : label is "soft_lutpair134";
+  attribute SOFT_HLUTNM of \i_TX_Byte[27][0]_i_1\ : label is "soft_lutpair167";
+  attribute SOFT_HLUTNM of \i_TX_Byte[27][1]_i_1\ : label is "soft_lutpair167";
+  attribute SOFT_HLUTNM of \i_TX_Byte[27][2]_i_1\ : label is "soft_lutpair168";
+  attribute SOFT_HLUTNM of \i_TX_Byte[27][3]_i_1\ : label is "soft_lutpair168";
+  attribute SOFT_HLUTNM of \i_TX_Byte[27][4]_i_1\ : label is "soft_lutpair169";
+  attribute SOFT_HLUTNM of \i_TX_Byte[27][5]_i_1\ : label is "soft_lutpair169";
+  attribute SOFT_HLUTNM of \i_TX_Byte[27][6]_i_1\ : label is "soft_lutpair170";
+  attribute SOFT_HLUTNM of \i_TX_Byte[27][7]_i_1\ : label is "soft_lutpair170";
+  attribute SOFT_HLUTNM of \i_TX_Byte[28][0]_i_1\ : label is "soft_lutpair159";
+  attribute SOFT_HLUTNM of \i_TX_Byte[28][1]_i_1\ : label is "soft_lutpair159";
+  attribute SOFT_HLUTNM of \i_TX_Byte[28][2]_i_1\ : label is "soft_lutpair160";
+  attribute SOFT_HLUTNM of \i_TX_Byte[28][3]_i_1\ : label is "soft_lutpair160";
+  attribute SOFT_HLUTNM of \i_TX_Byte[28][4]_i_1\ : label is "soft_lutpair161";
+  attribute SOFT_HLUTNM of \i_TX_Byte[28][5]_i_1\ : label is "soft_lutpair161";
+  attribute SOFT_HLUTNM of \i_TX_Byte[28][6]_i_1\ : label is "soft_lutpair162";
+  attribute SOFT_HLUTNM of \i_TX_Byte[28][7]_i_1\ : label is "soft_lutpair162";
+  attribute SOFT_HLUTNM of \i_TX_Byte[29][0]_i_1\ : label is "soft_lutpair151";
+  attribute SOFT_HLUTNM of \i_TX_Byte[29][1]_i_1\ : label is "soft_lutpair151";
+  attribute SOFT_HLUTNM of \i_TX_Byte[29][2]_i_1\ : label is "soft_lutpair152";
+  attribute SOFT_HLUTNM of \i_TX_Byte[29][3]_i_1\ : label is "soft_lutpair152";
+  attribute SOFT_HLUTNM of \i_TX_Byte[29][4]_i_1\ : label is "soft_lutpair153";
+  attribute SOFT_HLUTNM of \i_TX_Byte[29][5]_i_1\ : label is "soft_lutpair153";
+  attribute SOFT_HLUTNM of \i_TX_Byte[29][6]_i_1\ : label is "soft_lutpair154";
+  attribute SOFT_HLUTNM of \i_TX_Byte[29][7]_i_1\ : label is "soft_lutpair154";
+  attribute SOFT_HLUTNM of \i_TX_Byte[2][0]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \i_TX_Byte[2][1]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \i_TX_Byte[2][2]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \i_TX_Byte[2][3]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \i_TX_Byte[2][4]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \i_TX_Byte[2][5]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \i_TX_Byte[2][6]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \i_TX_Byte[2][7]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \i_TX_Byte[2][7]_i_3\ : label is "soft_lutpair61";
+  attribute SOFT_HLUTNM of \i_TX_Byte[2][7]_i_4\ : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of \i_TX_Byte[30][0]_i_1\ : label is "soft_lutpair103";
+  attribute SOFT_HLUTNM of \i_TX_Byte[30][1]_i_1\ : label is "soft_lutpair103";
+  attribute SOFT_HLUTNM of \i_TX_Byte[30][2]_i_1\ : label is "soft_lutpair104";
+  attribute SOFT_HLUTNM of \i_TX_Byte[30][3]_i_1\ : label is "soft_lutpair104";
+  attribute SOFT_HLUTNM of \i_TX_Byte[30][4]_i_1\ : label is "soft_lutpair105";
+  attribute SOFT_HLUTNM of \i_TX_Byte[30][5]_i_1\ : label is "soft_lutpair105";
+  attribute SOFT_HLUTNM of \i_TX_Byte[30][6]_i_1\ : label is "soft_lutpair106";
+  attribute SOFT_HLUTNM of \i_TX_Byte[30][7]_i_1\ : label is "soft_lutpair106";
+  attribute SOFT_HLUTNM of \i_TX_Byte[31][0]_i_1\ : label is "soft_lutpair119";
+  attribute SOFT_HLUTNM of \i_TX_Byte[31][1]_i_1\ : label is "soft_lutpair119";
+  attribute SOFT_HLUTNM of \i_TX_Byte[31][2]_i_1\ : label is "soft_lutpair120";
+  attribute SOFT_HLUTNM of \i_TX_Byte[31][3]_i_1\ : label is "soft_lutpair120";
+  attribute SOFT_HLUTNM of \i_TX_Byte[31][4]_i_1\ : label is "soft_lutpair121";
+  attribute SOFT_HLUTNM of \i_TX_Byte[31][5]_i_1\ : label is "soft_lutpair121";
+  attribute SOFT_HLUTNM of \i_TX_Byte[31][6]_i_1\ : label is "soft_lutpair122";
+  attribute SOFT_HLUTNM of \i_TX_Byte[31][7]_i_1\ : label is "soft_lutpair122";
+  attribute SOFT_HLUTNM of \i_TX_Byte[32][0]_i_1\ : label is "soft_lutpair81";
+  attribute SOFT_HLUTNM of \i_TX_Byte[32][1]_i_1\ : label is "soft_lutpair82";
+  attribute SOFT_HLUTNM of \i_TX_Byte[32][2]_i_1\ : label is "soft_lutpair83";
+  attribute SOFT_HLUTNM of \i_TX_Byte[32][3]_i_1\ : label is "soft_lutpair84";
+  attribute SOFT_HLUTNM of \i_TX_Byte[32][4]_i_1\ : label is "soft_lutpair85";
+  attribute SOFT_HLUTNM of \i_TX_Byte[32][5]_i_1\ : label is "soft_lutpair86";
+  attribute SOFT_HLUTNM of \i_TX_Byte[32][6]_i_1\ : label is "soft_lutpair87";
+  attribute SOFT_HLUTNM of \i_TX_Byte[32][7]_i_1\ : label is "soft_lutpair88";
+  attribute SOFT_HLUTNM of \i_TX_Byte[32][7]_i_4\ : label is "soft_lutpair91";
+  attribute SOFT_HLUTNM of \i_TX_Byte[33][0]_i_1\ : label is "soft_lutpair171";
+  attribute SOFT_HLUTNM of \i_TX_Byte[33][1]_i_1\ : label is "soft_lutpair171";
+  attribute SOFT_HLUTNM of \i_TX_Byte[33][2]_i_1\ : label is "soft_lutpair172";
+  attribute SOFT_HLUTNM of \i_TX_Byte[33][3]_i_1\ : label is "soft_lutpair172";
+  attribute SOFT_HLUTNM of \i_TX_Byte[33][4]_i_1\ : label is "soft_lutpair173";
+  attribute SOFT_HLUTNM of \i_TX_Byte[33][5]_i_1\ : label is "soft_lutpair173";
+  attribute SOFT_HLUTNM of \i_TX_Byte[33][6]_i_1\ : label is "soft_lutpair174";
+  attribute SOFT_HLUTNM of \i_TX_Byte[33][7]_i_1\ : label is "soft_lutpair174";
+  attribute SOFT_HLUTNM of \i_TX_Byte[34][0]_i_1\ : label is "soft_lutpair127";
+  attribute SOFT_HLUTNM of \i_TX_Byte[34][1]_i_1\ : label is "soft_lutpair127";
+  attribute SOFT_HLUTNM of \i_TX_Byte[34][2]_i_1\ : label is "soft_lutpair128";
+  attribute SOFT_HLUTNM of \i_TX_Byte[34][3]_i_1\ : label is "soft_lutpair128";
+  attribute SOFT_HLUTNM of \i_TX_Byte[34][4]_i_1\ : label is "soft_lutpair129";
+  attribute SOFT_HLUTNM of \i_TX_Byte[34][5]_i_1\ : label is "soft_lutpair129";
+  attribute SOFT_HLUTNM of \i_TX_Byte[34][6]_i_1\ : label is "soft_lutpair130";
+  attribute SOFT_HLUTNM of \i_TX_Byte[34][7]_i_1\ : label is "soft_lutpair130";
+  attribute SOFT_HLUTNM of \i_TX_Byte[35][0]_i_1\ : label is "soft_lutpair163";
+  attribute SOFT_HLUTNM of \i_TX_Byte[35][1]_i_1\ : label is "soft_lutpair163";
+  attribute SOFT_HLUTNM of \i_TX_Byte[35][2]_i_1\ : label is "soft_lutpair164";
+  attribute SOFT_HLUTNM of \i_TX_Byte[35][3]_i_1\ : label is "soft_lutpair164";
+  attribute SOFT_HLUTNM of \i_TX_Byte[35][4]_i_1\ : label is "soft_lutpair165";
+  attribute SOFT_HLUTNM of \i_TX_Byte[35][5]_i_1\ : label is "soft_lutpair165";
+  attribute SOFT_HLUTNM of \i_TX_Byte[35][6]_i_1\ : label is "soft_lutpair166";
+  attribute SOFT_HLUTNM of \i_TX_Byte[35][7]_i_1\ : label is "soft_lutpair166";
+  attribute SOFT_HLUTNM of \i_TX_Byte[36][0]_i_1\ : label is "soft_lutpair155";
+  attribute SOFT_HLUTNM of \i_TX_Byte[36][1]_i_1\ : label is "soft_lutpair155";
+  attribute SOFT_HLUTNM of \i_TX_Byte[36][2]_i_1\ : label is "soft_lutpair156";
+  attribute SOFT_HLUTNM of \i_TX_Byte[36][3]_i_1\ : label is "soft_lutpair156";
+  attribute SOFT_HLUTNM of \i_TX_Byte[36][4]_i_1\ : label is "soft_lutpair157";
+  attribute SOFT_HLUTNM of \i_TX_Byte[36][5]_i_1\ : label is "soft_lutpair157";
+  attribute SOFT_HLUTNM of \i_TX_Byte[36][6]_i_1\ : label is "soft_lutpair158";
+  attribute SOFT_HLUTNM of \i_TX_Byte[36][7]_i_1\ : label is "soft_lutpair158";
+  attribute SOFT_HLUTNM of \i_TX_Byte[37][0]_i_1\ : label is "soft_lutpair147";
+  attribute SOFT_HLUTNM of \i_TX_Byte[37][1]_i_1\ : label is "soft_lutpair147";
+  attribute SOFT_HLUTNM of \i_TX_Byte[37][2]_i_1\ : label is "soft_lutpair148";
+  attribute SOFT_HLUTNM of \i_TX_Byte[37][3]_i_1\ : label is "soft_lutpair148";
+  attribute SOFT_HLUTNM of \i_TX_Byte[37][4]_i_1\ : label is "soft_lutpair149";
+  attribute SOFT_HLUTNM of \i_TX_Byte[37][5]_i_1\ : label is "soft_lutpair149";
+  attribute SOFT_HLUTNM of \i_TX_Byte[37][6]_i_1\ : label is "soft_lutpair150";
+  attribute SOFT_HLUTNM of \i_TX_Byte[37][7]_i_1\ : label is "soft_lutpair150";
+  attribute SOFT_HLUTNM of \i_TX_Byte[38][0]_i_1\ : label is "soft_lutpair99";
+  attribute SOFT_HLUTNM of \i_TX_Byte[38][1]_i_1\ : label is "soft_lutpair99";
+  attribute SOFT_HLUTNM of \i_TX_Byte[38][2]_i_1\ : label is "soft_lutpair100";
+  attribute SOFT_HLUTNM of \i_TX_Byte[38][3]_i_1\ : label is "soft_lutpair100";
+  attribute SOFT_HLUTNM of \i_TX_Byte[38][4]_i_1\ : label is "soft_lutpair101";
+  attribute SOFT_HLUTNM of \i_TX_Byte[38][5]_i_1\ : label is "soft_lutpair101";
+  attribute SOFT_HLUTNM of \i_TX_Byte[38][6]_i_1\ : label is "soft_lutpair102";
+  attribute SOFT_HLUTNM of \i_TX_Byte[38][7]_i_1\ : label is "soft_lutpair102";
+  attribute SOFT_HLUTNM of \i_TX_Byte[39][0]_i_1\ : label is "soft_lutpair115";
+  attribute SOFT_HLUTNM of \i_TX_Byte[39][1]_i_1\ : label is "soft_lutpair115";
+  attribute SOFT_HLUTNM of \i_TX_Byte[39][2]_i_1\ : label is "soft_lutpair116";
+  attribute SOFT_HLUTNM of \i_TX_Byte[39][3]_i_1\ : label is "soft_lutpair116";
+  attribute SOFT_HLUTNM of \i_TX_Byte[39][4]_i_1\ : label is "soft_lutpair117";
+  attribute SOFT_HLUTNM of \i_TX_Byte[39][5]_i_1\ : label is "soft_lutpair117";
+  attribute SOFT_HLUTNM of \i_TX_Byte[39][6]_i_1\ : label is "soft_lutpair118";
+  attribute SOFT_HLUTNM of \i_TX_Byte[39][7]_i_1\ : label is "soft_lutpair118";
+  attribute SOFT_HLUTNM of \i_TX_Byte[3][0]_i_1\ : label is "soft_lutpair179";
+  attribute SOFT_HLUTNM of \i_TX_Byte[3][1]_i_1\ : label is "soft_lutpair179";
+  attribute SOFT_HLUTNM of \i_TX_Byte[3][2]_i_1\ : label is "soft_lutpair180";
+  attribute SOFT_HLUTNM of \i_TX_Byte[3][3]_i_1\ : label is "soft_lutpair180";
+  attribute SOFT_HLUTNM of \i_TX_Byte[3][4]_i_1\ : label is "soft_lutpair181";
+  attribute SOFT_HLUTNM of \i_TX_Byte[3][5]_i_1\ : label is "soft_lutpair181";
+  attribute SOFT_HLUTNM of \i_TX_Byte[3][6]_i_1\ : label is "soft_lutpair182";
+  attribute SOFT_HLUTNM of \i_TX_Byte[3][7]_i_1\ : label is "soft_lutpair182";
+  attribute SOFT_HLUTNM of \i_TX_Byte[3][7]_i_2\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \i_TX_Byte[40][0]_i_1\ : label is "soft_lutpair139";
+  attribute SOFT_HLUTNM of \i_TX_Byte[40][1]_i_1\ : label is "soft_lutpair139";
+  attribute SOFT_HLUTNM of \i_TX_Byte[40][2]_i_1\ : label is "soft_lutpair140";
+  attribute SOFT_HLUTNM of \i_TX_Byte[40][3]_i_1\ : label is "soft_lutpair140";
+  attribute SOFT_HLUTNM of \i_TX_Byte[40][4]_i_1\ : label is "soft_lutpair141";
+  attribute SOFT_HLUTNM of \i_TX_Byte[40][5]_i_1\ : label is "soft_lutpair141";
+  attribute SOFT_HLUTNM of \i_TX_Byte[40][6]_i_1\ : label is "soft_lutpair142";
+  attribute SOFT_HLUTNM of \i_TX_Byte[40][7]_i_1\ : label is "soft_lutpair142";
+  attribute SOFT_HLUTNM of \i_TX_Byte[4][0]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \i_TX_Byte[4][1]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \i_TX_Byte[4][2]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \i_TX_Byte[4][3]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \i_TX_Byte[4][4]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \i_TX_Byte[4][5]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \i_TX_Byte[4][6]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \i_TX_Byte[4][7]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \i_TX_Byte[5][0]_i_1\ : label is "soft_lutpair186";
+  attribute SOFT_HLUTNM of \i_TX_Byte[5][1]_i_1\ : label is "soft_lutpair186";
+  attribute SOFT_HLUTNM of \i_TX_Byte[5][2]_i_1\ : label is "soft_lutpair185";
+  attribute SOFT_HLUTNM of \i_TX_Byte[5][3]_i_1\ : label is "soft_lutpair185";
+  attribute SOFT_HLUTNM of \i_TX_Byte[5][4]_i_1\ : label is "soft_lutpair184";
+  attribute SOFT_HLUTNM of \i_TX_Byte[5][5]_i_1\ : label is "soft_lutpair184";
+  attribute SOFT_HLUTNM of \i_TX_Byte[5][6]_i_1\ : label is "soft_lutpair183";
+  attribute SOFT_HLUTNM of \i_TX_Byte[5][7]_i_1\ : label is "soft_lutpair183";
+  attribute SOFT_HLUTNM of \i_TX_Byte[5][7]_i_2\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \i_TX_Byte[6][0]_i_1\ : label is "soft_lutpair98";
+  attribute SOFT_HLUTNM of \i_TX_Byte[6][1]_i_1\ : label is "soft_lutpair98";
+  attribute SOFT_HLUTNM of \i_TX_Byte[6][2]_i_1\ : label is "soft_lutpair97";
+  attribute SOFT_HLUTNM of \i_TX_Byte[6][3]_i_1\ : label is "soft_lutpair97";
+  attribute SOFT_HLUTNM of \i_TX_Byte[6][4]_i_1\ : label is "soft_lutpair96";
+  attribute SOFT_HLUTNM of \i_TX_Byte[6][5]_i_1\ : label is "soft_lutpair96";
+  attribute SOFT_HLUTNM of \i_TX_Byte[6][6]_i_1\ : label is "soft_lutpair95";
+  attribute SOFT_HLUTNM of \i_TX_Byte[6][7]_i_1\ : label is "soft_lutpair95";
+  attribute SOFT_HLUTNM of \i_TX_Byte[6][7]_i_2\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \i_TX_Byte[7][0]_i_1\ : label is "soft_lutpair123";
+  attribute SOFT_HLUTNM of \i_TX_Byte[7][1]_i_1\ : label is "soft_lutpair123";
+  attribute SOFT_HLUTNM of \i_TX_Byte[7][2]_i_1\ : label is "soft_lutpair124";
+  attribute SOFT_HLUTNM of \i_TX_Byte[7][3]_i_1\ : label is "soft_lutpair124";
+  attribute SOFT_HLUTNM of \i_TX_Byte[7][4]_i_1\ : label is "soft_lutpair125";
+  attribute SOFT_HLUTNM of \i_TX_Byte[7][5]_i_1\ : label is "soft_lutpair125";
+  attribute SOFT_HLUTNM of \i_TX_Byte[7][6]_i_1\ : label is "soft_lutpair126";
+  attribute SOFT_HLUTNM of \i_TX_Byte[7][7]_i_1\ : label is "soft_lutpair126";
+  attribute SOFT_HLUTNM of \i_TX_Byte[7][7]_i_2\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \i_TX_Byte[8][0]_i_1\ : label is "soft_lutpair207";
+  attribute SOFT_HLUTNM of \i_TX_Byte[8][1]_i_1\ : label is "soft_lutpair207";
+  attribute SOFT_HLUTNM of \i_TX_Byte[8][2]_i_1\ : label is "soft_lutpair208";
+  attribute SOFT_HLUTNM of \i_TX_Byte[8][3]_i_1\ : label is "soft_lutpair208";
+  attribute SOFT_HLUTNM of \i_TX_Byte[8][4]_i_1\ : label is "soft_lutpair209";
+  attribute SOFT_HLUTNM of \i_TX_Byte[8][5]_i_1\ : label is "soft_lutpair209";
+  attribute SOFT_HLUTNM of \i_TX_Byte[8][6]_i_1\ : label is "soft_lutpair210";
+  attribute SOFT_HLUTNM of \i_TX_Byte[8][7]_i_1\ : label is "soft_lutpair210";
+  attribute SOFT_HLUTNM of \i_TX_Byte[8][7]_i_2\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \i_TX_Byte[9][0]_i_1\ : label is "soft_lutpair199";
+  attribute SOFT_HLUTNM of \i_TX_Byte[9][1]_i_1\ : label is "soft_lutpair199";
+  attribute SOFT_HLUTNM of \i_TX_Byte[9][2]_i_1\ : label is "soft_lutpair200";
+  attribute SOFT_HLUTNM of \i_TX_Byte[9][3]_i_1\ : label is "soft_lutpair200";
+  attribute SOFT_HLUTNM of \i_TX_Byte[9][4]_i_1\ : label is "soft_lutpair201";
+  attribute SOFT_HLUTNM of \i_TX_Byte[9][5]_i_1\ : label is "soft_lutpair201";
+  attribute SOFT_HLUTNM of \i_TX_Byte[9][6]_i_1\ : label is "soft_lutpair202";
+  attribute SOFT_HLUTNM of \i_TX_Byte[9][7]_i_1\ : label is "soft_lutpair202";
+  attribute SOFT_HLUTNM of \i_TX_Byte[9][7]_i_2\ : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of \r_Cmd_Cnt[0]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \r_Cmd_Cnt[1]_i_2\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \r_Cmd_Cnt[1]_i_3\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \r_Cmd_Cnt[2]_i_4\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[0]_i_1\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[1]_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[2]_i_1\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[3]_i_2\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[3]_i_4\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[3]_i_5\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[4]_i_1\ : label is "soft_lutpair62";
+  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[6]_i_1\ : label is "soft_lutpair214";
+  attribute SOFT_HLUTNM of \r_Halfbit_Cnt[7]_i_1\ : label is "soft_lutpair214";
+  attribute SOFT_HLUTNM of r_Halfbit_state_i_1 : label is "soft_lutpair92";
+  attribute SOFT_HLUTNM of \r_Next[0]_i_1\ : label is "soft_lutpair94";
+  attribute SOFT_HLUTNM of \r_Next[1]_i_1\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \r_Next[2]_i_1\ : label is "soft_lutpair94";
+  attribute SOFT_HLUTNM of \r_Next[3]_i_1\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \r_Next[4]_i_1\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \r_Next[6]_i_1\ : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of \r_Next[7]_i_3\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \r_Next[7]_i_5\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \r_Next[7]_i_6\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \r_RX_Bit_Count[0]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \r_RX_Bit_Count[2]_i_2\ : label is "soft_lutpair90";
+  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_2\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_3\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_4\ : label is "soft_lutpair212";
+  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_5\ : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_6\ : label is "soft_lutpair90";
+  attribute SOFT_HLUTNM of \r_RX_Bit_Count[3]_i_7\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of r_SPI_CS_i_1 : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of r_SPI_CS_i_3 : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of r_SPI_Clk_i_3 : label is "soft_lutpair215";
+  attribute SOFT_HLUTNM of r_SPI_Clk_i_4 : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \r_SPI_END[2]_i_2\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \r_SPI_END[3]_i_1\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \r_SPI_END[7]_i_3\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \r_SPI_END[7]_i_5\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \r_SPI_END[7]_i_6\ : label is "soft_lutpair72";
+  attribute SOFT_HLUTNM of \r_SPI_END[7]_i_7\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of r_SPI_MOSI_i_8 : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of r_SPI_MOSI_i_9 : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \r_SPI_START[0]_i_1\ : label is "soft_lutpair211";
+  attribute SOFT_HLUTNM of \r_SPI_START[1]_i_2\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \r_SPI_START[2]_i_1\ : label is "soft_lutpair211";
+  attribute SOFT_HLUTNM of \r_SPI_START[3]_i_1\ : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of \r_SPI_START[4]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \r_SPI_START[6]_i_1\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \r_SPI_START[7]_i_3\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \r_SPI_START[7]_i_4\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of r_Send_i_3 : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of r_Send_i_5 : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of \r_StatusReg[1]_i_2\ : label is "soft_lutpair212";
+  attribute SOFT_HLUTNM of \r_StatusReg[2]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \r_StatusReg[3]_i_1\ : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of \r_TX_Bit_Count[1]_i_1\ : label is "soft_lutpair215";
+  attribute SOFT_HLUTNM of \r_TX_Bit_Count[2]_i_2\ : label is "soft_lutpair72";
+  attribute SOFT_HLUTNM of \r_TX_Bit_Count[3]_i_1\ : label is "soft_lutpair93";
+  attribute SOFT_HLUTNM of \r_TX_Byte[0]_i_51\ : label is "soft_lutpair73";
+  attribute SOFT_HLUTNM of \r_TX_Byte[0]_i_59\ : label is "soft_lutpair81";
+  attribute SOFT_HLUTNM of \r_TX_Byte[0]_i_63\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \r_TX_Byte[0]_i_65\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \r_TX_Byte[1]_i_51\ : label is "soft_lutpair74";
+  attribute SOFT_HLUTNM of \r_TX_Byte[1]_i_59\ : label is "soft_lutpair82";
+  attribute SOFT_HLUTNM of \r_TX_Byte[1]_i_63\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \r_TX_Byte[1]_i_65\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \r_TX_Byte[2]_i_51\ : label is "soft_lutpair75";
+  attribute SOFT_HLUTNM of \r_TX_Byte[2]_i_59\ : label is "soft_lutpair83";
+  attribute SOFT_HLUTNM of \r_TX_Byte[2]_i_63\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \r_TX_Byte[2]_i_65\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \r_TX_Byte[3]_i_51\ : label is "soft_lutpair76";
+  attribute SOFT_HLUTNM of \r_TX_Byte[3]_i_59\ : label is "soft_lutpair84";
+  attribute SOFT_HLUTNM of \r_TX_Byte[3]_i_63\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \r_TX_Byte[3]_i_65\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \r_TX_Byte[4]_i_51\ : label is "soft_lutpair77";
+  attribute SOFT_HLUTNM of \r_TX_Byte[4]_i_59\ : label is "soft_lutpair85";
+  attribute SOFT_HLUTNM of \r_TX_Byte[4]_i_63\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \r_TX_Byte[4]_i_65\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \r_TX_Byte[5]_i_51\ : label is "soft_lutpair78";
+  attribute SOFT_HLUTNM of \r_TX_Byte[5]_i_59\ : label is "soft_lutpair86";
+  attribute SOFT_HLUTNM of \r_TX_Byte[5]_i_63\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \r_TX_Byte[5]_i_65\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \r_TX_Byte[6]_i_51\ : label is "soft_lutpair79";
+  attribute SOFT_HLUTNM of \r_TX_Byte[6]_i_59\ : label is "soft_lutpair87";
+  attribute SOFT_HLUTNM of \r_TX_Byte[6]_i_63\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \r_TX_Byte[6]_i_65\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_13\ : label is "soft_lutpair213";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_4\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_52\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_54\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_55\ : label is "soft_lutpair91";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_63\ : label is "soft_lutpair80";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_71\ : label is "soft_lutpair88";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_75\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_77\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_81\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_90\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \r_TX_Byte[7]_i_91\ : label is "soft_lutpair71";
+  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[0]_i_1\ : label is "soft_lutpair217";
+  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[1]_i_1\ : label is "soft_lutpair217";
+  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[2]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[3]_i_1\ : label is "soft_lutpair71";
+  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[4]_i_1\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \r_TX_Byte_Cnt[7]_i_7\ : label is "soft_lutpair44";
   attribute ORIG_CELL_NAME : string;
   attribute ORIG_CELL_NAME of \r_TX_Byte_Cnt_reg[1]\ : label is "r_TX_Byte_Cnt_reg[1]";
   attribute ORIG_CELL_NAME of \r_TX_Byte_Cnt_reg[1]_rep\ : label is "r_TX_Byte_Cnt_reg[1]";
-  attribute SOFT_HLUTNM of r_TX_i_1 : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of r_TX_i_18 : label is "soft_lutpair88";
-  attribute SOFT_HLUTNM of \r_Tx_Cnt[0]_i_1\ : label is "soft_lutpair92";
-  attribute SOFT_HLUTNM of \r_Tx_Cnt[1]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \r_Tx_Cnt[2]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \r_Tx_Cnt[2]_i_6\ : label is "soft_lutpair91";
-  attribute SOFT_HLUTNM of \r_Tx_Cnt[4]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \r_Tx_Cnt[4]_i_2\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \r_Tx_Cnt[5]_i_2\ : label is "soft_lutpair212";
-  attribute SOFT_HLUTNM of \r_Tx_Cnt[6]_i_2\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \r_Tx_Cnt[7]_i_4\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of r_Tx_DataVaild_i_2 : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \r_count[0]_i_1\ : label is "soft_lutpair215";
-  attribute SOFT_HLUTNM of \write_pointer[0]_i_2\ : label is "soft_lutpair215";
+  attribute SOFT_HLUTNM of r_TX_i_1 : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of r_TX_i_18 : label is "soft_lutpair89";
+  attribute SOFT_HLUTNM of \r_Tx_Cnt[0]_i_1\ : label is "soft_lutpair93";
+  attribute SOFT_HLUTNM of \r_Tx_Cnt[1]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \r_Tx_Cnt[2]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \r_Tx_Cnt[2]_i_6\ : label is "soft_lutpair92";
+  attribute SOFT_HLUTNM of \r_Tx_Cnt[4]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \r_Tx_Cnt[4]_i_2\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \r_Tx_Cnt[5]_i_2\ : label is "soft_lutpair213";
+  attribute SOFT_HLUTNM of \r_Tx_Cnt[6]_i_2\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \r_Tx_Cnt[7]_i_4\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of r_Tx_DataVaild_i_2 : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \r_count[0]_i_1\ : label is "soft_lutpair216";
+  attribute SOFT_HLUTNM of \write_pointer[0]_i_2\ : label is "soft_lutpair216";
 begin
   o_AXI_Init_reg_0 <= \^o_axi_init_reg_0\;
   r_CmdAccept <= \^r_cmdaccept\;
@@ -20734,12 +20734,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS is
   port (
-    r_Done_reg : out STD_LOGIC;
+    w_ADC_Done : out STD_LOGIC;
     tx_done_reg_0 : out STD_LOGIC;
     m00_axis_tvalid : out STD_LOGIC;
     m00_axis_tlast : out STD_LOGIC;
     \read_pointer_reg[12]_0\ : out STD_LOGIC;
-    o_LED : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    o_LED : out STD_LOGIC_VECTOR ( 5 downto 0 );
     m00_axis_tdata : out STD_LOGIC_VECTOR ( 11 downto 0 );
     i_CMOS_Clk : in STD_LOGIC;
     \read_pointer_reg[17]_0\ : in STD_LOGIC;
@@ -20747,7 +20747,7 @@ entity Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS is
     \write_pointer_reg[17]_0\ : in STD_LOGIC;
     r_count : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
-    \r_addon_reg[1]_0\ : in STD_LOGIC;
+    m00_axi_init_axi_txn : in STD_LOGIC;
     m00_axis_tready : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -20769,12 +20769,12 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStre
   signal \mst_exec_state[1]_i_3_n_0\ : STD_LOGIC;
   signal \mst_exec_state__0\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \mst_exec_state__1\ : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal \^o_led\ : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal \^o_led\ : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal \o_LED[2]_INST_0_i_2_n_0\ : STD_LOGIC;
   signal \o_LED[2]_INST_0_i_3_n_0\ : STD_LOGIC;
   signal \o_LED[2]_INST_0_i_4_n_0\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal p_0_in8_out : STD_LOGIC;
+  signal p_0_in7_out : STD_LOGIC;
   signal \r_Receive_mux_sel__10_i_1_n_0\ : STD_LOGIC;
   signal \r_Receive_mux_sel__34_i_1_n_0\ : STD_LOGIC;
   signal r_Receive_reg_0_0_i_1_n_0 : STD_LOGIC;
@@ -22618,18 +22618,20 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStre
   signal \NLW_write_pointer_reg[16]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_write_pointer_reg[16]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_mst_exec_state[0]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \FSM_sequential_mst_exec_state[1]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \FSM_sequential_mst_exec_state[0]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \FSM_sequential_mst_exec_state[1]_i_1\ : label is "soft_lutpair4";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_mst_exec_state_reg[0]\ : label is "INIT_COUNTER:01,SEND_STREAM:10,IDLE:00";
   attribute FSM_ENCODED_STATES of \FSM_sequential_mst_exec_state_reg[1]\ : label is "INIT_COUNTER:01,SEND_STREAM:10,IDLE:00";
-  attribute SOFT_HLUTNM of axis_tlast_delay_i_3 : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \mst_exec_state[0]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \mst_exec_state[1]_i_3\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \o_LED[2]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \o_LED[2]_INST_0_i_4\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \r_Receive_mux_sel__10_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \r_Receive_mux_sel__34_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of axis_tlast_delay_i_3 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of axis_tvalid_delay_i_1 : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \mst_exec_state[0]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \mst_exec_state[1]_i_3\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \o_LED[1]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \o_LED[2]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \o_LED[2]_INST_0_i_4\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \r_Receive_mux_sel__10_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \r_Receive_mux_sel__34_i_1\ : label is "soft_lutpair6";
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ : string;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of r_Receive_reg_0_0 : label is "p0_d1";
   attribute \MEM.PORTB.DATA_BIT_LAYOUT\ : string;
@@ -23697,8 +23699,8 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStre
   attribute ram_offset of r_Receive_reg_7_9 : label is 0;
   attribute ram_slice_begin of r_Receive_reg_7_9 : label is 9;
   attribute ram_slice_end of r_Receive_reg_7_9 : label is 9;
-  attribute SOFT_HLUTNM of \r_addon[0]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \r_addon[1]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \r_addon[0]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \r_addon[1]_i_1\ : label is "soft_lutpair16";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of read_pointer0_carry : label is 35;
   attribute ADDER_THRESHOLD of \read_pointer0_carry__0\ : label is 35;
@@ -23775,24 +23777,24 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStre
   attribute ORIG_CELL_NAME of \read_pointer_reg_rep[9]_rep\ : label is "read_pointer_reg_rep[9]";
   attribute ORIG_CELL_NAME of \read_pointer_reg_rep[9]_rep__0\ : label is "read_pointer_reg_rep[9]";
   attribute ORIG_CELL_NAME of \read_pointer_reg_rep[9]_rep__1\ : label is "read_pointer_reg_rep[9]";
-  attribute SOFT_HLUTNM of \read_pointer_rep[0]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \read_pointer_rep[10]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \read_pointer_rep[11]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \read_pointer_rep[12]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \read_pointer_rep[13]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \read_pointer_rep[14]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \read_pointer_rep[15]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \read_pointer_rep[16]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \read_pointer_rep[17]_i_2\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \read_pointer_rep[1]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \read_pointer_rep[2]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \read_pointer_rep[3]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \read_pointer_rep[4]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \read_pointer_rep[5]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \read_pointer_rep[6]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \read_pointer_rep[7]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \read_pointer_rep[8]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \read_pointer_rep[9]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \read_pointer_rep[0]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \read_pointer_rep[10]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \read_pointer_rep[11]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \read_pointer_rep[12]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \read_pointer_rep[13]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \read_pointer_rep[14]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \read_pointer_rep[15]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \read_pointer_rep[16]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \read_pointer_rep[17]_i_2\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \read_pointer_rep[1]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \read_pointer_rep[2]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \read_pointer_rep[3]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \read_pointer_rep[4]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \read_pointer_rep[5]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \read_pointer_rep[6]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \read_pointer_rep[7]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \read_pointer_rep[8]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \read_pointer_rep[9]_i_1\ : label is "soft_lutpair11";
   attribute SOFT_HLUTNM of tx_done_i_3 : label is "soft_lutpair1";
   attribute ORIG_CELL_NAME of \write_pointer_reg[0]\ : label is "write_pointer_reg[0]";
   attribute ADDER_THRESHOLD of \write_pointer_reg[0]_i_3\ : label is 11;
@@ -23882,7 +23884,7 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStre
   attribute ORIG_CELL_NAME of \write_pointer_reg[9]_rep__1\ : label is "write_pointer_reg[9]";
   attribute ORIG_CELL_NAME of \write_pointer_reg[9]_rep__2\ : label is "write_pointer_reg[9]";
 begin
-  o_LED(4 downto 0) <= \^o_led\(4 downto 0);
+  o_LED(5 downto 0) <= \^o_led\(5 downto 0);
   \read_pointer_reg[12]_0\ <= \^read_pointer_reg[12]_0\;
   tx_done_reg_0 <= \^tx_done_reg_0\;
 ADC: entity work.Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC
@@ -23890,9 +23892,9 @@ ADC: entity work.Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC
       E(0) => ADC_n_1,
       Q(1 downto 0) => \mst_exec_state__0\(1 downto 0),
       \count_reg[0]\ => \count_reg_n_0_[0]\,
-      \count_reg[0]_0\ => \r_addon_reg[1]_0\,
       i_CMOS_Clk => i_CMOS_Clk,
-      r_Done_reg_0 => r_Done_reg,
+      m00_axi_init_axi_txn => m00_axi_init_axi_txn,
+      r_Done_reg_0 => w_ADC_Done,
       r_Done_reg_1 => ADC_n_2,
       s00_axi_aresetn => s00_axi_aresetn
     );
@@ -23945,8 +23947,8 @@ axis_tlast_delay_i_1: unisim.vcomponents.LUT6
     )
         port map (
       I0 => axis_tlast_delay_i_2_n_0,
-      I1 => read_pointer_reg(3),
-      I2 => read_pointer_reg(7),
+      I1 => read_pointer_reg(1),
+      I2 => read_pointer_reg(2),
       I3 => axis_tlast_delay_i_3_n_0,
       I4 => axis_tlast_delay_i_4_n_0,
       I5 => s00_axi_aresetn,
@@ -23958,9 +23960,9 @@ axis_tlast_delay_i_2: unisim.vcomponents.LUT5
     )
         port map (
       I0 => \o_LED[2]_INST_0_i_2_n_0\,
-      I1 => read_pointer_reg(1),
-      I2 => read_pointer_reg(2),
-      I3 => read_pointer_reg(0),
+      I1 => read_pointer_reg(3),
+      I2 => read_pointer_reg(0),
+      I3 => read_pointer_reg(7),
       I4 => axis_tlast_delay_i_5_n_0,
       O => axis_tlast_delay_i_2_n_0
     );
@@ -24011,7 +24013,7 @@ axis_tvalid_delay_i_1: unisim.vcomponents.LUT5
       INIT => X"00200000"
     )
         port map (
-      I0 => \r_addon_reg[1]_0\,
+      I0 => m00_axi_init_axi_txn,
       I1 => \^read_pointer_reg[12]_0\,
       I2 => \mst_exec_state__0\(1),
       I3 => \mst_exec_state__0\(0),
@@ -24201,8 +24203,8 @@ axis_tvalid_delay_reg: unisim.vcomponents.FDRE
       INIT => X"15"
     )
         port map (
-      I0 => \^o_led\(4),
-      I1 => \^o_led\(3),
+      I0 => \^o_led\(5),
+      I1 => \^o_led\(4),
       I2 => \count_reg_n_0_[0]\,
       O => \mst_exec_state[0]_i_1_n_0\
     );
@@ -24211,10 +24213,10 @@ axis_tvalid_delay_reg: unisim.vcomponents.FDRE
       INIT => X"8F88"
     )
         port map (
-      I0 => \^o_led\(3),
+      I0 => \^o_led\(4),
       I1 => \count_reg_n_0_[0]\,
       I2 => \^tx_done_reg_0\,
-      I3 => \^o_led\(4),
+      I3 => \^o_led\(5),
       O => \mst_exec_state[1]_i_3_n_0\
     );
 \mst_exec_state_reg[0]\: unisim.vcomponents.FDRE
@@ -24225,7 +24227,7 @@ axis_tvalid_delay_reg: unisim.vcomponents.FDRE
       C => m00_axis_aclk,
       CE => ADC_n_1,
       D => \mst_exec_state[0]_i_1_n_0\,
-      Q => \^o_led\(3),
+      Q => \^o_led\(4),
       R => \read_pointer_reg[17]_0\
     );
 \mst_exec_state_reg[1]\: unisim.vcomponents.FDRE
@@ -24236,8 +24238,19 @@ axis_tvalid_delay_reg: unisim.vcomponents.FDRE
       C => m00_axis_aclk,
       CE => ADC_n_1,
       D => \mst_exec_state[1]_i_3_n_0\,
-      Q => \^o_led\(4),
+      Q => \^o_led\(5),
       R => \read_pointer_reg[17]_0\
+    );
+\o_LED[1]_INST_0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0200"
+    )
+        port map (
+      I0 => m00_axi_init_axi_txn,
+      I1 => \^read_pointer_reg[12]_0\,
+      I2 => \mst_exec_state__0\(0),
+      I3 => \mst_exec_state__0\(1),
+      O => \^o_led\(0)
     );
 \o_LED[2]_INST_0\: unisim.vcomponents.LUT1
     generic map(
@@ -24245,7 +24258,7 @@ axis_tvalid_delay_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \^read_pointer_reg[12]_0\,
-      O => \^o_led\(0)
+      O => \^o_led\(1)
     );
 \o_LED[2]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -24272,13 +24285,13 @@ axis_tvalid_delay_reg: unisim.vcomponents.FDRE
     );
 \o_LED[2]_INST_0_i_3\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"5557"
+      INIT => X"01FF"
     )
         port map (
-      I0 => read_pointer_reg(7),
-      I1 => read_pointer_reg(4),
-      I2 => read_pointer_reg(5),
-      I3 => read_pointer_reg(6),
+      I0 => read_pointer_reg(4),
+      I1 => read_pointer_reg(5),
+      I2 => read_pointer_reg(6),
+      I3 => read_pointer_reg(7),
       O => \o_LED[2]_INST_0_i_3_n_0\
     );
 \o_LED[2]_INST_0_i_4\: unisim.vcomponents.LUT4
@@ -24402,7 +24415,7 @@ r_Receive_reg_0_0_i_3: unisim.vcomponents.LUT3
       INIT => X"02"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_0_0_i_3_n_0
@@ -24412,7 +24425,7 @@ r_Receive_reg_0_0_i_4: unisim.vcomponents.LUT6
       INIT => X"00200000FFFFFFFF"
     )
         port map (
-      I0 => \r_addon_reg[1]_0\,
+      I0 => m00_axi_init_axi_txn,
       I1 => \^read_pointer_reg[12]_0\,
       I2 => m00_axis_tready,
       I3 => \mst_exec_state__0\(0),
@@ -24431,7 +24444,7 @@ r_Receive_reg_0_0_i_5: unisim.vcomponents.LUT6
       I3 => \write_pointer_reg[12]_rep_n_0\,
       I4 => r_Receive_reg_0_0_i_8_n_0,
       I5 => \^tx_done_reg_0\,
-      O => p_0_in8_out
+      O => p_0_in7_out
     );
 r_Receive_reg_0_0_i_6: unisim.vcomponents.LUT4
     generic map(
@@ -24726,7 +24739,7 @@ r_Receive_reg_0_1_i_1: unisim.vcomponents.LUT3
       INIT => X"02"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_0_1_i_1_n_0
@@ -25086,7 +25099,7 @@ r_Receive_reg_0_5_i_1: unisim.vcomponents.LUT3
       INIT => X"02"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_0_5_i_1_n_0
@@ -25191,7 +25204,7 @@ r_Receive_reg_0_6_i_1: unisim.vcomponents.LUT3
       INIT => X"02"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_0_6_i_1_n_0
@@ -25391,7 +25404,7 @@ r_Receive_reg_0_8_i_1: unisim.vcomponents.LUT3
       INIT => X"02"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_0_8_i_1_n_0
@@ -25401,7 +25414,7 @@ r_Receive_reg_0_8_i_2: unisim.vcomponents.LUT3
       INIT => X"02"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_0_8_i_2_n_0
@@ -25737,7 +25750,7 @@ r_Receive_reg_1_10_i_1: unisim.vcomponents.LUT3
       INIT => X"02"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_1_10_i_1_n_0
@@ -25911,7 +25924,7 @@ r_Receive_reg_1_2_i_1: unisim.vcomponents.LUT3
       INIT => X"02"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_1_2_i_1_n_0
@@ -26018,7 +26031,7 @@ r_Receive_reg_1_3_i_1: unisim.vcomponents.LUT3
       INIT => X"02"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_1_3_i_1_n_0
@@ -26416,7 +26429,7 @@ r_Receive_reg_1_7_i_1: unisim.vcomponents.LUT3
       INIT => X"02"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_1_7_i_1_n_0
@@ -26620,7 +26633,7 @@ r_Receive_reg_1_9_i_1: unisim.vcomponents.LUT3
       INIT => X"02"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_1_9_i_1_n_0
@@ -26719,7 +26732,7 @@ r_Receive_reg_2_0_i_3: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(17),
       I2 => write_pointer_reg(16),
       O => r_Receive_reg_2_0_i_3_n_0
@@ -26988,7 +27001,7 @@ r_Receive_reg_2_1_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(17),
       I2 => write_pointer_reg(16),
       O => r_Receive_reg_2_1_i_1_n_0
@@ -27352,7 +27365,7 @@ r_Receive_reg_2_5_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(17),
       I2 => write_pointer_reg(16),
       O => r_Receive_reg_2_5_i_1_n_0
@@ -27457,7 +27470,7 @@ r_Receive_reg_2_6_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(17),
       I2 => write_pointer_reg(16),
       O => r_Receive_reg_2_6_i_1_n_0
@@ -27657,7 +27670,7 @@ r_Receive_reg_2_8_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(17),
       I2 => write_pointer_reg(16),
       O => r_Receive_reg_2_8_i_1_n_0
@@ -27667,7 +27680,7 @@ r_Receive_reg_2_8_i_2: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(17),
       I2 => write_pointer_reg(16),
       O => r_Receive_reg_2_8_i_2_n_0
@@ -28011,7 +28024,7 @@ r_Receive_reg_3_10_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(17),
       I2 => write_pointer_reg(16),
       O => r_Receive_reg_3_10_i_1_n_0
@@ -28189,7 +28202,7 @@ r_Receive_reg_3_2_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(17),
       I2 => write_pointer_reg(16),
       O => r_Receive_reg_3_2_i_1_n_0
@@ -28296,7 +28309,7 @@ r_Receive_reg_3_3_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(17),
       I2 => write_pointer_reg(16),
       O => r_Receive_reg_3_3_i_1_n_0
@@ -28694,7 +28707,7 @@ r_Receive_reg_3_7_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(17),
       I2 => write_pointer_reg(16),
       O => r_Receive_reg_3_7_i_1_n_0
@@ -28898,7 +28911,7 @@ r_Receive_reg_3_9_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(17),
       I2 => write_pointer_reg(16),
       O => r_Receive_reg_3_9_i_1_n_0
@@ -28997,7 +29010,7 @@ r_Receive_reg_4_0_i_3: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_4_0_i_3_n_0
@@ -29266,7 +29279,7 @@ r_Receive_reg_4_1_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_4_1_i_1_n_0
@@ -29630,7 +29643,7 @@ r_Receive_reg_4_5_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_4_5_i_1_n_0
@@ -29735,7 +29748,7 @@ r_Receive_reg_4_6_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_4_6_i_1_n_0
@@ -29935,7 +29948,7 @@ r_Receive_reg_4_8_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_4_8_i_1_n_0
@@ -29945,7 +29958,7 @@ r_Receive_reg_4_8_i_2: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_4_8_i_2_n_0
@@ -30289,7 +30302,7 @@ r_Receive_reg_5_10_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_5_10_i_1_n_0
@@ -30467,7 +30480,7 @@ r_Receive_reg_5_2_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_5_2_i_1_n_0
@@ -30574,7 +30587,7 @@ r_Receive_reg_5_3_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_5_3_i_1_n_0
@@ -30972,7 +30985,7 @@ r_Receive_reg_5_7_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_5_7_i_1_n_0
@@ -31176,7 +31189,7 @@ r_Receive_reg_5_9_i_1: unisim.vcomponents.LUT3
       INIT => X"20"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_5_9_i_1_n_0
@@ -31275,7 +31288,7 @@ r_Receive_reg_6_0_i_3: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_6_0_i_3_n_0
@@ -31544,7 +31557,7 @@ r_Receive_reg_6_1_i_1: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_6_1_i_1_n_0
@@ -31908,7 +31921,7 @@ r_Receive_reg_6_5_i_1: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_6_5_i_1_n_0
@@ -32013,7 +32026,7 @@ r_Receive_reg_6_6_i_1: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_6_6_i_1_n_0
@@ -32213,7 +32226,7 @@ r_Receive_reg_6_8_i_1: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_6_8_i_1_n_0
@@ -32223,7 +32236,7 @@ r_Receive_reg_6_8_i_2: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_6_8_i_2_n_0
@@ -32567,7 +32580,7 @@ r_Receive_reg_7_10_i_1: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_7_10_i_1_n_0
@@ -32745,7 +32758,7 @@ r_Receive_reg_7_2_i_1: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_7_2_i_1_n_0
@@ -32852,7 +32865,7 @@ r_Receive_reg_7_3_i_1: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_7_3_i_1_n_0
@@ -33250,7 +33263,7 @@ r_Receive_reg_7_7_i_1: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_7_7_i_1_n_0
@@ -33454,7 +33467,7 @@ r_Receive_reg_7_9_i_1: unisim.vcomponents.LUT3
       INIT => X"80"
     )
         port map (
-      I0 => p_0_in8_out,
+      I0 => p_0_in7_out,
       I1 => write_pointer_reg(16),
       I2 => write_pointer_reg(17),
       O => r_Receive_reg_7_9_i_1_n_0
@@ -33480,7 +33493,7 @@ r_Receive_reg_7_9_i_1: unisim.vcomponents.LUT3
       INIT => X"1"
     )
         port map (
-      I0 => \^o_led\(1),
+      I0 => \^o_led\(2),
       O => p_0_in(0)
     );
 \r_addon[1]_i_1\: unisim.vcomponents.LUT2
@@ -33488,8 +33501,8 @@ r_Receive_reg_7_9_i_1: unisim.vcomponents.LUT3
       INIT => X"6"
     )
         port map (
-      I0 => \^o_led\(1),
-      I1 => \^o_led\(2),
+      I0 => \^o_led\(2),
+      I1 => \^o_led\(3),
       O => p_0_in(1)
     );
 \r_addon_reg[0]\: unisim.vcomponents.FDRE
@@ -33497,10 +33510,10 @@ r_Receive_reg_7_9_i_1: unisim.vcomponents.LUT3
       INIT => '0'
     )
         port map (
-      C => \r_addon_reg[1]_0\,
+      C => m00_axi_init_axi_txn,
       CE => '1',
       D => p_0_in(0),
-      Q => \^o_led\(1),
+      Q => \^o_led\(2),
       R => '0'
     );
 \r_addon_reg[1]\: unisim.vcomponents.FDRE
@@ -33508,10 +33521,10 @@ r_Receive_reg_7_9_i_1: unisim.vcomponents.LUT3
       INIT => '0'
     )
         port map (
-      C => \r_addon_reg[1]_0\,
+      C => m00_axi_init_axi_txn,
       CE => '1',
       D => p_0_in(1),
-      Q => \^o_led\(2),
+      Q => \^o_led\(3),
       R => '0'
     );
 \r_count[0]_i_3\: unisim.vcomponents.LUT1
@@ -35218,7 +35231,7 @@ read_pointer0_carry: unisim.vcomponents.CARRY4
       INIT => X"FFFFFFFF00200000"
     )
         port map (
-      I0 => \r_addon_reg[1]_0\,
+      I0 => m00_axi_init_axi_txn,
       I1 => \^read_pointer_reg[12]_0\,
       I2 => m00_axis_tready,
       I3 => \mst_exec_state__0\(0),
@@ -35572,14 +35585,14 @@ tx_done_i_1: unisim.vcomponents.LUT4
     );
 tx_done_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000001000"
+      INIT => X"0000000000000100"
     )
         port map (
       I0 => tx_done_i_4_n_0,
-      I1 => read_pointer_reg(2),
-      I2 => read_pointer_reg(7),
-      I3 => read_pointer_reg(4),
-      I4 => read_pointer_reg(1),
+      I1 => read_pointer_reg(5),
+      I2 => read_pointer_reg(3),
+      I3 => read_pointer_reg(7),
+      I4 => read_pointer_reg(0),
       I5 => tx_done_i_5_n_0,
       O => tx_done3_out
     );
@@ -35588,7 +35601,7 @@ tx_done_i_3: unisim.vcomponents.LUT5
       INIT => X"00200000"
     )
         port map (
-      I0 => \r_addon_reg[1]_0\,
+      I0 => m00_axi_init_axi_txn,
       I1 => \^read_pointer_reg[12]_0\,
       I2 => \mst_exec_state__0\(1),
       I3 => \mst_exec_state__0\(0),
@@ -35608,14 +35621,14 @@ tx_done_i_4: unisim.vcomponents.LUT4
     );
 tx_done_i_5: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFFFFFEFF"
+      INIT => X"FFFFFFFFFFFFFBFF"
     )
         port map (
       I0 => axis_tlast_delay_i_5_n_0,
-      I1 => read_pointer_reg(5),
-      I2 => read_pointer_reg(3),
-      I3 => \r_addon_reg[1]_0\,
-      I4 => read_pointer_reg(0),
+      I1 => read_pointer_reg(4),
+      I2 => read_pointer_reg(1),
+      I3 => m00_axi_init_axi_txn,
+      I4 => read_pointer_reg(2),
       I5 => \o_LED[2]_INST_0_i_2_n_0\,
       O => tx_done_i_5_n_0
     );
@@ -36668,7 +36681,7 @@ entity Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI is
     s00_axi_rvalid : out STD_LOGIC;
     r_SPI_CS_reg : out STD_LOGIC;
     o_AXI_Init_reg : out STD_LOGIC;
-    o_AXI_Init_reg_0 : out STD_LOGIC;
+    m00_axi_init_axi_txn : out STD_LOGIC;
     r_count : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     o_SPI_Clk : out STD_LOGIC;
@@ -36678,7 +36691,7 @@ entity Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI is
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \slv_reg4_reg[0]_0\ : in STD_LOGIC;
+    w_ADC_Done : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
     \write_pointer_reg[17]\ : in STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
@@ -36793,8 +36806,8 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStre
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal axi_wready0 : STD_LOGIC;
   signal \^axi_wready_reg_0\ : STD_LOGIC;
+  signal \^m00_axi_init_axi_txn\ : STD_LOGIC;
   signal o_AXI_Init_i_1_n_0 : STD_LOGIC;
-  signal \^o_axi_init_reg_0\ : STD_LOGIC;
   signal \^o_spi_clk\ : STD_LOGIC;
   signal \^o_spi_mosi\ : STD_LOGIC;
   signal p_1_in : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -36997,16 +37010,16 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStre
   signal \slv_reg7[7]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg_rden__0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair218";
-  attribute SOFT_HLUTNM of axi_awready_i_1 : label is "soft_lutpair217";
-  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair218";
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair217";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair219";
+  attribute SOFT_HLUTNM of axi_awready_i_1 : label is "soft_lutpair218";
+  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair219";
+  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair218";
 begin
   SR(0) <= \^sr\(0);
   axi_arready_reg_0 <= \^axi_arready_reg_0\;
   axi_awready_reg_0 <= \^axi_awready_reg_0\;
   axi_wready_reg_0 <= \^axi_wready_reg_0\;
-  o_AXI_Init_reg_0 <= \^o_axi_init_reg_0\;
+  m00_axi_init_axi_txn <= \^m00_axi_init_axi_txn\;
   o_SPI_Clk <= \^o_spi_clk\;
   o_SPI_MOSI <= \^o_spi_mosi\;
   s00_axi_bvalid <= \^s00_axi_bvalid\;
@@ -37019,7 +37032,7 @@ SPI: entity work.Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
       axi_awaddr(2 downto 0) => axi_awaddr(4 downto 2),
       i_SPI_MISO => i_SPI_MISO,
       \i_TX_Byte_reg[6][7]_0\(7 downto 0) => slv_reg1(7 downto 0),
-      o_AXI_Init_reg_0 => \^o_axi_init_reg_0\,
+      o_AXI_Init_reg_0 => \^m00_axi_init_axi_txn\,
       o_AXI_Init_reg_1 => o_AXI_Init_reg,
       o_AXI_Init_reg_2 => o_AXI_Init_i_1_n_0,
       o_SPI_Clk => \^o_spi_clk\,
@@ -38630,7 +38643,7 @@ o_AXI_Init_i_1: unisim.vcomponents.LUT3
       INIT => X"F2"
     )
         port map (
-      I0 => \^o_axi_init_reg_0\,
+      I0 => \^m00_axi_init_axi_txn\,
       I1 => r_RdyStart,
       I2 => slv_reg5(0),
       O => o_AXI_Init_i_1_n_0
@@ -39910,7 +39923,7 @@ r_SPI_MOSI_i_1: unisim.vcomponents.LUT6
       I2 => \^axi_wready_reg_0\,
       I3 => s00_axi_wvalid,
       I4 => s00_axi_awvalid,
-      I5 => \slv_reg4_reg[0]_0\,
+      I5 => w_ADC_Done,
       O => \slv_reg4[0]_i_1_n_0\
     );
 \slv_reg4[15]_i_1\: unisim.vcomponents.LUT5
@@ -41244,13 +41257,11 @@ entity Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0 is
     r_SPI_CS_reg : out STD_LOGIC;
     s00_axi_wready : out STD_LOGIC;
     s00_axi_awready : out STD_LOGIC;
-    r_Done_reg : out STD_LOGIC;
-    o_AXI_Init_reg : out STD_LOGIC;
+    o_LED : out STD_LOGIC_VECTOR ( 6 downto 0 );
     o_SPI_Clk : out STD_LOGIC;
     o_SPI_MOSI : out STD_LOGIC;
     s00_axi_arready : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    o_LED : out STD_LOGIC_VECTOR ( 5 downto 0 );
     m00_axis_tdata : out STD_LOGIC_VECTOR ( 11 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
     s00_axi_bvalid : out STD_LOGIC;
@@ -41280,29 +41291,27 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStre
   signal PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst_n_4 : STD_LOGIC;
   signal PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst_n_1 : STD_LOGIC;
   signal PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst_n_7 : STD_LOGIC;
-  signal \^o_axi_init_reg\ : STD_LOGIC;
-  signal \^r_done_reg\ : STD_LOGIC;
+  signal m00_axi_init_axi_txn : STD_LOGIC;
   signal r_count : STD_LOGIC;
+  signal w_ADC_Done : STD_LOGIC;
 begin
-  o_AXI_Init_reg <= \^o_axi_init_reg\;
-  r_Done_reg <= \^r_done_reg\;
 PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst: entity work.Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
      port map (
       i_CMOS_Clk => i_CMOS_Clk,
+      m00_axi_init_axi_txn => m00_axi_init_axi_txn,
       m00_axis_aclk => m00_axis_aclk,
       m00_axis_tdata(11 downto 0) => m00_axis_tdata(11 downto 0),
       m00_axis_tlast => m00_axis_tlast,
       m00_axis_tready => m00_axis_tready,
       m00_axis_tvalid => m00_axis_tvalid,
-      o_LED(4 downto 1) => o_LED(5 downto 2),
-      o_LED(0) => o_LED(0),
-      r_Done_reg => \^r_done_reg\,
-      \r_addon_reg[1]_0\ => \^o_axi_init_reg\,
+      o_LED(5 downto 2) => o_LED(6 downto 3),
+      o_LED(1 downto 0) => o_LED(1 downto 0),
       r_count => r_count,
       \read_pointer_reg[12]_0\ => PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst_n_4,
       \read_pointer_reg[17]_0\ => PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst_n_1,
       s00_axi_aresetn => s00_axi_aresetn,
-      tx_done_reg_0 => o_LED(1),
+      tx_done_reg_0 => o_LED(2),
+      w_ADC_Done => w_ADC_Done,
       \write_pointer_reg[17]_0\ => PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst_n_7
     );
 PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst: entity work.Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
@@ -41312,8 +41321,8 @@ PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst: entity work.Zed_SPI_PL_SPI_ADC_Master
       axi_awready_reg_0 => s00_axi_awready,
       axi_wready_reg_0 => s00_axi_wready,
       i_SPI_MISO => i_SPI_MISO,
+      m00_axi_init_axi_txn => m00_axi_init_axi_txn,
       o_AXI_Init_reg => PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst_n_7,
-      o_AXI_Init_reg_0 => \^o_axi_init_reg\,
       o_SPI_Clk => o_SPI_Clk,
       o_SPI_MOSI => o_SPI_MOSI,
       r_SPI_CS_reg => r_SPI_CS_reg,
@@ -41332,7 +41341,7 @@ PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst: entity work.Zed_SPI_PL_SPI_ADC_Master
       s00_axi_wdata(31 downto 0) => s00_axi_wdata(31 downto 0),
       s00_axi_wstrb(3 downto 0) => s00_axi_wstrb(3 downto 0),
       s00_axi_wvalid => s00_axi_wvalid,
-      \slv_reg4_reg[0]_0\ => \^r_done_reg\,
+      w_ADC_Done => w_ADC_Done,
       \write_pointer_reg[17]\ => PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst_n_4
     );
 end STRUCTURE;
@@ -41396,6 +41405,8 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \^m00_axis_tdata\ : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal \^m00_axis_tready\ : STD_LOGIC;
+  signal \^o_led\ : STD_LOGIC_VECTOR ( 7 downto 1 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of i_CMOS_Clk : signal is "xilinx.com:signal:clock:1.0 i_CMOS_Clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -41439,6 +41450,7 @@ architecture STRUCTURE of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is
   attribute X_INTERFACE_INFO of s00_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 s00_axi WDATA";
   attribute X_INTERFACE_INFO of s00_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 s00_axi WSTRB";
 begin
+  \^m00_axis_tready\ <= m00_axis_tready;
   m00_axis_tdata(15) <= \<const0>\;
   m00_axis_tdata(14) <= \<const0>\;
   m00_axis_tdata(13) <= \<const0>\;
@@ -41447,6 +41459,8 @@ begin
   m00_axis_tstrb(1) <= \<const1>\;
   m00_axis_tstrb(0) <= \<const1>\;
   o_DMA_Reset <= \<const0>\;
+  o_LED(7 downto 1) <= \^o_led\(7 downto 1);
+  o_LED(0) <= \^m00_axis_tready\;
   s00_axi_bresp(1) <= \<const0>\;
   s00_axi_bresp(0) <= \<const0>\;
   s00_axi_rresp(1) <= \<const0>\;
@@ -41466,13 +41480,11 @@ inst: entity work.Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0
       m00_axis_aclk => m00_axis_aclk,
       m00_axis_tdata(11 downto 0) => \^m00_axis_tdata\(11 downto 0),
       m00_axis_tlast => m00_axis_tlast,
-      m00_axis_tready => m00_axis_tready,
+      m00_axis_tready => \^m00_axis_tready\,
       m00_axis_tvalid => m00_axis_tvalid,
-      o_AXI_Init_reg => o_LED(1),
-      o_LED(5 downto 0) => o_LED(7 downto 2),
+      o_LED(6 downto 0) => \^o_led\(7 downto 1),
       o_SPI_Clk => o_SPI_Clk,
       o_SPI_MOSI => o_SPI_MOSI,
-      r_Done_reg => o_LED(0),
       r_SPI_CS_reg => o_SPI_CS,
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_araddr(2 downto 0) => s00_axi_araddr(4 downto 2),

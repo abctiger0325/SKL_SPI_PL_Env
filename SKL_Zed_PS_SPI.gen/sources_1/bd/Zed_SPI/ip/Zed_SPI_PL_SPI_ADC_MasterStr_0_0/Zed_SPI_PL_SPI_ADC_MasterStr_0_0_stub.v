@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Tue Mar 22 17:14:20 2022
+// Date        : Tue Mar 22 17:45:54 2022
 // Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_stub.v

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1
-// IP Revision: 11
+// IP Revision: 12
 
 (* X_CORE_INFO = "PL_SPI_ADC_MasterStream_v1_0,Vivado 2021.2" *)
 (* CHECK_LICENSE_TYPE = "Zed_SPI_PL_SPI_ADC_MasterStr_0_0,PL_SPI_ADC_MasterStream_v1_0,{}" *)

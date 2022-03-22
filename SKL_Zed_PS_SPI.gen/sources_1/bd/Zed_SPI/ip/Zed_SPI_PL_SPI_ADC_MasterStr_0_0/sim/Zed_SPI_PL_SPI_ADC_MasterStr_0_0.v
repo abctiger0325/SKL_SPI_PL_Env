@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1
-// IP Revision: 11
+// IP Revision: 12
 
 `timescale 1ns/1ps
 

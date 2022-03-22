@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Tue Mar 22 17:14:20 2022
+// Date        : Tue Mar 22 17:45:55 2022
 // Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_sim_netlist.v
@@ -100,7 +100,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0
   wire m00_axis_tlast;
   wire m00_axis_tready;
   wire m00_axis_tvalid;
-  wire [7:0]o_LED;
+  wire [7:1]\^o_LED ;
   wire o_SPI_CS;
   wire o_SPI_Clk;
   wire o_SPI_MOSI;
@@ -130,6 +130,8 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0
   assign m00_axis_tstrb[1] = \<const1> ;
   assign m00_axis_tstrb[0] = \<const1> ;
   assign o_DMA_Reset = \<const0> ;
+  assign o_LED[7:1] = \^o_LED [7:1];
+  assign o_LED[0] = m00_axis_tready;
   assign s00_axi_bresp[1] = \<const0> ;
   assign s00_axi_bresp[0] = \<const0> ;
   assign s00_axi_rresp[1] = \<const0> ;
@@ -146,11 +148,9 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0
         .m00_axis_tlast(m00_axis_tlast),
         .m00_axis_tready(m00_axis_tready),
         .m00_axis_tvalid(m00_axis_tvalid),
-        .o_AXI_Init_reg(o_LED[1]),
-        .o_LED(o_LED[7:2]),
+        .o_LED(\^o_LED ),
         .o_SPI_Clk(o_SPI_Clk),
         .o_SPI_MOSI(o_SPI_MOSI),
-        .r_Done_reg(o_LED[0]),
         .r_SPI_CS_reg(o_SPI_CS),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_araddr(s00_axi_araddr[4:2]),
@@ -178,7 +178,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC
     r_Done_reg_1,
     i_CMOS_Clk,
     \count_reg[0] ,
-    \count_reg[0]_0 ,
+    m00_axi_init_axi_txn,
     Q,
     s00_axi_aresetn);
   output r_Done_reg_0;
@@ -186,15 +186,15 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC
   output r_Done_reg_1;
   input i_CMOS_Clk;
   input \count_reg[0] ;
-  input \count_reg[0]_0 ;
+  input m00_axi_init_axi_txn;
   input [1:0]Q;
   input s00_axi_aresetn;
 
   wire [0:0]E;
   wire [1:0]Q;
   wire \count_reg[0] ;
-  wire \count_reg[0]_0 ;
   wire i_CMOS_Clk;
+  wire m00_axi_init_axi_txn;
   wire \r_Count[0]_i_1_n_0 ;
   wire \r_Count[0]_i_4_n_0 ;
   wire [19:0]r_Count_reg;
@@ -238,60 +238,60 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC
   wire \r_Count_reg[8]_i_1_n_6 ;
   wire \r_Count_reg[8]_i_1_n_7 ;
   wire r_Done_i_1_n_0;
-  wire r_Done_i_2_n_0;
-  wire r_Done_i_4_n_0;
-  wire r_Done_i_5_n_0;
-  wire r_Done_i_8_n_0;
   wire r_Done_reg_0;
   wire r_Done_reg_1;
-  wire r_Done_reg_i_10_n_0;
-  wire r_Done_reg_i_10_n_1;
-  wire r_Done_reg_i_10_n_2;
-  wire r_Done_reg_i_10_n_3;
-  wire r_Done_reg_i_10_n_4;
-  wire r_Done_reg_i_3_n_0;
-  wire r_Done_reg_i_3_n_1;
-  wire r_Done_reg_i_3_n_2;
-  wire r_Done_reg_i_3_n_3;
-  wire r_Done_reg_i_3_n_4;
-  wire r_Done_reg_i_3_n_5;
-  wire r_Done_reg_i_3_n_6;
-  wire r_Done_reg_i_3_n_7;
-  wire r_Done_reg_i_6_n_2;
-  wire r_Done_reg_i_6_n_3;
-  wire r_Done_reg_i_6_n_5;
-  wire r_Done_reg_i_6_n_6;
-  wire r_Done_reg_i_6_n_7;
-  wire r_Done_reg_i_7_n_0;
-  wire r_Done_reg_i_7_n_1;
-  wire r_Done_reg_i_7_n_2;
-  wire r_Done_reg_i_7_n_3;
-  wire r_Done_reg_i_7_n_4;
-  wire r_Done_reg_i_7_n_5;
-  wire r_Done_reg_i_7_n_6;
-  wire r_Done_reg_i_7_n_7;
-  wire r_Done_reg_i_9_n_0;
-  wire r_Done_reg_i_9_n_1;
-  wire r_Done_reg_i_9_n_2;
-  wire r_Done_reg_i_9_n_3;
-  wire r_Done_reg_i_9_n_4;
-  wire r_Done_reg_i_9_n_5;
-  wire r_Done_reg_i_9_n_6;
-  wire r_Done_reg_i_9_n_7;
   wire r_Work;
   wire r_Work_i_1_n_0;
+  wire r_Work_i_2_n_0;
+  wire r_Work_i_4_n_0;
+  wire r_Work_i_5_n_0;
+  wire r_Work_i_8_n_0;
+  wire r_Work_reg_i_10_n_0;
+  wire r_Work_reg_i_10_n_1;
+  wire r_Work_reg_i_10_n_2;
+  wire r_Work_reg_i_10_n_3;
+  wire r_Work_reg_i_10_n_4;
+  wire r_Work_reg_i_3_n_0;
+  wire r_Work_reg_i_3_n_1;
+  wire r_Work_reg_i_3_n_2;
+  wire r_Work_reg_i_3_n_3;
+  wire r_Work_reg_i_3_n_4;
+  wire r_Work_reg_i_3_n_5;
+  wire r_Work_reg_i_3_n_6;
+  wire r_Work_reg_i_3_n_7;
+  wire r_Work_reg_i_6_n_2;
+  wire r_Work_reg_i_6_n_3;
+  wire r_Work_reg_i_6_n_5;
+  wire r_Work_reg_i_6_n_6;
+  wire r_Work_reg_i_6_n_7;
+  wire r_Work_reg_i_7_n_0;
+  wire r_Work_reg_i_7_n_1;
+  wire r_Work_reg_i_7_n_2;
+  wire r_Work_reg_i_7_n_3;
+  wire r_Work_reg_i_7_n_4;
+  wire r_Work_reg_i_7_n_5;
+  wire r_Work_reg_i_7_n_6;
+  wire r_Work_reg_i_7_n_7;
+  wire r_Work_reg_i_9_n_0;
+  wire r_Work_reg_i_9_n_1;
+  wire r_Work_reg_i_9_n_2;
+  wire r_Work_reg_i_9_n_3;
+  wire r_Work_reg_i_9_n_4;
+  wire r_Work_reg_i_9_n_5;
+  wire r_Work_reg_i_9_n_6;
+  wire r_Work_reg_i_9_n_7;
   wire r_Work_reg_n_0;
   wire s00_axi_aresetn;
   wire [3:3]\NLW_r_Count_reg[16]_i_1_CO_UNCONNECTED ;
-  wire [2:0]NLW_r_Done_reg_i_10_O_UNCONNECTED;
-  wire [3:2]NLW_r_Done_reg_i_6_CO_UNCONNECTED;
-  wire [3:3]NLW_r_Done_reg_i_6_O_UNCONNECTED;
+  wire [2:0]NLW_r_Work_reg_i_10_O_UNCONNECTED;
+  wire [3:2]NLW_r_Work_reg_i_6_CO_UNCONNECTED;
+  wire [3:3]NLW_r_Work_reg_i_6_O_UNCONNECTED;
 
   LUT6 #(
     .INIT(64'hFFFB0F0000000000)) 
     \count[0]_i_1 
        (.I0(r_Done_reg_0),
-        .I1(\count_reg[0]_0 ),
+        .I1(m00_axi_init_axi_txn),
         .I2(Q[1]),
         .I3(Q[0]),
         .I4(\count_reg[0] ),
@@ -302,7 +302,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC
     \mst_exec_state[1]_i_2 
        (.I0(Q[0]),
         .I1(Q[1]),
-        .I2(\count_reg[0]_0 ),
+        .I2(m00_axi_init_axi_txn),
         .I3(r_Done_reg_0),
         .O(E));
   LUT5 #(
@@ -310,16 +310,16 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC
     \r_Count[0]_i_1 
        (.I0(r_Done_reg_0),
         .I1(\count_reg[0] ),
-        .I2(\count_reg[0]_0 ),
+        .I2(m00_axi_init_axi_txn),
         .I3(r_Work_reg_n_0),
-        .I4(r_Done_i_2_n_0),
+        .I4(r_Work_i_2_n_0),
         .O(\r_Count[0]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'hFF40)) 
     \r_Count[0]_i_2 
        (.I0(r_Done_reg_0),
         .I1(\count_reg[0] ),
-        .I2(\count_reg[0]_0 ),
+        .I2(m00_axi_init_axi_txn),
         .I3(r_Work_reg_n_0),
         .O(r_Work));
   LUT1 #(
@@ -531,47 +531,12 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC
   LUT5 #(
     .INIT(32'hF4445444)) 
     r_Done_i_1
-       (.I0(r_Done_i_2_n_0),
+       (.I0(r_Work_i_2_n_0),
         .I1(r_Work_reg_n_0),
-        .I2(\count_reg[0]_0 ),
+        .I2(m00_axi_init_axi_txn),
         .I3(\count_reg[0] ),
         .I4(r_Done_reg_0),
         .O(r_Done_i_1_n_0));
-  LUT5 #(
-    .INIT(32'h000000F1)) 
-    r_Done_i_2
-       (.I0(r_Done_reg_i_3_n_7),
-        .I1(r_Done_i_4_n_0),
-        .I2(r_Done_i_5_n_0),
-        .I3(r_Done_reg_i_6_n_6),
-        .I4(r_Done_reg_i_6_n_5),
-        .O(r_Done_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hA8A8A8A8A8A8A888)) 
-    r_Done_i_4
-       (.I0(r_Done_reg_i_7_n_4),
-        .I1(r_Done_i_8_n_0),
-        .I2(r_Done_reg_i_9_n_5),
-        .I3(r_Done_reg_i_9_n_6),
-        .I4(r_Done_reg_i_9_n_7),
-        .I5(r_Done_reg_i_10_n_4),
-        .O(r_Done_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    r_Done_i_5
-       (.I0(r_Done_reg_i_3_n_4),
-        .I1(r_Done_reg_i_6_n_7),
-        .I2(r_Done_reg_i_3_n_6),
-        .I3(r_Done_reg_i_3_n_5),
-        .O(r_Done_i_5_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    r_Done_i_8
-       (.I0(r_Done_reg_i_7_n_6),
-        .I1(r_Done_reg_i_7_n_5),
-        .I2(r_Done_reg_i_9_n_4),
-        .I3(r_Done_reg_i_7_n_7),
-        .O(r_Done_i_8_n_0));
   FDRE #(
     .INIT(1'b0)) 
     r_Done_reg
@@ -580,56 +545,51 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC
         .D(r_Done_i_1_n_0),
         .Q(r_Done_reg_0),
         .R(1'b0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 r_Done_reg_i_10
-       (.CI(1'b0),
-        .CO({r_Done_reg_i_10_n_0,r_Done_reg_i_10_n_1,r_Done_reg_i_10_n_2,r_Done_reg_i_10_n_3}),
-        .CYINIT(r_Count_reg[0]),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({r_Done_reg_i_10_n_4,NLW_r_Done_reg_i_10_O_UNCONNECTED[2:0]}),
-        .S(r_Count_reg[4:1]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 r_Done_reg_i_3
-       (.CI(r_Done_reg_i_7_n_0),
-        .CO({r_Done_reg_i_3_n_0,r_Done_reg_i_3_n_1,r_Done_reg_i_3_n_2,r_Done_reg_i_3_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({r_Done_reg_i_3_n_4,r_Done_reg_i_3_n_5,r_Done_reg_i_3_n_6,r_Done_reg_i_3_n_7}),
-        .S(r_Count_reg[16:13]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 r_Done_reg_i_6
-       (.CI(r_Done_reg_i_3_n_0),
-        .CO({NLW_r_Done_reg_i_6_CO_UNCONNECTED[3:2],r_Done_reg_i_6_n_2,r_Done_reg_i_6_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_r_Done_reg_i_6_O_UNCONNECTED[3],r_Done_reg_i_6_n_5,r_Done_reg_i_6_n_6,r_Done_reg_i_6_n_7}),
-        .S({1'b0,r_Count_reg[19:17]}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 r_Done_reg_i_7
-       (.CI(r_Done_reg_i_9_n_0),
-        .CO({r_Done_reg_i_7_n_0,r_Done_reg_i_7_n_1,r_Done_reg_i_7_n_2,r_Done_reg_i_7_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({r_Done_reg_i_7_n_4,r_Done_reg_i_7_n_5,r_Done_reg_i_7_n_6,r_Done_reg_i_7_n_7}),
-        .S(r_Count_reg[12:9]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 r_Done_reg_i_9
-       (.CI(r_Done_reg_i_10_n_0),
-        .CO({r_Done_reg_i_9_n_0,r_Done_reg_i_9_n_1,r_Done_reg_i_9_n_2,r_Done_reg_i_9_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({r_Done_reg_i_9_n_4,r_Done_reg_i_9_n_5,r_Done_reg_i_9_n_6,r_Done_reg_i_9_n_7}),
-        .S(r_Count_reg[8:5]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hAAAA2000)) 
     r_Work_i_1
-       (.I0(r_Done_i_2_n_0),
+       (.I0(r_Work_i_2_n_0),
         .I1(r_Done_reg_0),
         .I2(\count_reg[0] ),
-        .I3(\count_reg[0]_0 ),
+        .I3(m00_axi_init_axi_txn),
         .I4(r_Work_reg_n_0),
         .O(r_Work_i_1_n_0));
+  LUT5 #(
+    .INIT(32'h000000F1)) 
+    r_Work_i_2
+       (.I0(r_Work_reg_i_3_n_7),
+        .I1(r_Work_i_4_n_0),
+        .I2(r_Work_i_5_n_0),
+        .I3(r_Work_reg_i_6_n_6),
+        .I4(r_Work_reg_i_6_n_5),
+        .O(r_Work_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hA8A8A8A8A8A8A888)) 
+    r_Work_i_4
+       (.I0(r_Work_reg_i_7_n_4),
+        .I1(r_Work_i_8_n_0),
+        .I2(r_Work_reg_i_9_n_5),
+        .I3(r_Work_reg_i_9_n_6),
+        .I4(r_Work_reg_i_9_n_7),
+        .I5(r_Work_reg_i_10_n_4),
+        .O(r_Work_i_4_n_0));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    r_Work_i_5
+       (.I0(r_Work_reg_i_3_n_4),
+        .I1(r_Work_reg_i_6_n_7),
+        .I2(r_Work_reg_i_3_n_6),
+        .I3(r_Work_reg_i_3_n_5),
+        .O(r_Work_i_5_n_0));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    r_Work_i_8
+       (.I0(r_Work_reg_i_7_n_6),
+        .I1(r_Work_reg_i_7_n_5),
+        .I2(r_Work_reg_i_9_n_4),
+        .I3(r_Work_reg_i_7_n_7),
+        .O(r_Work_i_8_n_0));
   FDRE #(
     .INIT(1'b0)) 
     r_Work_reg
@@ -638,6 +598,46 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_ADC
         .D(r_Work_i_1_n_0),
         .Q(r_Work_reg_n_0),
         .R(1'b0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 r_Work_reg_i_10
+       (.CI(1'b0),
+        .CO({r_Work_reg_i_10_n_0,r_Work_reg_i_10_n_1,r_Work_reg_i_10_n_2,r_Work_reg_i_10_n_3}),
+        .CYINIT(r_Count_reg[0]),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({r_Work_reg_i_10_n_4,NLW_r_Work_reg_i_10_O_UNCONNECTED[2:0]}),
+        .S(r_Count_reg[4:1]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 r_Work_reg_i_3
+       (.CI(r_Work_reg_i_7_n_0),
+        .CO({r_Work_reg_i_3_n_0,r_Work_reg_i_3_n_1,r_Work_reg_i_3_n_2,r_Work_reg_i_3_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({r_Work_reg_i_3_n_4,r_Work_reg_i_3_n_5,r_Work_reg_i_3_n_6,r_Work_reg_i_3_n_7}),
+        .S(r_Count_reg[16:13]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 r_Work_reg_i_6
+       (.CI(r_Work_reg_i_3_n_0),
+        .CO({NLW_r_Work_reg_i_6_CO_UNCONNECTED[3:2],r_Work_reg_i_6_n_2,r_Work_reg_i_6_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({NLW_r_Work_reg_i_6_O_UNCONNECTED[3],r_Work_reg_i_6_n_5,r_Work_reg_i_6_n_6,r_Work_reg_i_6_n_7}),
+        .S({1'b0,r_Count_reg[19:17]}));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 r_Work_reg_i_7
+       (.CI(r_Work_reg_i_9_n_0),
+        .CO({r_Work_reg_i_7_n_0,r_Work_reg_i_7_n_1,r_Work_reg_i_7_n_2,r_Work_reg_i_7_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({r_Work_reg_i_7_n_4,r_Work_reg_i_7_n_5,r_Work_reg_i_7_n_6,r_Work_reg_i_7_n_7}),
+        .S(r_Count_reg[12:9]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 r_Work_reg_i_9
+       (.CI(r_Work_reg_i_10_n_0),
+        .CO({r_Work_reg_i_9_n_0,r_Work_reg_i_9_n_1,r_Work_reg_i_9_n_2,r_Work_reg_i_9_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({r_Work_reg_i_9_n_4,r_Work_reg_i_9_n_5,r_Work_reg_i_9_n_6,r_Work_reg_i_9_n_7}),
+        .S(r_Count_reg[8:5]));
 endmodule
 
 (* ORIG_REF_NAME = "PL_SPI" *) 
@@ -2133,7 +2133,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte[0][7]_i_2_n_0 ),
         .I5(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(\i_TX_Byte[0][7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \i_TX_Byte[0][7]_i_2 
@@ -2150,14 +2150,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte[0][7]_i_4_n_0 ),
         .I5(\i_TX_Byte[2][7]_i_4_n_0 ),
         .O(\i_TX_Byte[0][7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \i_TX_Byte[0][7]_i_4 
        (.I0(\r_StatusReg_reg[7]_0 [0]),
         .I1(r_CmdAccept),
         .O(\i_TX_Byte[0][7]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[10][0]_i_1 
@@ -2165,7 +2165,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[10][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data10[0]));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[10][1]_i_1 
@@ -2173,7 +2173,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[10][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data10[1]));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[10][2]_i_1 
@@ -2181,7 +2181,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[10][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data10[2]));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[10][3]_i_1 
@@ -2189,7 +2189,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[10][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data10[3]));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[10][4]_i_1 
@@ -2197,7 +2197,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[10][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data10[4]));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[10][5]_i_1 
@@ -2205,7 +2205,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[10][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data10[5]));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[10][6]_i_1 
@@ -2213,7 +2213,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[10][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data10[6]));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[10][7]_i_1 
@@ -2221,7 +2221,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[10][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data10[7]));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT5 #(
     .INIT(32'h00000400)) 
     \i_TX_Byte[10][7]_i_2 
@@ -2231,7 +2231,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg[1]_rep_n_0 ),
         .I4(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .O(\i_TX_Byte[10][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[11][0]_i_1 
@@ -2239,7 +2239,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[11][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data11[0]));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[11][1]_i_1 
@@ -2247,7 +2247,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[11][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data11[1]));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[11][2]_i_1 
@@ -2255,7 +2255,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[11][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data11[2]));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[11][3]_i_1 
@@ -2263,7 +2263,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[11][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data11[3]));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[11][4]_i_1 
@@ -2271,7 +2271,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[11][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data11[4]));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[11][5]_i_1 
@@ -2279,7 +2279,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[11][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data11[5]));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[11][6]_i_1 
@@ -2287,7 +2287,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[11][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data11[6]));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[11][7]_i_1 
@@ -2295,7 +2295,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[11][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data11[7]));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT5 #(
     .INIT(32'h00004000)) 
     \i_TX_Byte[11][7]_i_2 
@@ -2305,7 +2305,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg_n_0_[3] ),
         .I4(\i_TX_Byte[0][7]_i_3_n_0 ),
         .O(\i_TX_Byte[11][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[12][0]_i_1 
@@ -2313,7 +2313,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[12][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data12[0]));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[12][1]_i_1 
@@ -2321,7 +2321,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[12][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data12[1]));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[12][2]_i_1 
@@ -2329,7 +2329,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[12][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data12[2]));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[12][3]_i_1 
@@ -2337,7 +2337,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[12][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data12[3]));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[12][4]_i_1 
@@ -2345,7 +2345,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[12][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data12[4]));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[12][5]_i_1 
@@ -2353,7 +2353,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[12][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data12[5]));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[12][6]_i_1 
@@ -2361,7 +2361,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[12][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data12[6]));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[12][7]_i_1 
@@ -2369,7 +2369,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[12][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data12[7]));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT5 #(
     .INIT(32'h00000400)) 
     \i_TX_Byte[12][7]_i_2 
@@ -2379,7 +2379,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I4(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .O(\i_TX_Byte[12][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair190" *) 
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[13][0]_i_1 
@@ -2387,7 +2387,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[13][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data13[0]));
-  (* SOFT_HLUTNM = "soft_lutpair190" *) 
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[13][1]_i_1 
@@ -2395,7 +2395,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[13][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data13[1]));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[13][2]_i_1 
@@ -2403,7 +2403,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[13][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data13[2]));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[13][3]_i_1 
@@ -2411,7 +2411,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[13][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data13[3]));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[13][4]_i_1 
@@ -2419,7 +2419,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[13][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data13[4]));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[13][5]_i_1 
@@ -2427,7 +2427,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[13][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data13[5]));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[13][6]_i_1 
@@ -2435,7 +2435,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[13][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data13[6]));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[13][7]_i_1 
@@ -2443,7 +2443,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[13][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data13[7]));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT5 #(
     .INIT(32'h00004000)) 
     \i_TX_Byte[13][7]_i_2 
@@ -2453,7 +2453,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg_n_0_[3] ),
         .I4(\i_TX_Byte[0][7]_i_3_n_0 ),
         .O(\i_TX_Byte[13][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[14][0]_i_1 
@@ -2461,7 +2461,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[14][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data14[0]));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[14][1]_i_1 
@@ -2469,7 +2469,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[14][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data14[1]));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[14][2]_i_1 
@@ -2477,7 +2477,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[14][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data14[2]));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[14][3]_i_1 
@@ -2485,7 +2485,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[14][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data14[3]));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[14][4]_i_1 
@@ -2493,7 +2493,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[14][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data14[4]));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[14][5]_i_1 
@@ -2501,7 +2501,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[14][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data14[5]));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[14][6]_i_1 
@@ -2509,7 +2509,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[14][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data14[6]));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[14][7]_i_1 
@@ -2517,7 +2517,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[14][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data14[7]));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT5 #(
     .INIT(32'h00000800)) 
     \i_TX_Byte[14][7]_i_2 
@@ -2527,7 +2527,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg_n_0_[3] ),
         .I4(\i_TX_Byte[0][7]_i_3_n_0 ),
         .O(\i_TX_Byte[14][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[15][0]_i_1 
@@ -2535,7 +2535,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[15][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data15[0]));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[15][1]_i_1 
@@ -2543,7 +2543,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[15][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data15[1]));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[15][2]_i_1 
@@ -2551,7 +2551,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[15][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data15[2]));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[15][3]_i_1 
@@ -2559,7 +2559,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[15][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data15[3]));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[15][4]_i_1 
@@ -2567,7 +2567,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[15][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data15[4]));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[15][5]_i_1 
@@ -2575,7 +2575,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[15][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data15[5]));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[15][6]_i_1 
@@ -2583,7 +2583,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[15][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data15[6]));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[15][7]_i_1 
@@ -2591,7 +2591,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[15][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data15[7]));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT5 #(
     .INIT(32'h00008000)) 
     \i_TX_Byte[15][7]_i_2 
@@ -2601,7 +2601,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg[1]_rep_n_0 ),
         .I4(\i_TX_Byte[0][7]_i_3_n_0 ),
         .O(\i_TX_Byte[15][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[16][0]_i_1 
@@ -2609,7 +2609,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[16][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data16[0]));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[16][1]_i_1 
@@ -2617,7 +2617,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[16][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data16[1]));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[16][2]_i_1 
@@ -2625,7 +2625,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[16][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data16[2]));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[16][3]_i_1 
@@ -2633,7 +2633,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[16][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data16[3]));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[16][4]_i_1 
@@ -2641,7 +2641,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[16][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data16[4]));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[16][5]_i_1 
@@ -2649,7 +2649,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[16][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data16[5]));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[16][6]_i_1 
@@ -2657,7 +2657,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[16][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data16[6]));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[16][7]_i_1 
@@ -2774,7 +2774,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_StatusReg_reg[7]_0 [1]),
         .I4(\i_TX_Byte[17][7]_i_3_n_0 ),
         .O(\i_TX_Byte[17][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT5 #(
     .INIT(32'hFFFFFFEF)) 
     \i_TX_Byte[17][7]_i_3 
@@ -2944,7 +2944,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte_reg_n_0_[19][7] ),
         .I5(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data19[7]));
-  (* SOFT_HLUTNM = "soft_lutpair189" *) 
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[1][0]_i_1 
@@ -2952,7 +2952,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[1][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data1[0]));
-  (* SOFT_HLUTNM = "soft_lutpair189" *) 
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[1][1]_i_1 
@@ -2960,7 +2960,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[1][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair188" *) 
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[1][2]_i_1 
@@ -2968,7 +2968,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[1][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data1[2]));
-  (* SOFT_HLUTNM = "soft_lutpair188" *) 
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[1][3]_i_1 
@@ -2976,7 +2976,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[1][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data1[3]));
-  (* SOFT_HLUTNM = "soft_lutpair187" *) 
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[1][4]_i_1 
@@ -2984,7 +2984,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[1][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data1[4]));
-  (* SOFT_HLUTNM = "soft_lutpair187" *) 
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[1][5]_i_1 
@@ -2992,7 +2992,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[1][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data1[5]));
-  (* SOFT_HLUTNM = "soft_lutpair186" *) 
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[1][6]_i_1 
@@ -3000,7 +3000,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[1][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data1[6]));
-  (* SOFT_HLUTNM = "soft_lutpair186" *) 
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[1][7]_i_1 
@@ -3008,7 +3008,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[1][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data1[7]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
     .INIT(32'h00000100)) 
     \i_TX_Byte[1][7]_i_2 
@@ -3338,7 +3338,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte_reg_n_0_[23][7] ),
         .I5(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data23[7]));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[24][0]_i_1 
@@ -3346,7 +3346,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[24][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data24[0]));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[24][1]_i_1 
@@ -3354,7 +3354,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[24][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data24[1]));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[24][2]_i_1 
@@ -3362,7 +3362,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[24][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data24[2]));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[24][3]_i_1 
@@ -3370,7 +3370,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[24][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data24[3]));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[24][4]_i_1 
@@ -3378,7 +3378,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[24][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data24[4]));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[24][5]_i_1 
@@ -3386,7 +3386,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[24][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data24[5]));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[24][6]_i_1 
@@ -3394,7 +3394,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[24][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data24[6]));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[24][7]_i_1 
@@ -3422,7 +3422,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[3] ),
         .I5(\i_TX_Byte[0][7]_i_4_n_0 ),
         .O(\i_TX_Byte[24][7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair174" *) 
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[25][0]_i_1 
@@ -3430,7 +3430,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[25][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data25[0]));
-  (* SOFT_HLUTNM = "soft_lutpair174" *) 
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[25][1]_i_1 
@@ -3438,7 +3438,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[25][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data25[1]));
-  (* SOFT_HLUTNM = "soft_lutpair175" *) 
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[25][2]_i_1 
@@ -3446,7 +3446,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[25][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data25[2]));
-  (* SOFT_HLUTNM = "soft_lutpair175" *) 
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[25][3]_i_1 
@@ -3454,7 +3454,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[25][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data25[3]));
-  (* SOFT_HLUTNM = "soft_lutpair176" *) 
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[25][4]_i_1 
@@ -3462,7 +3462,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[25][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data25[4]));
-  (* SOFT_HLUTNM = "soft_lutpair176" *) 
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[25][5]_i_1 
@@ -3470,7 +3470,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[25][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data25[5]));
-  (* SOFT_HLUTNM = "soft_lutpair177" *) 
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[25][6]_i_1 
@@ -3478,7 +3478,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[25][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data25[6]));
-  (* SOFT_HLUTNM = "soft_lutpair177" *) 
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[25][7]_i_1 
@@ -3496,7 +3496,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .I5(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .O(\i_TX_Byte[25][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[26][0]_i_1 
@@ -3504,7 +3504,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[26][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data26[0]));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[26][1]_i_1 
@@ -3512,7 +3512,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[26][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data26[1]));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[26][2]_i_1 
@@ -3520,7 +3520,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[26][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data26[2]));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[26][3]_i_1 
@@ -3528,7 +3528,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[26][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data26[3]));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[26][4]_i_1 
@@ -3536,7 +3536,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[26][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data26[4]));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[26][5]_i_1 
@@ -3544,7 +3544,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[26][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data26[5]));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[26][6]_i_1 
@@ -3552,7 +3552,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[26][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data26[6]));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[26][7]_i_1 
@@ -3570,7 +3570,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_StatusReg_reg[7]_0 [3]),
         .I5(\r_StatusReg_reg[7]_0 [1]),
         .O(\i_TX_Byte[26][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[27][0]_i_1 
@@ -3578,7 +3578,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[27][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data27[0]));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[27][1]_i_1 
@@ -3586,7 +3586,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[27][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data27[1]));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[27][2]_i_1 
@@ -3594,7 +3594,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[27][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data27[2]));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[27][3]_i_1 
@@ -3602,7 +3602,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[27][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data27[3]));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[27][4]_i_1 
@@ -3610,7 +3610,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[27][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data27[4]));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[27][5]_i_1 
@@ -3618,7 +3618,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[27][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data27[5]));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[27][6]_i_1 
@@ -3626,7 +3626,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[27][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data27[6]));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[27][7]_i_1 
@@ -3644,7 +3644,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .I5(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .O(\i_TX_Byte[27][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[28][0]_i_1 
@@ -3652,7 +3652,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[28][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data28[0]));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[28][1]_i_1 
@@ -3660,7 +3660,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[28][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data28[1]));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[28][2]_i_1 
@@ -3668,7 +3668,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[28][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data28[2]));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[28][3]_i_1 
@@ -3676,7 +3676,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[28][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data28[3]));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[28][4]_i_1 
@@ -3684,7 +3684,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[28][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data28[4]));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[28][5]_i_1 
@@ -3692,7 +3692,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[28][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data28[5]));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[28][6]_i_1 
@@ -3700,7 +3700,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[28][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data28[6]));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[28][7]_i_1 
@@ -3718,7 +3718,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_StatusReg_reg[7]_0 [3]),
         .I5(\r_StatusReg_reg[7]_0 [1]),
         .O(\i_TX_Byte[28][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[29][0]_i_1 
@@ -3726,7 +3726,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[29][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data29[0]));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[29][1]_i_1 
@@ -3734,7 +3734,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[29][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data29[1]));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[29][2]_i_1 
@@ -3742,7 +3742,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[29][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data29[2]));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[29][3]_i_1 
@@ -3750,7 +3750,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[29][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data29[3]));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[29][4]_i_1 
@@ -3758,7 +3758,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[29][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data29[4]));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[29][5]_i_1 
@@ -3766,7 +3766,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[29][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data29[5]));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[29][6]_i_1 
@@ -3774,7 +3774,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[29][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data29[6]));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[29][7]_i_1 
@@ -3792,7 +3792,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I5(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .O(\i_TX_Byte[29][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[2][0]_i_1 
@@ -3802,7 +3802,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[2][0] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data2[0]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[2][1]_i_1 
@@ -3812,7 +3812,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[2][1] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data2[1]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[2][2]_i_1 
@@ -3822,7 +3822,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[2][2] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data2[2]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[2][3]_i_1 
@@ -3832,7 +3832,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[2][3] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data2[3]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[2][4]_i_1 
@@ -3842,7 +3842,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[2][4] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data2[4]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[2][5]_i_1 
@@ -3852,7 +3852,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[2][5] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data2[5]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[2][6]_i_1 
@@ -3862,7 +3862,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[2][6] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data2[6]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[2][7]_i_1 
@@ -3882,7 +3882,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[3] ),
         .I5(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .O(\i_TX_Byte[2][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \i_TX_Byte[2][7]_i_3 
@@ -3891,14 +3891,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(\r_TX_Byte_Cnt_reg_n_0_[5] ),
         .I3(\r_TX_Byte_Cnt_reg_n_0_[4] ),
         .O(\i_TX_Byte[2][7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \i_TX_Byte[2][7]_i_4 
        (.I0(\r_StatusReg_reg[7]_0 [3]),
         .I1(\r_StatusReg_reg[7]_0 [1]),
         .O(\i_TX_Byte[2][7]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[30][0]_i_1 
@@ -3906,7 +3906,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[30][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data30[0]));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[30][1]_i_1 
@@ -3914,7 +3914,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[30][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data30[1]));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[30][2]_i_1 
@@ -3922,7 +3922,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[30][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data30[2]));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[30][3]_i_1 
@@ -3930,7 +3930,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[30][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data30[3]));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[30][4]_i_1 
@@ -3938,7 +3938,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[30][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data30[4]));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[30][5]_i_1 
@@ -3946,7 +3946,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[30][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data30[5]));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[30][6]_i_1 
@@ -3954,7 +3954,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[30][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data30[6]));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[30][7]_i_1 
@@ -3972,7 +3972,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I5(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .O(\i_TX_Byte[30][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[31][0]_i_1 
@@ -3980,7 +3980,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[31][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data31[0]));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[31][1]_i_1 
@@ -3988,7 +3988,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[31][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data31[1]));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[31][2]_i_1 
@@ -3996,7 +3996,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[31][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data31[2]));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[31][3]_i_1 
@@ -4004,7 +4004,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[31][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data31[3]));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[31][4]_i_1 
@@ -4012,7 +4012,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[31][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data31[4]));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[31][5]_i_1 
@@ -4020,7 +4020,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[31][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data31[5]));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[31][6]_i_1 
@@ -4028,7 +4028,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[31][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data31[6]));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[31][7]_i_1 
@@ -4046,7 +4046,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I5(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .O(\i_TX_Byte[31][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[32][0]_i_1 
@@ -4054,7 +4054,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[32][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data32[0]));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[32][1]_i_1 
@@ -4062,7 +4062,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[32][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data32[1]));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[32][2]_i_1 
@@ -4070,7 +4070,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[32][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data32[2]));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[32][3]_i_1 
@@ -4078,7 +4078,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[32][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data32[3]));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[32][4]_i_1 
@@ -4086,7 +4086,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[32][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data32[4]));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[32][5]_i_1 
@@ -4094,7 +4094,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[32][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data32[5]));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[32][6]_i_1 
@@ -4102,7 +4102,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[32][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data32[6]));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[32][7]_i_1 
@@ -4130,14 +4130,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_StatusReg_reg[7]_0 [0]),
         .I5(\r_TX_Byte_Cnt_reg_n_0_[3] ),
         .O(\i_TX_Byte[32][7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \i_TX_Byte[32][7]_i_4 
        (.I0(\r_TX_Byte_Cnt_reg_n_0_[6] ),
         .I1(\r_TX_Byte_Cnt_reg_n_0_[7] ),
         .O(\i_TX_Byte[32][7]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair170" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[33][0]_i_1 
@@ -4145,7 +4145,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[33][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data33[0]));
-  (* SOFT_HLUTNM = "soft_lutpair170" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[33][1]_i_1 
@@ -4153,7 +4153,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[33][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data33[1]));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[33][2]_i_1 
@@ -4161,7 +4161,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[33][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data33[2]));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[33][3]_i_1 
@@ -4169,7 +4169,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[33][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data33[3]));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[33][4]_i_1 
@@ -4177,7 +4177,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[33][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data33[4]));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[33][5]_i_1 
@@ -4185,7 +4185,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[33][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data33[5]));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[33][6]_i_1 
@@ -4193,7 +4193,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[33][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data33[6]));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[33][7]_i_1 
@@ -4211,7 +4211,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .I5(\i_TX_Byte[32][7]_i_3_n_0 ),
         .O(\i_TX_Byte[33][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[34][0]_i_1 
@@ -4219,7 +4219,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[34][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data34[0]));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[34][1]_i_1 
@@ -4227,7 +4227,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[34][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data34[1]));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[34][2]_i_1 
@@ -4235,7 +4235,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[34][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data34[2]));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[34][3]_i_1 
@@ -4243,7 +4243,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[34][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data34[3]));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[34][4]_i_1 
@@ -4251,7 +4251,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[34][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data34[4]));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[34][5]_i_1 
@@ -4259,7 +4259,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[34][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data34[5]));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[34][6]_i_1 
@@ -4267,7 +4267,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[34][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data34[6]));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[34][7]_i_1 
@@ -4285,7 +4285,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_StatusReg_reg[7]_0 [1]),
         .I5(\i_TX_Byte[32][7]_i_3_n_0 ),
         .O(\i_TX_Byte[34][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[35][0]_i_1 
@@ -4293,7 +4293,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[35][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data35[0]));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[35][1]_i_1 
@@ -4301,7 +4301,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[35][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data35[1]));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[35][2]_i_1 
@@ -4309,7 +4309,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[35][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data35[2]));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[35][3]_i_1 
@@ -4317,7 +4317,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[35][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data35[3]));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[35][4]_i_1 
@@ -4325,7 +4325,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[35][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data35[4]));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[35][5]_i_1 
@@ -4333,7 +4333,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[35][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data35[5]));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[35][6]_i_1 
@@ -4341,7 +4341,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[35][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data35[6]));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[35][7]_i_1 
@@ -4359,7 +4359,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I5(\i_TX_Byte[32][7]_i_3_n_0 ),
         .O(\i_TX_Byte[35][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[36][0]_i_1 
@@ -4367,7 +4367,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[36][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data36[0]));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[36][1]_i_1 
@@ -4375,7 +4375,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[36][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data36[1]));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[36][2]_i_1 
@@ -4383,7 +4383,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[36][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data36[2]));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[36][3]_i_1 
@@ -4391,7 +4391,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[36][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data36[3]));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[36][4]_i_1 
@@ -4399,7 +4399,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[36][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data36[4]));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[36][5]_i_1 
@@ -4407,7 +4407,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[36][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data36[5]));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[36][6]_i_1 
@@ -4415,7 +4415,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[36][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data36[6]));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[36][7]_i_1 
@@ -4433,7 +4433,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_StatusReg_reg[7]_0 [1]),
         .I5(\i_TX_Byte[32][7]_i_3_n_0 ),
         .O(\i_TX_Byte[36][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[37][0]_i_1 
@@ -4441,7 +4441,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[37][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data37[0]));
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[37][1]_i_1 
@@ -4449,7 +4449,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[37][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data37[1]));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[37][2]_i_1 
@@ -4457,7 +4457,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[37][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data37[2]));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[37][3]_i_1 
@@ -4465,7 +4465,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[37][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data37[3]));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[37][4]_i_1 
@@ -4473,7 +4473,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[37][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data37[4]));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[37][5]_i_1 
@@ -4481,7 +4481,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[37][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data37[5]));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[37][6]_i_1 
@@ -4489,7 +4489,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[37][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data37[6]));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[37][7]_i_1 
@@ -4507,7 +4507,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .I5(\i_TX_Byte[32][7]_i_3_n_0 ),
         .O(\i_TX_Byte[37][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[38][0]_i_1 
@@ -4515,7 +4515,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[38][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data38[0]));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[38][1]_i_1 
@@ -4523,7 +4523,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[38][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data38[1]));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[38][2]_i_1 
@@ -4531,7 +4531,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[38][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data38[2]));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[38][3]_i_1 
@@ -4539,7 +4539,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[38][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data38[3]));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[38][4]_i_1 
@@ -4547,7 +4547,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[38][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data38[4]));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[38][5]_i_1 
@@ -4555,7 +4555,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[38][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data38[5]));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[38][6]_i_1 
@@ -4563,7 +4563,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[38][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data38[6]));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[38][7]_i_1 
@@ -4581,7 +4581,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .I5(\i_TX_Byte[32][7]_i_3_n_0 ),
         .O(\i_TX_Byte[38][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[39][0]_i_1 
@@ -4589,7 +4589,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[39][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data39[0]));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[39][1]_i_1 
@@ -4597,7 +4597,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[39][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data39[1]));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[39][2]_i_1 
@@ -4605,7 +4605,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[39][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data39[2]));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[39][3]_i_1 
@@ -4613,7 +4613,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[39][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data39[3]));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[39][4]_i_1 
@@ -4621,7 +4621,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[39][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data39[4]));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[39][5]_i_1 
@@ -4629,7 +4629,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[39][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data39[5]));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[39][6]_i_1 
@@ -4637,7 +4637,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[39][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data39[6]));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[39][7]_i_1 
@@ -4655,7 +4655,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .I5(\i_TX_Byte[32][7]_i_3_n_0 ),
         .O(\i_TX_Byte[39][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair178" *) 
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[3][0]_i_1 
@@ -4663,7 +4663,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[3][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data3[0]));
-  (* SOFT_HLUTNM = "soft_lutpair178" *) 
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[3][1]_i_1 
@@ -4671,7 +4671,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[3][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data3[1]));
-  (* SOFT_HLUTNM = "soft_lutpair179" *) 
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[3][2]_i_1 
@@ -4679,7 +4679,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[3][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data3[2]));
-  (* SOFT_HLUTNM = "soft_lutpair179" *) 
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[3][3]_i_1 
@@ -4687,7 +4687,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[3][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data3[3]));
-  (* SOFT_HLUTNM = "soft_lutpair180" *) 
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[3][4]_i_1 
@@ -4695,7 +4695,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[3][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data3[4]));
-  (* SOFT_HLUTNM = "soft_lutpair180" *) 
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[3][5]_i_1 
@@ -4703,7 +4703,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[3][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data3[5]));
-  (* SOFT_HLUTNM = "soft_lutpair181" *) 
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[3][6]_i_1 
@@ -4711,7 +4711,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[3][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data3[6]));
-  (* SOFT_HLUTNM = "soft_lutpair181" *) 
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[3][7]_i_1 
@@ -4719,7 +4719,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[3][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data3[7]));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT5 #(
     .INIT(32'h00000040)) 
     \i_TX_Byte[3][7]_i_2 
@@ -4729,7 +4729,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg_n_0_[3] ),
         .I4(\i_TX_Byte[0][7]_i_3_n_0 ),
         .O(\i_TX_Byte[3][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[40][0]_i_1 
@@ -4737,7 +4737,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[40][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data40[0]));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[40][1]_i_1 
@@ -4745,7 +4745,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[40][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data40[1]));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[40][2]_i_1 
@@ -4753,7 +4753,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[40][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data40[2]));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[40][3]_i_1 
@@ -4761,7 +4761,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[40][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data40[3]));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[40][4]_i_1 
@@ -4769,7 +4769,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[40][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data40[4]));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[40][5]_i_1 
@@ -4777,7 +4777,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[40][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data40[5]));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[40][6]_i_1 
@@ -4785,7 +4785,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[40][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data40[6]));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[40][7]_i_1 
@@ -4803,7 +4803,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt_reg_n_0_[4] ),
         .I5(\r_TX_Byte_Cnt_reg_n_0_[3] ),
         .O(\i_TX_Byte[40][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[4][0]_i_1 
@@ -4813,7 +4813,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[4][0] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data4[0]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[4][1]_i_1 
@@ -4823,7 +4823,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[4][1] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data4[1]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[4][2]_i_1 
@@ -4833,7 +4833,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[4][2] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data4[2]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[4][3]_i_1 
@@ -4843,7 +4843,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[4][3] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data4[3]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[4][4]_i_1 
@@ -4853,7 +4853,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[4][4] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data4[4]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[4][5]_i_1 
@@ -4863,7 +4863,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[4][5] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data4[5]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[4][6]_i_1 
@@ -4873,7 +4873,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[4][6] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data4[6]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT5 #(
     .INIT(32'hFF08F700)) 
     \i_TX_Byte[4][7]_i_1 
@@ -4883,7 +4883,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte_reg_n_0_[4][7] ),
         .I4(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data4[7]));
-  (* SOFT_HLUTNM = "soft_lutpair185" *) 
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[5][0]_i_1 
@@ -4891,7 +4891,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[5][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data5[0]));
-  (* SOFT_HLUTNM = "soft_lutpair185" *) 
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[5][1]_i_1 
@@ -4899,7 +4899,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[5][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data5[1]));
-  (* SOFT_HLUTNM = "soft_lutpair184" *) 
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[5][2]_i_1 
@@ -4907,7 +4907,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[5][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data5[2]));
-  (* SOFT_HLUTNM = "soft_lutpair184" *) 
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[5][3]_i_1 
@@ -4915,7 +4915,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[5][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data5[3]));
-  (* SOFT_HLUTNM = "soft_lutpair183" *) 
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[5][4]_i_1 
@@ -4923,7 +4923,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[5][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data5[4]));
-  (* SOFT_HLUTNM = "soft_lutpair183" *) 
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[5][5]_i_1 
@@ -4931,7 +4931,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[5][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data5[5]));
-  (* SOFT_HLUTNM = "soft_lutpair182" *) 
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[5][6]_i_1 
@@ -4939,7 +4939,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[5][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data5[6]));
-  (* SOFT_HLUTNM = "soft_lutpair182" *) 
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[5][7]_i_1 
@@ -4947,7 +4947,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[5][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data5[7]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
     .INIT(32'h01000000)) 
     \i_TX_Byte[5][7]_i_2 
@@ -4957,7 +4957,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I4(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .O(\i_TX_Byte[5][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[6][0]_i_1 
@@ -4965,7 +4965,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[6][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data6[0]));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[6][1]_i_1 
@@ -4973,7 +4973,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[6][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data6[1]));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[6][2]_i_1 
@@ -4981,7 +4981,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[6][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data6[2]));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[6][3]_i_1 
@@ -4989,7 +4989,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[6][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data6[3]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[6][4]_i_1 
@@ -4997,7 +4997,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[6][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data6[4]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[6][5]_i_1 
@@ -5005,7 +5005,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[6][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data6[5]));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[6][6]_i_1 
@@ -5013,7 +5013,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[6][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data6[6]));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[6][7]_i_1 
@@ -5021,7 +5021,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[6][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data6[7]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT5 #(
     .INIT(32'h00001000)) 
     \i_TX_Byte[6][7]_i_2 
@@ -5031,7 +5031,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I4(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .O(\i_TX_Byte[6][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[7][0]_i_1 
@@ -5039,7 +5039,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[7][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data7[0]));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[7][1]_i_1 
@@ -5047,7 +5047,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[7][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data7[1]));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[7][2]_i_1 
@@ -5055,7 +5055,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[7][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data7[2]));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[7][3]_i_1 
@@ -5063,7 +5063,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[7][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data7[3]));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[7][4]_i_1 
@@ -5071,7 +5071,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[7][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data7[4]));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[7][5]_i_1 
@@ -5079,7 +5079,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[7][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data7[5]));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[7][6]_i_1 
@@ -5087,7 +5087,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[7][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data7[6]));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[7][7]_i_1 
@@ -5095,7 +5095,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[7][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data7[7]));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \i_TX_Byte[7][7]_i_2 
@@ -5105,7 +5105,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg_n_0_[3] ),
         .I4(\i_TX_Byte[0][7]_i_3_n_0 ),
         .O(\i_TX_Byte[7][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[8][0]_i_1 
@@ -5113,7 +5113,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[8][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data8[0]));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[8][1]_i_1 
@@ -5121,7 +5121,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[8][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data8[1]));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[8][2]_i_1 
@@ -5129,7 +5129,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[8][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data8[2]));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[8][3]_i_1 
@@ -5137,7 +5137,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[8][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data8[3]));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[8][4]_i_1 
@@ -5145,7 +5145,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[8][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data8[4]));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[8][5]_i_1 
@@ -5153,7 +5153,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[8][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data8[5]));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[8][6]_i_1 
@@ -5161,7 +5161,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[8][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data8[6]));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[8][7]_i_1 
@@ -5169,7 +5169,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[8][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data8[7]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT5 #(
     .INIT(32'h00000004)) 
     \i_TX_Byte[8][7]_i_2 
@@ -5179,7 +5179,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I4(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .O(\i_TX_Byte[8][7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[9][0]_i_1 
@@ -5187,7 +5187,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[9][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [0]),
         .O(data9[0]));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[9][1]_i_1 
@@ -5195,7 +5195,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[9][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [1]),
         .O(data9[1]));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[9][2]_i_1 
@@ -5203,7 +5203,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[9][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [2]),
         .O(data9[2]));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[9][3]_i_1 
@@ -5211,7 +5211,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[9][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [3]),
         .O(data9[3]));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[9][4]_i_1 
@@ -5219,7 +5219,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[9][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [4]),
         .O(data9[4]));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[9][5]_i_1 
@@ -5227,7 +5227,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[9][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [5]),
         .O(data9[5]));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[9][6]_i_1 
@@ -5235,7 +5235,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[9][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [6]),
         .O(data9[6]));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \i_TX_Byte[9][7]_i_1 
@@ -5243,7 +5243,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\i_TX_Byte[9][7]_i_2_n_0 ),
         .I2(\i_TX_Byte_reg[6][7]_0 [7]),
         .O(data9[7]));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT5 #(
     .INIT(32'h00000400)) 
     \i_TX_Byte[9][7]_i_2 
@@ -7891,7 +7891,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .D(r_CmdAccept_reg_0),
         .Q(r_CmdAccept),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
     .INIT(32'h0101FC01)) 
     \r_Cmd_Cnt[0]_i_1 
@@ -7911,14 +7911,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_Cmd_Cnt[1]_i_2_n_0 ),
         .I5(\r_Cmd_Cnt[1]_i_3_n_0 ),
         .O(\r_Cmd_Cnt[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \r_Cmd_Cnt[1]_i_2 
        (.I0(\slv_reg0_reg[0] ),
         .I1(\r_Cmd_Cnt_reg_n_0_[1] ),
         .O(\r_Cmd_Cnt[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT5 #(
     .INIT(32'hFF00FFDF)) 
     \r_Cmd_Cnt[1]_i_3 
@@ -7954,7 +7954,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(r_Halfbit_Cnt[0]),
         .I5(r_Halfbit_Cnt[2]),
         .O(\r_Cmd_Cnt[2]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'hEF)) 
     \r_Cmd_Cnt[2]_i_4 
@@ -7986,13 +7986,13 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .D(\r_Cmd_Cnt[2]_i_1_n_0 ),
         .Q(\r_Cmd_Cnt_reg_n_0_[2] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \r_Halfbit_Cnt[0]_i_1 
        (.I0(r_Halfbit_Cnt[0]),
         .O(\r_Halfbit_Cnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT5 #(
     .INIT(32'h4A5A5A5A)) 
     \r_Halfbit_Cnt[1]_i_1 
@@ -8002,7 +8002,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(r_Halfbit_Cnt[3]),
         .I4(\r_Halfbit_Cnt[3]_i_4_n_0 ),
         .O(\r_Halfbit_Cnt[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \r_Halfbit_Cnt[2]_i_1 
@@ -8015,7 +8015,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
     \r_Halfbit_Cnt[3]_i_1 
        (.I0(\r_Halfbit_Cnt[3]_i_3_n_0 ),
         .O(r_TX22_out));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT5 #(
     .INIT(32'h3DFFC000)) 
     \r_Halfbit_Cnt[3]_i_2 
@@ -8035,7 +8035,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(r_SPI_MOSI_i_9_n_0),
         .I5(r_TX_reg_0),
         .O(\r_Halfbit_Cnt[3]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \r_Halfbit_Cnt[3]_i_4 
@@ -8044,14 +8044,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(r_Halfbit_Cnt[7]),
         .I3(r_Halfbit_Cnt[6]),
         .O(\r_Halfbit_Cnt[3]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \r_Halfbit_Cnt[3]_i_5 
        (.I0(r_Send_reg_0),
         .I1(r_SPI_CS_reg_0),
         .O(\r_Halfbit_Cnt[3]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT5 #(
     .INIT(32'h6AAAAAAA)) 
     \r_Halfbit_Cnt[4]_i_1 
@@ -8071,14 +8071,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(r_Halfbit_Cnt[3]),
         .I5(r_Halfbit_Cnt[4]),
         .O(\r_Halfbit_Cnt[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \r_Halfbit_Cnt[6]_i_1 
        (.I0(r_Halfbit_Cnt[6]),
         .I1(\r_Halfbit_Cnt[7]_i_2_n_0 ),
         .O(\r_Halfbit_Cnt[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \r_Halfbit_Cnt[7]_i_1 
@@ -8160,7 +8160,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .D(\r_Halfbit_Cnt[7]_i_1_n_0 ),
         .Q(r_Halfbit_Cnt[7]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'h59)) 
     r_Halfbit_state_i_1
@@ -8174,20 +8174,20 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .D(r_Halfbit_state_i_1_n_0),
         .Q(r_Halfbit_state_reg_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \r_Next[0]_i_1 
        (.I0(\r_Next_reg_n_0_[0] ),
         .O(r_Next[0]));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \r_Next[1]_i_1 
        (.I0(\r_Next_reg_n_0_[1] ),
         .I1(\r_Next_reg_n_0_[0] ),
         .O(\r_Next[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT3 #(
     .INIT(8'hE1)) 
     \r_Next[2]_i_1 
@@ -8195,7 +8195,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\r_Next_reg_n_0_[0] ),
         .I2(\r_Next_reg_n_0_[2] ),
         .O(r_Next[2]));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT4 #(
     .INIT(16'hAAA9)) 
     \r_Next[3]_i_1 
@@ -8204,7 +8204,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(\r_Next_reg_n_0_[0] ),
         .I3(\r_Next_reg_n_0_[2] ),
         .O(r_Next[3]));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT5 #(
     .INIT(32'hAAAAAAA9)) 
     \r_Next[4]_i_1 
@@ -8224,7 +8224,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_Next_reg_n_0_[3] ),
         .I5(\r_Next_reg_n_0_[2] ),
         .O(r_Next[5]));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT4 #(
     .INIT(16'hA9AA)) 
     \r_Next[6]_i_1 
@@ -8251,7 +8251,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(r_Send_reg_0),
         .I5(r_CmdAccept),
         .O(\r_Next[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT5 #(
     .INIT(32'hAAAAAA9A)) 
     \r_Next[7]_i_3 
@@ -8271,7 +8271,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_Next[7]_i_7_n_0 ),
         .I5(\r_Next[7]_i_8_n_0 ),
         .O(\r_Next[7]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFD)) 
     \r_Next[7]_i_5 
@@ -8281,7 +8281,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_Next_reg_n_0_[4] ),
         .I4(\r_Next_reg_n_0_[5] ),
         .O(\r_Next[7]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \r_Next[7]_i_6 
@@ -8374,7 +8374,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .D(r_Next[7]),
         .Q(\r_Next_reg_n_0_[7] ),
         .R(\r_Next[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'hFEFFFFFF)) 
     \r_RX_Bit_Count[0]_i_1 
@@ -8404,7 +8404,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_RX_Bit_Count[2]_i_2_n_0 ),
         .I5(\r_RX_Bit_Count_reg_n_0_[2] ),
         .O(\r_RX_Bit_Count[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \r_RX_Bit_Count[2]_i_2 
@@ -8421,7 +8421,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_StatusReg_reg[7]_0 [0]),
         .I5(r_CmdAccept),
         .O(\r_RX_Bit_Count[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT5 #(
     .INIT(32'h00020000)) 
     \r_RX_Bit_Count[3]_i_2 
@@ -8431,7 +8431,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_StatusReg_reg[7]_0 [0]),
         .I4(r_Tx_DataVaild_reg_n_0),
         .O(\r_RX_Bit_Count[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT5 #(
     .INIT(32'hF7F7F700)) 
     \r_RX_Bit_Count[3]_i_3 
@@ -8441,14 +8441,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(r_SPI_CS_i_2_n_0),
         .I4(\r_Next[7]_i_4_n_0 ),
         .O(\r_RX_Bit_Count[3]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \r_RX_Bit_Count[3]_i_4 
        (.I0(r_Tx_DataVaild_reg_n_0),
         .I1(r_Send_reg_0),
         .O(\r_RX_Bit_Count[3]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT4 #(
     .INIT(16'h0008)) 
     \r_RX_Bit_Count[3]_i_5 
@@ -8457,7 +8457,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(\r_Cmd_Cnt_reg_n_0_[0] ),
         .I3(\r_Cmd_Cnt_reg_n_0_[2] ),
         .O(\r_RX_Bit_Count[3]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT4 #(
     .INIT(16'hAAA9)) 
     \r_RX_Bit_Count[3]_i_6 
@@ -8466,7 +8466,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(\r_RX_Bit_Count_reg_n_0_[0] ),
         .I3(\r_RX_Bit_Count_reg_n_0_[1] ),
         .O(\r_RX_Bit_Count[3]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \r_RX_Bit_Count[3]_i_7 
@@ -8680,7 +8680,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .D(Q),
         .Q(r_RdyStart),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT5 #(
     .INIT(32'hCCFF0001)) 
     r_SPI_CS_i_1
@@ -8700,7 +8700,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_SPI_END_reg_n_0_[7] ),
         .I5(\r_SPI_END[7]_i_6_n_0 ),
         .O(r_SPI_CS_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
     .INIT(32'h00000040)) 
     r_SPI_CS_i_3
@@ -8728,14 +8728,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(r_Halfbit_Cnt[3]),
         .I5(r_Halfbit_Cnt[1]),
         .O(\r_Halfbit_Cnt_reg[2]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT2 #(
     .INIT(4'hE)) 
     r_SPI_Clk_i_3
        (.I0(\r_StatusReg_reg[7]_0 [0]),
         .I1(r_SPI_CS_i_3_n_0),
         .O(\slv_reg0_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT5 #(
     .INIT(32'h00002000)) 
     r_SPI_Clk_i_4
@@ -8778,14 +8778,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_SPI_END[7]_i_4_n_0 ),
         .I5(\r_SPI_END_reg_n_0_[2] ),
         .O(\r_SPI_END[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \r_SPI_END[2]_i_2 
        (.I0(r_Send_reg_0),
         .I1(\r_StatusReg_reg[7]_0 [0]),
         .O(\r_SPI_END[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT4 #(
     .INIT(16'hAAA9)) 
     \r_SPI_END[3]_i_1 
@@ -8838,7 +8838,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(r_CmdAccept),
         .I3(\slv_reg0_reg[0] ),
         .O(\r_SPI_END[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT5 #(
     .INIT(32'hAAAAAAA9)) 
     \r_SPI_END[7]_i_3 
@@ -8858,7 +8858,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt[7]_i_4_n_0 ),
         .I5(\r_SPI_END[7]_i_5_n_0 ),
         .O(\r_SPI_END[7]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \r_SPI_END[7]_i_5 
@@ -8868,7 +8868,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_SPI_END_reg_n_0_[4] ),
         .I4(\r_SPI_END[7]_i_7_n_0 ),
         .O(\r_SPI_END[7]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \r_SPI_END[7]_i_6 
@@ -8876,7 +8876,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(r_Tx_DataVaild_reg_n_0),
         .I2(r_Send_reg_0),
         .O(\r_SPI_END[7]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \r_SPI_END[7]_i_7 
@@ -8992,7 +8992,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_reg_n_0_[2] ),
         .I5(\r_TX_Byte_reg_n_0_[3] ),
         .O(r_SPI_MOSI_i_7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     r_SPI_MOSI_i_8
@@ -9001,7 +9001,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(\r_SPI_START_reg_n_0_[7] ),
         .I3(\r_SPI_START_reg_n_0_[0] ),
         .O(r_SPI_MOSI_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     r_SPI_MOSI_i_9
@@ -9023,7 +9023,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(r_SPI_MOSI_i_7_n_0),
         .O(\r_TX_Bit_Count_reg[2]_0 ),
         .S(r_SPI_MOSI_i_5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \r_SPI_START[0]_i_1 
@@ -9039,7 +9039,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_SPI_START[1]_i_2_n_0 ),
         .I5(\r_SPI_START_reg_n_0_[1] ),
         .O(\r_SPI_START[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \r_SPI_START[1]_i_2 
@@ -9047,7 +9047,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(r_SPI_CS_reg_0),
         .I2(r_Send_reg_0),
         .O(\r_SPI_START[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT3 #(
     .INIT(8'hA9)) 
     \r_SPI_START[2]_i_1 
@@ -9055,7 +9055,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\r_SPI_START_reg_n_0_[1] ),
         .I2(\r_SPI_START_reg_n_0_[0] ),
         .O(\r_SPI_START[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT4 #(
     .INIT(16'hAAA9)) 
     \r_SPI_START[3]_i_1 
@@ -9064,7 +9064,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(\r_SPI_START_reg_n_0_[0] ),
         .I3(\r_SPI_START_reg_n_0_[1] ),
         .O(\r_SPI_START[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'hAAAAAAA9)) 
     \r_SPI_START[4]_i_1 
@@ -9084,7 +9084,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_SPI_START_reg_n_0_[1] ),
         .I5(\r_SPI_START_reg_n_0_[4] ),
         .O(\r_SPI_START[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT3 #(
     .INIT(8'hA6)) 
     \r_SPI_START[6]_i_1 
@@ -9109,7 +9109,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(r_SPI_CS_reg_0),
         .I2(r_CmdAccept),
         .O(\r_SPI_START[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT4 #(
     .INIT(16'hAAA6)) 
     \r_SPI_START[7]_i_3 
@@ -9118,7 +9118,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(\r_SPI_START_reg_n_0_[6] ),
         .I3(\r_SPI_START_reg_n_0_[5] ),
         .O(\r_SPI_START[7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT5 #(
     .INIT(32'h00000001)) 
     \r_SPI_START[7]_i_4 
@@ -9212,7 +9212,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_Next_reg_n_0_[1] ),
         .I5(r_Send_i_5_n_0),
         .O(r_Send_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT2 #(
     .INIT(4'h1)) 
     r_Send_i_3
@@ -9225,7 +9225,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
        (.I0(\r_Next_reg_n_0_[2] ),
         .I1(\r_Next_reg_n_0_[3] ),
         .O(r_Send_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     r_Send_i_5
@@ -9252,7 +9252,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_StatusReg_reg[7]_0 [0]),
         .I5(\r_StatusReg[1]_i_2_n_0 ),
         .O(\r_StatusReg[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \r_StatusReg[1]_i_2 
@@ -9260,7 +9260,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(r_Send_reg_0),
         .I2(w_StatusReg[1]),
         .O(\r_StatusReg[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT5 #(
     .INIT(32'hAAAAAAA8)) 
     \r_StatusReg[2]_i_1 
@@ -9270,7 +9270,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(r_Send_reg_0),
         .I4(r_CmdAccept),
         .O(\r_StatusReg[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT4 #(
     .INIT(16'hAAA8)) 
     \r_StatusReg[3]_i_1 
@@ -9405,7 +9405,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_SPI_START_reg_n_0_[7] ),
         .I5(\r_SPI_START_reg_n_0_[0] ),
         .O(\r_TX_Bit_Count[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \r_TX_Bit_Count[1]_i_1 
@@ -9432,7 +9432,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Bit_Count_reg_n_0_[0] ),
         .I5(\r_TX_Bit_Count[2]_i_2_n_0 ),
         .O(\r_TX_Bit_Count[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT4 #(
     .INIT(16'h0100)) 
     \r_TX_Bit_Count[2]_i_2 
@@ -9441,7 +9441,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(r_Send_reg_0),
         .I3(r_Tx_DataVaild_reg_n_0),
         .O(\r_TX_Bit_Count[2]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT3 #(
     .INIT(8'hFB)) 
     \r_TX_Bit_Count[3]_i_1 
@@ -9859,7 +9859,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte[17][7]_i_2_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[23][0] ),
         .O(\r_TX_Byte[0]_i_50_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT4 #(
     .INIT(16'h407F)) 
     \r_TX_Byte[0]_i_51 
@@ -9938,7 +9938,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt[7]_i_6_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[31][0] ),
         .O(\r_TX_Byte[0]_i_58_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT4 #(
     .INIT(16'h04F7)) 
     \r_TX_Byte[0]_i_59 
@@ -9976,7 +9976,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte[0][7]_i_3_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[3][0] ),
         .O(\r_TX_Byte[0]_i_62_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[0]_i_63 
@@ -9995,7 +9995,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte[7]_i_53_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[1][0] ),
         .O(\r_TX_Byte[0]_i_64_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[0]_i_65 
@@ -10474,7 +10474,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte[17][7]_i_2_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[23][1] ),
         .O(\r_TX_Byte[1]_i_50_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT4 #(
     .INIT(16'h407F)) 
     \r_TX_Byte[1]_i_51 
@@ -10553,7 +10553,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt[7]_i_6_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[31][1] ),
         .O(\r_TX_Byte[1]_i_58_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT4 #(
     .INIT(16'h04F7)) 
     \r_TX_Byte[1]_i_59 
@@ -10591,7 +10591,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte[0][7]_i_3_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[3][1] ),
         .O(\r_TX_Byte[1]_i_62_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[1]_i_63 
@@ -10610,7 +10610,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte[7]_i_53_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[1][1] ),
         .O(\r_TX_Byte[1]_i_64_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[1]_i_65 
@@ -11089,7 +11089,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte[17][7]_i_2_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[23][2] ),
         .O(\r_TX_Byte[2]_i_50_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT4 #(
     .INIT(16'h407F)) 
     \r_TX_Byte[2]_i_51 
@@ -11168,7 +11168,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt[7]_i_6_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[31][2] ),
         .O(\r_TX_Byte[2]_i_58_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT4 #(
     .INIT(16'h04F7)) 
     \r_TX_Byte[2]_i_59 
@@ -11206,7 +11206,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte[0][7]_i_3_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[3][2] ),
         .O(\r_TX_Byte[2]_i_62_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[2]_i_63 
@@ -11225,7 +11225,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte[7]_i_53_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[1][2] ),
         .O(\r_TX_Byte[2]_i_64_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[2]_i_65 
@@ -11704,7 +11704,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte[17][7]_i_2_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[23][3] ),
         .O(\r_TX_Byte[3]_i_50_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT4 #(
     .INIT(16'h407F)) 
     \r_TX_Byte[3]_i_51 
@@ -11783,7 +11783,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt[7]_i_6_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[31][3] ),
         .O(\r_TX_Byte[3]_i_58_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT4 #(
     .INIT(16'h04F7)) 
     \r_TX_Byte[3]_i_59 
@@ -11821,7 +11821,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte[0][7]_i_3_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[3][3] ),
         .O(\r_TX_Byte[3]_i_62_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[3]_i_63 
@@ -11840,7 +11840,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte[7]_i_53_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[1][3] ),
         .O(\r_TX_Byte[3]_i_64_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[3]_i_65 
@@ -12319,7 +12319,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte[17][7]_i_2_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[23][4] ),
         .O(\r_TX_Byte[4]_i_50_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT4 #(
     .INIT(16'h407F)) 
     \r_TX_Byte[4]_i_51 
@@ -12398,7 +12398,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt[7]_i_6_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[31][4] ),
         .O(\r_TX_Byte[4]_i_58_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT4 #(
     .INIT(16'h04F7)) 
     \r_TX_Byte[4]_i_59 
@@ -12436,7 +12436,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte[0][7]_i_3_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[3][4] ),
         .O(\r_TX_Byte[4]_i_62_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[4]_i_63 
@@ -12455,7 +12455,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte[7]_i_53_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[1][4] ),
         .O(\r_TX_Byte[4]_i_64_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[4]_i_65 
@@ -12934,7 +12934,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte[17][7]_i_2_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[23][5] ),
         .O(\r_TX_Byte[5]_i_50_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT4 #(
     .INIT(16'h407F)) 
     \r_TX_Byte[5]_i_51 
@@ -13013,7 +13013,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt[7]_i_6_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[31][5] ),
         .O(\r_TX_Byte[5]_i_58_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT4 #(
     .INIT(16'h04F7)) 
     \r_TX_Byte[5]_i_59 
@@ -13051,7 +13051,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte[0][7]_i_3_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[3][5] ),
         .O(\r_TX_Byte[5]_i_62_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[5]_i_63 
@@ -13070,7 +13070,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte[7]_i_53_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[1][5] ),
         .O(\r_TX_Byte[5]_i_64_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[5]_i_65 
@@ -13549,7 +13549,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte[17][7]_i_2_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[23][6] ),
         .O(\r_TX_Byte[6]_i_50_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT4 #(
     .INIT(16'h407F)) 
     \r_TX_Byte[6]_i_51 
@@ -13628,7 +13628,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt[7]_i_6_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[31][6] ),
         .O(\r_TX_Byte[6]_i_58_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT4 #(
     .INIT(16'h04F7)) 
     \r_TX_Byte[6]_i_59 
@@ -13666,7 +13666,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte[0][7]_i_3_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[3][6] ),
         .O(\r_TX_Byte[6]_i_62_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[6]_i_63 
@@ -13685,7 +13685,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte[7]_i_53_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[1][6] ),
         .O(\r_TX_Byte[6]_i_64_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[6]_i_65 
@@ -13812,7 +13812,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(r_TX_reg_i_2_n_1),
         .I3(\r_Tx_Cnt[2]_i_3_n_0 ),
         .O(\r_TX_Byte[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \r_TX_Byte[7]_i_13 
@@ -14016,7 +14016,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_Tx_Cnt[2]_i_2_n_0 ),
         .I5(\r_TX_Byte[7]_i_77_n_0 ),
         .O(\r_TX_Byte[7]_i_39_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \r_TX_Byte[7]_i_4 
@@ -14150,7 +14150,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\r_TX_Byte_Cnt_reg[1]_rep_n_0 ),
         .I2(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .O(\r_TX_Byte[7]_i_51_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT3 #(
     .INIT(8'hFB)) 
     \r_TX_Byte[7]_i_52 
@@ -14165,7 +14165,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .I2(\r_TX_Byte_Cnt_reg[1]_rep_n_0 ),
         .O(\r_TX_Byte[7]_i_53_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT3 #(
     .INIT(8'hFB)) 
     \r_TX_Byte[7]_i_54 
@@ -14173,7 +14173,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\r_TX_Byte_Cnt_reg[1]_rep_n_0 ),
         .I2(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .O(\r_TX_Byte[7]_i_54_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT4 #(
     .INIT(16'hFFEF)) 
     \r_TX_Byte[7]_i_55 
@@ -14246,7 +14246,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\i_TX_Byte[17][7]_i_2_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[23][7] ),
         .O(\r_TX_Byte[7]_i_62_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT4 #(
     .INIT(16'h407F)) 
     \r_TX_Byte[7]_i_63 
@@ -14325,7 +14325,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Byte_Cnt[7]_i_6_n_0 ),
         .I5(\i_TX_Byte_reg_n_0_[31][7] ),
         .O(\r_TX_Byte[7]_i_70_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT4 #(
     .INIT(16'h04F7)) 
     \r_TX_Byte[7]_i_71 
@@ -14363,7 +14363,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte[0][7]_i_3_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[3][7] ),
         .O(\r_TX_Byte[7]_i_74_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[7]_i_75 
@@ -14382,7 +14382,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte[7]_i_53_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[1][7] ),
         .O(\r_TX_Byte[7]_i_76_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT5 #(
     .INIT(32'h0040FF7F)) 
     \r_TX_Byte[7]_i_77 
@@ -14425,7 +14425,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte[7]_i_56_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[5][7] ),
         .O(\r_TX_Byte[7]_i_80_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT5 #(
     .INIT(32'h0100FDFF)) 
     \r_TX_Byte[7]_i_81 
@@ -14508,7 +14508,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\i_TX_Byte[0][7]_i_3_n_0 ),
         .I4(\i_TX_Byte_reg_n_0_[14][7] ),
         .O(\r_TX_Byte[7]_i_89_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT5 #(
     .INIT(32'h00000002)) 
     \r_TX_Byte[7]_i_90 
@@ -14518,7 +14518,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I4(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .O(\r_TX_Byte[7]_i_90_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \r_TX_Byte[7]_i_91 
@@ -14526,13 +14526,13 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I2(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .O(\r_TX_Byte[7]_i_91_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \r_TX_Byte_Cnt[0]_i_1 
        (.I0(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \r_TX_Byte_Cnt[1]_i_1 
@@ -14545,7 +14545,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
        (.I0(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .I1(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .O(\r_TX_Byte_Cnt[1]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \r_TX_Byte_Cnt[2]_i_1 
@@ -14553,7 +14553,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .I2(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \r_TX_Byte_Cnt[3]_i_1 
@@ -14562,7 +14562,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I2(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I3(\r_TX_Byte_Cnt_reg_n_0_[0] ),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT5 #(
     .INIT(32'h6AAAAAAA)) 
     \r_TX_Byte_Cnt[4]_i_1 
@@ -14644,7 +14644,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\r_TX_Byte_Cnt_reg_n_0_[2] ),
         .I2(\r_TX_Byte_Cnt_reg_n_0_[1] ),
         .O(\r_TX_Byte_Cnt[7]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \r_TX_Byte_Cnt[7]_i_7 
@@ -15349,7 +15349,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\r_TX_Byte_reg[7]_i_20_n_0 ),
         .O(\r_TX_Byte_reg[7]_i_9_n_0 ),
         .S(\r_Tx_Cnt[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT4 #(
     .INIT(16'h00DF)) 
     r_TX_i_1
@@ -15435,7 +15435,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(r_TX_i_18_n_0),
         .I5(r_TX_reg_i_2_0[0]),
         .O(r_TX_i_17_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT2 #(
     .INIT(4'h2)) 
     r_TX_i_18
@@ -15521,14 +15521,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(NLW_r_TX_reg_i_8_O_UNCONNECTED[3:0]),
         .S({r_TX_i_14_n_0,r_TX_i_15_n_0,r_TX_i_16_n_0,r_TX_i_17_n_0}));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \r_Tx_Cnt[0]_i_1 
        (.I0(\r_Tx_Cnt[2]_i_3_n_0 ),
         .I1(\r_Tx_Cnt[2]_i_2_n_0 ),
         .O(\r_Tx_Cnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'hE1)) 
     \r_Tx_Cnt[1]_i_1 
@@ -15536,7 +15536,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I1(\r_Tx_Cnt[2]_i_2_n_0 ),
         .I2(\r_Tx_Cnt[2]_i_4_n_0 ),
         .O(\r_Tx_Cnt[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT5 #(
     .INIT(32'h0010EF10)) 
     \r_Tx_Cnt[2]_i_1 
@@ -15586,7 +15586,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_TX_Bit_Count_reg_n_0_[3] ),
         .I5(r_CmdAccept),
         .O(\r_Tx_Cnt[2]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \r_Tx_Cnt[2]_i_6 
@@ -15606,7 +15606,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
        (.I0(\r_Tx_Cnt_reg_n_0_[3] ),
         .I1(\r_TX_Byte_Cnt[7]_i_1_n_0 ),
         .O(\r_Tx_Cnt[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT5 #(
     .INIT(32'h01111000)) 
     \r_Tx_Cnt[4]_i_1 
@@ -15616,7 +15616,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I3(\r_Tx_Cnt[4]_i_2_n_0 ),
         .I4(\r_Tx_Cnt_reg_n_0_[4] ),
         .O(\r_Tx_Cnt[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT4 #(
     .INIT(16'h0008)) 
     \r_Tx_Cnt[4]_i_2 
@@ -15631,7 +15631,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
        (.I0(\r_Tx_Cnt[5]_i_2_n_0 ),
         .I1(\r_Tx_Cnt[7]_i_3_n_0 ),
         .O(\r_Tx_Cnt[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \r_Tx_Cnt[5]_i_2 
@@ -15648,7 +15648,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_Tx_Cnt_reg_n_0_[5] ),
         .I5(\r_Tx_Cnt_reg_n_0_[6] ),
         .O(\r_Tx_Cnt[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT5 #(
     .INIT(32'hFDFFFFFF)) 
     \r_Tx_Cnt[6]_i_2 
@@ -15686,7 +15686,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(\r_Tx_Cnt[2]_i_2_n_0 ),
         .I5(\r_Tx_Cnt[3]_i_2_n_0 ),
         .O(\r_Tx_Cnt[7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \r_Tx_Cnt[7]_i_4 
@@ -15767,7 +15767,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(r_Tx_DataVaild_i_2_n_0),
         .I5(r_Tx_DataVaild_i_3_n_0),
         .O(r_Tx_DataVaild_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     r_Tx_DataVaild_i_2
@@ -15795,7 +15795,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .D(r_Tx_DataVaild_i_1_n_0),
         .Q(r_Tx_DataVaild_reg_n_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \r_count[0]_i_1 
@@ -15991,7 +15991,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI
         .I4(s00_axi_awvalid),
         .I5(w_RxBuffer[7]),
         .O(\s00_axi_wdata[7] [7]));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \write_pointer[0]_i_2 
@@ -16005,13 +16005,11 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0
    (r_SPI_CS_reg,
     s00_axi_wready,
     s00_axi_awready,
-    r_Done_reg,
-    o_AXI_Init_reg,
+    o_LED,
     o_SPI_Clk,
     o_SPI_MOSI,
     s00_axi_arready,
     s00_axi_rdata,
-    o_LED,
     m00_axis_tdata,
     s00_axi_rvalid,
     s00_axi_bvalid,
@@ -16035,13 +16033,11 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0
   output r_SPI_CS_reg;
   output s00_axi_wready;
   output s00_axi_awready;
-  output r_Done_reg;
-  output o_AXI_Init_reg;
+  output [6:0]o_LED;
   output o_SPI_Clk;
   output o_SPI_MOSI;
   output s00_axi_arready;
   output [31:0]s00_axi_rdata;
-  output [5:0]o_LED;
   output [11:0]m00_axis_tdata;
   output s00_axi_rvalid;
   output s00_axi_bvalid;
@@ -16068,16 +16064,15 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0
   wire PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst_n_7;
   wire i_CMOS_Clk;
   wire i_SPI_MISO;
+  wire m00_axi_init_axi_txn;
   wire m00_axis_aclk;
   wire [11:0]m00_axis_tdata;
   wire m00_axis_tlast;
   wire m00_axis_tready;
   wire m00_axis_tvalid;
-  wire o_AXI_Init_reg;
-  wire [5:0]o_LED;
+  wire [6:0]o_LED;
   wire o_SPI_Clk;
   wire o_SPI_MOSI;
-  wire r_Done_reg;
   wire r_SPI_CS_reg;
   wire r_count;
   wire s00_axi_aclk;
@@ -16097,22 +16092,23 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0
   wire s00_axi_wready;
   wire [3:0]s00_axi_wstrb;
   wire s00_axi_wvalid;
+  wire w_ADC_Done;
 
   Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst
        (.i_CMOS_Clk(i_CMOS_Clk),
+        .m00_axi_init_axi_txn(m00_axi_init_axi_txn),
         .m00_axis_aclk(m00_axis_aclk),
         .m00_axis_tdata(m00_axis_tdata),
         .m00_axis_tlast(m00_axis_tlast),
         .m00_axis_tready(m00_axis_tready),
         .m00_axis_tvalid(m00_axis_tvalid),
-        .o_LED({o_LED[5:2],o_LED[0]}),
-        .r_Done_reg(r_Done_reg),
-        .\r_addon_reg[1]_0 (o_AXI_Init_reg),
+        .o_LED({o_LED[6:3],o_LED[1:0]}),
         .r_count(r_count),
         .\read_pointer_reg[12]_0 (PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst_n_4),
         .\read_pointer_reg[17]_0 (PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst_n_1),
         .s00_axi_aresetn(s00_axi_aresetn),
-        .tx_done_reg_0(o_LED[1]),
+        .tx_done_reg_0(o_LED[2]),
+        .w_ADC_Done(w_ADC_Done),
         .\write_pointer_reg[17]_0 (PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst_n_7));
   Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst
        (.SR(PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst_n_1),
@@ -16120,8 +16116,8 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0
         .axi_awready_reg_0(s00_axi_awready),
         .axi_wready_reg_0(s00_axi_wready),
         .i_SPI_MISO(i_SPI_MISO),
+        .m00_axi_init_axi_txn(m00_axi_init_axi_txn),
         .o_AXI_Init_reg(PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst_n_7),
-        .o_AXI_Init_reg_0(o_AXI_Init_reg),
         .o_SPI_Clk(o_SPI_Clk),
         .o_SPI_MOSI(o_SPI_MOSI),
         .r_SPI_CS_reg(r_SPI_CS_reg),
@@ -16140,13 +16136,13 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0
         .s00_axi_wdata(s00_axi_wdata),
         .s00_axi_wstrb(s00_axi_wstrb),
         .s00_axi_wvalid(s00_axi_wvalid),
-        .\slv_reg4_reg[0]_0 (r_Done_reg),
+        .w_ADC_Done(w_ADC_Done),
         .\write_pointer_reg[17] (PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst_n_4));
 endmodule
 
 (* ORIG_REF_NAME = "PL_SPI_ADC_MasterStream_v1_0_M00_AXIS" *) 
 module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
-   (r_Done_reg,
+   (w_ADC_Done,
     tx_done_reg_0,
     m00_axis_tvalid,
     m00_axis_tlast,
@@ -16159,14 +16155,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
     \write_pointer_reg[17]_0 ,
     r_count,
     s00_axi_aresetn,
-    \r_addon_reg[1]_0 ,
+    m00_axi_init_axi_txn,
     m00_axis_tready);
-  output r_Done_reg;
+  output w_ADC_Done;
   output tx_done_reg_0;
   output m00_axis_tvalid;
   output m00_axis_tlast;
   output \read_pointer_reg[12]_0 ;
-  output [4:0]o_LED;
+  output [5:0]o_LED;
   output [11:0]m00_axis_tdata;
   input i_CMOS_Clk;
   input \read_pointer_reg[17]_0 ;
@@ -16174,7 +16170,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   input \write_pointer_reg[17]_0 ;
   input r_count;
   input s00_axi_aresetn;
-  input \r_addon_reg[1]_0 ;
+  input m00_axi_init_axi_txn;
   input m00_axis_tready;
 
   wire ADC_n_1;
@@ -16188,6 +16184,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   wire axis_tvalid_delay_i_1_n_0;
   wire \count_reg_n_0_[0] ;
   wire i_CMOS_Clk;
+  wire m00_axi_init_axi_txn;
   wire m00_axis_aclk;
   wire [11:0]m00_axis_tdata;
   wire m00_axis_tlast;
@@ -16197,13 +16194,12 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   wire \mst_exec_state[1]_i_3_n_0 ;
   wire [1:0]mst_exec_state__0;
   wire [1:1]mst_exec_state__1;
-  wire [4:0]o_LED;
+  wire [5:0]o_LED;
   wire \o_LED[2]_INST_0_i_2_n_0 ;
   wire \o_LED[2]_INST_0_i_3_n_0 ;
   wire \o_LED[2]_INST_0_i_4_n_0 ;
   wire [1:0]p_0_in;
-  wire p_0_in8_out;
-  wire r_Done_reg;
+  wire p_0_in7_out;
   wire r_Receive_mux_sel__10_i_1_n_0;
   wire r_Receive_mux_sel__34_i_1_n_0;
   wire r_Receive_reg_0_0_i_1_n_0;
@@ -16456,7 +16452,6 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   wire r_Receive_reg_7_9_n_67;
   wire r_Receive_reg_mux_sel__10_n_0;
   wire r_Receive_reg_mux_sel__34_n_0;
-  wire \r_addon_reg[1]_0 ;
   wire r_count;
   wire \r_count[0]_i_3_n_0 ;
   wire \r_count_reg[0]_i_2_n_0 ;
@@ -16691,6 +16686,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   wire tx_done_i_4_n_0;
   wire tx_done_i_5_n_0;
   wire tx_done_reg_0;
+  wire w_ADC_Done;
   wire \write_pointer[0]_i_1_n_0 ;
   wire \write_pointer[0]_i_4_n_0 ;
   wire [17:0]write_pointer_reg;
@@ -18056,12 +18052,12 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.E(ADC_n_1),
         .Q(mst_exec_state__0),
         .\count_reg[0] (\count_reg_n_0_[0] ),
-        .\count_reg[0]_0 (\r_addon_reg[1]_0 ),
         .i_CMOS_Clk(i_CMOS_Clk),
-        .r_Done_reg_0(r_Done_reg),
+        .m00_axi_init_axi_txn(m00_axi_init_axi_txn),
+        .r_Done_reg_0(w_ADC_Done),
         .r_Done_reg_1(ADC_n_2),
         .s00_axi_aresetn(s00_axi_aresetn));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h15)) 
     \FSM_sequential_mst_exec_state[0]_i_1 
@@ -18069,7 +18065,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
         .I1(mst_exec_state__0[0]),
         .I2(\count_reg_n_0_[0] ),
         .O(\FSM_sequential_mst_exec_state[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'h3044)) 
     \FSM_sequential_mst_exec_state[1]_i_1 
@@ -18100,8 +18096,8 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
     .INIT(64'h0000400000000000)) 
     axis_tlast_delay_i_1
        (.I0(axis_tlast_delay_i_2_n_0),
-        .I1(read_pointer_reg[3]),
-        .I2(read_pointer_reg[7]),
+        .I1(read_pointer_reg[1]),
+        .I2(read_pointer_reg[2]),
         .I3(axis_tlast_delay_i_3_n_0),
         .I4(axis_tlast_delay_i_4_n_0),
         .I5(s00_axi_aresetn),
@@ -18110,12 +18106,12 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
     .INIT(32'hFFFFBFFF)) 
     axis_tlast_delay_i_2
        (.I0(\o_LED[2]_INST_0_i_2_n_0 ),
-        .I1(read_pointer_reg[1]),
-        .I2(read_pointer_reg[2]),
-        .I3(read_pointer_reg[0]),
+        .I1(read_pointer_reg[3]),
+        .I2(read_pointer_reg[0]),
+        .I3(read_pointer_reg[7]),
         .I4(axis_tlast_delay_i_5_n_0),
         .O(axis_tlast_delay_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h8)) 
     axis_tlast_delay_i_3
@@ -18146,10 +18142,11 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
         .D(axis_tlast_delay_i_1_n_0),
         .Q(m00_axis_tlast),
         .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'h00200000)) 
     axis_tvalid_delay_i_1
-       (.I0(\r_addon_reg[1]_0 ),
+       (.I0(m00_axi_init_axi_txn),
         .I1(\read_pointer_reg[12]_0 ),
         .I2(mst_exec_state__0[1]),
         .I3(mst_exec_state__0[0]),
@@ -18291,22 +18288,22 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
         .I4(r_Receive_reg_mux_sel__34_n_0),
         .I5(r_Receive_reg_1_9_n_67),
         .O(m00_axis_tdata[9]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h15)) 
     \mst_exec_state[0]_i_1 
-       (.I0(o_LED[4]),
-        .I1(o_LED[3]),
+       (.I0(o_LED[5]),
+        .I1(o_LED[4]),
         .I2(\count_reg_n_0_[0] ),
         .O(\mst_exec_state[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h8F88)) 
     \mst_exec_state[1]_i_3 
-       (.I0(o_LED[3]),
+       (.I0(o_LED[4]),
         .I1(\count_reg_n_0_[0] ),
         .I2(tx_done_reg_0),
-        .I3(o_LED[4]),
+        .I3(o_LED[5]),
         .O(\mst_exec_state[1]_i_3_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -18314,7 +18311,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.C(m00_axis_aclk),
         .CE(ADC_n_1),
         .D(\mst_exec_state[0]_i_1_n_0 ),
-        .Q(o_LED[3]),
+        .Q(o_LED[4]),
         .R(\read_pointer_reg[17]_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -18322,14 +18319,23 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.C(m00_axis_aclk),
         .CE(ADC_n_1),
         .D(\mst_exec_state[1]_i_3_n_0 ),
-        .Q(o_LED[4]),
+        .Q(o_LED[5]),
         .R(\read_pointer_reg[17]_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h0200)) 
+    \o_LED[1]_INST_0 
+       (.I0(m00_axi_init_axi_txn),
+        .I1(\read_pointer_reg[12]_0 ),
+        .I2(mst_exec_state__0[0]),
+        .I3(mst_exec_state__0[1]),
+        .O(o_LED[0]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \o_LED[2]_INST_0 
        (.I0(\read_pointer_reg[12]_0 ),
-        .O(o_LED[0]));
+        .O(o_LED[1]));
   LUT6 #(
     .INIT(64'h00000000FFFFA8AA)) 
     \o_LED[2]_INST_0_i_1 
@@ -18348,14 +18354,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
         .I2(read_pointer_reg[9]),
         .O(\o_LED[2]_INST_0_i_2_n_0 ));
   LUT4 #(
-    .INIT(16'h5557)) 
+    .INIT(16'h01FF)) 
     \o_LED[2]_INST_0_i_3 
-       (.I0(read_pointer_reg[7]),
-        .I1(read_pointer_reg[4]),
-        .I2(read_pointer_reg[5]),
-        .I3(read_pointer_reg[6]),
+       (.I0(read_pointer_reg[4]),
+        .I1(read_pointer_reg[5]),
+        .I2(read_pointer_reg[6]),
+        .I3(read_pointer_reg[7]),
         .O(\o_LED[2]_INST_0_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'h7FFF)) 
     \o_LED[2]_INST_0_i_4 
@@ -18364,7 +18370,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
         .I2(read_pointer_reg[15]),
         .I3(read_pointer_reg[14]),
         .O(\o_LED[2]_INST_0_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     r_Receive_mux_sel__10_i_1
@@ -18372,7 +18378,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
         .I1(r_Receive_reg_0_0_i_4_n_0),
         .I2(r_Receive_reg_mux_sel__10_n_0),
         .O(r_Receive_mux_sel__10_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     r_Receive_mux_sel__34_i_1
@@ -18464,14 +18470,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h02)) 
     r_Receive_reg_0_0_i_3
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_0_0_i_3_n_0));
   LUT6 #(
     .INIT(64'h00200000FFFFFFFF)) 
     r_Receive_reg_0_0_i_4
-       (.I0(\r_addon_reg[1]_0 ),
+       (.I0(m00_axi_init_axi_txn),
         .I1(\read_pointer_reg[12]_0 ),
         .I2(m00_axis_tready),
         .I3(mst_exec_state__0[0]),
@@ -18487,7 +18493,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
         .I3(\write_pointer_reg[12]_rep_n_0 ),
         .I4(r_Receive_reg_0_0_i_8_n_0),
         .I5(tx_done_reg_0),
-        .O(p_0_in8_out));
+        .O(p_0_in7_out));
   LUT4 #(
     .INIT(16'h5557)) 
     r_Receive_reg_0_0_i_6
@@ -18716,7 +18722,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h02)) 
     r_Receive_reg_0_1_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_0_1_i_1_n_0));
@@ -18991,7 +18997,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h02)) 
     r_Receive_reg_0_5_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_0_5_i_1_n_0));
@@ -19065,7 +19071,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h02)) 
     r_Receive_reg_0_6_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_0_6_i_1_n_0));
@@ -19206,14 +19212,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h02)) 
     r_Receive_reg_0_8_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_0_8_i_1_n_0));
   LUT3 #(
     .INIT(8'h02)) 
     r_Receive_reg_0_8_i_2
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_0_8_i_2_n_0));
@@ -19488,7 +19494,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h02)) 
     r_Receive_reg_1_10_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_1_10_i_1_n_0));
@@ -19629,7 +19635,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h02)) 
     r_Receive_reg_1_2_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_1_2_i_1_n_0));
@@ -19703,7 +19709,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h02)) 
     r_Receive_reg_1_3_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_1_3_i_1_n_0));
@@ -19978,7 +19984,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h02)) 
     r_Receive_reg_1_7_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_1_7_i_1_n_0));
@@ -20119,7 +20125,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h02)) 
     r_Receive_reg_1_9_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_1_9_i_1_n_0));
@@ -20207,7 +20213,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_2_0_i_3
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[17]),
         .I2(write_pointer_reg[16]),
         .O(r_Receive_reg_2_0_i_3_n_0));
@@ -20415,7 +20421,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_2_1_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[17]),
         .I2(write_pointer_reg[16]),
         .O(r_Receive_reg_2_1_i_1_n_0));
@@ -20690,7 +20696,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_2_5_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[17]),
         .I2(write_pointer_reg[16]),
         .O(r_Receive_reg_2_5_i_1_n_0));
@@ -20764,7 +20770,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_2_6_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[17]),
         .I2(write_pointer_reg[16]),
         .O(r_Receive_reg_2_6_i_1_n_0));
@@ -20905,14 +20911,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_2_8_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[17]),
         .I2(write_pointer_reg[16]),
         .O(r_Receive_reg_2_8_i_1_n_0));
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_2_8_i_2
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[17]),
         .I2(write_pointer_reg[16]),
         .O(r_Receive_reg_2_8_i_2_n_0));
@@ -21187,7 +21193,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_3_10_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[17]),
         .I2(write_pointer_reg[16]),
         .O(r_Receive_reg_3_10_i_1_n_0));
@@ -21328,7 +21334,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_3_2_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[17]),
         .I2(write_pointer_reg[16]),
         .O(r_Receive_reg_3_2_i_1_n_0));
@@ -21402,7 +21408,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_3_3_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[17]),
         .I2(write_pointer_reg[16]),
         .O(r_Receive_reg_3_3_i_1_n_0));
@@ -21677,7 +21683,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_3_7_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[17]),
         .I2(write_pointer_reg[16]),
         .O(r_Receive_reg_3_7_i_1_n_0));
@@ -21818,7 +21824,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_3_9_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[17]),
         .I2(write_pointer_reg[16]),
         .O(r_Receive_reg_3_9_i_1_n_0));
@@ -21906,7 +21912,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_4_0_i_3
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_4_0_i_3_n_0));
@@ -22114,7 +22120,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_4_1_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_4_1_i_1_n_0));
@@ -22389,7 +22395,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_4_5_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_4_5_i_1_n_0));
@@ -22463,7 +22469,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_4_6_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_4_6_i_1_n_0));
@@ -22604,14 +22610,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_4_8_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_4_8_i_1_n_0));
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_4_8_i_2
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_4_8_i_2_n_0));
@@ -22886,7 +22892,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_5_10_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_5_10_i_1_n_0));
@@ -23027,7 +23033,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_5_2_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_5_2_i_1_n_0));
@@ -23101,7 +23107,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_5_3_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_5_3_i_1_n_0));
@@ -23376,7 +23382,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_5_7_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_5_7_i_1_n_0));
@@ -23517,7 +23523,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h20)) 
     r_Receive_reg_5_9_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_5_9_i_1_n_0));
@@ -23605,7 +23611,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h80)) 
     r_Receive_reg_6_0_i_3
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_6_0_i_3_n_0));
@@ -23813,7 +23819,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h80)) 
     r_Receive_reg_6_1_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_6_1_i_1_n_0));
@@ -24088,7 +24094,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h80)) 
     r_Receive_reg_6_5_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_6_5_i_1_n_0));
@@ -24162,7 +24168,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h80)) 
     r_Receive_reg_6_6_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_6_6_i_1_n_0));
@@ -24303,14 +24309,14 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h80)) 
     r_Receive_reg_6_8_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_6_8_i_1_n_0));
   LUT3 #(
     .INIT(8'h80)) 
     r_Receive_reg_6_8_i_2
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_6_8_i_2_n_0));
@@ -24585,7 +24591,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h80)) 
     r_Receive_reg_7_10_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_7_10_i_1_n_0));
@@ -24726,7 +24732,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h80)) 
     r_Receive_reg_7_2_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_7_2_i_1_n_0));
@@ -24800,7 +24806,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h80)) 
     r_Receive_reg_7_3_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_7_3_i_1_n_0));
@@ -25075,7 +25081,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h80)) 
     r_Receive_reg_7_7_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_7_7_i_1_n_0));
@@ -25216,7 +25222,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT3 #(
     .INIT(8'h80)) 
     r_Receive_reg_7_9_i_1
-       (.I0(p_0_in8_out),
+       (.I0(p_0_in7_out),
         .I1(write_pointer_reg[16]),
         .I2(write_pointer_reg[17]),
         .O(r_Receive_reg_7_9_i_1_n_0));
@@ -25232,34 +25238,34 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
         .D(r_Receive_mux_sel__34_i_1_n_0),
         .Q(r_Receive_reg_mux_sel__34_n_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \r_addon[0]_i_1 
-       (.I0(o_LED[1]),
+       (.I0(o_LED[2]),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \r_addon[1]_i_1 
-       (.I0(o_LED[1]),
-        .I1(o_LED[2]),
+       (.I0(o_LED[2]),
+        .I1(o_LED[3]),
         .O(p_0_in[1]));
   FDRE #(
     .INIT(1'b0)) 
     \r_addon_reg[0] 
-       (.C(\r_addon_reg[1]_0 ),
+       (.C(m00_axi_init_axi_txn),
         .CE(1'b1),
         .D(p_0_in[0]),
-        .Q(o_LED[1]),
+        .Q(o_LED[2]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \r_addon_reg[1] 
-       (.C(\r_addon_reg[1]_0 ),
+       (.C(m00_axi_init_axi_txn),
         .CE(1'b1),
         .D(p_0_in[1]),
-        .Q(o_LED[2]),
+        .Q(o_LED[3]),
         .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
@@ -26316,7 +26322,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
         .D(\read_pointer_rep[9]_rep__1_i_1_n_0 ),
         .Q(\read_pointer_reg_rep[9]_rep__1_n_0 ),
         .R(\read_pointer_reg[17]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \read_pointer_rep[0]_i_1 
@@ -26341,7 +26347,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer_reg[0]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[0]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[10]_i_1 
@@ -26366,7 +26372,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[10]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[10]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[11]_i_1 
@@ -26391,7 +26397,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[11]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[11]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[12]_i_1 
@@ -26416,7 +26422,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[12]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[12]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[13]_i_1 
@@ -26441,7 +26447,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[13]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[13]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[14]_i_1 
@@ -26466,7 +26472,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[14]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[14]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[15]_i_1 
@@ -26491,7 +26497,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[15]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[15]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[16]_i_1 
@@ -26501,21 +26507,21 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
   LUT6 #(
     .INIT(64'hFFFFFFFF00200000)) 
     \read_pointer_rep[17]_i_1 
-       (.I0(\r_addon_reg[1]_0 ),
+       (.I0(m00_axi_init_axi_txn),
         .I1(\read_pointer_reg[12]_0 ),
         .I2(m00_axis_tready),
         .I3(mst_exec_state__0[0]),
         .I4(mst_exec_state__0[1]),
         .I5(tx_done3_out),
         .O(read_pointer__0));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[17]_i_2 
        (.I0(read_pointer0[17]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[17]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[1]_i_1 
@@ -26540,7 +26546,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[1]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[1]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[2]_i_1 
@@ -26565,7 +26571,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[2]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[2]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[3]_i_1 
@@ -26590,7 +26596,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[3]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[3]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[4]_i_1 
@@ -26615,7 +26621,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[4]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[4]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[5]_i_1 
@@ -26640,7 +26646,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[5]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[5]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[6]_i_1 
@@ -26665,7 +26671,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[6]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[6]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[7]_i_1 
@@ -26690,7 +26696,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[7]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[7]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[8]_i_1 
@@ -26715,7 +26721,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
        (.I0(read_pointer0[8]),
         .I1(\read_pointer_reg[12]_0 ),
         .O(\read_pointer_rep[8]_rep_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \read_pointer_rep[9]_i_1 
@@ -26749,20 +26755,20 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
         .I3(tx_done_i_3_n_0),
         .O(tx_done_i_1_n_0));
   LUT6 #(
-    .INIT(64'h0000000000001000)) 
+    .INIT(64'h0000000000000100)) 
     tx_done_i_2
        (.I0(tx_done_i_4_n_0),
-        .I1(read_pointer_reg[2]),
-        .I2(read_pointer_reg[7]),
-        .I3(read_pointer_reg[4]),
-        .I4(read_pointer_reg[1]),
+        .I1(read_pointer_reg[5]),
+        .I2(read_pointer_reg[3]),
+        .I3(read_pointer_reg[7]),
+        .I4(read_pointer_reg[0]),
         .I5(tx_done_i_5_n_0),
         .O(tx_done3_out));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h00200000)) 
     tx_done_i_3
-       (.I0(\r_addon_reg[1]_0 ),
+       (.I0(m00_axi_init_axi_txn),
         .I1(\read_pointer_reg[12]_0 ),
         .I2(mst_exec_state__0[1]),
         .I3(mst_exec_state__0[0]),
@@ -26777,13 +26783,13 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_M00_AXIS
         .I3(read_pointer_reg[12]),
         .O(tx_done_i_4_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFEFF)) 
+    .INIT(64'hFFFFFFFFFFFFFBFF)) 
     tx_done_i_5
        (.I0(axis_tlast_delay_i_5_n_0),
-        .I1(read_pointer_reg[5]),
-        .I2(read_pointer_reg[3]),
-        .I3(\r_addon_reg[1]_0 ),
-        .I4(read_pointer_reg[0]),
+        .I1(read_pointer_reg[4]),
+        .I2(read_pointer_reg[1]),
+        .I3(m00_axi_init_axi_txn),
+        .I4(read_pointer_reg[2]),
         .I5(\o_LED[2]_INST_0_i_2_n_0 ),
         .O(tx_done_i_5_n_0));
   FDRE tx_done_reg
@@ -27609,7 +27615,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
     s00_axi_rvalid,
     r_SPI_CS_reg,
     o_AXI_Init_reg,
-    o_AXI_Init_reg_0,
+    m00_axi_init_axi_txn,
     r_count,
     s00_axi_rdata,
     o_SPI_Clk,
@@ -27619,7 +27625,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
     s00_axi_wvalid,
     s00_axi_wdata,
     s00_axi_wstrb,
-    \slv_reg4_reg[0]_0 ,
+    w_ADC_Done,
     s00_axi_aresetn,
     \write_pointer_reg[17] ,
     s00_axi_bready,
@@ -27636,7 +27642,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
   output s00_axi_rvalid;
   output r_SPI_CS_reg;
   output o_AXI_Init_reg;
-  output o_AXI_Init_reg_0;
+  output m00_axi_init_axi_txn;
   output r_count;
   output [31:0]s00_axi_rdata;
   output o_SPI_Clk;
@@ -27646,7 +27652,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
   input s00_axi_wvalid;
   input [31:0]s00_axi_wdata;
   input [3:0]s00_axi_wstrb;
-  input \slv_reg4_reg[0]_0 ;
+  input w_ADC_Done;
   input s00_axi_aresetn;
   input \write_pointer_reg[17] ;
   input s00_axi_bready;
@@ -27757,9 +27763,9 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
   wire axi_wready0;
   wire axi_wready_reg_0;
   wire i_SPI_MISO;
+  wire m00_axi_init_axi_txn;
   wire o_AXI_Init_i_1_n_0;
   wire o_AXI_Init_reg;
-  wire o_AXI_Init_reg_0;
   wire o_SPI_Clk;
   wire o_SPI_MOSI;
   wire [31:0]p_1_in;
@@ -27931,7 +27937,6 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
   wire \slv_reg4[6]_i_1_n_0 ;
   wire \slv_reg4[7]_i_1_n_0 ;
   wire \slv_reg4[7]_i_2_n_0 ;
-  wire \slv_reg4_reg[0]_0 ;
   wire [0:0]slv_reg5;
   wire \slv_reg5[31]_i_2_n_0 ;
   wire \slv_reg5_reg_n_0_[10] ;
@@ -27976,6 +27981,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
   wire \slv_reg7[31]_i_1_n_0 ;
   wire \slv_reg7[7]_i_1_n_0 ;
   wire slv_reg_rden__0;
+  wire w_ADC_Done;
   wire \write_pointer_reg[17] ;
 
   Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI SPI
@@ -27985,7 +27991,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
         .axi_awaddr(axi_awaddr),
         .i_SPI_MISO(i_SPI_MISO),
         .\i_TX_Byte_reg[6][7]_0 (slv_reg1),
-        .o_AXI_Init_reg_0(o_AXI_Init_reg_0),
+        .o_AXI_Init_reg_0(m00_axi_init_axi_txn),
         .o_AXI_Init_reg_1(o_AXI_Init_reg),
         .o_AXI_Init_reg_2(o_AXI_Init_i_1_n_0),
         .o_SPI_Clk(o_SPI_Clk),
@@ -28078,7 +28084,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
         .D(\axi_araddr[4]_i_1_n_0 ),
         .Q(sel0[2]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
@@ -28139,7 +28145,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
         .D(\axi_awaddr[4]_i_1_n_0 ),
         .Q(axi_awaddr[4]),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     axi_awready_i_1
@@ -29162,7 +29168,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
         .I1(\axi_rdata[9]_i_3_n_0 ),
         .O(reg_data_out[9]),
         .S(sel0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT4 #(
     .INIT(16'h08F8)) 
     axi_rvalid_i_1
@@ -29177,7 +29183,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(s00_axi_rvalid),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     axi_wready_i_1
@@ -29200,7 +29206,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
   LUT3 #(
     .INIT(8'hF2)) 
     o_AXI_Init_i_1
-       (.I0(o_AXI_Init_reg_0),
+       (.I0(m00_axi_init_axi_txn),
         .I1(r_RdyStart),
         .I2(slv_reg5),
         .O(o_AXI_Init_i_1_n_0));
@@ -30161,7 +30167,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0_S00_AXI
         .I2(axi_wready_reg_0),
         .I3(s00_axi_wvalid),
         .I4(s00_axi_awvalid),
-        .I5(\slv_reg4_reg[0]_0 ),
+        .I5(w_ADC_Done),
         .O(\slv_reg4[0]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h555555D5)) 

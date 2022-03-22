@@ -118,11 +118,11 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/Zed_SPI/ip/Zed_SPI_axis_data_fifo_0_0/sim/Zed_SPI_axis_data_fifo_0_0.v" \
-  "../../../bd/Zed_SPI/ipshared/c47a/src/PL_ADC.v" \
-  "../../../bd/Zed_SPI/ipshared/c47a/src/PL_SPI_41B29.v" \
-  "../../../bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v" \
-  "../../../bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v" \
-  "../../../bd/Zed_SPI/ipshared/c47a/src/PL_SPI_ADC_MasterStream_v1_0.v" \
+  "../../../bd/Zed_SPI/ipshared/ff48/src/PL_ADC.v" \
+  "../../../bd/Zed_SPI/ipshared/ff48/src/PL_SPI_41B29.v" \
+  "../../../bd/Zed_SPI/ipshared/ff48/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v" \
+  "../../../bd/Zed_SPI/ipshared/ff48/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/ff48/src/PL_SPI_ADC_MasterStream_v1_0.v" \
   "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/sim/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_25 \
