@@ -1,15 +1,15 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-//Date        : Wed Mar 23 17:51:34 2022
-//Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
+//Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+//Date        : Wed Mar 23 23:38:03 2022
+//Host        : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
 //Command     : generate_target Zed_SPI.bd
 //Design      : Zed_SPI
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Zed_SPI,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Zed_SPI,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=26,numReposBlks=15,numNonXlnxBlks=1,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=41,da_axi4_s2mm_cnt=1,da_board_cnt=4,da_clkrst_cnt=17,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Zed_SPI.hwdef" *) 
+(* CORE_GENERATION_INFO = "Zed_SPI,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Zed_SPI,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=26,numReposBlks=15,numNonXlnxBlks=1,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=41,da_axi4_s2mm_cnt=1,da_board_cnt=5,da_clkrst_cnt=17,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Zed_SPI.hwdef" *) 
 module Zed_SPI
    (DDR_addr,
     DDR_ba,
@@ -557,7 +557,7 @@ module Zed_SPI
         .s_axis_s2mm_tready(PL_SPI_ADC_MasterStr_0_m00_axis_TREADY),
         .s_axis_s2mm_tvalid(PL_SPI_ADC_MasterStr_0_m00_axis_TVALID));
   Zed_SPI_axi_gpio_0_0 axi_gpio_0
-       (.gpio_io_i(1'b0),
+       (.gpio_io_i(gpio_io_i_0_1),
         .ip2intc_irpt(axi_gpio_0_ip2intc_irpt),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M06_AXI_ARADDR[8:0]),

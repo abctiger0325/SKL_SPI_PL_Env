@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Wed Mar 23 17:54:38 2022
--- Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
+-- Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+-- Date        : Wed Mar 23 23:39:26 2022
+-- Host        : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_sim_netlist.vhdl
+--               c:/MGWs/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_sim_netlist.vhdl
 -- Design      : Zed_SPI_PL_SPI_ADC_MasterStr_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -41497,8 +41497,8 @@ entity Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0 is
     s00_axi_awready : out STD_LOGIC;
     o_SPI_Clk : out STD_LOGIC;
     o_SPI_MOSI : out STD_LOGIC;
-    o_LED : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m00_axis_tdata : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    o_LED : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_arready : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m00_axis_tvalid : out STD_LOGIC;

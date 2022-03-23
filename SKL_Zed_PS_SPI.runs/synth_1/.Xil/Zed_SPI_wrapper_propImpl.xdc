@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.srcs/constrs_1/new/Zed_PSPL.xdc rfile:../../../SKL_Zed_PS_SPI.srcs/constrs_1/new/Zed_PSPL.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/MGWs/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.srcs/constrs_1/new/Zed_PSPL.xdc rfile:../../../SKL_Zed_PS_SPI.srcs/constrs_1/new/Zed_PSPL.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y11 [get_ports o_SPI_Clk_0]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]

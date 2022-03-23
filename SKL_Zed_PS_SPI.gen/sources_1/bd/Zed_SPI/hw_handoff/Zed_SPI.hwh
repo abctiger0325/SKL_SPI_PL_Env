@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 23 17:56:37 2022" VIVADOVERSION="2021.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 23 23:38:04 2022" VIVADOVERSION="2021.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="Zed_SPI" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -109,6 +109,12 @@
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out2"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" LEFT="0" NAME="i_Trigger" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_Trigger">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
+        <CONNECTION INSTANCE="PL_SPI_ADC_MasterStr_0" PORT="i_Trigger"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_CAS_n"/>
@@ -214,12 +220,6 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="0" NAME="i_Trigger" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_Trigger">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="PL_SPI_ADC_MasterStr_0" PORT="i_Trigger"/>
-        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
-      </CONNECTIONS>
-    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -270,7 +270,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="11" FULLNAME="/LED_Connector_v1_0_0" HWVERSION="1.0" INSTANCE="LED_Connector_v1_0_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="LED_Connector_v1_0" VLNV="xilinx.com:user:LED_Connector_v1_0:1.0">
+    <MODULE COREREVISION="12" FULLNAME="/LED_Connector_v1_0_0" HWVERSION="1.0" INSTANCE="LED_Connector_v1_0_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="LED_Connector_v1_0" VLNV="xilinx.com:user:LED_Connector_v1_0:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="s00_axi" NAME="reg0" RANGE="4096" USAGE="register"/>
@@ -645,7 +645,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="27" FULLNAME="/PL_SPI_ADC_MasterStr_0" HWVERSION="1.1" INSTANCE="PL_SPI_ADC_MasterStr_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PL_SPI_ADC_MasterStream_v1_0" VLNV="user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1">
+    <MODULE COREREVISION="31" FULLNAME="/PL_SPI_ADC_MasterStr_0" HWVERSION="1.1" INSTANCE="PL_SPI_ADC_MasterStr_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PL_SPI_ADC_MasterStream_v1_0" VLNV="user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="s00_axi" NAME="reg0" RANGE="4096" USAGE="register"/>
@@ -5366,7 +5366,6 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="PL_SPI_ADF4159_v1_0_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="PL_SPI_ADAR_v1_0_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="LED_Connector_v1_0_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="PL_SPI_DDS_v1_0_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M04_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_ACLK"/>
@@ -5382,6 +5381,7 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M05_ACLK"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ACLK"/>
+            <CONNECTION INSTANCE="LED_Connector_v1_0_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="PL_SPI_ADC_MasterStr_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
@@ -6124,6 +6124,16 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="M05_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
@@ -6876,16 +6886,6 @@
             <CONNECTION INSTANCE="axi_dma" PORT="s_axi_lite_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M06_ACLK" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_ARESETN" SIGIS="rst" SIGNAME="rst_ps7_0_100M_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_ps7_0_100M" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M06_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_awaddr"/>
@@ -7227,13 +7227,13 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M01_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M02_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M03_ARESETN"/>
-            <CONNECTION INSTANCE="LED_Connector_v1_0_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="PL_SPI_DDS_v1_0_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M04_ARESETN"/>
             <CONNECTION INSTANCE="axi_dma" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M05_ARESETN"/>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ARESETN"/>
+            <CONNECTION INSTANCE="LED_Connector_v1_0_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="PL_SPI_ADC_MasterStr_0" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>

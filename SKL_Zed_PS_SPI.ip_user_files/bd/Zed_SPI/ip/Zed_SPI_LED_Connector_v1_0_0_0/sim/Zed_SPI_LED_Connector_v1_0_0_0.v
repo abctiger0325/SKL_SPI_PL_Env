@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:LED_Connector_v1_0:1.0
-// IP Revision: 11
+// IP Revision: 12
 
 `timescale 1ns/1ps
 

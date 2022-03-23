@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Wed Mar 23 17:54:37 2022
-// Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
+// Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+// Date        : Wed Mar 23 23:39:25 2022
+// Host        : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_sim_netlist.v
+//               c:/MGWs/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_sim_netlist.v
 // Design      : Zed_SPI_PL_SPI_ADC_MasterStr_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16009,8 +16009,8 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0
     s00_axi_awready,
     o_SPI_Clk,
     o_SPI_MOSI,
-    o_LED,
     m00_axis_tdata,
+    o_LED,
     s00_axi_arready,
     s00_axi_rdata,
     m00_axis_tvalid,
@@ -16038,8 +16038,8 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0_PL_SPI_ADC_MasterStream_v1_0
   output s00_axi_awready;
   output o_SPI_Clk;
   output o_SPI_MOSI;
-  output [3:0]o_LED;
   output [11:0]m00_axis_tdata;
+  output [3:0]o_LED;
   output s00_axi_arready;
   output [31:0]s00_axi_rdata;
   output m00_axis_tvalid;
