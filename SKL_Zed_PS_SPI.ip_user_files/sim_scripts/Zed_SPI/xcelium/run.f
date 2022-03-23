@@ -1,21 +1,21 @@
 -makelib xcelium_lib/xilinx_vip -sv \
-  "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
-  "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
-  "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
-  "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
-  "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
-  "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
-  "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/hdl/axi_vip_if.sv" \
-  "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
-  "D:/Xilinx/Vivado/2021.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/hdl/axi_vip_if.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
 -makelib xcelium_lib/xpm -sv \
-  "D:/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-  "D:/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
-  "D:/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib xcelium_lib/xpm \
-  "D:/Xilinx/Vivado/2021.2/data/ip/xpm/xpm_VCOMP.vhd" \
+  "/home/labish/Vivado/2021.2/Vivado/2021.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/Zed_SPI/ipshared/bb0e/src/PL_SPI.v" \
@@ -111,12 +111,24 @@
   "../../../bd/Zed_SPI/ip/Zed_SPI_axi_dma_0/sim/Zed_SPI_axi_dma_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/Zed_SPI/ipshared/d151/src/PL_ADC.v" \
-  "../../../bd/Zed_SPI/ipshared/d151/src/PL_SPI_41B29.v" \
-  "../../../bd/Zed_SPI/ipshared/d151/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v" \
-  "../../../bd/Zed_SPI/ipshared/d151/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v" \
-  "../../../bd/Zed_SPI/ipshared/d151/src/PL_SPI_ADC_MasterStream_v1_0.v" \
+  "../../../bd/Zed_SPI/ipshared/7acb/src/PL_ADC.v" \
+  "../../../bd/Zed_SPI/ipshared/7acb/src/PL_SPI_41B29.v" \
+  "../../../bd/Zed_SPI/ipshared/7acb/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v" \
+  "../../../bd/Zed_SPI/ipshared/7acb/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/7acb/src/PL_SPI_ADC_MasterStream_v1_0.v" \
   "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/sim/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.v" \
+-endlib
+-makelib xcelium_lib/axi_lite_ipif_v3_0_4 \
+  "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/interrupt_control_v3_1_4 \
+  "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/axi_gpio_v2_0_27 \
+  "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/a5bb/hdl/axi_gpio_v2_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/Zed_SPI/ip/Zed_SPI_axi_gpio_0_0/sim/Zed_SPI_axi_gpio_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_25 \
   "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/8fe4/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

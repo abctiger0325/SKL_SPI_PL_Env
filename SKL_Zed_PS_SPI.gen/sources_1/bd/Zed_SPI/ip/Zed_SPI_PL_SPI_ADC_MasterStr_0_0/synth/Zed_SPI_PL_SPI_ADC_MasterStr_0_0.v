@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1
-// IP Revision: 15
+// IP Revision: 27
 
 (* X_CORE_INFO = "PL_SPI_ADC_MasterStream_v1_0,Vivado 2021.2" *)
 (* CHECK_LICENSE_TYPE = "Zed_SPI_PL_SPI_ADC_MasterStr_0_0,PL_SPI_ADC_MasterStream_v1_0,{}" *)
@@ -63,7 +63,7 @@ module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (
   i_CMOS_Data,
   i_ADC_Work,
   o_LED,
-  o_DMA_Reset,
+  i_Trigger,
   s00_axi_aclk,
   s00_axi_aresetn,
   s00_axi_awaddr,
@@ -106,10 +106,8 @@ input wire i_CMOS_Clk;
 input wire [11 : 0] i_CMOS_Data;
 input wire i_ADC_Work;
 output wire [7 : 0] o_LED;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME o_DMA_Reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 o_DMA_Reset RST" *)
-output wire o_DMA_Reset;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_aclk, ASSOCIATED_BUSIF s00_axi, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+input wire i_Trigger;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_aclk, ASSOCIATED_BUSIF s00_axi, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 s00_axi_aclk CLK" *)
 input wire s00_axi_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -151,8 +149,8 @@ output wire [31 : 0] s00_axi_rdata;
 output wire [1 : 0] s00_axi_rresp;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi RVALID" *)
 output wire s00_axi_rvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, N\
-UM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s00_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 5, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN Zed_SPI_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS \
+1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s00_axi RREADY" *)
 input wire s00_axi_rready;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m00_axis_aclk, ASSOCIATED_BUSIF m00_axis, ASSOCIATED_RESET m00_axis_aresetn, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
@@ -187,7 +185,7 @@ input wire m00_axis_tready;
     .i_CMOS_Data(i_CMOS_Data),
     .i_ADC_Work(i_ADC_Work),
     .o_LED(o_LED),
-    .o_DMA_Reset(o_DMA_Reset),
+    .i_Trigger(i_Trigger),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn),
     .s00_axi_awaddr(s00_axi_awaddr),

@@ -2,5 +2,6 @@ vhdl xil_defaultlib  \
 "../../../bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_0/sim/Zed_SPI_rst_ps7_0_100M_0.vhd" \
 "../../../bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_1_0/sim/Zed_SPI_rst_ps7_0_100M_1_0.vhd" \
 "../../../bd/Zed_SPI/ip/Zed_SPI_axi_dma_0/sim/Zed_SPI_axi_dma_0.vhd" \
+"../../../bd/Zed_SPI/ip/Zed_SPI_axi_gpio_0_0/sim/Zed_SPI_axi_gpio_0_0.vhd" \
 
 nosort

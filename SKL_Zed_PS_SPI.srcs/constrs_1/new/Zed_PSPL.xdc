@@ -101,3 +101,6 @@ set_property PACKAGE_PIN N17 [get_ports {i_CMOS_Data_0[11]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports o_SYNC_Clk_0]
 set_property PACKAGE_PIN U5 [get_ports o_SYNC_Clk_0]
+
+set_property IOSTANDARD LVCMOS18 [get_ports {i_Trigger[0]}]
+set_property PACKAGE_PIN F22 [get_ports {i_Trigger[0]}]
