@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 23 23:38:04 2022" VIVADOVERSION="2021.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar 24 14:35:00 2022" VIVADOVERSION="2021.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="Zed_SPI" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -24,9 +24,9 @@
         <CONNECTION INSTANCE="PL_SPI_DDS_v1_0_0" PORT="o_SPI_MOSI"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="7" NAME="o_LED_0" RIGHT="0" SIGIS="undef" SIGNAME="PL_SPI_ADC_MasterStr_0_o_LED">
+    <PORT DIR="O" LEFT="7" NAME="o_LED_0" RIGHT="0" SIGIS="undef" SIGNAME="LED_Connector_v1_0_0_o_LED">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="PL_SPI_ADC_MasterStr_0" PORT="o_LED"/>
+        <CONNECTION INSTANCE="LED_Connector_v1_0_0" PORT="o_LED"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="i_Over_GPIO_0" SIGIS="undef" SIGNAME="External_Ports_i_Over_GPIO_0">
@@ -111,8 +111,8 @@
     </PORT>
     <PORT DIR="I" LEFT="0" NAME="i_Trigger" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_i_Trigger">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
         <CONNECTION INSTANCE="PL_SPI_ADC_MasterStr_0" PORT="i_Trigger"/>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -220,6 +220,7 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" LEFT="0" NAME="GPIO_0_tri_i" RIGHT="0" SIGIS="undef"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -267,6 +268,11 @@
         <PORTMAP LOGICAL="PS_PORB" PHYSICAL="FIXED_IO_ps_porb"/>
       </PORTMAPS>
     </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="__NOC__" NAME="GPIO_0" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="TRI_I" PHYSICAL="GPIO_0_tri_i"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
   </EXTERNALINTERFACES>
 
   <MODULES>
@@ -284,7 +290,11 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x43C0FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" LEFT="7" NAME="o_LED" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="o_LED" RIGHT="0" SIGIS="undef" SIGNAME="LED_Connector_v1_0_0_o_LED">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="o_LED_0"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s00_axi_aclk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
@@ -645,7 +655,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="31" FULLNAME="/PL_SPI_ADC_MasterStr_0" HWVERSION="1.1" INSTANCE="PL_SPI_ADC_MasterStr_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PL_SPI_ADC_MasterStream_v1_0" VLNV="user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1">
+    <MODULE COREREVISION="34" FULLNAME="/PL_SPI_ADC_MasterStr_0" HWVERSION="1.1" INSTANCE="PL_SPI_ADC_MasterStr_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PL_SPI_ADC_MasterStream_v1_0" VLNV="user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="s00_axi" NAME="reg0" RANGE="4096" USAGE="register"/>
@@ -696,11 +706,7 @@
             <CONNECTION INSTANCE="PL_SPI_DDS_v1_0_0" PORT="o_ADC_Trigger"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="o_LED" RIGHT="0" SIGIS="undef" SIGNAME="PL_SPI_ADC_MasterStr_0_o_LED">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="o_LED_0"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_LED" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="i_Trigger" SIGIS="undef" SIGNAME="External_Ports_i_Trigger">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="i_Trigger"/>

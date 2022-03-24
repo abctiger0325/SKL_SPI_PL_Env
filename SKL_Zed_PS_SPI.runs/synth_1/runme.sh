@@ -6,14 +6,10 @@
 # Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 # 
 
-echo "This script was generated under a different operating system."
-echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
-exit
-
 if [ -z "$PATH" ]; then
-  PATH=D:/Xilinx/Vitis/2021.2/bin;D:/Xilinx/Vivado/2021.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2021.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2021.2/bin
+  PATH=/home/labish/Vivado/2021.2/Vitis/2021.2/bin:/home/labish/Vivado/2021.2/Vivado/2021.2/ids_lite/ISE/bin/lin64:/home/labish/Vivado/2021.2/Vivado/2021.2/bin
 else
-  PATH=D:/Xilinx/Vitis/2021.2/bin;D:/Xilinx/Vivado/2021.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2021.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2021.2/bin:$PATH
+  PATH=/home/labish/Vivado/2021.2/Vitis/2021.2/bin:/home/labish/Vivado/2021.2/Vivado/2021.2/ids_lite/ISE/bin/lin64:/home/labish/Vivado/2021.2/Vivado/2021.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/MGWs/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1'
+HD_PWD='/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

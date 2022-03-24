@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date                      : Wed Mar 23 23:45:29 2022
-| Host                      : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
+| Tool Version              : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date                      : Thu Mar 24 14:41:33 2022
+| Host                      : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command                   : report_io -file Zed_SPI_wrapper_io_placed.rpt
 | Design                    : Zed_SPI_wrapper
 | Device                    : xc7z020
@@ -210,7 +210,7 @@ Table of Contents
 | F19        | i_CMOS_Data_0[0]  | High Range | IO_L20N_T3_AD6N_35      | INPUT       | LVCMOS18          |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | F20        |                   |            | GND                     | GND         |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | F21        |                   | High Range | IO_L23P_T3_35           | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| F22        | i_Trigger[0]      | High Range | IO_L23N_T3_35           | INPUT       | LVCMOS18          |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| F22        |                   | High Range | IO_L23N_T3_35           | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G1         | DDR_dq[9]         |            | PS_DDR_DQ9_502          | INOUT       | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |              |                   |              |
 | G2         | DDR_dq[8]         |            | PS_DDR_DQ8_502          | INOUT       | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |              |                   |              |
 | G3         |                   |            | GND                     | GND         |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
@@ -232,7 +232,7 @@ Table of Contents
 | G19        | i_CMOS_Data_0[1]  | High Range | IO_L20P_T3_AD6P_35      | INPUT       | LVCMOS18          |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | G20        | i_CMOS_Data_0[3]  | High Range | IO_L22P_T3_AD7P_35      | INPUT       | LVCMOS18          |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | G21        | i_CMOS_Data_0[2]  | High Range | IO_L22N_T3_AD7N_35      | INPUT       | LVCMOS18          |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| G22        |                   | High Range | IO_L24N_T3_AD15N_35     | User IO     |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| G22        | i_Trigger[0]      | High Range | IO_L24N_T3_AD15N_35     | INPUT       | LVCMOS18          |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | H1         |                   |            | VCCO_DDR_502            | VCCO        |                   |         |            |      |                     |                      |   any** |            |           |          |      |                  |              |                   |              |
 | H2         | DDR_dqs_p[1]      |            | PS_DDR_DQS_P1_502       | INOUT       | DIFF_SSTL15_T_DCI |         |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |              |                   |              |
 | H3         | DDR_dm[1]         |            | PS_DDR_DM1_502          | INOUT       | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |              |                   |              |
