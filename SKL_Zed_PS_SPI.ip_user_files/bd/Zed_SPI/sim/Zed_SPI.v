@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-//Date        : Thu Mar 24 11:08:07 2022
+//Date        : Wed Mar 30 08:11:16 2022
 //Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 //Command     : generate_target Zed_SPI.bd
 //Design      : Zed_SPI
@@ -33,6 +33,7 @@ module Zed_SPI
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     i_CMOS_Data_0,
+    i_Mode_0,
     i_Over_GPIO_0,
     i_SPI_MISO_0,
     i_SPI_MISO_1,
@@ -76,6 +77,7 @@ module Zed_SPI
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
   input [11:0]i_CMOS_Data_0;
+  input i_Mode_0;
   input i_Over_GPIO_0;
   input i_SPI_MISO_0;
   input i_SPI_MISO_1;
@@ -155,8 +157,8 @@ module Zed_SPI
   wire axi_mem_intercon_M00_AXI_WVALID;
   wire clk_wiz_1_clk_out1;
   wire clk_wiz_1_clk_out2;
-  wire [0:0]gpio_io_i_0_1;
   wire [11:0]i_CMOS_Data_0_1;
+  wire i_Mode_0_1;
   wire i_Over_GPIO_0_1;
   wire i_SPI_MISO_0_1;
   wire i_SPI_MISO_1_1;
@@ -352,9 +354,10 @@ module Zed_SPI
   wire [3:0]ps7_0_axi_periph_M06_AXI_WSTRB;
   wire ps7_0_axi_periph_M06_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
+  wire [0:0]xlconcat_0_dout;
 
-  assign gpio_io_i_0_1 = i_Trigger[0];
   assign i_CMOS_Data_0_1 = i_CMOS_Data_0[11:0];
+  assign i_Mode_0_1 = i_Mode_0;
   assign i_Over_GPIO_0_1 = i_Over_GPIO_0;
   assign i_SPI_MISO_0_1 = i_SPI_MISO_0;
   assign i_SPI_MISO_1_1 = i_SPI_MISO_1;
@@ -375,6 +378,7 @@ module Zed_SPI
   assign o_SPI_MOSI_2 = PL_SPI_ADF4159_v1_0_0_o_SPI_MOSI;
   assign o_SPI_MOSI_3 = PL_SPI_ADC_MasterStr_0_o_SPI_MOSI;
   assign o_SYNC_Clk_0 = clk_wiz_1_clk_out2;
+  assign xlconcat_0_dout = i_Trigger[0];
   Zed_SPI_LED_Connector_v1_0_0_0 LED_Connector_v1_0_0
        (.s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(ps7_0_axi_periph_M04_AXI_ARADDR[3:0]),
@@ -427,8 +431,9 @@ module Zed_SPI
        (.i_ADC_Work(PL_SPI_DDS_v1_0_0_o_ADC_Trigger),
         .i_CMOS_Clk(clk_wiz_1_clk_out2),
         .i_CMOS_Data(i_CMOS_Data_0_1),
+        .i_Mode(i_Mode_0_1),
         .i_SPI_MISO(i_SPI_MISO_3_1),
-        .i_Trigger(gpio_io_i_0_1),
+        .i_Trigger(xlconcat_0_dout),
         .m00_axis_aclk(clk_wiz_1_clk_out1),
         .m00_axis_aresetn(M00_ARESETN_1),
         .m00_axis_tdata(PL_SPI_ADC_MasterStr_0_m00_axis_TDATA),
@@ -557,7 +562,7 @@ module Zed_SPI
         .s_axis_s2mm_tready(PL_SPI_ADC_MasterStr_0_m00_axis_TREADY),
         .s_axis_s2mm_tvalid(PL_SPI_ADC_MasterStr_0_m00_axis_TVALID));
   Zed_SPI_axi_gpio_0_0 axi_gpio_0
-       (.gpio_io_i(gpio_io_i_0_1),
+       (.gpio_io_i(xlconcat_0_dout),
         .ip2intc_irpt(axi_gpio_0_ip2intc_irpt),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M06_AXI_ARADDR[8:0]),

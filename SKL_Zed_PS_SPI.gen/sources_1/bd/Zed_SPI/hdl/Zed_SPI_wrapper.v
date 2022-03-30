@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-//Date        : Thu Mar 24 14:34:24 2022
+//Date        : Wed Mar 30 08:11:17 2022
 //Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 //Command     : generate_target Zed_SPI_wrapper.bd
 //Design      : Zed_SPI_wrapper
@@ -32,6 +32,7 @@ module Zed_SPI_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     i_CMOS_Data_0,
+    i_Mode_0,
     i_Over_GPIO_0,
     i_SPI_MISO_0,
     i_SPI_MISO_1,
@@ -75,6 +76,7 @@ module Zed_SPI_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input [11:0]i_CMOS_Data_0;
+  input i_Mode_0;
   input i_Over_GPIO_0;
   input i_SPI_MISO_0;
   input i_SPI_MISO_1;
@@ -119,6 +121,7 @@ module Zed_SPI_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire [11:0]i_CMOS_Data_0;
+  wire i_Mode_0;
   wire i_Over_GPIO_0;
   wire i_SPI_MISO_0;
   wire i_SPI_MISO_1;
@@ -164,6 +167,7 @@ module Zed_SPI_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .i_CMOS_Data_0(i_CMOS_Data_0),
+        .i_Mode_0(i_Mode_0),
         .i_Over_GPIO_0(i_Over_GPIO_0),
         .i_SPI_MISO_0(i_SPI_MISO_0),
         .i_SPI_MISO_1(i_SPI_MISO_1),

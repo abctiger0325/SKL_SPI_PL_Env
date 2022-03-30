@@ -123,11 +123,11 @@
   "../../../bd/Zed_SPI/ipshared/e16d/src/LED_Temp.v" \
   "../../../bd/Zed_SPI/ipshared/e16d/hdl/LED_Connector_v1_0.v" \
   "../../../bd/Zed_SPI/ip/Zed_SPI_LED_Connector_v1_0_0_0/sim/Zed_SPI_LED_Connector_v1_0_0_0.v" \
-  "../../../bd/Zed_SPI/ipshared/1b30/src/PL_ADC.v" \
-  "../../../bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v" \
-  "../../../bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v" \
-  "../../../bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v" \
-  "../../../bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0.v" \
+  "../../../bd/Zed_SPI/ipshared/bf38/src/PL_ADC.v" \
+  "../../../bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v" \
+  "../../../bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v" \
+  "../../../bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v" \
+  "../../../bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0.v" \
   "../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/sim/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_25 \

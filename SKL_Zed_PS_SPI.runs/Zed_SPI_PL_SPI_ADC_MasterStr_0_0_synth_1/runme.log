@@ -19,48 +19,50 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 22097
-WARNING: [Synth 8-2507] parameter declaration becomes local in PL_SPI_ADC_MasterStream_v1_0_M00_AXIS with formal parameter declaration list [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:71]
-WARNING: [Synth 8-6901] identifier 'w_StatusReg' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:322]
-WARNING: [Synth 8-6901] identifier 'w_StatusReg' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:323]
-WARNING: [Synth 8-6901] identifier 'w_RxBuffer' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:324]
-WARNING: [Synth 8-6901] identifier 'w_ADC_State' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:325]
+INFO: [Synth 8-7075] Helper process launched with PID 1620
+WARNING: [Synth 8-2507] parameter declaration becomes local in PL_SPI_ADC_MasterStream_v1_0_M00_AXIS with formal parameter declaration list [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:72]
+WARNING: [Synth 8-6901] identifier 'w_StatusReg' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:322]
+WARNING: [Synth 8-6901] identifier 'w_StatusReg' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:323]
+WARNING: [Synth 8-6901] identifier 'w_RxBuffer' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:324]
+WARNING: [Synth 8-6901] identifier 'w_ADC_State' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:325]
+WARNING: [Synth 8-6901] identifier 'r_ADCLock' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:326]
+WARNING: [Synth 8-6901] identifier 'r_ADCUnlock' is used before its declaration [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:327]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2777.641 ; gain = 0.000 ; free physical = 8780 ; free virtual = 17415
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2777.641 ; gain = 0.000 ; free physical = 388 ; free virtual = 7177
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/synth/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'PL_SPI_ADC_MasterStream_v1_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0.v:4]
-INFO: [Synth 8-6157] synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-226] default block is never used [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:252]
-INFO: [Synth 8-226] default block is never used [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:434]
-INFO: [Synth 8-6157] synthesizing module 'PL_SPI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v:27]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v:398]
-WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v:402]
-WARNING: [Synth 8-6014] Unused sequential element r_Cmd_Lim_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v:151]
-WARNING: [Synth 8-6014] Unused sequential element r_Reset_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v:205]
-WARNING: [Synth 8-6014] Unused sequential element r_Rx_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v:208]
-WARNING: [Synth 8-6014] Unused sequential element r_Lock_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v:255]
-WARNING: [Synth 8-6014] Unused sequential element r_Leading_Edge_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v:131]
-WARNING: [Synth 8-6014] Unused sequential element r_Trailing_Edge_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v:132]
-WARNING: [Synth 8-3848] Net o_LED_Temp in module/entity PL_SPI does not have driver. [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'PL_SPI' (1#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_41B29.v:27]
-WARNING: [Synth 8-7071] port 'o_LED_Temp' of module 'PL_SPI' is unconnected for instance 'SPI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:514]
-WARNING: [Synth 8-7023] instance 'SPI' of module 'PL_SPI' has 17 connections declared, but only 16 given [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:514]
-WARNING: [Synth 8-3848] Net o_DMA_Reset in module/entity PL_SPI_ADC_MasterStream_v1_0_S00_AXI does not have driver. [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:26]
-INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' (2#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:4]
-WARNING: [Synth 8-7071] port 'o_DMA_Reset' of module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' is unconnected for instance 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0.v:77]
-WARNING: [Synth 8-7071] port 'o_LED' of module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' is unconnected for instance 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0.v:77]
-WARNING: [Synth 8-7023] instance 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst' of module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' has 32 connections declared, but only 30 given [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0.v:77]
-INFO: [Synth 8-6157] synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:4]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:118]
-INFO: [Synth 8-6157] synthesizing module 'PL_ADC' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_ADC.v:23]
-WARNING: [Synth 8-6090] variable 'r_Count' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_ADC.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'PL_ADC' (3#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_ADC.v:23]
-WARNING: [Synth 8-6014] Unused sequential element r_addon_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:267]
-INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS' (4#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:4]
-WARNING: [Synth 8-7071] port 'i_Trigger' of module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS' is unconnected for instance 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0.v:117]
-WARNING: [Synth 8-7023] instance 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst' of module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS' has 14 connections declared, but only 13 given [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0.v:117]
-INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_ADC_MasterStream_v1_0' (5#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/1b30/src/PL_SPI_ADC_MasterStream_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'PL_SPI_ADC_MasterStream_v1_0' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:252]
+INFO: [Synth 8-226] default block is never used [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:441]
+INFO: [Synth 8-6157] synthesizing module 'PL_SPI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v:27]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v:398]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v:402]
+WARNING: [Synth 8-6014] Unused sequential element r_Cmd_Lim_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v:151]
+WARNING: [Synth 8-6014] Unused sequential element r_Reset_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v:205]
+WARNING: [Synth 8-6014] Unused sequential element r_Rx_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v:208]
+WARNING: [Synth 8-6014] Unused sequential element r_Lock_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v:255]
+WARNING: [Synth 8-6014] Unused sequential element r_Leading_Edge_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v:131]
+WARNING: [Synth 8-6014] Unused sequential element r_Trailing_Edge_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v:132]
+WARNING: [Synth 8-3848] Net o_LED_Temp in module/entity PL_SPI does not have driver. [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'PL_SPI' (1#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_41B29.v:27]
+WARNING: [Synth 8-7071] port 'o_LED_Temp' of module 'PL_SPI' is unconnected for instance 'SPI' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:542]
+WARNING: [Synth 8-7023] instance 'SPI' of module 'PL_SPI' has 17 connections declared, but only 16 given [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:542]
+WARNING: [Synth 8-3848] Net o_DMA_Reset in module/entity PL_SPI_ADC_MasterStream_v1_0_S00_AXI does not have driver. [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' (2#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:4]
+WARNING: [Synth 8-7071] port 'o_DMA_Reset' of module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' is unconnected for instance 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0.v:78]
+WARNING: [Synth 8-7071] port 'o_LED' of module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' is unconnected for instance 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0.v:78]
+WARNING: [Synth 8-7023] instance 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst' of module 'PL_SPI_ADC_MasterStream_v1_0_S00_AXI' has 32 connections declared, but only 30 given [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0.v:78]
+INFO: [Synth 8-6157] synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:119]
+INFO: [Synth 8-6157] synthesizing module 'PL_ADC' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_ADC.v:23]
+WARNING: [Synth 8-6090] variable 'r_Count' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_ADC.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'PL_ADC' (3#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_ADC.v:23]
+WARNING: [Synth 8-6014] Unused sequential element r_addon_reg was removed.  [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:272]
+INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS' (4#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v:4]
+WARNING: [Synth 8-7071] port 'i_Trigger' of module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS' is unconnected for instance 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0.v:118]
+WARNING: [Synth 8-7023] instance 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst' of module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS' has 15 connections declared, but only 14 given [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0.v:118]
+INFO: [Synth 8-6155] done synthesizing module 'PL_SPI_ADC_MasterStream_v1_0' (5#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0' (6#1) [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/synth/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.v:57]
 WARNING: [Synth 8-7129] Port i_CMOS_Data[11] in module PL_ADC is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_CMOS_Data[10] in module PL_ADC is either unconnected or has no load
@@ -94,44 +96,44 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module PL_SPI_ADC_MasterStream_v
 WARNING: [Synth 8-7129] Port i_ADC_Work in module PL_SPI_ADC_MasterStream_v1_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m00_axis_aresetn in module PL_SPI_ADC_MasterStream_v1_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2777.641 ; gain = 0.000 ; free physical = 9765 ; free virtual = 18386
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2777.641 ; gain = 0.000 ; free physical = 1370 ; free virtual = 8161
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2777.641 ; gain = 0.000 ; free physical = 9768 ; free virtual = 18391
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2777.641 ; gain = 0.000 ; free physical = 1370 ; free virtual = 8160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2777.641 ; gain = 0.000 ; free physical = 9768 ; free virtual = 18391
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2777.641 ; gain = 0.000 ; free physical = 1370 ; free virtual = 8160
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2777.641 ; gain = 0.000 ; free physical = 9761 ; free virtual = 18384
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2777.641 ; gain = 0.000 ; free physical = 1363 ; free virtual = 8154
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2841.566 ; gain = 0.000 ; free physical = 9660 ; free virtual = 18298
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2841.562 ; gain = 0.000 ; free physical = 1274 ; free virtual = 8064
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2841.566 ; gain = 0.000 ; free physical = 9660 ; free virtual = 18298
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2841.562 ; gain = 0.000 ; free physical = 1273 ; free virtual = 8063
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9608 ; free virtual = 18304
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1351 ; free virtual = 8141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9608 ; free virtual = 18304
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1351 ; free virtual = 8141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9608 ; free virtual = 18304
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1351 ; free virtual = 8141
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS'
 ---------------------------------------------------------------------------------------------------
@@ -143,7 +145,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in modu
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'mst_exec_state_reg' using encoding 'sequential' in module 'PL_SPI_ADC_MasterStream_v1_0_M00_AXIS'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9630 ; free virtual = 18316
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1341 ; free virtual = 8132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -166,14 +168,15 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 23    
+	                1 Bit    Registers := 25    
 +---RAMs : 
 	            2929K Bit	(250000 X 12 bit)          RAMs := 1     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 11    
+	   2 Input   32 Bit        Muxes := 14    
 	   8 Input   32 Bit        Muxes := 8     
 	   3 Input   32 Bit        Muxes := 1     
 	   2 Input   18 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 370   
 	   3 Input    8 Bit        Muxes := 4     
 	   4 Input    8 Bit        Muxes := 1     
@@ -213,18 +216,6 @@ WARNING: [Synth 8-7129] Port o_LED_Temp[2] in module PL_SPI is either unconnecte
 WARNING: [Synth 8-7129] Port o_LED_Temp[1] in module PL_SPI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port o_LED_Temp[0] in module PL_SPI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port o_LED[5] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[11] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[10] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[9] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[8] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[7] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[6] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[5] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[4] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[3] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[2] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[1] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port i_CMOS_Data[0] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port i_ADC_Work in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
@@ -234,6 +225,9 @@ WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module Zed_SPI_PL_SPI_ADC_Mast
 WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m00_axis_aresetn in module Zed_SPI_PL_SPI_ADC_MasterStr_0_0 is either unconnected or has no load
 INFO: [Synth 8-5784] Optimized 4 bits of RAM "inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg" due to constant propagation. Old ram width 16 bits, new ram width 12 bits.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin slv_reg5[1] with 1st driver pin 'inst/PL_SPI_ADC_MasterStream_v1_0_S00_AXI_inst/slv_reg5_reg[1]/Q' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:245]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin slv_reg5[1] with 2nd driver pin 'GND' [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:245]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net slv_reg5[1] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/bf38/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v:245]
 INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__11) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__12) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__13) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
@@ -259,7 +253,7 @@ INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_A
 INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__45) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_mux_sel__46) is unused and will be removed from module Zed_SPI_PL_SPI_ADC_MasterStr_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9597 ; free virtual = 18307
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1305 ; free virtual = 8104
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -280,13 +274,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9464 ; free virtual = 18185
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1187 ; free virtual = 7986
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9463 ; free virtual = 18184
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1187 ; free virtual = 7986
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -354,7 +348,7 @@ INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1
 INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS_inst/r_Receive_reg_7_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9463 ; free virtual = 18182
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1183 ; free virtual = 7982
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -372,37 +366,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9468 ; free virtual = 18180
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1183 ; free virtual = 7982
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9468 ; free virtual = 18180
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1183 ; free virtual = 7982
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9467 ; free virtual = 18178
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1185 ; free virtual = 7984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9467 ; free virtual = 18178
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1185 ; free virtual = 7984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9467 ; free virtual = 18178
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1185 ; free virtual = 7984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9467 ; free virtual = 18178
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1185 ; free virtual = 7984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -418,43 +412,43 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY4   |    31|
+|1     |CARRY4   |    34|
 |2     |LUT1     |    11|
-|3     |LUT2     |   121|
-|4     |LUT3     |   330|
-|5     |LUT4     |    67|
-|6     |LUT5     |   231|
-|7     |LUT6     |   640|
+|3     |LUT2     |   122|
+|4     |LUT3     |   344|
+|5     |LUT4     |    86|
+|6     |LUT5     |   232|
+|7     |LUT6     |   670|
 |8     |MUXF7    |   113|
 |9     |MUXF8    |    32|
 |10    |RAMB36E1 |    96|
-|14    |FDRE     |   954|
+|14    |FDRE     |   934|
 |15    |FDSE     |     4|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9467 ; free virtual = 18178
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1185 ; free virtual = 7984
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 2841.566 ; gain = 0.000 ; free physical = 9522 ; free virtual = 18233
-Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 2841.566 ; gain = 63.926 ; free physical = 9522 ; free virtual = 18233
+Synthesis finished with 0 errors, 3 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2841.562 ; gain = 0.000 ; free physical = 1241 ; free virtual = 8040
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2841.562 ; gain = 63.922 ; free physical = 1241 ; free virtual = 8040
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2841.566 ; gain = 0.000 ; free physical = 9610 ; free virtual = 18320
-INFO: [Netlist 29-17] Analyzing 272 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2841.562 ; gain = 0.000 ; free physical = 1331 ; free virtual = 8130
+INFO: [Netlist 29-17] Analyzing 275 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2841.566 ; gain = 0.000 ; free physical = 9550 ; free virtual = 18257
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2841.562 ; gain = 0.000 ; free physical = 1268 ; free virtual = 8068
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 8b418b6f
+Synth Design complete, checksum: 1fc9adf5
 INFO: [Common 17-83] Releasing license: Synthesis
-109 Infos, 85 Warnings, 0 Critical Warnings and 0 Errors encountered.
+109 Infos, 75 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:02 . Memory (MB): peak = 2841.566 ; gain = 64.031 ; free physical = 9757 ; free virtual = 18463
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:46 . Memory (MB): peak = 2841.562 ; gain = 64.031 ; free physical = 1461 ; free virtual = 8260
 INFO: [Common 17-1381] The checkpoint '/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Zed_SPI_PL_SPI_ADC_MasterStr_0_0, cache-ID = 7be9436e39efc580
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Coretcl 2-1174] Renamed 5 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Zed_SPI_PL_SPI_ADC_MasterStr_0_0_utilization_synth.rpt -pb Zed_SPI_PL_SPI_ADC_MasterStr_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 24 11:09:57 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 30 08:12:55 2022...

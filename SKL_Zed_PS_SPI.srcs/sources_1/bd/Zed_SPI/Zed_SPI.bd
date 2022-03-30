@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x63BF1CD05242A535",
+      "boundary_crc": "0xF076F490F5ADAA95",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI",
       "name": "Zed_SPI",
@@ -303,7 +303,16 @@
       "i_Trigger": {
         "direction": "I",
         "left": "0",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "2",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "i_Mode_0": {
+        "direction": "I"
       }
     },
     "components": {
@@ -3486,12 +3495,6 @@
       }
     },
     "nets": {
-      "LED_Connector_v1_0_0_o_LED": {
-        "ports": [
-          "LED_Connector_v1_0_0/o_LED",
-          "o_LED_0"
-        ]
-      },
       "M00_ARESETN_1": {
         "ports": [
           "rst_ps7_0_100M_1/peripheral_aresetn",
@@ -3517,6 +3520,12 @@
         "ports": [
           "PL_SPI_ADAR_v1_0_0/o_SPI_MOSI",
           "o_SPI_MOSI_0"
+        ]
+      },
+      "PL_SPI_ADC_MasterStr_0_o_LED": {
+        "ports": [
+          "PL_SPI_ADC_MasterStr_0/o_LED",
+          "o_LED_0"
         ]
       },
       "PL_SPI_ADC_MasterStr_0_o_SPI_CS": {
@@ -3610,17 +3619,16 @@
           "PL_SPI_ADC_MasterStr_0/i_CMOS_Clk"
         ]
       },
-      "gpio_io_i_0_1": {
-        "ports": [
-          "i_Trigger",
-          "PL_SPI_ADC_MasterStr_0/i_Trigger",
-          "axi_gpio_0/gpio_io_i"
-        ]
-      },
       "i_CMOS_Data_0_1": {
         "ports": [
           "i_CMOS_Data_0",
           "PL_SPI_ADC_MasterStr_0/i_CMOS_Data"
+        ]
+      },
+      "i_Mode_0_1": {
+        "ports": [
+          "i_Mode_0",
+          "PL_SPI_ADC_MasterStr_0/i_Mode"
         ]
       },
       "i_Over_GPIO_0_1": {
@@ -3703,6 +3711,13 @@
           "ps7_0_axi_periph/M06_ARESETN",
           "LED_Connector_v1_0_0/s00_axi_aresetn",
           "PL_SPI_ADC_MasterStr_0/s00_axi_aresetn"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "i_Trigger",
+          "axi_gpio_0/gpio_io_i",
+          "PL_SPI_ADC_MasterStr_0/i_Trigger"
         ]
       }
     },

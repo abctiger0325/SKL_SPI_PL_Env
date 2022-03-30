@@ -1,8 +1,8 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Wed Mar 23 14:58:09 2022
--- Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
+-- Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+-- Date        : Tue Mar 22 23:22:18 2022
+-- Host        : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top Zed_SPI_axi_dma_0 -prefix
 --               Zed_SPI_axi_dma_0_ Zed_SPI_axi_dma_0_stub.vhdl
 -- Design      : Zed_SPI_axi_dma_0
