@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Mar 31 01:29:50 2022
+# Process ID: 21864
+# Current directory: D:/Midget_Ws/FPGA/SKL/SKL_SPI_PL_Env
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13076 D:\Midget_Ws\FPGA\SKL\SKL_SPI_PL_Env\SKL_Zed_PS_SPI.xpr
+# Log file: D:/Midget_Ws/FPGA/SKL/SKL_SPI_PL_Env/vivado.log
+# Journal file: D:/Midget_Ws/FPGA/SKL/SKL_SPI_PL_Env\vivado.jou
+# Running On: labish, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17032 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Midget_Ws/FPGA/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/Midget_Ws/FPGA/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.srcs/sources_1/bd/Zed_SPI/Zed_SPI.bd}
+ipx::edit_ip_in_project -upgrade true -name PL_SPI_ADC_MasterStream_v1_0_v1_1_project -directory D:/Midget_Ws/FPGA/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.tmp/PL_SPI_ADC_MasterStream_v1_0_v1_1_project d:/Midget_Ws/FPGA/SKL/SKL_ZED_Backup/PL_SPI_ADC_MasterStream_1.0/component.xml
+update_compile_order -fileset sources_1

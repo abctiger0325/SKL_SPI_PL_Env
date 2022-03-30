@@ -1,8 +1,8 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Wed Mar 30 08:12:53 2022
--- Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
+-- Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+-- Date        : Thu Mar 31 02:31:21 2022
+-- Host        : labish running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Zed_SPI_PL_SPI_ADC_MasterStr_0_0_stub.vhdl
 -- Design      : Zed_SPI_PL_SPI_ADC_MasterStr_0_0

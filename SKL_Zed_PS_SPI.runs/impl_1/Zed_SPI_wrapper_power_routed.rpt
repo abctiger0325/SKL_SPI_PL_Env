@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date             : Wed Mar 30 08:18:47 2022
-| Host             : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
+| Tool Version     : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date             : Thu Mar 31 02:43:57 2022
+| Host             : labish running 64-bit major release  (build 9200)
 | Command          : report_power -file Zed_SPI_wrapper_power_routed.rpt -pb Zed_SPI_wrapper_power_summary_routed.pb -rpx Zed_SPI_wrapper_power_routed.rpx
 | Design           : Zed_SPI_wrapper
 | Device           : xc7z020clg484-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.968        |
+| Total On-Chip Power (W)  | 1.952        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.804        |
+| Dynamic (W)              | 1.788        |
 | Device Static (W)        | 0.164        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 62.3         |
-| Junction Temperature (C) | 47.7         |
+| Max Ambient (C)          | 62.5         |
+| Junction Temperature (C) | 47.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.050 |        7 |       --- |             --- |
-| Slice Logic              |     0.011 |    15138 |       --- |             --- |
-|   LUT as Logic           |     0.010 |     6295 |     53200 |           11.83 |
+| Clocks                   |     0.052 |        7 |       --- |             --- |
+| Slice Logic              |     0.012 |    15306 |       --- |             --- |
+|   LUT as Logic           |     0.010 |     6311 |     53200 |           11.86 |
 |   CARRY4                 |    <0.001 |      146 |     13300 |            1.10 |
-|   Register               |    <0.001 |     6289 |    106400 |            5.91 |
+|   Register               |    <0.001 |     6436 |    106400 |            6.05 |
 |   F7/F8 Muxes            |    <0.001 |      413 |     53200 |            0.78 |
 |   LUT as Shift Register  |    <0.001 |      151 |     17400 |            0.87 |
 |   Others                 |     0.000 |      435 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       16 |     17400 |            0.09 |
-| Signals                  |     0.026 |    10689 |       --- |             --- |
-| Block RAM                |     0.032 |     98.5 |       140 |           70.36 |
+| Signals                  |     0.026 |    10923 |       --- |             --- |
+| Block RAM                |     0.008 |     98.5 |       140 |           70.36 |
 | MMCM                     |     0.107 |        1 |         4 |           25.00 |
-| I/O                      |     0.038 |       45 |       200 |           22.50 |
+| I/O                      |     0.043 |       45 |       200 |           22.50 |
 | PS7                      |     1.540 |        1 |       --- |             --- |
 | Static Power             |     0.164 |          |           |                 |
-| Total                    |     1.968 |          |           |                 |
+| Total                    |     1.952 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,16 +77,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.138 |       0.118 |      0.021 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.119 |       0.099 |      0.020 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.077 |       0.060 |      0.016 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.012 |       0.011 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.013 |       0.012 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.010 |       0.002 |      0.008 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.008 |       0.001 |      0.008 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -157,12 +157,12 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| Zed_SPI_wrapper            |     1.804 |
-|   Zed_SPI_i                |     1.765 |
+| Zed_SPI_wrapper            |     1.788 |
+|   Zed_SPI_i                |     1.744 |
 |     PL_SPI_ADAR_v1_0_0     |     0.006 |
 |       inst                 |     0.006 |
-|     PL_SPI_ADC_MasterStr_0 |     0.055 |
-|       inst                 |     0.055 |
+|     PL_SPI_ADC_MasterStr_0 |     0.034 |
+|       inst                 |     0.034 |
 |     PL_SPI_ADF4159_v1_0_0  |     0.008 |
 |       inst                 |     0.008 |
 |     PL_SPI_DDS_v1_0_0      |     0.007 |

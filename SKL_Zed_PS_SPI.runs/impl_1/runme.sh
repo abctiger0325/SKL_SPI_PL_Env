@@ -6,10 +6,14 @@
 # Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 # 
 
+echo "This script was generated under a different operating system."
+echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
+exit
+
 if [ -z "$PATH" ]; then
-  PATH=/home/labish/Vivado/2021.2/Vitis/2021.2/bin:/home/labish/Vivado/2021.2/Vivado/2021.2/ids_lite/ISE/bin/lin64:/home/labish/Vivado/2021.2/Vivado/2021.2/bin
+  PATH=C:/Xilinx/Vitis/2021.2/bin;C:/Xilinx/Vivado/2021.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2021.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2021.2/bin
 else
-  PATH=/home/labish/Vivado/2021.2/Vitis/2021.2/bin:/home/labish/Vivado/2021.2/Vivado/2021.2/ids_lite/ISE/bin/lin64:/home/labish/Vivado/2021.2/Vivado/2021.2/bin:$PATH
+  PATH=C:/Xilinx/Vitis/2021.2/bin;C:/Xilinx/Vivado/2021.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2021.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2021.2/bin:$PATH
 fi
 export PATH
 
@@ -20,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/impl_1'
+HD_PWD='D:/Midget_Ws/FPGA/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log Zed_SPI_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Zed_SPI_wrapper.tcl -notrace
 
 

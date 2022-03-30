@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 30 08:11:17 2022" VIVADOVERSION="2021.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar 31 02:28:31 2022" VIVADOVERSION="2021.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="Zed_SPI" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
@@ -115,6 +115,11 @@
         <CONNECTION INSTANCE="PL_SPI_ADC_MasterStr_0" PORT="i_Trigger"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="I" NAME="i_Mode_0" SIGIS="undef" SIGNAME="External_Ports_i_Mode_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PL_SPI_ADC_MasterStr_0" PORT="i_Mode"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_CAS_n"/>
@@ -218,11 +223,6 @@
     <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="i_Mode_0" SIGIS="undef" SIGNAME="External_Ports_i_Mode_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="PL_SPI_ADC_MasterStr_0" PORT="i_Mode"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -653,7 +653,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="42" FULLNAME="/PL_SPI_ADC_MasterStr_0" HWVERSION="1.1" INSTANCE="PL_SPI_ADC_MasterStr_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PL_SPI_ADC_MasterStream_v1_0" VLNV="user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1">
+    <MODULE COREREVISION="43" FULLNAME="/PL_SPI_ADC_MasterStr_0" HWVERSION="1.1" INSTANCE="PL_SPI_ADC_MasterStr_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PL_SPI_ADC_MasterStream_v1_0" VLNV="user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="s00_axi" NAME="reg0" RANGE="4096" USAGE="register"/>
