@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Thu Jan  6 15:44:30 2022
+// Date        : Wed Jan 26 13:12:58 2022
 // Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top Zed_SPI_PL_SPI_ADAR_v1_0_0_0 -prefix
 //               Zed_SPI_PL_SPI_ADAR_v1_0_0_0_ Zed_SPI_PL_SPI_ADAR_v1_0_0_0_stub.v

@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Mon Mar 28 15:18:12 2022
+// Date        : Mon Mar 28 15:18:11 2022
 // Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_xbar_0/Zed_SPI_xbar_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Zed_SPI_xbar_0 -prefix
+//               Zed_SPI_xbar_0_ Zed_SPI_xbar_0_sim_netlist.v
 // Design      : Zed_SPI_xbar_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -305,7 +305,6 @@ module Zed_SPI_xbar_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_26_addr_arbiter_sasd" *) 
 module Zed_SPI_xbar_0_axi_crossbar_v2_1_26_addr_arbiter_sasd
    (m_valid_i,
     SR,
@@ -1761,13 +1760,13 @@ endmodule
 (* C_NUM_MASTER_SLOTS = "7" *) (* C_NUM_SLAVE_SLOTS = "1" *) (* C_R_REGISTER = "1" *) 
 (* C_S_AXI_ARB_PRIORITY = "0" *) (* C_S_AXI_BASE_ID = "0" *) (* C_S_AXI_READ_ACCEPTANCE = "1" *) 
 (* C_S_AXI_SINGLE_THREAD = "1" *) (* C_S_AXI_THREAD_ID_WIDTH = "0" *) (* C_S_AXI_WRITE_ACCEPTANCE = "1" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_crossbar_v2_1_26_axi_crossbar" *) (* P_ADDR_DECODE = "1" *) 
-(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
-(* P_AXILITE_SIZE = "3'b010" *) (* P_FAMILY = "zynq" *) (* P_INCR = "2'b01" *) 
-(* P_LEN = "8" *) (* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "224'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
-(* P_M_AXI_SUPPORTS_READ = "7'b1111111" *) (* P_M_AXI_SUPPORTS_WRITE = "7'b1111111" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) 
-(* P_RANGE_CHECK = "1" *) (* P_S_AXI_BASE_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) 
-(* P_S_AXI_SUPPORTS_READ = "1'b1" *) (* P_S_AXI_SUPPORTS_WRITE = "1'b1" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* P_ADDR_DECODE = "1" *) (* P_AXI3 = "1" *) 
+(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_AXILITE_SIZE = "3'b010" *) 
+(* P_FAMILY = "zynq" *) (* P_INCR = "2'b01" *) (* P_LEN = "8" *) 
+(* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "224'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* P_M_AXI_SUPPORTS_READ = "7'b1111111" *) 
+(* P_M_AXI_SUPPORTS_WRITE = "7'b1111111" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) (* P_RANGE_CHECK = "1" *) 
+(* P_S_AXI_BASE_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_SUPPORTS_READ = "1'b1" *) 
+(* P_S_AXI_SUPPORTS_WRITE = "1'b1" *) 
 module Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar
    (aclk,
     aresetn,
@@ -2500,7 +2499,6 @@ module Zed_SPI_xbar_0_axi_crossbar_v2_1_26_axi_crossbar
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_26_crossbar_sasd" *) 
 module Zed_SPI_xbar_0_axi_crossbar_v2_1_26_crossbar_sasd
    (Q,
     \m_payload_i_reg[34] ,
@@ -3018,7 +3016,6 @@ module Zed_SPI_xbar_0_axi_crossbar_v2_1_26_crossbar_sasd
         .\m_ready_d_reg[2]_0 (addr_arbiter_inst_n_36));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_26_decerr_slave" *) 
 module Zed_SPI_xbar_0_axi_crossbar_v2_1_26_decerr_slave
    (mi_bvalid,
     mi_wready,
@@ -3248,7 +3245,6 @@ module Zed_SPI_xbar_0_axi_crossbar_v2_1_26_decerr_slave
         .O(\s_axi_wready[0]_INST_0_i_3_n_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_26_splitter" *) 
 module Zed_SPI_xbar_0_axi_crossbar_v2_1_26_splitter
    (\m_ready_d_reg[1]_0 ,
     m_ready_d,
@@ -3593,7 +3589,6 @@ module Zed_SPI_xbar_0_axi_crossbar_v2_1_26_splitter__parameterized0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_25_axic_register_slice" *) 
 module Zed_SPI_xbar_0_axi_register_slice_v2_1_25_axic_register_slice
    (sr_rvalid,
     aa_rready,

@@ -1,118 +1,16 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Wed Mar 23 14:57:35 2022
+// Date        : Thu Mar 31 15:40:52 2022
 // Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top Zed_SPI_axi_gpio_0_0 -prefix
-//               Zed_SPI_axi_gpio_0_0_ Zed_SPI_axi_gpio_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_axi_gpio_0_0/Zed_SPI_axi_gpio_0_0_sim_netlist.v
 // Design      : Zed_SPI_axi_gpio_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg484-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
-
-module Zed_SPI_axi_gpio_0_0_GPIO_Core
-   (GPIO_intr,
-    GPIO_xferAck_i,
-    gpio_xferAck_Reg,
-    gpio_Data_In,
-    reg1,
-    \Not_Dual.gpio_OE_reg[0]_0 ,
-    rst,
-    s_axi_aclk,
-    \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1_reg[31]_0 ,
-    \Not_Dual.gpio_OE_reg[0]_1 ,
-    bus2ip_cs,
-    gpio_io_i);
-  output GPIO_intr;
-  output GPIO_xferAck_i;
-  output gpio_xferAck_Reg;
-  output gpio_Data_In;
-  output [0:0]reg1;
-  output \Not_Dual.gpio_OE_reg[0]_0 ;
-  input rst;
-  input s_axi_aclk;
-  input \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1_reg[31]_0 ;
-  input \Not_Dual.gpio_OE_reg[0]_1 ;
-  input [0:0]bus2ip_cs;
-  input [0:0]gpio_io_i;
-
-  wire GPIO_intr;
-  wire GPIO_xferAck_i;
-  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1_reg[31]_0 ;
-  wire \Not_Dual.gpio_OE_reg[0]_0 ;
-  wire \Not_Dual.gpio_OE_reg[0]_1 ;
-  wire [0:0]bus2ip_cs;
-  wire gpio_Data_In;
-  wire gpio_data_in_xor;
-  wire [0:0]gpio_io_i;
-  wire gpio_io_i_d2;
-  wire gpio_xferAck_Reg;
-  wire iGPIO_xferAck;
-  wire l;
-  wire [0:0]reg1;
-  wire rst;
-  wire s_axi_aclk;
-
-  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1_reg[31] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1_reg[31]_0 ),
-        .Q(reg1),
-        .R(1'b0));
-  FDRE \Not_Dual.GEN_INTERRUPT.GPIO_intr_reg 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(l),
-        .Q(GPIO_intr),
-        .R(rst));
-  FDRE \Not_Dual.GEN_INTERRUPT.gpio_data_in_xor_reg_reg[0] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(gpio_data_in_xor),
-        .Q(l),
-        .R(rst));
-  Zed_SPI_axi_gpio_0_0_cdc_sync \Not_Dual.INPUT_DOUBLE_REGS3 
-       (.gpio_Data_In(gpio_Data_In),
-        .gpio_data_in_xor(gpio_data_in_xor),
-        .gpio_io_i(gpio_io_i),
-        .s_axi_aclk(s_axi_aclk),
-        .scndry_vect_out(gpio_io_i_d2));
-  FDRE \Not_Dual.gpio_Data_In_reg[0] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(gpio_io_i_d2),
-        .Q(gpio_Data_In),
-        .R(1'b0));
-  FDSE #(
-    .INIT(1'b1)) 
-    \Not_Dual.gpio_OE_reg[0] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(\Not_Dual.gpio_OE_reg[0]_1 ),
-        .Q(\Not_Dual.gpio_OE_reg[0]_0 ),
-        .S(rst));
-  FDRE gpio_xferAck_Reg_reg
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(GPIO_xferAck_i),
-        .Q(gpio_xferAck_Reg),
-        .R(rst));
-  LUT3 #(
-    .INIT(8'h04)) 
-    iGPIO_xferAck_i_1
-       (.I0(gpio_xferAck_Reg),
-        .I1(bus2ip_cs),
-        .I2(GPIO_xferAck_i),
-        .O(iGPIO_xferAck));
-  FDRE iGPIO_xferAck_reg
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(iGPIO_xferAck),
-        .Q(GPIO_xferAck_i),
-        .R(rst));
-endmodule
 
 (* CHECK_LICENSE_TYPE = "Zed_SPI_axi_gpio_0_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2021.2" *) 
 (* NotValidForBitStream *)
@@ -238,6 +136,110 @@ module Zed_SPI_axi_gpio_0_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "GPIO_Core" *) 
+module Zed_SPI_axi_gpio_0_0_GPIO_Core
+   (GPIO_intr,
+    GPIO_xferAck_i,
+    gpio_xferAck_Reg,
+    gpio_Data_In,
+    reg1,
+    \Not_Dual.gpio_OE_reg[0]_0 ,
+    rst,
+    s_axi_aclk,
+    \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1_reg[31]_0 ,
+    \Not_Dual.gpio_OE_reg[0]_1 ,
+    bus2ip_cs,
+    gpio_io_i);
+  output GPIO_intr;
+  output GPIO_xferAck_i;
+  output gpio_xferAck_Reg;
+  output gpio_Data_In;
+  output [0:0]reg1;
+  output \Not_Dual.gpio_OE_reg[0]_0 ;
+  input rst;
+  input s_axi_aclk;
+  input \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1_reg[31]_0 ;
+  input \Not_Dual.gpio_OE_reg[0]_1 ;
+  input [0:0]bus2ip_cs;
+  input [0:0]gpio_io_i;
+
+  wire GPIO_intr;
+  wire GPIO_xferAck_i;
+  wire \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1_reg[31]_0 ;
+  wire \Not_Dual.gpio_OE_reg[0]_0 ;
+  wire \Not_Dual.gpio_OE_reg[0]_1 ;
+  wire [0:0]bus2ip_cs;
+  wire gpio_Data_In;
+  wire gpio_data_in_xor;
+  wire [0:0]gpio_io_i;
+  wire gpio_io_i_d2;
+  wire gpio_xferAck_Reg;
+  wire iGPIO_xferAck;
+  wire l;
+  wire [0:0]reg1;
+  wire rst;
+  wire s_axi_aclk;
+
+  FDRE \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1_reg[31] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(\Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1_reg[31]_0 ),
+        .Q(reg1),
+        .R(1'b0));
+  FDRE \Not_Dual.GEN_INTERRUPT.GPIO_intr_reg 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(l),
+        .Q(GPIO_intr),
+        .R(rst));
+  FDRE \Not_Dual.GEN_INTERRUPT.gpio_data_in_xor_reg_reg[0] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(gpio_data_in_xor),
+        .Q(l),
+        .R(rst));
+  Zed_SPI_axi_gpio_0_0_cdc_sync \Not_Dual.INPUT_DOUBLE_REGS3 
+       (.gpio_Data_In(gpio_Data_In),
+        .gpio_data_in_xor(gpio_data_in_xor),
+        .gpio_io_i(gpio_io_i),
+        .s_axi_aclk(s_axi_aclk),
+        .scndry_vect_out(gpio_io_i_d2));
+  FDRE \Not_Dual.gpio_Data_In_reg[0] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(gpio_io_i_d2),
+        .Q(gpio_Data_In),
+        .R(1'b0));
+  FDSE #(
+    .INIT(1'b1)) 
+    \Not_Dual.gpio_OE_reg[0] 
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(\Not_Dual.gpio_OE_reg[0]_1 ),
+        .Q(\Not_Dual.gpio_OE_reg[0]_0 ),
+        .S(rst));
+  FDRE gpio_xferAck_Reg_reg
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(GPIO_xferAck_i),
+        .Q(gpio_xferAck_Reg),
+        .R(rst));
+  LUT3 #(
+    .INIT(8'h04)) 
+    iGPIO_xferAck_i_1
+       (.I0(gpio_xferAck_Reg),
+        .I1(bus2ip_cs),
+        .I2(GPIO_xferAck_i),
+        .O(iGPIO_xferAck));
+  FDRE iGPIO_xferAck_reg
+       (.C(s_axi_aclk),
+        .CE(1'b1),
+        .D(iGPIO_xferAck),
+        .Q(GPIO_xferAck_i),
+        .R(rst));
+endmodule
+
+(* ORIG_REF_NAME = "address_decoder" *) 
 module Zed_SPI_axi_gpio_0_0_address_decoder
    (\GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg[12]_0 ,
     \MEM_DECODE_GEN[0].cs_out_i_reg[0]_0 ,
@@ -990,7 +992,7 @@ endmodule
 (* C_FAMILY = "zynq" *) (* C_GPIO2_WIDTH = "32" *) (* C_GPIO_WIDTH = "1" *) 
 (* C_INTERRUPT_PRESENT = "1" *) (* C_IS_DUAL = "0" *) (* C_S_AXI_ADDR_WIDTH = "9" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRI_DEFAULT = "-1" *) (* C_TRI_DEFAULT_2 = "-1" *) 
-(* downgradeipidentifiedwarnings = "yes" *) (* ip_group = "LOGICORE" *) 
+(* ORIG_REF_NAME = "axi_gpio" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_group = "LOGICORE" *) 
 module Zed_SPI_axi_gpio_0_0_axi_gpio
    (s_axi_aclk,
     s_axi_aresetn,
@@ -1359,6 +1361,7 @@ module Zed_SPI_axi_gpio_0_0_axi_gpio
         .R(\I_SLAVE_ATTACHMENT/rst ));
 endmodule
 
+(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module Zed_SPI_axi_gpio_0_0_axi_lite_ipif
    (rst,
     p_7_in,
@@ -1558,6 +1561,7 @@ module Zed_SPI_axi_gpio_0_0_axi_lite_ipif
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "cdc_sync" *) 
 module Zed_SPI_axi_gpio_0_0_cdc_sync
    (gpio_data_in_xor,
     scndry_vect_out,
@@ -1635,6 +1639,7 @@ module Zed_SPI_axi_gpio_0_0_cdc_sync
         .O(gpio_data_in_xor));
 endmodule
 
+(* ORIG_REF_NAME = "interrupt_control" *) 
 module Zed_SPI_axi_gpio_0_0_interrupt_control
    (irpt_wrack_d1,
     p_3_in,
@@ -1804,6 +1809,7 @@ module Zed_SPI_axi_gpio_0_0_interrupt_control
         .R(rst));
 endmodule
 
+(* ORIG_REF_NAME = "slave_attachment" *) 
 module Zed_SPI_axi_gpio_0_0_slave_attachment
    (SS,
     \GEN_BKEND_CE_REGISTERS[12].ce_out_i_reg[12] ,

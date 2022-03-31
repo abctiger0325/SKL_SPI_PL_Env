@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Wed Mar 23 14:57:35 2022
+-- Date        : Thu Mar 31 15:40:52 2022
 -- Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top Zed_SPI_axi_gpio_0_0 -prefix
---               Zed_SPI_axi_gpio_0_0_ Zed_SPI_axi_gpio_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_axi_gpio_0_0/Zed_SPI_axi_gpio_0_0_sim_netlist.vhdl
 -- Design      : Zed_SPI_axi_gpio_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -58,6 +58,8 @@ entity Zed_SPI_axi_gpio_0_0_address_decoder is
     ip2bus_wrack_i_D1 : in STD_LOGIC;
     s_axi_awready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Zed_SPI_axi_gpio_0_0_address_decoder : entity is "address_decoder";
 end Zed_SPI_axi_gpio_0_0_address_decoder;
 
 architecture STRUCTURE of Zed_SPI_axi_gpio_0_0_address_decoder is
@@ -891,6 +893,8 @@ entity Zed_SPI_axi_gpio_0_0_cdc_sync is
     gpio_io_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Zed_SPI_axi_gpio_0_0_cdc_sync : entity is "cdc_sync";
 end Zed_SPI_axi_gpio_0_0_cdc_sync;
 
 architecture STRUCTURE of Zed_SPI_axi_gpio_0_0_cdc_sync is
@@ -1005,6 +1009,8 @@ entity Zed_SPI_axi_gpio_0_0_interrupt_control is
     GPIO_xferAck_i : in STD_LOGIC;
     ip2Bus_RdAck_intr_reg_hole : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Zed_SPI_axi_gpio_0_0_interrupt_control : entity is "interrupt_control";
 end Zed_SPI_axi_gpio_0_0_interrupt_control;
 
 architecture STRUCTURE of Zed_SPI_axi_gpio_0_0_interrupt_control is
@@ -1157,6 +1163,8 @@ entity Zed_SPI_axi_gpio_0_0_GPIO_Core is
     bus2ip_cs : in STD_LOGIC_VECTOR ( 0 to 0 );
     gpio_io_i : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Zed_SPI_axi_gpio_0_0_GPIO_Core : entity is "GPIO_Core";
 end Zed_SPI_axi_gpio_0_0_GPIO_Core;
 
 architecture STRUCTURE of Zed_SPI_axi_gpio_0_0_GPIO_Core is
@@ -1304,6 +1312,8 @@ entity Zed_SPI_axi_gpio_0_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Zed_SPI_axi_gpio_0_0_slave_attachment : entity is "slave_attachment";
 end Zed_SPI_axi_gpio_0_0_slave_attachment;
 
 architecture STRUCTURE of Zed_SPI_axi_gpio_0_0_slave_attachment is
@@ -2062,6 +2072,8 @@ entity Zed_SPI_axi_gpio_0_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Zed_SPI_axi_gpio_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end Zed_SPI_axi_gpio_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of Zed_SPI_axi_gpio_0_0_axi_lite_ipif is
@@ -2183,6 +2195,8 @@ entity Zed_SPI_axi_gpio_0_0_axi_gpio is
   attribute C_TRI_DEFAULT of Zed_SPI_axi_gpio_0_0_axi_gpio : entity is -1;
   attribute C_TRI_DEFAULT_2 : integer;
   attribute C_TRI_DEFAULT_2 of Zed_SPI_axi_gpio_0_0_axi_gpio : entity is -1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Zed_SPI_axi_gpio_0_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Zed_SPI_axi_gpio_0_0_axi_gpio : entity is "yes";
   attribute ip_group : string;
