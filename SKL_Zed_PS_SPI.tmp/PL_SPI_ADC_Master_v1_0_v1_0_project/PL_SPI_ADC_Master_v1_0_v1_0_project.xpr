@@ -6,7 +6,7 @@
 <Project Version="7" Minor="56" Path="/home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.tmp/PL_SPI_ADC_Master_v1_0_v1_0_project/PL_SPI_ADC_Master_v1_0_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="dc8986ed13ba4dc0b8771c31a1f12107"/>
+    <Option Name="Id" Val="549c537f94c0456da46d770a7add674f"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -47,7 +47,9 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../SKL_ZED_Backup"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/PL_ADC_MatchFilter_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/PL_IO_TriggerCtrl_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../SKL_ZED_Backup"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -87,7 +89,7 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_ADC.v">
+      <File Path="$PPRDIR/../../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_ADC.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -95,7 +97,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_SPI_41B29.v">
+      <File Path="$PPRDIR/../../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_SPI_41B29.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -103,7 +105,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_SPI_ADC_Master_v1_0_M00_AXI.v">
+      <File Path="$PPRDIR/../../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_SPI_ADC_Master_v1_0_M00_AXI.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -111,7 +113,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_SPI_ADC_Master_v1_0_S00_AXI.v">
+      <File Path="$PPRDIR/../../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_SPI_ADC_Master_v1_0_S00_AXI.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -119,7 +121,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_SPI_ADC_Master_v1_0.v">
+      <File Path="$PPRDIR/../../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_SPI_ADC_Master_v1_0.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -127,13 +129,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../SKL_ZED_Backup/PL_SPI_ADC_HP/component.xml">
+      <File Path="$PPRDIR/../../../../SKL_ZED_Backup/PL_SPI_ADC_HP/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="PL_SPI_ADC_Master_v1_0"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_SPI_ADC_Master_v1_0.v"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../SKL_ZED_Backup/PL_SPI_ADC_HP/src/PL_SPI_ADC_Master_v1_0.v"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

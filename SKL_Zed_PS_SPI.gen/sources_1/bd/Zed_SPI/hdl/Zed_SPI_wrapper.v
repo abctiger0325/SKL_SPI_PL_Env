@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-//Date        : Thu Mar 31 17:39:26 2022
+//Date        : Tue Jun 14 17:34:29 2022
 //Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 //Command     : generate_target Zed_SPI_wrapper.bd
 //Design      : Zed_SPI_wrapper
@@ -37,8 +37,9 @@ module Zed_SPI_wrapper
     i_SPI_MISO_0,
     i_SPI_MISO_1,
     i_SPI_MISO_2,
-    i_SPI_MISO_3,
+    i_Switch_0,
     i_Trigger,
+    i_Trigger_0,
     o_GPIO_0,
     o_LED_0,
     o_SPI_CLK_1,
@@ -81,8 +82,9 @@ module Zed_SPI_wrapper
   input i_SPI_MISO_0;
   input i_SPI_MISO_1;
   input i_SPI_MISO_2;
-  input i_SPI_MISO_3;
+  input i_Switch_0;
   input [0:0]i_Trigger;
+  input i_Trigger_0;
   output [4:0]o_GPIO_0;
   output [7:0]o_LED_0;
   output o_SPI_CLK_1;
@@ -97,7 +99,7 @@ module Zed_SPI_wrapper
   output o_SPI_MOSI_1;
   output o_SPI_MOSI_2;
   output o_SPI_MOSI_3;
-  output o_SYNC_Clk_0;
+  output [0:0]o_SYNC_Clk_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -126,8 +128,9 @@ module Zed_SPI_wrapper
   wire i_SPI_MISO_0;
   wire i_SPI_MISO_1;
   wire i_SPI_MISO_2;
-  wire i_SPI_MISO_3;
+  wire i_Switch_0;
   wire [0:0]i_Trigger;
+  wire i_Trigger_0;
   wire [4:0]o_GPIO_0;
   wire [7:0]o_LED_0;
   wire o_SPI_CLK_1;
@@ -142,7 +145,7 @@ module Zed_SPI_wrapper
   wire o_SPI_MOSI_1;
   wire o_SPI_MOSI_2;
   wire o_SPI_MOSI_3;
-  wire o_SYNC_Clk_0;
+  wire [0:0]o_SYNC_Clk_0;
 
   Zed_SPI Zed_SPI_i
        (.DDR_addr(DDR_addr),
@@ -172,8 +175,9 @@ module Zed_SPI_wrapper
         .i_SPI_MISO_0(i_SPI_MISO_0),
         .i_SPI_MISO_1(i_SPI_MISO_1),
         .i_SPI_MISO_2(i_SPI_MISO_2),
-        .i_SPI_MISO_3(i_SPI_MISO_3),
+        .i_Switch_0(i_Switch_0),
         .i_Trigger(i_Trigger),
+        .i_Trigger_0(i_Trigger_0),
         .o_GPIO_0(o_GPIO_0),
         .o_LED_0(o_LED_0),
         .o_SPI_CLK_1(o_SPI_CLK_1),

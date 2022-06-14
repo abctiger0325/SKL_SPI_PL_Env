@@ -3,10 +3,10 @@ vlib activehdl
 
 vlib activehdl/xilinx_vip
 vlib activehdl/xpm
-vlib activehdl/xil_defaultlib
 vlib activehdl/axi_infrastructure_v1_1_0
 vlib activehdl/axi_vip_v1_1_11
 vlib activehdl/processing_system7_vip_v1_0_13
+vlib activehdl/xil_defaultlib
 vlib activehdl/generic_baseblocks_v2_1_0
 vlib activehdl/axi_register_slice_v2_1_25
 vlib activehdl/fifo_generator_v13_2_6
@@ -30,10 +30,10 @@ vlib activehdl/axi_dwidth_converter_v2_1_25
 
 vmap xilinx_vip activehdl/xilinx_vip
 vmap xpm activehdl/xpm
-vmap xil_defaultlib activehdl/xil_defaultlib
 vmap axi_infrastructure_v1_1_0 activehdl/axi_infrastructure_v1_1_0
 vmap axi_vip_v1_1_11 activehdl/axi_vip_v1_1_11
 vmap processing_system7_vip_v1_0_13 activehdl/processing_system7_vip_v1_0_13
+vmap xil_defaultlib activehdl/xil_defaultlib
 vmap generic_baseblocks_v2_1_0 activehdl/generic_baseblocks_v2_1_0
 vmap axi_register_slice_v2_1_25 activehdl/axi_register_slice_v2_1_25
 vmap fifo_generator_v13_2_6 activehdl/fifo_generator_v13_2_6
@@ -73,16 +73,6 @@ vlog -work xpm  -sv2k12 "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed
 
 vcom -work xpm -93 \
 "/home/labish/Vivado/2021.2/Vivado/2021.2/data/ip/xpm/xpm_VCOMP.vhd" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/ec67/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/3007/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/62b6" "+incdir+/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/include" \
-"../../../bd/Zed_SPI/ipshared/bb0e/src/PL_SPI.v" \
-"../../../bd/Zed_SPI/ipshared/bb0e/hdl/PL_SPI_ADAR_v1_0_S00_AXI.v" \
-"../../../bd/Zed_SPI/ipshared/bb0e/hdl/PL_SPI_ADAR_v1_0.v" \
-"../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/sim/Zed_SPI_PL_SPI_ADAR_v1_0_0_0.v" \
-"../../../bd/Zed_SPI/ipshared/28af/src/PL_SPI.v" \
-"../../../bd/Zed_SPI/ipshared/28af/hdl/PL_SPI_ADF4159_v1_0_S00_AXI.v" \
-"../../../bd/Zed_SPI/ipshared/28af/hdl/PL_SPI_ADF4159_v1_0.v" \
-"../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/sim/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0.v" \
 
 vlog -work axi_infrastructure_v1_1_0  -v2k5 "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/ec67/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/3007/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/62b6" "+incdir+/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/include" \
 "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
@@ -128,19 +118,7 @@ vcom -work proc_sys_reset_v5_0_13 -93 \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_0/sim/Zed_SPI_rst_ps7_0_100M_0.vhd" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/ec67/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/3007/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/62b6" "+incdir+/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/include" \
-"../../../bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v" \
-"../../../bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v" \
-"../../../bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0.v" \
-"../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/sim/Zed_SPI_PL_SPI_DDS_v1_0_0_0.v" \
-
-vcom -work xil_defaultlib -93 \
 "../../../bd/Zed_SPI/ip/Zed_SPI_rst_ps7_0_100M_1_0/sim/Zed_SPI_rst_ps7_0_100M_1_0.vhd" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/ec67/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/3007/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/62b6" "+incdir+/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/include" \
-"../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0_clk_wiz.v" \
-"../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0.v" \
 
 vcom -work lib_pkg_v1_0_2 -93 \
 "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
@@ -176,16 +154,29 @@ vcom -work xil_defaultlib -93 \
 "../../../bd/Zed_SPI/ip/Zed_SPI_axi_gpio_0_0/sim/Zed_SPI_axi_gpio_0_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/ec67/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/3007/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/62b6" "+incdir+/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/include" \
-"../../../bd/Zed_SPI/ipshared/e16d/hdl/LED_Connector_v1_0_S00_AXI.v" \
-"../../../bd/Zed_SPI/ipshared/e16d/src/LED_Temp.v" \
-"../../../bd/Zed_SPI/ipshared/e16d/hdl/LED_Connector_v1_0.v" \
-"../../../bd/Zed_SPI/ip/Zed_SPI_LED_Connector_v1_0_0_0/sim/Zed_SPI_LED_Connector_v1_0_0_0.v" \
-"../../../bd/Zed_SPI/ipshared/75f1/src/PL_ADC.v" \
-"../../../bd/Zed_SPI/ipshared/75f1/src/PL_SPI_41B29.v" \
-"../../../bd/Zed_SPI/ipshared/75f1/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v" \
-"../../../bd/Zed_SPI/ipshared/75f1/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v" \
-"../../../bd/Zed_SPI/ipshared/75f1/src/PL_SPI_ADC_MasterStream_v1_0.v" \
-"../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/sim/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.v" \
+"../../../bd/Zed_SPI/ipshared/8711/hdl/PL_IO_TriggerCtrl_v1_0_S00_AXI.v" \
+"../../../bd/Zed_SPI/ipshared/8711/hdl/PL_IO_TriggerCtrl_v1_0.v" \
+"../../../bd/Zed_SPI/ip/Zed_SPI_PL_IO_TriggerCtrl_v1_0_0/sim/Zed_SPI_PL_IO_TriggerCtrl_v1_0_0.v" \
+"../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0.v" \
+"../../../bd/Zed_SPI/ipshared/bb0e/src/PL_SPI.v" \
+"../../../bd/Zed_SPI/ipshared/bb0e/hdl/PL_SPI_ADAR_v1_0_S00_AXI.v" \
+"../../../bd/Zed_SPI/ipshared/bb0e/hdl/PL_SPI_ADAR_v1_0.v" \
+"../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/sim/Zed_SPI_PL_SPI_ADAR_v1_0_0_0.v" \
+"../../../bd/Zed_SPI/ipshared/28af/src/PL_SPI.v" \
+"../../../bd/Zed_SPI/ipshared/28af/hdl/PL_SPI_ADF4159_v1_0_S00_AXI.v" \
+"../../../bd/Zed_SPI/ipshared/28af/hdl/PL_SPI_ADF4159_v1_0.v" \
+"../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/sim/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0.v" \
+"../../../bd/Zed_SPI/ipshared/2fc8/src/PL_SPI_9910.v" \
+"../../../bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0_S00_AXI.v" \
+"../../../bd/Zed_SPI/ipshared/2fc8/hdl/PL_SPI_DDS_v1_0.v" \
+"../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/sim/Zed_SPI_PL_SPI_DDS_v1_0_0_0.v" \
+"../../../bd/Zed_SPI/ipshared/f12e/src/PL_ADC.v" \
+"../../../bd/Zed_SPI/ipshared/f12e/src/PL_SPI_41B29.v" \
+"../../../bd/Zed_SPI/ipshared/f12e/src/PL_SPI_ADC_MasterStream_v1_0_M00_AXIS.v" \
+"../../../bd/Zed_SPI/ipshared/f12e/src/PL_SPI_ADC_MasterStream_v1_0_S00_AXI.v" \
+"../../../bd/Zed_SPI/ipshared/f12e/src/PL_SPI_ADC_MasterStream_v1_0.v" \
+"../../../bd/Zed_SPI/ip/Zed_SPI_PL_SPI_ADC_MasterStr_1_0/sim/Zed_SPI_PL_SPI_ADC_MasterStr_1_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_25  -v2k5 "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/ec67/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/3007/hdl" "+incdir+../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/62b6" "+incdir+/home/labish/Vivado/2021.2/Vivado/2021.2/data/xilinx_vip/include" \
 "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ipshared/8fe4/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF076F490F5ADAA95",
+      "boundary_crc": "0x966309C257BBDED1",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI",
       "name": "Zed_SPI",
@@ -11,8 +11,6 @@
       "validated": "true"
     },
     "design_tree": {
-      "PL_SPI_ADAR_v1_0_0": "",
-      "PL_SPI_ADF4159_v1_0_0": "",
       "processing_system7_0": "",
       "ps7_0_axi_periph": {
         "xbar": "",
@@ -25,12 +23,11 @@
         "m03_couplers": {},
         "m04_couplers": {},
         "m05_couplers": {},
-        "m06_couplers": {}
+        "m06_couplers": {},
+        "m07_couplers": {}
       },
       "rst_ps7_0_100M": "",
-      "PL_SPI_DDS_v1_0_0": "",
       "rst_ps7_0_100M_1": "",
-      "clk_wiz_0": "",
       "axi_dma": "",
       "axi_mem_intercon": {
         "s00_couplers": {
@@ -39,8 +36,12 @@
         }
       },
       "axi_gpio_0": "",
-      "LED_Connector_v1_0_0": "",
-      "PL_SPI_ADC_MasterStr_0": ""
+      "PL_IO_TriggerCtrl_v1_0": "",
+      "clk_wiz_0": "",
+      "PL_SPI_ADAR_v1_0_0": "",
+      "PL_SPI_ADF4159_v1_0_0": "",
+      "PL_SPI_DDS_v1_0_0": "",
+      "PL_SPI_ADC_MasterStr_1": ""
     },
     "interface_ports": {
       "DDR": {
@@ -108,11 +109,6 @@
             "value_src": "default"
           }
         }
-      },
-      "GPIO_0": {
-        "mode": "Master",
-        "vlnv_bus_definition": "xilinx.com:interface:gpio:1.0",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       }
     },
     "ports": {
@@ -239,7 +235,7 @@
         "direction": "O",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "Zed_SPI_PL_SPI_ADC_MasterStr_0_0_o_SPI_Clk",
+            "value": "Zed_SPI_PL_SPI_ADC_MasterStr_1_0_o_SPI_Clk",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
@@ -266,17 +262,11 @@
       "o_SPI_CS_3": {
         "direction": "O"
       },
-      "i_SPI_MISO_3": {
-        "direction": "I"
-      },
-      "i_CMOS_Data_0": {
-        "direction": "I",
-        "left": "11",
-        "right": "0"
-      },
       "o_SYNC_Clk_0": {
         "type": "clk",
         "direction": "O",
+        "left": "0",
+        "right": "0",
         "parameters": {
           "CLK_DOMAIN": {
             "value": "/clk_wiz_0_clk_out1",
@@ -303,31 +293,24 @@
       "i_Trigger": {
         "direction": "I",
         "left": "0",
-        "right": "0",
-        "parameters": {
-          "PortWidth": {
-            "value": "2",
-            "value_src": "ip_prop"
-          }
-        }
+        "right": "0"
       },
       "i_Mode_0": {
         "direction": "I"
+      },
+      "i_Switch_0": {
+        "direction": "I"
+      },
+      "i_Trigger_0": {
+        "direction": "I"
+      },
+      "i_CMOS_Data_0": {
+        "direction": "I",
+        "left": "11",
+        "right": "0"
       }
     },
     "components": {
-      "PL_SPI_ADAR_v1_0_0": {
-        "vlnv": "xilinx.com:user:PL_SPI_ADAR_v1_0:1.5",
-        "xci_name": "Zed_SPI_PL_SPI_ADAR_v1_0_0_0",
-        "xci_path": "ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/Zed_SPI_PL_SPI_ADAR_v1_0_0_0.xci",
-        "inst_hier_path": "PL_SPI_ADAR_v1_0_0"
-      },
-      "PL_SPI_ADF4159_v1_0_0": {
-        "vlnv": "xilinx.com:user:PL_SPI_ADF4159_v1_0:1.0",
-        "xci_name": "Zed_SPI_PL_SPI_ADF4159_v1_0_0_0",
-        "xci_path": "ip/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0.xci",
-        "inst_hier_path": "PL_SPI_ADF4159_v1_0_0"
-      },
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
         "xci_name": "Zed_SPI_processing_system7_0_0",
@@ -2155,7 +2138,7 @@
         "xci_name": "Zed_SPI_ps7_0_axi_periph_4",
         "parameters": {
           "NUM_MI": {
-            "value": "7"
+            "value": "8"
           },
           "NUM_SI": {
             "value": "1"
@@ -2198,6 +2181,11 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
           },
           "M06_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+          },
+          "M07_AXI": {
             "mode": "Master",
             "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
@@ -2344,6 +2332,22 @@
           "M06_ARESETN": {
             "type": "rst",
             "direction": "I"
+          },
+          "M07_ACLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "M07_AXI"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "M07_ARESETN"
+              }
+            }
+          },
+          "M07_ARESETN": {
+            "type": "rst",
+            "direction": "I"
           }
         },
         "components": {
@@ -2354,7 +2358,7 @@
             "inst_hier_path": "ps7_0_axi_periph/xbar",
             "parameters": {
               "NUM_MI": {
-                "value": "7"
+                "value": "8"
               },
               "NUM_SI": {
                 "value": "1"
@@ -2374,7 +2378,8 @@
                   "M03_AXI",
                   "M04_AXI",
                   "M05_AXI",
-                  "M06_AXI"
+                  "M06_AXI",
+                  "M07_AXI"
                 ]
               }
             }
@@ -2871,6 +2876,62 @@
                 ]
               }
             }
+          },
+          "m07_couplers": {
+            "interface_ports": {
+              "M_AXI": {
+                "mode": "Master",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+              },
+              "S_AXI": {
+                "mode": "Slave",
+                "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+              }
+            },
+            "ports": {
+              "M_ACLK": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "M_AXI"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "M_ARESETN"
+                  }
+                }
+              },
+              "M_ARESETN": {
+                "type": "rst",
+                "direction": "I"
+              },
+              "S_ACLK": {
+                "type": "clk",
+                "direction": "I",
+                "parameters": {
+                  "ASSOCIATED_BUSIF": {
+                    "value": "S_AXI"
+                  },
+                  "ASSOCIATED_RESET": {
+                    "value": "S_ARESETN"
+                  }
+                }
+              },
+              "S_ARESETN": {
+                "type": "rst",
+                "direction": "I"
+              }
+            },
+            "interface_nets": {
+              "m07_couplers_to_m07_couplers": {
+                "interface_ports": [
+                  "S_AXI",
+                  "M_AXI"
+                ]
+              }
+            }
           }
         },
         "interface_nets": {
@@ -2914,6 +2975,12 @@
             "interface_ports": [
               "M06_AXI",
               "m06_couplers/M_AXI"
+            ]
+          },
+          "m07_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M07_AXI",
+              "m07_couplers/M_AXI"
             ]
           },
           "ps7_0_axi_periph_to_s00_couplers": {
@@ -2969,6 +3036,12 @@
               "xbar/M06_AXI",
               "m06_couplers/S_AXI"
             ]
+          },
+          "xbar_to_m07_couplers": {
+            "interface_ports": [
+              "xbar/M07_AXI",
+              "m07_couplers/S_AXI"
+            ]
           }
         },
         "nets": {
@@ -2985,13 +3058,15 @@
               "m04_couplers/M_ACLK",
               "m05_couplers/M_ACLK",
               "m06_couplers/M_ACLK",
+              "m07_couplers/M_ACLK",
               "m00_couplers/S_ACLK",
               "m01_couplers/S_ACLK",
               "m02_couplers/S_ACLK",
               "m03_couplers/S_ACLK",
               "m04_couplers/S_ACLK",
               "m05_couplers/S_ACLK",
-              "m06_couplers/S_ACLK"
+              "m06_couplers/S_ACLK",
+              "m07_couplers/S_ACLK"
             ]
           },
           "ps7_0_axi_periph_ARESETN_net": {
@@ -3007,13 +3082,15 @@
               "m04_couplers/M_ARESETN",
               "m05_couplers/M_ARESETN",
               "m06_couplers/M_ARESETN",
+              "m07_couplers/M_ARESETN",
               "m00_couplers/S_ARESETN",
               "m01_couplers/S_ARESETN",
               "m02_couplers/S_ARESETN",
               "m03_couplers/S_ARESETN",
               "m04_couplers/S_ARESETN",
               "m05_couplers/S_ARESETN",
-              "m06_couplers/S_ARESETN"
+              "m06_couplers/S_ARESETN",
+              "m07_couplers/S_ARESETN"
             ]
           }
         }
@@ -3024,70 +3101,11 @@
         "xci_path": "ip/Zed_SPI_rst_ps7_0_100M_0/Zed_SPI_rst_ps7_0_100M_0.xci",
         "inst_hier_path": "rst_ps7_0_100M"
       },
-      "PL_SPI_DDS_v1_0_0": {
-        "vlnv": "xilinx.com:user:PL_SPI_DDS_v1_0:1.0",
-        "xci_name": "Zed_SPI_PL_SPI_DDS_v1_0_0_0",
-        "xci_path": "ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/Zed_SPI_PL_SPI_DDS_v1_0_0_0.xci",
-        "inst_hier_path": "PL_SPI_DDS_v1_0_0"
-      },
       "rst_ps7_0_100M_1": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "Zed_SPI_rst_ps7_0_100M_1_0",
         "xci_path": "ip/Zed_SPI_rst_ps7_0_100M_1_0/Zed_SPI_rst_ps7_0_100M_1_0.xci",
         "inst_hier_path": "rst_ps7_0_100M_1"
-      },
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "Zed_SPI_clk_wiz_0_0",
-        "xci_path": "ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0",
-        "parameters": {
-          "CLKOUT1_JITTER": {
-            "value": "110.209"
-          },
-          "CLKOUT1_PHASE_ERROR": {
-            "value": "98.575"
-          },
-          "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "250"
-          },
-          "CLKOUT2_JITTER": {
-            "value": "110.209"
-          },
-          "CLKOUT2_PHASE_ERROR": {
-            "value": "98.575"
-          },
-          "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "250"
-          },
-          "CLKOUT2_USED": {
-            "value": "true"
-          },
-          "MMCM_CLKFBOUT_MULT_F": {
-            "value": "10.000"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "4.000"
-          },
-          "MMCM_CLKOUT1_DIVIDE": {
-            "value": "4"
-          },
-          "MMCM_DIVCLK_DIVIDE": {
-            "value": "1"
-          },
-          "NUM_OUT_CLKS": {
-            "value": "2"
-          },
-          "PRIM_IN_FREQ": {
-            "value": "100.000"
-          },
-          "USE_LOCKED": {
-            "value": "false"
-          },
-          "USE_RESET": {
-            "value": "false"
-          }
-        }
       },
       "axi_dma": {
         "vlnv": "xilinx.com:ip:axi_dma:7.1",
@@ -3393,32 +3411,74 @@
           }
         }
       },
-      "LED_Connector_v1_0_0": {
-        "vlnv": "xilinx.com:user:LED_Connector_v1_0:1.0",
-        "xci_name": "Zed_SPI_LED_Connector_v1_0_0_0",
-        "xci_path": "ip/Zed_SPI_LED_Connector_v1_0_0_0/Zed_SPI_LED_Connector_v1_0_0_0.xci",
-        "inst_hier_path": "LED_Connector_v1_0_0"
+      "PL_IO_TriggerCtrl_v1_0": {
+        "vlnv": "user.org:user:PL_IO_TriggerCtrl_v1_0:1.0",
+        "xci_name": "Zed_SPI_PL_IO_TriggerCtrl_v1_0_0",
+        "xci_path": "ip/Zed_SPI_PL_IO_TriggerCtrl_v1_0_0/Zed_SPI_PL_IO_TriggerCtrl_v1_0_0.xci",
+        "inst_hier_path": "PL_IO_TriggerCtrl_v1_0"
       },
-      "PL_SPI_ADC_MasterStr_0": {
-        "vlnv": "user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1",
-        "xci_name": "Zed_SPI_PL_SPI_ADC_MasterStr_0_0",
-        "xci_path": "ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.xci",
-        "inst_hier_path": "PL_SPI_ADC_MasterStr_0",
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "Zed_SPI_clk_wiz_0_0",
+        "xci_path": "ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
         "parameters": {
-          "C_M00_AXIS_START_COUNT": {
-            "value": "2"
+          "CLKOUT1_JITTER": {
+            "value": "110.209"
           },
-          "C_M00_AXIS_TDATA_WIDTH": {
-            "value": "16"
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "250"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "4.000"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "1"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
           }
         }
+      },
+      "PL_SPI_ADAR_v1_0_0": {
+        "vlnv": "xilinx.com:user:PL_SPI_ADAR_v1_0:1.5",
+        "xci_name": "Zed_SPI_PL_SPI_ADAR_v1_0_0_0",
+        "xci_path": "ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/Zed_SPI_PL_SPI_ADAR_v1_0_0_0.xci",
+        "inst_hier_path": "PL_SPI_ADAR_v1_0_0"
+      },
+      "PL_SPI_ADF4159_v1_0_0": {
+        "vlnv": "xilinx.com:user:PL_SPI_ADF4159_v1_0:1.0",
+        "xci_name": "Zed_SPI_PL_SPI_ADF4159_v1_0_0_0",
+        "xci_path": "ip/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0.xci",
+        "inst_hier_path": "PL_SPI_ADF4159_v1_0_0"
+      },
+      "PL_SPI_DDS_v1_0_0": {
+        "vlnv": "xilinx.com:user:PL_SPI_DDS_v1_0:1.0",
+        "xci_name": "Zed_SPI_PL_SPI_DDS_v1_0_0_0",
+        "xci_path": "ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/Zed_SPI_PL_SPI_DDS_v1_0_0_0.xci",
+        "inst_hier_path": "PL_SPI_DDS_v1_0_0"
+      },
+      "PL_SPI_ADC_MasterStr_1": {
+        "vlnv": "user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1",
+        "xci_name": "Zed_SPI_PL_SPI_ADC_MasterStr_1_0",
+        "xci_path": "ip/Zed_SPI_PL_SPI_ADC_MasterStr_1_0/Zed_SPI_PL_SPI_ADC_MasterStr_1_0.xci",
+        "inst_hier_path": "PL_SPI_ADC_MasterStr_1"
       }
     },
     "interface_nets": {
-      "PL_SPI_ADC_MasterStr_0_m00_axis": {
+      "PL_SPI_ADC_MasterStr_1_m00_axis": {
         "interface_ports": [
-          "PL_SPI_ADC_MasterStr_0/m00_axis",
-          "axi_dma/S_AXIS_S2MM"
+          "axi_dma/S_AXIS_S2MM",
+          "PL_SPI_ADC_MasterStr_1/m00_axis"
         ]
       },
       "axi_dma_M_AXI_S2MM": {
@@ -3471,14 +3531,8 @@
       },
       "ps7_0_axi_periph_M03_AXI": {
         "interface_ports": [
-          "PL_SPI_ADC_MasterStr_0/s00_axi",
-          "ps7_0_axi_periph/M03_AXI"
-        ]
-      },
-      "ps7_0_axi_periph_M04_AXI": {
-        "interface_ports": [
-          "LED_Connector_v1_0_0/s00_axi",
-          "ps7_0_axi_periph/M04_AXI"
+          "ps7_0_axi_periph/M03_AXI",
+          "PL_SPI_ADC_MasterStr_1/s00_axi"
         ]
       },
       "ps7_0_axi_periph_M05_AXI": {
@@ -3492,6 +3546,12 @@
           "ps7_0_axi_periph/M06_AXI",
           "axi_gpio_0/S_AXI"
         ]
+      },
+      "ps7_0_axi_periph_M07_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M07_AXI",
+          "PL_IO_TriggerCtrl_v1_0/s00_axi"
+        ]
       }
     },
     "nets": {
@@ -3501,7 +3561,14 @@
           "axi_mem_intercon/S00_ARESETN",
           "axi_mem_intercon/M00_ARESETN",
           "axi_mem_intercon/ARESETN",
-          "PL_SPI_ADC_MasterStr_0/m00_axis_aresetn"
+          "PL_SPI_ADC_MasterStr_1/m00_axis_aresetn"
+        ]
+      },
+      "PL_IO_TriggerCtrl_v1_0_o_Trigger": {
+        "ports": [
+          "PL_IO_TriggerCtrl_v1_0/o_Trigger",
+          "axi_gpio_0/gpio_io_i",
+          "PL_SPI_ADC_MasterStr_1/i_Trigger"
         ]
       },
       "PL_SPI_ADAR_v1_0_0_o_SPI_CS": {
@@ -3522,28 +3589,29 @@
           "o_SPI_MOSI_0"
         ]
       },
-      "PL_SPI_ADC_MasterStr_0_o_LED": {
+      "PL_SPI_ADC_MasterStr_0_o_SPI_MOSI": {
         "ports": [
-          "PL_SPI_ADC_MasterStr_0/o_LED",
+          "PL_SPI_ADC_MasterStr_1/o_SPI_MOSI",
+          "o_SPI_MOSI_3",
+          "PL_SPI_ADC_MasterStr_1/i_SPI_MISO"
+        ]
+      },
+      "PL_SPI_ADC_MasterStr_1_o_LED": {
+        "ports": [
+          "PL_SPI_ADC_MasterStr_1/o_LED",
           "o_LED_0"
         ]
       },
-      "PL_SPI_ADC_MasterStr_0_o_SPI_CS": {
+      "PL_SPI_ADC_MasterStr_1_o_SPI_CS": {
         "ports": [
-          "PL_SPI_ADC_MasterStr_0/o_SPI_CS",
+          "PL_SPI_ADC_MasterStr_1/o_SPI_CS",
           "o_SPI_CS_3"
         ]
       },
-      "PL_SPI_ADC_MasterStr_0_o_SPI_Clk": {
+      "PL_SPI_ADC_MasterStr_1_o_SPI_Clk": {
         "ports": [
-          "PL_SPI_ADC_MasterStr_0/o_SPI_Clk",
+          "PL_SPI_ADC_MasterStr_1/o_SPI_Clk",
           "o_SPI_Clk_3"
-        ]
-      },
-      "PL_SPI_ADC_MasterStr_0_o_SPI_MOSI": {
-        "ports": [
-          "PL_SPI_ADC_MasterStr_0/o_SPI_MOSI",
-          "o_SPI_MOSI_3"
         ]
       },
       "PL_SPI_ADF4159_v1_0_0_o_SPI_CS": {
@@ -3567,7 +3635,7 @@
       "PL_SPI_DDS_v1_0_0_o_ADC_Trigger": {
         "ports": [
           "PL_SPI_DDS_v1_0_0/o_ADC_Trigger",
-          "PL_SPI_ADC_MasterStr_0/i_ADC_Work"
+          "PL_SPI_ADC_MasterStr_1/i_ADC_Work"
         ]
       },
       "PL_SPI_DDS_v1_0_0_o_GPIO": {
@@ -3600,7 +3668,7 @@
           "processing_system7_0/IRQ_F2P"
         ]
       },
-      "clk_wiz_1_clk_out1": {
+      "clk_wiz_1_clk_out2": {
         "ports": [
           "clk_wiz_0/clk_out1",
           "rst_ps7_0_100M_1/slowest_sync_clk",
@@ -3609,26 +3677,21 @@
           "axi_mem_intercon/S00_ACLK",
           "axi_mem_intercon/M00_ACLK",
           "axi_mem_intercon/ACLK",
-          "PL_SPI_ADC_MasterStr_0/m00_axis_aclk"
-        ]
-      },
-      "clk_wiz_1_clk_out2": {
-        "ports": [
-          "clk_wiz_0/clk_out2",
           "o_SYNC_Clk_0",
-          "PL_SPI_ADC_MasterStr_0/i_CMOS_Clk"
+          "PL_SPI_ADC_MasterStr_1/i_CMOS_Clk",
+          "PL_SPI_ADC_MasterStr_1/m00_axis_aclk"
         ]
       },
       "i_CMOS_Data_0_1": {
         "ports": [
           "i_CMOS_Data_0",
-          "PL_SPI_ADC_MasterStr_0/i_CMOS_Data"
+          "PL_SPI_ADC_MasterStr_1/i_CMOS_Data"
         ]
       },
       "i_Mode_0_1": {
         "ports": [
           "i_Mode_0",
-          "PL_SPI_ADC_MasterStr_0/i_Mode"
+          "PL_SPI_ADC_MasterStr_1/i_Mode"
         ]
       },
       "i_Over_GPIO_0_1": {
@@ -3655,18 +3718,27 @@
           "PL_SPI_ADF4159_v1_0_0/i_SPI_MISO"
         ]
       },
-      "i_SPI_MISO_3_1": {
+      "i_Switch_0_1": {
         "ports": [
-          "i_SPI_MISO_3",
-          "PL_SPI_ADC_MasterStr_0/i_SPI_MISO"
+          "i_Switch_0",
+          "PL_IO_TriggerCtrl_v1_0/i_Switch"
+        ]
+      },
+      "i_Trigger_0_1": {
+        "ports": [
+          "i_Trigger_0",
+          "PL_IO_TriggerCtrl_v1_0/i_Trigger"
+        ]
+      },
+      "i_Trigger_1": {
+        "ports": [
+          "i_Trigger",
+          "PL_IO_TriggerCtrl_v1_0/i_Port"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
-          "PL_SPI_ADF4159_v1_0_0/s00_axi_aclk",
-          "PL_SPI_ADAR_v1_0_0/s00_axi_aclk",
-          "PL_SPI_DDS_v1_0_0/s00_axi_aclk",
           "ps7_0_axi_periph/M04_ACLK",
           "ps7_0_axi_periph/M03_ACLK",
           "ps7_0_axi_periph/M02_ACLK",
@@ -3676,13 +3748,17 @@
           "ps7_0_axi_periph/ACLK",
           "rst_ps7_0_100M/slowest_sync_clk",
           "processing_system7_0/M_AXI_GP0_ACLK",
-          "clk_wiz_0/clk_in1",
           "axi_dma/s_axi_lite_aclk",
           "ps7_0_axi_periph/M05_ACLK",
           "axi_gpio_0/s_axi_aclk",
           "ps7_0_axi_periph/M06_ACLK",
-          "LED_Connector_v1_0_0/s00_axi_aclk",
-          "PL_SPI_ADC_MasterStr_0/s00_axi_aclk"
+          "PL_IO_TriggerCtrl_v1_0/s00_axi_aclk",
+          "ps7_0_axi_periph/M07_ACLK",
+          "clk_wiz_0/clk_in1",
+          "PL_SPI_ADAR_v1_0_0/s00_axi_aclk",
+          "PL_SPI_ADF4159_v1_0_0/s00_axi_aclk",
+          "PL_SPI_DDS_v1_0_0/s00_axi_aclk",
+          "PL_SPI_ADC_MasterStr_1/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -3695,29 +3771,23 @@
       "rst_ps7_0_100M_peripheral_aresetn": {
         "ports": [
           "rst_ps7_0_100M/peripheral_aresetn",
-          "PL_SPI_ADAR_v1_0_0/s00_axi_aresetn",
-          "PL_SPI_ADF4159_v1_0_0/s00_axi_aresetn",
           "ps7_0_axi_periph/ARESETN",
           "ps7_0_axi_periph/S00_ARESETN",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/M01_ARESETN",
           "ps7_0_axi_periph/M02_ARESETN",
           "ps7_0_axi_periph/M03_ARESETN",
-          "PL_SPI_DDS_v1_0_0/s00_axi_aresetn",
           "ps7_0_axi_periph/M04_ARESETN",
           "axi_dma/axi_resetn",
           "ps7_0_axi_periph/M05_ARESETN",
           "axi_gpio_0/s_axi_aresetn",
           "ps7_0_axi_periph/M06_ARESETN",
-          "LED_Connector_v1_0_0/s00_axi_aresetn",
-          "PL_SPI_ADC_MasterStr_0/s00_axi_aresetn"
-        ]
-      },
-      "xlconcat_0_dout": {
-        "ports": [
-          "i_Trigger",
-          "axi_gpio_0/gpio_io_i",
-          "PL_SPI_ADC_MasterStr_0/i_Trigger"
+          "PL_IO_TriggerCtrl_v1_0/s00_axi_aresetn",
+          "ps7_0_axi_periph/M07_ARESETN",
+          "PL_SPI_ADAR_v1_0_0/s00_axi_aresetn",
+          "PL_SPI_ADF4159_v1_0_0/s00_axi_aresetn",
+          "PL_SPI_DDS_v1_0_0/s00_axi_aresetn",
+          "PL_SPI_ADC_MasterStr_1/s00_axi_aresetn"
         ]
       }
     },
@@ -3726,9 +3796,9 @@
         "address_spaces": {
           "Data": {
             "segments": {
-              "SEG_LED_Connector_v1_0_0_reg0": {
-                "address_block": "/LED_Connector_v1_0_0/s00_axi/reg0",
-                "offset": "0x43C00000",
+              "SEG_PL_IO_TriggerCtrl_v1_0_reg0": {
+                "address_block": "/PL_IO_TriggerCtrl_v1_0/s00_axi/reg0",
+                "offset": "0x43C50000",
                 "range": "64K"
               },
               "SEG_PL_SPI_ADAR_v1_0_0_reg0": {
@@ -3736,8 +3806,8 @@
                 "offset": "0x43C10000",
                 "range": "64K"
               },
-              "SEG_PL_SPI_ADC_MasterStr_0_reg0": {
-                "address_block": "/PL_SPI_ADC_MasterStr_0/s00_axi/reg0",
+              "SEG_PL_SPI_ADC_MasterStr_1_reg0": {
+                "address_block": "/PL_SPI_ADC_MasterStr_1/s00_axi/reg0",
                 "offset": "0x43C20000",
                 "range": "64K"
               },

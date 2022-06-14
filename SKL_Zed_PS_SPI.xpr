@@ -46,7 +46,14 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../SKL_ZED_Backup"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/PL_MatchFilter_Stream_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/PL_MatchFilter_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/PL_SPI_ADC_Data_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/PL_IO_TriggerCtrl_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../SKL_ZED_Backup"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../Standardizer"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../VICFAR"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../MF_out"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -64,13 +71,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="289"/>
-    <Option Name="WTModelSimExportSim" Val="289"/>
-    <Option Name="WTQuestaExportSim" Val="289"/>
+    <Option Name="WTXSimExportSim" Val="377"/>
+    <Option Name="WTModelSimExportSim" Val="377"/>
+    <Option Name="WTQuestaExportSim" Val="377"/>
     <Option Name="WTIesExportSim" Val="153"/>
-    <Option Name="WTVcsExportSim" Val="289"/>
-    <Option Name="WTRivieraExportSim" Val="289"/>
-    <Option Name="WTActivehdlExportSim" Val="289"/>
+    <Option Name="WTVcsExportSim" Val="377"/>
+    <Option Name="WTRivieraExportSim" Val="377"/>
+    <Option Name="WTActivehdlExportSim" Val="377"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -96,17 +103,41 @@
         <CompFileExtendedInfo CompFileName="Zed_SPI.bd" FileRelPathName="ip/Zed_SPI_axi_gpio_0_0/Zed_SPI_axi_gpio_0_0.xci">
           <Proxy FileSetName="Zed_SPI_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Zed_SPI.bd" FileRelPathName="ip/Zed_SPI_LED_Connector_v1_0_0_0/Zed_SPI_LED_Connector_v1_0_0_0.xci">
-          <Proxy FileSetName="Zed_SPI_LED_Connector_v1_0_0_0"/>
+        <CompFileExtendedInfo CompFileName="Zed_SPI.bd" FileRelPathName="ip/Zed_SPI_PL_IO_TriggerCtrl_v1_0_0/Zed_SPI_PL_IO_TriggerCtrl_v1_0_0.xci">
+          <Proxy FileSetName="Zed_SPI_PL_IO_TriggerCtrl_v1_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Zed_SPI.bd" FileRelPathName="ip/Zed_SPI_PL_SPI_ADC_MasterStr_0_0/Zed_SPI_PL_SPI_ADC_MasterStr_0_0.xci">
-          <Proxy FileSetName="Zed_SPI_PL_SPI_ADC_MasterStr_0_0"/>
+        <CompFileExtendedInfo CompFileName="Zed_SPI.bd" FileRelPathName="ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0.xci">
+          <Proxy FileSetName="Zed_SPI_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Zed_SPI.bd" FileRelPathName="ip/Zed_SPI_PL_SPI_ADAR_v1_0_0_0/Zed_SPI_PL_SPI_ADAR_v1_0_0_0.xci">
+          <Proxy FileSetName="Zed_SPI_PL_SPI_ADAR_v1_0_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Zed_SPI.bd" FileRelPathName="ip/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0.xci">
+          <Proxy FileSetName="Zed_SPI_PL_SPI_ADF4159_v1_0_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Zed_SPI.bd" FileRelPathName="ip/Zed_SPI_PL_SPI_DDS_v1_0_0_0/Zed_SPI_PL_SPI_DDS_v1_0_0_0.xci">
+          <Proxy FileSetName="Zed_SPI_PL_SPI_DDS_v1_0_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Zed_SPI.bd" FileRelPathName="ip/Zed_SPI_PL_SPI_ADC_MasterStr_1_0/Zed_SPI_PL_SPI_ADC_MasterStr_1_0.xci">
+          <Proxy FileSetName="Zed_SPI_PL_SPI_ADC_MasterStr_1_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/Zed_SPI/hdl/Zed_SPI_wrapper.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../Downloads/mf_fir_re.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../Downloads/mf_fir_im.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -175,21 +206,45 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="Zed_SPI_LED_Connector_v1_0_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Zed_SPI_LED_Connector_v1_0_0_0" RelGenDir="$PGENDIR/Zed_SPI_LED_Connector_v1_0_0_0">
-      <Config>
-        <Option Name="TopModule" Val="Zed_SPI_LED_Connector_v1_0_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="Zed_SPI_axi_gpio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Zed_SPI_axi_gpio_0_0" RelGenDir="$PGENDIR/Zed_SPI_axi_gpio_0_0">
       <Config>
         <Option Name="TopModule" Val="Zed_SPI_axi_gpio_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="Zed_SPI_PL_SPI_ADC_MasterStr_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Zed_SPI_PL_SPI_ADC_MasterStr_0_0" RelGenDir="$PGENDIR/Zed_SPI_PL_SPI_ADC_MasterStr_0_0">
+    <FileSet Name="Zed_SPI_PL_IO_TriggerCtrl_v1_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Zed_SPI_PL_IO_TriggerCtrl_v1_0_0" RelGenDir="$PGENDIR/Zed_SPI_PL_IO_TriggerCtrl_v1_0_0">
       <Config>
-        <Option Name="TopModule" Val="Zed_SPI_PL_SPI_ADC_MasterStr_0_0"/>
+        <Option Name="TopModule" Val="Zed_SPI_PL_IO_TriggerCtrl_v1_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Zed_SPI_clk_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Zed_SPI_clk_wiz_0_0" RelGenDir="$PGENDIR/Zed_SPI_clk_wiz_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Zed_SPI_clk_wiz_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Zed_SPI_PL_SPI_ADAR_v1_0_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Zed_SPI_PL_SPI_ADAR_v1_0_0_0" RelGenDir="$PGENDIR/Zed_SPI_PL_SPI_ADAR_v1_0_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Zed_SPI_PL_SPI_ADAR_v1_0_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Zed_SPI_PL_SPI_ADF4159_v1_0_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0" RelGenDir="$PGENDIR/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Zed_SPI_PL_SPI_ADF4159_v1_0_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Zed_SPI_PL_SPI_DDS_v1_0_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Zed_SPI_PL_SPI_DDS_v1_0_0_0" RelGenDir="$PGENDIR/Zed_SPI_PL_SPI_DDS_v1_0_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Zed_SPI_PL_SPI_DDS_v1_0_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Zed_SPI_PL_SPI_ADC_MasterStr_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Zed_SPI_PL_SPI_ADC_MasterStr_1_0" RelGenDir="$PGENDIR/Zed_SPI_PL_SPI_ADC_MasterStr_1_0">
+      <Config>
+        <Option Name="TopModule" Val="Zed_SPI_PL_SPI_ADC_MasterStr_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -226,7 +281,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Zed_SPI_LED_Connector_v1_0_0_0_synth_1" Type="Ft3:Synth" SrcSet="Zed_SPI_LED_Connector_v1_0_0_0" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_LED_Connector_v1_0_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Zed_SPI_LED_Connector_v1_0_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../C:/MGWs/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.srcs/utils_1/imports/Zed_SPI_LED_Connector_v1_0_0_0_synth_1">
+    <Run Id="Zed_SPI_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="Zed_SPI_axi_gpio_0_0" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_axi_gpio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Zed_SPI_axi_gpio_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_axi_gpio_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -236,11 +291,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Zed_SPI_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="Zed_SPI_axi_gpio_0_0" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_axi_gpio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Zed_SPI_axi_gpio_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_axi_gpio_0_0_synth_1">
+    <Run Id="Zed_SPI_PL_IO_TriggerCtrl_v1_0_0_synth_1" Type="Ft3:Synth" SrcSet="Zed_SPI_PL_IO_TriggerCtrl_v1_0_0" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_IO_TriggerCtrl_v1_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Zed_SPI_PL_IO_TriggerCtrl_v1_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_IO_TriggerCtrl_v1_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -248,7 +301,47 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1" Type="Ft3:Synth" SrcSet="Zed_SPI_PL_SPI_ADC_MasterStr_0_0" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_SPI_ADC_MasterStr_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1">
+    <Run Id="Zed_SPI_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="Zed_SPI_clk_wiz_0_0" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Zed_SPI_clk_wiz_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_clk_wiz_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Zed_SPI_PL_SPI_ADAR_v1_0_0_0_synth_1" Type="Ft3:Synth" SrcSet="Zed_SPI_PL_SPI_ADAR_v1_0_0_0" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_SPI_ADAR_v1_0_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_synth_1" Type="Ft3:Synth" SrcSet="Zed_SPI_PL_SPI_ADF4159_v1_0_0_0" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_SPI_ADF4159_v1_0_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1" Type="Ft3:Synth" SrcSet="Zed_SPI_PL_SPI_DDS_v1_0_0_0" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_SPI_DDS_v1_0_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Zed_SPI_PL_SPI_ADC_MasterStr_1_0_synth_1" Type="Ft3:Synth" SrcSet="Zed_SPI_PL_SPI_ADC_MasterStr_1_0" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_SPI_ADC_MasterStr_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Zed_SPI_PL_SPI_ADC_MasterStr_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_SPI_ADC_MasterStr_1_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -278,7 +371,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Zed_SPI_LED_Connector_v1_0_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_LED_Connector_v1_0_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Zed_SPI_LED_Connector_v1_0_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../C:/MGWs/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.srcs/utils_1/imports/Zed_SPI_LED_Connector_v1_0_0_0_impl_1">
+    <Run Id="Zed_SPI_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_axi_gpio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Zed_SPI_axi_gpio_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_axi_gpio_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
@@ -295,11 +388,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Zed_SPI_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_axi_gpio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Zed_SPI_axi_gpio_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_axi_gpio_0_0_impl_1">
+    <Run Id="Zed_SPI_PL_IO_TriggerCtrl_v1_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_IO_TriggerCtrl_v1_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Zed_SPI_PL_IO_TriggerCtrl_v1_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_IO_TriggerCtrl_v1_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -314,7 +405,75 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Zed_SPI_PL_SPI_ADC_MasterStr_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_SPI_ADC_MasterStr_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Zed_SPI_PL_SPI_ADC_MasterStr_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_SPI_ADC_MasterStr_0_0_impl_1">
+    <Run Id="Zed_SPI_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Zed_SPI_clk_wiz_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_clk_wiz_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Zed_SPI_PL_SPI_ADAR_v1_0_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_SPI_ADAR_v1_0_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Zed_SPI_PL_SPI_ADAR_v1_0_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_SPI_ADAR_v1_0_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_SPI_ADF4159_v1_0_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_SPI_ADF4159_v1_0_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Zed_SPI_PL_SPI_DDS_v1_0_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_SPI_DDS_v1_0_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Zed_SPI_PL_SPI_DDS_v1_0_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_SPI_DDS_v1_0_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2021"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Zed_SPI_PL_SPI_ADC_MasterStr_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="Zed_SPI_PL_SPI_ADC_MasterStr_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Zed_SPI_PL_SPI_ADC_MasterStr_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Zed_SPI_PL_SPI_ADC_MasterStr_1_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>

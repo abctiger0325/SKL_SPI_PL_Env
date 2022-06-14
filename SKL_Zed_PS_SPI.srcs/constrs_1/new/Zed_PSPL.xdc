@@ -64,13 +64,49 @@ set_property PACKAGE_PIN U4 [get_ports i_SPI_MISO_2]
 
 
 set_property IOSTANDARD LVCMOS18 [get_ports o_SPI_Clk_3]
-set_property IOSTANDARD LVCMOS18 [get_ports i_SPI_MISO_3]
 set_property IOSTANDARD LVCMOS18 [get_ports o_SPI_CS_3]
 set_property IOSTANDARD LVCMOS18 [get_ports o_SPI_MOSI_3]
-set_property PACKAGE_PIN R20 [get_ports i_SPI_MISO_3]
 set_property PACKAGE_PIN M17 [get_ports o_SPI_Clk_3]
 set_property PACKAGE_PIN L17 [get_ports o_SPI_MOSI_3]
 set_property PACKAGE_PIN R21 [get_ports o_SPI_CS_3]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {o_SYNC_Clk_0[0]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {i_Trigger[0]}]
+
+#set_property IOSTANDARD LVCMOS18 [get_ports {GPIO_0_tri_i[0]}]
+#set_property PACKAGE_PIN F22 [get_ports {GPIO_0_tri_i[0]}]
+
+set_property IOSTANDARD LVCMOS18 [get_ports i_Mode_0]
+set_property PACKAGE_PIN F22 [get_ports i_Mode_0]
+
+set_property PACKAGE_PIN U5 [get_ports {i_Trigger[0]}]
+set_property PACKAGE_PIN U6 [get_ports {o_SYNC_Clk_0[0]}]
+
+set_property PACKAGE_PIN H22 [get_ports i_Trigger_0]
+set_property PACKAGE_PIN G22 [get_ports i_Switch_0]
+set_property IOSTANDARD LVCMOS18 [get_ports i_Switch_0]
+set_property IOSTANDARD LVCMOS18 [get_ports i_Trigger_0]
+
+set_property IOSTANDARD LVDS_25 [get_ports {i_CLK_D_0_clk_p}]
+set_property IOSTANDARD LVDS_25 [get_ports {data_in_from_pins_p_0[5]}]
+set_property IOSTANDARD LVDS_25 [get_ports {data_in_from_pins_p_0[4]}]
+set_property IOSTANDARD LVDS_25 [get_ports {data_in_from_pins_p_0[3]}]
+set_property IOSTANDARD LVDS_25 [get_ports {data_in_from_pins_p_0[2]}]
+set_property IOSTANDARD LVDS_25 [get_ports {data_in_from_pins_p_0[1]}]
+set_property IOSTANDARD LVDS_25 [get_ports {data_in_from_pins_p_0[0]}]
+set_property PACKAGE_PIN G19 [get_ports {data_in_from_pins_p_0[0]}]
+set_property PACKAGE_PIN G20 [get_ports {data_in_from_pins_p_0[1]}]
+set_property PACKAGE_PIN G15 [get_ports {data_in_from_pins_p_0[2]}]
+set_property PACKAGE_PIN J16 [get_ports {data_in_from_pins_p_0[3]}]
+set_property PACKAGE_PIN J20 [get_ports {data_in_from_pins_p_0[4]}]
+set_property PACKAGE_PIN N17 [get_ports {data_in_from_pins_p_0[5]}]
+
+set_property IOSTANDARD LVDS_25 [get_ports data_in_from_pins_p_0]
+set_property IOSTANDARD LVDS_25 [get_ports data_in_from_pins_n_0]
+set_property PACKAGE_PIN B19 [get_ports i_CLK_D_0_clk_p]
+
+
 
 
 set_property IOSTANDARD LVCMOS18 [get_ports {i_CMOS_Data_0[11]}]
@@ -85,33 +121,19 @@ set_property IOSTANDARD LVCMOS18 [get_ports {i_CMOS_Data_0[3]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {i_CMOS_Data_0[2]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {i_CMOS_Data_0[1]}]
 set_property IOSTANDARD LVCMOS18 [get_ports {i_CMOS_Data_0[0]}]
-
 set_property PACKAGE_PIN G19 [get_ports {i_CMOS_Data_0[0]}]
-set_property PACKAGE_PIN G20 [get_ports {i_CMOS_Data_0[2]}]
-set_property PACKAGE_PIN G15 [get_ports {i_CMOS_Data_0[4]}]
-set_property PACKAGE_PIN J16 [get_ports {i_CMOS_Data_0[6]}]
-set_property PACKAGE_PIN J20 [get_ports {i_CMOS_Data_0[8]}]
-set_property PACKAGE_PIN N17 [get_ports {i_CMOS_Data_0[10]}]
-
-set_property IOSTANDARD LVCMOS33 [get_ports o_SYNC_Clk_0]
-
-set_property IOSTANDARD LVCMOS33 [get_ports {i_Trigger[0]}]
-
-set_property IOSTANDARD LVCMOS18 [get_ports {GPIO_0_tri_i[0]}]
-set_property PACKAGE_PIN F22 [get_ports {GPIO_0_tri_i[0]}]
-
-set_property IOSTANDARD LVCMOS18 [get_ports i_Mode_0]
-set_property PACKAGE_PIN F22 [get_ports i_Mode_0]
-
-set_property PACKAGE_PIN U5 [get_ports {i_Trigger[0]}]
-set_property PACKAGE_PIN U6 [get_ports o_SYNC_Clk_0]
-
 set_property PACKAGE_PIN F19 [get_ports {i_CMOS_Data_0[1]}]
+set_property PACKAGE_PIN G20 [get_ports {i_CMOS_Data_0[2]}]
 set_property PACKAGE_PIN G21 [get_ports {i_CMOS_Data_0[3]}]
+set_property PACKAGE_PIN G15 [get_ports {i_CMOS_Data_0[4]}]
 set_property PACKAGE_PIN G16 [get_ports {i_CMOS_Data_0[5]}]
+set_property PACKAGE_PIN J16 [get_ports {i_CMOS_Data_0[6]}]
 set_property PACKAGE_PIN J17 [get_ports {i_CMOS_Data_0[7]}]
+set_property PACKAGE_PIN J20 [get_ports {i_CMOS_Data_0[8]}]
 set_property PACKAGE_PIN K21 [get_ports {i_CMOS_Data_0[9]}]
+set_property PACKAGE_PIN N17 [get_ports {i_CMOS_Data_0[10]}]
 set_property PACKAGE_PIN N18 [get_ports {i_CMOS_Data_0[11]}]
+
 
 set_property PULLDOWN true [get_ports {i_CMOS_Data_0[11]}]
 set_property PULLDOWN true [get_ports {i_CMOS_Data_0[10]}]

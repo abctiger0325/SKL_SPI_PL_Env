@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-// Date        : Wed Mar  9 11:07:14 2022
+// Date        : Tue Jun 14 17:08:31 2022
 // Host        : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top Zed_SPI_clk_wiz_0_0 -prefix
-//               Zed_SPI_clk_wiz_0_0_ Zed_SPI_clk_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /home/labish/Midget/SKL/SKL_SPI_PL_Env/SKL_Zed_PS_SPI.gen/sources_1/bd/Zed_SPI/ip/Zed_SPI_clk_wiz_0_0/Zed_SPI_clk_wiz_0_0_sim_netlist.v
 // Design      : Zed_SPI_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,42 +15,35 @@
 (* NotValidForBitStream *)
 module Zed_SPI_clk_wiz_0_0
    (clk_out1,
-    clk_out2,
     clk_in1);
   output clk_out1;
-  output clk_out2;
   input clk_in1;
 
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire clk_out1;
-  wire clk_out2;
 
-  Zed_SPI_clk_wiz_0_0_Zed_SPI_clk_wiz_0_0_clk_wiz inst
+  Zed_SPI_clk_wiz_0_0_clk_wiz inst
        (.clk_in1(clk_in1),
-        .clk_out1(clk_out1),
-        .clk_out2(clk_out2));
+        .clk_out1(clk_out1));
 endmodule
 
-module Zed_SPI_clk_wiz_0_0_Zed_SPI_clk_wiz_0_0_clk_wiz
+module Zed_SPI_clk_wiz_0_0_clk_wiz
    (clk_out1,
-    clk_out2,
     clk_in1);
   output clk_out1;
-  output clk_out2;
   input clk_in1;
 
   wire clk_in1;
   wire clk_in1_Zed_SPI_clk_wiz_0_0;
   wire clk_out1;
   wire clk_out1_Zed_SPI_clk_wiz_0_0;
-  wire clk_out2;
-  wire clk_out2_Zed_SPI_clk_wiz_0_0;
   wire clkfbout_Zed_SPI_clk_wiz_0_0;
   wire clkfbout_buf_Zed_SPI_clk_wiz_0_0;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
+  wire NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
@@ -82,10 +75,6 @@ module Zed_SPI_clk_wiz_0_0_Zed_SPI_clk_wiz_0_0_clk_wiz
        (.I(clk_out1_Zed_SPI_clk_wiz_0_0),
         .O(clk_out1));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout2_buf
-       (.I(clk_out2_Zed_SPI_clk_wiz_0_0),
-        .O(clk_out2));
-  (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
     .CLKFBOUT_MULT_F(10.000000),
@@ -97,7 +86,7 @@ module Zed_SPI_clk_wiz_0_0_Zed_SPI_clk_wiz_0_0_clk_wiz
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(4),
+    .CLKOUT1_DIVIDE(1),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
@@ -146,7 +135,7 @@ module Zed_SPI_clk_wiz_0_0_Zed_SPI_clk_wiz_0_0_clk_wiz
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
         .CLKOUT0(clk_out1_Zed_SPI_clk_wiz_0_0),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(clk_out2_Zed_SPI_clk_wiz_0_0),
+        .CLKOUT1(NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),

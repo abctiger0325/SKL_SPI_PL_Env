@@ -1,123 +1,18 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 17:38:59 2022
+| Date         : Tue Jun 14 17:34:04 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 58) to (Rev. 59)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 17:20:09 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 57) to (Rev. 58)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 17:19:17 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 56) to (Rev. 57)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 16:55:35 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 55) to (Rev. 56)
-
-
+Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_1_0'
 
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 16:33:32 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 54) to (Rev. 55)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 16:15:12 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 53) to (Rev. 54)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_1_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 80) to (Rev. 81)
 
 
 
@@ -127,18 +22,18 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 15:47:07 2022
+| Date         : Tue Jun 14 16:57:24 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
+Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_1_0'
 
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 52) to (Rev. 53)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_1_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 79) to (Rev. 80)
 
 
 
@@ -148,18 +43,18 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 15:42:54 2022
+| Date         : Tue Jun 14 11:08:17 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
+Upgrade Log for IP 'Zed_SPI_CFAR_HDL_Block_0_2'
 
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 51) to (Rev. 52)
+SUCCESS in the conversion of Zed_SPI_CFAR_HDL_Block_0_2 (xilinx.com:user:CFAR_HDL_Block:1.0 (Rev. 2)) to Vivado generation flows.
 
 
 
@@ -169,61 +64,39 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 15:36:35 2022
+| Date         : Fri May 27 10:56:43 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
+Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_1_0'
 
 1. Summary
 ----------
-
-CAUTION (success, with warnings) in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 50) to (Rev. 51)
-
-After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
-
-2. Connection Warnings
-----------------------
-
-Detected external port differences while upgrading 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'. These changes may impact your design.
-
 
--Upgrade has added port 'i_Mode'
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_1_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 78) to (Rev. 79)
 
 
 
 
 
 
-
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 15:32:52 2022
+| Date         : Wed May 25 14:39:15 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
+Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_1_0'
 
 1. Summary
 ----------
-
-CAUTION (success, with warnings) in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 49) to (Rev. 50)
-
-After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
-
-2. Connection Warnings
-----------------------
-
-Detected external port differences while upgrading 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'. These changes may impact your design.
-
-
--Upgrade has removed port 'i_Mode'
 
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_1_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 77) to (Rev. 78)
 
 
 
@@ -233,18 +106,18 @@ Detected external port differences while upgrading 'Zed_SPI_PL_SPI_ADC_MasterStr
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 14:59:54 2022
+| Date         : Wed May 25 14:29:17 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
+Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_1_0'
 
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 48) to (Rev. 49)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_1_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 76) to (Rev. 77)
 
 
 
@@ -254,18 +127,18 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 14:52:14 2022
+| Date         : Wed May 25 11:54:44 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
+Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_1_0'
 
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 47) to (Rev. 48)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_1_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 75) to (Rev. 76)
 
 
 
@@ -275,18 +148,18 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 14:28:01 2022
+| Date         : Wed May 25 10:51:51 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
 
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
+Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_1_0'
 
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 46) to (Rev. 47)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_1_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 74) to (Rev. 75)
 
 
 
@@ -296,7 +169,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 13:55:11 2022
+| Date         : Mon May 16 11:48:22 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -307,7 +180,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 45) to (Rev. 46)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 from user.org:user:PL_SPI_ADC_MasterStream_v1_0:2 (Rev. 5) to user.org:user:PL_SPI_ADC_MasterStream_v1_0:3 (Rev. 1)
 
 
 
@@ -317,7 +190,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 11:23:08 2022
+| Date         : Fri May 13 10:40:33 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -328,7 +201,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 44) to (Rev. 45)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:2) from (Rev. 4) to (Rev. 5)
 
 
 
@@ -338,7 +211,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 31 11:05:03 2022
+| Date         : Thu May 12 15:12:55 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -349,7 +222,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 43) to (Rev. 44)
+SUCCESS in the conversion of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:2 (Rev. 4)) to Vivado generation flows.
 
 
 
@@ -359,29 +232,8 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 30 23:50:44 2022
+| Date         : Fri May  6 18:25:15 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 42) to (Rev. 43)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Thu Mar 31 02:27:26 2022
-| Host         : labish running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
@@ -391,7 +243,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 42) to (Rev. 43)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:2) from (Rev. 3) to (Rev. 4)
 
 
 
@@ -401,7 +253,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 30 08:10:51 2022
+| Date         : Fri May  6 17:35:20 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -412,7 +264,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 41) to (Rev. 42)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:2) from (Rev. 2) to (Rev. 3)
 
 
 
@@ -422,7 +274,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 30 18:10:55 2022
+| Date         : Fri May  6 16:38:16 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -433,7 +285,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 40) to (Rev. 41)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:2) from (Rev. 1) to (Rev. 2)
 
 
 
@@ -443,7 +295,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 30 17:51:29 2022
+| Date         : Fri May  6 15:34:26 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -454,7 +306,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 39) to (Rev. 40)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 from user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1 (Rev. 80) to user.org:user:PL_SPI_ADC_MasterStream_v1_0:2 (Rev. 1)
 
 
 
@@ -464,7 +316,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 29 17:16:17 2022
+| Date         : Fri May  6 15:20:17 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -475,7 +327,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 38) to (Rev. 39)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 79) to (Rev. 80)
 
 
 
@@ -485,7 +337,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Mon Mar 28 15:39:53 2022
+| Date         : Fri May  6 14:46:18 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -496,7 +348,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 37) to (Rev. 38)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 78) to (Rev. 79)
 
 
 
@@ -506,7 +358,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Mon Mar 28 15:30:33 2022
+| Date         : Fri May  6 14:22:37 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -516,29 +368,18 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 
 1. Summary
 ----------
-
-CAUTION (success, with warnings) in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 36) to (Rev. 37)
-
-After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
-
-2. Connection Warnings
-----------------------
-
-Detected external port differences while upgrading 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'. These changes may impact your design.
 
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 77) to (Rev. 78)
 
--Upgrade has added port 'i_Mode'
 
 
 
 
 
-
-
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Mar 25 17:08:17 2022
+| Date         : Fri May  6 11:47:42 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -549,7 +390,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 35) to (Rev. 36)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 76) to (Rev. 77)
 
 
 
@@ -559,7 +400,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Mar 25 16:01:34 2022
+| Date         : Fri May  6 10:43:51 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -570,7 +411,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 34) to (Rev. 35)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 75) to (Rev. 76)
 
 
 
@@ -580,81 +421,18 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 24 11:07:38 2022
+| Date         : Thu May  5 17:22:48 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 31) to (Rev. 34)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Wed Mar 23 23:37:32 2022
-| Host         : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 30) to (Rev. 31)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Wed Mar 23 23:21:13 2022
-| Host         : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
 
 Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 27) to (Rev. 30)
 
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Wed Mar 23 23:21:13 2022
-| Host         : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_LED_Connector_v1_0_0_0'
-
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_LED_Connector_v1_0_0_0 (xilinx.com:user:LED_Connector_v1_0:1.0) from (Rev. 11) to (Rev. 12)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 74) to (Rev. 75)
 
 
 
@@ -664,7 +442,7 @@ SUCCESS in the upgrade of Zed_SPI_LED_Connector_v1_0_0_0 (xilinx.com:user:LED_Co
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 23 17:50:50 2022
+| Date         : Thu May  5 16:24:24 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -675,7 +453,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 26) to (Rev. 27)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 73) to (Rev. 74)
 
 
 
@@ -685,7 +463,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 23 17:30:01 2022
+| Date         : Thu May  5 15:21:31 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -696,7 +474,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 25) to (Rev. 26)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 72) to (Rev. 73)
 
 
 
@@ -706,7 +484,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 23 17:13:18 2022
+| Date         : Thu May  5 14:57:39 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -717,7 +495,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 24) to (Rev. 25)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 71) to (Rev. 72)
 
 
 
@@ -727,7 +505,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 23 16:42:32 2022
+| Date         : Thu May  5 11:45:27 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -738,7 +516,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 22) to (Rev. 24)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 70) to (Rev. 71)
 
 
 
@@ -748,7 +526,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 23 16:19:24 2022
+| Date         : Thu May  5 11:10:54 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -759,7 +537,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 21) to (Rev. 22)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 69) to (Rev. 70)
 
 
 
@@ -769,7 +547,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 23 15:59:48 2022
+| Date         : Wed May  4 17:44:37 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -780,7 +558,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 20) to (Rev. 21)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 68) to (Rev. 69)
 
 
 
@@ -790,7 +568,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 23 15:39:53 2022
+| Date         : Wed May  4 16:32:40 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -801,7 +579,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 19) to (Rev. 20)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 67) to (Rev. 68)
 
 
 
@@ -811,7 +589,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 23 15:23:55 2022
+| Date         : Wed May  4 15:09:15 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -822,7 +600,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 17) to (Rev. 19)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 66) to (Rev. 67)
 
 
 
@@ -832,7 +610,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 23 14:55:16 2022
+| Date         : Wed May  4 11:14:10 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -842,104 +620,19 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 
 1. Summary
 ----------
-
-CAUTION (success, with warnings) in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 16) to (Rev. 17)
-
-2. Interface Information
-------------------------
-
-Detected external interface differences while upgrading 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'.
-
 
--Upgrade has removed interface 'o_DMA_Reset'
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 65) to (Rev. 66)
 
 
 
 
 
 
-
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 23 14:43:00 2022
+| Date         : Tue May  3 17:31:35 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-CAUTION (success, with warnings) in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 15) to (Rev. 16)
-
-After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
-
-2. Connection Warnings
-----------------------
-
-Detected external port differences while upgrading 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'. These changes may impact your design.
-
-
--Upgrade has removed port 'o_DMA_Reset'
-
--Upgrade has added port 'i_Trigger'
-
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Tue Mar 22 23:18:25 2022
-| Host         : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 14) to (Rev. 15)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Tue Mar 22 22:25:55 2022
-| Host         : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 13) to (Rev. 14)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Tue Mar 22 21:38:11 2022
-| Host         : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
@@ -949,7 +642,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 12) to (Rev. 13)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 64) to (Rev. 65)
 
 
 
@@ -959,7 +652,7 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 17:44:14 2022
+| Date         : Tue May  3 14:37:50 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -970,7 +663,7 @@ Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 11) to (Rev. 12)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 63) to (Rev. 64)
 
 
 
@@ -980,1475 +673,16 @@ SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 17:12:39 2022
+| Date         : Fri Apr 29 17:09:19 2022
 | Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
 ------------------------------------------------------------------------------------
 
 Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 10) to (Rev. 11)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 16:54:23 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 9) to (Rev. 10)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 16:35:22 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 8) to (Rev. 9)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 16:17:02 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 7) to (Rev. 8)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 15:43:50 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 6) to (Rev. 7)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 15:27:42 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 5) to (Rev. 6)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 15:18:56 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 4) to (Rev. 5)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 15:06:16 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 3) to (Rev. 4)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 14:50:40 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 2) to (Rev. 3)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 14:30:43 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 1) to (Rev. 2)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 14:16:36 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 from user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0 (Rev. 98) to user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1 (Rev. 1)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 14:12:07 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 97) to (Rev. 98)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 11:49:50 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 96) to (Rev. 97)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 11:12:09 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 94) to (Rev. 96)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 22 10:55:43 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 93) to (Rev. 94)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Mon Mar 21 21:40:10 2022
-| Host         : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 92) to (Rev. 93)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Mon Mar 21 21:24:50 2022
-| Host         : DESKTOP-TBK7KCD running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 91) to (Rev. 92)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Mon Mar 21 10:54:52 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the conversion of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0 (Rev. 91)) to Vivado generation flows.
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 17 16:02:59 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the conversion of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0 (Rev. 91)) to Vivado generation flows.
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 17 11:07:59 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 90) to (Rev. 91)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Mar 17 11:05:58 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 89) to (Rev. 90)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 16 17:59:47 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 88) to (Rev. 89)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 16 17:48:06 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 87) to (Rev. 88)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 16 17:26:57 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 86) to (Rev. 87)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 16 17:20:38 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 85) to (Rev. 86)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 16 17:16:52 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 84) to (Rev. 85)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 16 16:12:12 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 83) to (Rev. 84)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 16 15:54:03 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 82) to (Rev. 83)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 16 15:15:46 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 81) to (Rev. 82)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 16 11:35:28 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 80) to (Rev. 81)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 16 11:23:07 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 79) to (Rev. 80)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar 16 11:03:34 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 78) to (Rev. 79)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 15 17:38:34 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 77) to (Rev. 78)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 15 17:34:53 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 76) to (Rev. 77)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar 15 10:31:05 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 75) to (Rev. 76)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Mar 11 17:52:09 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 74) to (Rev. 75)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Mar 11 17:37:01 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 73) to (Rev. 74)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Mar 11 17:17:34 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 70) to (Rev. 73)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Mar  9 10:23:21 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-CAUTION (success, with warnings) in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 56) to (Rev. 70)
-
-After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
-
-2. Interface Information
-------------------------
-
-Detected external interface differences while upgrading 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'.
-
-
--Upgrade has added interface 'o_DMA_Reset' (xilinx.com:signal:reset:1.0)
-
-
-3. Connection Warnings
-----------------------
-
-Detected external port differences while upgrading 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'. These changes may impact your design.
-
-
--Upgrade has added port 'o_DMA_Reset'
-
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Mar  1 18:41:56 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 55) to (Rev. 56)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Feb 18 16:29:35 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-CAUTION (success, with warnings) in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 4) to (Rev. 55)
-
-After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
-
-2. Connection Warnings
-----------------------
-
-Detected external port differences while upgrading 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'. These changes may impact your design.
-
-
--Upgrade has added port 'o_LED'
-
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Feb 10 11:15:14 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 3) to (Rev. 4)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Feb  9 18:02:17 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'
-
-1. Summary
-----------
-
-CAUTION (success, with warnings) in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.0) from (Rev. 2) to (Rev. 3)
-
-After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
-
-2. Connection Warnings
-----------------------
-
-Detected external port differences while upgrading 'Zed_SPI_PL_SPI_ADC_MasterStr_0_0'. These changes may impact your design.
-
-
--Upgraded port 'i_CMOS_Data' width 12 differs from original width 14
-
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Mon Feb  7 11:21:33 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 26) to (Rev. 27)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Mon Feb  7 11:00:19 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 25) to (Rev. 26)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Feb  4 10:48:12 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-CAUTION (success, with warnings) in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 24) to (Rev. 25)
-
-After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
-
-2. Interface Information
-------------------------
-
-Detected external interface differences while upgrading 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'.
-
-
--Upgrade has added interface 'o_SYNC_Clk' (xilinx.com:signal:clock:1.0)
-
-
-3. Connection Warnings
-----------------------
-
-Detected external port differences while upgrading 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'. These changes may impact your design.
-
-
--Upgrade has added port 'o_SYNC_Clk'
-
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Jan 28 14:20:08 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 23) to (Rev. 24)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Fri Jan 28 11:46:02 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-CAUTION (success, with warnings) in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 21) to (Rev. 23)
-
-After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
-
-2. Connection Warnings
-----------------------
-
-Detected external port differences while upgrading 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'. These changes may impact your design.
-
-
--Upgraded port 'i_CMOS_Data' width 12 differs from original width 14
-
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Jan 27 16:31:57 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 20) to (Rev. 21)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Jan 27 16:12:07 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 19) to (Rev. 20)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Jan 27 15:56:56 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 18) to (Rev. 19)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Jan 27 15:12:14 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 17) to (Rev. 18)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Thu Jan 27 14:43:46 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 16) to (Rev. 17)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 19:23:10 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 15) to (Rev. 16)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 17:50:03 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 14) to (Rev. 15)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 16:21:50 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 13) to (Rev. 14)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 16:12:31 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 12) to (Rev. 13)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 15:30:34 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 11) to (Rev. 12)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 15:12:45 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 10) to (Rev. 11)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 14:52:47 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 9) to (Rev. 10)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 14:49:29 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 8) to (Rev. 9)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 14:38:14 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 7) to (Rev. 8)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 14:11:30 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 6) to (Rev. 7)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 11:53:36 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 5) to (Rev. 6)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Wed Jan 26 11:45:38 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 4) to (Rev. 5)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Jan 25 17:23:39 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 3) to (Rev. 4)
-
-
-
-
-
-
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-| Date         : Tue Jan 25 17:16:17 2022
-| Host         : labish-OptiPlex-9010 running 64-bit Ubuntu 18.04.6 LTS
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'Zed_SPI_PL_SPI_ADC_Master_v1_0_0'
 
 1. Summary
 ----------
 
-SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_Master_v1_0_0 (user.org:user:PL_SPI_ADC_Master_v1_0:1.0) from (Rev. 2) to (Rev. 3)
+SUCCESS in the upgrade of Zed_SPI_PL_SPI_ADC_MasterStr_0_0 (user.org:user:PL_SPI_ADC_MasterStream_v1_0:1.1) from (Rev. 62) to (Rev. 63)
 
